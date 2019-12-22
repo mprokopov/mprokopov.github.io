@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
+<channel>
+<atom:link href='http://nexusnotes.ru/' rel='self' type='application/rss+xml'/>
+<title>
+Блог Максима Прокопова
+</title>
+<description>
+Hashobject blog
+</description>
+<link>
+http://nexusnotes.ru/
+</link>
+<generator>
+clj-rss
+</generator>
+<item>
+<link>
+http://nexusnotes.ru/about-editors-and-ides.html
+</link>
+<guid>
+http://nexusnotes.ru/about-editors-and-ides.html
+</guid>
+<pubDate>
+Fri, 27 Dec 2013 02:00:00 +0200
+</pubDate>
+<title>
+Про редакторы и IDE
+</title>
+<description>
+Lorem markdownum virgo non simplex atque, bis placavit, est frondentis aera.
+</description>
+<author>
+anton@hashobject.com
+</author>
+</item>
+<item>
+<link>
+http://nexusnotes.ru/why-programmers-should-learn-old-languages.html
+</link>
+<guid>
+http://nexusnotes.ru/why-programmers-should-learn-old-languages.html
+</guid>
+<title>
+Два древних языка, которые нужно изучить программисту
+</title>
+<description>
+Пост о пользе изучения древних языков
+</description>
+<author>
+mprokopov@gmail.com
+</author>
+</item>
+</channel>
+</rss>
