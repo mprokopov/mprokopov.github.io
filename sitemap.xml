@@ -1,2 +1,106 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>http://nexusnotes.ru/page-1.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/why-programmers-should-learn-old-languages.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/non simplex.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/Lorem.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/virgo.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/about-editors-and-ides.html</loc><lastmod>2013-12-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/est frondentis aera.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/ipsum.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/about.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/lisp.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/smaltalk.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/atque.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/programming.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>http://nexusnotes.ru/bis placavit.html</loc><lastmod>2019-12-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://nexusnotes.ru/pages/trips/</loc>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/pages/loosingweight/</loc>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/pages/reading/</loc>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/pages/creating/</loc>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/pages/wishlist/</loc>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/pages/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/posts/week-22-links/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/categories/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/categories/links/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/posts/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/posts/2020-05-24-ruby/</loc>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/posts/2020-05-31/</loc>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/posts/2020-04-29/</loc>
+    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/posts/2020-03-03-my-recent-tasks/</loc>
+    <lastmod>2020-03-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/posts/applescript-instant-open-zoom-link/</loc>
+    <lastmod>2020-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/categories/macos/</loc>
+    <lastmod>2020-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/categories/tips-and-tricks/</loc>
+    <lastmod>2020-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/posts/2020-01-01/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/pages/</loc>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>http://nexusnotes.ru/posts/2019-08-01-old-langs/</loc>
+  </url>
+  
+</urlset>

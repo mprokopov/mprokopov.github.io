@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal website</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+
+
+<link rel="stylesheet" href="http://nexusnotes.ru/style.min.b47e9dbbe9cb8ba63ca483edbb6a0ccf62fe04626db6ba8901ff95c740f26675.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+    <body><div id="header">
+    <a class="title" href="/"><div id="title">Блог Максима Прокопова</div><div id="description">Считаю что идеи это такая штука, которой следует делиться</div></a>
+</div>
+<div id="nav-container">
+    <div id="nav">
+        <div class="menu">
+            <div class="nav">
+                <ul>
+                    
+                    <li class="page-item"><a href="http://nexusnotes.ru/pages/trips/">Путешествую</a></li>
+                    
+                    <li class="page-item"><a href="http://nexusnotes.ru/pages/loosingweight/">Худею</a></li>
+                    
+                    <li class="page-item"><a href="http://nexusnotes.ru/pages/reading/">Читаю</a></li>
+                    
+                    <li class="page-item"><a href="http://nexusnotes.ru/pages/creating/">Создаю</a></li>
+                    
+                    <li class="page-item"><a href="http://nexusnotes.ru/pages/wishlist/">Wishlist</a></li>
+                    
+                    <li class="page-item"><a href="http://nexusnotes.ru/pages/about/">Обо мне</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+        <div id="container">
+<div class="article">
+    <h1>
+        <a href="http://nexusnotes.ru/posts/applescript-instant-open-zoom-link/">Applescript instantly open Zoom link from the iCal calendar</a>
+    </h1>
+    <div class="date">02.02.2020</div>
+    <div><p>This is really my little timesaver because you know, a lot of meetings happen when you work remotely.</p>
+<p>Works best with Alfred 4 using mapped hotkey.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-applescript" data-lang="applescript"><span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Calendar&#34;</span>
+	<span style="color:#66d9ef">tell</span> calendar <span style="color:#e6db74">&#34;maksym.prokopov@trilogy.com&#34;</span>
+		<span style="color:#66d9ef">set</span> itemLocation <span style="color:#66d9ef">to</span> <span style="color:#a6e22e">location</span> <span style="color:#66d9ef">of</span> first event where <span style="color:#66d9ef">its</span> start date <span style="color:#f92672">≤</span> (current date) <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> minutes <span style="color:#f92672">and</span> <span style="color:#66d9ef">end</span> date <span style="color:#f92672">≥</span> (current date)
+		<span style="color:#66d9ef">if</span> itemLocation <span style="color:#f92672">contains</span> <span style="color:#e6db74">&#34;zoom.us&#34;</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Finder&#34;</span> <span style="color:#66d9ef">to</span> open location itemLocation
+	<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">tell</span>
+<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">tell</span>
+</code></pre></div><p><img src="http://nexusnotes.ru/wp-content/uploads/2020/02/Screenshot-2020-02-26-at-19.10.05.png" alt=""></p>
+<p><img src="http://nexusnotes.ru/wp-content/uploads/2020/02/Screenshot-2020-02-26-at-19.10.41.png" alt=""></p></div>
+</div>
+
+        </div>
+        <div class="clear"></div><div id="sidebar">
+    <div id="sidebar-widget">
+        <div class="sidebar-heading">Категории</div>
+        <p></p>
+        <ul>
+            
+            <li><a href="/categories/links/">links</a> (2) </li>
+            
+            <li><a href="/categories/macos/">macos</a> (1) </li>
+            
+            <li><a href="/categories/tips-and-tricks/">tips and tricks</a> (1) </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

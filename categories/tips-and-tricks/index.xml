@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tips and tricks on Maksym Prokopov personal website</title>
+    <link>http://nexusnotes.ru/categories/tips-and-tricks/</link>
+    <description>Recent content in tips and tricks on Maksym Prokopov personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://nexusnotes.ru/categories/tips-and-tricks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Applescript instantly open Zoom link from the iCal calendar</title>
+      <link>http://nexusnotes.ru/posts/applescript-instant-open-zoom-link/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://nexusnotes.ru/posts/applescript-instant-open-zoom-link/</guid>
+      <description>&lt;p&gt;This is really my little timesaver because you know, a lot of meetings happen when you work remotely.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
