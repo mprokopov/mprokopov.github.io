@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Maksym Prokopov personal website</title>
-    <link>http://nexusnotes.ru/pages/</link>
+    <link>https://mprokopov.github.io/pages/</link>
     <description>Recent content in Pages on Maksym Prokopov personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     
-	<atom:link href="http://nexusnotes.ru/pages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mprokopov.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Путешествую</title>
-      <link>http://nexusnotes.ru/pages/trips/</link>
+      <link>https://mprokopov.github.io/pages/trips/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nexusnotes.ru/pages/trips/</guid>
+      <guid>https://mprokopov.github.io/pages/trips/</guid>
       <description>This is my trips</description>
     </item>
     
     <item>
       <title>Худею</title>
-      <link>http://nexusnotes.ru/pages/loosingweight/</link>
+      <link>https://mprokopov.github.io/pages/loosingweight/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nexusnotes.ru/pages/loosingweight/</guid>
+      <guid>https://mprokopov.github.io/pages/loosingweight/</guid>
       <description>UPDATE: Я более не рекомендую диету Дюкана, как создающую проблемы почкам, а рекомендую диету «три кулака».
 В настоящий момент мне 33 года, рост 178см, вес на 19 июля 2013г 92кг. А 92г, как для меня, это довольно много, это не страшный, но приметный второй подбородок, слегка выпирающий живот и отпечаток в виде недостатка энергии на проекты от малоподвижного образа жизни.
 Сегдоня 10 августа 2013г и только что взвесив себя обнаружил вес 86,7кг, и выйти на качественные 78-80кг планирую через 3 недели, где-то к 1 сентября 2013.</description>
@@ -32,37 +32,37 @@
     
     <item>
       <title>Читаю</title>
-      <link>http://nexusnotes.ru/pages/reading/</link>
+      <link>https://mprokopov.github.io/pages/reading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nexusnotes.ru/pages/reading/</guid>
+      <guid>https://mprokopov.github.io/pages/reading/</guid>
       <description>About me</description>
     </item>
     
     <item>
       <title>Создаю</title>
-      <link>http://nexusnotes.ru/pages/creating/</link>
+      <link>https://mprokopov.github.io/pages/creating/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nexusnotes.ru/pages/creating/</guid>
+      <guid>https://mprokopov.github.io/pages/creating/</guid>
       <description>About me</description>
     </item>
     
     <item>
       <title>Wishlist</title>
-      <link>http://nexusnotes.ru/pages/wishlist/</link>
+      <link>https://mprokopov.github.io/pages/wishlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nexusnotes.ru/pages/wishlist/</guid>
+      <guid>https://mprokopov.github.io/pages/wishlist/</guid>
       <description>My wishlist</description>
     </item>
     
     <item>
       <title>Обо мне</title>
-      <link>http://nexusnotes.ru/pages/about/</link>
+      <link>https://mprokopov.github.io/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nexusnotes.ru/pages/about/</guid>
+      <guid>https://mprokopov.github.io/pages/about/</guid>
       <description>About me</description>
     </item>
     
