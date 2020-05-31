@@ -58,17 +58,6 @@
     </item>
     
     <item>
-      <title>Some log file</title>
-      <link>https://mprokopov.github.io/posts/2020-04-29/</link>
-      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mprokopov.github.io/posts/2020-04-29/</guid>
-      <description>Change detected, rebuilding site. 2020-05-31 13:28:31.004 +0200 Source changed &amp;ldquo;/Users/nexus/Sites/mprokopov.github.io/content/posts/2020-05-31.md&amp;rdquo;: WRITE Total in 1 ms ERROR 2020/05/31 13:28:31 Rebuild failed:
-ERROR 2020/05/31 13:28:31 &amp;ldquo;/Users/nexus/Sites/mprokopov.github.io/content/posts/2020-05-31.md:2:1&amp;rdquo;: EOF looking for end YAML front matter delimiter
-Change detected, rebuilding site. 2020-05-31 13:28:40.005 +0200 Source changed &amp;ldquo;/Users/nexus/Sites/mprokopov.github.io/content/posts/2020-05-31.md&amp;rdquo;: WRITE</description>
-    </item>
-    
-    <item>
       <title>My recent tasks</title>
       <link>https://mprokopov.github.io/posts/2020-03-03-my-recent-tasks/</link>
       <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
@@ -94,20 +83,6 @@ and much more.&lt;/li&gt;
       
       <guid>https://mprokopov.github.io/posts/applescript-instant-open-zoom-link/</guid>
       <description>&lt;p&gt;This is really my little timesaver because you know, a lot of meetings happen when you work remotely.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>My content</title>
-      <link>https://mprokopov.github.io/posts/2020-01-01/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mprokopov.github.io/posts/2020-01-01/</guid>
-      <description>&lt;h4 id=&#34;headline-1&#34;&gt;
-This is my content
-&lt;/h4&gt;
-&lt;p&gt;
-something inside
-&lt;/p&gt;</description>
     </item>
     
     <item>
