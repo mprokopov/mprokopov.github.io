@@ -55,21 +55,14 @@
     </item>
     
     <item>
-      <title>Wishlist</title>
-      <link>https://mprokopov.github.io/pages/wishlist/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mprokopov.github.io/pages/wishlist/</guid>
-      <description>My wishlist</description>
-    </item>
-    
-    <item>
       <title>Обо мне</title>
       <link>https://mprokopov.github.io/pages/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Dec 2009 20:45:17 +0000</pubDate>
       
       <guid>https://mprokopov.github.io/pages/about/</guid>
-      <description>About me</description>
+      <description>Привет, меня зовут Максим Прокопов. С 2020г переехал жить во Фрайбург, Германия.
+Сейчас мои интересы сейчас лежат в области DevOps, Lean IT, и ИТ аутсорсинга, M&amp;amp;A активностей. В далеком 2007 с моим партнером Александром мы запустили компанию по предоставлению услуг ИТ-аутсорсинга IT-Premium https://it-premium.com.ua. В 2016 с другим партнером Алексеем мы запустили интернет-магазин Super-Truper.com.ua. К 2018 моя 50% доля магазина была продана Алексею.
+Начинал разработку на PHP 3.0.3, затем на Parser 2 и Parser 3 студии Лебедева, с 2006 перешел на Ruby on Rails.</description>
     </item>
     
     <item>
