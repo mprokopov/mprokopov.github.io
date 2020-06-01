@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>учет техники on Maksym Prokopov personal website</title>
+    <link>https://mprokopov.github.io/tags/%D1%83%D1%87%D0%B5%D1%82-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8/</link>
+    <description>Recent content in учет техники on Maksym Prokopov personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Wed, 07 Dec 2011 12:46:58 +0000</lastBuildDate>
+    
+	<atom:link href="https://mprokopov.github.io/tags/%D1%83%D1%87%D0%B5%D1%82-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Учет техники на предприятии</title>
+      <link>https://mprokopov.github.io/2011/12/%D1%83%D1%87%D0%B5%D1%82-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B8/</link>
+      <pubDate>Wed, 07 Dec 2011 12:46:58 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2011/12/%D1%83%D1%87%D0%B5%D1%82-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B8/</guid>
+      <description>Вот, не смотря на интерфейс, разработанный, очевидно, программистом без участия дизайнера, сам по себе комплекс вполне заслуживает быть рассмотренным в качестве системы учета техники на предприятии.
+ Очевидные плюсы кандидата: понятность и простота использовавания, бесплатность и русифицированность.
+По большому счету программа делает действия аналогичные Everest Audit (сейчас AiDA), но при этом не просит денег.
+http://checkcfg.narod.ru/
+К слову, open source аналог данного комплекса, на который стоит посмотреть http://www.ocsinventory-ng.org/en/about/features/ocsng-glpi.html
+Но с веб-интерфейсом там та же беда, что и у большинства open source продуктов, – дизайн выполенный программистом, как говорит г-н Умпутун, нарисованный чужими для хищников.</description>
+    </item>
+    
+  </channel>
+</rss>

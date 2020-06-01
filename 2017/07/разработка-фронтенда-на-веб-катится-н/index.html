@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal website</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+
+
+<link rel="stylesheet" href="https://mprokopov.github.io/style.min.b47e9dbbe9cb8ba63ca483edbb6a0ccf62fe04626db6ba8901ff95c740f26675.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+    <body><div id="header">
+    <a class="title" href="/"><div id="title">Блог Максима Прокопова</div><div id="description">Считаю что идеи это такая штука, которой следует делиться</div></a>
+</div>
+<div id="nav-container">
+    <div id="nav">
+        <div class="menu">
+            <div class="nav">
+                <ul>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/trips/">Путешествую</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/loosingweight/">Худею</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/reading/">Читаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/creating/">Создаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/wishlist/">Wishlist</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/about/">Обо мне</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+        <div id="container">
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2017/07/%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D1%84%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4%D0%B0-%D0%BD%D0%B0-%D0%B2%D0%B5%D0%B1-%D0%BA%D0%B0%D1%82%D0%B8%D1%82%D1%81%D1%8F-%D0%BD/">Разработка фронтенда на веб катится не туда.</a>
+    </h1>
+    <div class="date">22.07.2017</div>
+    <h4>Время чтения: 4 мин.</h4>
+    <div><blockquote>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+</blockquote>
+<p>Потребовалось мне на днях запилить динамический веб на стеке React + Redux. Полез посмотреть, чем нынче пользуется уважаемая общественность. Оказывается, стандартно используют Javascript ES-2015, он же ES6. Чтобы запустить это счастье нужно, следите за руками: туго перевязанная упаковка с npm + nodejs, Webpack, Babel. npm доставит вам различные пакаджи, библиотеки типа react, redux, webpack нужен для динамической сборки и предкомпиляции приложения, babel позволит вам писать код на модных стандартах джаваскрипта не особо заботясь о совместимости с предыдущими браузерами.</p>
+<p>Ну ок, хорошо, webpack позволяет динамически пересобирать модули с зависимостями при изменении кода и автоматически подгружает/перегружает код в браузере.</p>
+<p>Теперь про боль.</p>
+<p>Окунулся по локоть в Джаваскрипт. Синтаксис. Сахар. Синтаксический сахар. Больше сахара. Еще больше сахара. Ожирение.</p>
+<p>Я вот сейчас даже <a href="https://habrahabr.ru/company/plarium/blog/270353/">статью с Хабра</a> процитирую про новый синтаксис для вызова функций.</p>
+<blockquote>
+<p>○ p1 =&gt; expr отлично подходит, если параметр один;</p>
+</blockquote>
+<blockquote>
+<p>○ p1 =&gt; expr имеет неявный оператор return для выражения expr;</p>
+</blockquote>
+<blockquote>
+<p>○ чтобы неявно вернуть объект, нужно обернуть его в круглые скобки () =&gt; ({ foo: ‘bar’ }), иначе получите ошибку;</p>
+</blockquote>
+<blockquote>
+<p>○ круглые скобки необходимы, когда у вас 0, 2 или больше параметров () =&gt; expr or (p1, p2) =&gt; expr;</p>
+</blockquote>
+<blockquote>
+<p>○ фигурные скобки в правой части представляют блок кода, в котором может содержаться несколько инструкций () =&gt; {};</p>
+</blockquote>
+<blockquote>
+<p>○ при использовании такого синтаксиса неявного return нет, его нужно писать () =&gt; { return ‘foo’ }.</p>
+</blockquote>
+<p>Что? Что это было?</p>
+<p>После чего, конечно, начинают появляться статьи из серии «<a href="https://habrahabr.ru/post/308446/">Почему я все еще использую слово function</a> вместо модного синтаксиса». И это естественно, потому что еще после Perl люди поняли, что злоупотребление уличной магией в разработке до добра не доводит. Но, похоже, уже подросло новое поколение программистов, которым нужно заново пройтись по тем же граблям.</p>
+<p>Или вот в <a href="http://redux.js.org/docs/introduction/ThreePrinciples.html">описании Redux, говорят</a>, в редьюсерах не используйте функции, изменяющие состояние, генерите новые значения. Иммутабельность делайте. Но все равно остается прекрасная возможность выстрелить себе в ногу.</p>
+<p>Мой ответ такой: потому что Javascript идет не туда. Потому что асинхронность + мутабельный стейт = проблемы. Именно с этим пытается бороться React. Но React это библиотека, а не язык. Библиотека может только упрашивать и рекомендовать, но не заставлять.</p>
+<p>Так получилось, что я довольно сильно два года назад погрузился в Clojure и ClojureScript. Вот про что мне сегодня хочется рассказать, так это про то приятное ощущение, когда понимаешь, что люди очень сильно думали, чтобы сделать правильно и красиво.</p>
+<p>Все, о чем могли мечтать большевики, в Clojure/ClojureScript есть – структуры данных иммутабельные по-умолчанию, синтаксис языка НЕ ИЗМЕНЯЕТСЯ, просто потому что незачем это делать, есть прекрасный интероп с Java/Javascript, что открывает обширные возможности использования достояния человечества в виде maven, npm инфраструктуры, при чем активно поощряется использование библиотеки Google Closure, а это, я вам скажу, наверное более правильный путь сохранять совместимость со старыми браузерами, чем Babel. Плюс из коробки отличная минификация через вычисление и отрезание неиспользуемых участков кода при сборке большого js. Все вот эти <a href="https://github.com/webpack-contrib/css-loader">modular-css</a> пытаются решить проблему code as data и data as code, всунуть в JS возможность использовать CSS как код, при том, что для любого lisp, которым является также и Clojure это нативное свойство языка. Модульность и разделение кода на куски в Clojure вообще сделана гениально: namespace + имя сущности однозначно адресует нужную сущность. Про clojure.spec я вообще промолчу, недооцененная многими библиотека, которая решает фундаментальную проблему несовместимости зависимостей. Что такое правильный подход: основу языка оставлять по-максимуму без изменений, а новые фишки добавлять через библиотеки, так как это сделали, например, с core.async для добавления coroutines как в go. И правильно, если это будут использовать 2% пользователей, то зачем это догружать остальным 98%?</p>
+<p>В общем, жаль, что коммьюнити не так активно делает маркетинг Clojure/ClojureScript и в целом порог для входа остается очень и очень высоким для среднего разработчика с одной стороны из-за недостаточного количества примеров, которые бы давали быстрый результат, а с другой стороны понимание функционального подхода требует определенных умственных усилий. Нужна новая кровь в такие проекты. Чтобы начать послушайте <a href="http://clojurecourse.by/">бесплатные онлайн курсы по Clojure</a>. Может и понравится, %username%.</p>
+</div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url =  null ;  
+    this.page.identifier =  null ; 
+    };
+ (function() { 
+     var d = document, s = d.createElement('script');
+     s.src = 'https://EXAMPLE.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+
+        </div>
+        <div class="clear"></div><div id="sidebar">
+    <div id="sidebar-widget">
+        <div class="sidebar-heading">Категории</div>
+        <p></p>
+        <ul>
+            
+            <li><a href="/categories/apache/">apache</a> (3) </li>
+            
+            <li><a href="/categories/clojure/">clojure</a> (1) </li>
+            
+            <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
+            
+            <li><a href="/categories/gtd/">GTD</a> (4) </li>
+            
+            <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+            
+            <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
+            
+            <li><a href="/categories/links/">links</a> (2) </li>
+            
+            <li><a href="/categories/linux/">linux</a> (1) </li>
+            
+            <li><a href="/categories/macos/">macos</a> (1) </li>
+            
+            <li><a href="/categories/rails/">rails</a> (1) </li>
+            
+            <li><a href="/categories/sip/">sip</a> (1) </li>
+            
+            <li><a href="/categories/tips-and-tricks/">tips and tricks</a> (1) </li>
+            
+            <li><a href="/categories/vmware/">vmware</a> (2) </li>
+            
+            <li><a href="/categories/windows/">windows</a> (4) </li>
+            
+            <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
+            
+            <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (1) </li>
+            
+            <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
+            
+            <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">веб-разработка</a> (8) </li>
+            
+            <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">виртуализация</a> (1) </li>
+            
+            <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">гаджеты</a> (2) </li>
+            
+            <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">железо</a> (3) </li>
+            
+            <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">за жизнь</a> (119) </li>
+            
+            <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">здоровье</a> (4) </li>
+            
+            <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (44) </li>
+            
+            <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">маркетинг</a> (2) </li>
+            
+            <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (25) </li>
+            
+            <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">управление</a> (1) </li>
+            
+            <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

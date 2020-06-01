@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal website</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+
+
+<link rel="stylesheet" href="https://mprokopov.github.io/style.min.b47e9dbbe9cb8ba63ca483edbb6a0ccf62fe04626db6ba8901ff95c740f26675.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+    <body><div id="header">
+    <a class="title" href="/"><div id="title">Блог Максима Прокопова</div><div id="description">Считаю что идеи это такая штука, которой следует делиться</div></a>
+</div>
+<div id="nav-container">
+    <div id="nav">
+        <div class="menu">
+            <div class="nav">
+                <ul>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/trips/">Путешествую</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/loosingweight/">Худею</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/reading/">Читаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/creating/">Создаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/wishlist/">Wishlist</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/about/">Обо мне</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+        <div id="container">
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2014/10/%D1%87%D1%82%D0%BE-%D1%8F-%D1%83%D0%B7%D0%BD%D0%B0%D0%BB-%D0%B8%D0%B7-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-rails-assets-pipeline-%D0%B8-javascript-knockoutjs-vs-angularjs/">Что я узнал из работы с Rails assets pipeline и Javascript. KnockoutJS vs AngularJS.</a>
+    </h1>
+    <div class="date">30.10.2014</div>
+    <h4>Время чтения: 3 мин.</h4>
+    <div><!-- raw HTML omitted -->
+<p>Rails замечательно работает со статикой, лучше всех, пожалуй. Но то, что предлагается использовать для «оживления» страниц подходит только для очень небольшого круга задач. </p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p>Но, к сожалению, браузер не умеет рендерить HAML шаблоны, а изучать/выбирать новый template-язык не хотелось. </p>
+<p>Именно поэтому в поле моего зрения попали движки, которые умеют использовать существующую разметку: AngularJS и KnockoutJS. Вот их я и стал изучать.</p>
+<p>Создал две экспериментальные ветки feature в git и стал пробовать Knockout.</p>
+<p>Knockout оказался очень хорошим фреймворком для two-way databinding. Классно лег на coffeescript, и HAML. Вот пример вьюконтроллера:</p>
+<p>class UnassignedTicketsViewModel extends TicketWithSLAViewModel<br>
+  constructor: -&gt;<br>
+    super<br>
+    @api = ‘/api/tickets/unassigned’</p>
+<p>вот HAML партиал. Кстати, это в 4м HAML появилась возможность писать аттрибуты в круглых скобках.</p>
+<p>    %td.avatar<br>
+      %img.cycle.userpic(data-bind = «attr:{src:avatar.nano.url}, visible: state !== ‘classified&rsquo;»)<br>
+    %td.id_column<br>
+      %a(data-bind = «attr:{ href: url }, css: {‘fg-red’: is_major}»)<br>
+        %i.icon-fire(data-bind = ‘visible: is_major’)<br>
+        %i(data-bind = ‘css: icon()’)<br>
+        %span(data-bind = ‘text: id’)<br>
+        %i.icon-bus(data-bind = ‘visible: is_outdoor’)<br>
+    %td(data-bind = ‘text: author’)</p>
+<p>Вот какие выводы у меня появились после использования Knockout с рельсами</p>
+<ul>
+<li>очень хорошо писать и наследовать классы на Coffescript.</li>
+<li>MVVM объектно-ориентированная концепция с моделями</li>
+<li>неявная работа с текущим значением в итераторах foreach</li>
+<li>удобный <!-- raw HTML omitted -->дебаггер для Chrome <!-- raw HTML omitted --></li>
+</ul>
+<p>Параллельно я вел исследования с AngularJS. Прошел офигительный интерактивный туториал <a href="https://www.codeschool.com/courses/shaping-up-with-angular-js">https://www.codeschool.com/courses/shaping-up-with-angular-js<br>
+</a><br>
+И написал polling тикетов через $resource. И пришел к таким выводам:</p>
+<ul>
+<li>Angular это очень мощный фреймворк, как Rails для статики.</li>
+<li>Angular стоит использовать только если вы делаете Single Page Application. В противном случае как из пушки по воробьям.</li>
+<li>У Angular своя концепция MVC, но нет как такового понятия модели.</li>
+<li>Angular в целом не особо объектноориентирован и не очень хорошо ложится на Coffeescript.</li>
+<li>Rails лучше модифицировать для отдачи шаблонов по запросу вот таким gem <!-- raw HTML omitted --><a href="https://github.com/pitr/angular-rails-templates">https://github.com/pitr/angular-rails-templates</a><!-- raw HTML omitted -->, что позволяет использовать HAML для их написания</li>
+</ul>
+<p>И в том и в другом случае было необходимо разработать правильную отдачу JSON объектов при поллинге. Мне нужно было включать ассоциативные поля в модели, поэтому довольно скоро от Model.as_json я перешел к использованию <!-- raw HTML omitted --><a href="https://github.com/rails-api/active_model_serializers">https://github.com/rails-api/active_model_serializers</a><!-- raw HTML omitted -->, но поскольку разработчики не смогли придумать кеширование, да и отдачу url_for, пришлось перейти на jbuilder, на котором и остановился. json!.cache отлично сокращает запросы к базе и время рендера.</p>
+<p>Для отдачи JSON решил сделать API через отдельные контроллеры и наймспейс ‘/api/ <!-- raw HTML omitted -->как у Раяна Бейтса<!-- raw HTML omitted -->. </p>
+<p>И все было хорошо, пока я не стал думать, как же для разных страниц мне использовать разные биндинги для KnockoutJS и при этом чувствовать себя хорошо. Самый простой и «лобовой» способ это убрать require_tree . из application.js и добавить include_javascript_tag params[:controller] в лейаут. Но здесь то и зарыт главный косяк. Assets pipeline, который склеивает все css и js в один файл будет кидать ексепшены, поскольку не скомпилирует .js для каждого контроллера. И выхода здесь два:</p>
+<ol>
+<li>включить компиляцию assets для продакшена.</li>
+<li>использовать <!-- raw HTML omitted -->gem paloma<!-- raw HTML omitted -->. </li>
+</ol>
+<p>Более православным мне показался второй путь, поскольку использует assets pipeline и делает всю магию на клиенте. Также позволяет передавать из контрроллера в JS различные параметры. Это же умеет делать gem gon, но если можно гем не использовать, то лучше его не использовать.</p>
+<p>Также, мне очень понравился подход с подключением jquery библиотек и используемого мной metro-ui-css фреймворка через интеграцию с bower. В моем случае сделал подключение gem ‘rails-bower’, в Bowerfile записал asset ‘metro-ui-css’, rake bower:install и вуаля, в  /vendor/assets/bower_components загруженные с зависимостями jquery и другие модули. Очень удобно.</p>
+<p>Итоги. </p>
+<p>Я остановился на использовании KnockoutJS для моей задачи, и доволен этим фактом, много jQuery кода заменил более компактным и объектно-ориентированным кодом для Knockout. А AngularJS, думаю, стоит использовать вообще отдельным приложением вместе с Node.js, а Rails в качестве исключительно JSON бекенда, что тоже для Rails было бы унизительным.<!-- raw HTML omitted --></p>
+</div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url =  null ;  
+    this.page.identifier =  null ; 
+    };
+ (function() { 
+     var d = document, s = d.createElement('script');
+     s.src = 'https://EXAMPLE.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+
+        </div>
+        <div class="clear"></div><div id="sidebar">
+    <div id="sidebar-widget">
+        <div class="sidebar-heading">Категории</div>
+        <p></p>
+        <ul>
+            
+            <li><a href="/categories/apache/">apache</a> (3) </li>
+            
+            <li><a href="/categories/clojure/">clojure</a> (1) </li>
+            
+            <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
+            
+            <li><a href="/categories/gtd/">GTD</a> (4) </li>
+            
+            <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+            
+            <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
+            
+            <li><a href="/categories/links/">links</a> (2) </li>
+            
+            <li><a href="/categories/linux/">linux</a> (1) </li>
+            
+            <li><a href="/categories/macos/">macos</a> (1) </li>
+            
+            <li><a href="/categories/rails/">rails</a> (1) </li>
+            
+            <li><a href="/categories/sip/">sip</a> (1) </li>
+            
+            <li><a href="/categories/tips-and-tricks/">tips and tricks</a> (1) </li>
+            
+            <li><a href="/categories/vmware/">vmware</a> (2) </li>
+            
+            <li><a href="/categories/windows/">windows</a> (4) </li>
+            
+            <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
+            
+            <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (1) </li>
+            
+            <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
+            
+            <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">веб-разработка</a> (8) </li>
+            
+            <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">виртуализация</a> (1) </li>
+            
+            <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">гаджеты</a> (2) </li>
+            
+            <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">железо</a> (3) </li>
+            
+            <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">за жизнь</a> (119) </li>
+            
+            <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">здоровье</a> (4) </li>
+            
+            <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (44) </li>
+            
+            <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">маркетинг</a> (2) </li>
+            
+            <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (25) </li>
+            
+            <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">управление</a> (1) </li>
+            
+            <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

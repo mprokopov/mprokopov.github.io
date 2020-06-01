@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>things on Maksym Prokopov personal website</title>
+    <link>https://mprokopov.github.io/tags/things/</link>
+    <description>Recent content in things on Maksym Prokopov personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Mon, 16 Aug 2010 09:40:54 +0000</lastBuildDate>
+    
+	<atom:link href="https://mprokopov.github.io/tags/things/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Things, OmniFocus и прочие GTD</title>
+      <link>https://mprokopov.github.io/2010/08/thing-vs-omnifocus-gtd/</link>
+      <pubDate>Mon, 16 Aug 2010 09:40:54 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2010/08/thing-vs-omnifocus-gtd/</guid>
+      <description>Почему работают GTD системы?
+Почему не работают GTD системы?
+Почему Things завоевывает больше пользователей простотой и дизайном, нежели OmniFocus функциональностью?
+Как пользователь со стажем обеих систем (а также The Hit List, MyLifeOrganized) имею что сказать.
+OmniFocus заставляет таки почувствовать себя белкой в колесе жизни. Продуктивность растет, сильно растет и часто и помногу. И вот уже вырастает до таких пределов, когда человек начинает себя чувствовать автоматом по выполнению задач и проектов и говорит себе «стоп, хватит, выходной».</description>
+    </item>
+    
+  </channel>
+</rss>

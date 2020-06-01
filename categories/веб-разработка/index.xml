@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>веб-разработка on Maksym Prokopov personal website</title>
+    <link>https://mprokopov.github.io/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/</link>
+    <description>Recent content in веб-разработка on Maksym Prokopov personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Wed, 10 Jan 2018 12:52:59 +0000</lastBuildDate>
+    
+	<atom:link href="https://mprokopov.github.io/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Про редакторы и IDE</title>
+      <link>https://mprokopov.github.io/2018/01/%D0%BF%D1%80%D0%BE-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D1%8B-%D0%B8-ide/</link>
+      <pubDate>Wed, 10 Jan 2018 12:52:59 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2018/01/%D0%BF%D1%80%D0%BE-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D1%8B-%D0%B8-ide/</guid>
+      <description>Я люблю время от времени тыкать палочкой в различные редакторы и пробовать их в своей работе.
+Сейчас появилось очень много интересных и быстрых штук типа Sublime, Atom, LightTable. Ребята из Jetbrains создают отличные (но медленные и прожорливые) IDE типа WebStorm, RubyMine, PyCharm.</description>
+    </item>
+    
+    <item>
+      <title>Редактор мечты или как, наконец, холивар Emacs или Vim завершился.</title>
+      <link>https://mprokopov.github.io/2016/06/spacemacs/</link>
+      <pubDate>Mon, 06 Jun 2016 11:10:04 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2016/06/spacemacs/</guid>
+      <description>&lt;p&gt;Если уж быть совсем-совсем кратким, то встречайте &lt;a href=&#34;http://spacemacs.org/&#34;&gt;Spacemacs&lt;/a&gt;. Это такой настроенный Emacs с клавиатурными сочетаниями от Vim.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Иногда я снимаю шапочку управленца &lt;a href=&#34;https://it-premium.com.ua&#34;&gt;IT-Premium&lt;/a&gt; и одеваю другую свою шапочку из фольги и становлюсь программистом. У каждого программиста, мой дорогой читатель, есть второй инструмент по важности после &lt;strong&gt;головы&lt;/strong&gt; – это редактор кода.&lt;/p&gt;
+&lt;p&gt;Spacemacs&lt;/p&gt;
+&lt;p&gt;Каким должен быть хороший редактор для кода? Удобным, быстрым, с подсказками и свистелками? Но, конечно же, самый хороший инструмент это тот, которым ты умеешь пользоваться. Я тот самый парень, который все время пробует новые и новые инструменты, например:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sublime Text&lt;/li&gt;
+&lt;li&gt;Emacs&lt;/li&gt;
+&lt;li&gt;Vim&lt;/li&gt;
+&lt;li&gt;Light Table&lt;/li&gt;
+&lt;li&gt;Atom&lt;/li&gt;
+&lt;li&gt;RubyMine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;С каждым из этих инструментов я провел довольно долго времени и, думаю, что понимаю их плюсы и минусы.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Пост, в котором я признаюсь в любви Devcards, Figwheel и ClojureScript</title>
+      <link>https://mprokopov.github.io/2015/12/%D0%BF%D0%BE%D1%81%D1%82-%D0%B2-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC-%D1%8F-%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D1%8E%D1%81%D1%8C-%D0%B2-%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8-devcards-figwheel/</link>
+      <pubDate>Sun, 27 Dec 2015 15:12:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2015/12/%D0%BF%D0%BE%D1%81%D1%82-%D0%B2-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC-%D1%8F-%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D1%8E%D1%81%D1%8C-%D0%B2-%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8-devcards-figwheel/</guid>
+      <description>Этот пост рекомендуется пропустить всем непрограммистам.
+Свой путь веб-разработчика я начал в 1999г. Это был PHP 3.0.3 + MySQL. С тех пор я попробовал довольно много инструментария для разработки, Parser 2 от студии Лебедева, а на Parser 3 до сих пор работает мой старый сайт http://nexus.org.ua/. С 2006г началась интрига с Ruby on Rails, который набрал популярности благодаря свежему на то время подходу convention over configuration. И это было круто, куча чужих уже готовых к употреблению кусков кода в виде ruby gems, которые легко подключались.</description>
+    </item>
+    
+    <item>
+      <title>Мысли о Дизайне</title>
+      <link>https://mprokopov.github.io/2013/03/design-principles/</link>
+      <pubDate>Fri, 08 Mar 2013 10:11:48 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2013/03/design-principles/</guid>
+      <description>Любi друзi, дружите с ангийским языком, это не только расширит ваш кругозор, но и позволит читать такие статьи как эта: https://www.gov.uk/designprinciples, в которой описаны 10 рекомендаций при Дизайне.
+В целом под Дизайном у меня возникает следующее определение: «Дизайн, это когда создавая вещь, думали обо мне. Как я буду ее [вещь] использовать, почему, и как, мне должно быть легко с ней взаимодействовать?», а отнюдь не «красочные пятна в нужном порядке», каким это мнение распространено среди обывателей.</description>
+    </item>
+    
+    <item>
+      <title>Новая тема wordpress для nexusnotes.ru</title>
+      <link>https://mprokopov.github.io/2012/01/%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D0%BC%D0%B0-wordpress-%D0%B4%D0%BB%D1%8F-nexusnotes-ru/</link>
+      <pubDate>Mon, 23 Jan 2012 14:56:38 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2012/01/%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D0%BC%D0%B0-wordpress-%D0%B4%D0%BB%D1%8F-nexusnotes-ru/</guid>
+      <description>Очень понравилась тема «Молескин» у http://www.artemy.com.ua и, пользуясь случаем, установил себе такую же.</description>
+    </item>
+    
+    <item>
+      <title>Про государственные говносайты</title>
+      <link>https://mprokopov.github.io/2011/04/%D0%BF%D1%80%D0%BE-%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B3%D0%BE%D0%B2%D0%BD%D0%BE%D1%81%D0%B0%D0%B9%D1%82%D1%8B/</link>
+      <pubDate>Tue, 26 Apr 2011 12:02:16 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2011/04/%D0%BF%D1%80%D0%BE-%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B3%D0%BE%D0%B2%D0%BD%D0%BE%D1%81%D0%B0%D0%B9%D1%82%D1%8B/</guid>
+      <description>Как правило, государственные сайты всегда представляли собой кусок неудобоваримого говна, что и понятно, учитывая кем и как ставилось техническое задание, а также кем оно исполнялось и кем принималось.
+А бывает ли так, что 10лет назад сайт выглядел гораздо лучше, чем сегодня?
+Вот сайт киевского института автоматизации систем в строительстве, где в 1999 я начинал свою трудовую карьеру:
+Ниже сайт образца 2000 года, выполнен дизайнерами провайдера Elvisti, который в то время находился на территории института.</description>
+    </item>
+    
+    <item>
+      <title>Ruby on Rails хозяйке на заметку: менеджер локальных сайтов Pow</title>
+      <link>https://mprokopov.github.io/2011/04/ruby-on-rails-%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C/</link>
+      <pubDate>Tue, 12 Apr 2011 10:56:21 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2011/04/ruby-on-rails-%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C/</guid>
+      <description>Чрезвычайно удобной оказалась возможность работы с несколькими сайтами на базе RoR (по факту на Rack), которую предоставляет утилита Pow.
+Вкратце, если у вас достаточно много сайтов разработке, утилита предоставляет хук в DNS зону dev и позволяет обращаться к вашим сайтам по url вида http://myapp.dev , http://myapp2.dev, а также добавляет правило в фаерволе, которое заворачивает обращения к self с порта 80 на внутренний порт утилиты.
+Сам Pow состоит из двух частей — DNS responder и проксирующего web server.</description>
+    </item>
+    
+    <item>
+      <title>Инструментарий верстальщика</title>
+      <link>https://mprokopov.github.io/2011/02/%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B9-%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B0%D0%BB%D1%8C%D1%89%D0%B8%D0%BA%D0%B0/</link>
+      <pubDate>Sun, 13 Feb 2011 12:23:44 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2011/02/%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B9-%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B0%D0%BB%D1%8C%D1%89%D0%B8%D0%BA%D0%B0/</guid>
+      <description>Иногда попадаются прямо-таки «золотые» ссылки для веб-верстальщика, здесь я их и постараюсь собрать вместе:
+http://wordmark.it — быстро подобрать шрифт для надписи из имеющихся у вас
+http://lamb.cc/typograph/ — типографика, подброрка стиля и ритма текста, заголовков
+http://jsfiddle.net/hCVyG/ — отладка jQuery, HTML, CSS, Javascript
+http://sprites.in/ — инструмент для работы со спрайтами
+http://spriteme.org/ — еще один инструмент для работы со спрайтами
+http://csssprites.org/ и еще один
+http://shamansir.github.com/JavaScript-Garden/ — заковыристые темы Javascript
+http://kuler.adobe.com — подбор цветовой гаммы, что хорошо — можно выбрать из готовых</description>
+    </item>
+    
+  </channel>
+</rss>

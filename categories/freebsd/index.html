@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal website</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+
+
+<link rel="stylesheet" href="https://mprokopov.github.io/style.min.b47e9dbbe9cb8ba63ca483edbb6a0ccf62fe04626db6ba8901ff95c740f26675.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+    <body><div id="header">
+    <a class="title" href="/"><div id="title">Блог Максима Прокопова</div><div id="description">Считаю что идеи это такая штука, которой следует делиться</div></a>
+</div>
+<div id="nav-container">
+    <div id="nav">
+        <div class="menu">
+            <div class="nav">
+                <ul>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/trips/">Путешествую</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/loosingweight/">Худею</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/reading/">Читаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/creating/">Создаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/wishlist/">Wishlist</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/about/">Обо мне</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+        <div id="container">
+
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2011/06/zabbix-freebsd-program-counter-not-available-for-this-architecture/">Zabbix freebsd program counter not available for this architecture</a>
+    </h1>
+    <div class="date">20.06.2011</div>
+    <div><p>После обновления Zabbix на FreeBSD до 1.8.5 стал получать сообщения вроде этого:</p>
+<p>Zabbix freebsd program counter not available for this architecture</p>
+<p>и заббикс перестал стартовать.</p>
+<p> </p>
+<p>Все дело оказалось в старой библиотеке net-snmp, которую необходимо обновить до 5.5, и уже затем пересобрать zabbix.</p>
+<p> </p>
+<p> </p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p> </p>
+<p> </p>
+<p>Как говорят наши пиндосские товарищи, works like a charm</p>
+<p> </p>
+</div>
+</div>
+
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2011/04/mac-os-x-transparent-squid-ipfw-bugfix/">Mac OS X transparent squid ipfw bugfix</a>
+    </h1>
+    <div class="date">11.04.2011</div>
+    <div><p>Сам прозрачный прокси включается проще простого, в squid.conf добавляем:</p>
+<p>http_port 3128 transparent</p>
+<p>и в ipfw добавляем следующее правило заворачивающее с 80го порта на внутренний:</p>
+<p>ipfw add 1050 fwd 127.0.0.1:3128 tcp from 192.168.1.0/24 to not 192.168.1.0/24 80</p>
+<p> </p>
+<p>Однако, оказалось, на 10.6 не работает ipfw fwd правило для прозрачного прокси.</p>
+<p> </p>
+<p>Непродолжительное гугление помогло выявить вот такой багфикс:</p>
+<p>sudo sysctl -w net.inet.ip.scopedroute = 0</p>
+<p>или еще лучше прописать в /etc/sysctl.conf</p>
+<p>net.inet.ip.scopedroute = 0 и перезагрузить сервер.</p>
+<p> </p>
+</div>
+</div>
+
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2011/01/commandlinefu-%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%8F%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D1%8E%D0%BD%D0%B8%D0%BA%D1%81%D0%BE%D0%B8%D0%B4%D0%B0/">Commandlinefu : домашняя страница юниксоида</a>
+    </h1>
+    <div class="date">16.01.2011</div>
+    <div><p>Порой бывает комментарий ценнее самой статьи, так, например, на <a href="http://habrahabr.ru/blogs/ubuntu/111717/">просторах Хабра</a> был найден линк на прекрасный сайт:</p>
+<p><a href="http://www.commandlinefu.com/commands/browse">http://www.commandlinefu.com/commands/browse</a></p>
+<p>Из прекрасного: если вы забыли набрать sudo перед выполнением команды, не беда, выполните sudo !!</p>
+<p>и вместо !! подставится предыдущая строка.</p>
+<p>Или вот, например, закрыли вам весь доступ фаерволами, из сервисов один DNS остался, так вот, можете вполне воспользоваться википедией</p>
+<p>dig +short txt <!-- raw HTML omitted -->.wp.dg.cx</p>
+<p>где <!-- raw HTML omitted --> — ключевое слово, на которое вы ищете статью.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2011/01/freebsd-exim-logrotate/">Хозяйке FreeBSD на заметку: переворачивание логов exim</a>
+    </h1>
+    <div class="date">03.01.2011</div>
+    <div><p>Данный совсем простой метод подходит не только для логов exim, но и любых других логов, которые необходимо переворачивать либо по размеру, либо по расписанию.</p>
+<p>данные две строки</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+</div>
+</div>
+
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2010/12/quick-shell-cd/">Лайфхак в shell: быстрое перемещение по каталогам</a>
+    </h1>
+    <div class="date">12.12.2010</div>
+    <div><p>UPD: добавлено видео процесса.</p>
+<p>Для тех, кто способен пальцами гвозди гнуть, а именно, яростных программеров и юниксовых сисадминов будет небезынтересным эффективный способ передвижения по каталогам. Не открою большой тайны, если скажу, что наиболее популярным каталогом при работе с FreeBSD у меня является /usr/local/etc/. Это значит я наберу cd /u  tab /l tab /e tab [enter], а именно 13 нажатий клавиш .</p>
+<p>А можно быстрее? <a href="http://wiki.github.com/joelthelion/autojump/">Оказывается</a> можно!</p>
+<p>Небольшой скрипт, который мы можем взять с  github, и без труда проинсталлировать в системе, и вуаля.</p>
+<p>Автоматически фиксируются те каталоги, куда вы чаще всего заходите и становятся доступными по шорткату «j».</p>
+<p>В моем примере я всего лишь набрал «j u enter» и сразу оказался в нужном каталоге! С командой j также вполне себе работает автокомплит.</p>
+<p>Исходники: <a href="http://wiki.github.com/joelthelion/autojump/">http://wiki.github.com/joelthelion/autojump/</a></p>
+<p> </p>
+<p>Под Mac ставится одной строкой: brew install autojump (если у вас установлен brew)</p>
+<p>Enjoy.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2010/03/high-availability-http-load-balancer/">high availability http load balancer</a>
+    </h1>
+    <div class="date">25.03.2010</div>
+    <div><p>На просторах интернетов был найден software http <a href="http://haproxy.1wt.eu/">load balancer</a> для распределения нагрузки на web-front.</p>
+<p>По многообещающим страницам сайта можно предположить, что модуль способен выдержать распределение http запросов с нагрузкой в десятки тысяч запросов в секунду.</p>
+<p><a href="http://nexusnotes.ru/wp-content/uploads/2010/03/haproxy-pmode.png"><!-- raw HTML omitted --></a></p>
+<ul>
+<li><!-- raw HTML omitted --><!-- raw HTML omitted --><a href="http://www.kernel.org/">Linux 2.4</a> on x86, x86_64, Alpha, SPARC, MIPS, PARISC</li>
+<li><a href="http://www.kernel.org/">Linux 2.6</a> on x86, x86_64, ARM (ixp425), PPC64</li>
+<li><a href="http://www.sun.com/software/solaris/">Solaris 8/9</a> on UltraSPARC 2 and 3</li>
+<li><a href="http://www.sun.com/software/solaris/">Solaris 10</a> on Opteron and UltraSPARC</li>
+<li><a href="http://www.freebsd.org/">FreeBSD 4.10 — 6.2</a> on x86</li>
+<li><a href="http://www.openbsd.org/">OpenBSD 3.1 to -current</a> on i386, amd64, macppc, alpha, sparc64 and VAX (check the ports)</li>
+</ul>
+<p>Впечатляющих результатов достиг Chris Knight:</p>
+<h3 id="a-title200-terabytes-served-in-81-days--247tb-per-day-relbookmark-hrefhttpwwwghostwheelcommerlinpersonalnotes20070325200-terabytes-served-in-81-days-247tb-per-day200-terabytes-served-in-81-days--247tb-per-daya"><!-- raw HTML omitted -->200 Terabytes Served in 81 Days = 2.47TB per day!<!-- raw HTML omitted --></h3>
+</div>
+</div>
+
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2009/12/apachetop/">apachetop</a>
+    </h1>
+    <div class="date">29.12.2009</div>
+    <div><p>Набрел на забавную утилиту apachetop</p>
+<p>Вот такой простенький, порой, бывает нужен <a href="http://www.webta.org/projects/apachetop/">анализатор состояния апача</a>, вдруг атакует кто?</p>
+<p><!-- raw HTML omitted --></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2009/12/freebsd-zabbix-1-8/">Ошибка при установке на FreeBSD zabbix 1.8</a>
+    </h1>
+    <div class="date">24.12.2009</div>
+    <div><p><!-- raw HTML omitted -->Если при установке zabbix 1.8 на FreeBSD вы получаете сообщения вида:</p>
+<p><!-- raw HTML omitted --></p>
+<p>60622:20091223:144406.024 Can’t allocate shared memory of size 8388608 [Cannot allocate memory]</p>
+<p>60622:20091223:144406.024 Can’t allocate shared memory for configuration cache.</p>
+<p>знайте, все дело в системных настройках sysctl.conf</p>
+<p>в порядке тестирования пропишите</p>
+<p>sysctl kern.ipc.semmni=128</p>
+<p>sysctl kern.ipc.semmns=32000</p>
+<p>sysctl kern.ipc.semmax=32000</p>
+<p>sysctl kern.ipc.semmsl=250</p>
+<p>sysctl kern.ipc.shmmni=4096</p>
+<p>sysctl kern.ipc.shmmax=2147483648</p>
+<p>sysctl kern.ipc.shmall=2097152</p>
+<p>или сразу в /etc/sysctl.conf, тогда потребуется перезагрузка</p>
+<p>kern.ipc.semmni=128</p>
+<p>kern.ipc.semmns=32000</p>
+<p>kern.ipc.semmax=32000</p>
+<p>kern.ipc.semmsl=250</p>
+<p>kern.ipc.shmmni=4096</p>
+<p>kern.ipc.shmmax=2147483648</p>
+<p>kern.ipc.shmall=2097152</p>
+<p>проблема должна рассосаться</p>
+</div>
+</div>
+
+
+        </div>
+        <div class="clear"></div><div id="sidebar">
+    <div id="sidebar-widget">
+        <div class="sidebar-heading">Категории</div>
+        <p></p>
+        <ul>
+            
+            <li><a href="/categories/apache/">apache</a> (3) </li>
+            
+            <li><a href="/categories/clojure/">clojure</a> (1) </li>
+            
+            <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
+            
+            <li><a href="/categories/gtd/">GTD</a> (4) </li>
+            
+            <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+            
+            <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
+            
+            <li><a href="/categories/links/">links</a> (2) </li>
+            
+            <li><a href="/categories/linux/">linux</a> (1) </li>
+            
+            <li><a href="/categories/macos/">macos</a> (1) </li>
+            
+            <li><a href="/categories/rails/">rails</a> (1) </li>
+            
+            <li><a href="/categories/sip/">sip</a> (1) </li>
+            
+            <li><a href="/categories/tips-and-tricks/">tips and tricks</a> (1) </li>
+            
+            <li><a href="/categories/vmware/">vmware</a> (2) </li>
+            
+            <li><a href="/categories/windows/">windows</a> (4) </li>
+            
+            <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
+            
+            <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (1) </li>
+            
+            <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
+            
+            <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">веб-разработка</a> (8) </li>
+            
+            <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">виртуализация</a> (1) </li>
+            
+            <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">гаджеты</a> (2) </li>
+            
+            <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">железо</a> (3) </li>
+            
+            <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">за жизнь</a> (119) </li>
+            
+            <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">здоровье</a> (4) </li>
+            
+            <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (44) </li>
+            
+            <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">маркетинг</a> (2) </li>
+            
+            <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (25) </li>
+            
+            <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">управление</a> (1) </li>
+            
+            <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

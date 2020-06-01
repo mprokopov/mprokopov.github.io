@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal website</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+
+
+<link rel="stylesheet" href="https://mprokopov.github.io/style.min.b47e9dbbe9cb8ba63ca483edbb6a0ccf62fe04626db6ba8901ff95c740f26675.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+    <body><div id="header">
+    <a class="title" href="/"><div id="title">Блог Максима Прокопова</div><div id="description">Считаю что идеи это такая штука, которой следует делиться</div></a>
+</div>
+<div id="nav-container">
+    <div id="nav">
+        <div class="menu">
+            <div class="nav">
+                <ul>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/trips/">Путешествую</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/loosingweight/">Худею</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/reading/">Читаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/creating/">Создаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/wishlist/">Wishlist</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/about/">Обо мне</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+        <div id="container">
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2011/06/mac-layout-switch-caps-lock/">Переключение раскладки клавиатуры в Mac при помощи Caps Lock (aka Мефодица by Lebedev)</a>
+    </h1>
+    <div class="date">21.06.2011</div>
+    <h4>Время чтения: 2 мин.</h4>
+    <div><p>В молодости ваш покорный имел радость готовить FreeBSD и Linux, в котором переключение раскладки по Caps Lock было функцией нативной. Для windows тоже был <a href="http://technet.microsoft.com/en-us/sysinternals/bb897578.aspx">хак от Марка Руссиновича</a>.</p>
+<p>Необходимость в данной манипуляции возникла по мере изучения редактора для трушных юниксоидов — Emacs, комбинации клавиш которого были все завязаны на клавишу Control, расположена которая была не в очень удобном месте. Как выяснилось, на то были <a href="http://en.wikipedia.org/wiki/Space-cadet_keyboard">свои исторические причины</a>. И подавляющее большинство пользователей Emacs тут же меняли местами control и caps lock.</p>
+<p>Долго я раздумавал, с какой стороны подойти к этой задаче в mac os, пока не наткнулся на <a href="http://tema.livejournal.com/913007.html?thread=505212783">заметку в стиле вопрос-ответ в уютной у Артемия</a>. В его ответе прилагается ссылка на архив с Мефодица.bundle</p>
+<p><a href="http://www.tema.ru/jjj/mefoditsa.zip">http://www.tema.ru/jjj/mefoditsa.zip</a></p>
+<p>файл необходимо после распаковки положить в /Library/Keyboard Layouts/ и в настройках языка выбрать «Мефодица». Выйти из учетной записи и снова войти.</p>
+<p>Теперь можно переключать раскладки клавиатуры по caps lock, при чем индикатор будет сигнализировать о выбранном языке. Горит led — русский, не горит — английский.</p>
+<p>Из замеченных особенностей — перемаплены цифровые клавиши на верхний регистр, например для точки и запятой необходимо нажать просто 6 или 7, если необходимо набрать цифры — делайте при помощи shift. Не менее интересно будет ознакомиться в Ководстве у Артемия и с историей проблемы русских <a href="http://www.artlebedev.ru/kovodstvo/sections/105/">знаков препинания при наборе</a>.</p>
+<p>Бандл использует свой механизм переключения, так что command + space можно отключить от переключения раскладок насовсем и использовать с удобством, например, в quicksilver.</p>
+<p>UPDATE: Я привык и втянулся! Знаки препинания в нижнем регистре для русского языка это очень-очень правильно. <a href="http://code.google.com/p/iterm2/issues/detail?id=1067&amp;start=200">Обнаружен огорчающй баг с iTerm2</a>, но это, думаю, претензии к iTerm2.</p>
+<p><!-- raw HTML omitted --></p>
+</div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url =  null ;  
+    this.page.identifier =  null ; 
+    };
+ (function() { 
+     var d = document, s = d.createElement('script');
+     s.src = 'https://EXAMPLE.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+
+        </div>
+        <div class="clear"></div><div id="sidebar">
+    <div id="sidebar-widget">
+        <div class="sidebar-heading">Категории</div>
+        <p></p>
+        <ul>
+            
+            <li><a href="/categories/apache/">apache</a> (3) </li>
+            
+            <li><a href="/categories/clojure/">clojure</a> (1) </li>
+            
+            <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
+            
+            <li><a href="/categories/gtd/">GTD</a> (4) </li>
+            
+            <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+            
+            <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
+            
+            <li><a href="/categories/links/">links</a> (2) </li>
+            
+            <li><a href="/categories/linux/">linux</a> (1) </li>
+            
+            <li><a href="/categories/macos/">macos</a> (1) </li>
+            
+            <li><a href="/categories/rails/">rails</a> (1) </li>
+            
+            <li><a href="/categories/sip/">sip</a> (1) </li>
+            
+            <li><a href="/categories/tips-and-tricks/">tips and tricks</a> (1) </li>
+            
+            <li><a href="/categories/vmware/">vmware</a> (2) </li>
+            
+            <li><a href="/categories/windows/">windows</a> (4) </li>
+            
+            <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
+            
+            <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (1) </li>
+            
+            <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
+            
+            <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">веб-разработка</a> (8) </li>
+            
+            <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">виртуализация</a> (1) </li>
+            
+            <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">гаджеты</a> (2) </li>
+            
+            <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">железо</a> (3) </li>
+            
+            <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">за жизнь</a> (119) </li>
+            
+            <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">здоровье</a> (4) </li>
+            
+            <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (44) </li>
+            
+            <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">маркетинг</a> (2) </li>
+            
+            <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (25) </li>
+            
+            <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">управление</a> (1) </li>
+            
+            <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

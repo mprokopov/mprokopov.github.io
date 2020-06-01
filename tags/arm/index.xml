@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>arm on Maksym Prokopov personal website</title>
+    <link>https://mprokopov.github.io/tags/arm/</link>
+    <description>Recent content in arm on Maksym Prokopov personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Fri, 03 Feb 2012 10:58:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://mprokopov.github.io/tags/arm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Вышел новый fun_plug 0.7</title>
+      <link>https://mprokopov.github.io/2012/02/%D0%B2%D1%8B%D1%88%D0%B5%D0%BB-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9-fun_plug-0-7/</link>
+      <pubDate>Fri, 03 Feb 2012 10:58:36 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2012/02/%D0%B2%D1%8B%D1%88%D0%B5%D0%BB-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9-fun_plug-0-7/</guid>
+      <description>Для счасливых обладателей девайсов типа D-Link DNS-320, D-Link DNS-323 есть хорошая новость, вышел новый fun_plug 0.7 пропустив версию 0.6
+http://www.inreto.de/dns323/fun-plug/
+Также для ARM и OARM энтузиасты собрали следующие пакеты
+— midnight commander 4.8.1
+— glib-2 (needed for mc)
+— htop 1.0
+— screen 4.0.3
+— iftop 1.0 pre 2
+— nmap 5.51
+— transmission 2.42
+— libevent 2.0.16 (needed for transmission)
+— mldonkey 3.1.0
+— nano 2.2.6
+— proftpd 1.3.4a</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal website</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+
+
+<link rel="stylesheet" href="https://mprokopov.github.io/style.min.b47e9dbbe9cb8ba63ca483edbb6a0ccf62fe04626db6ba8901ff95c740f26675.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+    <body><div id="header">
+    <a class="title" href="/"><div id="title">Блог Максима Прокопова</div><div id="description">Считаю что идеи это такая штука, которой следует делиться</div></a>
+</div>
+<div id="nav-container">
+    <div id="nav">
+        <div class="menu">
+            <div class="nav">
+                <ul>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/trips/">Путешествую</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/loosingweight/">Худею</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/reading/">Читаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/creating/">Создаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/wishlist/">Wishlist</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/about/">Обо мне</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+        <div id="container">
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/2010/01/mod_security2/">mod_security2 или как обезопасить свой хостинг от злодеев?</a>
+    </h1>
+    <div class="date">03.01.2010</div>
+    <h4>Время чтения: 2 мин.</h4>
+    <div><p>![mod_security for apache](<a href="http://nexusnotes.ru/wp-content/uploads/2010/01/mod">http://nexusnotes.ru/wp-content/uploads/2010/01/mod</a>_security_for_apache.png)</p>
+<p>В случае, если вы предоставляете услуги хостинга вам будет небесполезно знать, как быть, если сайты содержат старые версии публичных движков Joomla, ShopScript, WordPress, etc и периодически подвергаются взломам.</p>
+<p>В таких случаях править код и обновлять версии клиентского ПО самостоятельно вы не будете по понятным причинам, да и не всегда у клиента есть возможность найти программера/фрилансера готового выполнить обновление работающего и приносящего доход, хотя и старого интернет-магазина или форума.</p>
+<p>Может быть есть простой способ запретить обычные SQL инъекции, directory traversing и остальные распространенные методы взлома? Оказывается, такой способ есть и предоставляет его модуль apache под названием [mod_security](<a href="http://www.modsecurity.org/)">http://www.modsecurity.org/)</a>.</p>
+<p>При помощи определенного набора правил, примерно как у Spamassassin, происходит тестирование вызываемого URL на предмет конструкций ../../../ и отправка в POST данных вида ‘ or 1=1</p>
+<p>Для FreeBSD ставится довольно просто:</p>
+<p>portinstall mod_security2</p>
+<p>Для того, что бы довести функционирование этого модуля до ума прийдется потратить пару дней на изучение логов работы модуля и отключение ложных срабатываний (кои случаются) и обучению новым трюкам, что, в конечном счете, даст вам возможность спать спокойнее. На производительности сервера этот модуль отражается несущественно.</p>
+<p>Отключать модуль для определенного сайта можно в секции vhosts указав</p>
+<!-- raw HTML omitted -->
+<p>SecRuleEngine off</p>
+<!-- raw HTML omitted -->
+<p>Применение данного средства является хорошим «пугалом», но не есть панацея. Обновляйте ваши движки чаще, и закрывайте дыры в безопасности. И да прибудет с вами сила.</p>
+<p>Пример логов:</p>
+<p>[04/Jan/2010:09:15:52 +0200] [www.xxxxxxxx.com.ua/sid#28efbb60][rid#29a56058][/_vti_bin/owssvr.dll][1] Access denied with code 500 (phase 2). Pattern match «.(?:c(?:o(?:nf(?:ig)?|m)|s(?:proj|r)?|dx|er|fg|md)|p(?:rinter|ass|db|ol|wd)|v(?:b(?:proj|s)?|sdisco)|a(?:s(?:ax?|cx)|xd) |d(?:bf?|at|ll|os)|i(?:d[acq]|n[ci])|ba(?:[kt]|ckup)|res(?:ources|x)|s(?:h?tm|ql|ys)|l(?:icx|nk|og)|\w{0,5}~|webinfo|ht[rw ]|xs[dx]| …» at REQUEST_BASENAME. [file «/usr/local/etc/apache22/Includes/mod_security2/modsecurity_crs_30_http_policy.conf»] [line «94»] [id «960035»] [msg «URL file extension is restricted by policy»] [severity «CRITICAL»] [tag «POLICY/EXT_RESTRICTED»]</p>
+</div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url =  null ;  
+    this.page.identifier =  null ; 
+    };
+ (function() { 
+     var d = document, s = d.createElement('script');
+     s.src = 'https://EXAMPLE.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+
+        </div>
+        <div class="clear"></div><div id="sidebar">
+    <div id="sidebar-widget">
+        <div class="sidebar-heading">Категории</div>
+        <p></p>
+        <ul>
+            
+            <li><a href="/categories/apache/">apache</a> (3) </li>
+            
+            <li><a href="/categories/clojure/">clojure</a> (1) </li>
+            
+            <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
+            
+            <li><a href="/categories/gtd/">GTD</a> (4) </li>
+            
+            <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+            
+            <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
+            
+            <li><a href="/categories/links/">links</a> (2) </li>
+            
+            <li><a href="/categories/linux/">linux</a> (1) </li>
+            
+            <li><a href="/categories/macos/">macos</a> (1) </li>
+            
+            <li><a href="/categories/rails/">rails</a> (1) </li>
+            
+            <li><a href="/categories/sip/">sip</a> (1) </li>
+            
+            <li><a href="/categories/tips-and-tricks/">tips and tricks</a> (1) </li>
+            
+            <li><a href="/categories/vmware/">vmware</a> (2) </li>
+            
+            <li><a href="/categories/windows/">windows</a> (4) </li>
+            
+            <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
+            
+            <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (1) </li>
+            
+            <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
+            
+            <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">веб-разработка</a> (8) </li>
+            
+            <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">виртуализация</a> (1) </li>
+            
+            <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">гаджеты</a> (2) </li>
+            
+            <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">железо</a> (3) </li>
+            
+            <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">за жизнь</a> (119) </li>
+            
+            <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">здоровье</a> (4) </li>
+            
+            <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (44) </li>
+            
+            <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">маркетинг</a> (2) </li>
+            
+            <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (25) </li>
+            
+            <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">управление</a> (1) </li>
+            
+            <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

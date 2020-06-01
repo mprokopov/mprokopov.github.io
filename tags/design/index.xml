@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design on Maksym Prokopov personal website</title>
+    <link>https://mprokopov.github.io/tags/design/</link>
+    <description>Recent content in design on Maksym Prokopov personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Mon, 23 Jan 2012 14:56:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://mprokopov.github.io/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Новая тема wordpress для nexusnotes.ru</title>
+      <link>https://mprokopov.github.io/2012/01/%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D0%BC%D0%B0-wordpress-%D0%B4%D0%BB%D1%8F-nexusnotes-ru/</link>
+      <pubDate>Mon, 23 Jan 2012 14:56:38 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2012/01/%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D0%BC%D0%B0-wordpress-%D0%B4%D0%BB%D1%8F-nexusnotes-ru/</guid>
+      <description>Очень понравилась тема «Молескин» у http://www.artemy.com.ua и, пользуясь случаем, установил себе такую же.</description>
+    </item>
+    
+  </channel>
+</rss>

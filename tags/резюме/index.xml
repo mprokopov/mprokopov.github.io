@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>резюме on Maksym Prokopov personal website</title>
+    <link>https://mprokopov.github.io/tags/%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5/</link>
+    <description>Recent content in резюме on Maksym Prokopov personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Sun, 11 Mar 2012 18:10:22 +0000</lastBuildDate>
+    
+	<atom:link href="https://mprokopov.github.io/tags/%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Просматривая резюме, ловим прекрасное</title>
+      <link>https://mprokopov.github.io/2012/03/%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D0%B2%D0%B0%D1%8F-%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5-%D0%BB%D0%BE%D0%B2%D0%B8%D0%BC-%D0%BF%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%BE/</link>
+      <pubDate>Sun, 11 Mar 2012 18:10:22 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2012/03/%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D0%B2%D0%B0%D1%8F-%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5-%D0%BB%D0%BE%D0%B2%D0%B8%D0%BC-%D0%BF%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%BE/</guid>
+      <description>Так как у нас на http://it-premium.com.ua снова открылась вакансия, разместили мы ее на work.ua и начали ловить кайфрезюме.
+Честно, я не совсем понимаю логику поциента, который пишет следующее, напоминаю, на вакансию рукастого системного администратора.
+Додаткові відомості
+Робота з ПЗ: MS Windows 98-7, MS Office, 1C, Internet Explorer, АБС В2, Far, Kerio WinRoute;
+Ну вы себе представляете, насколько системному администратору необходимо владеть навыками работы с Windows 98, и, OMG, Internet Explorer наравне с 1C?</description>
+    </item>
+    
+  </channel>
+</rss>

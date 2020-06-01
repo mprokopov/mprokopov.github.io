@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openvpn on Maksym Prokopov personal website</title>
+    <link>https://mprokopov.github.io/tags/openvpn/</link>
+    <description>Recent content in openvpn on Maksym Prokopov personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Sat, 04 Feb 2012 15:30:58 +0000</lastBuildDate>
+    
+	<atom:link href="https://mprokopov.github.io/tags/openvpn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Чудесная настройка OpenVPN</title>
+      <link>https://mprokopov.github.io/2012/02/%D1%87%D1%83%D0%B4%D0%B5%D1%81%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-openvpn/</link>
+      <pubDate>Sat, 04 Feb 2012 15:30:58 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/2012/02/%D1%87%D1%83%D0%B4%D0%B5%D1%81%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-openvpn/</guid>
+      <description>Два дня я вынашивал мысли о failover vpn, и даже пользовался экзотической схемой с получением внешнего IP через PPTP от одного хорошего провайдера но тот ограничивал скорость на уровне 1Mbit по туннелю, и пришлось думать иную схему.
+И вот чудо, чудо! Получилось организовать настоящий failover bridged VPN!
+Итак, дано:
+ Мой офис, у которого два канала, один оптика, другой бекапный ADSL. Я с ноутбуком, который может быть где угодно, когда угодно и в любом состоянии.</description>
+    </item>
+    
+  </channel>
+</rss>
