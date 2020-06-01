@@ -6,6 +6,7 @@
     <description>Recent content in Pages on Maksym Prokopov personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
+    <lastBuildDate>Tue, 20 Aug 2013 07:14:34 +0000</lastBuildDate>
     
 	<atom:link href="https://mprokopov.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
     
@@ -44,10 +45,12 @@
     <item>
       <title>Создаю</title>
       <link>https://mprokopov.github.io/pages/creating/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Aug 2013 07:14:34 +0000</pubDate>
       
       <guid>https://mprokopov.github.io/pages/creating/</guid>
-      <description>About me</description>
+      <description>Когда в 2001г я работал в студии веб-дизайна [dom.com] мы придумали забавный поддомен «con». В итоге получался полный адрес con.dom.com.ua. Со временем зарегистрировали домен condom.com.ua, потом мы его потеряли и не так давно снова зарегистрировали condom.org.ua.
+Поскольку у коллектива разработчиков было свободное время, мы закодили и выдали в мир сайт с тематикой, которая бы оправдывала такой домен. Это сайт о средствах контрацепции.
+В нашей команде была журналистка Лариса Мищанчук, которая и стала автором большинства статей о контрацепции.</description>
     </item>
     
     <item>
