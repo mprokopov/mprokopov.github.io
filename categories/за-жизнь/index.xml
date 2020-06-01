@@ -6,30 +6,10 @@
     <description>Recent content in за жизнь on Maksym Prokopov personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sun, 24 May 2020 14:34:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2020 17:10:53 +0000</lastBuildDate>
     
 	<atom:link href="https://mprokopov.github.io/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Ruby and Smalltalk</title>
-      <link>https://mprokopov.github.io/2020/05/ruby-and-smalltalk/</link>
-      <pubDate>Sun, 24 May 2020 14:34:00 +0000</pubDate>
-      
-      <guid>https://mprokopov.github.io/2020/05/ruby-and-smalltalk/</guid>
-      <description>Ruby has so much inspiration from the Smalltalk!
-Here are my findings:
- Inspect method actually opens an inspector for the object in Smalltalk, Ruby just tries to show object’s guts collect, select are methods for collections from the Smalltalk do for collection in Smalltalk is the same what’s in Ruby each block parameter in «pipes» in Ruby is very similar to Smalltalk super is calling the superclass parent method initialize is a constructor name for the class in Smalltalk keywords concept has slightly different syntax, but the meaning is the same &amp;laquo; method Ruby object.</description>
-    </item>
-    
-    <item>
-      <title>My recent tasks</title>
-      <link>https://mprokopov.github.io/2020/03/my-recent-tasks/</link>
-      <pubDate>Tue, 03 Mar 2020 16:19:27 +0000</pubDate>
-      
-      <guid>https://mprokopov.github.io/2020/03/my-recent-tasks/</guid>
-      <description>Create a Jenkins job for mobile application internal share to the Google Play Store Create a Jenkins job for mobile application automated release to the Google Play Store Restore Jenkins jobs for the COBOL build with Oracle 11.2 and Sybase 15.5 on the Solaris Sparc, AIX and HP-UX machines Debug a performance issue in the distributed power management software. Create helm script for the product deployment to the Central K8S cluster into staging and prod namespaces and talk to DynamoDB and put assets to the S3 Setup Prometheus + Grafana for the performance monitoring Setup gradle builds for Java Spring and NodeJS Extend XenServer with two new HDDs for a capacity  and much more.</description>
-    </item>
     
     <item>
       <title>Applescript instantly open Zoom link from the iCal calendar</title>

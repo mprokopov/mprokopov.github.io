@@ -86,7 +86,7 @@
     </item>
     
     <item>
-      <title>2020 week 22 links</title>
+      <title>2020 week 22</title>
       <link>https://mprokopov.github.io/posts/2020-week-22/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
@@ -101,19 +101,21 @@
 &lt;li&gt;&lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/sidebery/&#34;&gt;Sideberry Firefox Extension&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/bottlerocket-os/bottlerocket&#34;&gt;Amazon Container OS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://chris.zarate.org/create-custom-macos-menu-bar-apps-using-hammerspoon&#34;&gt;Create custom macOS menu bar apps using Hammerspoon / Chris Zarate&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://evartist.narod.ru/text6/31.htm&#34;&gt;Телевизионная журналистика&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
     <item>
-      <title>Ruby and Smalltalk</title>
-      <link>https://mprokopov.github.io/2020/05/ruby-and-smalltalk/</link>
-      <pubDate>Sun, 24 May 2020 14:34:00 +0000</pubDate>
+      <title>2020 week 21</title>
+      <link>https://mprokopov.github.io/posts/2020-week-21-links/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2020/05/ruby-and-smalltalk/</guid>
-      <description>Ruby has so much inspiration from the Smalltalk!
-Here are my findings:
- Inspect method actually opens an inspector for the object in Smalltalk, Ruby just tries to show object’s guts collect, select are methods for collections from the Smalltalk do for collection in Smalltalk is the same what’s in Ruby each block parameter in «pipes» in Ruby is very similar to Smalltalk super is calling the superclass parent method initialize is a constructor name for the class in Smalltalk keywords concept has slightly different syntax, but the meaning is the same &amp;laquo; method Ruby object.</description>
+      <guid>https://mprokopov.github.io/posts/2020-week-21-links/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://evartist.narod.ru/text6/31.htm&#34;&gt;Телевизионная журналистика&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://habr.com/ru/company/ruvds/blog/486692/&#34;&gt;Статья на Habr про средства консоли chrome console&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://kamalmarhubi.com/blog/2015/08/27/what-even-is-a-kubelet/&#34;&gt;http://kamalmarhubi.com/blog/2015/08/27/what-even-is-a-kubelet/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kelseyhightower/kubernetes-the-hard-way&#34;&gt;https://github.com/kelseyhightower/kubernetes-the-hard-way&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -146,15 +148,6 @@ Here are my findings:
       <guid>https://mprokopov.github.io/posts/2020-05-31/</guid>
       <description>Я люблю время от времени тыкать палочкой в различные редакторы и пробовать их в своей работе.
 Сейчас появилось очень много интересных и быстрых штук типа Sublime, Atom, LightTable. Ребята из Jetbrains создают отличные (но медленные и прожорливые) IDE типа WebStorm, RubyMine, PyCharm.</description>
-    </item>
-    
-    <item>
-      <title>My recent tasks</title>
-      <link>https://mprokopov.github.io/2020/03/my-recent-tasks/</link>
-      <pubDate>Tue, 03 Mar 2020 16:19:27 +0000</pubDate>
-      
-      <guid>https://mprokopov.github.io/2020/03/my-recent-tasks/</guid>
-      <description>Create a Jenkins job for mobile application internal share to the Google Play Store Create a Jenkins job for mobile application automated release to the Google Play Store Restore Jenkins jobs for the COBOL build with Oracle 11.2 and Sybase 15.5 on the Solaris Sparc, AIX and HP-UX machines Debug a performance issue in the distributed power management software. Create helm script for the product deployment to the Central K8S cluster into staging and prod namespaces and talk to DynamoDB and put assets to the S3 Setup Prometheus + Grafana for the performance monitoring Setup gradle builds for Java Spring and NodeJS Extend XenServer with two new HDDs for a capacity  and much more.</description>
     </item>
     
     <item>
