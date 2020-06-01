@@ -26,6 +26,16 @@
   </url>
   
   <url>
+    <loc>https://mprokopov.github.io/posts/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/2020-06-01-move-to-hugo/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mprokopov.github.io/posts/week-22-links/</loc>
     <lastmod>2020-05-31T00:00:00+00:00</lastmod>
   </url>
@@ -37,11 +47,6 @@
   
   <url>
     <loc>https://mprokopov.github.io/categories/links/</loc>
-    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mprokopov.github.io/posts/</loc>
     <lastmod>2020-05-31T00:00:00+00:00</lastmod>
   </url>
   

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
-	<meta name="generator" content="Hugo 0.68.3" /><title>Maksym Prokopov personal website</title>
+    <head><title>Maksym Prokopov personal website</title>
 <meta charset="utf-8"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
@@ -37,92 +36,47 @@
 </div>
 <div class="clear"></div>
         <div id="container">
-
 <div class="article">
     <h1>
-        <a href="/2010/01/mod_security2/">mod_security2 или как обезопасить свой хостинг от злодеев?</a>
+        <a href="https://mprokopov.github.io/posts/2020-06-01-move-to-hugo/">Переезжая на Hugo</a>
     </h1>
-    <div class="date">03.01.2010</div>
-    <div>![mod_security for apache](http://nexusnotes.ru/wp-content/uploads/2010/01/mod_security_for_apache.png)
-В случае, если вы предоставляете услуги хостинга вам будет небесполезно знать, как быть, если сайты содержат старые версии публичных движков Joomla, ShopScript, WordPress, etc и периодически подвергаются взломам.
-В таких случаях править код и обновлять версии клиентского ПО самостоятельно вы не будете по понятным причинам, да и не всегда у клиента есть возможность найти программера/фрилансера готового выполнить обновление работающего и приносящего доход, хотя и старого интернет-магазина или форума. </div>
+    <div class="date">01.06.2020</div>
     
+    <h4>Время чтения: 2 мин.</h4>
     
-        <a href="/2010/01/mod_security2/">Read More…</a>
-    
-</div>
-<div id="border-bottom"></div>
+    <div><p><a href="/2009/12/hello-worldpress/">Первая запись в wordpress блоге</a> датируется декабрем 2009. Видимо в это время мне стало понятно, что поддеривать контент-менеджмент в написанном на Parser 3 <a href="https://nexus.org.ua">сайте nexus.org.ua</a> стало накладно и я сделал выбор в пользу популярного движка блогов wordpress. Надо признать, под влиянием medium он сильно прибавил в юзабилити и редактировать посты стало в нем одно удовольствие.</p>
+<p>Как видите на 2009 год я считал, что поднять mysql и запустить php было очень хорошей идеей. Все это так, пока ты не становишься старше и не принимаешь решение, что поддержкой wordpress ты заниматься не хочешь, потому что:</p>
+<ol>
+<li>Нужно следить за сертификатами от letsencrypt.</li>
+<li>Обновлять php.</li>
+<li>Обновлять wordpress, который хаканый-перехаканый неоднократно.</li>
+<li>Следить за состоянием mysql</li>
+<li>В 2010 году все это контейнеризировалось, но все же. Сложности добавилось с приходом докера. Как теперь безопасно обновлять имаджи и какие именно использовать?</li>
+<li>Следить за сетью в докере и связностью с контейнерами nginx и letsencrypt.</li>
+<li>Думать о бекапах базы mysql, думать о бекапах картинок к статьям.</li>
+</ol>
+<p>В какой-то момент не хочется заниматься поддержкой всех этих технологий, а хочется просто писать в блог.</p>
+<p>Чем старше становишься, тем больше ценишь простоту, в которой, как известно, гениальная истина.</p>
+<p>Так на арене появился Hugo, отчасти еще и потому, что совпал с моей возрастающей заинтересованностью программированием на Go.</p>
+<p>Сначала я сделал перепроектирование <a href="https://it-premium.com.ua">https://it-premium.com.ua</a> на Hugo вместо RoR, и сразу понял, это - то что нужно! Во-первых статика это то, во что так или иначе переходит каждый сайт когда его рендером занимается браузер. Быстрее чем статический сайт сделать нельзя, хотя многие пытаются, используя Javascript-based фреймворки на подобие Gatsby.</p>
+<p>Hugo поддерживает не только markdown, но и различные продвинутые сценарии, так в странице <a href="/pages/trips/">&ldquo;Путешествую&rdquo;</a> список стран и мест находится в YAML файле и включается из Markdown при помощи custom tag. На каждой странице список друзей также стал формироваться из отдельного YAML. Кстати, уже никто не обменивается ссылками как раньше?</p>
+<p>Остался вопрос с комментариями, и он также решается при помощи известного disqus. Дорогой читатель, подскажи, если знаешь engine получше.</p>
+<p>Мне нравится эта элегантная простота, скорость рендера и общее удовольствие от процесса.</p></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url =  null ;  
+    this.page.identifier =  null ; 
+    };
+ (function() {
+     var d = document, s = d.createElement('script');
+     s.src = 'https://maksym-prokopov-personal-blog.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-<div class="article">
-    <h1>
-        <a href="/2009/12/mobile-me/">Mobile Me</a>
-    </h1>
-    <div class="date">30.12.2009</div>
-    <div><p>Читать о <a href="http://www.prostomac.com/2009/12/mobileme-mobilizirujtes/" title="MobileMe: мобилизируйтесь! | простоMAC">тестировании MobileMe</a></p>
-<p>Задумался я как-то об использовании Mobile Me сервиса, какие дает преимущества за $100 в год?</p>
-<p>В этой статье мы попытаемся найти более бесплатные аналоги, если таковые существуют.</p>
-<p><!-- raw HTML omitted --></p> </div>
-    
-    
-        <a href="/2009/12/mobile-me/">Read More…</a>
-    
-</div>
-<div id="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/2009/12/apachetop/">apachetop</a>
-    </h1>
-    <div class="date">29.12.2009</div>
-    <div>Набрел на забавную утилиту apachetop
-Вот такой простенький, порой, бывает нужен анализатор состояния апача, вдруг атакует кто? </div>
-    
-</div>
-<div id="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/2009/12/dir320-printserver/">D-Link DIR-320 и сетевая печать</a>
-    </h1>
-    <div class="date">28.12.2009</div>
-    <div><p>Заметку побудило написать мое удивление при настройке печати через D-Link DIR-320, а именно несвойственная такого класса устройствам безгеморройность в настройке.</p>
-<p>Для того что бы наш Xerox 3119 корректно распознался коробочкой пришлось обновить прошивку с 1.00 до 1.10, и после этого, о чудо, принтер был роутером обнаружен и автоматически настроен.</p>
-<p><!-- raw HTML omitted --></p> </div>
-    
-    
-        <a href="/2009/12/dir320-printserver/">Read More…</a>
-    
-</div>
-<div id="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/2009/12/wash-mashine/">Все что вы хотели знать о стиральных машинах, но боялись спросить</a>
-    </h1>
-    <div class="date">28.12.2009</div>
-    <div>Если вдруг так случится, что стиральная машинка не работает как надо:
-грамотный блог с советами по обслуживанию стиральных машин.
-Из блога вы узнаете:
-  [почему калгон не рулит](http://repair-wash.ru/make-sense/kalgon-pravda-i-lozh «Калгон: правда и ложь — Мастер по ремонту стиральных машин»)
-  как самому продиагностировать поломку стиральной машины
-  [как правильно ухаживать за стиральными машинами](http://repair-wash.ru/sovety/pravilnaya-ekspluataciya-stiralnoj-mashiny «Правильная эксплуатация стиральной машины — Мастер по ремонту стиральных машин») (написал, перечитал и улыбнулся)
-  [http://repair-wash. </div>
-    
-    
-        <a href="/2009/12/wash-mashine/">Read More…</a>
-    
-</div>
-<div id="border-bottom"></div>
-
-<div class="buttons">
-    
-    <a href="/page/40/">
-        <div id="left"><table class="links"><tbody><tr><td><div id="posts-button">«</div></td><td class="text">Previous page</td></tr></tbody></table></div>
-    </a>
-    
-    
-    <a href="/page/42/"><div id="right"><table class="links"><tbody><tr><td class="text">Next page</td><td><div id="posts-button2">»</div></td></tr></tbody></table></div></a>
-    
 </div>
 
         </div>
