@@ -17,7 +17,11 @@
       <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://mprokopov.github.io/posts/2020-week-23-links/</guid>
-      <description> Awesome emacs introduction Emacs Doom Youtube playlist Clojure spec tips and tricks Janestreet Blog especially Review system in Emacs  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Awesome emacs introduction &lt;a href=&#34;https://www.youtube.com/results?search_query=%23emacsdoom&#34;&gt;Emacs Doom Youtube playlist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://conan.is/blogging/clojure-spec-tips.html&#34;&gt;Clojure spec tips and tricks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.janestreet.com/archive/&#34;&gt;Janestreet Blog&lt;/a&gt; especially &lt;a href=&#34;https://blog.janestreet.com/putting-the-i-back-in-ide-towards-a-github-explorer/&#34;&gt;Review system in Emacs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
