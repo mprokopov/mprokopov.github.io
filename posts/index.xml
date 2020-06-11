@@ -6,10 +6,34 @@
     <description>Recent content in Posts on Maksym Prokopov personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mprokopov.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2020 week 23</title>
+      <link>https://mprokopov.github.io/posts/2020-week-23-links/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/2020-week-23-links/</guid>
+      <description> Awesome emacs introduction Emacs Doom Youtube playlist Clojure spec tips and tricks Janestreet Blog especially Review system in Emacs  </description>
+    </item>
+    
+    <item>
+      <title>Awesome video using REPL with Pharo on Raspberry Pi</title>
+      <link>https://mprokopov.github.io/posts/2020-06-02-pharo-raspberry-pi/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/2020-06-02-pharo-raspberry-pi/</guid>
+      <description>&lt;p&gt;Totally awesome video of remote REPL with interaction on the Raspberry Pi device.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/0H9of7PQet0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you want to know more about Pharo and Smalltalk, I encourage you to complete &lt;a href=&#34;https://www.fun-mooc.fr/courses/course-v1:inria+41010+self_paced/about&#34;&gt;this the free Pharo course&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Переезжая на Hugo</title>
