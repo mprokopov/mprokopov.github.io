@@ -40,6 +40,28 @@
 
 <div class="article">
     <h1>
+        <a href="/2014/04/chef-recipe-for-nginx-passenger-install-ubuntu-debian-from-repository/">Chef recipe for nginx passenger install (ubuntu, debian) from repository</a>
+    </h1>
+    <div class="date">03.04.2014</div>
+    <div>Here is my part of chef recipe for installing nginx + passenger 4.x module. This recipe depends on ‘nginx’, ‘apt’ recipes.
+package ‘apt-transport-https’.
+package ‘ca-certificates’
+apt_repository «nginx-passenger» do
+uri «https://oss-binaries.phusionpassenger.com/apt/passenger»
+distribution node[‘lsb’][‘codename’]
+components [«main»]
+keyserver «keyserver.ubuntu.com»
+key «561F9B9CAC40B2F7»
+end
+include_recipe ‘apt’ ## this will do apt-get update
+package ‘nginx-extras’package ‘passenger’
+This will add repository, sign key and install passenger from phusion apt repository. </div>
+    
+</div>
+<div id="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/2014/03/customer-is-everything/">Дизайн Сайт значение. Customer is the king.</a>
     </h1>
     <div class="date">21.03.2014</div>
@@ -90,22 +112,6 @@
     <div class="date">12.02.2014</div>
     <div>Дамы и господа, позвольте представить вам коллектив Dakh Daughters. По-моему это прекрасно.
   Получил большое удовольствие от просмотра. </div>
-    
-</div>
-<div id="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/2014/02/%D1%8D%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F/">Об экономической теории</a>
-    </h1>
-    <div class="date">05.02.2014</div>
-    <div>Существует теорема благосостояния. Благодаря этой теореме, в частности, можно математически описать для Украины последствия для экономики при евроинтеграции.
-Парето-оптимальное состояние рынка — ситуация, когда нельзя улучшить положение любого участника экономического процесса, одновременно не снижая благосостояния как минимум одного из остальных.
-Пример:
-В России считается справедливым, что пенсионеры должны иметь возможность передвигаться достаточно свободно по территории страны, используя общественный транспорт (в том числе в рамках одного населённого пункта), поэтому долгое время он оставался де-факто бесплатным для пенсионеров. </div>
-    
-    
-        <a href="/2014/02/%D1%8D%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F/">Read More…</a>
     
 </div>
 <div id="border-bottom"></div>

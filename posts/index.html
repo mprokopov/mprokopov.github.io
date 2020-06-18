@@ -51,6 +51,24 @@
 
 <div class="article">
     <h1>111
+        <a href="https://mprokopov.github.io/posts/2020-06-19-date-printing-go/">Interesting take on time from the Go perspective</a>
+    </h1>
+    <div class="date">18.06.2020</div>
+    <div><p>I found really interesting how the time is specified in Go language stdlib.</p>
+<p>From <a href="https://golang.org/pkg/time/">https://golang.org/pkg/time/</a></p>
+<blockquote>
+<p>To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value.</p>
+</blockquote>
+<p>Namely, you write an example of time date, not just &ldquo;dd-MM-yyyy&rdquo; but real date and time using numbers as values.</p>
+<p>Here is go example:
+01/02 03:04:05PM &lsquo;06 -0700
+Mon Jan 2 15:04:05 MST 2006</p>
+<p>if we want to print output similar to dd-MM-yyyy we&rsquo;d specify 02 Jan 2006</p>
+<p>Quite smart and unusual.</p></div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://mprokopov.github.io/posts/2020-week-23-links/">2020 week 23</a>
     </h1>
     <div class="date">10.06.2020</div>
