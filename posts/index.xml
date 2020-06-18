@@ -36,11 +36,12 @@
 &lt;p&gt;To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Namely, you write an example of time date, not just &amp;ldquo;dd-MM-yyyy&amp;rdquo; but real date and time using numbers as values.&lt;/p&gt;
-&lt;p&gt;Here is go example:
-01/02 03:04:05PM &amp;lsquo;06 -0700
-Mon Jan 2 15:04:05 MST 2006&lt;/p&gt;
-&lt;p&gt;if we want to print output similar to dd-MM-yyyy we&amp;rsquo;d specify 02 Jan 2006&lt;/p&gt;
-&lt;p&gt;Quite smart and unusual.&lt;/p&gt;</description>
+&lt;p&gt;Here is go example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;01/02 03:04:05PM &#39;06 -0700
+Mon Jan 2 15:04:05 MST 2006
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;if we want to print output similar to dd-MM-yyyy we&amp;rsquo;d specify just&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;02 Jan 2006
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Quite smart and unusual.&lt;/p&gt;</description>
     </item>
     
     <item>
