@@ -40,6 +40,25 @@
 
 <div class="article">
     <h1>
+        <a href="/2010/02/cisco-mac-launchd-bug/">Забавный баг Mac&#43;Cisco</a>
+    </h1>
+    <div class="date">27.02.2010</div>
+    <div>Любопытный баг тут обнаружился случайно.
+Внезапно на Maке взбесился процесс launchd отъедая 100% ресурсов.
+Закатав рукава запускаем Console, где обнаруживаем такие строки:
+27.02.10 17:07:14 com.apple.launchd[1] (com.apple.tftpd[28030]) Exited with exit code: 1
+в абсолютно неимоверном количестве.
+Теряясь в догадках запустил tftpserverd (что тут же успокоило launchd), и стал пробовать мысленно связать этот полтергейтс с происходящим вокруг до тех пор, пока взглядом не уперся в лежащую рядом cisco 871.
+Осенившая мысль подсказала, что cisco свои конфиги пытается получить как раз по tftp! </div>
+    
+    
+        <a href="/2010/02/cisco-mac-launchd-bug/">Read More…</a>
+    
+</div>
+<div id="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/2010/02/%D1%82%D0%BE%D1%88%D0%BD%D0%BE%D1%82%D0%B5%D0%B3-%D0%B2-%D0%B0%D1%81%D1%81%D0%BE%D1%80%D1%82%D0%B8%D0%BC%D0%B5%D0%BD%D1%82%D0%B5/">Тошнотег в ассортименте.</a>
     </h1>
     <div class="date">26.02.2010</div>
@@ -105,17 +124,6 @@ http://www.silvermac.com/2006/cool-things-you-can-do-on-mac/
 </div>
 <div id="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/2010/02/mp3-search-engine/">Сервис поиска mp3</a>
-    </h1>
-    <div class="date">04.02.2010</div>
-    <div>Потрясающий сервис поиска музыки в формате mp3, вполне себе можно скачать, все что найдено.
-&lt;tagoo.ru&gt; </div>
-    
-</div>
-<div id="border-bottom"></div>
-
 <div class="buttons">
     
     <a href="/page/37/">
@@ -153,7 +161,7 @@ http://www.silvermac.com/2006/cool-things-you-can-do-on-mac/
         
         <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
         
-        <li><a href="/categories/links/">links</a> (3) </li>
+        <li><a href="/categories/links/">links</a> (4) </li>
         
         <li><a href="/categories/linux/">linux</a> (1) </li>
         

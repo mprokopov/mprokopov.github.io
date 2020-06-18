@@ -40,6 +40,20 @@
 
 <div class="article">
     <h1>
+        <a href="/2012/01/%D1%81%D0%B0%D0%BC%D1%8B%D0%B9-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82-301/">Самый правильный редирект 301</a>
+    </h1>
+    <div class="date">19.01.2012</div>
+    <div>Если вы мигрируете сайт на новый домен, и не хотите потерять SEO позиций, то важно сделать идеологически правильный редирект.
+Делается он так:
+Options +FollowSymLinks RewriteEngine on RewriteCond %{HTTP_HOST} !^newdomain.com RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
+Это можно прописать прямо в vhost секции для сайта, и даже не создавать домашние каталоги.
+Что оставит работающими и старые ссылки на материалы, и переучит поисковики на новые URL. </div>
+    
+</div>
+<div id="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/2012/01/%D1%81%D0%B5%D0%BA%D1%80%D0%B5%D1%82-%D1%83%D1%81%D0%BF%D0%B5%D1%85%D0%B0/">Секрет успеха</a>
     </h1>
     <div class="date">09.01.2012</div>
@@ -93,19 +107,6 @@ http://checkcfg.narod.ru/
 </div>
 <div id="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/2011/11/%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%D1%81%D1%8F-%D0%BA%D1%83%D1%80%D1%81%D1%8B-%D0%BF%D0%BE-%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8E-ip-pbx-asterisk/">Открываются курсы по обучению IP PBX Asterisk</a>
-    </h1>
-    <div class="date">29.11.2011</div>
-    <div>Цифровая телефония – это перспективное, нужное и важное направление развития системного администратора. Аналоговые АТС медленно, но верно отмирают.
-Будь на острие прогресса!
-Увелич компетенции на 30%!
-Записывайся на курсы по обучению работе с цифровой АТС Asterisk, где ты не только получишь знания нового уровня, но и познакомишься с единомышленниками. </div>
-    
-</div>
-<div id="border-bottom"></div>
-
 <div class="buttons">
     
     <a href="/page/22/">
@@ -143,7 +144,7 @@ http://checkcfg.narod.ru/
         
         <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
         
-        <li><a href="/categories/links/">links</a> (3) </li>
+        <li><a href="/categories/links/">links</a> (4) </li>
         
         <li><a href="/categories/linux/">linux</a> (1) </li>
         
