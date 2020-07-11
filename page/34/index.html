@@ -40,6 +40,46 @@
 
 <div class="article">
     <h1>
+        <a href="/2011/04/%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D1%88%D0%BE%D1%80%D1%82%D0%BA%D0%B0%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-mac/">Полезные шорткаты для Mac</a>
+    </h1>
+    <div class="date">28.04.2011</div>
+    <div>Mac   Открыть папку с программами: Shift-Command-A
+  Сделать скриншот: Shift-Command-4
+  Переместить в Корзину: Command-Delete
+  Очистить Корзину: Shift-Command-Delete
+  Удалить одно слово слева от курсора: Option-Delete
+  Проверка орфографии: Command-:
+  Найти слова с ошибками: Command-;
+  Сохранить: Command-S
+  Сохранить как: Shift-Command-S
+  Распечатать: Command-P
+  Свернуть рабочее окно: Command-M; Свернуть все окна: Option-Command-M
+  Закрыть рабочее окно: Command-W; Закрыть все окна: Option-Command-W </div>
+    
+    
+        <a href="/2011/04/%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D1%88%D0%BE%D1%80%D1%82%D0%BA%D0%B0%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-mac/">Read More…</a>
+    
+</div>
+<div id="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/2011/04/%D0%BF%D1%80%D0%BE-%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B3%D0%BE%D0%B2%D0%BD%D0%BE%D1%81%D0%B0%D0%B9%D1%82%D1%8B/">Про государственные говносайты</a>
+    </h1>
+    <div class="date">26.04.2011</div>
+    <div>Как правило, государственные сайты всегда представляли собой кусок неудобоваримого говна, что и понятно, учитывая кем и как ставилось техническое задание, а также кем оно исполнялось и кем принималось.
+А бывает ли так, что 10лет назад сайт выглядел гораздо лучше, чем сегодня?
+Вот сайт киевского института автоматизации систем в строительстве, где в 1999 я начинал свою трудовую карьеру:
+Ниже сайт образца 2000 года, выполнен дизайнерами провайдера Elvisti, который в то время находился на территории института. </div>
+    
+    
+        <a href="/2011/04/%D0%BF%D1%80%D0%BE-%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B3%D0%BE%D0%B2%D0%BD%D0%BE%D1%81%D0%B0%D0%B9%D1%82%D1%8B/">Read More…</a>
+    
+</div>
+<div id="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/2011/04/%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D1%8B-%D0%B2-vmware-fusion-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0/">UPDATED: Запуск виртуальной машины в VMWare Fusion автоматически при старте системы (в background не работает)</a>
     </h1>
     <div class="date">21.04.2011</div>
@@ -88,39 +128,6 @@ dd if=/dev/sdb of=/dev/sdc
 </div>
 <div id="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/2011/04/mac-os-x-transparent-squid-ipfw-bugfix/">Mac OS X transparent squid ipfw bugfix</a>
-    </h1>
-    <div class="date">11.04.2011</div>
-    <div>Сам прозрачный прокси включается проще простого, в squid.conf добавляем:
-http_port 3128 transparent
-и в ipfw добавляем следующее правило заворачивающее с 80го порта на внутренний:
-ipfw add 1050 fwd 127.0.0.1:3128 tcp from 192.168.1.0/24 to not 192.168.1.0/24 80
- Однако, оказалось, на 10.6 не работает ipfw fwd правило для прозрачного прокси.
- Непродолжительное гугление помогло выявить вот такой багфикс:
-sudo sysctl -w net.inet.ip.scopedroute = 0
-или еще лучше прописать в /etc/sysctl.conf
-net.inet.ip.scopedroute = 0 и перезагрузить сервер. </div>
-    
-    
-        <a href="/2011/04/mac-os-x-transparent-squid-ipfw-bugfix/">Read More…</a>
-    
-</div>
-<div id="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/2011/03/main-gtd-problem/">Основная проблема GTD</a>
-    </h1>
-    <div class="date">04.03.2011</div>
-    <div>Основная проблема всех без исключения систем GTD в том, что человек, будучи в усталом состоянии перестает фиксировать задачи/мысли/выполнение.
-И в этом состоит большая трагедия всех, даже самых лучших, GTD систем.
-Just do it! Вот вам и все GTD. </div>
-    
-</div>
-<div id="border-bottom"></div>
-
 <div class="buttons">
     
     <a href="/page/33/">
@@ -150,11 +157,15 @@ Just do it! Вот вам и все GTD. </div>
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
+        <li><a href="/categories/education/">education</a> (1) </li>
+        
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         
         <li><a href="/categories/gtd/">GTD</a> (4) </li>
         
         <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+        
+        <li><a href="/categories/kubernetes/">kubernetes</a> (1) </li>
         
         <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
         

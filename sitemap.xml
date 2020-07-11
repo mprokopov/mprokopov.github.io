@@ -26,12 +26,32 @@
   </url>
   
   <url>
-    <loc>https://mprokopov.github.io/posts/2020-week-24-links/</loc>
-    <lastmod>2020-06-18T00:00:00+00:00</lastmod>
+    <loc>https://mprokopov.github.io/categories/</loc>
+    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mprokopov.github.io/categories/</loc>
+    <loc>https://mprokopov.github.io/categories/education/</loc>
+    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/</loc>
+    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/2020-07-09/</loc>
+    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/2020-week-28/</loc>
+    <lastmod>2020-07-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/2020-week-24-links/</loc>
     <lastmod>2020-06-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -42,11 +62,6 @@
   
   <url>
     <loc>https://mprokopov.github.io/categories/links/</loc>
-    <lastmod>2020-06-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mprokopov.github.io/posts/</loc>
     <lastmod>2020-06-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -167,6 +182,11 @@
   
   <url>
     <loc>https://mprokopov.github.io/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/</loc>
+    <lastmod>2018-05-26T12:35:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/categories/kubernetes/</loc>
     <lastmod>2018-05-26T12:35:51+00:00</lastmod>
   </url>
   

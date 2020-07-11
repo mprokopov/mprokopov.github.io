@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Maksym Prokopov personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mprokopov.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>education</title>
+      <link>https://mprokopov.github.io/categories/education/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/categories/education/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>links</title>
@@ -44,6 +53,15 @@
       <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://mprokopov.github.io/categories/tips-and-tricks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://mprokopov.github.io/categories/kubernetes/</link>
+      <pubDate>Sat, 26 May 2018 12:35:51 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/categories/kubernetes/</guid>
       <description></description>
     </item>
     

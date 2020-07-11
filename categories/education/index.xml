@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>education on Maksym Prokopov personal website</title>
+    <link>https://mprokopov.github.io/categories/education/</link>
+    <description>Recent content in education on Maksym Prokopov personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mprokopov.github.io/categories/education/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Smalltalk online course done</title>
+      <link>https://mprokopov.github.io/posts/2020-07-09/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/2020-07-09/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m always happy to gain a new knowledge, so this time I was putting efforts into Pharo programming course and voila, enjoyed it challenges and got a &lt;a href=&#34;https://mprokopov.github.io/pdf/2020-pharo-course-certificate.pdf&#34;&gt;Certificate of accomplishment&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
