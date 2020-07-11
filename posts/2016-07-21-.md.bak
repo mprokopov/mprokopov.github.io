@@ -1,0 +1,14 @@
+---
+title: Про микросервисы.
+author: Max Prokopov
+type: post
+date: -001-11-30T00:00:00+00:00
+draft: true
+url: /?p=1312
+robotsmeta:
+  - index,follow
+categories:
+  - за жизнь
+
+---
+Очень круто с точки зрения микросервисов использовать Datomic. Встроенная фича &#8212; сборка и join запросов из разных источников.

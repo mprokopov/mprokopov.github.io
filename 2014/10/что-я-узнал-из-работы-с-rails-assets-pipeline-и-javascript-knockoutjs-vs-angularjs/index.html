@@ -44,12 +44,18 @@
     
     <h4>Время чтения: 3 мин.</h4>
     
-    <div><!-- raw HTML omitted -->
+    <div><p class="">
+  Задумал я оживить нашу систему обработки заявок так, чтобы в realtime подгружались новые обращения, инциденты обновляли SLA и возникали визуальные уведомления при протухании тикетов.
+</p>
 <p>Rails замечательно работает со статикой, лучше всех, пожалуй. Но то, что предлагается использовать для «оживления» страниц подходит только для очень небольшого круга задач. </p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p><a href="/uploads/2014/10/1414675166_full.png" target="_blank"><img src="/uploads/2014/10/1414675166_thumb.png" align="middle" class="aligncenter full" alt="" title="" /></a></p>
+<p class="">
+  vs
+</p>
+<p><a href="/uploads/2014/10/1414675206_full.png" target="_blank"><img src="/uploads/2014/10/1414675206_thumb.png" align="middle" class="aligncenter full" alt="" title="" /></a></p>
+<p class="">
+  Чаще всего Ajax Polling делается через запрос jQuery и подстановку темплейта с рендерингом из JS шаблона. Мне очень нравится писать шаблоны на HAML, и использовать Coffeescript.
+</p>
 <p>Но, к сожалению, браузер не умеет рендерить HAML шаблоны, а изучать/выбирать новый template-язык не хотелось. </p>
 <p>Именно поэтому в поле моего зрения попали движки, которые умеют использовать существующую разметку: AngularJS и KnockoutJS. Вот их я и стал изучать.</p>
 <p>Создал две экспериментальные ветки feature в git и стал пробовать Knockout.</p>
@@ -73,7 +79,7 @@
 <li>очень хорошо писать и наследовать классы на Coffescript.</li>
 <li>MVVM объектно-ориентированная концепция с моделями</li>
 <li>неявная работа с текущим значением в итераторах foreach</li>
-<li>удобный <!-- raw HTML omitted -->дебаггер для Chrome <!-- raw HTML omitted --></li>
+<li>удобный <a href="https://chrome.google.com/webstore/detail/knockoutjs-context-debugg/oddcpmchholgcjgjdnfjmildmlielhof" title="" target="_blank">дебаггер для Chrome </a></li>
 </ul>
 <p>Параллельно я вел исследования с AngularJS. Прошел офигительный интерактивный туториал <a href="https://www.codeschool.com/courses/shaping-up-with-angular-js">https://www.codeschool.com/courses/shaping-up-with-angular-js<br>
 </a><br>
@@ -83,19 +89,19 @@
 <li>Angular стоит использовать только если вы делаете Single Page Application. В противном случае как из пушки по воробьям.</li>
 <li>У Angular своя концепция MVC, но нет как такового понятия модели.</li>
 <li>Angular в целом не особо объектноориентирован и не очень хорошо ложится на Coffeescript.</li>
-<li>Rails лучше модифицировать для отдачи шаблонов по запросу вот таким gem <!-- raw HTML omitted --><a href="https://github.com/pitr/angular-rails-templates">https://github.com/pitr/angular-rails-templates</a><!-- raw HTML omitted -->, что позволяет использовать HAML для их написания</li>
+<li>Rails лучше модифицировать для отдачи шаблонов по запросу вот таким gem <a href="https://github.com/pitr/angular-rails-templates" title="" target="_blank"><a href="https://github.com/pitr/angular-rails-templates">https://github.com/pitr/angular-rails-templates</a></a>, что позволяет использовать HAML для их написания</li>
 </ul>
-<p>И в том и в другом случае было необходимо разработать правильную отдачу JSON объектов при поллинге. Мне нужно было включать ассоциативные поля в модели, поэтому довольно скоро от Model.as_json я перешел к использованию <!-- raw HTML omitted --><a href="https://github.com/rails-api/active_model_serializers">https://github.com/rails-api/active_model_serializers</a><!-- raw HTML omitted -->, но поскольку разработчики не смогли придумать кеширование, да и отдачу url_for, пришлось перейти на jbuilder, на котором и остановился. json!.cache отлично сокращает запросы к базе и время рендера.</p>
-<p>Для отдачи JSON решил сделать API через отдельные контроллеры и наймспейс ‘/api/ <!-- raw HTML omitted -->как у Раяна Бейтса<!-- raw HTML omitted -->. </p>
+<p>И в том и в другом случае было необходимо разработать правильную отдачу JSON объектов при поллинге. Мне нужно было включать ассоциативные поля в модели, поэтому довольно скоро от Model.as_json я перешел к использованию <a href="https://github.com/rails-api/active_model_serializers" title="" target="_blank"><a href="https://github.com/rails-api/active_model_serializers">https://github.com/rails-api/active_model_serializers</a></a>, но поскольку разработчики не смогли придумать кеширование, да и отдачу url_for, пришлось перейти на jbuilder, на котором и остановился. json!.cache отлично сокращает запросы к базе и время рендера.</p>
+<p>Для отдачи JSON решил сделать API через отдельные контроллеры и наймспейс ‘/api/ <a href="http://railscasts.com/episodes/350-rest-api-versioning" title="" target="_blank">как у Раяна Бейтса</a>. </p>
 <p>И все было хорошо, пока я не стал думать, как же для разных страниц мне использовать разные биндинги для KnockoutJS и при этом чувствовать себя хорошо. Самый простой и «лобовой» способ это убрать require_tree . из application.js и добавить include_javascript_tag params[:controller] в лейаут. Но здесь то и зарыт главный косяк. Assets pipeline, который склеивает все css и js в один файл будет кидать ексепшены, поскольку не скомпилирует .js для каждого контроллера. И выхода здесь два:</p>
 <ol>
 <li>включить компиляцию assets для продакшена.</li>
-<li>использовать <!-- raw HTML omitted -->gem paloma<!-- raw HTML omitted -->. </li>
+<li>использовать <a href="https://github.com/kbparagua/paloma" title="" target="_blank">gem paloma</a>. </li>
 </ol>
 <p>Более православным мне показался второй путь, поскольку использует assets pipeline и делает всю магию на клиенте. Также позволяет передавать из контрроллера в JS различные параметры. Это же умеет делать gem gon, но если можно гем не использовать, то лучше его не использовать.</p>
 <p>Также, мне очень понравился подход с подключением jquery библиотек и используемого мной metro-ui-css фреймворка через интеграцию с bower. В моем случае сделал подключение gem ‘rails-bower’, в Bowerfile записал asset ‘metro-ui-css’, rake bower:install и вуаля, в  /vendor/assets/bower_components загруженные с зависимостями jquery и другие модули. Очень удобно.</p>
 <p>Итоги. </p>
-<p>Я остановился на использовании KnockoutJS для моей задачи, и доволен этим фактом, много jQuery кода заменил более компактным и объектно-ориентированным кодом для Knockout. А AngularJS, думаю, стоит использовать вообще отдельным приложением вместе с Node.js, а Rails в качестве исключительно JSON бекенда, что тоже для Rails было бы унизительным.<!-- raw HTML omitted --></p>
+<p>Я остановился на использовании KnockoutJS для моей задачи, и доволен этим фактом, много jQuery кода заменил более компактным и объектно-ориентированным кодом для Knockout. А AngularJS, думаю, стоит использовать вообще отдельным приложением вместе с Node.js, а Rails в качестве исключительно JSON бекенда, что тоже для Rails было бы унизительным.</p></p>
 </div>
     <div id="disqus_thread"></div>
 <script>
@@ -132,7 +138,7 @@
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

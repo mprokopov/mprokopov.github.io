@@ -1,0 +1,23 @@
+---
+title: Cucumber говорит по-русски
+author: Max Prokopov
+type: post
+date: -001-11-30T00:00:00+00:00
+draft: true
+url: /?p=108
+featured_image: /wp-content/uploads/2009/12/Снимок-экрана-2009-12-23-в-17.26.43.png
+categories:
+  - rails
+
+---
+Теперь с cucumber жить еще проще, рассказывать по-русски можно при помощи тега
+
+@language ru
+
+<div id="attachment_109" style="width: 310px" class="wp-caption aligncenter">
+  <a href="http://blog.nexus.org.ua/wp-content/uploads/2009/12/Снимок-экрана-2009-12-23-в-17.26.43.png"><img aria-describedby="caption-attachment-109" class="size-medium wp-image-109" title="cucumber" src="http://blog.nexus.org.ua/wp-content/uploads/2009/12/Снимок-экрана-2009-12-23-в-17.26.43-300x243.png" alt="cucumber тесты по-русски" width="300" height="243" srcset="http://nexusnotes.ru/wp-content/uploads/2009/12/Снимок-экрана-2009-12-23-в-17.26.43-300x243.png 300w, http://nexusnotes.ru/wp-content/uploads/2009/12/Снимок-экрана-2009-12-23-в-17.26.43.png 946w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  
+  <p id="caption-attachment-109" class="wp-caption-text">
+    cucumber тесты по-русски
+  </p>
+</div>

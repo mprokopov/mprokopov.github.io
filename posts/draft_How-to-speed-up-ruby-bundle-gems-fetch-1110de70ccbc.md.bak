@@ -1,0 +1,19 @@
+---
+title: How to speed up ruby bundle gems fetch
+description: >-
+  Short answer: use https://github.com/geminabox/geminabox for caching gems on
+  your own host, or in your local network.
+date: ''
+categories: []
+keywords: []
+slug: ''
+---
+
+Short answer: use [https://github.com/geminabox/geminabox](https://github.com/geminabox/geminabox) for caching gems on your own host, or in your local network.
+
+I was using bundler’s vendor/cache in docker container, but with such improvement my container size grown up to 1,2Gb very quickly.
+
+Supply following settings to your **geminabox** container  
+`RUBYGEMS_PROXY=true`
+
+[https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800](https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800)

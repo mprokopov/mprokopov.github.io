@@ -1,0 +1,45 @@
+---
+title: Цвета в терминале Mac OS X Lion
+author: Max Prokopov
+type: post
+date: 2012-03-07T10:57:23+00:00
+url: /2012/03/цвета-в-терминале-mac-os-x-lion/
+robotsmeta:
+  - index,follow
+categories:
+  - lifehack
+  - Мак
+  - Софт
+tags:
+  - colorize
+  - mac
+  - terminal
+
+---
+Лично для меня крайне удобным решением для терминала является iTerm2. Однажды, очень захотелось сделать его цветастым. Для получения расцветки необходимо добавить в ~/.bash_profile строку
+
+export CLICOLOR=1
+
+По наводке [@snupt][1] была найдена и установлена тема [Solarized Dark][2], из-за которой, однако была практически отключена полупрозрачность из-за которой текст читался значительно хуже.
+
+<img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2012-03-07 в 12.52.31.png" src="http://nexusnotes.ru/wp-content/uploads/2012/03/Снимок-экрана-2012-03-07-в-12.52.31.png" border="0" alt="Снимок экрана 2012 03 07 в 12 52 31" width="430" height="257" />
+
+ 
+
+Также Solarized Dark можно (и нужно) использовать с редакторами Textmate и Sublime Text 2.
+
+<img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2012-03-07 в 12.54.12.png" src="http://nexusnotes.ru/wp-content/uploads/2012/03/Снимок-экрана-2012-03-07-в-12.54.12.png" border="0" alt="Снимок экрана 2012 03 07 в 12 54 12" width="430" height="273" />
+
+Sublime Text 2 Solarized Dark theme
+
+<img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2012-03-07 в 12.54.27.png" src="http://nexusnotes.ru/wp-content/uploads/2012/03/Снимок-экрана-2012-03-07-в-12.54.27.png" border="0" alt="Снимок экрана 2012 03 07 в 12 54 27" width="430" height="273" />
+
+Что бы добавить цветастости к выводу git достаточно сделать следующее:
+
+<pre escaped="true" lang="shell">git config --global color.branch auto
+git config --global color.diff auto
+git config --global color.interactive auto
+git config --global color.status auto</pre>
+
+ [1]: http://snupt.com/page/2/
+ [2]: http://ethanschoonover.com/solarized

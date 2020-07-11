@@ -44,11 +44,28 @@
     
     <h4>Время чтения: 1 мин.</h4>
     
-    <div><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Подкорректируйте диалплан, и укажите там паузу в конце — SX, где X — время в секундах, через которое начнётся набор номера. Если известна длина номера — можно сделать S0 в конце и набор начнётся сразу, как вы накликаете указанное в диалплане кол-во циферок. Описывать подробнее не вижу смысла, т.к. при поиске в инете, выдаётся, например, это: <!-- raw HTML omitted --><a href="http://www.sipnet.ru/faq/">http://www.sipnet.ru/faq/</a><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <div><table border="0" cellspacing="1" cellpadding="3" width="90%" align="center">
+  <tr>
+    <td>
+      <strong>asores wrote:</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      У меня когда набираешь внутренний номер с аналогов. телефона через PAP2T в asterisk, с момента набора послендней цифры номера и получением сигнала вызова возникает пауза 5-7 сек&#8230;.
+    </td>
+  </tr>
+</table>
+<p>Подкорректируйте диалплан, и укажите там паузу в конце — SX, где X — время в секундах, через которое начнётся набор номера. Если известна длина номера — можно сделать S0 в конце и набор начнётся сразу, как вы накликаете указанное в диалплане кол-во циферок. Описывать подробнее не вижу смысла, т.к. при поиске в инете, выдаётся, например, это: <a href="http://www.sipnet.ru/faq/" target="_blank"><a href="http://www.sipnet.ru/faq/">http://www.sipnet.ru/faq/</a></a></p>
+<table border="0" cellspacing="1" cellpadding="3" width="90%" align="center">
+  <tr>
+    <td>
+      <strong><br /> </strong>
+    </td>
+  </tr>
+  <tr>
+    <pre>Как настроить dial plan на PAP2?
+ 
 <p>Пример:
 (*xx|&lt;:8495&gt;[1–79]xxxxxxS0|&lt;8,:8&gt;[34589]xx[1–79]xxxxxxS0|&lt;8,10:810&gt;[1–9]xxxxx.|&lt;0,:&gt;xxxxxxxS0)</p>
 <p>Вызов по SIP ID осуществляется через “0”, 7-значные Московские номера в коде 495 набираются «как есть», междугородние номера набираются через “8”, международные — через «8 10&rdquo;.</p>
@@ -59,11 +76,11 @@
 <li>&lt;8,:8&gt;[34589]xx[1–79]xxxxxxS0 — 8 и гудок, 3-значный код города, 7-значный номер телефона, проверка на допустимые цифры в начале кода и номера</li>
 <li>&lt;8,10:810&gt;[1–9]xxxxx. — 8, гудок, 10, хотя бы 6 цифр; в конце нет S0, т.е. нет принудительного окончания набора после ввода определенного количества цифр, набор начнётся либо по таймауту либо по нажатию клавиши # в конце номера</li>
 <li>&lt;0,:&gt;xxxxxxxS0 — 0, гудок, 7-значный SIP ID
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</pre>
+</tr>
 </li>
 </ul>
-<!-- raw HTML omitted -->
+</table>
 </div>
     <div id="disqus_thread"></div>
 <script>
@@ -100,7 +117,7 @@
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

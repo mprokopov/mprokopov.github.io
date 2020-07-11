@@ -1,0 +1,10 @@
+---
+title: Why is my dev docker container so slow on macOS?
+description: 'TLDR: because of the networking layer and how docker volumes implemented.'
+date: ''
+categories: []
+keywords: []
+slug: ''
+---
+
+TLDR: because of the networking layer and how docker volumes implemented.

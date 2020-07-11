@@ -46,10 +46,19 @@
     
     <div><p>Данный совсем простой метод подходит не только для логов exim, но и любых других логов, которые необходимо переворачивать либо по размеру, либо по расписанию.</p>
 <p>данные две строки</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div id="_mcePaste">
+  <pre escaped="true" lang="shell" line="1"><span style="font-family: 'Segoe UI', Calibri, 'Myriad Pro', Myriad, 'Trebuchet MS', Helvetica, Arial, sans-serif; line-height: 19px; white-space: normal; font-size: 13px;">
+<div id="_mcePaste" style="padding: 0px; margin: 0px;">
+  /var/log/exim/mainlog      mailnull:mailnull             640  7     *    @T00  JN
+</div>
+<div id="_mcePaste" style="padding: 0px; margin: 0px;">
+  /var/log/exim/rejectlog     mailnull:mailnull             640  7     *    @T00  JN
+</div>
+</span></pre>
+</div>
+<div>
+  добавленные  в файл /etc/newsyslog.conf решают проблему ежедневного переворачивания логов от почтовой системы exim
+</div>
 </div>
     <div id="disqus_thread"></div>
 <script>
@@ -86,7 +95,7 @@
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

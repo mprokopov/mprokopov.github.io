@@ -42,7 +42,7 @@
     </h1>
     <div class="date">11.01.2013</div>
     
-    <h4>Время чтения: 2 мин.</h4>
+    <h4>Время чтения: 3 мин.</h4>
     
     <div><p>AppleScript на поверку оказался довольно милым скриптовым движком, очень желавшим быть похожим на обычный человеческий язык.</p>
 <p>Типовой скрипт выглядит как</p>
@@ -53,39 +53,105 @@
 <p>end tell</p>
 <p> </p>
 <p>данная конструкция покажет строку, на которой сейчас стоит курсор в приложении. И все бы классно, да вот, за такой простотой иногда скрывается неудобство. Например, в моей довольно простой задаче была потребность получить дату у текущего проекта, прибавить один день и перескочить на следующий проект.  Так вот, в AppleScript работа с датой довольно нетривиальная. Сейчас покажу две функции, и вы поймете почему.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p style="margin: 0px 0px 0px 41.6px; text-indent: -41.6px; font-size: 12px; font-family: Verdana; color: #4f8f00;">
+  <span style="color: #000000;"><strong>on</strong> </span>getDateFromText<span style="color: #000000;">(</span>dateText<span style="color: #000000;">)</span>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #4f8f00;">vDate</span> <strong>to</strong> <span style="color: #0433ff;"><em>null</em></span>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana; color: #812fdc;">
+  <span style="color: #000000;"><strong>set</strong> </span>AppleScript<span style="color: #000000;">&#8216;s </span>text item delimiters<span style="color: #000000;"> <strong>to</strong> {&#171;-&#171;}</span>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>if</strong> (<span style="color: #0433ff;"><strong>count</strong></span> <strong>of</strong> <span style="color: #0433ff;"><em>text item</em></span> <strong>of</strong> <span style="color: #4f8f00;">dateText</span>) <strong>is</strong> 3 <strong>then</strong>
+</p>
+<p style="margin: 0px 0px 0px 124.8px; text-indent: -124.9px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #4f8f00;">vYear</span> <strong>to</strong> <span style="color: #0433ff;"><em>text item</em></span> 1 <strong>of</strong> <span style="color: #4f8f00;">dateText</span>
+</p>
+<p style="margin: 0px 0px 0px 124.8px; text-indent: -124.9px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #4f8f00;">vMonth</span> <strong>to</strong> <span style="color: #0433ff;"><em>text item</em></span> 2 <strong>of</strong> <span style="color: #4f8f00;">dateText</span>
+</p>
+<p style="margin: 0px 0px 0px 124.8px; text-indent: -124.9px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #4f8f00;">vDay</span> <strong>to</strong> <span style="color: #0433ff;"><em>text item</em></span> 3 <strong>of</strong> <span style="color: #4f8f00;">dateText</span>
+</p>
+<p style="margin: 0px 0px 0px 124.8px; text-indent: -124.9px; font-size: 12px; font-family: Verdana;">
+  <strong>if</strong> (<span style="color: #4f8f00;">vYear</span> > 1000) <strong>and</strong> (<span style="color: #4f8f00;">vMonth</span> > 0 <strong>and</strong> <span style="color: #4f8f00;">vMonth</span> < 13) <strong>and</strong> (<span style="color: #4f8f00;">vDay</span> > 0 <strong>and</strong> <span style="color: #4f8f00;">vDay</span> < 32) <strong>then</strong>
+</p>
+<p style="margin: 0px 0px 0px 166.5px; text-indent: -166.5px; font-size: 12px; font-family: Verdana; color: #012fbe;">
+  <span style="color: #000000;"><strong>set</strong> </span><span style="color: #4f8f00;">vDate</span><span style="color: #000000;"> <strong>to</strong> </span><strong>current date</strong>
+</p>
+<p style="margin: 0px 0px 0px 166.5px; text-indent: -166.5px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #812fdc;">year</span> <strong>of</strong> <span style="color: #4f8f00;">vDate</span> <strong>to</strong> (<span style="color: #4f8f00;">vYear</span> <strong>as</strong> <span style="color: #0433ff;"><em>integer</em></span>)
+</p>
+<p style="margin: 0px 0px 0px 166.5px; text-indent: -166.5px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #0433ff;"><em>month</em></span> <strong>of</strong> <span style="color: #4f8f00;">vDate</span> <strong>to</strong> <span style="color: #4f8f00;">vMonth</span> <strong>as</strong> <span style="color: #0433ff;"><em>integer</em></span>
+</p>
+<p style="margin: 0px 0px 0px 166.5px; text-indent: -166.5px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #812fdc;">day</span> <strong>of</strong> <span style="color: #4f8f00;">vDate</span> <strong>to</strong> <span style="color: #4f8f00;">vDay</span> <strong>as</strong> <span style="color: #0433ff;"><em>integer</em></span>
+</p>
+<p style="margin: 0px 0px 0px 166.5px; text-indent: -166.5px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #812fdc;">time</span> <strong>of</strong> <span style="color: #4f8f00;">vDate</span> <strong>to</strong> 0
+</p>
+<p style="margin: 0px 0px 0px 124.8px; text-indent: -124.9px; font-size: 12px; font-family: Verdana;">
+  <strong>end</strong> <strong>if</strong>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>end</strong> <strong>if</strong>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>return</strong> <span style="color: #4f8f00;">vDate</span>
+</p>
+<p style="margin: 0px 0px 0px 41.6px; text-indent: -41.6px; font-size: 12px; font-family: Verdana; color: #4f8f00;">
+  <span style="color: #000000;"><strong>end</strong> </span>getDateFromText
+</p>
+<p style="margin: 0px 0px 0px 41.6px; text-indent: -41.6px; font-size: 12px; font-family: Verdana; min-height: 15px;">
+   
+</p>
+<p style="margin: 0px 0px 0px 41.6px; text-indent: -41.6px; font-size: 12px; font-family: Verdana; min-height: 15px;">
+   
+</p>
+<p style="margin: 0px 0px 0px 41.6px; text-indent: -41.6px; font-size: 12px; font-family: Verdana; color: #4f8f00;">
+  <span style="color: #000000;"><strong>on</strong> </span>getTextFromDate<span style="color: #000000;">(</span>vDate<span style="color: #000000;">)</span>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #4f8f00;">dText</span> <strong>to</strong> ((<span style="color: #812fdc;">year</span> <strong>of</strong> <span style="color: #4f8f00;">vDate</span>) <strong>as</strong> <span style="color: #0433ff;"><em>text</em></span>) & &#171;-&#171;
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #4f8f00;">dayText</span> <strong>to</strong> (<span style="color: #0433ff;"><em>month</em></span> <strong>of</strong> <span style="color: #4f8f00;">vDate</span> <strong>as</strong> <span style="color: #0433ff;"><em>number</em></span>) <strong>as</strong> <span style="color: #0433ff;"><em>text</em></span>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>if</strong> <span style="color: #812fdc;">length</span> <strong>of</strong> <span style="color: #4f8f00;">dayText</span> <strong>is</strong> 1 <strong>then</strong>
+</p>
+<p style="margin: 0px 0px 0px 124.8px; text-indent: -124.9px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #4f8f00;">dayText</span> <strong>to</strong> &#171;0&#187; & <span style="color: #4f8f00;">dayText</span>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>end</strong> <strong>if</strong>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #4f8f00;">dText</span> <strong>to</strong> <span style="color: #4f8f00;">dText</span> & <span style="color: #4f8f00;">dayText</span> & &#171;-&#171;
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #4f8f00;">dayText</span> <strong>to</strong> (<span style="color: #812fdc;">day</span> <strong>of</strong> <span style="color: #4f8f00;">vDate</span> <strong>as</strong> <span style="color: #0433ff;"><em>number</em></span>) <strong>as</strong> <span style="color: #0433ff;"><em>text</em></span>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>if</strong> <span style="color: #812fdc;">length</span> <strong>of</strong> <span style="color: #4f8f00;">dayText</span> <strong>is</strong> 1 <strong>then</strong>
+</p>
+<p style="margin: 0px 0px 0px 124.8px; text-indent: -124.9px; font-size: 12px; font-family: Verdana;">
+  <strong>set</strong> <span style="color: #4f8f00;">dayText</span> <strong>to</strong> &#171;0&#187; & <span style="color: #4f8f00;">dayText</span>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana;">
+  <strong>end</strong> <strong>if</strong>
+</p>
+<p style="margin: 0px 0px 0px 83.2px; text-indent: -83.2px; font-size: 12px; font-family: Verdana; color: #4f8f00;">
+  <span style="color: #000000;"><strong>return</strong> </span>dText<span style="color: #000000;"> & </span>dayText
+</p>
+<p style="margin: 0px 0px 0px 41.6px; text-indent: -41.6px; font-size: 12px; font-family: Verdana; color: #4f8f00;">
+  <span style="color: #000000;"><strong>end</strong> </span>getTextFromDate
+</p>
+<p style="margin: 0px 0px 0px 41.6px; text-indent: -41.6px; font-size: 12px; font-family: Verdana; color: #4f8f00;">
+   
+</p>
 <p>они делают именно то, о чем их название, зато как круто (код на ruby был бы в одну строку)!</p>
 <p>Для чего нужно увлечение AppleScript? В самом частом случае – интеграция приложений с определенным, нужным только вам функционалом. Мне, например, потребовалось в TaskPaper (так как я уже полностью освоил его для Getting Results Agile Way), вести в одном файле, в котором помещается вся неделя, дела на каждый день, где каждый день – проект с называнием типа «2013-01-10» для 10 января. И обычно я фильтрую задачи на сегодня по текущей дате Cmd-L, но бывает довольно часто надо что-то перебросить на следующий день, или на предыдущий. И тогда я беру и фильтрую по 2013-01-11.</p>
 <p>Теперь у меня появилось время и желание, дошли руки и я автоматизировал это процесс через Keyboard Maestro + AppleScript для TaskPaper. По нажатию Option+Up и Optoin+Down происходит инкремент или декремент даты 2013-01-10 и в строку поиска пуляется «project=2013-01-11», что фильтрует задачи на следующий день. </p>
@@ -128,7 +194,7 @@
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

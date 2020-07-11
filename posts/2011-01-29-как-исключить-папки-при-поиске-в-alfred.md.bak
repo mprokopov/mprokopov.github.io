@@ -1,0 +1,26 @@
+---
+title: Как исключить папки при поиске в Alfred?
+author: Max Prokopov
+type: post
+date: 2011-01-29T13:13:39+00:00
+url: /2011/01/как-исключить-папки-при-поиске-в-alfred/
+robotsmeta:
+  - index,follow
+views:
+  - 61
+categories:
+  - lifehack
+  - Мак
+  - Софт
+
+---
+Многие из вас знают, любят и пользуют лончер [Alfred][1], который с выходом App Store для Mac стал еще более популярным. Не смотря на сверхвысокую скорость работы и приятный интерфейс, настроек для исключения определенных каталогов и файлов я не нашел, однако, способ все равно есть.
+
+Оказывается Alfred использует базу spotlight, а у spotlight есть такая настройка.
+
+Заходите в Системные настройки->Spotlight и добавляйте для исключения каталоги и файлы как показано на скриншоте ниже.
+
+[<img class="aligncenter size-full wp-image-595" title="Снимок экрана 2011-01-29 в 15.11.15" src="http://nexusnotes.ru/wp-content/uploads/2011/01/Снимок-экрана-2011-01-29-в-15.11.15.png" alt="" width="748" height="710" srcset="http://nexusnotes.ru/wp-content/uploads/2011/01/Снимок-экрана-2011-01-29-в-15.11.15.png 748w, http://nexusnotes.ru/wp-content/uploads/2011/01/Снимок-экрана-2011-01-29-в-15.11.15-300x284.png 300w" sizes="(max-width: 748px) 100vw, 748px" />][2]
+
+ [1]: http://www.alfredapp.com/
+ [2]: http://nexusnotes.ru/wp-content/uploads/2011/01/Снимок-экрана-2011-01-29-в-15.11.15.png

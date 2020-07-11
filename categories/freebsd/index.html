@@ -49,8 +49,10 @@
 <p>Все дело оказалось в старой библиотеке net-snmp, которую необходимо обновить до 5.5, и уже затем пересобрать zabbix.</p>
 <p> </p>
 <p> </p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre escaped="true" lang="shell" line="1">portupgrade net-snmp
+cd /usr/ports/net-mgmt/zabbix-server
+make deinstall
+make reinstall</pre>
 <p> </p>
 <p> </p>
 <p>Как говорят наши пиндосские товарищи, works like a charm</p>
@@ -88,8 +90,8 @@
 <p>Из прекрасного: если вы забыли набрать sudo перед выполнением команды, не беда, выполните sudo !!</p>
 <p>и вместо !! подставится предыдущая строка.</p>
 <p>Или вот, например, закрыли вам весь доступ фаерволами, из сервисов один DNS остался, так вот, можете вполне воспользоваться википедией</p>
-<p>dig +short txt <!-- raw HTML omitted -->.wp.dg.cx</p>
-<p>где <!-- raw HTML omitted --> — ключевое слово, на которое вы ищете статью.</p>
+<p>dig +short txt <keyword>.wp.dg.cx</p>
+<p>где <keyword> — ключевое слово, на которое вы ищете статью.</p>
 </div>
 </div>
 
@@ -100,10 +102,19 @@
     <div class="date">03.01.2011</div>
     <div><p>Данный совсем простой метод подходит не только для логов exim, но и любых других логов, которые необходимо переворачивать либо по размеру, либо по расписанию.</p>
 <p>данные две строки</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div id="_mcePaste">
+  <pre escaped="true" lang="shell" line="1"><span style="font-family: 'Segoe UI', Calibri, 'Myriad Pro', Myriad, 'Trebuchet MS', Helvetica, Arial, sans-serif; line-height: 19px; white-space: normal; font-size: 13px;">
+<div id="_mcePaste" style="padding: 0px; margin: 0px;">
+  /var/log/exim/mainlog      mailnull:mailnull             640  7     *    @T00  JN
+</div>
+<div id="_mcePaste" style="padding: 0px; margin: 0px;">
+  /var/log/exim/rejectlog     mailnull:mailnull             640  7     *    @T00  JN
+</div>
+</span></pre>
+</div>
+<div>
+  добавленные  в файл /etc/newsyslog.conf решают проблему ежедневного переворачивания логов от почтовой системы exim
+</div>
 </div>
 </div>
 
@@ -132,9 +143,9 @@
     <div class="date">25.03.2010</div>
     <div><p>На просторах интернетов был найден software http <a href="http://haproxy.1wt.eu/">load balancer</a> для распределения нагрузки на web-front.</p>
 <p>По многообещающим страницам сайта можно предположить, что модуль способен выдержать распределение http запросов с нагрузкой в десятки тысяч запросов в секунду.</p>
-<p><a href="http://nexusnotes.ru/wp-content/uploads/2010/03/haproxy-pmode.png"><!-- raw HTML omitted --></a></p>
+<p><a href="/uploads/2010/03/haproxy-pmode.png"><img class="aligncenter size-full wp-image-338" title="haproxy-pmode" src="/uploads/2010/03/haproxy-pmode.png" alt="" width="363" height="290" srcset="/uploads/2010/03/haproxy-pmode.png 363w, /uploads/2010/03/haproxy-pmode-300x239.png 300w" sizes="(max-width: 363px) 100vw, 363px" /></a></p>
 <ul>
-<li><!-- raw HTML omitted --><!-- raw HTML omitted --><a href="http://www.kernel.org/">Linux 2.4</a> on x86, x86_64, Alpha, SPARC, MIPS, PARISC</li>
+<li><a name="plat"></a><a href="http://www.kernel.org/">Linux 2.4</a> on x86, x86_64, Alpha, SPARC, MIPS, PARISC</li>
 <li><a href="http://www.kernel.org/">Linux 2.6</a> on x86, x86_64, ARM (ixp425), PPC64</li>
 <li><a href="http://www.sun.com/software/solaris/">Solaris 8/9</a> on UltraSPARC 2 and 3</li>
 <li><a href="http://www.sun.com/software/solaris/">Solaris 10</a> on Opteron and UltraSPARC</li>
@@ -142,7 +153,7 @@
 <li><a href="http://www.openbsd.org/">OpenBSD 3.1 to -current</a> on i386, amd64, macppc, alpha, sparc64 and VAX (check the ports)</li>
 </ul>
 <p>Впечатляющих результатов достиг Chris Knight:</p>
-<h3 id="a-title200-terabytes-served-in-81-days--247tb-per-day-relbookmark-hrefhttpwwwghostwheelcommerlinpersonalnotes20070325200-terabytes-served-in-81-days-247tb-per-day200-terabytes-served-in-81-days--247tb-per-daya"><!-- raw HTML omitted -->200 Terabytes Served in 81 Days = 2.47TB per day!<!-- raw HTML omitted --></h3>
+<h3 id="a-title200-terabytes-served-in-81-days--247tb-per-day-relbookmark-hrefhttpwwwghostwheelcommerlinpersonalnotes20070325200-terabytes-served-in-81-days-247tb-per-day200-terabytes-served-in-81-days--247tb-per-daya"><a title="200 Terabytes Served in 81 Days = 2.47TB per day!" rel="bookmark" href="http://www.ghostwheel.com/merlin/Personal/notes/2007/03/25/200-terabytes-served-in-81-days-247tb-per-day/">200 Terabytes Served in 81 Days = 2.47TB per day!</a></h3>
 </div>
 </div>
 
@@ -153,7 +164,7 @@
     <div class="date">29.12.2009</div>
     <div><p>Набрел на забавную утилиту apachetop</p>
 <p>Вот такой простенький, порой, бывает нужен <a href="http://www.webta.org/projects/apachetop/">анализатор состояния апача</a>, вдруг атакует кто?</p>
-<p><!-- raw HTML omitted --></p>
+<p><img src="http://lh3.ggpht.com/_YlUeUCURrJM/SyEmhsX7ClI/AAAAAAAADDI/cFRlCF8j7k4/%3F%3F%3F%3F%3F%3F%20%3F%3F%3F%3F%3F%3F%202009-12-10%20%3F%2018.48.14.png?imgmax=800" border="0" alt="Снимок экрана 2009-12-10 в 18.48.14.png" width="602" height="197" /></p>
 </div>
 </div>
 
@@ -162,8 +173,8 @@
         <a href="https://mprokopov.github.io/2009/12/freebsd-zabbix-1-8/">Ошибка при установке на FreeBSD zabbix 1.8</a>
     </h1>
     <div class="date">24.12.2009</div>
-    <div><p><!-- raw HTML omitted -->Если при установке zabbix 1.8 на FreeBSD вы получаете сообщения вида:</p>
-<p><!-- raw HTML omitted --></p>
+    <div><p><img class="alignnone" style="margin: 10px;" title="zabbix" src="http://www.zabbix.com/img/zabbix1.png" alt="zabbix" width="118" height="31" />Если при установке zabbix 1.8 на FreeBSD вы получаете сообщения вида:</p>
+<p><img class="alignnone" style="margin: 10px;" title="freebsd logo" src="http://www.freebsd.org/logo/logo-full-thumb.png" alt="freebsd logo" width="200" height="72" /></p>
 <p>60622:20091223:144406.024 Can’t allocate shared memory of size 8388608 [Cannot allocate memory]</p>
 <p>60622:20091223:144406.024 Can’t allocate shared memory for configuration cache.</p>
 <p>знайте, все дело в системных настройках sysctl.conf</p>
@@ -206,7 +217,7 @@
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

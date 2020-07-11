@@ -40,7 +40,8 @@ keyserver «keyserver.ubuntu.com»
 key «561F9B9CAC40B2F7»
 end
 include_recipe ‘apt’ ## this will do apt-get update
-package ‘nginx-extras’package ‘passenger’
+package ‘nginx-extras’
+package ‘passenger’
 This will add repository, sign key and install passenger from phusion apt repository.</description>
     </item>
     
@@ -60,7 +61,7 @@ This will add repository, sign key and install passenger from phusion apt reposi
       
       <guid>https://mprokopov.github.io/2012/08/%D0%B2%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BE%D1%82-%D0%BF%D0%BE%D1%81%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D0%B5%D0%BC%D0%B8%D0%BD%D0%B0%D1%80%D0%B0-%D0%BF%D0%BE-iti/</guid>
       <description>Cходил сегодня на ITIL семинар, очень понравилось!
-  </description>
+   Тренинг проводили в режиме симуляции HP Race to Results Simulation http://h10076.www1.hp.com/education/simulation.htm     Суть в следующем:     Игроки разбивались на команды:   1. Formula drivers (customers).   2. Service Desk,   3. Technical Stuff,   4. IT Director,   5. SEO (Financial)   Сервисы представляли собой компоненты Формулы 1: Fuel supply, Air cooling, Brakes, Engine и так далее.</description>
     </item>
     
     <item>
@@ -129,7 +130,7 @@ http://checkcfg.narod.ru/
 Zabbix freebsd program counter not available for this architecture
 и заббикс перестал стартовать.
  Все дело оказалось в старой библиотеке net-snmp, которую необходимо обновить до 5.5, и уже затем пересобрать zabbix.
-    Как говорят наши пиндосские товарищи, works like a charm
+  portupgrade net-snmpcd /usr/ports/net-mgmt/zabbix-servermake deinstallmake reinstall   Как говорят наши пиндосские товарищи, works like a charm
  </description>
     </item>
     
@@ -210,7 +211,7 @@ http://www.commandlinefu.com/commands/browse
 и вместо !! подставится предыдущая строка.
 Или вот, например, закрыли вам весь доступ фаерволами, из сервисов один DNS остался, так вот, можете вполне воспользоваться википедией
 dig +short txt .wp.dg.cx
-где — ключевое слово, на которое вы ищете статью.</description>
+где  — ключевое слово, на которое вы ищете статью.</description>
     </item>
     
     <item>
@@ -232,7 +233,8 @@ dig +short txt .wp.dg.cx
       
       <guid>https://mprokopov.github.io/2011/01/freebsd-exim-logrotate/</guid>
       <description>Данный совсем простой метод подходит не только для логов exim, но и любых других логов, которые необходимо переворачивать либо по размеру, либо по расписанию.
-данные две строки</description>
+данные две строки
+/var/log/exim/mainlog mailnull:mailnull 640 7 * @T00 JN /var/log/exim/rejectlog mailnull:mailnull 640 7 * @T00 JN    добавленные в файл /etc/newsyslog.conf решают проблему ежедневного переворачивания логов от почтовой системы exim  </description>
     </item>
     
     <item>
@@ -343,7 +345,7 @@ _jabber._tcp 900 IN SRV 5 0 5269 jabber.</description>
       <pubDate>Sun, 03 Jan 2010 13:04:33 +0000</pubDate>
       
       <guid>https://mprokopov.github.io/2010/01/mod_security2/</guid>
-      <description>![mod_security for apache](http://nexusnotes.ru/wp-content/uploads/2010/01/mod_security_for_apache.png)
+      <description>![mod_security for apache](/uploads/2010/01/mod_security_for_apache.png)
 В случае, если вы предоставляете услуги хостинга вам будет небесполезно знать, как быть, если сайты содержат старые версии публичных движков Joomla, ShopScript, WordPress, etc и периодически подвергаются взломам.
 В таких случаях править код и обновлять версии клиентского ПО самостоятельно вы не будете по понятным причинам, да и не всегда у клиента есть возможность найти программера/фрилансера готового выполнить обновление работающего и приносящего доход, хотя и старого интернет-магазина или форума.</description>
     </item>
@@ -366,7 +368,7 @@ _jabber._tcp 900 IN SRV 5 0 5269 jabber.</description>
       <guid>https://mprokopov.github.io/2009/12/dir320-printserver/</guid>
       <description>&lt;p&gt;Заметку побудило написать мое удивление при настройке печати через D-Link DIR-320, а именно несвойственная такого класса устройствам безгеморройность в настройке.&lt;/p&gt;
 &lt;p&gt;Для того что бы наш Xerox 3119 корректно распознался коробочкой пришлось обновить прошивку с 1.00 до 1.10, и после этого, о чудо, принтер был роутером обнаружен и автоматически настроен.&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://mprokopov.github.io/uploads/2009/12/xerox_3119_printserver.png&#34; alt=&#34;xerox 3119 printserver&#34; height=&#34;113&#34; width=&#34;567&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -407,7 +409,7 @@ kern.ipc.shmall=2097152
       <description>В этом посте я постарался собрать свои и чужие заметки по работе с ESXi, так как сама идея виртуализации довольно интересна.
 Алексей Перестюк — боевой товарищ, с которым отучились в киевском физмате УФМЛКУ, правильное дело делает двигая в массы технологии виртуализации и железо от Onix.
 Здесь его вебинар по VMWare ESXi
-Подборка моих заметок о vmware с nexus.org.ua
+ Подборка моих заметок о vmware с nexus.org.ua
 О бекапе vmware esxi
 Как в VMWare расширить диск
 Виртуализация средствами VMWare</description>

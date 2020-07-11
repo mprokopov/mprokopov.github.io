@@ -1,0 +1,43 @@
+---
+title: Вещи в веб-деве, которые меня действительно впечатлили
+author: Max Prokopov
+type: post
+date: 2018-01-16T16:17:37+00:00
+url: /2018/01/вещи-в-веб-деве-которые-меня-действите/
+robotsmeta:
+  - index,follow
+categories:
+  - clojure
+
+---
+[Lightmod][1] и [Nightcode][2] редактор с подсветкой синтаксиса, где Clojure и ClojureScript работают из коробки и есть несколько хороших примеров кода прямо в той же коробке.
+
+Удивительно, какие вещи может сделать один человек. Проекты также содержат интерактивный REPL прямо на странице ClojureScriptа. Впрочем, это лучше показать.
+
+[ClojureScript REPL right in your Google Chrome][3] Dirac. Лучше всего за себя скажет сам скриншот Dirac. Отличная поддержка ClojureScript прямо в вашем браузере!<img class="alignnone size-large" src="https://camo.githubusercontent.com/3e868a5633611c52c3cd8072f93fbf5c962b219a/68747470733a2f2f626f782e62696e6172796167652e636f6d2f64697261632d6d61696e2d30312e706e67" width="1842" height="2042" />
+
+В этом же контексте имеет смысл посмотреть на [paren-soup][4] онлайн редактор для Clojurescript.
+
+[AnyBar for boot][5]
+
+Приятное уведомление небольшой иконкой в тулбаре, все ли тесты прошли ок или не все.
+
+&nbsp;
+
+Про [Boot][6]. Сейчас у нас помимо Leininghen у нас есть и Clojure CLI tools и Boot. Так как я сам из мира Ruby on Rails, то Boot это что-то, что совмещает в себе rake, rails, capistrano, rspec и guard  в одном флаконе, если вы понимаете, о чем я.
+
+&nbsp;
+
+На текущий момент tooling для Clojure/ClojureScript становится настолько простым и мощным, что даже не знаю, с чем это можно сравнить. Я очень рад жить в такое интересное время.
+
+И, наконец, [Vase][7]. Быстрый способ разработать на удобном и расширяемом DSL различные микросервисы с JSON. Драматически ускоряет разработку.
+
+{{< youtube _Cf-STRvFy8 >}}
+
+ [1]: https://sekao.net/lightmod/
+ [2]: https://sekao.net/nightcode/
+ [3]: https://github.com/binaryage/dirac
+ [4]: https://github.com/oakes/paren-soup
+ [5]: https://github.com/tonsky/boot-anybar
+ [6]: https://github.com/boot-clj/boot
+ [7]: https://github.com/cognitect-labs/vase

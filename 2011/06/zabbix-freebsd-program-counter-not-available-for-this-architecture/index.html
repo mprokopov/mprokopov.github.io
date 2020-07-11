@@ -51,8 +51,10 @@
 <p>Все дело оказалось в старой библиотеке net-snmp, которую необходимо обновить до 5.5, и уже затем пересобрать zabbix.</p>
 <p> </p>
 <p> </p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre escaped="true" lang="shell" line="1">portupgrade net-snmp
+cd /usr/ports/net-mgmt/zabbix-server
+make deinstall
+make reinstall</pre>
 <p> </p>
 <p> </p>
 <p>Как говорят наши пиндосские товарищи, works like a charm</p>
@@ -93,7 +95,7 @@
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

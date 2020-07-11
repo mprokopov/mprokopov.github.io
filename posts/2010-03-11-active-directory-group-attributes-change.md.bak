@@ -1,0 +1,26 @@
+---
+title: 'Управление Active Directory: групповые операции над аттрибутами'
+author: Max Prokopov
+type: post
+date: 2010-03-11T09:51:26+00:00
+url: /2010/03/active-directory-group-attributes-change/
+robotsmeta:
+  - index,follow
+views:
+  - 51
+categories:
+  - windows
+  - администрирование
+
+---
+Для тех, кто любит и умеет готовить AD не секрет, что работа со свойствами пользователей в больших количествах занятие трудоемкое.
+
+Какие-то свойства профиля можно задать групповой операцией,  а какие-то нет.
+
+Нелегкий труд ADмина призвана облегчить [сия утилита][1].
+
+<img class="alignnone" src="http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_Main.png" alt="" width="678" height="446" />
+
+<img class="alignnone" src="http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_BulkModify.png" alt="" width="475" height="593" />
+
+ [1]: http://www.wisesoft.co.uk/software/bulkadusers/default.aspx

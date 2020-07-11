@@ -1,0 +1,68 @@
+---
+title: Fully automated docker mysql database backup from remote host
+description: >-
+  The main idea is to have fully automated docker database backup from low end
+  D-Link NAS DNS-320. I believe, that host, which hosts backups…
+date: '2017-08-17T11:13:38.190Z'
+categories: []
+keywords: []
+slug: >-
+  /@mprokopov/fully-automated-docker-mysql-database-backup-from-remote-host-bd02e24b5009
+---
+
+The main idea is to have fully automated docker database backup from low end D-Link NAS DNS-320. I believe, that host, which hosts backups should be responsible for doing whole backup process, not the web-servers, which nowadays designed to be ephemeral.
+
+Solution design is following:
+
+1.  My backup box will copy backup.sh script to the remote coreos-03 host.
+2.  Then remote host copies backup.sh script into database container.
+3.  Backup box executes docker command «docker exec itservice\_db\_1 backup.sh» on coreos-03 host, which, in turn, executes mysqlbackup. SQL dump is captured directly from command output and then gzipped.
+4.  Rsnapshot saves folder with gzipped SQL dump and rotates old backup folders as necessary.
+
+So, we will need only
+
+Here is my working implementation:
+
+script backup.sh
+
+```
+#!/bin/bash ## env vars are already in docker container 
+```
+
+```
+/usr/bin/mysqldump -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE
+```
+
+script backup-coreos-itservice.sh
+
+```
+/ffp/bin/scp /ffp/home/root/backup.sh core@coreos-03:/home/core/itservice/backup.sh 
+```
+
+```
+/usr/sbin/ssh -C core@coreos-03 "docker cp /home/core/itservice/backup.sh itservice_db_1:/usr/local/bin/backup.sh" 
+```
+
+```
+/usr/sbin/ssh -C core@coreos-03 "docker exec itservice_db_1 /usr/local/bin/backup.sh" > latest.sql 
+```
+
+```
+/opt/bin/tar czf itservice-sql-dump.tar.gz latest.sql --remove-files
+```
+
+rsnapshot.conf
+
+```
+backup_script	/mnt/HD/HD_a2/ffp/home/root/backup-coreos-itservice.sh	coreos-03/itservice_db_1
+```
+
+crontab
+
+```
+0 */4 * * * rsnapshot hourly 30 3 * * * rsnapshot daily 0 3 * * 1 rsnapshot weekly 30 2 1 * * rsnapshot monthly
+```
+
+Keep in mind, that you will need to generate ssh keys for your backup box and add it to authorized\_keys on coreos-03 host, but this is out of scope this article.
+
+_Originally published at_ [_blog.it-premium.com.ua_](http://blog.it-premium.com.ua/all/fully-automated-mysql-database-dump-backup-from-remote-host/)_._

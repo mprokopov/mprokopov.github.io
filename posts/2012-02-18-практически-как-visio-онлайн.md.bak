@@ -1,0 +1,24 @@
+---
+title: Практически как Visio онлайн
+author: Max Prokopov
+type: post
+date: 2012-02-18T11:28:48+00:00
+url: /2012/02/практически-как-visio-онлайн/
+categories:
+  - Софт
+tags:
+  - visio
+  - графика онлайн
+  - диаграммы
+  - схемы
+
+---
+Обнаружился на днях прекрасный и, что немаловажно, бесплатный онлайн-инструмент для рисования разного рода диаграмм, майндмапов и брейнстормов <a style="cursor: pointer; color: #3b5998; text-decoration: none;" rel="nofollow nofollow" href="http://www.diagram.ly/" target="_blank">http://www.diagram.ly/</a>
+
+Хорошая библиотека как для Business Process Modeling, так и для описания компьютерных схем и прочих вещей. Пятая точка мне подсказывает, что сам проект, вероятно, не долго останется бесплатным и будет монетизироваться. Такие вещи показывают чуть более чем явно движение от desktop apps to cloud apps.
+
+Вот схема, которую я создал за пару минут в [diagram.ly][1].
+
+<img style="display: block; margin-left: auto; margin-right: auto;" title="schema.png" src="http://nexusnotes.ru/wp-content/uploads/2012/02/schema.png" border="0" alt="Schema" width="433" height="278" />
+
+ [1]: http://diagram.ly

@@ -1,0 +1,29 @@
+---
+title: 'Хозяйке Mac на заметку: как узнать, куда делось место на диске?'
+author: Max Prokopov
+type: post
+date: 2013-08-08T05:05:06+00:00
+url: /2013/08/хозяйке-mac-на-заметку-как-узнать-куда-де/
+robotsmeta:
+  - index,follow
+categories:
+  - за жизнь
+
+---
+Владельцы даже особо больших дисков зачастую задумываются, куда же делось место? Так, на моем fusion drive ™ в суммарные 616Гб уже 500Гб чем-то занято. Наглядно увидеть и проанализировать, куда же делось место с удобным отображением поможет [программа Daisy Disk][1].
+
+[<img class="aligncenter size-full wp-image-1083" alt="Daisy Disk" src="http://nexusnotes.ru/wp-content/uploads/2013/08/2013-08-07-at-20.11.png" width="808" height="630" />][2]
+
+Для Windows есть [бесплатный аналог OverDisk][3]. А также небезынтересна [утилита SequoiaView][4].
+
+&nbsp;
+
+UPDATE: Приятель Pumpkin Head подсказал [бесплатную утилиту Disk Inventory][5], которая в несколько другом виде, но тоже наглядно отображает содержимое диска.
+
+&nbsp;
+
+ [1]: https://itunes.apple.com/ru/app/daisydisk/id411643860?mt=12
+ [2]: http://nexusnotes.ru/wp-content/uploads/2013/08/2013-08-07-at-20.11.png
+ [3]: http://overdisk.en.softonic.com "OverDisk"
+ [4]: http://w3.win.tue.nl/nl/onderzoek/onderzoek_informatica/visualization/sequoiaview//
+ [5]: http://www.derlien.com/screenshots/index.html

@@ -1,0 +1,15 @@
+---
+title: 'Хозяйке Mac OS на заметку: очистка DNS кеша'
+author: Max Prokopov
+type: post
+date: 2011-08-18T11:05:24+00:00
+url: /2011/08/хозяйке-mac-os-на-заметку-очистка-dns-кеша/
+views:
+  - 155
+categories:
+  - администрирование
+  - Мак
+  - Софт
+
+---
+dscacheutil -flushcache

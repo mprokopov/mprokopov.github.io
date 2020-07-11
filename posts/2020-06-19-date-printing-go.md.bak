@@ -1,0 +1,31 @@
+---
+title: Interesting take on time from the Go perspective
+author: Max Prokopov
+type: post
+date: 2020-06-18
+---
+
+I found really interesting how the time is specified in Go language stdlib.
+
+From https://golang.org/pkg/time/
+
+> To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value.
+
+Namely, you write an example of time date, not just "dd-MM-yyyy" but real date and time using numbers as values.
+
+Here is go example:
+
+```
+01/02 03:04:05PM '06 -0700
+Mon Jan 2 15:04:05 MST 2006
+```
+
+if we want to print output similar to dd-MM-yyyy we'd specify just
+
+```
+02 Jan 2006
+```
+
+
+Quite smart and unusual.
+<!--more-->

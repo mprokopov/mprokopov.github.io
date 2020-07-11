@@ -1,0 +1,55 @@
+---
+title: ускоряем работу iPhone
+author: Max Prokopov
+type: post
+date: 2010-01-05T21:54:10+00:00
+url: /2010/01/make-iphone-faster/
+views:
+  - 101
+categories:
+  - iPhone
+
+---
+[<img class="alignright size-medium wp-image-68" title="apple-iphone-3g" src="http://nexusnotes.ru/wp-content/uploads/2009/12/apple-iphone-3g-249x300.jpg" alt="" width="249" height="300" srcset="http://nexusnotes.ru/wp-content/uploads/2009/12/apple-iphone-3g-249x300.jpg 249w, http://nexusnotes.ru/wp-content/uploads/2009/12/apple-iphone-3g.jpg 300w" sizes="(max-width: 249px) 100vw, 249px" />][1]Не так давно мой смартфон стал радовать меня меньше, чем раньше, и связано это было с производительностью. Если раньше, сразу после прошивки телефон &#171;летал&#187;, то сейчас на некоторых приложениях он еле двигался. Особенно это заметно при работе с браузером, почтой и различными поисками (например по адресной книге).
+
+Однако, при помощи определенных манипуляций удалось заствавить этот чудесный аппарат работать резвее.
+
+Вкратце: избавляем телефон от поддержки ненужных языков, оставляя лишь два необходимых: ru и en и наслаждаемся результатом.
+
+Дополнительно можно выключить автозагрузку для ненужных демонов, которых, как оказалось, было:
+
+Для всех манипуляций нам прийдется установить OpenSSH из Cydia.
+
+После подключения к телефону (я надеюсь все смогут найти IP, полученный Wifi адаптером телефона?) входим по login: root и password: apline.
+
+1. Создаем директорию для бекапа:
+  
+mkdir /private/var/stash/langBackup/
+  
+2. cd /private/var/stash/Applications
+
+3. for file in \`find . -type d -name &#171;\*.lproj&#187; -not -iname &#171;ru\*.lproj&#187; -not -iname &#171;en*.lproj&#187; -exec echo {} \; | sed -e &#8216;s/\.\///&#8217;\`; do tar -rf /private/var/stash/langBackup/langBackup.tar ./$file ; done
+
+чем переместим ненужные языки в архив langBackup.tar в /private/var/stash/langBackup
+
+4. отсекаем лишнее
+  
+for file in \`find . -type d -name &#171;\*.lproj&#187; -not -iname &#171;ru\*.lproj&#187; -not -iname &#171;en*.lproj&#187; -exec echo {} \; | sed -e &#8216;s/\.\///&#8217;\`; do rm -vr ./$file ; done
+
+5. заходим в папку стартап скриптов:
+  
+cd /System/Library/LaunchDaemons
+
+6. rm com.apple.Dump* удаляем ненужные демоны &#8212; 2 демона, которые делают дамп при &#171;падениях&#187; айфона для анализа Эпплом
+
+7. rm com.apple.Report* удаляем ненужные демоны &#8212; 5 демонов, которые делают отчеты о &#171;падениях&#187; &#8212; что было запущено, когда они произошли и т.д.
+
+8. reboot
+
+Должно полегчать
+
+\[Детальнее\](http://www.iphones.ru/forum/lofiversion/index.php/t45750.html)
+
+\[Еще детальнее\](http://www.ipodtouchfans.com/forums/showthread.php?t=224341 &#171;Tutorial &#8212; Speed Up Your iPhone/iPod by Removing Launch Daemons &#8212; iPod touch Fans forum&#187;)
+
+ [1]: http://nexusnotes.ru/wp-content/uploads/2009/12/apple-iphone-3g.jpg

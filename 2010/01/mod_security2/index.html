@@ -44,7 +44,7 @@
     
     <h4>Время чтения: 2 мин.</h4>
     
-    <div><p>![mod_security for apache](<a href="http://nexusnotes.ru/wp-content/uploads/2010/01/mod">http://nexusnotes.ru/wp-content/uploads/2010/01/mod</a>_security_for_apache.png)</p>
+    <div><p>![mod_security for apache](/uploads/2010/01/mod_security_for_apache.png)</p>
 <p>В случае, если вы предоставляете услуги хостинга вам будет небесполезно знать, как быть, если сайты содержат старые версии публичных движков Joomla, ShopScript, WordPress, etc и периодически подвергаются взломам.</p>
 <p>В таких случаях править код и обновлять версии клиентского ПО самостоятельно вы не будете по понятным причинам, да и не всегда у клиента есть возможность найти программера/фрилансера готового выполнить обновление работающего и приносящего доход, хотя и старого интернет-магазина или форума.</p>
 <p>Может быть есть простой способ запретить обычные SQL инъекции, directory traversing и остальные распространенные методы взлома? Оказывается, такой способ есть и предоставляет его модуль apache под названием [mod_security](<a href="http://www.modsecurity.org/)">http://www.modsecurity.org/)</a>.</p>
@@ -53,9 +53,9 @@
 <p>portinstall mod_security2</p>
 <p>Для того, что бы довести функционирование этого модуля до ума прийдется потратить пару дней на изучение логов работы модуля и отключение ложных срабатываний (кои случаются) и обучению новым трюкам, что, в конечном счете, даст вам возможность спать спокойнее. На производительности сервера этот модуль отражается несущественно.</p>
 <p>Отключать модуль для определенного сайта можно в секции vhosts указав</p>
-<!-- raw HTML omitted -->
+<IfModule mod_security2.c>
 <p>SecRuleEngine off</p>
-<!-- raw HTML omitted -->
+</IfModule>
 <p>Применение данного средства является хорошим «пугалом», но не есть панацея. Обновляйте ваши движки чаще, и закрывайте дыры в безопасности. И да прибудет с вами сила.</p>
 <p>Пример логов:</p>
 <p>[04/Jan/2010:09:15:52 +0200] [www.xxxxxxxx.com.ua/sid#28efbb60][rid#29a56058][/_vti_bin/owssvr.dll][1] Access denied with code 500 (phase 2). Pattern match «.(?:c(?:o(?:nf(?:ig)?|m)|s(?:proj|r)?|dx|er|fg|md)|p(?:rinter|ass|db|ol|wd)|v(?:b(?:proj|s)?|sdisco)|a(?:s(?:ax?|cx)|xd) |d(?:bf?|at|ll|os)|i(?:d[acq]|n[ci])|ba(?:[kt]|ckup)|res(?:ources|x)|s(?:h?tm|ql|ys)|l(?:icx|nk|og)|\w{0,5}~|webinfo|ht[rw ]|xs[dx]| …» at REQUEST_BASENAME. [file «/usr/local/etc/apache22/Includes/mod_security2/modsecurity_crs_30_http_policy.conf»] [line «94»] [id «960035»] [msg «URL file extension is restricted by policy»] [severity «CRITICAL»] [tag «POLICY/EXT_RESTRICTED»]</p>
@@ -95,7 +95,7 @@
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

@@ -1,0 +1,47 @@
+---
+title: Mac tips and tricks. Part 2.
+author: Max Prokopov
+type: post
+date: 2014-04-28T10:34:20+00:00
+url: /2014/04/mac-tips-and-tricks-part-2/
+robotsmeta:
+  - index,follow
+categories:
+  - lifehack
+  - Мак
+
+---
+Продолжаем серию трюков для Mac, о которых не все знают.
+
+Очень быстро можно найти определение, перевести слово с другого языка если сделать тап тремя пальцами по слову, либо нажать Option-D на выделенном слове. Выглядит это так:
+
+[<img class="aligncenter size-large wp-image-1206" src="http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-1024x816.png" alt="Screen Shot 2014-04-28 at 13.17.16" width="700" height="557" srcset="http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-1024x816.png 1024w, http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-300x239.png 300w, http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-900x717.png 900w, http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16.png 1394w" sizes="(max-width: 700px) 100vw, 700px" />][1]
+
+<!--more-->
+
+Для этого установите галку &#171;lookup&#187; в настройках трекпада.[<img class="aligncenter size-full wp-image-1207" src="http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.19.26.png" alt="Screen Shot 2014-04-28 at 13.19.26" width="782" height="645" srcset="http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.19.26.png 782w, http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.19.26-300x247.png 300w" sizes="(max-width: 782px) 100vw, 782px" />][2]
+
+Работает практически в любом приложении (текстовые редакторы, браузеры, просмотрщики).
+
+&nbsp;
+
+Если вы хотите быстро драг-н-дропнуть файл с рабочего стола, то для меня оказался полезным такой воркфлоу:
+
+  1. Курсор мыши в правый нижний угол откроет залежи Рабочего стола.
+  2. Цепляем мышью файл.
+  3. Пятерней по тачпаду делаем жест &#171;сведение пальцев в щепоть&#187;
+  4. Дропаем файл куда следует.
+
+Для того, чтобы работал п.1 делаем настройку Mission Control -> Hot Corners как показано на скриншоте.[<img class="aligncenter size-full wp-image-1208" src="http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.26.28.png" alt="Screen Shot 2014-04-28 at 13.26.28" width="782" height="666" srcset="http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.26.28.png 782w, http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.26.28-300x255.png 300w" sizes="(max-width: 782px) 100vw, 782px" />][3]И третий на сегодня трюк: [приложение CheatSheet][4]. Если вы такой же любитель клавиатуры как и я, то большую часть часто повторяемых действий вы стараетесь делать не отрывая пальцев от клавиатуры. А узнать клавиатурные сокращения незнакомой программы и поможет наше небольшое приложение CheatSheet. Приложение запускается и работает в фоне. Для того, чтобы узнать клавиатурные сокращения у текущего приложения – нажмите и подержите несколько секунд клавишу Cmd. Появится вот такое прелесное окно с сокращениями.
+
+[<img class="aligncenter size-large wp-image-1209" src="http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.32.57-1024x787.png" alt="Screen Shot 2014-04-28 at 13.32.57" width="700" height="537" srcset="http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.32.57-1024x787.png 1024w, http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.32.57-300x230.png 300w, http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.32.57-900x692.png 900w, http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.32.57.png 1108w" sizes="(max-width: 700px) 100vw, 700px" />][5]
+
+&nbsp;
+
+&nbsp;
+
+ [1]: http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16.png
+ [2]: http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.19.26.png
+ [3]: http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.26.28.png
+ [4]: http://www.mediaatelier.com/CheatSheet/
+ [5]: http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.32.57.png

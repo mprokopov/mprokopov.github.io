@@ -1,0 +1,100 @@
+---
+title: Mobile Me
+author: Max Prokopov
+type: post
+date: 2009-12-30T10:28:06+00:00
+url: /2009/12/mobile-me/
+views:
+  - 142
+categories:
+  - Мак
+  - Софт
+
+---
+Читать о [тестировании MobileMe][1]
+
+Задумался я как-то об использовании Mobile Me сервиса, какие дает преимущества за $100 в год?
+
+В этой статье мы попытаемся найти более бесплатные аналоги, если таковые существуют.
+
+<img src="http://nexusnotes.ru/wp-content/uploads/2009/12/01_mobileme_logo.jpg" alt="" width="294" height="288" />
+
+<!--more-->
+
+  1. Почта и ее синхронизация. Аналог &#8212; [Gmail][2] в режиме IMAP.
+		  
+    Используя Gmail в режиме IMAP вы сможете иметь всегда актуальную копию ящика в веб-интерфейсе, на iPhone и в Mail.app. Отдельно отмечу push функционал, а именно, если его не использовать, то существенно сэкономите время жизни заряда батареи.
+		  
+    
+		<img src="http://nexusnotes.ru/wp-content/uploads/2010/01/gmail.jpeg" alt="gmail" height="117" width="117" /> 
+  2. Подключаемый и доступный отовсюду iDisk. Сервис iDisk предоставляет собой хранилище, которое находится в сети и подключается в систему в виде диска.
+		  
+    Аналог &#8212; [сервис DropBox][3]. Прочтите <a href="http://wildmale.livejournal.com/168953.html" title="wildmale: Dropbox. "Ляльки" из коробки.">лучшую статью о Dropbox</a>.
+		  
+    <img src="http://nexusnotes.ru/wp-content/uploads/2010/01/dropbox_logo_home.png" alt="Dropbox Logo Home" height="75" width="290" /></p> 
+    <table>
+      <th>
+        Плюсы
+      </th>
+      
+      <th>
+        Минусы
+      </th>
+      
+      <tr>
+        <td>
+          Бесплатен
+        </td>
+        
+        <td>
+          нет
+        </td>
+      </tr>
+    </table>
+
+  3. Галлерея фотографий из iPhoto. Аналог &#8212; Интеграция с [Flickr][4]. Конечно, постить прямо из iPhone на Flickr не так удобно как в MobileMe, однако существует абсолютно [бесплатный Flickr клиент для iPhone][5]. Кроме того, в iPhoto уже существует встроенная поддержка flickr.
+		  
+    
+		<img src="http://nexusnotes.ru/wp-content/uploads/2010/01/flickrthumbnail.gif" alt="Flickr.Thumbnail" height="128" width="113" /> 
+  4. Синхронизируемая адресная книга. Аналог &#8212; Gmail Address Book. Знаете ли вы, что можно вполне синхронизировать контакты с iPhone, Address Book.app с Gmail нативными для Mac OS средствами через iTunes?   
+     <img src="http://nexusnotes.ru/wp-content/uploads/2010/01/itunes_address_book_gmail_sync1.png" alt="iTunes address book Gmail sync" height="322" width="794" />
+  5. Синхронизируемый iCal. Аналог &#8212; [Gmail Calendar][6]. Здесь даже работает [подобие Exchange коннектора для google calendar][7]. В Calendar.app поддержка Google Calendar нативная.
+		  
+    
+		<img src="http://nexusnotes.ru/wp-content/uploads/2010/01/ical.jpeg" alt="ical" height="112" width="108" /> 
+  6. iWeb и хостинг для своего сайта. Пожалуй, такого откровенно прямого аналога и не найти. Впрочем, можно делать экспорт сайта в локальный каталог и затем выкладывать на хостинг, но это уже не так удобно как при использовании MobileMe.
+		  
+    
+		<img src="http://nexusnotes.ru/wp-content/uploads/2010/01/iweb.jpeg" alt="iweb" height="111" width="111" /> 
+  7. Find My Phone, RemoteWipe. Аналога нет.
+		  
+    
+		<img src="http://nexusnotes.ru/wp-content/uploads/2010/01/find_my_i_phone_tab_thumb.jpg" alt="Find my i Phone tab Thumb" height="273" width="425" /> 
+  8. Удаленный доступ к своему Mac (Back to my Mac). Аналог &#8212; [Logmein][8], [Teamviewer][9]. Суть &#8212; инсталлируем на свой компьютер серверную часть (утилиту) для удаленного доступа и пользуемся. В Teamviewer в бесплатной лицензии есть также фича для пересылки файлов на удаленный компьютер.
+		  
+    
+		<img src="http://nexusnotes.ru/wp-content/uploads/2010/01/teamviewer.png" alt="Teamviewer" height="65" width="262" /> 
+  9. Синхронизация настроек между Macами. Прямого аналога нет. Возможно rsync в полуавтоматическом режиме? Понятно, что для обычного пользователя настройка rsync из консоли &#8212; не самое простое занятие.
+ 10. От себя замечу возможность использоватть MobileMe для синхронизации данных между Mac и iPhone такими приложениями как OmniFocus. Безусловно, это значительно удобнее синхронизации по Wifi, так как такую синхронизацию можно производить и в мобильном режиме, не обязательно иметь одновременно оба девайса включенными в одну Wifi сеть одновременно. Прямого аналога нет.
+
+Итого из уникальных сервисов: 
+
+  1. Публикация iWeb в один клик.
+  2. Синхронизация настроек между маками.
+  3. Find my Phone.
+  4. RemoteWipe.
+  5. Использование возможностей синхронизации third-party приложениями через MobileMe
+
+Стоит ли весь этот сервис $100 в год?
+  
+Решать вам. Для себя пока принял решение повременить.
+
+ [1]: http://www.prostomac.com/2009/12/mobileme-mobilizirujtes/ "MobileMe: мобилизируйтесь! | простоMAC"
+ [2]: http://gmail.com/
+ [3]: https://www.dropbox.com/ "Dropbox - Home - Secure backup, sync and sharing made easy."
+ [4]: http://www.flickr.com/ "Welcome to Flickr - Photo Sharing"
+ [5]: http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=328407587&mt=8 "iTunes Store"
+ [6]: http://www.google.com/calendar/render
+ [7]: http://www.google.com/support/mobile/bin/answer.py?answer=138740&topic=14252 "Setting Up Your iPhone or iPod Touch : Mail, Calendar, & Contacts Setup - Mobile Help"
+ [8]: https://secure.logmein.com/ "LogMeIn - Remote Access and Desktop Control Software for Your Computer"
+ [9]: http://www.teamviewer.com/ "TeamViewer - Free Remote Access and Remote Desktop Sharing over the Internet"

@@ -1,0 +1,27 @@
+---
+title: Applescript instantly open Zoom link from the iCal calendar
+date: 2020-02-02
+slug: applescript-instant-open-zoom-link
+categories:
+- tips and tricks
+- macos
+---
+
+This is really my little timesaver because you know, a lot of meetings happen when you work remotely. 
+
+<!--more-->
+
+Works best with Alfred 4 using mapped hotkey.
+
+```applescript
+tell application "Calendar"
+	tell calendar "maksym.prokopov@trilogy.com"
+		set itemLocation to location of first event where its start date ≤ (current date) + 10 * minutes and end date ≥ (current date)
+		if itemLocation contains "zoom.us" then tell application "Finder" to open location itemLocation
+	end tell
+end tell
+```
+
+![](http://nexusnotes.ru/wp-content/uploads/2020/02/Screenshot-2020-02-26-at-19.10.05.png)
+
+![](http://nexusnotes.ru/wp-content/uploads/2020/02/Screenshot-2020-02-26-at-19.10.41.png)

@@ -1,0 +1,47 @@
+---
+title: Brief introduction to the Kubernetes.
+description: >-
+  Kubernetes is a winner in docker cloud orchestration, so let’s get a brief
+  introduction in what it is and what kind of problems it solves.
+date: '2018-05-26T12:35:51.953Z'
+categories:
+- kubernetes
+keywords: 
+- k8s
+- kubernetes
+slug: /@mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51
+---
+
+### Kubernetes is a winner in docker cloud orchestration, so let’s get a brief introduction in what it is and what kind of problems it solves.
+
+Kubernetes is a set of tools designed to solve a problem of deployment of your lovely tailor-made application to a cloud. It does not matter which cloud you choose, AWS, Azure or Google, or even IBM, because Kubernetes provides you with a set of tools which are platform independent.
+
+![](/img/1__fw8YJnfF32dWsX__beQpWOw.png)
+
+For almost every application you need to talk to a database, to store some assets, to get requests and make responses to users with a useful content. So, basically you need to have a ‘storage’ for storing files, a ‘network’ to get requests and make responses to users and a ‘computing power with memory’ to run your application. All of this is quite simple if you run your application on a single computer (node), you have local storage on an HDD, i.e. a filesystem, you have a CPU and memory to run your application and a single network interface to talk to users and other services like external database or api. Suddenly you decide to deploy your application to some cloud provider and users start using your application on a huge scale and then you decide to scale your application across cloud nodes.
+
+This is still not that moment when you need Kubernetes, because you can use cloud provided facilities like Amazon S3 for storage, Amazon RDS for automatically scaled databases and more Amazon EC2 instances to run your applications.
+
+Wait, why do we need Kubernetes then? Well, every quite complex application has it’s own technological stack and different unique Continue Integration and Continue Deployment processes. So, if you work for a large enterprise which in turn has a lot of such custom made applications, there will be one day when the enterprise decides to make unification of rollout and upgrade processes to reduce costs and create special forces, which are responsible for deployment and maintenance. We start calling them DevOps.
+
+Here is that moment, when everything becomes more and more complicated.
+
+These guys have already started dreaming about better abstractions for unification of application deployment and invented a concept of Docker. The Docker is about having everything application needs to run in one ‘container’ which can be stored and transferred over a network. Nevertheless every nifty feature comes at its price. For the luxury of having platform independent movable containers we pay the price with much larger application size and extra build step. Both are very time and resource consuming.
+
+Okay, now we have a bunch of containers, cool. How should we monitor all of them and restart when they fail? Moreover we also run containers across different servers and docker does not give us a way of how one part of our application in one container should connect across network and talk to a part of application in another container. There is nothing more than cleaning up failed docker containers and stalled images manually or in semi-automated, controlled by human, way.
+
+And there was a blood. A lot of different third-party solutions and even Docker themselves were trying to compete and provide better tools for solving these problems. And finally more and more people started considering Kubernetes by Google as preferred solution.
+
+Let me briefly describe a concepts of Kubernetes.
+
+*   **minikube** is an utility to get your home-made cluster up and running as a virtual machine on your single computer
+*   **kubectl** is an utility to control every operation on a cluster, which is up by running minikube.
+*   In **Deployment** you specify information about which docker image to download and run, and what volumes and ports this particular container will use. **Deployment** will spawn Pods.
+*   Basically **Pod** is a running container, you can just delete running **Pod** and new one will be created automatically. You can specify in **Deployment** how many exactly the same containers you need to spawn.
+*   You need to create **Service** in two cases. First, when you want provide DNS name for your container, for example, **redis**. This will allow other containers to discover and connect to **redis** by name resolution. Second, when you want to make your application visible from outside of your cloud, i.e. ‘publish’ application for users.
+*   You should use **Persistence Volume Claim** if you have data in your application which should survive across container deletions. Usually database container will store it’s data in such volumes. Otherwise say ‘Hasta la vista’ to all the data in your live containers, because they are intended to be ephemeral, easily killed and spawned again when necessary.
+*   Another nice concept in Kubernetes is a **Secret**. This is spatial place and API to store your credentials and settings. You can refer to them in **Deployment**, when you need, for example, to supply database password in one of environment variables.
+
+If you still have intention to try deployment to Kubernetes cluster, start playing with minikube and investigate this nice example of deployment Wordpress + MySql [https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
+
+_Originally published at_ [_blog.it-premium.com.ua_](http://blog.it-premium.com.ua/all/brief-introduction-to-the-kubernetes/)_._

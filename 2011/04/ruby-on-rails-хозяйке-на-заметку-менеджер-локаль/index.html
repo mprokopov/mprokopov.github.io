@@ -48,16 +48,17 @@
 <p>Вкратце, если у вас достаточно много сайтов разработке, утилита предоставляет хук в DNS зону dev и позволяет обращаться к вашим сайтам по url вида <a href="http://myapp.dev">http://myapp.dev</a> , <a href="http://myapp2.dev">http://myapp2.dev</a>, а также добавляет правило в фаерволе, которое заворачивает обращения к self с порта 80 на внутренний порт утилиты.</p>
 <p>Сам Pow состоит из двух частей — DNS responder и проксирующего web server. Реализовано все счастье на Node.js.</p>
 <p>Очень интересна реализация зоны .dev, в mac os в каталоге /etc/resolver/ добавляется файл dev такого вида:</p>
-<!-- raw HTML omitted -->
+<pre lang="php">nameserver 127.0.0.1 port 20560</pre>
 <p>что перенаправляет все обращения xxx.dev на соответствующее приложение</p>
 <p> </p>
 <p>Утилита поддерживает работу с RVM, что позволяет упражняться с различными версиями руби.</p>
 <p>Для поддержки в rails 2 через Pow можно воспользоваться таким хаком, создаем в корне приложениея config.ru, где прописываем</p>
 <p>Деинсталляция также проста:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre lang="php">curl get.pow.cx/uninstall.sh | sh
+</pre>
+<pre lang="php"># Rails.root/config.ru
+require "./config/environment"
+run ActionController::Dispatcher.new</pre>
 <p>Утилита что-то наподобие <a href="http://www.denwer.ru/">denwer</a> для php.</p>
 <p> </p>
 </div>
@@ -96,7 +97,7 @@
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

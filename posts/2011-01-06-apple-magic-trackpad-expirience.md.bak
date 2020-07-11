@@ -1,0 +1,33 @@
+---
+title: Apple Magic Trackpad, мой опыт использования
+author: Max Prokopov
+type: post
+date: 2011-01-06T09:55:04+00:00
+url: /2011/01/apple-magic-trackpad-expirience/
+robotsmeta:
+  - index,follow
+views:
+  - 80
+categories:
+  - lifehack
+  - Мак
+
+---
+Повелся на [статью Macpages][1] и перед новым годом приобрел apple trackpad, об опыте использования которого и спешу рассказать.
+
+[<img class="aligncenter size-medium wp-image-545" title="003194" src="http://nexusnotes.ru/wp-content/uploads/2011/01/003194-300x108.png" alt="" width="300" height="108" srcset="http://nexusnotes.ru/wp-content/uploads/2011/01/003194-300x108.png 300w, http://nexusnotes.ru/wp-content/uploads/2011/01/003194.png 689w" sizes="(max-width: 300px) 100vw, 300px" />][2]
+
+Во-первых использование magic trackpad это уже определенный разрыв шаблона после 20ти летнего использования манипулятора типа &#171;мышь&#187;. Во-вторых преимущество трекпада, которое было широко разрекламировано &#8212; мультижесты, обернулось по началу большим минусом. После подключения девайса и тестирования  немедленно появилось желание расширить возможности трекпада путем установки [JITouch][3], который позволяет использовать мультижесты для открытия-закрытия вкладок в приложениях, перехода между вкладками и другие интересные жесты. После полудня использования в первый же день довольно сильно разболелась кисть.
+
+Следующим выловленным багом оказалось плохое срабатывание обыкновенного клика. После недели мучений выяснилось, что баг был связан с тем самым JITouch! Удалив JITouch болевые ощущения ушли и трекпад прочно вошел в мою повседневную жизнь.
+
+В моем случае помимо трекпада еще и отдельная клавиатура (из-за проблем с охлаждением ноутбука),   сам трекпад размещается непосредственно справа от нее, и в целом, такое расположение очень удобно.
+
+Так что всем рекомендую хотя бы попробовать, ведь по ощущениям это не то же самое что и встроенный в ноутбук трекпад.
+
+[<img class="aligncenter size-medium wp-image-546" title="IMG_0008" src="http://nexusnotes.ru/wp-content/uploads/2011/01/IMG_0008-300x224.jpg" alt="" width="300" height="224" srcset="http://nexusnotes.ru/wp-content/uploads/2011/01/IMG_0008-300x224.jpg 300w, http://nexusnotes.ru/wp-content/uploads/2011/01/IMG_0008-1024x764.jpg 1024w, http://nexusnotes.ru/wp-content/uploads/2011/01/IMG_0008-150x112.jpg 150w" sizes="(max-width: 300px) 100vw, 300px" />][4]
+
+ [1]: http://macpages.me/blog/reviews/766.html
+ [2]: http://nexusnotes.ru/wp-content/uploads/2011/01/003194.png
+ [3]: http://www.jitouch.com/index.php?page=jitouch
+ [4]: http://nexusnotes.ru/wp-content/uploads/2011/01/IMG_0008.jpg

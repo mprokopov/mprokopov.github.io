@@ -1,0 +1,64 @@
+---
+title: My new modern web site stack
+description: >-
+  In the age of Kubernetes and all this fancy stuff, I decided to make something
+  really simple and as static as possible. The modern…
+date: '2020-04-12T18:02:44.798Z'
+categories: []
+keywords: []
+slug: /@mprokopov/my-new-modern-web-site-stack-f9645e78ae16
+---
+
+In the age of Kubernetes and all this fancy stuff, I decided to make something really simple and as static as possible. The modern, cutting-edge tech stack.
+
+This is a story about [https://it-premium.com.ua](https://IT-Premium.com.ua) reincarnation featured with responsiveness and saving all the functionality it had before. Though it wasn’t a simple, but very interesting journey.
+
+Here are the specs I wanted to preserve:
+
+*   Multilanguage support, due to Ukrainian language law enforcement we had to introduce one more supported language among English and Russian
+*   PDF dynamic generation based on what user was chosen
+*   Dynamic tariff calculations with dependencies on the services of user’s choice
+*   Easy data management. It shouldn’t be hard to fix some figures by someone else.
+*   Easy localization management.
+
+### The old stack
+
+At first, it was a Ruby on Rails 4.2 application and it used the following gems:
+
+*   coffee-sass + compass, as we ordered the design and layout from the third-party and they used sass
+*   jquery, yeah, modals, transitions
+*   knockout-js, yeah top-notch and all the hotness that time
+*   Paloma (OMG), look ma, no hands and javascript vars from the backend to frontend!
+*   delayed job, needed for queued PDF generation in the background
+*   delayed\_job\_active\_record + daemons
+*   prawn for PDF creation
+*   slim-rails, HTML markup even slimmer then HAML!
+*   gibbon, this is for talking to the Mailchimp API
+
+I had three distinct layouts and page internals for each language. At some point, they diverged quite significantly. Entropy law, you know.
+
+All this was containerized into two docker containers, — first app and second background worker, and all were running on the quite ordinary docker host. Do you probably see a lot of moving parts, complex JSON wiring with Paloma and orchestration issues?
+
+### The modern, but intermediate stack
+
+My first quick-and-dirty attempt for a rewrite was performed using the same plane Knockout JS, but for the website itself, I decided to give a try for Hugo, the golang based static blog engine generator.
+
+The dynamic PDF generation task is a definitely good target for delayed processing by serverless technologies. So AWS lambda was a good pick for that. AWS supports lots of different languages nowadays, but I stopped on using NodeJS 10 with libraries for [SendGrid API](https://www.npmjs.com/package/@sendgrid/mail) and [Pdfmake](https://pdfmake.github.io/docs/). It turned out to support different localizations for PDFs I ought to get language string from params.
+
+Hugo was a great choice. The multilanguage support, easy YAML, JSON data manipulation. Moreover, because of its static nature we can fully embrace static hosting solutions like **AWS S3** or the **Github**. Hugo supports natively the deployment to AWS S3, but when I started testing it turned out to be quite slow and not really suitable for static website hosting. Most probably it required the AWS CloudFront before, but I decided to give Github a try with static hosting and it really worked perfectly.
+
+### The latest stack
+
+Everything seemed perfect except KnockoutJS. Yeah, it still works, but you know, this two-way binding and using all these data-bind attributes wasn’t cool enough. Putting the vars from HTML into window.variable to pass this a parameter to the Javascript. Something was wrong with this.
+
+I started playing with plain React and setting up the [environment from this article](https://www.valentinog.com/blog/babel/). You know what? It was too much for me to set up all this stuff in 2020. So I gave my old friend ClojureScript a try.
+
+**shadow-clj** with **reagent**, **http-cljs** libraries. That’s it, nothing else. re-frame is also a good thing, but I didn’t have too much state management here.
+
+### Conclusion
+
+This was really-really enjoying and satisfying programming experience with the confidence of “doing the right things in the right way”. The released **main.j**s takes about 482Kb, which is fine. All my .cljs files are 331 CLOC and probably can be less.
+
+Hugo allows keeping things simple and static. It has multilanguage support, JSON generation from my YAML data files.
+
+Github hosts my website for free and gives a free SSL certificate. AWS Lambda costs are far from being noticeable. Yet all the architecture is robust and doesn’t require any management efforts from my side. Github Actions made website publishing easy and other people actually fix the contents right from the repository. I’m very satisfied with the decisions I made.

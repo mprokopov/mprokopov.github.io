@@ -45,26 +45,26 @@
     <h4>Время чтения: 1 мин.</h4>
     
     <div><p>Here is a piece of my old code, but it’s definitely could be improved.</p>
-<p>def to_params<br>
-h = ticket_params<br>
-h[:activity] = extract_activity if extract_activity<br>
-h[:event] = extract_event if extract_event<br>
-h.delete(:state_event)<br>
-h.delete(:activities_attributes)<br>
-h<br>
-end</p>
-<p>As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?</p>
-<p>Let’s see, h= ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
+  h <span style="color:#f92672">=</span> ticket_params
+    h<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity
+    h<span style="color:#f92672">[</span><span style="color:#e6db74">:event</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_event <span style="color:#66d9ef">if</span> extract_event
+    h<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:state_event</span>)
+    h<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:activities_attributes</span>)
+  h
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?</p>
+<p>Let’s see, <code>h=ticket_params</code>. We call this because we don’t want to modify <code>ticket_params</code>. Is there any method which creates a copy?</p>
 <p>It turns out we have dup method which creates a copy of an object, this is exactly what we wanted. Then, we have tap method, which allows us to dive in object internals and return then itself. Here is whole new piece of code after refactoring.</p>
-<p>def to_params<br>
-ticket_params.dup.tap do |params|<br>
-params[:activity] = extract_activity if extract_activity<br>
-params[:event] = extract_event if extract_event<br>
-params.delete(:state_event)<br>
-params.delete(:activities_attributes)<br>
-end<br>
-end</p>
-<p>Much better now and we do not have any redundant variable!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
+  ticket_params<span style="color:#f92672">.</span>dup<span style="color:#f92672">.</span>tap <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>params<span style="color:#f92672">|</span>
+    params<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity
+    params<span style="color:#f92672">[</span><span style="color:#e6db74">:event</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_event <span style="color:#66d9ef">if</span> extract_event
+    params<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:state_event</span>)
+    params<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:activities_attributes</span>)
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Much better now and we do not have any redundant variable!</p>
 </div>
     <div id="disqus_thread"></div>
 <script>
@@ -101,7 +101,7 @@ end</p>
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

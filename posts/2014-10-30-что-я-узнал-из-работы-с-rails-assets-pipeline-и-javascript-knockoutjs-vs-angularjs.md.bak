@@ -1,0 +1,88 @@
+---
+title: Что я узнал из работы с Rails assets pipeline и Javascript. KnockoutJS vs AngularJS.
+author: Max Prokopov
+type: post
+date: 2014-10-30T13:29:32+00:00
+url: /2014/10/что-я-узнал-из-работы-с-rails-assets-pipeline-и-javascript-knockoutjs-vs-angularjs/
+categories:
+  - за жизнь
+
+---
+<p class="">
+  Задумал я оживить нашу систему обработки заявок так, чтобы в realtime подгружались новые обращения, инциденты обновляли SLA и возникали визуальные уведомления при протухании тикетов.
+</p>
+
+Rails замечательно работает со статикой, лучше всех, пожалуй. Но то, что предлагается использовать для «оживления» страниц подходит только для очень небольшого круга задач.&nbsp;
+
+<a href="http://nexusnotes.ru/wp-content/uploads/2014/10/1414675166_full.png" target="_blank"><img src="http://nexusnotes.ru/wp-content/uploads/2014/10/1414675166_thumb.png" align="middle" class="aligncenter full" alt="" title="" /></a>
+
+<p class="">
+  vs
+</p>
+
+<a href="http://nexusnotes.ru/wp-content/uploads/2014/10/1414675206_full.png" target="_blank"><img src="http://nexusnotes.ru/wp-content/uploads/2014/10/1414675206_thumb.png" align="middle" class="aligncenter full" alt="" title="" /></a>
+
+<p class="">
+  Чаще всего Ajax Polling делается через запрос jQuery и подстановку темплейта с рендерингом из JS шаблона. Мне очень нравится писать шаблоны на HAML, и использовать Coffeescript.
+</p>
+
+Но, к сожалению, браузер не умеет рендерить HAML шаблоны, а изучать/выбирать новый template-язык не хотелось.&nbsp;
+
+Именно поэтому в поле моего зрения попали движки, которые умеют использовать существующую разметку: AngularJS и KnockoutJS. Вот их я и стал изучать.
+
+Создал две экспериментальные ветки feature в git и стал пробовать Knockout.
+
+Knockout оказался очень хорошим фреймворком для two-way databinding. Классно лег на coffeescript, и HAML. Вот пример вьюконтроллера:
+
+class UnassignedTicketsViewModel extends TicketWithSLAViewModel  
+&nbsp; constructor: ->  
+&nbsp; &nbsp; super  
+&nbsp; &nbsp; @api = &#8216;/api/tickets/unassigned&#8217;
+
+вот HAML партиал. Кстати, это в 4м HAML появилась возможность писать аттрибуты в круглых скобках.
+
+&nbsp; &nbsp; %td.avatar  
+&nbsp; &nbsp; &nbsp; %img.cycle.userpic(data-bind = &#171;attr:{src:avatar.nano.url}, visible: state !== &#8216;classified'&#187;)  
+&nbsp; &nbsp; %td.id_column  
+&nbsp; &nbsp; &nbsp; %a(data-bind = &#171;attr:{ href: url }, css: {&#8216;fg-red&#8217;: is_major}&#187;)  
+&nbsp; &nbsp; &nbsp; &nbsp; %i.icon-fire(data-bind = &#8216;visible: is_major&#8217;)  
+&nbsp; &nbsp; &nbsp; &nbsp; %i(data-bind = &#8216;css: icon()&#8217;)  
+&nbsp; &nbsp; &nbsp; &nbsp; %span(data-bind = &#8216;text: id&#8217;)  
+&nbsp; &nbsp; &nbsp; &nbsp; %i.icon-bus(data-bind = &#8216;visible: is_outdoor&#8217;)  
+&nbsp; &nbsp; %td(data-bind = &#8216;text: author’)
+
+Вот какие выводы у меня появились после&nbsp;использования Knockout с рельсами
+
+  * очень хорошо писать и наследовать классы на Coffescript.
+  * MVVM объектно-ориентированная концепция с моделями
+  * неявная работа с текущим значением в итераторах foreach
+  * удобный&nbsp;<a href="https://chrome.google.com/webstore/detail/knockoutjs-context-debugg/oddcpmchholgcjgjdnfjmildmlielhof" title="" target="_blank">дебаггер для Chrome&nbsp;</a>
+
+Параллельно я вел исследования с AngularJS. Прошел офигительный интерактивный туториал&nbsp;[https://www.codeschool.com/courses/shaping-up-with-angular-js  
+][1]   
+И написал polling тикетов через $resource. И пришел к таким выводам:
+
+  * Angular это очень мощный фреймворк, как Rails для статики.
+  * Angular стоит использовать только если вы делаете Single Page Application. В противном случае как из пушки по воробьям.
+  * У Angular своя концепция MVC, но нет как такового понятия модели.
+  * Angular в целом не особо объектноориентирован и не очень хорошо ложится на Coffeescript.
+  * Rails лучше модифицировать для отдачи шаблонов по запросу вот таким gem&nbsp;<a href="https://github.com/pitr/angular-rails-templates" title="" target="_blank">https://github.com/pitr/angular-rails-templates</a>, что позволяет использовать HAML для их написания
+
+И в том и в другом случае было необходимо разработать правильную отдачу JSON объектов при поллинге. Мне нужно было включать ассоциативные поля в модели, поэтому довольно скоро от Model.as_json я перешел к использованию&nbsp;<a href="https://github.com/rails-api/active_model_serializers" title="" target="_blank">https://github.com/rails-api/active_model_serializers</a>, но поскольку разработчики не смогли придумать кеширование, да и отдачу url_for, пришлось перейти на jbuilder, на котором и остановился. json!.cache отлично сокращает запросы к базе и время рендера.
+
+Для отдачи JSON решил сделать API через отдельные контроллеры и наймспейс ‘/api/&nbsp;<a href="http://railscasts.com/episodes/350-rest-api-versioning" title="" target="_blank">как у Раяна Бейтса</a>.&nbsp;
+
+И все было хорошо, пока я не стал думать, как же для разных страниц мне использовать разные биндинги для KnockoutJS и при этом чувствовать себя хорошо. Самый простой и «лобовой» способ это убрать require\_tree . из application.js и добавить include\_javascript_tag params[:controller] в лейаут. Но здесь то и зарыт главный косяк. Assets pipeline, который склеивает все css и js в один файл будет кидать ексепшены, поскольку не скомпилирует .js для каждого контроллера. И выхода здесь два:
+
+1. включить компиляцию assets для продакшена.  
+2. использовать&nbsp;<a href="https://github.com/kbparagua/paloma" title="" target="_blank">gem paloma</a>.&nbsp;
+
+Более православным мне показался второй путь, поскольку использует assets pipeline и делает всю магию на клиенте. Также позволяет передавать из контрроллера в JS различные параметры. Это же умеет делать gem gon, но если можно гем не использовать, то лучше его не использовать.
+
+Также, мне очень понравился подход с подключением jquery библиотек и используемого мной metro-ui-css фреймворка через интеграцию с bower. В моем случае сделал подключение gem ‘rails-bower’, в Bowerfile записал asset ‘metro-ui-css’, rake bower:install и вуаля, в &nbsp;/vendor/assets/bower_components загруженные с зависимостями jquery и другие модули. Очень удобно.
+
+Итоги.&nbsp;
+
+Я остановился на использовании KnockoutJS для моей задачи, и доволен этим фактом, много jQuery кода заменил более компактным и объектно-ориентированным кодом для Knockout.&nbsp;А AngularJS, думаю, стоит использовать вообще отдельным приложением вместе с Node.js, а Rails в качестве исключительно JSON бекенда, что тоже для Rails было бы унизительным.</p>
+
+ [1]: https://www.codeschool.com/courses/shaping-up-with-angular-js

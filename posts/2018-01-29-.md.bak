@@ -1,0 +1,82 @@
+---
+title: Настройка свежего mac
+author: Max Prokopov
+type: post
+date: -001-11-30T00:00:00+00:00
+draft: true
+url: /?p=1514
+robotsmeta:
+  - index,follow
+categories:
+  - за жизнь
+
+---
+После приобретения свежего macbook я предпочитаю не переносить все со старого, хотя этот способ прекрасно работает, а настраивать его заново проводя эксперименты.
+
+Один из таких, смогу ли я заменить функции из Alfred встроенным spotlight, и найду ли я способ иметь историю клипборда? Смогу ли я обойтись без iTerm, без zsh и настроек oh-my-zsh?
+
+Установка Firacode.
+
+brew tap caskroom/fonts && brew cask install font-fira-code
+
+brew tap caskroom/fonts && brew cask install font-source-code-pro
+
+Установка JDK с сайта Oracle в виде инсталлера. Одним JRE, как оказалось, не обойтись.
+
+brew cask install emacs.
+
+&nbsp;
+
+Изменил цвет стандартного эмулятора Terminal на brew.
+
+&nbsp;
+
+Установил skype.Весь пакет с pages, numbers и keynote уже предустановлен.
+
+Конечно, 1Password.
+
+Google Chrome не поставил, посмотрим, сколько получится без него обойтись.
+
+&nbsp;
+
+brew install tmux
+
+brew install [autojump][1], также устанавливаю oh-my-zsh и включаю [плагин autojump][2].
+
+Также включаю плагины  autojump, history-substring-search, chruby
+
+Не сдержался и [установил iTerm2][3].
+
+Sequel Pro для работы с MySQL.
+
+В этот раз я решил вместо тяжеловесного RVM использовать [chruby][4].
+
+brew install [ruby-install][5]
+
+ruby-install ruby 2.4.1
+
+&nbsp;
+
+Затем установить bundler и отключить его ругань
+
+bundle config git.allow_insecure true
+
+&nbsp;
+
+Так как окружение разработчика, в том числе mysql server, я поднимаю через Docker, то устанавливаю mysql-connector-c что бы работал gem mysql2 с ruby 2.4.1.
+
+brew install mysql-connector-c
+
+&nbsp;
+
+Для этого приходится пропатчить mysql_config
+
+/usr/local/Cellar/mysql-connector-c/6.1.11/bin/mysql_config
+
+меняем libs=&#187;$libs -l &#187; на libs=&#187;$libs -l mysqlclient &#171;
+
+ [1]: https://github.com/wting/autojump
+ [2]: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/autojump/autojump.plugin.zsh
+ [3]: https://www.iterm2.com
+ [4]: https://github.com/postmodern/chruby
+ [5]: https://github.com/postmodern/ruby-install#readme

@@ -1,0 +1,22 @@
+---
+title: Запустил сервис определения CallerID из нашей системы управления заявками
+author: Max Prokopov
+type: post
+date: -001-11-30T00:00:00+00:00
+draft: true
+url: /?p=1358
+robotsmeta:
+  - index,follow
+categories:
+  - за жизнь
+
+---
+Это позволит нам оператору узнавать, кто звонит еще до момента поднятия трубки и поприветствовать звонящего.
+
+Для совместимости с телефонами происходит транслитерация с русского на английский, например &#171;Максим Прокопов IT-Premium&#187; транслитерируется в &#171;Maxim Prokopov IT-Premium&#187;.
+
+&nbsp;
+
+Решение написано на легковесном ruby фреймворке Sinatra с использованием Memcached и докеризацией.
+
+http://wiki.freepbx.org/display/FPG/CallerID+Lookup+Sources+User+Guide#CallerIDLookupSourcesUserGuide-SugarCRM

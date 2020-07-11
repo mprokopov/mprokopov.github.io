@@ -1,0 +1,33 @@
+---
+title: Бюджетный VPN L2TP (gateway-to-gateway lowcost VPN)
+author: Max Prokopov
+type: post
+date: -001-11-30T00:00:00+00:00
+draft: true
+url: /?p=342
+robotsmeta:
+  - index,follow
+categories:
+  - за жизнь
+
+---
+Cisco 1811 в качестве концентратора и Cisco 871 хотя и являются решениями надежными, однако бюджетным решением язык не поворачивается назвать.
+
+До восьми удаленных точек можно подключить пользуясь следующим решением
+
+в качестве концентратора
+
+http://www.dlink.com/products/?pid=512
+
+[<img class="aligncenter size-full wp-image-347" title="DFL-210_right" src="http://nexusnotes.ru/wp-content/uploads/2010/03/DFL-210_right.png" alt="" width="380" height="290" srcset="http://nexusnotes.ru/wp-content/uploads/2010/03/DFL-210_right.png 380w, http://nexusnotes.ru/wp-content/uploads/2010/03/DFL-210_right-300x228.png 300w" sizes="(max-width: 380px) 100vw, 380px" />][1]
+
+умеет подключаться к radius серверу для авторизации.
+
+в качестве клиента
+
+[<img class="aligncenter size-full wp-image-348" title="DI-804HV_right" src="http://nexusnotes.ru/wp-content/uploads/2010/03/DI-804HV_right.png" alt="" width="380" height="290" srcset="http://nexusnotes.ru/wp-content/uploads/2010/03/DI-804HV_right.png 380w, http://nexusnotes.ru/wp-content/uploads/2010/03/DI-804HV_right-300x228.png 300w" sizes="(max-width: 380px) 100vw, 380px" />][2]
+
+http://www.dlink.com/products/?pid=59
+
+ [1]: http://nexusnotes.ru/wp-content/uploads/2010/03/DFL-210_right.png
+ [2]: http://nexusnotes.ru/wp-content/uploads/2010/03/DI-804HV_right.png

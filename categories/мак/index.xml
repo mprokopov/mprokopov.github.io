@@ -30,7 +30,7 @@
       
       <guid>https://mprokopov.github.io/2014/05/tips-and-tricks-for-mac-os-part-3/</guid>
       <description>&lt;p&gt;Сегодняшняя фича будет особенно полезна для обладателей нескольких мониторов, а также всех тех, кто любит оптимизировать ежедневные простые задачи, такие как манипулирование окнами приложений с клавиатуры.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://nexusnotes.ru/wp-content/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://mprokopov.github.io/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56.png&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-1214&#34; src=&#34;https://mprokopov.github.io/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56.png&#34; alt=&#34;Screen Shot 2014-05-08 at 13.50.56&#34; width=&#34;398&#34; height=&#34;436&#34; srcset=&#34;https://mprokopov.github.io/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56.png 398w, https://mprokopov.github.io/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56-273x300.png 273w&#34; sizes=&#34;(max-width: 398px) 100vw, 398px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@
       <guid>https://mprokopov.github.io/2014/04/mac-tips-and-tricks-part-2/</guid>
       <description>&lt;p&gt;Продолжаем серию трюков для Mac, о которых не все знают.&lt;/p&gt;
 &lt;p&gt;Очень быстро можно найти определение, перевести слово с другого языка если сделать тап тремя пальцами по слову, либо нажать Option-D на выделенном слове. Выглядит это так:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://nexusnotes.ru/wp-content/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16.png&#34;&gt;&lt;img class=&#34;aligncenter size-large wp-image-1206&#34; src=&#34;https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-1024x816.png&#34; alt=&#34;Screen Shot 2014-04-28 at 13.17.16&#34; width=&#34;700&#34; height=&#34;557&#34; srcset=&#34;https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-1024x816.png 1024w, https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-300x239.png 300w, https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-900x717.png 900w, https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16.png 1394w&#34; sizes=&#34;(max-width: 700px) 100vw, 700px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -85,7 +85,7 @@
       
       <guid>https://mprokopov.github.io/2013/01/%D0%BE%D0%BC%D0%BD%D0%B8%D1%84%D0%BE%D0%BA%D1%83%D1%81-1-x-%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE/</guid>
       <description>Омнифокус объявил беспрецендентную акцию. Для подогрева интереса к OmniFocus 2 открыл лицензию на версию 1.
-http://www.omnigroup.com/blog/entry/anticipating-omnifocus-2</description>
+License Owner: Waiting for OmniFocus 2  License Key: KXKN-ZJDB-EJCX-LZHW-CFBF-QFC  http://www.omnigroup.com/blog/entry/anticipating-omnifocus-2</description>
     </item>
     
     <item>
@@ -108,7 +108,7 @@ http://www.omnigroup.com/blog/entry/anticipating-omnifocus-2</description>
       
       <guid>https://mprokopov.github.io/2012/07/how-to-fix-icq-html-tags-in-imessage/</guid>
       <description>This post is not actual any more, so here is another solution:
- Go to ~/Library/Preferences/
+  Go to ~/Library/Preferences/
 Open com.apple.iChat.AIM.plist
 Change ForceICQPlainText to true
 Save, put read-only attribute on file
@@ -290,7 +290,7 @@ net.inet.ip.scopedroute = 0 и перезагрузить сервер.</descrip
 &lt;/ul&gt;
 &lt;h2 id=&#34;цели-и-задачи&#34;&gt;Цели и задачи&lt;/h2&gt;
 &lt;p&gt;Под целью будем понимать работу в режиме «автопилота», когда обращаясь к записям мы будем видеть тот список дел, которым действительно подходит заниматься в данное время в данном месте, и не быть перегруженными «неподходящими» задачами и проектами.&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; title=&#34;427757_254877334588276_224365987639411_562554_2011888291_n.jpg&#34; src=&#34;https://mprokopov.github.io/uploads/2012/02/427757_254877334588276_224365987639411_562554_2011888291_n.jpg&#34; border=&#34;0&#34; alt=&#34;427757 254877334588276 224365987639411 562554 2011888291 n&#34; width=&#34;430&#34; height=&#34;268&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -328,7 +328,7 @@ http://www.commandlinefu.com/commands/browse
 и вместо !! подставится предыдущая строка.
 Или вот, например, закрыли вам весь доступ фаерволами, из сервисов один DNS остался, так вот, можете вполне воспользоваться википедией
 dig +short txt .wp.dg.cx
-где — ключевое слово, на которое вы ищете статью.</description>
+где  — ключевое слово, на которое вы ищете статью.</description>
     </item>
     
     <item>
@@ -484,7 +484,7 @@ Chax возмужал и вырос из alpha и стал betой, с чем в
       <description>&lt;p&gt;Читать о &lt;a href=&#34;http://www.prostomac.com/2009/12/mobileme-mobilizirujtes/&#34; title=&#34;MobileMe: мобилизируйтесь! | простоMAC&#34;&gt;тестировании MobileMe&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Задумался я как-то об использовании Mobile Me сервиса, какие дает преимущества за $100 в год?&lt;/p&gt;
 &lt;p&gt;В этой статье мы попытаемся найти более бесплатные аналоги, если таковые существуют.&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://mprokopov.github.io/uploads/2009/12/01_mobileme_logo.jpg&#34; alt=&#34;&#34; width=&#34;294&#34; height=&#34;288&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -496,7 +496,7 @@ Chax возмужал и вырос из alpha и стал betой, с чем в
       <description>&lt;p&gt;WordPress замечательная платформа для блоггинга не в последнюю очередь благодаря своей расширяемости плагинами и темами.&lt;/p&gt;
 &lt;p&gt;Так, благодаря &lt;a href=&#34;http://www.bravenewcode.com/wptouch/&#34; title=&#34;WPtouch: Mobile Plugin + Theme for WordPress ↔ BraveNewCode Inc.&#34;&gt;плагину WPTouch&lt;/a&gt; теперь вполне можно читать блог и из iPhone.&lt;/p&gt;
 &lt;p&gt;Вот как это выглядит:&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://mprokopov.github.io/uploads/2009/12/iphone_theme.jpg&#34; alt=&#34;iphone theme&#34; height=&#34;480&#34; width=&#34;320&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

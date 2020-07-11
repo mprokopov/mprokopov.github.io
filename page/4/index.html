@@ -44,7 +44,8 @@
     </h1>
     <div class="date">26.02.2020</div>
     <div>This is really my little timesaver because you know, a lot of meetings happen when you work remotely.
-Works best with Alfred 4 using mapped hotkey. </div>
+Works best with Alfred 4 using mapped hotkey.
+tell application "Calendar" tell calendar "maksym.prokopov@trilogy.com" set itemLocation to location of first event where its start date ≤ (current date) + 10 * minutes and end date ≥ (current date) if itemLocation contains "zoom.us" then tell application "Finder" to open location itemLocation end tell end tell </div>
     
 </div>
 <div id="border-bottom"></div>
@@ -95,16 +96,9 @@ Nikita Prokopov сделал отличный talk о стадиях компе�
     </h1>
     <div class="date">06.06.2018</div>
     <div>Here is a piece of my old code, but it’s definitely could be improved.
-def to_params
-h = ticket_params
-h[:activity] = extract_activity if extract_activity
-h[:event] = extract_event if extract_event
-h.delete(:state_event)
-h.delete(:activities_attributes)
-h
-end
-As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?
-Let’s see, h= ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy? </div>
+def to_params h = ticket_params h[:activity] = extract_activity if extract_activity h[:event] = extract_event if extract_event h.delete(:state_event) h.delete(:activities_attributes) h end As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?
+Let’s see, h=ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy?
+It turns out we have dup method which creates a copy of an object, this is exactly what we wanted. </div>
     
     
         <a href="/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">Read More…</a>
@@ -141,7 +135,7 @@ Let’s see, h= ticket_params. We call this because we don’t want to modify ti
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

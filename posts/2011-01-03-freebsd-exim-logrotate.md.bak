@@ -1,0 +1,37 @@
+---
+title: 'Хозяйке FreeBSD на заметку: переворачивание логов exim'
+author: Max Prokopov
+type: post
+date: 2011-01-03T19:32:33+00:00
+url: /2011/01/freebsd-exim-logrotate/
+robotsmeta:
+  - index,follow
+views:
+  - 79
+categories:
+  - FreeBSD
+  - администрирование
+
+---
+Данный совсем простой метод подходит не только для логов exim, но и любых других логов, которые необходимо переворачивать либо по размеру, либо по расписанию.
+
+данные две строки
+
+<div id="_mcePaste">
+  <pre escaped="true" lang="shell" line="1"><span style="font-family: 'Segoe UI', Calibri, 'Myriad Pro', Myriad, 'Trebuchet MS', Helvetica, Arial, sans-serif; line-height: 19px; white-space: normal; font-size: 13px;">
+
+
+<div id="_mcePaste" style="padding: 0px; margin: 0px;">
+  /var/log/exim/mainlog      mailnull:mailnull             640  7     *    @T00  JN
+</div>
+
+
+<div id="_mcePaste" style="padding: 0px; margin: 0px;">
+  /var/log/exim/rejectlog     mailnull:mailnull             640  7     *    @T00  JN
+</div>
+</span></pre>
+</div>
+
+<div>
+  добавленные  в файл /etc/newsyslog.conf решают проблему ежедневного переворачивания логов от почтовой системы exim
+</div>

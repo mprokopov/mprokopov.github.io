@@ -1,0 +1,41 @@
+---
+title: Zabbix freebsd program counter not available for this architecture
+author: Max Prokopov
+type: post
+date: 2011-06-20T16:23:45+00:00
+url: /2011/06/zabbix-freebsd-program-counter-not-available-for-this-architecture/
+robotsmeta:
+  - index,follow
+views:
+  - 68
+categories:
+  - FreeBSD
+  - администрирование
+
+---
+После обновления Zabbix на FreeBSD до 1.8.5 стал получать сообщения вроде этого:
+
+Zabbix freebsd program counter not available for this architecture
+
+и заббикс перестал стартовать.
+
+&nbsp;
+
+Все дело оказалось в старой библиотеке net-snmp, которую необходимо обновить до 5.5, и уже затем пересобрать zabbix.
+
+&nbsp;
+
+&nbsp;
+
+<pre escaped="true" lang="shell" line="1">portupgrade net-snmp
+cd /usr/ports/net-mgmt/zabbix-server
+make deinstall
+make reinstall</pre>
+
+&nbsp;
+
+&nbsp;
+
+Как говорят наши пиндосские товарищи, works like a charm
+
+&nbsp;

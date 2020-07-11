@@ -47,23 +47,50 @@
     <div><p>Не то что бы совсем cloud-sync, но OmniFocus помимо стандартной Bonjour синхронизации по WiFi умеет еще и синхронизироваться через MobileMe, а, ежели вы имеете собственное хранилище, например, VPS или VDS, или попросту не доверяете сторонним лицам свою сексуальную информацию из OmniFocus, то есть еще и опция синхронизации по WebDAV.</p>
 <p>Для настройки WebDAV для Apache 2.2 достаточно подгрузить модуль mod_dav</p>
 <p>httpd.conf:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre escaped="true" lang="config" line="1">LoadModule dav_module libexec/apache22/mod_dav.so
+LoadModule dav_fs_module libexec/apache22/mod_dav_fs.so
+DavLockDB "/tmp/DavLock"
+Alias /uploads "/usr/local/uploads"
+
+Dav On
+Order Allow,Deny
+Allow from all
+AuthType Digest
+AuthName DAV-upload
+AuthUserFile "/usr/local/user.passwd"
+AuthDigestProvider file
+
+DavLockDB "/tmp/DavLock"
+Alias /uploads "/usr/local/uploads"</pre>
+<pre escaped="true" lang="config" line="1">&lt;Directory "/usr/local/uploads"&gt;
+    Dav On
+Order Allow,Deny    Allow from all
+AuthType Digest    AuthName DAV-upload
+ AuthUserFile "/usr/local/user.passwd"
+ AuthDigestProvider file</pre>
+<pre escaped="true" lang="config" line="1">&lt;LimitExcept GET OPTIONS&gt;
+ require user admin
+
+
+<div id="_mcePaste">
+  &lt;/LimitExcept&gt;
+</div>
+
+
+<div id="_mcePaste">
+  &lt;/Directory&gt;
+</div></pre>
 <p>После чего создаем /usr/local/uploads и даем на него права на запись для пользователя, от которого у нас работает веб-сервер.</p>
 <p>запускаем</p>
-<!-- raw HTML omitted -->
+<pre escaped="true" lang="shell" line="1">htdigest -c /usr/local/user.passwd DAV-upload admin</pre>
 <p>чем создаем файл user.passwd с пользователем admin и назначаем ему пароль</p>
 <p>Все, теперь передергиваем апач:</p>
-<!-- raw HTML omitted -->
+<pre escaped="true" lang="shell" line="1">apachectl restart</pre>
 <p>и пробуем что-нибудь загрузить по web-dav: <a href="http://yourserver.com/uploads/">http://yourserver.com/uploads/</a> (можно использовать Transmit.app)</p>
 <p>и настраиваем в OmniFocus синхронизацию в Advanced:</p>
-<p><a href="http://nexusnotes.ru/wp-content/uploads/2011/01/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA-%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0-2011-01-10-%D0%B2-12.30.05.png"><!-- raw HTML omitted --></a></p>
+<p><a href="/uploads/2011/01/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA-%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0-2011-01-10-%D0%B2-12.30.05.png"><img class="aligncenter size-full wp-image-553" title="Снимок экрана 2011-01-10 в 12.30.05" src="/uploads/2011/01/Снимок-экрана-2011-01-10-в-12.30.05.png" alt="" width="614" height="676" srcset="/uploads/2011/01/Снимок-экрана-2011-01-10-в-12.30.05.png 614w, /uploads/2011/01/Снимок-экрана-2011-01-10-в-12.30.05-272x300.png 272w" sizes="(max-width: 614px) 100vw, 614px" /></a></p>
 <p>и аналогично настраиваем в iPhone</p>
-<p><a href="http://nexusnotes.ru/wp-content/uploads/2011/01/IMG_0022.png"><!-- raw HTML omitted --></a></p>
+<p><a href="/uploads/2011/01/IMG_0022.png"><img class="aligncenter size-full wp-image-554" title="IMG_0022" src="/uploads/2011/01/IMG_0022.png" alt="" width="640" height="960" srcset="/uploads/2011/01/IMG_0022.png 640w, /uploads/2011/01/IMG_0022-200x300.png 200w, /uploads/2011/01/IMG_0022-100x150.png 100w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
 <p>Все, на этом настройка синхронизации завершена.</p>
 <p>В качестве домашнего задания можно порекомендовать обязательную настройку https для синхронизации.</p></div>
     <div id="disqus_thread"></div>
@@ -101,7 +128,7 @@
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

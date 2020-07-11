@@ -1,0 +1,27 @@
+---
+title: Готовое устройство для взлома WiFi? Есть такое.
+author: Max Prokopov
+type: post
+date: 2014-02-13T09:26:18+00:00
+url: /2014/02/готовое-устройство-для-взлома-wifi-есть-т/
+robotsmeta:
+  - index,follow
+categories:
+  - гаджеты
+  - железо
+
+---
+Используя уязвимость с настройкой WPS при помощи [данного устройства][1] у атакующего [появляется возможность получить WPA/WPA2 пароли][2] для подключения к WiFi.
+
+[<img class="aligncenter size-medium wp-image-1184" alt="Screen Shot 2014-02-13 at 11.22.24" src="http://nexusnotes.ru/wp-content/uploads/2014/02/Screen-Shot-2014-02-13-at-11.22.24-300x161.png" width="300" height="161" srcset="http://nexusnotes.ru/wp-content/uploads/2014/02/Screen-Shot-2014-02-13-at-11.22.24-300x161.png 300w, http://nexusnotes.ru/wp-content/uploads/2014/02/Screen-Shot-2014-02-13-at-11.22.24.png 836w" sizes="(max-width: 300px) 100vw, 300px" />][3]Ну а для тех, кто умеет готовить Линукс есть [опен-сорц версия][4] продукта.
+
+Страшно?
+
+&nbsp;
+
+&nbsp;
+
+ [1]: http://www.reaversystems.com
+ [2]: http://sviehb.files.wordpress.com/2011/12/viehboeck_wps.pdf
+ [3]: http://nexusnotes.ru/wp-content/uploads/2014/02/Screen-Shot-2014-02-13-at-11.22.24.png
+ [4]: https://code.google.com/p/reaver-wps/

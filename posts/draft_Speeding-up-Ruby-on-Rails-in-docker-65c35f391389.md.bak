@@ -1,0 +1,49 @@
+---
+title: Speeding up Ruby on Rails in docker
+description: >-
+  Bundle package will create a cached copy, so bundler in docker will not fetch
+  all dependencies all the time.
+date: ''
+categories: []
+keywords: []
+slug: ''
+---
+
+Speeding up Ruby on Rails in docker
+
+  
+
+![](img/0__LIxdmYq3kKxytoVG.png)
+![](img/0__itLAs7Fa2raZNMPx.png)
+
+1.  Bundle package will create a cached copy, so bundler in docker will not fetch all dependencies all the time.
+
+bundle package
+
+  
+
+1.  Create separate bundler data volume to perisist bundle between builds. Set BUNDLE\_PATH to data volume. You can include this option just for development docker-compose.yml file and not to include in production.
+
+> version: “2” services: memcached: image: memcached networks: — back-tier redis: image: redis ports: \[“6379”\] networks: — back-tier db: image: mysql:5 volumes: — ./sql:/docker-entrypoint-initdb.d — mysql:/var/lib/mysql networks: — back-tier sse: image: mprokopov/sse build: context: sse/. command: “bundle exec rackup — host 0.0.0.0 — port 9292” environment: — RACK\_ENV=production ## docker database settings in config.yml ports: — “9292:9292” links: — redis — db depends\_on: — db — redis networks: — back-tier — front-tier worker: image: mprokopov/itservice\_web\_dev command: “bundle exec rake environment resque:work” environment: — QUEUE=\* links: — db — redis depends\_on: — db — redis networks: — back-tier worker-schedule: image: mprokopov/itservice\_web\_dev command: “bundle exec rake environment resque:scheduler” links: — db — redis depends\_on: — redis networks: — back-tier search: image: mprokopov/itservice\_search build: ./search volumes: — search-data:/search depends\_on: — db links: — db networks: — back-tier expose: — “9306” web: ports: — “3000:3000” environment: — LETTER\_OPENER=letter\_opener\_web — RAILS\_SERVE\_STATIC\_FILES=true — SLACK\_NOTIFICATION=false — EMAIL\_NOTIFICATION=false — SLACK\_WEBHOOK\_CHANNEL=#events\_test — STREAM\_API=http:_//localhost:9292_ depends\_on: — db — redis links: — db — redis — search networks: — back-tier — front-tier volumes: — search-data:/search volumes: search-data: mysql: networks: back-tier: front-tier:
+
+  
+
+1.  Use docker-compose.override.yml for development and docker-compose.prod.yml for production builds. Create docker-compose.yml which contains common services configuration.
+
+version: "2" services: db: environment: - MYSQL\_DATABASE=itservice\_development - MYSQL\_USER= - MYSQL\_ROOT\_PASSWORD= - MYSQL\_PASSWORD= sse: environment: - MYSQL\_DATABASE=itservice\_development - MYSQL\_USER= - MYSQL\_PASSWORD= - MYSQL\_HOST=db - REDIS\_HOST=redis - RACK\_ENV=production ## docker database settings in config.yml worker: environment: - RAILS\_ENV=development worker-schedule: environment: - RAILS\_ENV=development search: environment: - SPHINX\_ENV=development web: image: mprokopov/itservice\_web\_dev command: bundle exec rails s -b 0.0.0.0 -p 3000 environment: - RAILS\_ENV=development - LETTER\_OPENER=letter\_opener\_web - RAILS\_SERVE\_STATIC\_FILES=true - SLACK\_NOTIFICATION=false - EMAIL\_NOTIFICATION=false - SLACK\_WEBHOOK\_CHANNEL=#events\_test - STREAM\_API=http://localhost:9292 - BUNDLE\_PATH=/bundle volumes: - bundle:/bundle - ./app:/app volumes: bundle:
+
+  
+
+1.  Use docker-compose.prod.yml as docker-compose.override.yml in production, so you will save necessary keystrokes, because docker-compose will use override.yml by default.
+2.  Use nginx-proxy container in production and gem unicorn/puma or thin.  
+     connect nginx-proxy container to frontend network like this
+
+docker network connect itservice\_front-tier nginx-proxy
+
+  
+
+It will enable to use nginx-proxy with docker-compose v2 syntax.
+
+1.  In case you’re using CoreOS or systemd you can create container backups via custom backup service and Timer for that service.
+
+_Originally published at_ [_blog.it-premium.com.ua_](http://blog.it-premium.com.ua/all/speeding-up-ruby-on-rails-in-docker/)_._

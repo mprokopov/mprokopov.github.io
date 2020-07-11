@@ -69,19 +69,19 @@ export CPPFLAGS=&rdquo;-I/usr/local/opt/php@${PHP_VERSION}/include&rdquo;</p>
 <p>Listen 80<br>
 &lt;FilesMatch \.php$&gt;<br>
 SetHandler &ldquo;proxy:fcgi://127.0.0.1:9009&rdquo;<br>
-<!-- raw HTML omitted --><br>
+</FilesMatch><br>
 &lt;VirtualHost *:80&gt;<br>
 ServerAdmin webmaster@localhost<br>
 ServerName obo.local<br>
 DocumentRoot /Users/mprokopov/oxid/project/source<br>
 ErrorLog /Users/mprokopov/oxid/project/source/error.log<br>
 CustomLog /Users/mprokopov/oxid/project/source/access.log combined<br>
-<!-- raw HTML omitted --><br>
+</VirtualHost><br>
 &lt;Directory &ldquo;/Users/mprokopov/oxid/*/source&quot;&gt;<br>
 Options Indexes FollowSymLinks<br>
 AllowOverride All<br>
 Require all granted<br>
-<!-- raw HTML omitted --></p>
+</Directory></p>
 <h3 id="project-setup">Project setup</h3>
 <p>For some reason php-fpm doesn’t play well with _ENV variables, so I had to change them to use getenv() function instead, like on the example below</p>
 <p>config.inc.php of the project</p>
@@ -143,7 +143,7 @@ xdebug.profiler_output_name = &ldquo;callgrind.out.%p&rdquo;</p>
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

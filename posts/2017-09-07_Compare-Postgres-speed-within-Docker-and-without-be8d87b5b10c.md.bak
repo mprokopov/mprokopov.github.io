@@ -1,0 +1,60 @@
+---
+title: Compare Postgres speed within Docker and without
+description: >-
+  I decided to compare if there will be significant differences between
+  dockerized and non-dockerized Postgres.
+date: '2017-09-07T08:58:13.803Z'
+categories: []
+keywords: []
+slug: /@mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c
+---
+
+I decided to compare if there will be significant differences between dockerized and non-dockerized Postgres.
+
+Here is my test environment:
+
+*   rails 5 application with rich test suite, about 628 examples,
+*   macOS Sierra 10.12.6,
+*   Docker 17.06.0-ce-mac19.
+
+I use Postgres docker version alpine 9.6 which is 37,7Mb and raw Postgres 9.6 with GUI for Mac which is 379Mb.
+
+Rails run locally, database.yml connects to the localhost postgres with pool 5 using gem pg (0.21.0).
+
+Here is my docker-compose config
+
+db:  
+  image: postgres:alpine  
+  ports:  
+    - 5432:5432  
+adminer:  
+  image: adminer  
+  ports:  
+    - 8080:8080  
+  links:  
+    - db
+
+With docker  
+Finished in 46.86 seconds (files took 17.77 seconds to load)  
+628 examples, 0 failures
+
+Without docker,   
+Finished in 31.35 seconds (files took 8.38 seconds to load)  
+628 examples, 0 failures
+
+And again withDocker  
+Finished in 41.64 seconds (files took 8.24 seconds to load)  
+628 examples, 0 failures
+
+And again without Docker  
+Finished in 31.53 seconds (files took 8.01 seconds to load)  
+628 examples, 0 failure
+
+And again with Docker  
+Finished in 41.77 seconds (files took 8.51 seconds to load)  
+628 examples, 0 failures
+
+So its 41,5 seconds for Docker version and 31,53 seconds without Docker in average.  
+This is 24% difference in particular rails rspec case, which is quite significant as for comparison and IMHO is not so significant for the testing loop.
+
+At least this is a price you pay for the container portability and convenience.

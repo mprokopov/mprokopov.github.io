@@ -1,0 +1,80 @@
+---
+title: Must have приложения для Mac
+author: Max Prokopov
+type: post
+date: 2011-01-22T10:56:06+00:00
+url: /2011/01/must-have-app-mac/
+robotsmeta:
+  - index,follow
+views:
+  - 97
+categories:
+  - Мак
+  - Софт
+
+---
+Попался мне в руки iMac 27&#8243; на несколько дней для установки &#8230; Windows. Видимо владелец совсем не разобрался с работой на маке, поскольку мак был пуст и гол как сокол.
+
+И решил я погонять его в привычной для меня обстановке с привычными приложениями. Ведь устоялся уже определенный набор приложений, без которых работа на Mac для меня уже не мыслима.
+
+Список этих приложений привожу ниже.
+
+[1Password][1] &#8212; менеджер паролей, стоит ставить сразу в связке с Dropbox и устанавливать расширение для Google Chrome
+
+[Growl][2] &#8212; ненавязчивое уведомление от приложений всплывающими всплывалками
+
+[iStat menus][3] &#8212; отображение в трее жизненных показателей мака
+
+[Dropbox][4] &#8212; синхронизация файлов между несколькими компьютерами
+
+[Perian][5] &#8212; проигрывание в Quicktime плеере видео в неизвестных маку кодировках
+
+[Alfred][6] &#8212; замена Quicksilver, быстрый запуск приложений command+space
+
+[Cord][7] &#8212; мультитабный RDP клиент
+
+[iTerm2][8] &#8212; замена стандартному терминалу с блекджеком и дамами
+
+[﻿Radium][9] &#8212; миниатюрное радио в трее
+
+[Google Chrome][10] &#8212; браузер по вкусу
+
+[Skype][11] &#8212; самизнаетечто
+
+[Sparrow][12] &#8212; mail клиент для GMail
+
+[uTorrent][13] &#8212; торрент-клиент
+
+OmniFocus &#8212; GTD органайзер
+
+Transmit &#8212; ftp, sftp, amazon S3, webdav файловый менеджер
+
+Apple iLife &#8212; iPhoto, iMovie и прочие развлечения
+
+Apple iWorks &#8212; Numbers, Pages, Keynote &#8212; пакет офисных программ от Apple
+
+[Textmate][14] &#8212; мощный программерский редактор
+
+[Home brew][15] и через brew install устанавливаем
+
+git
+
+mtr
+
+rails
+
+ [1]: http://agilewebsolutions.com/onepassword
+ [2]: http://growl.info/
+ [3]: http://bjango.com/mac/istatmenus/
+ [4]: http://www.dropbox.com/
+ [5]: http://www.perian.org/
+ [6]: http://www.alfredapp.com/
+ [7]: http://cord.sourceforge.net/
+ [8]: http://code.google.com/p/iterm2/
+ [9]: http://www.catpigstudios.com/
+ [10]: http://www.google.com/chrome?hl=ru
+ [11]: http://www.skype.com/
+ [12]: http://www.sparrowmailapp.com/
+ [13]: http://utorrent.com
+ [14]: http://macromates.com/
+ [15]: https://github.com/mxcl/homebrew

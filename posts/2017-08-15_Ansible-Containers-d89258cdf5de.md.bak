@@ -1,0 +1,45 @@
+---
+title: Ansible Containers
+description: >-
+  Long story short. Ansible decided to create separate orchestration tool for
+  the managing application containers, which is obviously a…
+date: '2017-08-15T08:17:15.937Z'
+categories: []
+keywords: []
+slug: /@mprokopov/ansible-containers-d89258cdf5de
+---
+
+Long story short. Ansible decided to create separate orchestration tool for the managing application containers, which is obviously a mainstream now. And this is straightforward next step after development tools for server state management like Ansible.
+
+[**ansible/ansible-container**  
+_ansible-container - Ansible Container is a tool to build Docker images and orchestrate containers using only Ansible…_github.com](https://github.com/ansible/ansible-container "https://github.com/ansible/ansible-container")[](https://github.com/ansible/ansible-container)
+
+But I was really disappointed with Ansible 2.3, because docker\_service module is still broken. I tried all possible combinations of docker, docker-py and docker-compose python modules for ansible on remote host with CoreOS and all of combinations failed with different weird errors like “Dockerfile could not be found” and so on. After all the day trying hard to tackle that issues I gave up and wrote simple “docker-compose up” ansible command :(
+
+And this time I decided to give an ansible-container a try. And … ta da … it fails right away from the start.
+
+Starting Docker build of Ansible Container Conductor image (please be patient)…
+
+Failed with
+
+ERROR Unknown exception  
+Traceback (most recent call last):  
+ File “/Library/Python/2.7/site-packages/container/cli.py”, line 268, in \_\_call\_\_  
+ getattr(core, u’hostcmd\_{}’.format(args.subcommand))(\*\*vars(args))  
+ File “/Library/Python/2.7/site-packages/container/\_\_init\_\_.py”, line 28, in \_\_wrapped\_\_  
+ return fn(\*args, \*\*kwargs)  
+ File “/Library/Python/2.7/site-packages/container/core.py”, line 150, in hostcmd\_build  
+ cache=kwargs\[‘cache’\]  
+ File “/Library/Python/2.7/site-packages/container/docker/engine.py”, line 82, in \_\_wrapped\_\_  
+ return fn(self, \*args, \*\*kwargs)  
+ File “/Library/Python/2.7/site-packages/container/\_\_init\_\_.py”, line 28, in \_\_wrapped\_\_  
+ return fn(\*args, \*\*kwargs)  
+ File “/Library/Python/2.7/site-packages/container/docker/engine.py”, line 744, in build\_conductor\_image  
+ nocache=not cache)  
+ File “/Library/Python/2.7/site-packages/docker/models/images.py”, line 172, in build  
+ raise BuildError(event.get(‘error’) or event)  
+BuildError: The command ‘/bin/sh -c python /get-pip.py && mkdir -p /etc/ansible/roles /\_ansible/src && cd /usr/local/bin && tar -xz — strip-components=1 -f /tmp/docker.tgz’ returned a non-zero code: 2
+
+So, we will wait for the product to become more stable to give a try one more time. Because I can not understand where to go with this weird errors.
+
+One more leaking abstraction.

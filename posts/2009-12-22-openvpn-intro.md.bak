@@ -1,0 +1,12 @@
+---
+title: вся правда про OpenVPN
+author: Max Prokopov
+type: post
+date: 2009-12-22T17:02:31+00:00
+draft: true
+url: /?p=79
+categories:
+  - администрирование
+
+---
+OpenVPN решает многие проблемы, в том числе и с выталкиванием пользователю маршрутов

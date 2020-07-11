@@ -46,9 +46,13 @@
     
     <div><p>This is really my little timesaver because you know, a lot of meetings happen when you work remotely.<br>
 Works best with Alfred 4 using mapped hotkey.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<pre class="wp-block-code"><code>tell application "Calendar"
+	tell calendar "maksym.prokopov@trilogy.com"
+		set itemLocation to location of first event where its start date ≤ (current date) + 10 * minutes and end date ≥ (current date)
+		if itemLocation contains "zoom.us" then tell application "Finder" to open location itemLocation
+	end tell
+end tell</code></pre><figure class="wp-block-image size-large">
+<p><img src="/uploads/2020/02/Screenshot-2020-02-26-at-19.10.05.png" alt="" class="wp-image-1546" srcset="/uploads/2020/02/Screenshot-2020-02-26-at-19.10.05.png 824w, /uploads/2020/02/Screenshot-2020-02-26-at-19.10.05-300x109.png 300w, /uploads/2020/02/Screenshot-2020-02-26-at-19.10.05-768x280.png 768w" sizes="(max-width: 824px) 100vw, 824px" /></figure> <figure class="wp-block-image size-large"><img src="/uploads/2020/02/Screenshot-2020-02-26-at-19.10.41-1024x754.png" alt="" class="wp-image-1547" srcset="/uploads/2020/02/Screenshot-2020-02-26-at-19.10.41-1024x754.png 1024w, /uploads/2020/02/Screenshot-2020-02-26-at-19.10.41-300x221.png 300w, /uploads/2020/02/Screenshot-2020-02-26-at-19.10.41-768x566.png 768w, /uploads/2020/02/Screenshot-2020-02-26-at-19.10.41.png 1420w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></p>
 </div>
     <div id="disqus_thread"></div>
 <script>
@@ -85,7 +89,7 @@ Works best with Alfred 4 using mapped hotkey.</p>
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

@@ -1,0 +1,40 @@
+---
+title: Mac OS X transparent squid ipfw bugfix
+author: Max Prokopov
+type: post
+date: 2011-04-11T11:19:02+00:00
+url: /2011/04/mac-os-x-transparent-squid-ipfw-bugfix/
+robotsmeta:
+  - index,follow
+views:
+  - 80
+categories:
+  - FreeBSD
+  - администрирование
+  - Мак
+  - Софт
+
+---
+Сам прозрачный прокси включается проще простого, в squid.conf добавляем:
+
+http_port 3128 transparent
+
+и в ipfw добавляем следующее правило заворачивающее с 80го порта на внутренний:
+
+ipfw add 1050 fwd 127.0.0.1:3128 tcp from 192.168.1.0/24 to not 192.168.1.0/24 80
+
+&nbsp;
+
+Однако, оказалось, на 10.6 не работает ipfw fwd правило для прозрачного прокси.
+
+&nbsp;
+
+Непродолжительное гугление помогло выявить вот такой багфикс:
+
+sudo sysctl -w net.inet.ip.scopedroute = 0
+
+или еще лучше прописать в /etc/sysctl.conf
+
+net.inet.ip.scopedroute = 0 и перезагрузить сервер.
+
+&nbsp;

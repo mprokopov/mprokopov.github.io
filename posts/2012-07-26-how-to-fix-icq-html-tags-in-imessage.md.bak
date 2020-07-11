@@ -1,0 +1,32 @@
+---
+title: How to fix ICQ HTML tags in iMessage
+author: Max Prokopov
+type: post
+date: 2012-07-26T11:53:05+00:00
+url: /2012/07/how-to-fix-icq-html-tags-in-imessage/
+robotsmeta:
+  - index,follow
+categories:
+  - Мак
+  - Софт
+
+---
+[This post][1] is not actual any more, so here is another solution:
+
+&nbsp;
+
+<p style="text-align: center;">
+  <a href="http://nexusnotes.ru/wp-content/uploads/2012/07/Снимок-экрана-2012-07-27-в-10.57.22-3.png"><img class="aligncenter  wp-image-924" title="Снимок экрана 2012-07-27 в 10.57.22 3" src="http://nexusnotes.ru/wp-content/uploads/2012/07/Снимок-экрана-2012-07-27-в-10.57.22-3.png" alt="" width="400" height="412" /></a>
+</p>
+
+Go to  ~/Library/Preferences/
+
+Open com.apple.iChat.AIM.plist
+
+Change ForceICQPlainText to true
+
+Save, put read-only attribute on file
+
+Logoff/logon. Enjoy.
+
+ [1]: http://nexusnotes.ru/2010/01/ichat-icq-without-html-tags-now-chax-is-in-beta-now-finally/

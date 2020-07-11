@@ -1,0 +1,86 @@
+---
+title: Синхронизация Omnifocus с собственным хранилищем
+author: Max Prokopov
+type: post
+date: 2011-01-10T10:40:40+00:00
+url: /2011/01/omnifocus-webdav-sync/
+robotsmeta:
+  - index,follow
+views:
+  - 77
+categories:
+  - за жизнь
+
+---
+Не то что бы совсем cloud-sync, но OmniFocus помимо стандартной Bonjour синхронизации по WiFi умеет еще и синхронизироваться через MobileMe, а, ежели вы имеете собственное хранилище, например, VPS или VDS, или попросту не доверяете сторонним лицам свою сексуальную информацию из OmniFocus, то есть еще и опция синхронизации по WebDAV.
+
+<!--more-->
+
+Для настройки WebDAV для Apache 2.2 достаточно подгрузить модуль mod_dav
+
+httpd.conf:
+
+<pre escaped="true" lang="config" line="1">LoadModule dav_module libexec/apache22/mod_dav.so
+LoadModule dav_fs_module libexec/apache22/mod_dav_fs.so
+DavLockDB "/tmp/DavLock"
+Alias /uploads "/usr/local/uploads"
+
+Dav On
+Order Allow,Deny
+Allow from all
+AuthType Digest
+AuthName DAV-upload
+AuthUserFile "/usr/local/user.passwd"
+AuthDigestProvider file
+
+DavLockDB "/tmp/DavLock"
+Alias /uploads "/usr/local/uploads"</pre>
+
+<pre escaped="true" lang="config" line="1">&lt;Directory "/usr/local/uploads"&gt;
+    Dav On
+Order Allow,Deny    Allow from all
+AuthType Digest    AuthName DAV-upload
+ AuthUserFile "/usr/local/user.passwd"
+ AuthDigestProvider file</pre>
+
+<pre escaped="true" lang="config" line="1">&lt;LimitExcept GET OPTIONS&gt;
+ require user admin
+
+
+<div id="_mcePaste">
+  &lt;/LimitExcept&gt;
+</div>
+
+
+<div id="_mcePaste">
+  &lt;/Directory&gt;
+</div></pre>
+
+После чего создаем /usr/local/uploads и даем на него права на запись для пользователя, от которого у нас работает веб-сервер.
+
+запускаем
+
+<pre escaped="true" lang="shell" line="1">htdigest -c /usr/local/user.passwd DAV-upload admin</pre>
+
+чем создаем файл user.passwd с пользователем admin и назначаем ему пароль
+
+Все, теперь передергиваем апач:
+
+<pre escaped="true" lang="shell" line="1">apachectl restart</pre>
+
+и пробуем что-нибудь загрузить по web-dav: http://yourserver.com/uploads/ (можно использовать Transmit.app)
+
+и настраиваем в OmniFocus синхронизацию в Advanced:
+
+[<img class="aligncenter size-full wp-image-553" title="Снимок экрана 2011-01-10 в 12.30.05" src="http://nexusnotes.ru/wp-content/uploads/2011/01/Снимок-экрана-2011-01-10-в-12.30.05.png" alt="" width="614" height="676" srcset="http://nexusnotes.ru/wp-content/uploads/2011/01/Снимок-экрана-2011-01-10-в-12.30.05.png 614w, http://nexusnotes.ru/wp-content/uploads/2011/01/Снимок-экрана-2011-01-10-в-12.30.05-272x300.png 272w" sizes="(max-width: 614px) 100vw, 614px" />][1]
+
+и аналогично настраиваем в iPhone
+
+[<img class="aligncenter size-full wp-image-554" title="IMG_0022" src="http://nexusnotes.ru/wp-content/uploads/2011/01/IMG_0022.png" alt="" width="640" height="960" srcset="http://nexusnotes.ru/wp-content/uploads/2011/01/IMG_0022.png 640w, http://nexusnotes.ru/wp-content/uploads/2011/01/IMG_0022-200x300.png 200w, http://nexusnotes.ru/wp-content/uploads/2011/01/IMG_0022-100x150.png 100w" sizes="(max-width: 640px) 100vw, 640px" />][2]
+
+Все, на этом настройка синхронизации завершена.
+
+В качестве домашнего задания можно порекомендовать обязательную настройку https для синхронизации.
+
+ [1]: http://nexusnotes.ru/wp-content/uploads/2011/01/Снимок-экрана-2011-01-10-в-12.30.05.png
+ [2]: http://nexusnotes.ru/wp-content/uploads/2011/01/IMG_0022.png

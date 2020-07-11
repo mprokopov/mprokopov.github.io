@@ -1,0 +1,15 @@
+---
+title: I discovered much faster way to speed up docker image creation.
+description: >-
+  Just use bundle package and all current gems will be copied into vendor/cache.
+  When bundle install runs it discovers cached gems and runs…
+date: '2016-04-29T14:10:13.042Z'
+categories: []
+keywords: []
+slug: >-
+  /@mprokopov/i-discovered-much-faster-way-to-speed-up-docker-image-creation-c7485fbf6aec
+---
+
+I discovered much faster way to speed up docker image creation.
+
+Just use bundle package and all current gems will be copied into vendor/cache. When bundle install runs it discovers cached gems and runs much-much faster.

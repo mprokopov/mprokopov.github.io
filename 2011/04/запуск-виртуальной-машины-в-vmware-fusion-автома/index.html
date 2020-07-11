@@ -50,19 +50,39 @@
 <p>Оказывается, можно, и не так уж сложно.</p>
 <p>В Mac OS есть отличный механизм автозапуска демонов и агентов boot time, а также перезапуска оных в случае чего — launchctl (читаем маны).</p>
 <p>Для нашего случая необходимо создать следующий скрипт, назовем его /Library/Application Support/VMware Fusion/boot-vm.sh</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre lang="shell">#!/bin/bash
+while [! -e /var/run/vmnet-bridge-vmnet.pid]; do  
+sleep 1
+done 
+"/Library/Application Support/VMware Fusion/vmrun" start "/Users/admins/Documents/Virtual Machines.localized/Windows XP Professional.vmwarevm/Windows XP Professional.vmx"
+</pre>
 <p>где после start — путь вашей виртуальной машины.</p>
 <p> </p>
 <p>для boot-vm.sh добавим аттрибуты запуска:</p>
-<!-- raw HTML omitted -->
+<pre lang="shell">chmod +x boot-vm.sh</pre>
 <p>и создадим следующий файл  /Library/LaunchDaemons/com.vmware.launchd.fusion-server.plist</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;        
+&lt;key&gt;Label&lt;/key&gt;        
+&lt;string&gt;com.vmware.launchd.fusion-server&lt;/string&gt;        &lt;key&gt;ProgramArguments&lt;/key&gt;        
+&lt;array&gt;                
+&lt;string&gt;/Library/Application Support/VMware Fusion/boot-vm.sh&lt;/string&gt;        &lt;/array&gt;        
+&lt;key&gt;RunAtLoad&lt;/key&gt;        
+&lt;true/&gt;        
+&lt;key&gt;ExitTimeOut&lt;/key&gt;        
+&lt;integer&gt;0&lt;/integer&gt;        
+&lt;key&gt;LaunchOnlyOnce&lt;/key&gt;        
+&lt;true/&gt;        
+&lt;key&gt;UserName&lt;/key&gt;        
+&lt;string&gt;admins&lt;/string&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;</pre>
 <p>теперь должно взлетать</p>
 <p> </p>
 <p>проверить, что «все правильно сделал» (с) можно командой</p>
-<!-- raw HTML omitted -->
+<pre lang="shell">launchctl load com.vmware.launchd.fusion-server.plist</pre>
 <p>должно взлететь.</p>
 <p><a href="http://communities.vmware.com/docs/DOC-6263">подробнее на сайте vmware</a></p>
 <p>UPDATE:</p>
@@ -103,7 +123,7 @@
         
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (1) </li>
+        <li><a href="/categories/education/">education</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

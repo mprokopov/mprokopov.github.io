@@ -1,0 +1,24 @@
+---
+title: Noteworthy Clojure projects
+description: >-
+  Recently I again dived deeply into Clojure development with my Bank Statements
+  — ERP sync tool and started to investigate what’s new in…
+date: '2018-01-18T13:40:17.075Z'
+categories: []
+keywords: []
+slug: /@mprokopov/noteworthy-clojure-projects-634af849e01d
+---
+
+Recently I again dived deeply into Clojure development with my [Bank Statements — ERP sync tool](https://github.com/mprokopov/privat24-manager) and started to investigate what’s new in Clojure world. It appears a lot of great things happend in 2017!
+
+Every of following tools drops my jaw down. Here is my list:
+
+*   [Lightmod](https://sekao.net/lightmod/) and [Nightcode](https://sekao.net/nightcode/) really great editors for Clojure/Clojurescript beginners. Zach Oakes included useful examples to jump into Clojure development train.
+*   [Dynadoc](https://github.com/oakes/Dynadoc), documentation exploration tool which makes your work with documentation more effective and interactive.
+*   [Dirac](https://github.com/binaryage/dirac) is a Clojurescript REPL right in your Chrome browser!
+*   [Vase](https://github.com/cognitect-labs/vase) a rapid declarative Pedestal and Datomic based microservice development tool by guys from Cognician.
+*   [Boot](https://github.com/boot-clj/boot) build tool became very popular because of custom and modular build workflow. When you feel yourself limited by Leiningen, give Boot a try. It suites even for [blog publishing](https://github.com/hashobject/perun)!
+
+![](img/1__D0qPe2__BxxNJKMwIS7GMXA.png)
+
+Did you find anything noteworthy for your Clojure development? Please, comment.
