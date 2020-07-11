@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ruby on Maksym Prokopov personal website</title>
+    <link>https://mprokopov.github.io/categories/ruby/</link>
+    <description>Recent content in ruby on Maksym Prokopov personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Wed, 06 Jun 2018 15:50:30 +0000</lastBuildDate>
+    
+	<atom:link href="https://mprokopov.github.io/categories/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to improve ruby code with dup and tap methods</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/</link>
+      <pubDate>Wed, 06 Jun 2018 15:50:30 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/</guid>
+      <description>Here is a piece of my old code, but it’s definitely could be improved.
+def to_params h = ticket_params h[:activity] = extract_activity if extract_activity h[:event] = extract_event if extract_event h.delete(:state_event) h.delete(:activities_attributes) h end As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?
+Let’s see, h=ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy?
+It turns out we have dup method which creates a copy of an object, this is exactly what we wanted.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -88,7 +88,7 @@ Mon Jan 2 15:04:05 MST 2006
       <guid>https://mprokopov.github.io/posts/mprokopov/setting-up-a-php-development-environment-with-apache2-and-php-fpm-on-macos-catalina-21d74a90aeac/</guid>
       <description>At the moment using Docker for development on macOS © has its own flaws, and in case you need good performance, there is a more or less complicated way to set up a local development environment with native apache2 and php-fpm stack.
 Keep in mind, PHP 7.3 comes with macOS Catalina preinstalled, so you might not need to install PHP separately.
-Prerequisites  brew https://brew.sh/  Installation  Install PHP `brew install php@7.</description>
+Prerequisites  brew https://brew.sh/  Installation  Install PHP brew install php@7.</description>
     </item>
     
     <item>
@@ -310,10 +310,10 @@ It turns out we have dup method which creates a copy of an object, this is exact
     
     <item>
       <title>Введение в Prolog</title>
-      <link>https://mprokopov.github.io/posts/mprokopov/%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-prolog-e0878ac7fe40/</link>
+      <link>https://mprokopov.github.io/posts/2018-05-29_-prolog-e0878ac7fe40/</link>
       <pubDate>Tue, 29 May 2018 12:38:14 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/posts/mprokopov/%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-prolog-e0878ac7fe40/</guid>
+      <guid>https://mprokopov.github.io/posts/2018-05-29_-prolog-e0878ac7fe40/</guid>
       <description>Хочу такой туториал, с которым все понятно, куда коней запрягать. А его нет. Напишу тогда свой.
 Итак, Пролог это не обычный язык программирования. Самый лучший пример использования это решение логической задачи типа
 5 разных человек в 5 разных домах разного цвета, курят 5 разных марок сигарет, выращивают 5 разных видов животных, пьют 5 разных видов напитков. Вопрос: кто выращивает рыбок? Подсказки:
@@ -342,10 +342,10 @@ It turns out we have dup method which creates a copy of an object, this is exact
     
     <item>
       <title>Согласен по всем пунктам!</title>
-      <link>https://mprokopov.github.io/posts/mprokopov/%d1%81%d0%be%d0%b3%d0%bb%d0%b0%d1%81%d0%b5%d0%bd-%d0%bf%d0%be-%d0%b2%d1%81%d0%b5%d0%bc-%d0%bf%d1%83%d0%bd%d0%ba%d1%82%d0%b0%d0%bc-2285686116fa/</link>
+      <link>https://mprokopov.github.io/posts/2018-03-28_-2285686116fa/</link>
       <pubDate>Wed, 28 Mar 2018 04:19:42 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/posts/mprokopov/%d1%81%d0%be%d0%b3%d0%bb%d0%b0%d1%81%d0%b5%d0%bd-%d0%bf%d0%be-%d0%b2%d1%81%d0%b5%d0%bc-%d0%bf%d1%83%d0%bd%d0%ba%d1%82%d0%b0%d0%bc-2285686116fa/</guid>
+      <guid>https://mprokopov.github.io/posts/2018-03-28_-2285686116fa/</guid>
       <description>Согласен по всем пунктам!
 Я для себя выделил ещё один признак, это умение проводить собственные размышления над проблемой, особенно если они противоположны общепринятой точке зрения. И, конечно, умение вести дискуссию пользуясь логическими построениями, вместо «ойнувсе».</description>
     </item>
@@ -644,15 +644,6 @@ FM-трансмиттерами я пробовал пользоваться и 
     </item>
     
     <item>
-      <title>Хорошее введение, прямо лайк.</title>
-      <link>https://mprokopov.github.io/posts/mprokopov/%d1%85%d0%be%d1%80%d0%be%d1%88%d0%b5%d0%b5-%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d1%80%d1%8f%d0%bc%d0%be-%d0%bb%d0%b0%d0%b9%d0%ba-f2d0097b9b0/</link>
-      <pubDate>Fri, 22 Jul 2016 11:21:03 +0000</pubDate>
-      
-      <guid>https://mprokopov.github.io/posts/mprokopov/%d1%85%d0%be%d1%80%d0%be%d1%88%d0%b5%d0%b5-%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d1%80%d1%8f%d0%bc%d0%be-%d0%bb%d0%b0%d0%b9%d0%ba-f2d0097b9b0/</guid>
-      <description>Хорошее введение, прямо лайк.</description>
-    </item>
-    
-    <item>
       <title>Tern — умный autocomplete для Javascript в различных редакторах</title>
       <link>https://mprokopov.github.io/2016/07/tern-%D1%83%D0%BC%D0%BD%D1%8B%D0%B9-autocomplete-%D0%B4%D0%BB%D1%8F-javascript-%D0%B2-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0/</link>
       <pubDate>Fri, 22 Jul 2016 09:03:43 +0000</pubDate>
@@ -746,16 +737,6 @@ Just use bundle package and all current gems will be copied into vendor/cache. W
       <description>Очень хорошо пишете, легко читается.
 Я для себя очень и очень полезным нашел редактор Emacs. Похоже, что для вас он может стать хорошим другом, поскольку обладает невероятной способностью к кастомизации, имеет собственное переключение раскладок, org-mode для Emacs даст фору любому дневнику/планировщику. К тому же очень комфортно использовать формулы и спецзнаки через LaTeX.
 Однозначно стоит потраченного на изучение времени.</description>
-    </item>
-    
-    <item>
-      <title>That’s probably essence of habits you should have to be successful.</title>
-      <link>https://mprokopov.github.io/posts/mprokopov/that-s-probably-essence-of-habits-you-should-have-to-be-successful-89b95cfbfdbb/</link>
-      <pubDate>Sat, 06 Feb 2016 07:01:13 +0000</pubDate>
-      
-      <guid>https://mprokopov.github.io/posts/mprokopov/that-s-probably-essence-of-habits-you-should-have-to-be-successful-89b95cfbfdbb/</guid>
-      <description>That’s probably essence of habits you should have to be successful.
-Thanks!</description>
     </item>
     
     <item>

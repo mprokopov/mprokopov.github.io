@@ -6,10 +6,33 @@
     <description>Recent content in веб-разработка on Maksym Prokopov personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Wed, 10 Jan 2018 12:52:59 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2020 09:14:08 +0000</lastBuildDate>
     
 	<atom:link href="https://mprokopov.github.io/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Setting up a PHP development environment with Apache2 and php-fpm on macOS Catalina</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/setting-up-a-php-development-environment-with-apache2-and-php-fpm-on-macos-catalina-21d74a90aeac/</link>
+      <pubDate>Tue, 09 Jun 2020 09:14:08 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/setting-up-a-php-development-environment-with-apache2-and-php-fpm-on-macos-catalina-21d74a90aeac/</guid>
+      <description>At the moment using Docker for development on macOS © has its own flaws, and in case you need good performance, there is a more or less complicated way to set up a local development environment with native apache2 and php-fpm stack.
+Keep in mind, PHP 7.3 comes with macOS Catalina preinstalled, so you might not need to install PHP separately.
+Prerequisites  brew https://brew.sh/  Installation  Install PHP brew install php@7.</description>
+    </item>
+    
+    <item>
+      <title>My new modern web site stack</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/my-new-modern-web-site-stack-f9645e78ae16/</link>
+      <pubDate>Sun, 12 Apr 2020 18:02:44 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/my-new-modern-web-site-stack-f9645e78ae16/</guid>
+      <description>In the age of Kubernetes and all this fancy stuff, I decided to make something really simple and as static as possible. The modern, cutting-edge tech stack.
+This is a story about https://it-premium.com.ua reincarnation featured with responsiveness and saving all the functionality it had before. Though it wasn’t a simple, but very interesting journey.
+Here are the specs I wanted to preserve:
+ Multilanguage support, due to Ukrainian language law enforcement we had to introduce one more supported language among English and Russian PDF dynamic generation based on what user was chosen Dynamic tariff calculations with dependencies on the services of user’s choice Easy data management.</description>
+    </item>
     
     <item>
       <title>Про редакторы и IDE</title>
