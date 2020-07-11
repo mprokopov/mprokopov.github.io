@@ -58,6 +58,17 @@ Mon Jan 2 15:04:05 MST 2006
     </item>
     
     <item>
+      <title>Setting up a PHP development environment with Apache2 and php-fpm on macOS Catalina</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/setting-up-a-php-development-environment-with-apache2-and-php-fpm-on-macos-catalina-21d74a90aeac/</link>
+      <pubDate>Tue, 09 Jun 2020 09:14:08 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/setting-up-a-php-development-environment-with-apache2-and-php-fpm-on-macos-catalina-21d74a90aeac/</guid>
+      <description>At the moment using Docker for development on macOS © has its own flaws, and in case you need good performance, there is a more or less complicated way to set up a local development environment with native apache2 and php-fpm stack.
+Keep in mind, PHP 7.3 comes with macOS Catalina preinstalled, so you might not need to install PHP separately.
+Prerequisites  brew https://brew.sh/  Installation  Install PHP `brew install php@7.</description>
+    </item>
+    
+    <item>
       <title>Awesome video using REPL with Pharo on Raspberry Pi</title>
       <link>https://mprokopov.github.io/posts/2020-06-02-pharo-raspberry-pi/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
@@ -158,6 +169,49 @@ Mon Jan 2 15:04:05 MST 2006
     </item>
     
     <item>
+      <title>How to increase Kubernetes PVC size for AWS EBS</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/how-to-increase-kubernetes-pvc-size-for-aws-ebs-b3d4a99c006a/</link>
+      <pubDate>Tue, 12 May 2020 15:48:04 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/how-to-increase-kubernetes-pvc-size-for-aws-ebs-b3d4a99c006a/</guid>
+      <description>It’s quite simple to increase PVC size since K8s 1.11
+kubectl describe pvc and find your storage class.
+Name: jenkins
+Namespace: jenkins
+StorageClass: jenkins-gp2
+Status: Bound
+Volume: pvc-473e3dbf-b759-11e9-9cbc-02a7fb0b6cca
+Labels: app.kubernetes.io/component=jenkins-master
+app.kubernetes.io/instance=jenkins
+app.kubernetes.io/managed-by=Tiller
+app.kubernetes.io/name=jenkins
+helm.sh/chart=jenkins-1.3.6
+Annotations: pv.kubernetes.io/bind-completed: yes
+pv.kubernetes.io/bound-by-controller: yes
+volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/aws-ebs
+Finalizers: [kubernetes.io/pvc-protection]
+Capacity: 16Gi
+Access Modes: RWO
+VolumeMode: Filesystem
+Mounted By: jenkins-6b5c9bcbbb-gr2l5
+Events: kubectl edit storageclass jenkins-gp2 add the following to your storage class
+allowVolumeExpansion: true
+kubectl edit pvc jenkins</description>
+    </item>
+    
+    <item>
+      <title>My new modern web site stack</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/my-new-modern-web-site-stack-f9645e78ae16/</link>
+      <pubDate>Sun, 12 Apr 2020 18:02:44 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/my-new-modern-web-site-stack-f9645e78ae16/</guid>
+      <description>In the age of Kubernetes and all this fancy stuff, I decided to make something really simple and as static as possible. The modern, cutting-edge tech stack.
+This is a story about https://it-premium.com.ua reincarnation featured with responsiveness and saving all the functionality it had before. Though it wasn’t a simple, but very interesting journey.
+Here are the specs I wanted to preserve:
+ Multilanguage support, due to Ukrainian language law enforcement we had to introduce one more supported language among English and Russian PDF dynamic generation based on what user was chosen Dynamic tariff calculations with dependencies on the services of user’s choice Easy data management.</description>
+    </item>
+    
+    <item>
       <title>My recent tasks</title>
       <link>https://mprokopov.github.io/posts/2020-03-03-my-recent-tasks/</link>
       <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
@@ -196,6 +250,16 @@ Works best with Alfred 4 using mapped hotkey.</description>
     </item>
     
     <item>
+      <title>The bad thing about Rails is that by default it suggests using own messy design patterns like fat…</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/the-bad-thing-about-rails-is-that-by-default-it-suggests-using-own-messy-design-patterns-like-fat-37d81b3e7def/</link>
+      <pubDate>Sun, 15 Sep 2019 16:52:22 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/the-bad-thing-about-rails-is-that-by-default-it-suggests-using-own-messy-design-patterns-like-fat-37d81b3e7def/</guid>
+      <description>The bad thing about Rails is that by default it suggests using own messy design patterns like fat models. I mean all these callbacks in AR, observers and everything that is good for a simple blog but fails for a big application.
+You have to use a very little part of Rails to apply DDD concepts.</description>
+    </item>
+    
+    <item>
       <title>Два древних языка, которые нужно изучить программисту</title>
       <link>https://mprokopov.github.io/2019/01/%D0%B4%D0%B2%D0%B0-%D0%B4%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D1%85-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BD%D1%83%D0%B6%D0%BD%D0%BE-%D0%B8%D0%B7%D1%83%D1%87%D0%B8/</link>
       <pubDate>Tue, 08 Jan 2019 04:07:39 +0000</pubDate>
@@ -205,6 +269,78 @@ Works best with Alfred 4 using mapped hotkey.</description>
 Я уверен, что это сделает вас на шаг ближе к стадиям развития специалист и эксперт.
 Nikita Prokopov сделал отличный talk о стадиях компетентности программиста. Идея в том, что каждый программист на своем пути развития проходит пять стадий развития:
  Новичек Продвинутый Компетентный Специалист Эксперт  Никита ближе к концу доклада на примере собственного опыта сравнивает два языка: Java и Clojure и выдвигает предположение о том, что Java хорош для новичков, а Clojure это глоток свежего воздуха для уставших опытных программистов.</description>
+    </item>
+    
+    <item>
+      <title>How to improve ruby code with dup and tap methods</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/</link>
+      <pubDate>Wed, 06 Jun 2018 15:50:30 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/</guid>
+      <description>Here is a piece of my old code, but it’s definitely could be improved.
+def to_params
+h = ticket_params
+h[:activity] = extract_activity if extract_activity
+h[:event] = extract_event if extract_event
+h.delete(:state_event)
+h.delete(:activities_attributes)
+h
+end
+As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?
+Let’s see, h= ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy?</description>
+    </item>
+    
+    <item>
+      <title>Введение в Prolog</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-prolog-e0878ac7fe40/</link>
+      <pubDate>Tue, 29 May 2018 12:38:14 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-prolog-e0878ac7fe40/</guid>
+      <description>Хочу такой туториал, с которым все понятно, куда коней запрягать. А его нет. Напишу тогда свой.
+Итак, Пролог это не обычный язык программирования. Самый лучший пример использования это решение логической задачи типа
+5 разных человек в 5 разных домах разного цвета, курят 5 разных марок сигарет, выращивают 5 разных видов животных, пьют 5 разных видов напитков. Вопрос: кто выращивает рыбок? Подсказки:
+ Норвежец живет в первом доме. Англичанин живет в красном доме.</description>
+    </item>
+    
+    <item>
+      <title>Пожалуй, самым точным определением будет слово «осознанность».</title>
+      <link>https://mprokopov.github.io/posts/2018-05-27_-dbe59a2cbade/</link>
+      <pubDate>Sun, 27 May 2018 17:29:53 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/2018-05-27_-dbe59a2cbade/</guid>
+      <description>Пожалуй, самым точным определением будет слово «осознанность». Нон-конформизм это тоже своего рода крайность, так как бывает сопротивление ради сопротивления, особенно в пубертатном возрасте. Уметь оценивать и признавать противоположную точку зрения, вот что по-настоящему ценно.
+Некоторые мои знакомые приходят к осознанности разными путями, кто-то через стремные духовные практики, кто-то через упражнения с ножом или бритвой.
+Но всегда осознанность означает правильно настроенный жизненный компас.</description>
+    </item>
+    
+    <item>
+      <title>Brief introduction to the Kubernetes.</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/</link>
+      <pubDate>Sat, 26 May 2018 12:35:51 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/</guid>
+      <description>Kubernetes is a winner in docker cloud orchestration, so let’s get a brief introduction in what it is and what kind of problems it solves. Kubernetes is a set of tools designed to solve a problem of deployment of your lovely tailor-made application to a cloud. It does not matter which cloud you choose, AWS, Azure or Google, or even IBM, because Kubernetes provides you with a set of tools which are platform independent.</description>
+    </item>
+    
+    <item>
+      <title>Согласен по всем пунктам!</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/%d1%81%d0%be%d0%b3%d0%bb%d0%b0%d1%81%d0%b5%d0%bd-%d0%bf%d0%be-%d0%b2%d1%81%d0%b5%d0%bc-%d0%bf%d1%83%d0%bd%d0%ba%d1%82%d0%b0%d0%bc-2285686116fa/</link>
+      <pubDate>Wed, 28 Mar 2018 04:19:42 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/%d1%81%d0%be%d0%b3%d0%bb%d0%b0%d1%81%d0%b5%d0%bd-%d0%bf%d0%be-%d0%b2%d1%81%d0%b5%d0%bc-%d0%bf%d1%83%d0%bd%d0%ba%d1%82%d0%b0%d0%bc-2285686116fa/</guid>
+      <description>Согласен по всем пунктам!
+Я для себя выделил ещё один признак, это умение проводить собственные размышления над проблемой, особенно если они противоположны общепринятой точке зрения. И, конечно, умение вести дискуссию пользуясь логическими построениями, вместо «ойнувсе».</description>
+    </item>
+    
+    <item>
+      <title>Noteworthy Clojure projects</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/noteworthy-clojure-projects-634af849e01d/</link>
+      <pubDate>Thu, 18 Jan 2018 13:40:17 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/noteworthy-clojure-projects-634af849e01d/</guid>
+      <description>Recently I again dived deeply into Clojure development with my Bank Statements — ERP sync tool and started to investigate what’s new in Clojure world. It appears a lot of great things happend in 2017!
+Every of following tools drops my jaw down. Here is my list:
+ Lightmod and Nightcode really great editors for Clojure/Clojurescript beginners. Zach Oakes included useful examples to jump into Clojure development train. Dynadoc, documentation exploration tool which makes your work with documentation more effective and interactive.</description>
     </item>
     
     <item>
@@ -239,6 +375,81 @@ ClojureScript REPL right in your Google Chrome Dirac. Лучше всего з�
     </item>
     
     <item>
+      <title>Quick fix for rubygems SSL error</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/quick-fix-for-rubygems-ssl-error-5126c73cb7f6/</link>
+      <pubDate>Tue, 24 Oct 2017 09:59:28 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/quick-fix-for-rubygems-ssl-error-5126c73cb7f6/</guid>
+      <description>In case you get
+ ERROR: SSL verification error at depth 2: certificate has expired (10) ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA expired at 2014–01–28T12:00:00Z ERROR: SSL verification error at depth 2: certificate has expired (10) ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA expired at 2014–01–28T12:00:00Z ERROR: SSL verification error at depth 2: certificate has expired (10) ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA expired at 2014–01–28T12:00:00Z ERROR: Could not find a valid gem ‘cocoapods’ (&amp;gt;= 0), here is why: Unable to download data from https://rubygems.</description>
+    </item>
+    
+    <item>
+      <title>Compare Postgres speed within Docker and without</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c/</link>
+      <pubDate>Thu, 07 Sep 2017 08:58:13 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c/</guid>
+      <description>I decided to compare if there will be significant differences between dockerized and non-dockerized Postgres.
+Here is my test environment:
+ rails 5 application with rich test suite, about 628 examples, macOS Sierra 10.12.6, Docker 17.06.0-ce-mac19.  I use Postgres docker version alpine 9.6 which is 37,7Mb and raw Postgres 9.6 with GUI for Mac which is 379Mb.
+Rails run locally, database.yml connects to the localhost postgres with pool 5 using gem pg (0.</description>
+    </item>
+    
+    <item>
+      <title>Gitlab: continuous delivery setup for Clojure/Java with Docker</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/gitlab-continuous-delivery-setup-for-clojure-java-with-docker-472320d5aa52/</link>
+      <pubDate>Tue, 05 Sep 2017 10:59:48 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/gitlab-continuous-delivery-setup-for-clojure-java-with-docker-472320d5aa52/</guid>
+      <description>Recently I was doing a microservice with Server Sent Events and Pedestal in Clojure and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.
+Long story short, here my .gitlab-ci.yml which took me a couple of days to figure out what is the “artifact” in Gitlab and how is it suppose to survive between artifact builds and docker builds.</description>
+    </item>
+    
+    <item>
+      <title>Fully automated docker mysql database backup from remote host</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/fully-automated-docker-mysql-database-backup-from-remote-host-bd02e24b5009/</link>
+      <pubDate>Thu, 17 Aug 2017 11:13:38 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/fully-automated-docker-mysql-database-backup-from-remote-host-bd02e24b5009/</guid>
+      <description>The main idea is to have fully automated docker database backup from low end D-Link NAS DNS-320. I believe, that host, which hosts backups should be responsible for doing whole backup process, not the web-servers, which nowadays designed to be ephemeral.
+Solution design is following:
+ My backup box will copy backup.sh script to the remote coreos-03 host. Then remote host copies backup.sh script into database container. Backup box executes docker command «docker exec itservice_db_1 backup.</description>
+    </item>
+    
+    <item>
+      <title>Ansible Containers</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/ansible-containers-d89258cdf5de/</link>
+      <pubDate>Tue, 15 Aug 2017 08:17:15 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/ansible-containers-d89258cdf5de/</guid>
+      <description>Long story short. Ansible decided to create separate orchestration tool for the managing application containers, which is obviously a mainstream now. And this is straightforward next step after development tools for server state management like Ansible.
+ansible/ansible-container
+_ansible-container - Ansible Container is a tool to build Docker images and orchestrate containers using only Ansible…_github.com
+But I was really disappointed with Ansible 2.3, because docker_service module is still broken. I tried all possible combinations of docker, docker-py and docker-compose python modules for ansible on remote host with CoreOS and all of combinations failed with different weird errors like “Dockerfile could not be found” and so on.</description>
+    </item>
+    
+    <item>
+      <title>О красоте кода</title>
+      <link>https://mprokopov.github.io/posts/2017-08-11_-d42877e2368d/</link>
+      <pubDate>Fri, 11 Aug 2017 08:04:29 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/2017-08-11_-d42877e2368d/</guid>
+      <description>Когда программист программирует, он начинает разбивать код на модули только потому, что имеет ограничение в своем неокортексе на количество одновременных элементов в памяти. А я ведь когда-то писал на ассемблере, и легкой прогулкой это никак нельзя было назвать, в основном из-за простыней однообразного кода, в котором было легко потеряться.
+Из этого ограничения появились концепции ООП. Но с ООП тоже беда. Увеличивается количество уровней абстракции. И тогда в большом проекте удержать всю идею в голове становится невозможно.</description>
+    </item>
+    
+    <item>
+      <title>Deployment of Clojure app to a production with Docker</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/deployment-of-clojure-app-to-production-with-docker-9dbffeac6ef5/</link>
+      <pubDate>Thu, 03 Aug 2017 13:56:45 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/deployment-of-clojure-app-to-production-with-docker-9dbffeac6ef5/</guid>
+      <description>Clojure deployment to a production itself not a very complicated task, but with the Docker it becomes more flexible solution. You can deploy your app to the Amazon EC2 or even to Amazon EC2 Container Service just in minutes! In this example we have Ring web server listening on 3000 port an some public resources, like bootstrap css and js in resources/public folder, and application-specific settings in resources/settings folder.
+Caution: your Ring web server should be configured to listen on 0.</description>
+    </item>
+    
+    <item>
       <title>Что почистить на вашем Mac?</title>
       <link>https://mprokopov.github.io/2017/07/%D1%87%D1%82%D0%BE-%D0%BF%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%B8%D1%82%D1%8C-%D0%BD%D0%B0-%D0%B2%D0%B0%D1%88%D0%B5%D0%BC-mac/</link>
       <pubDate>Fri, 28 Jul 2017 12:00:12 +0000</pubDate>
@@ -254,6 +465,18 @@ ClojureScript REPL right in your Google Chrome Dirac. Лучше всего з�
       
       <guid>https://mprokopov.github.io/2017/07/%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D1%84%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4%D0%B0-%D0%BD%D0%B0-%D0%B2%D0%B5%D0%B1-%D0%BA%D0%B0%D1%82%D0%B8%D1%82%D1%81%D1%8F-%D0%BD/</guid>
       <description>Потребовалось мне на днях запилить динамический веб на стеке React + Redux. Полез посмотреть, чем нынче пользуется уважаемая общественность. Оказывается, стандартно используют Javascript ES-2015, он же ES6. Чтобы запустить это счастье нужно, следите за руками: туго перевязанная упаковка с npm + nodejs, Webpack, Babel. npm доставит вам различные пакаджи, библиотеки типа react, redux, webpack нужен для динамической сборки и предкомпиляции приложения, babel позволит вам писать код на модных стандартах джаваскрипта не особо заботясь о совместимости с предыдущими браузерами.</description>
+    </item>
+    
+    <item>
+      <title>Про Docker и Ruby on Rails sprockets and precompiled assets</title>
+      <link>https://mprokopov.github.io/posts/2017-07-11_-docker-ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/</link>
+      <pubDate>Tue, 11 Jul 2017 16:23:08 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/2017-07-11_-docker-ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/</guid>
+      <description>Рельсы идут не тем путем.
+По-хорошему монолит на рельсах нужно дробить, а то получается 1С:Бухгалтерия, со всеми включенными галочками по-умолчанию. В данном случае умолчания в рельсах слишком greedy.
+Взять вот sprockets. Его задача вообще один раз запуститься, минифицировать css и js, и замолчать навеки. При этом он требует кучу разнообразных зависимостей типа execjs, nodejs или v8 от гугла в качестве движка минификации.
+Но что делает фреймворк? Sprockets включают в Gemfile, он грузится вместе с полезным кодом, занимает кучу места, мешается под ногами и заставляет программиста танцевать с бубном вокруг задач связанных с деплоем!</description>
     </item>
     
     <item>
@@ -298,6 +521,17 @@ https://illustrated-algorithms.now.sh/</description>
     </item>
     
     <item>
+      <title>Why docker for Rails development sucks</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/why-docker-for-rails-development-sucks-a43f230f62f6/</link>
+      <pubDate>Fri, 04 Nov 2016 09:17:47 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/why-docker-for-rails-development-sucks-a43f230f62f6/</guid>
+      <description>I’ve been excited about docker idea for everything, from production to development. It’s definitely ok for production, continuous integration and deployment rollouts, but sucks for development and here is why.
+Development process should be as fast and responsive as possible. Responsiveness and robust feedback are critical for development. REPL should give results immediate, because human waiting for computer is really sucks!
+And when you right in the middle of development process and feedback is slow because of docker this is not what makes you happy, it’s stopping your read-evaluate-print loop and adding distraction factors to your workflow.</description>
+    </item>
+    
+    <item>
       <title>Дайджест находок вебмастера 2016-10-27</title>
       <link>https://mprokopov.github.io/2016/10/%D0%B4%D0%B0%D0%B9%D0%B4%D0%B6%D0%B5%D1%81%D1%82-%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D0%BE%D0%BA-%D0%B2%D0%B5%D0%B1%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B0-2016-10-27/</link>
       <pubDate>Thu, 27 Oct 2016 10:33:28 +0000</pubDate>
@@ -318,6 +552,18 @@ Stay tuned.</description>
       <guid>https://mprokopov.github.io/2016/10/%D0%B1%D0%BB%D0%B5%D1%81%D0%BA-%D0%B8-%D0%BD%D0%B8%D1%89%D0%B5%D1%82%D0%B0-opencart-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B2%D0%B8%D0%B6%D0%BA%D0%B0-%D0%B4%D0%BB%D1%8F-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD/</guid>
       <description>Это продолжение серии статей «Как я запускал интернет-магазин«. Часть 1 (Аналитика спроса перед запуском). Часть 2 (Выбор движка для интернет-магазина).
 А еще я в некотором роде разработчик. Для меня HTML, CSS, JS не пустые аббревиатуры, в 1999 году я сделал первый PHP+MySQL сайт за деньги. Сейчас у меня другое занятие, которое приносит деньги, но хотелось окунуться в чудесный мир e-commerce за небольшие деньги и сжатые сроки. По опросам знакомых веб-студий я сошелся на мнении, что нужно ставить OpenCart.</description>
+    </item>
+    
+    <item>
+      <title>Блеск и нищета OpenCart как движка для интернет-магазина</title>
+      <link>https://mprokopov.github.io/posts/2016-10-13_-opencart-6bbee7eabb95/</link>
+      <pubDate>Thu, 13 Oct 2016 13:54:11 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/2016-10-13_-opencart-6bbee7eabb95/</guid>
+      <description>Блеск и нищета OpenCart как движка для интернет-магазина
+13/10/2016
+Это продолжение серии статей «Как я запускал интернет-магазин«. Часть 1 (Аналитика спроса перед запуском). Часть 2 (Выбор движка для интернет-магазина).
+А еще я в некотором роде разработчик. Для меня HTML, CSS, JS не пустые аббревиатуры, в 1999 году я сделал первый PHP+MySQL сайт за деньги. Сейчас у меня другое занятие, которое приносит деньги, но хотелось окунуться в чудесный мир e-commerce за небольшие деньги и сжатые сроки.</description>
     </item>
     
     <item>
@@ -377,6 +623,15 @@ FM-трансмиттерами я пробовал пользоваться и 
     </item>
     
     <item>
+      <title>Хорошее введение, прямо лайк.</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/%d1%85%d0%be%d1%80%d0%be%d1%88%d0%b5%d0%b5-%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d1%80%d1%8f%d0%bc%d0%be-%d0%bb%d0%b0%d0%b9%d0%ba-f2d0097b9b0/</link>
+      <pubDate>Fri, 22 Jul 2016 11:21:03 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/%d1%85%d0%be%d1%80%d0%be%d1%88%d0%b5%d0%b5-%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d1%80%d1%8f%d0%bc%d0%be-%d0%bb%d0%b0%d0%b9%d0%ba-f2d0097b9b0/</guid>
+      <description>Хорошее введение, прямо лайк.</description>
+    </item>
+    
+    <item>
       <title>Tern — умный autocomplete для Javascript в различных редакторах</title>
       <link>https://mprokopov.github.io/2016/07/tern-%D1%83%D0%BC%D0%BD%D1%8B%D0%B9-autocomplete-%D0%B4%D0%BB%D1%8F-javascript-%D0%B2-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0/</link>
       <pubDate>Fri, 22 Jul 2016 09:03:43 +0000</pubDate>
@@ -430,6 +685,27 @@ http://ternjs.net/doc/demo/#simple</description>
     </item>
     
     <item>
+      <title>Редактор мечты или как, наконец, холивар Emacs или Vim завершился.</title>
+      <link>https://mprokopov.github.io/posts/2016-06-06_-emacs-vim-74190dffa34e/</link>
+      <pubDate>Mon, 06 Jun 2016 11:10:04 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/2016-06-06_-emacs-vim-74190dffa34e/</guid>
+      <description>Если уж быть совсем-совсем кратким, то встречайте Spacemacs. Это такой настроенный Emacs с клавиатурными сочетаниями от Vim.
+Иногда я снимаю шапочку управленца IT-Premium и одеваю другую свою шапочку из фольги и становлюсь программистом. У каждого программиста, мой дорогой читатель, есть второй инструмент по важности после головы — это редактор кода.
+Каким должен быть хороший редактор для кода? Удобным, быстрым, с подсказками и свистелками? Но, конечно же, самый хороший инструмент это тот, которым ты умеешь пользоваться.</description>
+    </item>
+    
+    <item>
+      <title>I discovered much faster way to speed up docker image creation.</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/i-discovered-much-faster-way-to-speed-up-docker-image-creation-c7485fbf6aec/</link>
+      <pubDate>Fri, 29 Apr 2016 14:10:13 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/i-discovered-much-faster-way-to-speed-up-docker-image-creation-c7485fbf6aec/</guid>
+      <description>I discovered much faster way to speed up docker image creation.
+Just use bundle package and all current gems will be copied into vendor/cache. When bundle install runs it discovers cached gems and runs much-much faster.</description>
+    </item>
+    
+    <item>
       <title>Прикольные очки с подсветкой</title>
       <link>https://mprokopov.github.io/2016/04/%D0%BF%D1%80%D0%B8%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BE%D1%87%D0%BA%D0%B8-%D1%81-%D0%BF%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%BE%D0%B9/</link>
       <pubDate>Fri, 22 Apr 2016 15:01:24 +0000</pubDate>
@@ -438,6 +714,27 @@ http://ternjs.net/doc/demo/#simple</description>
       <description>Идеально удобные очки при работе болгаркой в особо темных местах!
 
 Подсветка встроенная прямо на дужки очков.</description>
+    </item>
+    
+    <item>
+      <title>Очень хорошо пишете, легко читается.</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/%d0%be%d1%87%d0%b5%d0%bd%d1%8c-%d1%85%d0%be%d1%80%d0%be%d1%88%d0%be-%d0%bf%d0%b8%d1%88%d0%b5%d1%82%d0%b5-%d0%bb%d0%b5%d0%b3%d0%ba%d0%be-%d1%87%d0%b8%d1%82%d0%b0%d0%b5%d1%82%d1%81%d1%8f-575c5e67ecca/</link>
+      <pubDate>Sat, 06 Feb 2016 12:33:11 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/%d0%be%d1%87%d0%b5%d0%bd%d1%8c-%d1%85%d0%be%d1%80%d0%be%d1%88%d0%be-%d0%bf%d0%b8%d1%88%d0%b5%d1%82%d0%b5-%d0%bb%d0%b5%d0%b3%d0%ba%d0%be-%d1%87%d0%b8%d1%82%d0%b0%d0%b5%d1%82%d1%81%d1%8f-575c5e67ecca/</guid>
+      <description>Очень хорошо пишете, легко читается.
+Я для себя очень и очень полезным нашел редактор Emacs. Похоже, что для вас он может стать хорошим другом, поскольку обладает невероятной способностью к кастомизации, имеет собственное переключение раскладок, org-mode для Emacs даст фору любому дневнику/планировщику. К тому же очень комфортно использовать формулы и спецзнаки через LaTeX.
+Однозначно стоит потраченного на изучение времени.</description>
+    </item>
+    
+    <item>
+      <title>That’s probably essence of habits you should have to be successful.</title>
+      <link>https://mprokopov.github.io/posts/mprokopov/that-s-probably-essence-of-habits-you-should-have-to-be-successful-89b95cfbfdbb/</link>
+      <pubDate>Sat, 06 Feb 2016 07:01:13 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/mprokopov/that-s-probably-essence-of-habits-you-should-have-to-be-successful-89b95cfbfdbb/</guid>
+      <description>That’s probably essence of habits you should have to be successful.
+Thanks!</description>
     </item>
     
     <item>
@@ -468,6 +765,15 @@ http://ternjs.net/doc/demo/#simple</description>
       <guid>https://mprokopov.github.io/2015/12/%D0%BF%D0%BE%D1%81%D1%82-%D0%B2-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC-%D1%8F-%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D1%8E%D1%81%D1%8C-%D0%B2-%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8-devcards-figwheel/</guid>
       <description>Этот пост рекомендуется пропустить всем непрограммистам.
 Свой путь веб-разработчика я начал в 1999г. Это был PHP 3.0.3 + MySQL. С тех пор я попробовал довольно много инструментария для разработки, Parser 2 от студии Лебедева, а на Parser 3 до сих пор работает мой старый сайт http://nexus.org.ua/. С 2006г началась интрига с Ruby on Rails, который набрал популярности благодаря свежему на то время подходу convention over configuration. И это было круто, куча чужих уже готовых к употреблению кусков кода в виде ruby gems, которые легко подключались.</description>
+    </item>
+    
+    <item>
+      <title>Чат на вашем вебсайте с интеграцией в slack за 15 минут</title>
+      <link>https://mprokopov.github.io/posts/2015-11-02_-slack-15-8ee097578b6b/</link>
+      <pubDate>Mon, 02 Nov 2015 15:12:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/2015-11-02_-slack-15-8ee097578b6b/</guid>
+      <description>Так не хочется устанавливать еще одно ПО на компьютер (типа приватовского SiteHeart), а чат для вебсайта хочется. Мы же используем уже Slack для внутренних коммуникаций, который прекрасно интегрируется со всем и вся. Можно ли его использовать для наших целей? 10 минут на гугл и вуаля, вот он сервис Chatlio, который делает то, что нам нужно. Да еще и на тестовый период в 30 дней бесплатно. Думаю, за 30 дней мы сможем понять, добавляет ли это пользы процессу продаж.</description>
     </item>
     
     <item>
@@ -2613,12 +2919,133 @@ kern.ipc.shmall=2097152
     </item>
     
     <item>
+      <title></title>
+      <link>https://mprokopov.github.io/posts/draft_post-680791be7605/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/draft_post-680791be7605/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Configure Docker Engine logs to AWS CloudWatch</title>
+      <link>https://mprokopov.github.io/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitlab: continuous delivery setup for Clojure/Java with Docker</title>
+      <link>https://mprokopov.github.io/posts/draft_gitlab-continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/draft_gitlab-continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/</guid>
+      <description>Recently I was doing a https://github.com/mprokopov/it-service-sse and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.
+Long story short, here my .gitlab-ci.yml which took me a couple of days to figure out what is the “artifact” in Gitlab and how is it suppose to survive between artifact builds and docker builds.</description>
+    </item>
+    
+    <item>
+      <title>How to speed up ruby bundle gems fetch</title>
+      <link>https://mprokopov.github.io/posts/draft_how-to-speed-up-ruby-bundle-gems-fetch-1110de70ccbc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/draft_how-to-speed-up-ruby-bundle-gems-fetch-1110de70ccbc/</guid>
+      <description>Short answer: use https://github.com/geminabox/geminabox for caching gems on your own host, or in your local network.
+I was using bundler’s vendor/cache in docker container, but with such improvement my container size grown up to 1,2Gb very quickly.
+Supply following settings to your geminabox container
+RUBYGEMS_PROXY=true
+https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800</description>
+    </item>
+    
+    <item>
+      <title>One account. All of Google.</title>
+      <link>https://mprokopov.github.io/posts/draft_one-account-all-of-google-24ec9b332a4a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/draft_one-account-all-of-google-24ec9b332a4a/</guid>
+      <description>One account. All of Google.
+Originally published at www.blogger.com.</description>
+    </item>
+    
+    <item>
+      <title>One account. All of Google.</title>
+      <link>https://mprokopov.github.io/posts/draft_one-account-all-of-google-4681a5761d84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/draft_one-account-all-of-google-4681a5761d84/</guid>
+      <description>One account. All of Google.
+Originally published at www.blogger.com.</description>
+    </item>
+    
+    <item>
       <title>Pharo testing</title>
       <link>https://mprokopov.github.io/posts/2020-05-31-pharo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mprokopov.github.io/posts/2020-05-31-pharo/</guid>
       <description>Suprisingly, Pharo turns out to be interesting solution for managing web pages fully by the pure OO classes and objects.</description>
+    </item>
+    
+    <item>
+      <title>Ruby tricks</title>
+      <link>https://mprokopov.github.io/posts/draft_ruby-tricks-54c9925f2714/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/draft_ruby-tricks-54c9925f2714/</guid>
+      <description>Use binding object to run code within other object context.
+https://ruby-doc.org/core-2.2.0/Binding.html
+stderr output
+highlight your code and insert in presentation
+https://gist.github.com/jimbojsb/1630790</description>
+    </item>
+    
+    <item>
+      <title>Speeding up Ruby on Rails in docker</title>
+      <link>https://mprokopov.github.io/posts/draft_speeding-up-ruby-on-rails-in-docker-65c35f391389/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/draft_speeding-up-ruby-on-rails-in-docker-65c35f391389/</guid>
+      <description>Speeding up Ruby on Rails in docker
+ Bundle package will create a cached copy, so bundler in docker will not fetch all dependencies all the time.  bundle package
+ Create separate bundler data volume to perisist bundle between builds. Set BUNDLE_PATH to data volume. You can include this option just for development docker-compose.yml file and not to include in production.   version: “2” services: memcached: image: memcached networks: — back-tier redis: image: redis ports: [“6379”] networks: — back-tier db: image: mysql:5 volumes: — .</description>
+    </item>
+    
+    <item>
+      <title>U</title>
+      <link>https://mprokopov.github.io/posts/draft_u-d3d57598136a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/draft_u-d3d57598136a/</guid>
+      <description>U</description>
+    </item>
+    
+    <item>
+      <title>Useful Kubernetes tools and tips</title>
+      <link>https://mprokopov.github.io/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/</guid>
+      <description>Unlike docker-compose sometimes kubectl provides you better tooling for docker container access.
+Let me share with you my useful findings.
+With port-forward, you can easily connect to pods service and debug it.
+kubectl port-forward podname port For example
+kubectl port-forward sharepass-78d566f866-4dvv5 3000  kubectl port-forward sharepass-78d566f866–4dvv5 3000
+Forwarding from 127.0.0.1:3000 -&amp;gt; 3000
+Forwarding from [::1]:3000 -&amp;gt; 3000
+Handling connection for 3000
+Handling connection for 3000
+ This will forward port 3000 to localhost, so you can open URL http://localhost:3000 and enjoy access to your service.</description>
+    </item>
+    
+    <item>
+      <title>Why is my dev docker container so slow on macOS?</title>
+      <link>https://mprokopov.github.io/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos-9599b598746b/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos-9599b598746b/</guid>
+      <description>TLDR: because of the networking layer and how docker volumes implemented.</description>
     </item>
     
     <item>

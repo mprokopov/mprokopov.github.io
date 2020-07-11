@@ -82,6 +82,77 @@ Mon Jan 2 15:04:05 MST 2006
 
 <div class="article">
     <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/setting-up-a-php-development-environment-with-apache2-and-php-fpm-on-macos-catalina-21d74a90aeac/">Setting up a PHP development environment with Apache2 and php-fpm on macOS Catalina</a>
+    </h1>
+    <div class="date">09.06.2020</div>
+    <div><p>At the moment using Docker for development on macOS © has its own flaws, and in case you need good performance, there is a more or less complicated way to set up a local development environment with native <strong>apache2</strong> and <strong>php-fpm</strong> stack.</p>
+<p>Keep in mind, PHP 7.3 comes with macOS Catalina preinstalled, so you might not need to install PHP separately.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>brew <a href="https://brew.sh/" title="https://brew.sh/">https://brew.sh/</a></li>
+</ul>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Install PHP `brew install <a href="mailto:php@7.4">php@7.4</a>`</li>
+<li>Install apache `brew install apache2`</li>
+</ol>
+<p>At this point, you’ll have PHP v7.4 installed in `/usr/local/opt/php@7.4/`</p>
+<p>In case you need to keep several PHP versions, it can be done using ENV vars in .zshrc</p>
+<p>PHP_VERSION=7.4<br>
+export PATH=&rdquo;/usr/local/opt/php@${PHP_VERSION}/bin:/usr/local/opt/php@${PHP_VERSION}/sbin:$PATH&rdquo;<br>
+export LDFLAGS=&rdquo;-L/usr/local/opt/php@${PHP_VERSION}/lib&rdquo;<br>
+export CPPFLAGS=&rdquo;-I/usr/local/opt/php@${PHP_VERSION}/include&rdquo;</p>
+<h3 id="php-fpm-setup">PHP-FPM setup</h3>
+<p>Locate /usr/local/etc/php/7.4/php-fpm.d/www.conf and edit it to include environment variables. I also rebound default port 9000 to 9009 not to have conflicts with XDEBUG</p>
+<pre><code>clear_env = no listen = 127.0.0.1:9009
+</code></pre><h3 id="apache-setup">Apache setup</h3>
+<p>Locate /usr/local/etc/httpd/extra/httpd-vhosts.conf and edit it according to your project folder, here is my example</p>
+<p>Listen 80<br>
+&lt;FilesMatch \.php$&gt;<br>
+SetHandler &ldquo;proxy:fcgi://127.0.0.1:9009&rdquo;<br>
+<!-- raw HTML omitted --><br>
+&lt;VirtualHost *:80&gt;<br>
+ServerAdmin webmaster@localhost<br>
+ServerName obo.local<br>
+DocumentRoot /Users/mprokopov/oxid/project/source<br>
+ErrorLog /Users/mprokopov/oxid/project/source/error.log<br>
+CustomLog /Users/mprokopov/oxid/project/source/access.log combined<br>
+<!-- raw HTML omitted --><br>
+&lt;Directory &ldquo;/Users/mprokopov/oxid/*/source&quot;&gt;<br>
+Options Indexes FollowSymLinks<br>
+AllowOverride All<br>
+Require all granted<br>
+<!-- raw HTML omitted --></p>
+<h3 id="project-setup">Project setup</h3>
+<p>For some reason php-fpm doesn’t play well with _ENV variables, so I had to change them to use getenv() function instead, like on the example below</p>
+<p>config.inc.php of the project</p>
+<p>$dbName = getenv(&lsquo;DB_NAME&rsquo;)<br>
+$dbUser = getenv(&lsquo;DB_USER&rsquo;)<br>
+&hellip;</p>
+<h3 id="party-time">Party time</h3>
+<p>When you decide to work on the project, go to the source folder of the project and run the command</p>
+<p><code>1 DB_NAME=dbname DB_PASS=pass DB_USER=user php-fpm</code></p>
+<p>and navigate in the browser to <a href="http://localhost">http://localhost</a> address. It should work.</p>
+<p>You can also save some efforts on typing and get env variables from the .env file by running eval $(cat .env) php-fpminstead.</p>
+<h3 id="bonus-xdebug">Bonus: XDEBUG</h3>
+<p>In case you need XDEBUG, you can install it with command</p>
+<p><code>1 pecl install xdebug</code></p>
+<p>and edit /usr/local/etc/php/7.4/php.ini to include the following settings</p>
+<p>zend_extension=&quot;xdebug.so&rdquo;<br>
+xdebug.remote_enable=on<br>
+xdebug.remote_host=127.0.0.1<br>
+xdebug.remote_handler=dbgp<br>
+xdebug.idekey=geben<br>
+xdebug.remote_autostart=On<br>
+xdebug.profiler_enable_trigger = 1<br>
+xdebug.profiler_enable=<br>
+xdebug.profiler_output_dir = tmp<br>
+xdebug.profiler_output_name = &ldquo;callgrind.out.%p&rdquo;</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://mprokopov.github.io/posts/2020-06-02-pharo-raspberry-pi/">Awesome video using REPL with Pharo on Raspberry Pi</a>
     </h1>
     <div class="date">02.06.2020</div>
@@ -191,6 +262,107 @@ Mon Jan 2 15:04:05 MST 2006
 
 <div class="article">
     <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/how-to-increase-kubernetes-pvc-size-for-aws-ebs-b3d4a99c006a/">How to increase Kubernetes PVC size for AWS EBS</a>
+    </h1>
+    <div class="date">12.05.2020</div>
+    <div><p>It’s quite simple to increase PVC size since K8s 1.11</p>
+<p><code>kubectl describe pvc</code> and find your storage class.</p>
+<p>Name:          jenkins<br>
+Namespace:     jenkins<br>
+StorageClass:  jenkins-gp2<br>
+Status:        Bound<br>
+Volume:        pvc-473e3dbf-b759-11e9-9cbc-02a7fb0b6cca<br>
+Labels:        app.kubernetes.io/component=jenkins-master<br>
+app.kubernetes.io/instance=jenkins<br>
+app.kubernetes.io/managed-by=Tiller<br>
+app.kubernetes.io/name=jenkins<br>
+helm.sh/chart=jenkins-1.3.6<br>
+Annotations:   pv.kubernetes.io/bind-completed: yes<br>
+pv.kubernetes.io/bound-by-controller: yes<br>
+volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/aws-ebs<br>
+Finalizers:    [kubernetes.io/pvc-protection]<br>
+Capacity:      16Gi<br>
+Access Modes:  RWO<br>
+VolumeMode:    Filesystem<br>
+Mounted By:    jenkins-6b5c9bcbbb-gr2l5<br>
+Events:        <!-- raw HTML omitted --></p>
+<p><code>kubectl edit storageclass jenkins-gp2</code> add the following to your storage class</p>
+<p>allowVolumeExpansion: true</p>
+<p><code>kubectl edit pvc jenkins</code></p>
+<p>Change PVC size</p>
+<p>Name:          jenkins<br>
+Namespace:     jenkins<br>
+StorageClass:  jenkins-gp2<br>
+Status:        Bound<br>
+Volume:        pvc-473e3dbf-b759-11e9-9cbc-02a7fb0b6cca<br>
+Labels:        app.kubernetes.io/component=jenkins-master<br>
+app.kubernetes.io/instance=jenkins<br>
+app.kubernetes.io/managed-by=Tiller<br>
+app.kubernetes.io/name=jenkins<br>
+helm.sh/chart=jenkins-1.3.6<br>
+Annotations:   pv.kubernetes.io/bind-completed: yes<br>
+pv.kubernetes.io/bound-by-controller: yes<br>
+volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/aws-ebs<br>
+Finalizers:    [kubernetes.io/pvc-protection]<br>
+Capacity:      16Gi &lt;======= this was 8Gi<br>
+Access Modes:  RWO<br>
+VolumeMode:    Filesystem<br>
+Mounted By:    jenkins-6b5c9bcbbb-gr2l5<br>
+Events:        <!-- raw HTML omitted --></p>
+<p>Delete pod which is using this PVC</p>
+<p><code>kubectl delete pod jenkins-34252353-2f4gh</code></p>
+<p>After the pod is recreated you’ll see the new size for your PVC!</p>
+<p><img src="img/1__snCy1vfctXo51mONTJa11A.png" alt=""></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/my-new-modern-web-site-stack-f9645e78ae16/">My new modern web site stack</a>
+    </h1>
+    <div class="date">12.04.2020</div>
+    <div><p>In the age of Kubernetes and all this fancy stuff, I decided to make something really simple and as static as possible. The modern, cutting-edge tech stack.</p>
+<p>This is a story about <a href="https://IT-Premium.com.ua">https://it-premium.com.ua</a> reincarnation featured with responsiveness and saving all the functionality it had before. Though it wasn’t a simple, but very interesting journey.</p>
+<p>Here are the specs I wanted to preserve:</p>
+<ul>
+<li>Multilanguage support, due to Ukrainian language law enforcement we had to introduce one more supported language among English and Russian</li>
+<li>PDF dynamic generation based on what user was chosen</li>
+<li>Dynamic tariff calculations with dependencies on the services of user’s choice</li>
+<li>Easy data management. It shouldn’t be hard to fix some figures by someone else.</li>
+<li>Easy localization management.</li>
+</ul>
+<h3 id="the-oldstack">The old stack</h3>
+<p>At first, it was a Ruby on Rails 4.2 application and it used the following gems:</p>
+<ul>
+<li>coffee-sass + compass, as we ordered the design and layout from the third-party and they used sass</li>
+<li>jquery, yeah, modals, transitions</li>
+<li>knockout-js, yeah top-notch and all the hotness that time</li>
+<li>Paloma (OMG), look ma, no hands and javascript vars from the backend to frontend!</li>
+<li>delayed job, needed for queued PDF generation in the background</li>
+<li>delayed_job_active_record + daemons</li>
+<li>prawn for PDF creation</li>
+<li>slim-rails, HTML markup even slimmer then HAML!</li>
+<li>gibbon, this is for talking to the Mailchimp API</li>
+</ul>
+<p>I had three distinct layouts and page internals for each language. At some point, they diverged quite significantly. Entropy law, you know.</p>
+<p>All this was containerized into two docker containers, — first app and second background worker, and all were running on the quite ordinary docker host. Do you probably see a lot of moving parts, complex JSON wiring with Paloma and orchestration issues?</p>
+<h3 id="the-modern-but-intermediate-stack">The modern, but intermediate stack</h3>
+<p>My first quick-and-dirty attempt for a rewrite was performed using the same plane Knockout JS, but for the website itself, I decided to give a try for Hugo, the golang based static blog engine generator.</p>
+<p>The dynamic PDF generation task is a definitely good target for delayed processing by serverless technologies. So AWS lambda was a good pick for that. AWS supports lots of different languages nowadays, but I stopped on using NodeJS 10 with libraries for <a href="https://www.npmjs.com/package/@sendgrid/mail">SendGrid API</a> and <a href="https://pdfmake.github.io/docs/">Pdfmake</a>. It turned out to support different localizations for PDFs I ought to get language string from params.</p>
+<p>Hugo was a great choice. The multilanguage support, easy YAML, JSON data manipulation. Moreover, because of its static nature we can fully embrace static hosting solutions like <strong>AWS S3</strong> or the <strong>Github</strong>. Hugo supports natively the deployment to AWS S3, but when I started testing it turned out to be quite slow and not really suitable for static website hosting. Most probably it required the AWS CloudFront before, but I decided to give Github a try with static hosting and it really worked perfectly.</p>
+<h3 id="the-lateststack">The latest stack</h3>
+<p>Everything seemed perfect except KnockoutJS. Yeah, it still works, but you know, this two-way binding and using all these data-bind attributes wasn’t cool enough. Putting the vars from HTML into window.variable to pass this a parameter to the Javascript. Something was wrong with this.</p>
+<p>I started playing with plain React and setting up the <a href="https://www.valentinog.com/blog/babel/">environment from this article</a>. You know what? It was too much for me to set up all this stuff in 2020. So I gave my old friend ClojureScript a try.</p>
+<p><strong>shadow-clj</strong> with <strong>reagent</strong>, <strong>http-cljs</strong> libraries. That’s it, nothing else. re-frame is also a good thing, but I didn’t have too much state management here.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>This was really-really enjoying and satisfying programming experience with the confidence of “doing the right things in the right way”. The released <strong>main.j</strong>s takes about 482Kb, which is fine. All my .cljs files are 331 CLOC and probably can be less.</p>
+<p>Hugo allows keeping things simple and static. It has multilanguage support, JSON generation from my YAML data files.</p>
+<p>Github hosts my website for free and gives a free SSL certificate. AWS Lambda costs are far from being noticeable. Yet all the architecture is robust and doesn’t require any management efforts from my side. Github Actions made website publishing easy and other people actually fix the contents right from the repository. I’m very satisfied with the decisions I made.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://mprokopov.github.io/posts/2020-03-03-my-recent-tasks/">My recent tasks</a>
     </h1>
     <div class="date">03.03.2020</div>
@@ -239,6 +411,16 @@ Works best with Alfred 4 using mapped hotkey.</p>
 
 <div class="article">
     <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/the-bad-thing-about-rails-is-that-by-default-it-suggests-using-own-messy-design-patterns-like-fat-37d81b3e7def/">The bad thing about Rails is that by default it suggests using own messy design patterns like fat…</a>
+    </h1>
+    <div class="date">15.09.2019</div>
+    <div><p>The bad thing about Rails is that by default it suggests using own messy design patterns like fat models. I mean all these callbacks in AR, observers and everything that is good for a simple blog but fails for a big application.</p>
+<p>You have to use a very little part of Rails to apply DDD concepts.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://mprokopov.github.io/2019/01/%D0%B4%D0%B2%D0%B0-%D0%B4%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D1%85-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BD%D1%83%D0%B6%D0%BD%D0%BE-%D0%B8%D0%B7%D1%83%D1%87%D0%B8/">Два древних языка, которые нужно изучить программисту</a>
     </h1>
     <div class="date">08.01.2019</div>
@@ -269,6 +451,149 @@ Works best with Alfred 4 using mapped hotkey.</p>
 <p>Трагедия SmallTalk – это маркетинговый провал, целая индустрия могла пойти другим направлением и быть лучше, чем сейчас.</p>
 <p> </p>
 <p>Я уверен, что по-настоящему выдающиеся языки содержат правильные фундаментальные концепции, минимум синтаксиса и максимум гибкости и эффективности. Такими языками несомненно являются Lisp и SmallTalk.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">How to improve ruby code with dup and tap methods</a>
+    </h1>
+    <div class="date">06.06.2018</div>
+    <div><p>Here is a piece of my old code, but it’s definitely could be improved.</p>
+<p>def to_params<br>
+h = ticket_params<br>
+h[:activity] = extract_activity if extract_activity<br>
+h[:event] = extract_event if extract_event<br>
+h.delete(:state_event)<br>
+h.delete(:activities_attributes)<br>
+h<br>
+end</p>
+<p>As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?</p>
+<p>Let’s see, h= ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy?</p>
+<p>It turns out we have dup method which creates a copy of an object, this is exactly what we wanted. Then, we have tap method, which allows us to dive in object internals and return then itself. Here is whole new piece of code after refactoring.</p>
+<p>def to_params<br>
+ticket_params.dup.tap do |params|<br>
+params[:activity] = extract_activity if extract_activity<br>
+params[:event] = extract_event if extract_event<br>
+params.delete(:state_event)<br>
+params.delete(:activities_attributes)<br>
+end<br>
+end</p>
+<p>Much better now and we do not have any redundant variable!</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-prolog-e0878ac7fe40/">Введение в Prolog</a>
+    </h1>
+    <div class="date">29.05.2018</div>
+    <div><p>Хочу такой туториал, с которым все понятно, куда коней запрягать. А его нет. Напишу тогда свой.</p>
+<p>Итак, Пролог это не обычный язык программирования. Самый лучший пример использования это решение логической задачи типа</p>
+<h3 id="5-разных-человек-в-5-разных-домах-разного-цвета-курят-5-разных-марок-сигарет-выращивают-5-разных-видов-животных-пьют-5-разных-видов-напитков-вопрос-кто-выращивает-рыбок">5 разных человек в 5 разных домах разного цвета, курят 5 разных марок сигарет, выращивают 5 разных видов животных, пьют 5 разных видов напитков. Вопрос: кто выращивает рыбок?</h3>
+<p><strong>Подсказки:</strong></p>
+<ul>
+<li>Норвежец живет в первом доме.</li>
+<li>Англичанин живет в красном доме.</li>
+<li>Зеленый дом находится левее белого.</li>
+<li>Датчанин пьет чай.</li>
+<li>Тот, кто курит Rothmans, живет рядом с тем, кто</li>
+<li>выращивает кошек.</li>
+<li>Тот, кто живет в желтом доме, курит Dunhill.</li>
+<li>Немец курит Marlboro.</li>
+<li>Тот, кто живет в центре, пьет молоко.</li>
+<li>Сосед того, кто курит Rothmans, пьет воду.</li>
+<li>Тот, кто курит Pall Mall, выращивает птиц.</li>
+<li>Швед выращивает собак.</li>
+<li>Норвежец живет рядом с синим домом.</li>
+<li>Тот, кто выращивает лошадей, живет в синем доме.</li>
+<li>Тот, кто курит Philip Morris, пьет пиво.</li>
+<li>В зеленом доме пьют кофе.</li>
+</ul>
+<p>Для решения задач такого типа очень подходит Prolog.<br>
+Язык оперирует всего тремя понятиями, это Факт (Fact), Правило (Rule) и Запрос (Query).</p>
+<h3 id="факт">Факт.</h3>
+<p>Как выглядит факт? Простое утверждение, без условий.</p>
+<p>Пример: Норвежец живет в первом доме.</p>
+<h3 id="правило">Правило.</h3>
+<p>Правило это когда в выражении есть неизвестное и его нужно вычислить. <br>
+Пример: Зеленый дом находится левее белого.</p>
+<p>Так как неизвестно, где находится белый дом, это утверждение нужно вычислить. Это и есть правило.</p>
+<h3 id="запрос">Запрос.</h3>
+<p>Пример: Кто выращивает рыбок?</p>
+<p>Здесь все понятно, система должна найти ответ на запрос используя факты и правила.</p>
+<p>Написание программы на прологе и есть нахождение ответа на запрос используя для этого правила и факты. Создание таких правил и фактов и есть написание программы.</p>
+<p>Где еще используется Prolog? В языке запросов Datalog в Datomic и Cascalog на Hadoop.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/2018-05-27_-dbe59a2cbade/">Пожалуй, самым точным определением будет слово «осознанность».</a>
+    </h1>
+    <div class="date">27.05.2018</div>
+    <div><p>Пожалуй, самым точным определением будет слово «осознанность». Нон-конформизм это тоже своего рода крайность, так как бывает сопротивление ради сопротивления, особенно в пубертатном возрасте. Уметь оценивать и признавать противоположную точку зрения, вот что по-настоящему ценно.</p>
+<p>Некоторые мои знакомые приходят к осознанности разными путями, кто-то через стремные духовные практики, кто-то через упражнения с ножом или бритвой.</p>
+<p>Но всегда осознанность означает правильно настроенный жизненный компас.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/">Brief introduction to the Kubernetes.</a>
+    </h1>
+    <div class="date">26.05.2018</div>
+    <div><h3 id="kubernetes-is-a-winner-in-docker-cloud-orchestration-so-lets-get-a-brief-introduction-in-what-it-is-and-what-kind-of-problems-itsolves">Kubernetes is a winner in docker cloud orchestration, so let’s get a brief introduction in what it is and what kind of problems it solves.</h3>
+<p>Kubernetes is a set of tools designed to solve a problem of deployment of your lovely tailor-made application to a cloud. It does not matter which cloud you choose, AWS, Azure or Google, or even IBM, because Kubernetes provides you with a set of tools which are platform independent.</p>
+<p><img src="img/1__fw8YJnfF32dWsX__beQpWOw.png" alt=""></p>
+<p>For almost every application you need to talk to a database, to store some assets, to get requests and make responses to users with a useful content. So, basically you need to have a ‘storage’ for storing files, a ‘network’ to get requests and make responses to users and a ‘computing power with memory’ to run your application. All of this is quite simple if you run your application on a single computer (node), you have local storage on an HDD, i.e. a filesystem, you have a CPU and memory to run your application and a single network interface to talk to users and other services like external database or api. Suddenly you decide to deploy your application to some cloud provider and users start using your application on a huge scale and then you decide to scale your application across cloud nodes.</p>
+<p>This is still not that moment when you need Kubernetes, because you can use cloud provided facilities like Amazon S3 for storage, Amazon RDS for automatically scaled databases and more Amazon EC2 instances to run your applications.</p>
+<p>Wait, why do we need Kubernetes then? Well, every quite complex application has it’s own technological stack and different unique Continue Integration and Continue Deployment processes. So, if you work for a large enterprise which in turn has a lot of such custom made applications, there will be one day when the enterprise decides to make unification of rollout and upgrade processes to reduce costs and create special forces, which are responsible for deployment and maintenance. We start calling them DevOps.</p>
+<p>Here is that moment, when everything becomes more and more complicated.</p>
+<p>These guys have already started dreaming about better abstractions for unification of application deployment and invented a concept of Docker. The Docker is about having everything application needs to run in one ‘container’ which can be stored and transferred over a network. Nevertheless every nifty feature comes at its price. For the luxury of having platform independent movable containers we pay the price with much larger application size and extra build step. Both are very time and resource consuming.</p>
+<p>Okay, now we have a bunch of containers, cool. How should we monitor all of them and restart when they fail? Moreover we also run containers across different servers and docker does not give us a way of how one part of our application in one container should connect across network and talk to a part of application in another container. There is nothing more than cleaning up failed docker containers and stalled images manually or in semi-automated, controlled by human, way.</p>
+<p>And there was a blood. A lot of different third-party solutions and even Docker themselves were trying to compete and provide better tools for solving these problems. And finally more and more people started considering Kubernetes by Google as preferred solution.</p>
+<p>Let me briefly describe a concepts of Kubernetes.</p>
+<ul>
+<li><strong>minikube</strong> is an utility to get your home-made cluster up and running as a virtual machine on your single computer</li>
+<li><strong>kubectl</strong> is an utility to control every operation on a cluster, which is up by running minikube.</li>
+<li>In <strong>Deployment</strong> you specify information about which docker image to download and run, and what volumes and ports this particular container will use. <strong>Deployment</strong> will spawn Pods.</li>
+<li>Basically <strong>Pod</strong> is a running container, you can just delete running <strong>Pod</strong> and new one will be created automatically. You can specify in <strong>Deployment</strong> how many exactly the same containers you need to spawn.</li>
+<li>You need to create <strong>Service</strong> in two cases. First, when you want provide DNS name for your container, for example, <strong>redis</strong>. This will allow other containers to discover and connect to <strong>redis</strong> by name resolution. Second, when you want to make your application visible from outside of your cloud, i.e. ‘publish’ application for users.</li>
+<li>You should use <strong>Persistence Volume Claim</strong> if you have data in your application which should survive across container deletions. Usually database container will store it’s data in such volumes. Otherwise say ‘Hasta la vista’ to all the data in your live containers, because they are intended to be ephemeral, easily killed and spawned again when necessary.</li>
+<li>Another nice concept in Kubernetes is a <strong>Secret</strong>. This is spatial place and API to store your credentials and settings. You can refer to them in <strong>Deployment</strong>, when you need, for example, to supply database password in one of environment variables.</li>
+</ul>
+<p>If you still have intention to try deployment to Kubernetes cluster, start playing with minikube and investigate this nice example of deployment Wordpress + MySql <a href="https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/">https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/</a></p>
+<p><em>Originally published at</em> <a href="http://blog.it-premium.com.ua/all/brief-introduction-to-the-kubernetes/"><em>blog.it-premium.com.ua</em></a><em>.</em></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/%d1%81%d0%be%d0%b3%d0%bb%d0%b0%d1%81%d0%b5%d0%bd-%d0%bf%d0%be-%d0%b2%d1%81%d0%b5%d0%bc-%d0%bf%d1%83%d0%bd%d0%ba%d1%82%d0%b0%d0%bc-2285686116fa/">Согласен по всем пунктам!</a>
+    </h1>
+    <div class="date">28.03.2018</div>
+    <div><p>Согласен по всем пунктам!</p>
+<p>Я для себя выделил ещё один признак, это умение проводить собственные размышления над проблемой, особенно если они противоположны общепринятой точке зрения. И, конечно, умение вести дискуссию пользуясь логическими построениями, вместо «ойнувсе».</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/noteworthy-clojure-projects-634af849e01d/">Noteworthy Clojure projects</a>
+    </h1>
+    <div class="date">18.01.2018</div>
+    <div><p>Recently I again dived deeply into Clojure development with my <a href="https://github.com/mprokopov/privat24-manager">Bank Statements — ERP sync tool</a> and started to investigate what’s new in Clojure world. It appears a lot of great things happend in 2017!</p>
+<p>Every of following tools drops my jaw down. Here is my list:</p>
+<ul>
+<li><a href="https://sekao.net/lightmod/">Lightmod</a> and <a href="https://sekao.net/nightcode/">Nightcode</a> really great editors for Clojure/Clojurescript beginners. Zach Oakes included useful examples to jump into Clojure development train.</li>
+<li><a href="https://github.com/oakes/Dynadoc">Dynadoc</a>, documentation exploration tool which makes your work with documentation more effective and interactive.</li>
+<li><a href="https://github.com/binaryage/dirac">Dirac</a> is a Clojurescript REPL right in your Chrome browser!</li>
+<li><a href="https://github.com/cognitect-labs/vase">Vase</a> a rapid declarative Pedestal and Datomic based microservice development tool by guys from Cognician.</li>
+<li><a href="https://github.com/boot-clj/boot">Boot</a> build tool became very popular because of custom and modular build workflow. When you feel yourself limited by Leiningen, give Boot a try. It suites even for <a href="https://github.com/hashobject/perun">blog publishing</a>!</li>
+</ul>
+<p><img src="img/1__D0qPe2__BxxNJKMwIS7GMXA.png" alt=""></p>
+<p>Did you find anything noteworthy for your Clojure development? Please, comment.</p>
 </div>
 </div>
 
@@ -352,6 +677,281 @@ Works best with Alfred 4 using mapped hotkey.</p>
 
 <div class="article">
     <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/quick-fix-for-rubygems-ssl-error-5126c73cb7f6/">Quick fix for rubygems SSL error</a>
+    </h1>
+    <div class="date">24.10.2017</div>
+    <div><p>In case you get</p>
+<blockquote>
+<p>ERROR: SSL verification error at depth 2: certificate has expired (10) <br>
+ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA expired at 2014–01–28T12:00:00Z <br>
+ERROR: SSL verification error at depth 2: certificate has expired (10) <br>
+ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA expired at 2014–01–28T12:00:00Z <br>
+ERROR: SSL verification error at depth 2: certificate has expired (10) <br>
+ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA expired at 2014–01–28T12:00:00Z <br>
+ERROR: Could not find a valid gem ‘cocoapods’ (&gt;= 0), here is why: <br>
+ Unable to download data from <a href="http://help.rubygems.org/discussions/problems/25308/r?go=aHR0cHM6Ly9ydWJ5Z2Vtcy5vcmcv" title="Link outside Support: https://rubygems.org/">https://rubygems.org/</a> — SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (<a href="http://help.rubygems.org/discussions/problems/25308/r?go=aHR0cHM6Ly9hcGkucnVieWdlbXMub3JnL3NwZWNzLjQuOC5neg==" title="Link outside Support: https://api.rubygems.org/specs.4.8.gz">https://api.rubygems.org/specs.4.8.gz</a>) <br>
+ERROR: SSL verification error at depth 2: certificate has expired (10) <br>
+ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA expired at 2014–01–28T12:00:00Z</p>
+</blockquote>
+<p>Do this to fix:</p>
+<p>brew postinstall openssl</p>
+<p>cp -f /usr/local/etc/openssl/cert.pem /etc/openssl/cert.pem</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c/">Compare Postgres speed within Docker and without</a>
+    </h1>
+    <div class="date">07.09.2017</div>
+    <div><p>I decided to compare if there will be significant differences between dockerized and non-dockerized Postgres.</p>
+<p>Here is my test environment:</p>
+<ul>
+<li>rails 5 application with rich test suite, about 628 examples,</li>
+<li>macOS Sierra 10.12.6,</li>
+<li>Docker 17.06.0-ce-mac19.</li>
+</ul>
+<p>I use Postgres docker version alpine 9.6 which is 37,7Mb and raw Postgres 9.6 with GUI for Mac which is 379Mb.</p>
+<p>Rails run locally, database.yml connects to the localhost postgres with pool 5 using gem pg (0.21.0).</p>
+<p>Here is my docker-compose config</p>
+<p>db:<br>
+image: postgres:alpine<br>
+ports:<br>
+- 5432:5432<br>
+adminer:<br>
+image: adminer<br>
+ports:<br>
+- 8080:8080<br>
+links:<br>
+- db</p>
+<p>With docker<br>
+Finished in 46.86 seconds (files took 17.77 seconds to load)<br>
+628 examples, 0 failures</p>
+<p>Without docker, <br>
+Finished in 31.35 seconds (files took 8.38 seconds to load)<br>
+628 examples, 0 failures</p>
+<p>And again withDocker<br>
+Finished in 41.64 seconds (files took 8.24 seconds to load)<br>
+628 examples, 0 failures</p>
+<p>And again without Docker<br>
+Finished in 31.53 seconds (files took 8.01 seconds to load)<br>
+628 examples, 0 failure</p>
+<p>And again with Docker<br>
+Finished in 41.77 seconds (files took 8.51 seconds to load)<br>
+628 examples, 0 failures</p>
+<p>So its 41,5 seconds for Docker version and 31,53 seconds without Docker in average.<br>
+This is 24% difference in particular rails rspec case, which is quite significant as for comparison and IMHO is not so significant for the testing loop.</p>
+<p>At least this is a price you pay for the container portability and convenience.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/gitlab-continuous-delivery-setup-for-clojure-java-with-docker-472320d5aa52/">Gitlab: continuous delivery setup for Clojure/Java with Docker</a>
+    </h1>
+    <div class="date">05.09.2017</div>
+    <div><p>Recently I was doing a <a href="https://github.com/mprokopov/it-service-sse">microservice with Server Sent Events and Pedestal</a> in Clojure and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.</p>
+<p>Long story short, here my .gitlab-ci.yml which took me a couple of days to figure out what is the “artifact” in Gitlab and how is it suppose to survive between artifact builds and docker builds.</p>
+<p>My current setup has two stages, java build and then docker build. At the first stage we use clojure:lein-2.7.1-alpine, which is quite small, to build jar file from the sources. Then we try to assemble docker container and reuse artifact from the previous build. I was lucky enough to discover that artifact could be saved with help of “cache” option in YML file which preserves folder in “path” for the next build.</p>
+<p><img src="img/1__a__fjMmk2b1E0JMs66O00UQ.png" alt=""></p>
+<p>So here is the working Gitlab CI configuration which builds JAR as artifact and uploads to the Pipeline page and then creates docker container and publishes it to the internal Gitlab registry.</p>
+<p>stages:</p>
+<ul>
+<li>
+<p>jar</p>
+</li>
+<li>
+<p>docker</p>
+</li>
+</ul>
+<p>cache:</p>
+<p>paths:</p>
+<pre><code>- target
+</code></pre>
+<p>jar:</p>
+<p>image: clojure:lein-2.7.1-alpine</p>
+<p>stage: jar</p>
+<p>script:</p>
+<pre><code>- lein deps
+
+- lein uberjar
+</code></pre>
+<p>artifacts:</p>
+<pre><code>paths:
+
+  - target/it-service-sse-0.0.1-SNAPSHOT-standalone.jar
+
+expire\_in: 1 week
+</code></pre>
+<p>build-master:</p>
+<p>stage: docker</p>
+<p>image: docker:latest</p>
+<p>services:</p>
+<pre><code>- docker:dind
+</code></pre>
+<p>script:</p>
+<pre><code>- docker login -u &quot;$CI\_REGISTRY\_USER&quot; -p &quot;$CI\_REGISTRY\_PASSWORD&quot; $CI\_REGISTRY
+
+- docker build --pull -t &quot;$CI\_REGISTRY\_IMAGE&quot; .
+
+- docker push &quot;$CI\_REGISTRY\_IMAGE&quot;
+</code></pre>
+<p>I hope this will save you a couple of days for debug.</p>
+<p>Happy Continuous Delivery!</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/fully-automated-docker-mysql-database-backup-from-remote-host-bd02e24b5009/">Fully automated docker mysql database backup from remote host</a>
+    </h1>
+    <div class="date">17.08.2017</div>
+    <div><p>The main idea is to have fully automated docker database backup from low end D-Link NAS DNS-320. I believe, that host, which hosts backups should be responsible for doing whole backup process, not the web-servers, which nowadays designed to be ephemeral.</p>
+<p>Solution design is following:</p>
+<ol>
+<li>My backup box will copy backup.sh script to the remote coreos-03 host.</li>
+<li>Then remote host copies backup.sh script into database container.</li>
+<li>Backup box executes docker command «docker exec itservice_db_1 backup.sh» on coreos-03 host, which, in turn, executes mysqlbackup. SQL dump is captured directly from command output and then gzipped.</li>
+<li>Rsnapshot saves folder with gzipped SQL dump and rotates old backup folders as necessary.</li>
+</ol>
+<p>So, we will need only</p>
+<p>Here is my working implementation:</p>
+<p>script backup.sh</p>
+<pre><code>#!/bin/bash ## env vars are already in docker container 
+</code></pre><pre><code>/usr/bin/mysqldump -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE
+</code></pre><p>script backup-coreos-itservice.sh</p>
+<pre><code>/ffp/bin/scp /ffp/home/root/backup.sh core@coreos-03:/home/core/itservice/backup.sh 
+</code></pre><pre><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker cp /home/core/itservice/backup.sh itservice_db_1:/usr/local/bin/backup.sh&quot; 
+</code></pre><pre><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker exec itservice_db_1 /usr/local/bin/backup.sh&quot; &gt; latest.sql 
+</code></pre><pre><code>/opt/bin/tar czf itservice-sql-dump.tar.gz latest.sql --remove-files
+</code></pre><p>rsnapshot.conf</p>
+<pre><code>backup_script	/mnt/HD/HD_a2/ffp/home/root/backup-coreos-itservice.sh	coreos-03/itservice_db_1
+</code></pre><p>crontab</p>
+<pre><code>0 */4 * * * rsnapshot hourly 30 3 * * * rsnapshot daily 0 3 * * 1 rsnapshot weekly 30 2 1 * * rsnapshot monthly
+</code></pre><p>Keep in mind, that you will need to generate ssh keys for your backup box and add it to authorized_keys on coreos-03 host, but this is out of scope this article.</p>
+<p><em>Originally published at</em> <a href="http://blog.it-premium.com.ua/all/fully-automated-mysql-database-dump-backup-from-remote-host/"><em>blog.it-premium.com.ua</em></a><em>.</em></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/ansible-containers-d89258cdf5de/">Ansible Containers</a>
+    </h1>
+    <div class="date">15.08.2017</div>
+    <div><p>Long story short. Ansible decided to create separate orchestration tool for the managing application containers, which is obviously a mainstream now. And this is straightforward next step after development tools for server state management like Ansible.</p>
+<p><a href="https://github.com/ansible/ansible-container" title="https://github.com/ansible/ansible-container"><strong>ansible/ansible-container</strong><br>
+_ansible-container - Ansible Container is a tool to build Docker images and orchestrate containers using only Ansible…_github.com</a><a href="https://github.com/ansible/ansible-container"></a></p>
+<p>But I was really disappointed with Ansible 2.3, because docker_service module is still broken. I tried all possible combinations of docker, docker-py and docker-compose python modules for ansible on remote host with CoreOS and all of combinations failed with different weird errors like “Dockerfile could not be found” and so on. After all the day trying hard to tackle that issues I gave up and wrote simple “docker-compose up” ansible command :(</p>
+<p>And this time I decided to give an ansible-container a try. And … ta da … it fails right away from the start.</p>
+<p>Starting Docker build of Ansible Container Conductor image (please be patient)…</p>
+<p>Failed with</p>
+<p>ERROR Unknown exception<br>
+Traceback (most recent call last):<br>
+File “/Library/Python/2.7/site-packages/container/cli.py”, line 268, in __call__<br>
+getattr(core, u’hostcmd_{}’.format(args.subcommand))(**vars(args))<br>
+File “/Library/Python/2.7/site-packages/container/__init__.py”, line 28, in __wrapped__<br>
+return fn(*args, **kwargs)<br>
+File “/Library/Python/2.7/site-packages/container/core.py”, line 150, in hostcmd_build<br>
+cache=kwargs[‘cache’]<br>
+File “/Library/Python/2.7/site-packages/container/docker/engine.py”, line 82, in __wrapped__<br>
+return fn(self, *args, **kwargs)<br>
+File “/Library/Python/2.7/site-packages/container/__init__.py”, line 28, in __wrapped__<br>
+return fn(*args, **kwargs)<br>
+File “/Library/Python/2.7/site-packages/container/docker/engine.py”, line 744, in build_conductor_image<br>
+nocache=not cache)<br>
+File “/Library/Python/2.7/site-packages/docker/models/images.py”, line 172, in build<br>
+raise BuildError(event.get(‘error’) or event)<br>
+BuildError: The command ‘/bin/sh -c python /get-pip.py &amp;&amp; mkdir -p /etc/ansible/roles /_ansible/src &amp;&amp; cd /usr/local/bin &amp;&amp; tar -xz — strip-components=1 -f /tmp/docker.tgz’ returned a non-zero code: 2</p>
+<p>So, we will wait for the product to become more stable to give a try one more time. Because I can not understand where to go with this weird errors.</p>
+<p>One more leaking abstraction.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/2017-08-11_-d42877e2368d/">О красоте кода</a>
+    </h1>
+    <div class="date">11.08.2017</div>
+    <div><p>Когда программист программирует, он начинает разбивать код на модули только потому, что имеет ограничение в своем неокортексе на количество одновременных элементов в памяти. А я ведь когда-то писал на ассемблере, и легкой прогулкой это никак нельзя было назвать, в основном из-за простыней однообразного кода, в котором было легко потеряться.</p>
+<p>Из этого ограничения появились концепции ООП. Но с ООП тоже беда. Увеличивается количество уровней абстракции. И тогда в большом проекте удержать всю идею в голове становится невозможно. Функционального подхода к разработке это тоже касается, но в меньшей мере. В Clojure, например, гораздо более выразительно и логично можно бить код на куски.</p>
+<p>Для этого есть:</p>
+<p>1. Конечно, функции.</p>
+<p>2. Неймспейсы.</p>
+<p>— —</p>
+<p>3. Неймспейсы (читай файлы) легко и непринужденно раскладываются по каталогам.</p>
+<p>Таким образом добиться стройности приложения можно ставя себе такие же ограничения как и у нашего неокортекса.</p>
+<p>- Не более 7 строк на функцию.</p>
+<p>- Не более 7 функций в неймспейсе (модуле).</p>
+<p>- Не более 7 модулей в каталоге.</p>
+<p>И это сделать легче, чем кажется. В какой-то момент это становится привычкой и второй натурой.</p>
+<p>Кстати, если вы дочитали до этого места и вам все еще интересно узнать про Clojure, 2 сентября в Rails Reactor мы делаем Clojure Workshop <a href="https://paper.dropbox.com/doc/Kyiv-Clojure-Workshop-3-2.09.17-HLAuCpI8GjWHUtI9ScRy1">https://paper.dropbox.com/doc/Kyiv-Clojure-Workshop-3-2.09.17-HLAuCpI8GjWHUtI9ScRy1</a> приходите.</p>
+<p>А вот чем помочь ООП даже не знаю. Господь, жги :)</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/deployment-of-clojure-app-to-production-with-docker-9dbffeac6ef5/">Deployment of Clojure app to a production with Docker</a>
+    </h1>
+    <div class="date">03.08.2017</div>
+    <div><p>Clojure deployment to a production itself not a very complicated task, but with the Docker it becomes more flexible solution. You can deploy your app to the Amazon EC2 or even to Amazon EC2 Container Service just in minutes! In this example we have Ring <strong>web server</strong> listening on <strong>3000 port</strong> an some public resources, like bootstrap css and js in resources/public folder, and application-specific settings in resources/settings folder.</p>
+<p><strong>Caution:</strong> your Ring web server should be configured to listen on 0.0.0.0 address in order to play nicely with docker.</p>
+<p>First, assume we will deploy to the production compiled app as an executable uberjar file. So, you should make sure that your application can be compiled with command</p>
+<p>lein uberjar</p>
+<p>this will produce the new JAR file in the <strong>target</strong> folder, like following <strong>target/clojure-workshop-0.1.0-SNAPSHOT-standalone.jar</strong>.</p>
+<p>Check that your executable is running</p>
+<p>java -jar target/clojure-workshop-0.1.0-SNAPSHOT-standalone.jar</p>
+<p>this should run your Clojure application. Keep in mind, that the entrypoint in your application is specified in <strong>project.clj</strong> file. In the <strong>clojure-workshop.core</strong> you should have private <strong>“main”</strong> function defined.</p>
+<p>:main clojure-workshop.core</p>
+<p>In case all above is okay, you can proceed with the Dockerfile creation.</p>
+<h3 id="creation-of-the-docker-container">Creation of the docker container</h3>
+<p>FROM java:8-alpine<br>
+RUN mkdir -p /app /app/resources<br>
+WORKDIR /app<br>
+COPY target/uberjar/*-standalone.jar .<br>
+COPY resources/public resources/public<br>
+CMD java -jar clojure-workshop-0.1.0-SNAPSHOT-standalone.jar<br>
+EXPOSE 3000</p>
+<p>Then build and tag your image</p>
+<p>docker build -t mprokopov/clojure-workshop .</p>
+<p>And try to launch</p>
+<p>docker run -p 3000:3000 mprokopov/clojure-workshop</p>
+<p>In case you did everything right you can enjoy your app response in browser <a href="http://localhost:3000">http://localhost:3000</a>. Keep in mind, that the docker assigns different internal network addresses for running containers, so you should configure your Ring web server to listen on the <strong>‘0.0.0.0’</strong> address.</p>
+<h3 id="deployment-to-the-production">Deployment to the production</h3>
+<p>Then your task is to deploy to the production. Let’s say you have a docker repository, for instance, in the Dockerhub. Push your image there.</p>
+<p>docker push mprokopov/clojure-workshop</p>
+<p>Spin off your virtual server instance and login to your remote server via ssh, ensure you have docker instance running with <strong>‘docker ps’</strong>, if not, install docker service. Then we can continue</p>
+<p>docker pull mprokopov/clojure-workshop</p>
+<p>If you decide to have nice looking <strong>docker-composer.yaml</strong>, this could be your example how to create one:</p>
+<p>services:<br>
+srv:<br>
+build: .<br>
+image: mprokopov/clojure-workshop<br>
+volumes:<br>
+- ./resources/settings:/app/resources/settings<br>
+ports:<br>
+- 3000:3000<br>
+restart: always</p>
+<p>See that settings volume? In this way you can store your sensitive or permanent data outside of the ephemeral container to survive between container spin-offs.</p>
+<p>docker-compose up -d</p>
+<p>If you need nginx-proxy before your container you can enjoy <a href="https://github.com/jwilder/nginx-proxy">jwilder/nginx-proxy</a> container, then your docker-compose should include VIRTUAL_HOST env variable.</p>
+<p>services:<br>
+srv:<br>
+build: .<br>
+image: mprokopov/clojure-workshop<br>
+environment:<br>
+VIRTUAL_HOST=mydomain.com<br>
+volumes:<br>
+- ./resources/settings:/app/resources/settings<br>
+ports:<br>
+- 3000:3000<br>
+restart: always</p>
+<p>After this you can open <a href="http://mydomain.com">http://mydomain.com</a> and enjoy your Clojure application in production with <strong>nginx-proxy</strong>.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://mprokopov.github.io/2017/07/%D1%87%D1%82%D0%BE-%D0%BF%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%B8%D1%82%D1%8C-%D0%BD%D0%B0-%D0%B2%D0%B0%D1%88%D0%B5%D0%BC-mac/">Что почистить на вашем Mac?</a>
     </h1>
     <div class="date">28.07.2017</div>
@@ -399,6 +999,22 @@ Works best with Alfred 4 using mapped hotkey.</p>
 <p>Так получилось, что я довольно сильно два года назад погрузился в Clojure и ClojureScript. Вот про что мне сегодня хочется рассказать, так это про то приятное ощущение, когда понимаешь, что люди очень сильно думали, чтобы сделать правильно и красиво.</p>
 <p>Все, о чем могли мечтать большевики, в Clojure/ClojureScript есть – структуры данных иммутабельные по-умолчанию, синтаксис языка НЕ ИЗМЕНЯЕТСЯ, просто потому что незачем это делать, есть прекрасный интероп с Java/Javascript, что открывает обширные возможности использования достояния человечества в виде maven, npm инфраструктуры, при чем активно поощряется использование библиотеки Google Closure, а это, я вам скажу, наверное более правильный путь сохранять совместимость со старыми браузерами, чем Babel. Плюс из коробки отличная минификация через вычисление и отрезание неиспользуемых участков кода при сборке большого js. Все вот эти <a href="https://github.com/webpack-contrib/css-loader">modular-css</a> пытаются решить проблему code as data и data as code, всунуть в JS возможность использовать CSS как код, при том, что для любого lisp, которым является также и Clojure это нативное свойство языка. Модульность и разделение кода на куски в Clojure вообще сделана гениально: namespace + имя сущности однозначно адресует нужную сущность. Про clojure.spec я вообще промолчу, недооцененная многими библиотека, которая решает фундаментальную проблему несовместимости зависимостей. Что такое правильный подход: основу языка оставлять по-максимуму без изменений, а новые фишки добавлять через библиотеки, так как это сделали, например, с core.async для добавления coroutines как в go. И правильно, если это будут использовать 2% пользователей, то зачем это догружать остальным 98%?</p>
 <p>В общем, жаль, что коммьюнити не так активно делает маркетинг Clojure/ClojureScript и в целом порог для входа остается очень и очень высоким для среднего разработчика с одной стороны из-за недостаточного количества примеров, которые бы давали быстрый результат, а с другой стороны понимание функционального подхода требует определенных умственных усилий. Нужна новая кровь в такие проекты. Чтобы начать послушайте <a href="http://clojurecourse.by/">бесплатные онлайн курсы по Clojure</a>. Может и понравится, %username%.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/2017-07-11_-docker-ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/">Про Docker и Ruby on Rails sprockets and precompiled assets</a>
+    </h1>
+    <div class="date">11.07.2017</div>
+    <div><p>Рельсы идут не тем путем.</p>
+<p>По-хорошему монолит на рельсах нужно дробить, а то получается 1С:Бухгалтерия, со всеми включенными галочками по-умолчанию. В данном случае умолчания в рельсах слишком greedy.</p>
+<p>Взять вот sprockets. Его задача вообще один раз запуститься, минифицировать css и js, и замолчать навеки. При этом он требует кучу разнообразных зависимостей типа execjs, nodejs или v8 от гугла в качестве движка минификации.</p>
+<p>Но что делает фреймворк? Sprockets включают в Gemfile, он грузится вместе с полезным кодом, занимает кучу места, мешается под ногами и заставляет программиста танцевать с бубном вокруг задач связанных с деплоем!</p>
+<p>Как было бы делать правильно? Минификацию JS и CSS отрезать и делать ее опциональной, отдельной утилитой, если хотите, в составе рельс. Такой же как и rake. Назвать ее minirake и дать набор ключей для запуска. Но! У нас по всему фреймворку нужно протянуть новые названия файлов, которые генерятся при минификации! Потому что как же нам еще разделить код и данные? Короче, считаю это ошибкой дизайна, когда оптимизация НАВЯЗАНА разработчику, то есть для 99% сайтов она будет делаться ПРЕЖДЕВРЕМЕННО.</p>
+<p>Тоже самое можно сказать и про turbolinks. Во-первых очень мало народу понимает как оно в реальности работает, соответственно каких косяков ожидать. Это та же самая, мать ее, premature optimization. Всегда гораздо сложнее упрощать что-то сложное, чем добавлять и ускорять по мере необходимости.</p>
+<p>Поэтому когда мы логичным образом переходим на деплой рельсового приложения докером, встречаемся лицом к лицу с этими неоптимальными вещами. Идеальный случай — отдельным контейнером разово запускать минификатор, он отработал свое, закрылся и все, до следующего раза. Но нет, в рельсах все приколочено гвоздями к потолку.</p>
+<p>И вот здесь детальнее, о чем я имею в виду <a href="https://blog.red-badger.com/blog/2016/06/22/docker-and-assets-and-rails-oh-my">https://blog.red-badger.com/blog/2016/06/22/docker-and-assets-and-rails-oh-my</a></p>
 </div>
 </div>
 
@@ -521,6 +1137,22 @@ Works best with Alfred 4 using mapped hotkey.</p>
 
 <div class="article">
     <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/why-docker-for-rails-development-sucks-a43f230f62f6/">Why docker for Rails development sucks</a>
+    </h1>
+    <div class="date">04.11.2016</div>
+    <div><p><img src="img/1__JCw3npYqU2H1kGpi37lAbw.png" alt=""></p>
+<p>I’ve been excited about docker idea for everything, from production to development. It’s definitely ok for production, continuous integration and deployment rollouts, but sucks for development and here is why.</p>
+<p>Development process should be as fast and responsive as possible. Responsiveness and robust feedback are critical for development. REPL should give results immediate, because human waiting for computer is really sucks!</p>
+<p>And when you right in the middle of development process and feedback is slow because of docker this is not what makes you happy, it’s stopping your read-evaluate-print loop and adding distraction factors to your workflow.</p>
+<p>You can argue that dockerized development platform has benefits to be quickly redistributed for new devs and to be consistent with production environment. And definitely you’re right.</p>
+<p>Tradeoff is following: on one hand is same environment as in production and quick up with necessary pars of app, and on another is slow feedback, spatially when running your tests.</p>
+<p>It’s up to you to decide what’s more important for your team.</p>
+<p>What I’m going to try is to make simple plain RoR development as usual without docker, to have speedy tests, responsive environment, and after making new features just push my git repo, then dedicated box should make new staging release and deploy it to staging server.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://mprokopov.github.io/2016/10/%D0%B4%D0%B0%D0%B9%D0%B4%D0%B6%D0%B5%D1%81%D1%82-%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D0%BE%D0%BA-%D0%B2%D0%B5%D0%B1%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B0-2016-10-27/">Дайджест находок вебмастера 2016-10-27</a>
     </h1>
     <div class="date">27.10.2016</div>
@@ -564,6 +1196,38 @@ Works best with Alfred 4 using mapped hotkey.</p>
 <p><strong>Резюме.</strong> Не смотря на то, что в базовой поставке Opencart достаточно неплох, я все еще не представляю, как быть с обновлениями версий движка магазина и что делать с несовместимостью модулей и как влиять на поставщиков модулей и их качество. Использовать OpenCart как есть, без каких-либо модулей не представляется возможным. Мы же хотим и различные оплаты принимать и доставки и гибко управлять SEO настройками, а это неизбежно потребует от нас влезания в ад модулей и поиска ответов на различных форумах и группах вконтакта.</p>
 <p>Я много раз хотел переписать магазин на Ruby on Rails, с которым у меня много давней дружбы, но я вовремя каждый раз себя останавливал, я очень хорошо понимаю, что такое ввязаться в собственную разработку. Если я не собираюсь торговать интернет-магазинами, то не нужно делать еще один движок, как бы ни чесались руки.</p>
 <p>Сейчас присматриваюсь к одной платформе для интернет-магазинов, о которой расскажу попозже, возможно, все перечисленные мной проблемы отпадут сами собой. Будем посмотреть.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/2016-10-13_-opencart-6bbee7eabb95/">Блеск и нищета OpenCart как движка для интернет-магазина</a>
+    </h1>
+    <div class="date">13.10.2016</div>
+    <div><p>Блеск и нищета OpenCart как движка для <a href="https://super-truper.com.ua">интернет-магазина</a></p>
+<p>13/10/2016</p>
+<p>Это продолжение серии статей «Как я запускал <a href="https://super-truper.com.ua">интернет-магазин</a>«. <a href="http://nexusnotes.ru/2016/07/%D0%BA%D0%B0%D0%BA-%D1%8F-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%BB-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1/">Часть 1 (Аналитика спроса перед запуском)</a>. <a href="http://nexusnotes.ru/2016/07/%D0%BA%D0%B0%D0%BA-%D1%8F-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%BB-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D1%87%D0%B0%D1%81%D1%82%D1%8C-2/">Часть 2 (Выбор движка для интернет-магазина)</a>.</p>
+<p><img src="img/1__zLbz43uay4pTmYmKc805Rw.png" alt=""></p>
+<p>А еще я в некотором роде разработчик. Для меня HTML, CSS, JS не пустые аббревиатуры, в 1999 году я сделал первый PHP+MySQL сайт за деньги. Сейчас у меня другое занятие, которое приносит деньги, но хотелось окунуться в чудесный мир e-commerce за небольшие деньги и сжатые сроки. По опросам знакомых веб-студий я сошелся на мнении, что нужно ставить OpenCart. Модулей ведь много, на все случаи жизни практически. Да и в базе движок выглядит достаточно приличным. И мой давний приятель, у которого довольно раскрученный магазин с хорошим трафиком, сказал «только Opencart есть движок с православно правильной архитектурой».</p>
+<p>Ну, думаю, буду экономить свое дорогое время разработчика, буду покупать модули, это же дешевле стоимости часов разработчика. Забегая вперед, в итоге пришлось мне тратить ОЧЕНЬ МНОГО своего времени разработчика после установки модулей чтобы их просто подружить друг с другом да и просто устранить проблемы, не говоря уже о том, что многие модули работают мягко говоря не так, как ожидалось. А некоторые модули вообще оказались несовместимыми друг с другом 🙁 .</p>
+<p>Итак, закатал я рукава и полез по колено в OpenCart, думал, всего-то, установить пару модулей и вперед к вершинам электронной коммерции и маркетинга.</p>
+<p>Первым делом нужно выбрать нужную шкурку. Ну ок, магазин ведь ручного инструмента, поэтому поехали искать по ключевому слову «Tools». И вот она, черная тема в зеленой палитре на вьетнамском сайте. Купил за $25. Ставлю. И сразу же — оппа! Оказалось, что при достаточно большом описании категории оно неправильно позиционируется и текст прячется под фиксированным размером «бокса» ну и много всего по мелочи. Ушел редактировать стили темы, разбираться что где хранится, какова структура. Так что «сели и поехали» это скорее всего не про нас.</p>
+<p><strong>Открытие №1.</strong> Выяснилось, что модули любят ПЕРЕЗАТИРАТЬ код движка. Это значит, однажды установив подобный модуль вы лишитесь совместимости с новыми версиями OpenCart. Для решения этой проблемы придумали систему VQMOD или же ее реинкарнацию OPMOD, механизм, который стал частью Opencart. Суть ее в том, чтобы описывать изменения кода в специальном формате в файле XML, который потом достаточно загрузить через FTP или встроенный механизм загрузки и у вас будет установленный модуль. То есть сам функционал модуля описывается текстом, который нужно найти через Regexp в исходном файле и кодом, который нужно добавить или заменить в нужном месте. Таким образом выполняется эдакая прекомпиляция модулей в итоговый файл, который затем хранится где-то в кеше. Нужно ли говорить, c какой болью выходит отладка модуля? А взаимодействие одного модуля с другим?</p>
+<p>Впрочем, вы и так не сможете без крови и соплей переехать на новую версию OpenCart потому что разработчики НЕ ЗАБОТЯТСЯ ОБ ОБРАТНОЙ СОВМЕСТИМОСТИ. То есть так и сказали, релиз OpenCart 2.2 не используйте, что-то он вышел у нас слишком сырым.</p>
+<p><strong>Открытие №2.</strong> Модулей ОЧЕНЬ много, и из модулей нужно уметь ВЫБИРАТЬ, потому что количество модулей только интеграции с Новой Почтой много-много. Вот, например, <a href="http://cccp-blog.com/opencart/vybiraem-modul-opencart-novaya-pochta">простыня статьи с выбором из ШЕСТИ модулей</a> которые делают примерно одно и то же. Так я приобрел модуль Microformats Pro, функционал которого в последствии был продублирован функционалом модуля CompleteSEO. И теперь мне не очень понятно, не случится ли что-то с поисковой выдачей, если я выключу модуль Microformats Pro и перейду на поддержку микроформатов через CompleteSEO и полная ли в CompleteSEO поддержка этих самых микроформатов.</p>
+<p><strong>Открытие №3.</strong> Разнообразная (хорошая и не очень) техподдержка модулей.<br>
+ Я купил модуль для интеграции с Google Tag Manager, который сразу же (!) не смог установиться на Opencart 2.1.0.1. Индус-разработчик по началу никак не реагировал на запросы, и только после запроса на возврат денег сразу же отписался и признал проблему с установкой, выпустил обновление.</p>
+<p>Ведь у Opencart Store нет механизма попробовать модуль перед использованием, то есть я должен его купить и после этого, если возникнут какие-то проблемы, требовать возврата денег.</p>
+<p><strong>Открытие №4.</strong> Модули бывают несовместимыми.<br>
+ Например, есть модуль, который собирает все шаги заказа на одной странице, чтобы не проводить покупателя через 6 страниц-шагов проведения заказа на одной странице и выполняет сам заказ при помощи AJAX. И это правильно и хорошо, но делает модуль Google Tag Manager чуть менее чем полностью бесполезным, поскольку перестает считать сумму заказа в аналитике Google Analytics через механизм dataLayer, поскольку сам механизм заказа стал работать по-другому. И здесь без программиста тоже уже никак не обойтись.</p>
+<p><strong>Открытие №5.</strong> К работе с SSL готов? Не совсем.<br>
+ Скорее всего вы слышали, что сайты с SSL гугл любит больше, чем сайты без поддержки SSL, да и в Opencart это должно поддерживаться «одной галкой», но нет, не все так просто. Механизм админки перестает корректно работать с заказами, поскольку он делает AJAX запрос к API из HTTPS на HTTP, а это уже небезопасная операция, что также отобрало на отладку порядочно моего времени.</p>
+<p><strong>Мультимагазин.</strong> Хм. У нас есть отдельная категория товаров, таких как уровни и нивелиры, и хорошей идеей было запустить интернет-магазин отдельно, с отдельным дизайном. И да, сделать это оказалось просто и легко, с той же «шкуркой», по тем же правилам обработки заказов и единой базой клиентов. Но вот незадача, нет способа прикрутить Google Analytics к отдельному магазину. Да, вот так.</p>
+<p><strong>Фильтры.</strong> Это такая штука, которая нужна, пожалуй, каждому магазину. Это когда помимо категорий товары хорошо бы показывать «для мужчин», «для женщин», «для детей», «для строителей», «для детей строителей» и так далее. Очень полезно с точки зрения удобства использования. Внутренним функционалом OpenCart они представлены не очень хорошо, и следует использовать сторонний плагин типа MegaFilter. Но к этому плагину мне делать подход пока страшно O_o.</p>
+<p><strong>Резюме.</strong> Не смотря на то, что в базовой поставке Opencart достаточно неплох, я все еще не представляю, как быть с обновлениями версий движка магазина и что делать с несовместимостью модулей и как влиять на поставщиков модулей и их качество. Использовать OpenCart как есть, без каких-либо модулей не представляется возможным. Мы же хотим и различные оплаты принимать и доставки и гибко управлять SEO настройками, а это неизбежно потребует от нас влезания в ад модулей и поиска ответов на различных форумах и группах вконтакта.</p>
+<p>Я много раз хотел переписать магазин на Ruby on Rails, с которым у меня много давней дружбы, но я вовремя каждый раз себя останавливал, я очень хорошо понимаю, что такое ввязаться в собственную разработку. Если я не собираюсь торговать интернет-магазинами, то не нужно делать еще один движок, как бы ни чесались руки.</p>
+<p>Сейчас присматриваюсь к одной платформе для интернет-магазинов, о которой расскажу попозже, возможно, все перечисленные мной проблемы отпадут сами собой. Будем посмотреть.</p>
+<p><em>Originally published at</em> <a href="http://nexusnotes.ru/2016/10/%D0%B1%D0%BB%D0%B5%D1%81%D0%BA-%D0%B8-%D0%BD%D0%B8%D1%89%D0%B5%D1%82%D0%B0-opencart-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B2%D0%B8%D0%B6%D0%BA%D0%B0-%D0%B4%D0%BB%D1%8F-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD/"><em>nexusnotes.ru</em></a> <em>on October 13, 2016.</em></p>
 </div>
 </div>
 
@@ -725,6 +1389,15 @@ Works best with Alfred 4 using mapped hotkey.</p>
 
 <div class="article">
     <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/%d1%85%d0%be%d1%80%d0%be%d1%88%d0%b5%d0%b5-%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d1%80%d1%8f%d0%bc%d0%be-%d0%bb%d0%b0%d0%b9%d0%ba-f2d0097b9b0/">Хорошее введение, прямо лайк.</a>
+    </h1>
+    <div class="date">22.07.2016</div>
+    <div><p>Хорошее введение, прямо лайк.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://mprokopov.github.io/2016/07/tern-%D1%83%D0%BC%D0%BD%D1%8B%D0%B9-autocomplete-%D0%B4%D0%BB%D1%8F-javascript-%D0%B2-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0/">Tern — умный autocomplete для Javascript в различных редакторах</a>
     </h1>
     <div class="date">22.07.2016</div>
@@ -796,12 +1469,71 @@ Works best with Alfred 4 using mapped hotkey.</p>
 
 <div class="article">
     <h1>111
+        <a href="https://mprokopov.github.io/posts/2016-06-06_-emacs-vim-74190dffa34e/">Редактор мечты или как, наконец, холивар Emacs или Vim завершился.</a>
+    </h1>
+    <div class="date">06.06.2016</div>
+    <div><p>Если уж быть совсем-совсем кратким, то встречайте <a href="http://spacemacs.org/">Spacemacs</a>. Это такой настроенный Emacs с клавиатурными сочетаниями от Vim.</p>
+<p><img src="img/1__rOsZkt3nhwJdPAUVO3CcKQ.png" alt=""></p>
+<p>Иногда я снимаю шапочку управленца <a href="https://it-premium.com.ua">IT-Premium</a> и одеваю другую свою шапочку из фольги и <a href="http://nexusnotes.ru/2015/12/%D0%BF%D0%BE%D1%81%D1%82-%D0%B2-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC-%D1%8F-%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D1%8E%D1%81%D1%8C-%D0%B2-%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8-devcards-figwheel/">становлюсь программистом</a>. У каждого программиста, мой дорогой читатель, есть второй инструмент по важности после <strong>головы</strong> — это редактор кода.</p>
+<p>Каким должен быть хороший редактор для кода? Удобным, быстрым, с подсказками и свистелками? Но, конечно же, самый хороший инструмент это тот, которым ты умеешь пользоваться. Я тот самый парень, который все время пробует новые и новые инструменты, например:</p>
+<ul>
+<li>Sublime Text</li>
+<li>Emacs</li>
+<li>Vim</li>
+<li>Light Table</li>
+<li>Atom</li>
+<li>RubyMine</li>
+</ul>
+<p>С каждым из этих инструментов я провел довольно долго времени и, думаю, что понимаю их плюсы и минусы.</p>
+<p><strong>Sublime Text</strong> мне очень нравится за скорость работы, она просто потрясающая! Очень быстрый переход fuzzy search по названию файла, множество интересных пакетов, таких как <a href="https://github.com/jisaacks/GitGutter">Git Gutter</a>. Хорошо продуманный редактор.</p>
+<p><a href="https://www.jetbrains.com/ruby/"><strong>RubyMine</strong></a> это, конечно же, полноценная IDE. Умное дополнение при наборе текста, доступ к записям базы данных и тому подобные фишки. Мощно и хорошо, но довольно долго загружается из-за Java и обладает повышенными требованиями к расходу памяти.</p>
+<p><a href="http://lighttable.com/"><strong>LightTable</strong></a>, безусловно, должен быть в вашем списке редакторов для ознакомления. Пожалуй, <a href="https://www.youtube.com/watch?v=XEMI5-MBgaM">это видео</a> и <a href="http://tonsky.me/blog/interactive-development/">этот пост</a> о редакторе LightTable стоят тысячи слов. Интерактивная разработка с просмотром результатов выполнения кода, который ты только что набрал захватывает дух. Интересный факт — редактор написан на молодом <a href="https://github.com/clojure/clojurescript">ClojureScript</a>, который, в свою очередь преобразовывается в Javascript и запускается через <a href="http://electron.atom.io/">Electron</a>.</p>
+<p><a href="http://www.vim.org/">Vim</a> драматически увеличивает скорость набора и редактирования текста. Но качественный скачок в скорости набора произойдет после запоминания комбинаций на уровне мышечной (пальцевой) памяти. Редактор очень быстро запускается и достаточно хорошо расширяется всевозможными плагинами (например, <a href="https://github.com/tpope/vim-rails">Rails</a>). Но писать свои плагины для расширения функциональности лично для eменя оказалось нелегким испытанием. Еще одно достоинство vim — он есть в каждом дистрибутиве Linux и часто в качестве редактора по-умолчанию.</p>
+<p>Вся мощь Emacs мне стала понятна только после моего увлечения <a href="http://nexusnotes.ru/2015/12/%D0%BF%D0%BE%D1%81%D1%82-%D0%B2-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC-%D1%8F-%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D1%8E%D1%81%D1%8C-%D0%B2-%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8-devcards-figwheel/">Clojure</a>, а значит и лиспом, а значит и функциональным программированием. Именно отсутствие опыта работы и понимания лиспа читателем, скорее всего и есть той причиной, которая отпугивает потенциального пользователя от Emacs. Ведь отличительная особенность Emacs — в создании комфортной среды для разработки через собственную настройку и дополнение полезным функционалом, таким, например, как <a href="https://github.com/Silex/docker.el">управление docker контейнерами</a>. Сколько задач, столько и вариантов конфигурации. Однако, что меня очень удручало при работе с Emacs, это клавиатурные сочетания, которые приняты по-умолчанию в редакторе. Беда в том, что подавляющее большинство сочетаний используют Ctrl, даже банальная команда, открыть файл — Ctrl X+Ctrl F активно задействует один палец-мизинец, который приходится неестественным образом выворачивать. Поэтому первая рекомендация для emacsеров это заменить Ctrl на Caps Lock. Но даже перевод Ctrl на Caps Lock не очень спасает ситуацию и я время от времени стал чувствовать боль в кисти в районе мизинца, или как это называют по-научному RSI. Многие для уменьшения болей стали переназначать клавиатурные сочетания на более дружелюбные из Vim. Так появились многие пакеты, включая и популярный evil. После довольно продолжительного использования evil стало понятно, что прийдется у многих пакетов переназначать клавиатурные сочетания вручную. К счастью оказалось, что такими же задачами оказалось озабочено достаточно много энтузиастов, которые и создали Spacemacs. По-сути это все те же плагины, но с клавиатурными сочетаниями близкими к Vim, активация которых начинается с пробела, отсюда и название Spacemacs. Интересен также принцип добавления и распространения конфигурации — ваши сделанные настройки желательно добавить в pull request чтобы их рассмотрели на предмет включения в основной дистрибутив spacemacs. Так происходит накопление настроек, которые делают другие авторы и со временем количество переходит в качество.</p>
+<p>Успешно использую Spacemacs сам и другим рекомендую.</p>
+<p><em>Originally published at</em> <a href="http://nexusnotes.ru/2016/06/spacemacs/"><em>nexusnotes.ru</em></a> <em>on June 6, 2016.</em></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/i-discovered-much-faster-way-to-speed-up-docker-image-creation-c7485fbf6aec/">I discovered much faster way to speed up docker image creation.</a>
+    </h1>
+    <div class="date">29.04.2016</div>
+    <div><p>I discovered much faster way to speed up docker image creation.</p>
+<p>Just use bundle package and all current gems will be copied into vendor/cache. When bundle install runs it discovers cached gems and runs much-much faster.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://mprokopov.github.io/2016/04/%D0%BF%D1%80%D0%B8%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BE%D1%87%D0%BA%D0%B8-%D1%81-%D0%BF%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%BE%D0%B9/">Прикольные очки с подсветкой</a>
     </h1>
     <div class="date">22.04.2016</div>
     <div><p>Идеально <a href="https://super-truper.com.ua/sredstva-zashchity/ochki-zashchitnye-s-podsvetkoj-truper">удобные очки</a> при работе болгаркой в особо темных местах!</p>
 <p><a href="https://super-truper.com.ua/sredstva-zaschity/ochki-zaschitnye-s-podsvetkoj"><!-- raw HTML omitted --></a></p>
 <p>Подсветка встроенная прямо на дужки очков.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/%d0%be%d1%87%d0%b5%d0%bd%d1%8c-%d1%85%d0%be%d1%80%d0%be%d1%88%d0%be-%d0%bf%d0%b8%d1%88%d0%b5%d1%82%d0%b5-%d0%bb%d0%b5%d0%b3%d0%ba%d0%be-%d1%87%d0%b8%d1%82%d0%b0%d0%b5%d1%82%d1%81%d1%8f-575c5e67ecca/">Очень хорошо пишете, легко читается.</a>
+    </h1>
+    <div class="date">06.02.2016</div>
+    <div><p>Очень хорошо пишете, легко читается.</p>
+<p>Я для себя очень и очень полезным нашел редактор Emacs. Похоже, что для вас он может стать хорошим другом, поскольку обладает невероятной способностью к кастомизации, имеет собственное переключение раскладок, org-mode для Emacs даст фору любому дневнику/планировщику. К тому же очень комфортно использовать формулы и спецзнаки через LaTeX.</p>
+<p>Однозначно стоит потраченного на изучение времени.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/mprokopov/that-s-probably-essence-of-habits-you-should-have-to-be-successful-89b95cfbfdbb/">That’s probably essence of habits you should have to be successful.</a>
+    </h1>
+    <div class="date">06.02.2016</div>
+    <div><p>That’s probably essence of habits you should have to be successful.</p>
+<p>Thanks!</p>
 </div>
 </div>
 
@@ -854,6 +1586,33 @@ Works best with Alfred 4 using mapped hotkey.</p>
 <p>Теги, которые повлияли на меня как на разработчика в 2015 особенно сильно: Clojure/<a href="http://swannodette.github.io/2015/12/23/year-in-review/">ClojureScript</a>, Datomic/Datalog/Datascript, figwheel, datacards, Rum/ReactJS, Om/Next, Meteor, MongoDB, Docker.</p>
 <p>О том, каким будет web в ближайшем будущем стоит <a href="http://tonsky.me/blog/the-web-after-tomorrow/">почитать у моего однофамильца Никиты Прокопова</a>. Очень правильно пишет.</p>
 <p>Уверен, 2016 год будет не менее захватывающим.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/2015-11-02_-slack-15-8ee097578b6b/">Чат на вашем вебсайте с интеграцией в slack за 15 минут</a>
+    </h1>
+    <div class="date">02.11.2015</div>
+    <div><p>Так не хочется устанавливать еще одно ПО на компьютер (типа <a href="https://www.siteheart.com">приватовского SiteHeart</a>), а чат для <a href="https://it-premium.com.ua/">вебсайта</a> хочется. Мы же используем уже Slack для внутренних коммуникаций, который прекрасно интегрируется со всем и вся. Можно ли его использовать для наших целей? 10 минут на гугл и вуаля, вот он <a href="https://chatlio.com/">сервис Chatlio</a>, который делает то, что нам нужно. Да еще и на тестовый период в 30 дней бесплатно. Думаю, за 30 дней мы сможем понять, добавляет ли это пользы процессу продаж.</p>
+<p>Благодаря Google Tag Manager не пришлось даже изменять код сайта. Добавил в новую версию контейнера код, выданный сервисом Chatlio и опубликовал.</p>
+<p><img src="img/0__eb7__h6V__17L__ZMBQ.png" alt=""></p>
+<p>И вуаля, чат на сайте за 15 минут!<br>
+Еще 15 минут на локализацию строк на русский.</p>
+<p><img src="img/0__ps1rbEaOOjn88Q0U.png" alt=""></p>
+<p>Ну а сегодня чатом воспользовался настоящий посетитель сайта и задавал релевантные вопросы.</p>
+<p>Выглядит сам процесс так:</p>
+<ol>
+<li>Создается новый канал и туда отправляется сообщение от посетителя (на самом деле от бота, который мы подлкючаем в слак).</li>
+<li>Уведомление о событии пуляется в канал, в нашем случае sales-and-marketing.</li>
+<li>Самый быстрый из нас подключается в нужный канал, здесь видно, что название канала #z-kiev-ua-4. И пишет ответ.</li>
+<li>При необходимости можно в канал добавлять менеджеров по продажам или инженеров для квалифицированного ответа.</li>
+<li>После обработки сообщений просто архивируем канал и покидаем его.</li>
+</ol>
+<p><img src="img/0__eeinmV__fnh3pbgZo.png" alt=""></p>
+<p>Итого, за $50 в месяц у вас на сайте полноценный чат поддержки со всеми слаковскими удобствами!</p>
+<p>В следующий раз расскажу о замечательном инструменте Google Tag Manager, с помощью которого нам удалось увидеть сложную воронку продаж для посетителей сайта-одностраничника (посчитать на калькуляторе услуги, отправить предолжение на почту).</p>
+<p><em>Originally published at</em> <a href="http://it-premium.livejournal.com/8065.html"><em>it-premium.livejournal.com</em></a> <em>on November 2, 2015.</em></p>
 </div>
 </div>
 
@@ -4531,10 +5290,194 @@ RewriteRule ^(.*)$ <a href="http://www.newdomain.com/$1">http://www.newdomain.co
 
 <div class="article">
     <h1>111
+        <a href="https://mprokopov.github.io/posts/draft_post-680791be7605/"></a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div></div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/">Configure Docker Engine logs to AWS CloudWatch</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div></div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/draft_gitlab-continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Gitlab: continuous delivery setup for Clojure/Java with Docker</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div><p>Recently I was doing a <a href="https://github.com/mprokopov/it-service-sse">https://github.com/mprokopov/it-service-sse</a> and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.</p>
+<p>Long story short, here my .gitlab-ci.yml which took me a couple of days to figure out what is the “artifact” in Gitlab and how is it suppose to survive between artifact builds and docker builds.</p>
+<p>My current setup has two stages, java build and then docker build. At the first stage we use clojure:lein-2.7.1-alpine, which is quite small, to build jar file from the sources. Then we try to assemble docker container and reuse artifact from the previous build. I was lucky enough to discover that artifact could be saved with help of “cache” option in YML file which preserves folder in “path” for the next build.</p>
+<p><img src="img/1__a__fjMmk2b1E0JMs66O00UQ.png" alt=""></p>
+<p>So here is the working Gitlab CI configuration which builds JAR as artifact and uploads to the Pipeline page and then creates docker container and publishes it to the internal Gitlab registry.</p>
+<p># Based on openjdk:8, already includes lein</p>
+<p># If you need to configure a database, add a `services` section here</p>
+<p># See <a href="https://docs.gitlab.com/ce/ci/services/postgres.html">https://docs.gitlab.com/ce/ci/services/postgres.html</a></p>
+<p># Make sure you configure the connection as well</p>
+<p>#before_script:</p>
+<p># If you need to install any external applications, like a</p>
+<p># postgres client, you may want to uncomment the line below:</p>
+<h1 id="heading"></h1>
+<p>#- apt-get update -y</p>
+<h1 id="heading-1"></h1>
+<p># Retrieve project dependencies</p>
+<p># Do this on before_script since it&rsquo;ll be shared between both test and</p>
+<p># any production sections a user adds</p>
+<p>#- lein deps</p>
+<p>stages:</p>
+<p>- jar</p>
+<p>- docker</p>
+<p>#test:</p>
+<p># script:</p>
+<p># If you need to run any migrations or configure the database, this</p>
+<p># would be the point to do it.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/draft_how-to-speed-up-ruby-bundle-gems-fetch-1110de70ccbc/">How to speed up ruby bundle gems fetch</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div><p>Short answer: use <a href="https://github.com/geminabox/geminabox">https://github.com/geminabox/geminabox</a> for caching gems on your own host, or in your local network.</p>
+<p>I was using bundler’s vendor/cache in docker container, but with such improvement my container size grown up to 1,2Gb very quickly.</p>
+<p>Supply following settings to your <strong>geminabox</strong> container<br>
+<code>RUBYGEMS_PROXY=true</code></p>
+<p><a href="https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800">https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800</a></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/draft_one-account-all-of-google-24ec9b332a4a/">One account. All of Google.</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div><p>One account. All of Google.</p>
+<p><img src="img/0__xPa6uZ04ZDjvTOOQ.png" alt=""></p>
+<p><em>Originally published at</em> <a href="https://www.blogger.com/blogger.g?blogID=8155698338999334610"><em>www.blogger.com</em></a><em>.</em></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/draft_one-account-all-of-google-4681a5761d84/">One account. All of Google.</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div><p>One account. All of Google.</p>
+<p><img src="img/0__D67TAFgwiWCFHExs.png" alt=""></p>
+<p><em>Originally published at</em> <a href="https://www.blogger.com/blogger.g?blogID=8155698338999334610"><em>www.blogger.com</em></a><em>.</em></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://mprokopov.github.io/posts/2020-05-31-pharo/">Pharo testing</a>
     </h1>
     <div class="date">01.01.0001</div>
     <div><p>Suprisingly, Pharo turns out to be interesting solution for managing web pages fully by the pure OO classes and objects.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/draft_ruby-tricks-54c9925f2714/">Ruby tricks</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div><p>Use binding object to run code within other object context.<br>
+<a href="https://ruby-doc.org/core-2.2.0/Binding.html">https://ruby-doc.org/core-2.2.0/Binding.html</a></p>
+<p>stderr output</p>
+<p>highlight your code and insert in presentation</p>
+<p><a href="https://gist.github.com/jimbojsb/1630790">https://gist.github.com/jimbojsb/1630790</a></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/draft_speeding-up-ruby-on-rails-in-docker-65c35f391389/">Speeding up Ruby on Rails in docker</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div><p>Speeding up Ruby on Rails in docker</p>
+<p><img src="img/0__LIxdmYq3kKxytoVG.png" alt="">
+<img src="img/0__itLAs7Fa2raZNMPx.png" alt=""></p>
+<ol>
+<li>Bundle package will create a cached copy, so bundler in docker will not fetch all dependencies all the time.</li>
+</ol>
+<p>bundle package</p>
+<ol>
+<li>Create separate bundler data volume to perisist bundle between builds. Set BUNDLE_PATH to data volume. You can include this option just for development docker-compose.yml file and not to include in production.</li>
+</ol>
+<blockquote>
+<p>version: “2” services: memcached: image: memcached networks: — back-tier redis: image: redis ports: [“6379”] networks: — back-tier db: image: mysql:5 volumes: — ./sql:/docker-entrypoint-initdb.d — mysql:/var/lib/mysql networks: — back-tier sse: image: mprokopov/sse build: context: sse/. command: “bundle exec rackup — host 0.0.0.0 — port 9292” environment: — RACK_ENV=production ## docker database settings in config.yml ports: — “9292:9292” links: — redis — db depends_on: — db — redis networks: — back-tier — front-tier worker: image: mprokopov/itservice_web_dev command: “bundle exec rake environment resque:work” environment: — QUEUE=* links: — db — redis depends_on: — db — redis networks: — back-tier worker-schedule: image: mprokopov/itservice_web_dev command: “bundle exec rake environment resque:scheduler” links: — db — redis depends_on: — redis networks: — back-tier search: image: mprokopov/itservice_search build: ./search volumes: — search-data:/search depends_on: — db links: — db networks: — back-tier expose: — “9306” web: ports: — “3000:3000” environment: — LETTER_OPENER=letter_opener_web — RAILS_SERVE_STATIC_FILES=true — SLACK_NOTIFICATION=false — EMAIL_NOTIFICATION=false — SLACK_WEBHOOK_CHANNEL=#events_test — STREAM_API=http:<em>//localhost:9292</em> depends_on: — db — redis links: — db — redis — search networks: — back-tier — front-tier volumes: — search-data:/search volumes: search-data: mysql: networks: back-tier: front-tier:</p>
+</blockquote>
+<ol>
+<li>Use docker-compose.override.yml for development and docker-compose.prod.yml for production builds. Create docker-compose.yml which contains common services configuration.</li>
+</ol>
+<p>version: &ldquo;2&rdquo; services: db: environment: - MYSQL_DATABASE=itservice_development - MYSQL_USER= - MYSQL_ROOT_PASSWORD= - MYSQL_PASSWORD= sse: environment: - MYSQL_DATABASE=itservice_development - MYSQL_USER= - MYSQL_PASSWORD= - MYSQL_HOST=db - REDIS_HOST=redis - RACK_ENV=production ## docker database settings in config.yml worker: environment: - RAILS_ENV=development worker-schedule: environment: - RAILS_ENV=development search: environment: - SPHINX_ENV=development web: image: mprokopov/itservice_web_dev command: bundle exec rails s -b 0.0.0.0 -p 3000 environment: - RAILS_ENV=development - LETTER_OPENER=letter_opener_web - RAILS_SERVE_STATIC_FILES=true - SLACK_NOTIFICATION=false - EMAIL_NOTIFICATION=false - SLACK_WEBHOOK_CHANNEL=#events_test - STREAM_API=http://localhost:9292 - BUNDLE_PATH=/bundle volumes: - bundle:/bundle - ./app:/app volumes: bundle:</p>
+<ol>
+<li>Use docker-compose.prod.yml as docker-compose.override.yml in production, so you will save necessary keystrokes, because docker-compose will use override.yml by default.</li>
+<li>Use nginx-proxy container in production and gem unicorn/puma or thin.<br>
+ connect nginx-proxy container to frontend network like this</li>
+</ol>
+<p>docker network connect itservice_front-tier nginx-proxy</p>
+<p>It will enable to use nginx-proxy with docker-compose v2 syntax.</p>
+<ol>
+<li>In case you’re using CoreOS or systemd you can create container backups via custom backup service and Timer for that service.</li>
+</ol>
+<p><em>Originally published at</em> <a href="http://blog.it-premium.com.ua/all/speeding-up-ruby-on-rails-in-docker/"><em>blog.it-premium.com.ua</em></a><em>.</em></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/draft_u-d3d57598136a/">U</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div><p>U</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/">Useful Kubernetes tools and tips</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div><p>Unlike docker-compose sometimes kubectl provides you better tooling for docker container access.</p>
+<p>Let me share with you my useful findings.</p>
+<p>With port-forward, you can easily connect to pods service and debug it.</p>
+<pre><code>kubectl port-forward podname port
+</code></pre><p>For example</p>
+<pre><code>kubectl port-forward sharepass-78d566f866-4dvv5 3000
+</code></pre><blockquote>
+<p>kubectl port-forward sharepass-78d566f866–4dvv5 3000<br>
+Forwarding from 127.0.0.1:3000 -&gt; 3000<br>
+Forwarding from [::1]:3000 -&gt; 3000<br>
+Handling connection for 3000<br>
+Handling connection for 3000</p>
+</blockquote>
+<p>This will forward port 3000 to localhost, so you can open URL <a href="http://localhost:3000/">http://localhost:3000</a> and enjoy access to your service.</p>
+<h3 id="kubectx">Kubectx</h3>
+<p>This tool is helpful when you have a lot of k8s clusters for management.<br>
+ <a href="https://github.com/ahmetb/kubectx">https://github.com/ahmetb/kubectx</a></p>
+<p><img src="img/0__AatXmv814kKo6eC9.gif" alt="">
+<img src="img/0__sdbt7__1WZuHGnBdO.gif" alt=""></p>
+<h3 id="kube-ps1">Kube PS1</h3>
+<p>This tool will help you to install nice prompt with k8s cluster name and current context<br>
+ <a href="https://github.com/jonmosco/kube-ps1">https://github.com/jonmosco/kube-ps1</a></p>
+<p><img src="img/0__YMI88cngwl2He9Tt.gif" alt=""></p>
+<p><em>Originally published at</em> <a href="http://blog.it-premium.com.ua/all/useful-kubernetes-commands/"><em>blog.it-premium.com.ua</em></a><em>.</em></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://mprokopov.github.io/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos-9599b598746b/">Why is my dev docker container so slow on macOS?</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div><p>TLDR: because of the networking layer and how docker volumes implemented.</p>
 </div>
 </div>
 

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal website</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+
+
+<link rel="stylesheet" href="https://mprokopov.github.io/style.min.b47e9dbbe9cb8ba63ca483edbb6a0ccf62fe04626db6ba8901ff95c740f26675.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+    <body><div id="header">
+    <a class="title" href="/"><div id="title">Блог Максима Прокопова</div><div id="description">Считаю что идеи это такая штука, которой следует делиться</div></a>
+</div>
+<div id="nav-container">
+    <div id="nav">
+        <div class="menu">
+            <div class="nav">
+                <ul>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/trips/">Путешествую</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/loosingweight/">Худею</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/reading/">Читаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/creating/">Создаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/about/">Обо мне</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+        <div id="container">
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/">Brief introduction to the Kubernetes.</a>
+    </h1>
+    <div class="date">26.05.2018</div>
+    
+    <h4>Время чтения: 4 мин.</h4>
+    
+    <div><h3 id="kubernetes-is-a-winner-in-docker-cloud-orchestration-so-lets-get-a-brief-introduction-in-what-it-is-and-what-kind-of-problems-itsolves">Kubernetes is a winner in docker cloud orchestration, so let’s get a brief introduction in what it is and what kind of problems it solves.</h3>
+<p>Kubernetes is a set of tools designed to solve a problem of deployment of your lovely tailor-made application to a cloud. It does not matter which cloud you choose, AWS, Azure or Google, or even IBM, because Kubernetes provides you with a set of tools which are platform independent.</p>
+<p><img src="img/1__fw8YJnfF32dWsX__beQpWOw.png" alt=""></p>
+<p>For almost every application you need to talk to a database, to store some assets, to get requests and make responses to users with a useful content. So, basically you need to have a ‘storage’ for storing files, a ‘network’ to get requests and make responses to users and a ‘computing power with memory’ to run your application. All of this is quite simple if you run your application on a single computer (node), you have local storage on an HDD, i.e. a filesystem, you have a CPU and memory to run your application and a single network interface to talk to users and other services like external database or api. Suddenly you decide to deploy your application to some cloud provider and users start using your application on a huge scale and then you decide to scale your application across cloud nodes.</p>
+<p>This is still not that moment when you need Kubernetes, because you can use cloud provided facilities like Amazon S3 for storage, Amazon RDS for automatically scaled databases and more Amazon EC2 instances to run your applications.</p>
+<p>Wait, why do we need Kubernetes then? Well, every quite complex application has it’s own technological stack and different unique Continue Integration and Continue Deployment processes. So, if you work for a large enterprise which in turn has a lot of such custom made applications, there will be one day when the enterprise decides to make unification of rollout and upgrade processes to reduce costs and create special forces, which are responsible for deployment and maintenance. We start calling them DevOps.</p>
+<p>Here is that moment, when everything becomes more and more complicated.</p>
+<p>These guys have already started dreaming about better abstractions for unification of application deployment and invented a concept of Docker. The Docker is about having everything application needs to run in one ‘container’ which can be stored and transferred over a network. Nevertheless every nifty feature comes at its price. For the luxury of having platform independent movable containers we pay the price with much larger application size and extra build step. Both are very time and resource consuming.</p>
+<p>Okay, now we have a bunch of containers, cool. How should we monitor all of them and restart when they fail? Moreover we also run containers across different servers and docker does not give us a way of how one part of our application in one container should connect across network and talk to a part of application in another container. There is nothing more than cleaning up failed docker containers and stalled images manually or in semi-automated, controlled by human, way.</p>
+<p>And there was a blood. A lot of different third-party solutions and even Docker themselves were trying to compete and provide better tools for solving these problems. And finally more and more people started considering Kubernetes by Google as preferred solution.</p>
+<p>Let me briefly describe a concepts of Kubernetes.</p>
+<ul>
+<li><strong>minikube</strong> is an utility to get your home-made cluster up and running as a virtual machine on your single computer</li>
+<li><strong>kubectl</strong> is an utility to control every operation on a cluster, which is up by running minikube.</li>
+<li>In <strong>Deployment</strong> you specify information about which docker image to download and run, and what volumes and ports this particular container will use. <strong>Deployment</strong> will spawn Pods.</li>
+<li>Basically <strong>Pod</strong> is a running container, you can just delete running <strong>Pod</strong> and new one will be created automatically. You can specify in <strong>Deployment</strong> how many exactly the same containers you need to spawn.</li>
+<li>You need to create <strong>Service</strong> in two cases. First, when you want provide DNS name for your container, for example, <strong>redis</strong>. This will allow other containers to discover and connect to <strong>redis</strong> by name resolution. Second, when you want to make your application visible from outside of your cloud, i.e. ‘publish’ application for users.</li>
+<li>You should use <strong>Persistence Volume Claim</strong> if you have data in your application which should survive across container deletions. Usually database container will store it’s data in such volumes. Otherwise say ‘Hasta la vista’ to all the data in your live containers, because they are intended to be ephemeral, easily killed and spawned again when necessary.</li>
+<li>Another nice concept in Kubernetes is a <strong>Secret</strong>. This is spatial place and API to store your credentials and settings. You can refer to them in <strong>Deployment</strong>, when you need, for example, to supply database password in one of environment variables.</li>
+</ul>
+<p>If you still have intention to try deployment to Kubernetes cluster, start playing with minikube and investigate this nice example of deployment Wordpress + MySql <a href="https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/">https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/</a></p>
+<p><em>Originally published at</em> <a href="http://blog.it-premium.com.ua/all/brief-introduction-to-the-kubernetes/"><em>blog.it-premium.com.ua</em></a><em>.</em></p>
+</div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url =  null ;  
+    this.page.identifier =  null ; 
+    };
+ (function() {
+     var d = document, s = d.createElement('script');
+     s.src = 'https://maksym-prokopov-personal-blog.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+
+        </div>
+        <div class="clear"></div><div id="sidebar"><div id="sidebar-widget">
+    <div class="sidebar-heading">Визитка</div><p></p>
+    <div class="textwidget">
+        
+        <a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Max Prokopov" rel="noopener noreferrer">Max Prokopov</a><br><a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" title="Max Prokopov" rel="noopener noreferrer"><img src="https://badge.facebook.com/badge/564099895.8308.711585450.png" style="border: 0px;"></a>
+        </div>
+</div>
+
+<div id="sidebar-widget">
+    <div class="sidebar-heading">Категории</div>
+    <p></p>
+    <ul>
+        
+        <li><a href="/categories/apache/">apache</a> (3) </li>
+        
+        <li><a href="/categories/clojure/">clojure</a> (1) </li>
+        
+        <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
+        
+        <li><a href="/categories/gtd/">GTD</a> (4) </li>
+        
+        <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+        
+        <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
+        
+        <li><a href="/categories/links/">links</a> (4) </li>
+        
+        <li><a href="/categories/linux/">linux</a> (1) </li>
+        
+        <li><a href="/categories/macos/">macos</a> (1) </li>
+        
+        <li><a href="/categories/rails/">rails</a> (1) </li>
+        
+        <li><a href="/categories/sip/">sip</a> (1) </li>
+        
+        <li><a href="/categories/tips-and-tricks/">tips and tricks</a> (1) </li>
+        
+        <li><a href="/categories/vmware/">vmware</a> (2) </li>
+        
+        <li><a href="/categories/windows/">windows</a> (4) </li>
+        
+        <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
+        
+        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (1) </li>
+        
+        <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">веб-разработка</a> (8) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">виртуализация</a> (1) </li>
+        
+        <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">гаджеты</a> (2) </li>
+        
+        <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">железо</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">за жизнь</a> (117) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">здоровье</a> (4) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (44) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">маркетинг</a> (2) </li>
+        
+        <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (25) </li>
+        
+        <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">управление</a> (1) </li>
+        
+        <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
+        
+    </ul>
+</div>
+<div id="linkcat-2"><div class="sidebar-heading">Друзья и коллеги</div><p></p>
+	<ul class="xoxo blogroll">
+      
+      <li><a href="https://it-premium.com.ua" title="Наш сайт по ИТ-аутсорсингу" >IT-Premium аутсорсинг от профессионалов</a></li>
+
+      
+      <li><a href="http://nexusonrails.blogspot.com/" title="Мой блог на blogger.com о Ruby on Rails" >Nexus on Rails</a></li>
+
+      
+      <li><a href="http://blog.it-premium.com.ua" title="Блог Максима Прокопова про Docker, Xen и CoreOS и всякое такое" rel="friend">Maksym Prokopov about Docker, Xen и CoreOS</a></li>
+
+      
+      <li><a href="http://nexus.org.ua" title="Сайт об IT технологиях" >Мой хардкорный убер сайт 2005 года Nexus Notes</a></li>
+
+      
+      <li><a href="http://condom.org.ua" title="Контрацепция в деталях" >Проект о контрацепции</a></li>
+
+      
+      <li><a href="https://super-truper.com.ua" title="Лучший интернет-магазин ручного инструмента Truper" >Интернет-магазин ручного инструмента Truper</a></li>
+
+      
+      <li><a href="http://asterisk.in.ua" title="Курсы и услуги по внедрению asterisk" >Asterisk.in.ua</a></li>
+
+      
+      <li><a href="http://it-premium.livejournal.com/" title="" rel="friend co-worker neighbor">IT-Premium company blog</a></li>
+
+      
+	</ul>
+</div>
+</div>
+
+
+</body>
+</html>

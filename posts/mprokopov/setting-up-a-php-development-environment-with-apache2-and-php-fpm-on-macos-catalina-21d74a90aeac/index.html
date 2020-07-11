@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal website</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+
+
+<link rel="stylesheet" href="https://mprokopov.github.io/style.min.b47e9dbbe9cb8ba63ca483edbb6a0ccf62fe04626db6ba8901ff95c740f26675.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+    <body><div id="header">
+    <a class="title" href="/"><div id="title">Блог Максима Прокопова</div><div id="description">Считаю что идеи это такая штука, которой следует делиться</div></a>
+</div>
+<div id="nav-container">
+    <div id="nav">
+        <div class="menu">
+            <div class="nav">
+                <ul>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/trips/">Путешествую</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/loosingweight/">Худею</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/reading/">Читаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/creating/">Создаю</a></li>
+                    
+                    <li class="page-item"><a href="https://mprokopov.github.io/pages/about/">Обо мне</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+        <div id="container">
+<div class="article">
+    <h1>
+        <a href="https://mprokopov.github.io/posts/mprokopov/setting-up-a-php-development-environment-with-apache2-and-php-fpm-on-macos-catalina-21d74a90aeac/">Setting up a PHP development environment with Apache2 and php-fpm on macOS Catalina</a>
+    </h1>
+    <div class="date">09.06.2020</div>
+    
+    <h4>Время чтения: 2 мин.</h4>
+    
+    <div><p>At the moment using Docker for development on macOS © has its own flaws, and in case you need good performance, there is a more or less complicated way to set up a local development environment with native <strong>apache2</strong> and <strong>php-fpm</strong> stack.</p>
+<p>Keep in mind, PHP 7.3 comes with macOS Catalina preinstalled, so you might not need to install PHP separately.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>brew <a href="https://brew.sh/" title="https://brew.sh/">https://brew.sh/</a></li>
+</ul>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Install PHP `brew install <a href="mailto:php@7.4">php@7.4</a>`</li>
+<li>Install apache `brew install apache2`</li>
+</ol>
+<p>At this point, you’ll have PHP v7.4 installed in `/usr/local/opt/php@7.4/`</p>
+<p>In case you need to keep several PHP versions, it can be done using ENV vars in .zshrc</p>
+<p>PHP_VERSION=7.4<br>
+export PATH=&rdquo;/usr/local/opt/php@${PHP_VERSION}/bin:/usr/local/opt/php@${PHP_VERSION}/sbin:$PATH&rdquo;<br>
+export LDFLAGS=&rdquo;-L/usr/local/opt/php@${PHP_VERSION}/lib&rdquo;<br>
+export CPPFLAGS=&rdquo;-I/usr/local/opt/php@${PHP_VERSION}/include&rdquo;</p>
+<h3 id="php-fpm-setup">PHP-FPM setup</h3>
+<p>Locate /usr/local/etc/php/7.4/php-fpm.d/www.conf and edit it to include environment variables. I also rebound default port 9000 to 9009 not to have conflicts with XDEBUG</p>
+<pre><code>clear_env = no listen = 127.0.0.1:9009
+</code></pre><h3 id="apache-setup">Apache setup</h3>
+<p>Locate /usr/local/etc/httpd/extra/httpd-vhosts.conf and edit it according to your project folder, here is my example</p>
+<p>Listen 80<br>
+&lt;FilesMatch \.php$&gt;<br>
+SetHandler &ldquo;proxy:fcgi://127.0.0.1:9009&rdquo;<br>
+<!-- raw HTML omitted --><br>
+&lt;VirtualHost *:80&gt;<br>
+ServerAdmin webmaster@localhost<br>
+ServerName obo.local<br>
+DocumentRoot /Users/mprokopov/oxid/project/source<br>
+ErrorLog /Users/mprokopov/oxid/project/source/error.log<br>
+CustomLog /Users/mprokopov/oxid/project/source/access.log combined<br>
+<!-- raw HTML omitted --><br>
+&lt;Directory &ldquo;/Users/mprokopov/oxid/*/source&quot;&gt;<br>
+Options Indexes FollowSymLinks<br>
+AllowOverride All<br>
+Require all granted<br>
+<!-- raw HTML omitted --></p>
+<h3 id="project-setup">Project setup</h3>
+<p>For some reason php-fpm doesn’t play well with _ENV variables, so I had to change them to use getenv() function instead, like on the example below</p>
+<p>config.inc.php of the project</p>
+<p>$dbName = getenv(&lsquo;DB_NAME&rsquo;)<br>
+$dbUser = getenv(&lsquo;DB_USER&rsquo;)<br>
+&hellip;</p>
+<h3 id="party-time">Party time</h3>
+<p>When you decide to work on the project, go to the source folder of the project and run the command</p>
+<p><code>1 DB_NAME=dbname DB_PASS=pass DB_USER=user php-fpm</code></p>
+<p>and navigate in the browser to <a href="http://localhost">http://localhost</a> address. It should work.</p>
+<p>You can also save some efforts on typing and get env variables from the .env file by running eval $(cat .env) php-fpminstead.</p>
+<h3 id="bonus-xdebug">Bonus: XDEBUG</h3>
+<p>In case you need XDEBUG, you can install it with command</p>
+<p><code>1 pecl install xdebug</code></p>
+<p>and edit /usr/local/etc/php/7.4/php.ini to include the following settings</p>
+<p>zend_extension=&quot;xdebug.so&rdquo;<br>
+xdebug.remote_enable=on<br>
+xdebug.remote_host=127.0.0.1<br>
+xdebug.remote_handler=dbgp<br>
+xdebug.idekey=geben<br>
+xdebug.remote_autostart=On<br>
+xdebug.profiler_enable_trigger = 1<br>
+xdebug.profiler_enable=<br>
+xdebug.profiler_output_dir = tmp<br>
+xdebug.profiler_output_name = &ldquo;callgrind.out.%p&rdquo;</p>
+</div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url =  null ;  
+    this.page.identifier =  null ; 
+    };
+ (function() {
+     var d = document, s = d.createElement('script');
+     s.src = 'https://maksym-prokopov-personal-blog.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+
+        </div>
+        <div class="clear"></div><div id="sidebar"><div id="sidebar-widget">
+    <div class="sidebar-heading">Визитка</div><p></p>
+    <div class="textwidget">
+        
+        <a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Max Prokopov" rel="noopener noreferrer">Max Prokopov</a><br><a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" title="Max Prokopov" rel="noopener noreferrer"><img src="https://badge.facebook.com/badge/564099895.8308.711585450.png" style="border: 0px;"></a>
+        </div>
+</div>
+
+<div id="sidebar-widget">
+    <div class="sidebar-heading">Категории</div>
+    <p></p>
+    <ul>
+        
+        <li><a href="/categories/apache/">apache</a> (3) </li>
+        
+        <li><a href="/categories/clojure/">clojure</a> (1) </li>
+        
+        <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
+        
+        <li><a href="/categories/gtd/">GTD</a> (4) </li>
+        
+        <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+        
+        <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
+        
+        <li><a href="/categories/links/">links</a> (4) </li>
+        
+        <li><a href="/categories/linux/">linux</a> (1) </li>
+        
+        <li><a href="/categories/macos/">macos</a> (1) </li>
+        
+        <li><a href="/categories/rails/">rails</a> (1) </li>
+        
+        <li><a href="/categories/sip/">sip</a> (1) </li>
+        
+        <li><a href="/categories/tips-and-tricks/">tips and tricks</a> (1) </li>
+        
+        <li><a href="/categories/vmware/">vmware</a> (2) </li>
+        
+        <li><a href="/categories/windows/">windows</a> (4) </li>
+        
+        <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
+        
+        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (1) </li>
+        
+        <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">веб-разработка</a> (8) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">виртуализация</a> (1) </li>
+        
+        <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">гаджеты</a> (2) </li>
+        
+        <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">железо</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">за жизнь</a> (117) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">здоровье</a> (4) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (44) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">маркетинг</a> (2) </li>
+        
+        <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (25) </li>
+        
+        <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">управление</a> (1) </li>
+        
+        <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
+        
+    </ul>
+</div>
+<div id="linkcat-2"><div class="sidebar-heading">Друзья и коллеги</div><p></p>
+	<ul class="xoxo blogroll">
+      
+      <li><a href="https://it-premium.com.ua" title="Наш сайт по ИТ-аутсорсингу" >IT-Premium аутсорсинг от профессионалов</a></li>
+
+      
+      <li><a href="http://nexusonrails.blogspot.com/" title="Мой блог на blogger.com о Ruby on Rails" >Nexus on Rails</a></li>
+
+      
+      <li><a href="http://blog.it-premium.com.ua" title="Блог Максима Прокопова про Docker, Xen и CoreOS и всякое такое" rel="friend">Maksym Prokopov about Docker, Xen и CoreOS</a></li>
+
+      
+      <li><a href="http://nexus.org.ua" title="Сайт об IT технологиях" >Мой хардкорный убер сайт 2005 года Nexus Notes</a></li>
+
+      
+      <li><a href="http://condom.org.ua" title="Контрацепция в деталях" >Проект о контрацепции</a></li>
+
+      
+      <li><a href="https://super-truper.com.ua" title="Лучший интернет-магазин ручного инструмента Truper" >Интернет-магазин ручного инструмента Truper</a></li>
+
+      
+      <li><a href="http://asterisk.in.ua" title="Курсы и услуги по внедрению asterisk" >Asterisk.in.ua</a></li>
+
+      
+      <li><a href="http://it-premium.livejournal.com/" title="" rel="friend co-worker neighbor">IT-Premium company blog</a></li>
+
+      
+	</ul>
+</div>
+</div>
+
+
+</body>
+</html>

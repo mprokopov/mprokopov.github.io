@@ -56,6 +56,11 @@
   </url>
   
   <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/setting-up-a-php-development-environment-with-apache2-and-php-fpm-on-macos-catalina-21d74a90aeac/</loc>
+    <lastmod>2020-06-09T09:14:08+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mprokopov.github.io/posts/2020-06-02-pharo-raspberry-pi/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
   </url>
@@ -83,6 +88,16 @@
   <url>
     <loc>https://mprokopov.github.io/posts/2020-05-31/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/how-to-increase-kubernetes-pvc-size-for-aws-ebs-b3d4a99c006a/</loc>
+    <lastmod>2020-05-12T15:48:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/my-new-modern-web-site-stack-f9645e78ae16/</loc>
+    <lastmod>2020-04-12T18:02:44+00:00</lastmod>
   </url>
   
   <url>
@@ -126,8 +141,43 @@
   </url>
   
   <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/the-bad-thing-about-rails-is-that-by-default-it-suggests-using-own-messy-design-patterns-like-fat-37d81b3e7def/</loc>
+    <lastmod>2019-09-15T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mprokopov.github.io/2019/01/%D0%B4%D0%B2%D0%B0-%D0%B4%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D1%85-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BD%D1%83%D0%B6%D0%BD%D0%BE-%D0%B8%D0%B7%D1%83%D1%87%D0%B8/</loc>
     <lastmod>2019-01-08T04:07:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/</loc>
+    <lastmod>2018-06-06T15:50:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-prolog-e0878ac7fe40/</loc>
+    <lastmod>2018-05-29T12:38:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/2018-05-27_-dbe59a2cbade/</loc>
+    <lastmod>2018-05-27T17:29:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/</loc>
+    <lastmod>2018-05-26T12:35:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/%d1%81%d0%be%d0%b3%d0%bb%d0%b0%d1%81%d0%b5%d0%bd-%d0%bf%d0%be-%d0%b2%d1%81%d0%b5%d0%bc-%d0%bf%d1%83%d0%bd%d0%ba%d1%82%d0%b0%d0%bc-2285686116fa/</loc>
+    <lastmod>2018-03-28T04:19:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/noteworthy-clojure-projects-634af849e01d/</loc>
+    <lastmod>2018-01-18T13:40:17+00:00</lastmod>
   </url>
   
   <url>
@@ -156,6 +206,41 @@
   </url>
   
   <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/quick-fix-for-rubygems-ssl-error-5126c73cb7f6/</loc>
+    <lastmod>2017-10-24T09:59:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c/</loc>
+    <lastmod>2017-09-07T08:58:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/gitlab-continuous-delivery-setup-for-clojure-java-with-docker-472320d5aa52/</loc>
+    <lastmod>2017-09-05T10:59:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/fully-automated-docker-mysql-database-backup-from-remote-host-bd02e24b5009/</loc>
+    <lastmod>2017-08-17T11:13:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/ansible-containers-d89258cdf5de/</loc>
+    <lastmod>2017-08-15T08:17:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/2017-08-11_-d42877e2368d/</loc>
+    <lastmod>2017-08-11T08:04:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/deployment-of-clojure-app-to-production-with-docker-9dbffeac6ef5/</loc>
+    <lastmod>2017-08-03T13:56:45+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mprokopov.github.io/2017/07/%D1%87%D1%82%D0%BE-%D0%BF%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%B8%D1%82%D1%8C-%D0%BD%D0%B0-%D0%B2%D0%B0%D1%88%D0%B5%D0%BC-mac/</loc>
     <lastmod>2017-07-28T12:00:12+00:00</lastmod>
   </url>
@@ -163,6 +248,11 @@
   <url>
     <loc>https://mprokopov.github.io/2017/07/%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D1%84%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4%D0%B0-%D0%BD%D0%B0-%D0%B2%D0%B5%D0%B1-%D0%BA%D0%B0%D1%82%D0%B8%D1%82%D1%81%D1%8F-%D0%BD/</loc>
     <lastmod>2017-07-22T15:28:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/2017-07-11_-docker-ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/</loc>
+    <lastmod>2017-07-11T16:23:08+00:00</lastmod>
   </url>
   
   <url>
@@ -186,12 +276,22 @@
   </url>
   
   <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/why-docker-for-rails-development-sucks-a43f230f62f6/</loc>
+    <lastmod>2016-11-04T09:17:47+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mprokopov.github.io/2016/10/%D0%B4%D0%B0%D0%B9%D0%B4%D0%B6%D0%B5%D1%81%D1%82-%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D0%BE%D0%BA-%D0%B2%D0%B5%D0%B1%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B0-2016-10-27/</loc>
     <lastmod>2016-10-27T10:33:28+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mprokopov.github.io/2016/10/%D0%B1%D0%BB%D0%B5%D1%81%D0%BA-%D0%B8-%D0%BD%D0%B8%D1%89%D0%B5%D1%82%D0%B0-opencart-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B2%D0%B8%D0%B6%D0%BA%D0%B0-%D0%B4%D0%BB%D1%8F-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD/</loc>
+    <lastmod>2016-10-13T13:54:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/2016-10-13_-opencart-6bbee7eabb95/</loc>
     <lastmod>2016-10-13T13:54:11+00:00</lastmod>
   </url>
   
@@ -221,6 +321,11 @@
   </url>
   
   <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/%d1%85%d0%be%d1%80%d0%be%d1%88%d0%b5%d0%b5-%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d1%80%d1%8f%d0%bc%d0%be-%d0%bb%d0%b0%d0%b9%d0%ba-f2d0097b9b0/</loc>
+    <lastmod>2016-07-22T11:21:03+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mprokopov.github.io/2016/07/tern-%D1%83%D0%BC%D0%BD%D1%8B%D0%B9-autocomplete-%D0%B4%D0%BB%D1%8F-javascript-%D0%B2-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0/</loc>
     <lastmod>2016-07-22T09:03:43+00:00</lastmod>
   </url>
@@ -246,8 +351,18 @@
   </url>
   
   <url>
+    <loc>https://mprokopov.github.io/posts/2016-06-06_-emacs-vim-74190dffa34e/</loc>
+    <lastmod>2016-06-06T11:10:04+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mprokopov.github.io/categories/%D1%81%D0%BE%D1%84%D1%82/</loc>
     <lastmod>2016-06-06T11:10:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/i-discovered-much-faster-way-to-speed-up-docker-image-creation-c7485fbf6aec/</loc>
+    <lastmod>2016-04-29T14:10:13+00:00</lastmod>
   </url>
   
   <url>
@@ -258,6 +373,16 @@
   <url>
     <loc>https://mprokopov.github.io/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/</loc>
     <lastmod>2016-04-22T15:01:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/%d0%be%d1%87%d0%b5%d0%bd%d1%8c-%d1%85%d0%be%d1%80%d0%be%d1%88%d0%be-%d0%bf%d0%b8%d1%88%d0%b5%d1%82%d0%b5-%d0%bb%d0%b5%d0%b3%d0%ba%d0%be-%d1%87%d0%b8%d1%82%d0%b0%d0%b5%d1%82%d1%81%d1%8f-575c5e67ecca/</loc>
+    <lastmod>2016-02-06T12:33:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/mprokopov/that-s-probably-essence-of-habits-you-should-have-to-be-successful-89b95cfbfdbb/</loc>
+    <lastmod>2016-02-06T07:01:13+00:00</lastmod>
   </url>
   
   <url>
@@ -273,6 +398,11 @@
   <url>
     <loc>https://mprokopov.github.io/2015/12/%D0%BF%D0%BE%D1%81%D1%82-%D0%B2-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC-%D1%8F-%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D1%8E%D1%81%D1%8C-%D0%B2-%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8-devcards-figwheel/</loc>
     <lastmod>2015-12-27T15:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/2015-11-02_-slack-15-8ee097578b6b/</loc>
+    <lastmod>2015-11-02T15:12:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1541,7 +1671,51 @@
   </url>
   
   <url>
+    <loc>https://mprokopov.github.io/posts/draft_post-680791be7605/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/draft_gitlab-continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/draft_how-to-speed-up-ruby-bundle-gems-fetch-1110de70ccbc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/draft_one-account-all-of-google-24ec9b332a4a/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/draft_one-account-all-of-google-4681a5761d84/</loc>
+  </url>
+  
+  <url>
     <loc>https://mprokopov.github.io/posts/2020-05-31-pharo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/draft_ruby-tricks-54c9925f2714/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/draft_speeding-up-ruby-on-rails-in-docker-65c35f391389/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/draft_u-d3d57598136a/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mprokopov.github.io/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos-9599b598746b/</loc>
   </url>
   
   <url>
