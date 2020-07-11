@@ -97,8 +97,7 @@ http://www.inreto.de/dns323/fun-plug/
     <div class="date">19.01.2012</div>
     <div>Если вы мигрируете сайт на новый домен, и не хотите потерять SEO позиций, то важно сделать идеологически правильный редирект.
 Делается он так:
-Options +FollowSymLinks RewriteEngine on RewriteCond %{HTTP_HOST} !^newdomain.com RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
-Это можно прописать прямо в vhost секции для сайта, и даже не создавать домашние каталоги.
+Options +FollowSymLinks RewriteEngine on RewriteCond %{HTTP_HOST} !^newdomain\.com RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L] Это можно прописать прямо в vhost секции для сайта, и даже не создавать домашние каталоги.
 Что оставит работающими и старые ссылки на материалы, и переучит поисковики на новые URL. </div>
     
 </div>

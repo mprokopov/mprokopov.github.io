@@ -3447,11 +3447,11 @@ git config --global color.status auto</pre>
     <div class="date">19.01.2012</div>
     <div><p>Если вы мигрируете сайт на новый домен, и не хотите потерять SEO позиций, то важно сделать идеологически правильный редирект.</p>
 <p>Делается он так:</p>
-<p>Options +FollowSymLinks <br>
-RewriteEngine on <br>
-RewriteCond %{HTTP_HOST} !^newdomain.com <br>
-RewriteRule ^(.*)$ <a href="http://www.newdomain.com/$1">http://www.newdomain.com/$1</a> [R=301,L]</p>
-<p>Это можно прописать прямо в vhost секции для сайта, и даже не создавать домашние каталоги.</p>
+<pre><code>Options +FollowSymLinks   
+RewriteEngine on   
+RewriteCond %{HTTP_HOST} !^newdomain\.com   
+RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
+</code></pre><p>Это можно прописать прямо в vhost секции для сайта, и даже не создавать домашние каталоги.</p>
 <p>Что оставит работающими и старые ссылки на материалы, и переучит поисковики на новые URL.</p>
 </div>
 </div>
