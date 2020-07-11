@@ -40,6 +40,22 @@
 
 <div class="article">
     <h1>
+        <a href="/2009/12/wordpress-iphone-theme/">теперь удобно читать блог и с iPhone</a>
+    </h1>
+    <div class="date">27.12.2009</div>
+    <div><p>WordPress замечательная платформа для блоггинга не в последнюю очередь благодаря своей расширяемости плагинами и темами.</p>
+<p>Так, благодаря <a href="http://www.bravenewcode.com/wptouch/" title="WPtouch: Mobile Plugin + Theme for WordPress ↔ BraveNewCode Inc.">плагину WPTouch</a> теперь вполне можно читать блог и из iPhone.</p>
+<p>Вот как это выглядит:</p>
+<p><img src="/uploads/2009/12/iphone_theme.jpg" alt="iphone theme" height="480" width="320" /></p> </div>
+    
+    
+        <a href="/2009/12/wordpress-iphone-theme/">Read More…</a>
+    
+</div>
+<div id="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/2009/12/podvezu/">Сервис поиска попутчиков</a>
     </h1>
     <div class="date">25.12.2009</div>
@@ -91,36 +107,6 @@
 </div>
 <div id="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/2009/12/freebsd-zabbix-1-8/">Ошибка при установке на FreeBSD zabbix 1.8</a>
-    </h1>
-    <div class="date">24.12.2009</div>
-    <div>Если при установке zabbix 1.8 на FreeBSD вы получаете сообщения вида:
-60622:20091223:144406.024 Can’t allocate shared memory of size 8388608 [Cannot allocate memory]
-60622:20091223:144406.024 Can’t allocate shared memory for configuration cache.
-знайте, все дело в системных настройках sysctl.conf
-в порядке тестирования пропишите
-sysctl kern.ipc.semmni=128
-sysctl kern.ipc.semmns=32000
-sysctl kern.ipc.semmax=32000
-sysctl kern.ipc.semmsl=250
-sysctl kern.ipc.shmmni=4096
-sysctl kern.ipc.shmmax=2147483648
-sysctl kern.ipc.shmall=2097152
-или сразу в /etc/sysctl.conf, тогда потребуется перезагрузка
-kern.ipc.semmni=128
-kern.ipc.semmns=32000
-kern.ipc.semmax=32000
-kern.ipc.semmsl=250
-kern.ipc.shmmni=4096
-kern.ipc.shmmax=2147483648
-kern.ipc.shmall=2097152
-проблема должна рассосаться </div>
-    
-</div>
-<div id="border-bottom"></div>
-
 <div class="buttons">
     
     <a href="/page/47/">
@@ -145,6 +131,8 @@ kern.ipc.shmall=2097152
     <div class="sidebar-heading">Категории</div>
     <p></p>
     <ul>
+        
+        <li><a href="/categories/ansible/">ansible</a> (1) </li>
         
         <li><a href="/categories/apache/">apache</a> (3) </li>
         

@@ -40,6 +40,36 @@
 
 <div class="article">
     <h1>
+        <a href="/2009/12/freebsd-zabbix-1-8/">Ошибка при установке на FreeBSD zabbix 1.8</a>
+    </h1>
+    <div class="date">24.12.2009</div>
+    <div>Если при установке zabbix 1.8 на FreeBSD вы получаете сообщения вида:
+60622:20091223:144406.024 Can’t allocate shared memory of size 8388608 [Cannot allocate memory]
+60622:20091223:144406.024 Can’t allocate shared memory for configuration cache.
+знайте, все дело в системных настройках sysctl.conf
+в порядке тестирования пропишите
+sysctl kern.ipc.semmni=128
+sysctl kern.ipc.semmns=32000
+sysctl kern.ipc.semmax=32000
+sysctl kern.ipc.semmsl=250
+sysctl kern.ipc.shmmni=4096
+sysctl kern.ipc.shmmax=2147483648
+sysctl kern.ipc.shmall=2097152
+или сразу в /etc/sysctl.conf, тогда потребуется перезагрузка
+kern.ipc.semmni=128
+kern.ipc.semmns=32000
+kern.ipc.semmax=32000
+kern.ipc.semmsl=250
+kern.ipc.shmmni=4096
+kern.ipc.shmmax=2147483648
+kern.ipc.shmall=2097152
+проблема должна рассосаться </div>
+    
+</div>
+<div id="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/2009/12/esxi/">про VMWare ESXi</a>
     </h1>
     <div class="date">23.12.2009</div>
@@ -103,20 +133,6 @@
 </div>
 <div id="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/2009/12/hello-worldpress/">Решил попробовать эти ваши вордпрессы.</a>
-    </h1>
-    <div class="date">21.12.2009</div>
-    <div>Сначала у меня был очень современный (на 2005год) с развитой многомерной структурой тегов и все такое бла-бла-бла сайт http://nexus.org.ua, и был он написан на Parser 3. Затем я полностью пересел за Ruby on Rails, однако переписывать сайт не торопился. А затем желание чего либо допиливать парсером совсем завяло. Решил по-легкому попробовать себя в ЖЖ.
-Пишу я себе изредка в LiveJournal, чувствую, что картинку вставить очень хочется через MarsEdit, загрузить, значится. А не получается совсем, непорядок. </div>
-    
-    
-        <a href="/2009/12/hello-worldpress/">Read More…</a>
-    
-</div>
-<div id="border-bottom"></div>
-
 <div class="buttons">
     
     <a href="/page/48/">
@@ -141,6 +157,8 @@
     <div class="sidebar-heading">Категории</div>
     <p></p>
     <ul>
+        
+        <li><a href="/categories/ansible/">ansible</a> (1) </li>
         
         <li><a href="/categories/apache/">apache</a> (3) </li>
         

@@ -40,6 +40,22 @@
 
 <div class="article">
     <h1>
+        <a href="/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">How to improve ruby code with dup and tap methods</a>
+    </h1>
+    <div class="date">06.06.2018</div>
+    <div>Here is a piece of my old code, but it’s definitely could be improved.
+def to_params h = ticket_params h[:activity] = extract_activity if extract_activity h[:event] = extract_event if extract_event h.delete(:state_event) h.delete(:activities_attributes) h end As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?
+Let’s see, h=ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy?
+It turns out we have dup method which creates a copy of an object, this is exactly what we wanted. </div>
+    
+    
+        <a href="/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">Read More…</a>
+    
+</div>
+<div id="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/posts/2018-05-29_-prolog-e0878ac7fe40/">Введение в Prolog</a>
     </h1>
     <div class="date">29.05.2018</div>
@@ -90,21 +106,6 @@
 </div>
 <div id="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/mprokopov/noteworthy-clojure-projects-634af849e01d/">Noteworthy Clojure projects</a>
-    </h1>
-    <div class="date">18.01.2018</div>
-    <div>Recently I again dived deeply into Clojure development with my Bank Statements — ERP sync tool and started to investigate what’s new in Clojure world. It appears a lot of great things happend in 2017!
-Every of following tools drops my jaw down. Here is my list:
- Lightmod and Nightcode really great editors for Clojure/Clojurescript beginners. Zach Oakes included useful examples to jump into Clojure development train. Dynadoc, documentation exploration tool which makes your work with documentation more effective and interactive. </div>
-    
-    
-        <a href="/posts/mprokopov/noteworthy-clojure-projects-634af849e01d/">Read More…</a>
-    
-</div>
-<div id="border-bottom"></div>
-
 <div class="buttons">
     
     <a href="/page/4/">
@@ -129,6 +130,8 @@ Every of following tools drops my jaw down. Here is my list:
     <div class="sidebar-heading">Категории</div>
     <p></p>
     <ul>
+        
+        <li><a href="/categories/ansible/">ansible</a> (1) </li>
         
         <li><a href="/categories/apache/">apache</a> (3) </li>
         

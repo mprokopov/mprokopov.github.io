@@ -66,6 +66,18 @@
     </item>
     
     <item>
+      <title>Keep it simple, stupid</title>
+      <link>https://mprokopov.github.io/posts/2020-07-11/</link>
+      <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/2020-07-11/</guid>
+      <description>&lt;p&gt;Simplicity is an underappreciated property.&lt;/p&gt;
+&lt;p&gt;In order to dynamically edit content people tend to introduce a lot of complexity by using powerful CMS systems, databases, search engines etc. Moreover, you&amp;rsquo;ll need to spend significant efforts on maintenance, high availability, for all this stuff.&lt;/p&gt;
+&lt;p&gt;What if you can just use Markdown and provide a short training course to people? What if you can use Hugo and Github Actions pipelines or similar for publishing?&lt;/p&gt;
+&lt;p&gt;Literally everything becomes more simple, thus more robust. What power can you gain by using simple text based format like this? Countless amount of tools for editing, processing and automation. Think about this.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Smalltalk online course done</title>
       <link>https://mprokopov.github.io/posts/2020-07-09/</link>
       <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
