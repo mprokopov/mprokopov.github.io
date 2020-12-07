@@ -1,42 +1,71 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.68.3" /><title>Maksym Prokopov personal website</title>
+	<meta name="generator" content="Hugo 0.68.3" /><title>Maksym Prokopov personal blog</title>
 <meta charset="utf-8"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
-
-
-<link rel="stylesheet" href="https://mprokopov.github.io/style.min.b47e9dbbe9cb8ba63ca483edbb6a0ccf62fe04626db6ba8901ff95c740f26675.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="https://mprokopov.github.io/style.min.7d7cf6e49a4e9fb216f9cc25bcfae0e8709beaf4767777ffc343b677fcb09e0c.css">
+<link rel="stylesheet" href="https://mprokopov.github.io/style.min.7d7cf6e49a4e9fb216f9cc25bcfae0e8709beaf4767777ffc343b677fcb09e0c.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
     <body><div id="header">
-    <a class="title" href="/"><div id="title">Блог Максима Прокопова</div><div id="description">Считаю что идеи это такая штука, которой следует делиться</div></a>
+    <a class="title" href="/"><div id="title">Maksym Prokopov personal blog</div><div id="description">Idea is a something worth sharing</div></a>
 </div>
-<div id="nav-container">
-    <div id="nav">
-        <div class="menu">
-            <div class="nav">
-                <ul>
-                    
-                    <li class="page-item"><a href="https://mprokopov.github.io/pages/trips/">Путешествую</a></li>
-                    
-                    <li class="page-item"><a href="https://mprokopov.github.io/pages/loosingweight/">Худею</a></li>
-                    
-                    <li class="page-item"><a href="https://mprokopov.github.io/pages/reading/">Читаю</a></li>
-                    
-                    <li class="page-item"><a href="https://mprokopov.github.io/pages/creating/">Создаю</a></li>
-                    
-                    <li class="page-item"><a href="https://mprokopov.github.io/pages/about/">Обо мне</a></li>
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
+<div class="nav">
+    
+    <div class="page-item"><a href="https://mprokopov.github.io/pages/trips/">Travel</a></div>
+    
+    <div class="page-item"><a href="https://mprokopov.github.io/pages/loosingweight/">Loose weight</a></div>
+    
+    <div class="page-item"><a href="https://mprokopov.github.io/pages/reading/">Read</a></div>
+    
+    <div class="page-item"><a href="https://mprokopov.github.io/pages/creating/">Create</a></div>
+    
+    <div class="page-item"><a href="https://mprokopov.github.io/pages/about/">About</a></div>
+    
 </div>
-<div class="clear"></div>
-        <div id="container">
+
+
+<div class="article">
+    <h1>
+        <a href="/posts/mprokopov/how-to-increase-kubernetes-pvc-size-for-aws-ebs-b3d4a99c006a/">How to increase Kubernetes PVC size for AWS EBS</a>
+    </h1>
+    <div class="date">12.05.2020</div>
+    <div>It’s quite simple to increase PVC size since K8s 1.11
+kubectl describe pvc and find your storage class.
+Name: jenkins
+Namespace: jenkins
+StorageClass: jenkins-gp2
+Status: Bound
+Volume: pvc-473e3dbf-b759-11e9-9cbc-02a7fb0b6cca
+Labels: app.kubernetes.io/component=jenkins-master
+app.kubernetes.io/instance=jenkins
+app.kubernetes.io/managed-by=Tiller
+app.kubernetes.io/name=jenkins
+helm.sh/chart=jenkins-1.3.6
+Annotations: pv.kubernetes.io/bind-completed: yes
+pv.kubernetes.io/bound-by-controller: yes
+volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/aws-ebs
+Finalizers: [kubernetes.io/pvc-protection]
+Capacity: 16Gi
+Access Modes: RWO
+VolumeMode: Filesystem
+Mounted By: jenkins-6b5c9bcbbb-gr2l5
+Events: 
+kubectl edit storageclass jenkins-gp2 add the following to your storage class
+allowVolumeExpansion: true
+kubectl edit pvc jenkins </div>
+    
+    
+        <a href="/posts/mprokopov/how-to-increase-kubernetes-pvc-size-for-aws-ebs-b3d4a99c006a/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
 
 <div class="article">
     <h1>
@@ -52,7 +81,7 @@ Here are the specs I wanted to preserve:
         <a href="/posts/mprokopov/my-new-modern-web-site-stack-f9645e78ae16/">Read More…</a>
     
 </div>
-<div id="border-bottom"></div>
+<div class="border-bottom"></div>
 
 <div class="article">
     <h1>
@@ -72,7 +101,7 @@ and much more.</li>
 </ul> </div>
     
 </div>
-<div id="border-bottom"></div>
+<div class="border-bottom"></div>
 
 <div class="article">
     <h1>
@@ -84,7 +113,7 @@ Works best with Alfred 4 using mapped hotkey.
 tell application "Calendar" tell calendar "maksym.prokopov@trilogy.com" set itemLocation to location of first event where its start date ≤ (current date) + 10 * minutes and end date ≥ (current date) if itemLocation contains "zoom.us" then tell application "Finder" to open location itemLocation end tell end tell </div>
     
 </div>
-<div id="border-bottom"></div>
+<div class="border-bottom"></div>
 
 <div class="article">
     <h1>
@@ -97,43 +126,33 @@ tell application "Calendar" tell calendar "maksym.prokopov@trilogy.com" set item
         <a href="/posts/applescript-instant-open-zoom-link/">Read More…</a>
     
 </div>
-<div id="border-bottom"></div>
+<div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/mprokopov/the-bad-thing-about-rails-is-that-by-default-it-suggests-using-own-messy-design-patterns-like-fat-37d81b3e7def/">The bad thing about Rails is that by default it suggests using own messy design patterns like fat…</a>
-    </h1>
-    <div class="date">15.09.2019</div>
-    <div>The bad thing about Rails is that by default it suggests using own messy design patterns like fat models. I mean all these callbacks in AR, observers and everything that is good for a simple blog but fails for a big application.
-You have to use a very little part of Rails to apply DDD concepts. </div>
+<div class="pagination">
+    
+    <div class="pagination__prev">
+        <a href="/page/3/" class="pagination__icon">&lt;&lt;</a>
+        <a href="/page/3/">Previous page</a>
+    </div>
+    
+    
+    <div class="pagination__next">
+        <a href="/page/5/">Next page</a>
+        <a href="/page/5/" class="pagination__icon">&gt;&gt;</a>
+    </div>
     
 </div>
-<div id="border-bottom"></div>
-
-<div class="buttons">
-    
-    <a href="/page/3/">
-        <div id="left"><table class="links"><tbody><tr><td><div id="posts-button">«</div></td><td class="text">Previous page</td></tr></tbody></table></div>
-    </a>
-    
-    
-    <a href="/page/5/"><div id="right"><table class="links"><tbody><tr><td class="text">Next page</td><td><div id="posts-button2">»</div></td></tr></tbody></table></div></a>
-    
-</div>
-
-        </div>
-        <div class="clear"></div><div id="sidebar"><div id="sidebar-widget">
-    <div class="sidebar-heading">Визитка</div><p></p>
+<div id="sidebar"><div class="sidebar__visitcard">
+    <div class="sidebar__heading">Profile</div><p></p>
     <div class="textwidget">
         
-        <a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Max Prokopov" rel="noopener noreferrer">Max Prokopov</a><br><a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" title="Max Prokopov" rel="noopener noreferrer"><img src="https://badge.facebook.com/badge/564099895.8308.711585450.png" style="border: 0px;"></a>
+        <a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 18px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Max Prokopov" rel="noopener noreferrer">Max Prokopov</a><br><a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" title="Max Prokopov" rel="noopener noreferrer"><img src="https://badge.facebook.com/badge/564099895.8308.711585450.png" style="border: 0px;"></a>
         </div>
 </div>
-
-<div id="sidebar-widget">
-    <div class="sidebar-heading">Категории</div>
+<div class="sidebar__categories">
+    <div class="sidebar__heading">Categories</div>
     <p></p>
-    <ul>
+    <ul class="sidebar__links">
         
         <li><a href="/categories/ansible/">ansible</a> (1) </li>
         
@@ -203,8 +222,9 @@ You have to use a very little part of Rails to apply DDD concepts. </div>
         
     </ul>
 </div>
-<div id="linkcat-2"><div class="sidebar-heading">Друзья и коллеги</div><p></p>
-	<ul class="xoxo blogroll">
+<div class="sidebar__friends">
+    <div class="sidebar__heading">Friends</div><p></p>
+	<ul class="sidebar__links">
       
       <li><a href="https://it-premium.com.ua" title="Наш сайт по ИТ-аутсорсингу" >IT-Premium аутсорсинг от профессионалов</a></li>
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Maksym Prokopov personal website</title>
+    <title>Maksym Prokopov personal blog</title>
     <link>https://mprokopov.github.io/</link>
-    <description>Recent content on Maksym Prokopov personal website</description>
+    <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Путешествую</title>
+      <title>Travel</title>
       <link>https://mprokopov.github.io/pages/trips/</link>
       <pubDate>Sat, 10 Aug 2013 13:07:34 +0000</pubDate>
       
@@ -22,7 +22,7 @@
     </item>
     
     <item>
-      <title>Худею</title>
+      <title>Loose weight</title>
       <link>https://mprokopov.github.io/pages/loosingweight/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -33,7 +33,7 @@
     </item>
     
     <item>
-      <title>Читаю</title>
+      <title>Read</title>
       <link>https://mprokopov.github.io/pages/reading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -44,7 +44,7 @@
     </item>
     
     <item>
-      <title>Создаю</title>
+      <title>Create</title>
       <link>https://mprokopov.github.io/pages/creating/</link>
       <pubDate>Tue, 20 Aug 2013 07:14:34 +0000</pubDate>
       
@@ -55,7 +55,7 @@
     </item>
     
     <item>
-      <title>Обо мне</title>
+      <title>About</title>
       <link>https://mprokopov.github.io/pages/about/</link>
       <pubDate>Mon, 21 Dec 2009 20:45:17 +0000</pubDate>
       
@@ -63,6 +63,19 @@
       <description>Привет, меня зовут Максим Прокопов. С 2020г переехал жить во Фрайбург, Германия.
 Сейчас мои интересы сейчас лежат в области DevOps, Lean IT, и ИТ аутсорсинга, M&amp;amp;A активностей. В далеком 2007 с моим партнером Александром мы запустили компанию по предоставлению услуг ИТ-аутсорсинга IT-Premium https://it-premium.com.ua. В 2016 с другим партнером Алексеем мы запустили интернет-магазин Super-Truper.com.ua. К 2018 моя 50% доля магазина была продана Алексею.
 Начинал разработку на PHP 3.0.3, затем на Parser 2 и Parser 3 студии Лебедева, с 2006 перешел на Ruby on Rails.</description>
+    </item>
+    
+    <item>
+      <title>Managing shims and all the stuff to get stable builds</title>
+      <link>https://mprokopov.github.io/posts/2020-10-20/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mprokopov.github.io/posts/2020-10-20/</guid>
+      <description>&lt;h2 id=&#34;asdf&#34;&gt;ASDF&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://asdf-vm.com/#/core-manage-asdf&#34;&gt;https://asdf-vm.com/#/core-manage-asdf&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;nisos&#34;&gt;NisOS&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://ariya.io/2016/05/nix-as-os-x-package-manager&#34;&gt;https://ariya.io/2016/05/nix-as-os-x-package-manager&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stuartsierra.com/2020/01/09/path-to-confusion#more-1252&#34;&gt;path to confusion blog post by Stuart Sierra&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
