@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Maksym Prokopov personal blog</title>
-    <link>https://mprokopov.github.io/pages/</link>
+    <link>https://prokopov.me/pages/</link>
     <description>Recent content in Pages on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Tue, 20 Aug 2013 07:14:34 +0000</lastBuildDate>
     
-	<atom:link href="https://mprokopov.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://prokopov.me/pages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Travel</title>
-      <link>https://mprokopov.github.io/pages/trips/</link>
+      <link>https://prokopov.me/pages/trips/</link>
       <pubDate>Sat, 10 Aug 2013 13:07:34 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/pages/trips/</guid>
+      <guid>https://prokopov.me/pages/trips/</guid>
       <description>Очень люблю Юго-Восточную Азию за теплый климат и прекрасных людей.
   2020 Испания, Барселона увы и ах, из-за короны-19 отменена :(   2019-2020 Норвегия, Аскер 2 недели   2019 Германия, Фрайбург 3 дня   2019 Австрия, Вена, 1 месяц 1 месяц   2019 Турция, пригород Анталии 1 неделя 2 недели   2019 Германия, Берлин 3 дня   2019 Сицилия, гастротур 6 дней   2018-2019 Таиланд, о.</description>
     </item>
     
     <item>
       <title>Read</title>
-      <link>https://mprokopov.github.io/pages/reading/</link>
+      <link>https://prokopov.me/pages/reading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/pages/reading/</guid>
+      <guid>https://prokopov.me/pages/reading/</guid>
       <description>Стейнбек говорил, что «плохой роман должен развлекать читателей, средний – воздействовать на их чувства, а лучший – озарять им путь»
 Книги в моем ближайшем TODO:
  Построение бизнес-моделей Остервальдер, Пинье Психология влияния — Р. Чалдини Вавилон-17 Сэмюэль Дилэни The Flinch. Выкрикивается лот 49 Томаса Пинчона Туннель Эго Томаса Метцингера Темный лес Лю Цисинь Задача трех тел Лю Цисинь Зеленый корль Поль-Лу Сулицер S.N.U.F.F. Виктор Пелевин Как люди видят Дмитрий Чернышев Синдром стога сена Элияху Голдратт Цель-1 Элияху Голдратт Цель-2 Элияху Голдратт Цель-3Элияху Голдратт Об интеллекте Джон Хоккинз Общая соционика А.</description>
@@ -34,10 +34,10 @@
     
     <item>
       <title>Create</title>
-      <link>https://mprokopov.github.io/pages/creating/</link>
+      <link>https://prokopov.me/pages/creating/</link>
       <pubDate>Tue, 20 Aug 2013 07:14:34 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/pages/creating/</guid>
+      <guid>https://prokopov.me/pages/creating/</guid>
       <description>Когда в 2001г я работал в студии веб-дизайна [dom.com] мы придумали забавный поддомен «con». В итоге получался полный адрес con.dom.com.ua. Со временем зарегистрировали домен condom.com.ua, потом мы его потеряли и не так давно снова зарегистрировали condom.org.ua.
 Поскольку у коллектива разработчиков было свободное время, мы закодили и выдали в мир сайт с тематикой, которая бы оправдывала такой домен. Это сайт о средствах контрацепции.
 В нашей команде была журналистка Лариса Мищанчук, которая и стала автором большинства статей о контрацепции.</description>
@@ -45,10 +45,10 @@
     
     <item>
       <title>About</title>
-      <link>https://mprokopov.github.io/pages/about/</link>
+      <link>https://prokopov.me/pages/about/</link>
       <pubDate>Mon, 21 Dec 2009 20:45:17 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/pages/about/</guid>
+      <guid>https://prokopov.me/pages/about/</guid>
       <description>Hi, my name is Maksym Prokopov. Since 2020 I live in Freiburg in Greisgau, Germany.
 Surprisingly, but I use PHP for my job today. A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages.
 Сейчас мои интересы сейчас лежат в области DevOps, Lean IT, и ИТ аутсорсинга, M&amp;amp;A активностей. В далеком 2007 с моим партнером Александром мы запустили компанию по предоставлению услуг ИТ-аутсорсинга IT-Premium https://it-premium.</description>

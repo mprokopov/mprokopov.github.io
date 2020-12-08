@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>kubernetes on Maksym Prokopov personal blog</title>
-    <link>https://mprokopov.github.io/categories/kubernetes/</link>
+    <link>https://prokopov.me/categories/kubernetes/</link>
     <description>Recent content in kubernetes on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Sat, 26 May 2018 12:35:51 +0000</lastBuildDate>
     
-	<atom:link href="https://mprokopov.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://prokopov.me/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Brief introduction to the Kubernetes.</title>
-      <link>https://mprokopov.github.io/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/</link>
+      <link>https://prokopov.me/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/</link>
       <pubDate>Sat, 26 May 2018 12:35:51 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/</guid>
+      <guid>https://prokopov.me/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/</guid>
       <description>Kubernetes is a winner in docker cloud orchestration, so let’s get a brief introduction in what it is and what kind of problems it solves. Kubernetes is a set of tools designed to solve a problem of deployment of your lovely tailor-made application to a cloud. It does not matter which cloud you choose, AWS, Azure or Google, or even IBM, because Kubernetes provides you with a set of tools which are platform independent.</description>
     </item>
     

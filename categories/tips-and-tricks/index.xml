@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tips and tricks on Maksym Prokopov personal blog</title>
-    <link>https://mprokopov.github.io/categories/tips-and-tricks/</link>
+    <link>https://prokopov.me/categories/tips-and-tricks/</link>
     <description>Recent content in tips and tricks on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mprokopov.github.io/categories/tips-and-tricks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://prokopov.me/categories/tips-and-tricks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Applescript instantly open Zoom link from the iCal calendar</title>
-      <link>https://mprokopov.github.io/posts/applescript-instant-open-zoom-link/</link>
+      <link>https://prokopov.me/posts/applescript-instant-open-zoom-link/</link>
       <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/posts/applescript-instant-open-zoom-link/</guid>
+      <guid>https://prokopov.me/posts/applescript-instant-open-zoom-link/</guid>
       <description>&lt;p&gt;This is really my little timesaver because you know, a lot of meetings happen when you work remotely.&lt;/p&gt;</description>
     </item>
     

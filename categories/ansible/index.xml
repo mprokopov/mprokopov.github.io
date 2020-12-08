@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ansible on Maksym Prokopov personal blog</title>
-    <link>https://mprokopov.github.io/categories/ansible/</link>
+    <link>https://prokopov.me/categories/ansible/</link>
     <description>Recent content in ansible on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Tue, 15 Aug 2017 08:17:15 +0000</lastBuildDate>
     
-	<atom:link href="https://mprokopov.github.io/categories/ansible/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://prokopov.me/categories/ansible/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ansible Containers</title>
-      <link>https://mprokopov.github.io/posts/mprokopov/ansible-containers-d89258cdf5de/</link>
+      <link>https://prokopov.me/posts/mprokopov/ansible-containers-d89258cdf5de/</link>
       <pubDate>Tue, 15 Aug 2017 08:17:15 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/posts/mprokopov/ansible-containers-d89258cdf5de/</guid>
+      <guid>https://prokopov.me/posts/mprokopov/ansible-containers-d89258cdf5de/</guid>
       <description>Long story short. Ansible decided to create separate orchestration tool for the managing application containers, which is obviously a mainstream now. And this is straightforward next step after development tools for server state management like Ansible.
 ansible/ansible-container
 _ansible-container - Ansible Container is a tool to build Docker images and orchestrate containers using only Ansible…_github.com

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Мак on Maksym Prokopov personal blog</title>
-    <link>https://mprokopov.github.io/categories/%D0%BC%D0%B0%D0%BA/</link>
+    <link>https://prokopov.me/categories/%D0%BC%D0%B0%D0%BA/</link>
     <description>Recent content in Мак on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Thu, 10 Sep 2015 12:17:14 +0000</lastBuildDate>
     
-	<atom:link href="https://mprokopov.github.io/categories/%D0%BC%D0%B0%D0%BA/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://prokopov.me/categories/%D0%BC%D0%B0%D0%BA/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OS X El Capitan GM Candidate</title>
-      <link>https://mprokopov.github.io/2015/09/os-x-el-capitan-gm-candidate/</link>
+      <link>https://prokopov.me/2015/09/os-x-el-capitan-gm-candidate/</link>
       <pubDate>Thu, 10 Sep 2015 12:17:14 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2015/09/os-x-el-capitan-gm-candidate/</guid>
+      <guid>https://prokopov.me/2015/09/os-x-el-capitan-gm-candidate/</guid>
       <description>Сегодня пришло предложение установить beta версию OS X El Capitan. Интересным оказался способ, с помощью которого производится установка.
 На сайте Apple Beta Program после регистрации выдается специальный Redeem Code, который при вводе в приложение (автоматически) App Store запускает закачку OS X El Capitan.
 
@@ -25,31 +25,31 @@
     
     <item>
       <title>Tips and tricks for Mac OS. Part 3.</title>
-      <link>https://mprokopov.github.io/2014/05/tips-and-tricks-for-mac-os-part-3/</link>
+      <link>https://prokopov.me/2014/05/tips-and-tricks-for-mac-os-part-3/</link>
       <pubDate>Thu, 08 May 2014 11:03:51 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2014/05/tips-and-tricks-for-mac-os-part-3/</guid>
+      <guid>https://prokopov.me/2014/05/tips-and-tricks-for-mac-os-part-3/</guid>
       <description>&lt;p&gt;Сегодняшняя фича будет особенно полезна для обладателей нескольких мониторов, а также всех тех, кто любит оптимизировать ежедневные простые задачи, такие как манипулирование окнами приложений с клавиатуры.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://mprokopov.github.io/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56.png&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-1214&#34; src=&#34;https://mprokopov.github.io/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56.png&#34; alt=&#34;Screen Shot 2014-05-08 at 13.50.56&#34; width=&#34;398&#34; height=&#34;436&#34; srcset=&#34;https://mprokopov.github.io/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56.png 398w, https://mprokopov.github.io/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56-273x300.png 273w&#34; sizes=&#34;(max-width: 398px) 100vw, 398px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://prokopov.me/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56.png&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-1214&#34; src=&#34;https://prokopov.me/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56.png&#34; alt=&#34;Screen Shot 2014-05-08 at 13.50.56&#34; width=&#34;398&#34; height=&#34;436&#34; srcset=&#34;https://prokopov.me/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56.png 398w, https://prokopov.me/uploads/2014/05/Screen-Shot-2014-05-08-at-13.50.56-273x300.png 273w&#34; sizes=&#34;(max-width: 398px) 100vw, 398px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Mac tips and tricks. Part 2.</title>
-      <link>https://mprokopov.github.io/2014/04/mac-tips-and-tricks-part-2/</link>
+      <link>https://prokopov.me/2014/04/mac-tips-and-tricks-part-2/</link>
       <pubDate>Mon, 28 Apr 2014 10:34:20 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2014/04/mac-tips-and-tricks-part-2/</guid>
+      <guid>https://prokopov.me/2014/04/mac-tips-and-tricks-part-2/</guid>
       <description>&lt;p&gt;Продолжаем серию трюков для Mac, о которых не все знают.&lt;/p&gt;
 &lt;p&gt;Очень быстро можно найти определение, перевести слово с другого языка если сделать тап тремя пальцами по слову, либо нажать Option-D на выделенном слове. Выглядит это так:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16.png&#34;&gt;&lt;img class=&#34;aligncenter size-large wp-image-1206&#34; src=&#34;https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-1024x816.png&#34; alt=&#34;Screen Shot 2014-04-28 at 13.17.16&#34; width=&#34;700&#34; height=&#34;557&#34; srcset=&#34;https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-1024x816.png 1024w, https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-300x239.png 300w, https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-900x717.png 900w, https://mprokopov.github.io/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16.png 1394w&#34; sizes=&#34;(max-width: 700px) 100vw, 700px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://prokopov.me/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16.png&#34;&gt;&lt;img class=&#34;aligncenter size-large wp-image-1206&#34; src=&#34;https://prokopov.me/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-1024x816.png&#34; alt=&#34;Screen Shot 2014-04-28 at 13.17.16&#34; width=&#34;700&#34; height=&#34;557&#34; srcset=&#34;https://prokopov.me/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-1024x816.png 1024w, https://prokopov.me/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-300x239.png 300w, https://prokopov.me/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16-900x717.png 900w, https://prokopov.me/uploads/2014/04/Screen-Shot-2014-04-28-at-13.17.16.png 1394w&#34; sizes=&#34;(max-width: 700px) 100vw, 700px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Мои любимые mac tips and tricks</title>
-      <link>https://mprokopov.github.io/2014/04/favorite-mac-tips-and-tricks/</link>
+      <link>https://prokopov.me/2014/04/favorite-mac-tips-and-tricks/</link>
       <pubDate>Fri, 25 Apr 2014 11:35:00 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2014/04/favorite-mac-tips-and-tricks/</guid>
+      <guid>https://prokopov.me/2014/04/favorite-mac-tips-and-tricks/</guid>
       <description>Начинаю серию постов про трюки для Mac OS, которые облегчают жизнь:
 С зажатой кнопкой Option и кликом по иконке WiFi мы можем увидеть расширенную информацию о беспроводном подключении.
 
@@ -59,10 +59,10 @@
     
     <item>
       <title>Улучшаем работу с TaskPaper при помощи Keyboard Maestro</title>
-      <link>https://mprokopov.github.io/2013/06/taskpaper-keyboard-maestro-enhancement/</link>
+      <link>https://prokopov.me/2013/06/taskpaper-keyboard-maestro-enhancement/</link>
       <pubDate>Mon, 03 Jun 2013 07:37:10 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2013/06/taskpaper-keyboard-maestro-enhancement/</guid>
+      <guid>https://prokopov.me/2013/06/taskpaper-keyboard-maestro-enhancement/</guid>
       <description>Спешу поделиться, мои дорогие обладатели Task Paper и компьютера с системой Mac OS, своим опытом улучшения взаимодействия человека и программы управления задачами TaskPaper.
 Как я уже описывал ранее в своей системе Getting Results Agile Way для TaskPaper, есть определенный список файлов с задачами.
  2013 Backlog Week 2013-04-01 папка Personal Projects папка Work Projects папка Archive Commitments Calendar Покупки  и самый важный и часто используемый файл это Week 2013-XX-YY (XX-месяц, YY — день)</description>
@@ -70,30 +70,30 @@
     
     <item>
       <title>Мой TaskPaper и Getting Results Agile Way</title>
-      <link>https://mprokopov.github.io/2013/01/taskpaper-getting-results-agile-way/</link>
+      <link>https://prokopov.me/2013/01/taskpaper-getting-results-agile-way/</link>
       <pubDate>Sat, 19 Jan 2013 09:53:34 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2013/01/taskpaper-getting-results-agile-way/</guid>
+      <guid>https://prokopov.me/2013/01/taskpaper-getting-results-agile-way/</guid>
       <description>Если бы меня попросили охарактеризовать TaskPaper одной фразой, то, пожалуй, этой фразой стала бы «гениальная простота», поскольку то, что делает TaskPaper, на первый взгляд кажется простым текстовым редактором. Однако, погодите, не все так просто! И мне кажется, что я врядли изменю TaskPaper после моего увлечения такими штуками как Things, OmniFocus и TheHitList.
 Самый базовый функционал сводится к следующему, у нас, в зависимости от разметки, текст может стать одним из трех элементов: задачей, заметкой и проектом.</description>
     </item>
     
     <item>
       <title>Омнифокус 1.x скачать бесплатно</title>
-      <link>https://mprokopov.github.io/2013/01/%D0%BE%D0%BC%D0%BD%D0%B8%D1%84%D0%BE%D0%BA%D1%83%D1%81-1-x-%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE/</link>
+      <link>https://prokopov.me/2013/01/%D0%BE%D0%BC%D0%BD%D0%B8%D1%84%D0%BE%D0%BA%D1%83%D1%81-1-x-%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE/</link>
       <pubDate>Sat, 12 Jan 2013 12:14:28 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2013/01/%D0%BE%D0%BC%D0%BD%D0%B8%D1%84%D0%BE%D0%BA%D1%83%D1%81-1-x-%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE/</guid>
+      <guid>https://prokopov.me/2013/01/%D0%BE%D0%BC%D0%BD%D0%B8%D1%84%D0%BE%D0%BA%D1%83%D1%81-1-x-%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE/</guid>
       <description>Омнифокус объявил беспрецендентную акцию. Для подогрева интереса к OmniFocus 2 открыл лицензию на версию 1.
 License Owner: Waiting for OmniFocus 2  License Key: KXKN-ZJDB-EJCX-LZHW-CFBF-QFC  http://www.omnigroup.com/blog/entry/anticipating-omnifocus-2</description>
     </item>
     
     <item>
       <title>Штуки, про которые хотелось бы написать прямо сейчас</title>
-      <link>https://mprokopov.github.io/2013/01/%D1%88%D1%82%D1%83%D0%BA%D0%B8-%D0%BF%D1%80%D0%BE-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%85%D0%BE%D1%82%D0%B5%D0%BB%D0%BE%D1%81%D1%8C-%D0%B1%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82/</link>
+      <link>https://prokopov.me/2013/01/%D1%88%D1%82%D1%83%D0%BA%D0%B8-%D0%BF%D1%80%D0%BE-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%85%D0%BE%D1%82%D0%B5%D0%BB%D0%BE%D1%81%D1%8C-%D0%B1%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82/</link>
       <pubDate>Tue, 08 Jan 2013 10:34:38 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2013/01/%D1%88%D1%82%D1%83%D0%BA%D0%B8-%D0%BF%D1%80%D0%BE-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%85%D0%BE%D1%82%D0%B5%D0%BB%D0%BE%D1%81%D1%8C-%D0%B1%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82/</guid>
+      <guid>https://prokopov.me/2013/01/%D1%88%D1%82%D1%83%D0%BA%D0%B8-%D0%BF%D1%80%D0%BE-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%85%D0%BE%D1%82%D0%B5%D0%BB%D0%BE%D1%81%D1%8C-%D0%B1%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82/</guid>
       <description>Особо хочется написать обзоры следующих штук, владельцем которых я стал недавно:
 Из софта:
  Hazel Kayboard Maestro Task Paper (OS X, iOS) -&amp;gt; мой основной GTD инструмент MacVim + Janus TheBrain Apple FinalCut X iBank  Из гаджетов:
@@ -103,10 +103,10 @@ License Owner: Waiting for OmniFocus 2  License Key: KXKN-ZJDB-EJCX-LZHW-CFBF-QF
     
     <item>
       <title>How to fix ICQ HTML tags in iMessage</title>
-      <link>https://mprokopov.github.io/2012/07/how-to-fix-icq-html-tags-in-imessage/</link>
+      <link>https://prokopov.me/2012/07/how-to-fix-icq-html-tags-in-imessage/</link>
       <pubDate>Thu, 26 Jul 2012 11:53:05 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2012/07/how-to-fix-icq-html-tags-in-imessage/</guid>
+      <guid>https://prokopov.me/2012/07/how-to-fix-icq-html-tags-in-imessage/</guid>
       <description>This post is not actual any more, so here is another solution:
   Go to ~/Library/Preferences/
 Open com.apple.iChat.AIM.plist
@@ -117,20 +117,20 @@ Logoff/logon. Enjoy.</description>
     
     <item>
       <title>Хозяйке на заметку: как добавить в iTunes плейлист «последние добавленные»</title>
-      <link>https://mprokopov.github.io/2012/04/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%B2-itunes-%D0%BF%D0%BB%D0%B5/</link>
+      <link>https://prokopov.me/2012/04/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%B2-itunes-%D0%BF%D0%BB%D0%B5/</link>
       <pubDate>Mon, 30 Apr 2012 08:11:02 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2012/04/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%B2-itunes-%D0%BF%D0%BB%D0%B5/</guid>
+      <guid>https://prokopov.me/2012/04/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%B2-itunes-%D0%BF%D0%BB%D0%B5/</guid>
       <description>С одним из обновлений ушел удобный смарт-плейлист «последние добавленные», но, к счастью, восстановить его задача несложная.
  Добавляем смарт-альбом как на скриншоте ниже и вуаля!</description>
     </item>
     
     <item>
       <title>Цвета в терминале Mac OS X Lion</title>
-      <link>https://mprokopov.github.io/2012/03/%D1%86%D0%B2%D0%B5%D1%82%D0%B0-%D0%B2-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%B5-mac-os-x-lion/</link>
+      <link>https://prokopov.me/2012/03/%D1%86%D0%B2%D0%B5%D1%82%D0%B0-%D0%B2-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%B5-mac-os-x-lion/</link>
       <pubDate>Wed, 07 Mar 2012 10:57:23 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2012/03/%D1%86%D0%B2%D0%B5%D1%82%D0%B0-%D0%B2-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%B5-mac-os-x-lion/</guid>
+      <guid>https://prokopov.me/2012/03/%D1%86%D0%B2%D0%B5%D1%82%D0%B0-%D0%B2-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%B5-mac-os-x-lion/</guid>
       <description>Лично для меня крайне удобным решением для терминала является iTerm2. Однажды, очень захотелось сделать его цветастым. Для получения расцветки необходимо добавить в ~/.bash_profile строку
 export CLICOLOR=1
 По наводке @snupt была найдена и установлена тема Solarized Dark, из-за которой, однако была практически отключена полупрозрачность из-за которой текст читался значительно хуже.
@@ -140,20 +140,20 @@ Sublime Text 2 Solarized Dark theme</description>
     
     <item>
       <title>Хозяйке Mac OS на заметку: автоматическое обновление DDNS</title>
-      <link>https://mprokopov.github.io/2011/08/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-mac-os-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D0%BE/</link>
+      <link>https://prokopov.me/2011/08/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-mac-os-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D0%BE/</link>
       <pubDate>Tue, 30 Aug 2011 07:16:10 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/08/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-mac-os-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D0%BE/</guid>
+      <guid>https://prokopov.me/2011/08/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-mac-os-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D0%BE/</guid>
       <description>Если у вас тот самый случай, когда DDNS может сыграть важную роль в обнаружении собственного ноутбука, то довольно просто можно создать свой демон регистрации в DDNS.
 Все довольно доступно изложено здесь</description>
     </item>
     
     <item>
       <title>Добавить ICQ в iChat в Mac OS X Lion</title>
-      <link>https://mprokopov.github.io/2011/08/%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-icq-%D0%B2-ichat-%D0%B2-mac-os-x-lion/</link>
+      <link>https://prokopov.me/2011/08/%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-icq-%D0%B2-ichat-%D0%B2-mac-os-x-lion/</link>
       <pubDate>Wed, 24 Aug 2011 16:24:46 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/08/%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-icq-%D0%B2-ichat-%D0%B2-mac-os-x-lion/</guid>
+      <guid>https://prokopov.me/2011/08/%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-icq-%D0%B2-ichat-%D0%B2-mac-os-x-lion/</guid>
       <description>Весь процесс описан здесь:
 http://macdaily.me/howto/how-to-set-icq-in-ichat/
  от себя добавлю, теперь в iChat появилось то, о чем так долго мечтали большевики — поиск по контактам Cmd+F</description>
@@ -161,19 +161,19 @@ http://macdaily.me/howto/how-to-set-icq-in-ichat/
     
     <item>
       <title>Хозяйке Mac OS на заметку: очистка DNS кеша</title>
-      <link>https://mprokopov.github.io/2011/08/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-mac-os-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0-dns-%D0%BA%D0%B5%D1%88%D0%B0/</link>
+      <link>https://prokopov.me/2011/08/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-mac-os-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0-dns-%D0%BA%D0%B5%D1%88%D0%B0/</link>
       <pubDate>Thu, 18 Aug 2011 11:05:24 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/08/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-mac-os-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0-dns-%D0%BA%D0%B5%D1%88%D0%B0/</guid>
+      <guid>https://prokopov.me/2011/08/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-mac-os-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0-dns-%D0%BA%D0%B5%D1%88%D0%B0/</guid>
       <description>dscacheutil -flushcache</description>
     </item>
     
     <item>
       <title>Заметки по Mac OS X (iOS) Lion</title>
-      <link>https://mprokopov.github.io/2011/07/mac-os-x-ios-lion-hacks/</link>
+      <link>https://prokopov.me/2011/07/mac-os-x-ios-lion-hacks/</link>
       <pubDate>Thu, 07 Jul 2011 10:36:40 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/07/mac-os-x-ios-lion-hacks/</guid>
+      <guid>https://prokopov.me/2011/07/mac-os-x-ios-lion-hacks/</guid>
       <description>Пришла пора собирать заметки и лайфхаки, поскольку с установкой Lion их стало накапливаться неприлично много.
  Как убрать бесполезную иконку синхронизации из панели верхнего меню системы?  — зажмите cmd и утяните ее с панели
 Убрать/добавить виртуальный рабочий стол (aka spaces) — перейти в Mission Control, нажать option — появится крестик на на рабочем столе, можно будет удалить.  Вообще, принцип работы с spaces изменился, можно перетаскивать приложения мышью из space в space.</description>
@@ -181,20 +181,20 @@ http://macdaily.me/howto/how-to-set-icq-in-ichat/
     
     <item>
       <title>Переключение раскладки клавиатуры в Mac при помощи Caps Lock (aka Мефодица by Lebedev)</title>
-      <link>https://mprokopov.github.io/2011/06/mac-layout-switch-caps-lock/</link>
+      <link>https://prokopov.me/2011/06/mac-layout-switch-caps-lock/</link>
       <pubDate>Tue, 21 Jun 2011 13:11:20 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/06/mac-layout-switch-caps-lock/</guid>
+      <guid>https://prokopov.me/2011/06/mac-layout-switch-caps-lock/</guid>
       <description>В молодости ваш покорный имел радость готовить FreeBSD и Linux, в котором переключение раскладки по Caps Lock было функцией нативной. Для windows тоже был хак от Марка Руссиновича.
 Необходимость в данной манипуляции возникла по мере изучения редактора для трушных юниксоидов — Emacs, комбинации клавиш которого были все завязаны на клавишу Control, расположена которая была не в очень удобном месте. Как выяснилось, на то были свои исторические причины. И подавляющее большинство пользователей Emacs тут же меняли местами control и caps lock.</description>
     </item>
     
     <item>
       <title>MAC OS X Leopard и баг с PPPoE через tagged VLAN 802.1Q</title>
-      <link>https://mprokopov.github.io/2011/06/mac-os-x-leopard-%D0%B8-%D0%B1%D0%B0%D0%B3-%D1%81-pppoe-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-tagged-vlan-802-1q/</link>
+      <link>https://prokopov.me/2011/06/mac-os-x-leopard-%D0%B8-%D0%B1%D0%B0%D0%B3-%D1%81-pppoe-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-tagged-vlan-802-1q/</link>
       <pubDate>Mon, 20 Jun 2011 11:43:05 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/06/mac-os-x-leopard-%D0%B8-%D0%B1%D0%B0%D0%B3-%D1%81-pppoe-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-tagged-vlan-802-1q/</guid>
+      <guid>https://prokopov.me/2011/06/mac-os-x-leopard-%D0%B8-%D0%B1%D0%B0%D0%B3-%D1%81-pppoe-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-tagged-vlan-802-1q/</guid>
       <description>Достаточно, как казалось бы, обыкновенный сетап, подключение модемов через свитч с поддержкой 802.1Q, tagged VLAN создаваемый Mac OS X. Однако, PPPoE сессия через VLAN интерфейсы не поднимается (что вполне работает в Windows и Linux).
 Но обо всем по порядку.
 Есть модем от datagroup без PPPeE, статический IP, настроенный через tagged VLAN. И все работает, только вот медленно и канал довольно нестабильный.
@@ -203,10 +203,10 @@ http://macdaily.me/howto/how-to-set-icq-in-ichat/
     
     <item>
       <title>О пользе двух и более мониторов</title>
-      <link>https://mprokopov.github.io/2011/05/%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B5-%D0%B4%D0%B2%D1%83%D1%85-%D0%B8-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D0%BC%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%BE%D0%B2/</link>
+      <link>https://prokopov.me/2011/05/%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B5-%D0%B4%D0%B2%D1%83%D1%85-%D0%B8-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D0%BC%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%BE%D0%B2/</link>
       <pubDate>Fri, 27 May 2011 17:40:54 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/05/%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B5-%D0%B4%D0%B2%D1%83%D1%85-%D0%B8-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D0%BC%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%BE%D0%B2/</guid>
+      <guid>https://prokopov.me/2011/05/%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B5-%D0%B4%D0%B2%D1%83%D1%85-%D0%B8-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D0%BC%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%BE%D0%B2/</guid>
       <description>Если вы гик, или дизайнер, программист и проводите много времени за компьютером, то вам просто необходимо использовать два и более монитора на рабочем месте.
 Вот несколько типовых примеров:
 Разработчик.
@@ -216,10 +216,10 @@ http://macdaily.me/howto/how-to-set-icq-in-ichat/
     
     <item>
       <title>Полезные шорткаты для Mac</title>
-      <link>https://mprokopov.github.io/2011/04/%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D1%88%D0%BE%D1%80%D1%82%D0%BA%D0%B0%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-mac/</link>
+      <link>https://prokopov.me/2011/04/%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D1%88%D0%BE%D1%80%D1%82%D0%BA%D0%B0%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-mac/</link>
       <pubDate>Thu, 28 Apr 2011 15:28:03 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/04/%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D1%88%D0%BE%D1%80%D1%82%D0%BA%D0%B0%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-mac/</guid>
+      <guid>https://prokopov.me/2011/04/%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D1%88%D0%BE%D1%80%D1%82%D0%BA%D0%B0%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-mac/</guid>
       <description>Mac   Открыть папку с программами: Shift-Command-A
   Сделать скриншот: Shift-Command-4
   Переместить в Корзину: Command-Delete
@@ -236,10 +236,10 @@ http://macdaily.me/howto/how-to-set-icq-in-ichat/
     
     <item>
       <title>UPDATED: Запуск виртуальной машины в VMWare Fusion автоматически при старте системы (в background не работает)</title>
-      <link>https://mprokopov.github.io/2011/04/%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D1%8B-%D0%B2-vmware-fusion-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0/</link>
+      <link>https://prokopov.me/2011/04/%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D1%8B-%D0%B2-vmware-fusion-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0/</link>
       <pubDate>Thu, 21 Apr 2011 17:16:37 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/04/%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D1%8B-%D0%B2-vmware-fusion-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0/</guid>
+      <guid>https://prokopov.me/2011/04/%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D1%8B-%D0%B2-vmware-fusion-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0/</guid>
       <description>Частым сценарием использования в Mac Server является запуск Windows экземпляра в виртуальном окружении используя VMWare Fusion.
 Но бывает неудобной после перезагрузки (особенно если она связана с перезагрузкой по питанию) необходимость вручную стартовать виртуальную машину.
 Можно ли настроить автоматический запуск boot time?
@@ -249,10 +249,10 @@ http://macdaily.me/howto/how-to-set-icq-in-ichat/
     
     <item>
       <title>Ruby on Rails хозяйке на заметку: менеджер локальных сайтов Pow</title>
-      <link>https://mprokopov.github.io/2011/04/ruby-on-rails-%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C/</link>
+      <link>https://prokopov.me/2011/04/ruby-on-rails-%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C/</link>
       <pubDate>Tue, 12 Apr 2011 10:56:21 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/04/ruby-on-rails-%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C/</guid>
+      <guid>https://prokopov.me/2011/04/ruby-on-rails-%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C/</guid>
       <description>Чрезвычайно удобной оказалась возможность работы с несколькими сайтами на базе RoR (по факту на Rack), которую предоставляет утилита Pow.
 Вкратце, если у вас достаточно много сайтов разработке, утилита предоставляет хук в DNS зону dev и позволяет обращаться к вашим сайтам по url вида http://myapp.dev , http://myapp2.dev, а также добавляет правило в фаерволе, которое заворачивает обращения к self с порта 80 на внутренний порт утилиты.
 Сам Pow состоит из двух частей — DNS responder и проксирующего web server.</description>
@@ -260,10 +260,10 @@ http://macdaily.me/howto/how-to-set-icq-in-ichat/
     
     <item>
       <title>Mac OS X transparent squid ipfw bugfix</title>
-      <link>https://mprokopov.github.io/2011/04/mac-os-x-transparent-squid-ipfw-bugfix/</link>
+      <link>https://prokopov.me/2011/04/mac-os-x-transparent-squid-ipfw-bugfix/</link>
       <pubDate>Mon, 11 Apr 2011 11:19:02 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/04/mac-os-x-transparent-squid-ipfw-bugfix/</guid>
+      <guid>https://prokopov.me/2011/04/mac-os-x-transparent-squid-ipfw-bugfix/</guid>
       <description>Сам прозрачный прокси включается проще простого, в squid.conf добавляем:
 http_port 3128 transparent
 и в ipfw добавляем следующее правило заворачивающее с 80го порта на внутренний:
@@ -277,10 +277,10 @@ net.inet.ip.scopedroute = 0 и перезагрузить сервер.</descrip
     
     <item>
       <title>Почему Omnifocus лучше чем Things и Firetask?</title>
-      <link>https://mprokopov.github.io/2011/02/omnifocus-vs-thigs-vs-firetask-gtd/</link>
+      <link>https://prokopov.me/2011/02/omnifocus-vs-thigs-vs-firetask-gtd/</link>
       <pubDate>Fri, 18 Feb 2011 12:07:10 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/02/omnifocus-vs-thigs-vs-firetask-gtd/</guid>
+      <guid>https://prokopov.me/2011/02/omnifocus-vs-thigs-vs-firetask-gtd/</guid>
       <description>&lt;p&gt;Во всем многообразии GTD систем хочется еще раз отметить лидеров отрасли для Mac:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://itunes.apple.com/us/app/omnifocus-for-mac/id402835630?mt=12&#34;&gt;OmniFocus&lt;/a&gt;&lt;/li&gt;
@@ -290,15 +290,15 @@ net.inet.ip.scopedroute = 0 и перезагрузить сервер.</descrip
 &lt;/ul&gt;
 &lt;h2 id=&#34;цели-и-задачи&#34;&gt;Цели и задачи&lt;/h2&gt;
 &lt;p&gt;Под целью будем понимать работу в режиме «автопилота», когда обращаясь к записям мы будем видеть тот список дел, которым действительно подходит заниматься в данное время в данном месте, и не быть перегруженными «неподходящими» задачами и проектами.&lt;/p&gt;
-&lt;p&gt;&lt;img style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; title=&#34;427757_254877334588276_224365987639411_562554_2011888291_n.jpg&#34; src=&#34;https://mprokopov.github.io/uploads/2012/02/427757_254877334588276_224365987639411_562554_2011888291_n.jpg&#34; border=&#34;0&#34; alt=&#34;427757 254877334588276 224365987639411 562554 2011888291 n&#34; width=&#34;430&#34; height=&#34;268&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; title=&#34;427757_254877334588276_224365987639411_562554_2011888291_n.jpg&#34; src=&#34;https://prokopov.me/uploads/2012/02/427757_254877334588276_224365987639411_562554_2011888291_n.jpg&#34; border=&#34;0&#34; alt=&#34;427757 254877334588276 224365987639411 562554 2011888291 n&#34; width=&#34;430&#34; height=&#34;268&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Как исключить папки при поиске в Alfred?</title>
-      <link>https://mprokopov.github.io/2011/01/%D0%BA%D0%B0%D0%BA-%D0%B8%D1%81%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D1%8C-%D0%BF%D0%B0%D0%BF%D0%BA%D0%B8-%D0%BF%D1%80%D0%B8-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B5-%D0%B2-alfred/</link>
+      <link>https://prokopov.me/2011/01/%D0%BA%D0%B0%D0%BA-%D0%B8%D1%81%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D1%8C-%D0%BF%D0%B0%D0%BF%D0%BA%D0%B8-%D0%BF%D1%80%D0%B8-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B5-%D0%B2-alfred/</link>
       <pubDate>Sat, 29 Jan 2011 13:13:39 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/01/%D0%BA%D0%B0%D0%BA-%D0%B8%D1%81%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D1%8C-%D0%BF%D0%B0%D0%BF%D0%BA%D0%B8-%D0%BF%D1%80%D0%B8-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B5-%D0%B2-alfred/</guid>
+      <guid>https://prokopov.me/2011/01/%D0%BA%D0%B0%D0%BA-%D0%B8%D1%81%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D1%8C-%D0%BF%D0%B0%D0%BF%D0%BA%D0%B8-%D0%BF%D1%80%D0%B8-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B5-%D0%B2-alfred/</guid>
       <description>Многие из вас знают, любят и пользуют лончер Alfred, который с выходом App Store для Mac стал еще более популярным. Не смотря на сверхвысокую скорость работы и приятный интерфейс, настроек для исключения определенных каталогов и файлов я не нашел, однако, способ все равно есть.
 Оказывается Alfred использует базу spotlight, а у spotlight есть такая настройка.
 Заходите в Системные настройки-&amp;gt;Spotlight и добавляйте для исключения каталоги и файлы как показано на скриншоте ниже.</description>
@@ -306,10 +306,10 @@ net.inet.ip.scopedroute = 0 и перезагрузить сервер.</descrip
     
     <item>
       <title>Must have приложения для Mac</title>
-      <link>https://mprokopov.github.io/2011/01/must-have-app-mac/</link>
+      <link>https://prokopov.me/2011/01/must-have-app-mac/</link>
       <pubDate>Sat, 22 Jan 2011 10:56:06 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/01/must-have-app-mac/</guid>
+      <guid>https://prokopov.me/2011/01/must-have-app-mac/</guid>
       <description>Попался мне в руки iMac 27″ на несколько дней для установки … Windows. Видимо владелец совсем не разобрался с работой на маке, поскольку мак был пуст и гол как сокол.
 И решил я погонять его в привычной для меня обстановке с привычными приложениями. Ведь устоялся уже определенный набор приложений, без которых работа на Mac для меня уже не мыслима.
 Список этих приложений привожу ниже.
@@ -318,10 +318,10 @@ net.inet.ip.scopedroute = 0 и перезагрузить сервер.</descrip
     
     <item>
       <title>Commandlinefu : домашняя страница юниксоида</title>
-      <link>https://mprokopov.github.io/2011/01/commandlinefu-%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%8F%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D1%8E%D0%BD%D0%B8%D0%BA%D1%81%D0%BE%D0%B8%D0%B4%D0%B0/</link>
+      <link>https://prokopov.me/2011/01/commandlinefu-%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%8F%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D1%8E%D0%BD%D0%B8%D0%BA%D1%81%D0%BE%D0%B8%D0%B4%D0%B0/</link>
       <pubDate>Sun, 16 Jan 2011 23:18:27 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/01/commandlinefu-%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%8F%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D1%8E%D0%BD%D0%B8%D0%BA%D1%81%D0%BE%D0%B8%D0%B4%D0%B0/</guid>
+      <guid>https://prokopov.me/2011/01/commandlinefu-%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%8F%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D1%8E%D0%BD%D0%B8%D0%BA%D1%81%D0%BE%D0%B8%D0%B4%D0%B0/</guid>
       <description>Порой бывает комментарий ценнее самой статьи, так, например, на просторах Хабра был найден линк на прекрасный сайт:
 http://www.commandlinefu.com/commands/browse
 Из прекрасного: если вы забыли набрать sudo перед выполнением команды, не беда, выполните sudo !!
@@ -333,10 +333,10 @@ dig +short txt .wp.dg.cx
     
     <item>
       <title>Apple Magic Trackpad, мой опыт использования</title>
-      <link>https://mprokopov.github.io/2011/01/apple-magic-trackpad-expirience/</link>
+      <link>https://prokopov.me/2011/01/apple-magic-trackpad-expirience/</link>
       <pubDate>Thu, 06 Jan 2011 09:55:04 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/01/apple-magic-trackpad-expirience/</guid>
+      <guid>https://prokopov.me/2011/01/apple-magic-trackpad-expirience/</guid>
       <description>Повелся на статью Macpages и перед новым годом приобрел apple trackpad, об опыте использования которого и спешу рассказать.
 
 Во-первых использование magic trackpad это уже определенный разрыв шаблона после 20ти летнего использования манипулятора типа «мышь». Во-вторых преимущество трекпада, которое было широко разрекламировано — мультижесты, обернулось по началу большим минусом. После подключения девайса и тестирования немедленно появилось желание расширить возможности трекпада путем установки JITouch, который позволяет использовать мультижесты для открытия-закрытия вкладок в приложениях, перехода между вкладками и другие интересные жесты.</description>
@@ -344,10 +344,10 @@ dig +short txt .wp.dg.cx
     
     <item>
       <title>iTerm2 для Mac</title>
-      <link>https://mprokopov.github.io/2011/01/iterm2-for-mac/</link>
+      <link>https://prokopov.me/2011/01/iterm2-for-mac/</link>
       <pubDate>Wed, 05 Jan 2011 09:19:03 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/01/iterm2-for-mac/</guid>
+      <guid>https://prokopov.me/2011/01/iterm2-for-mac/</guid>
       <description>По наводке г-на Бобука из твиттера была выужена ссылка на iTerm2 в alpha (хотя по-моему можно уже даже из беты переводить в релиз кандидат).
 Вкратце, iTerm2 является наследником iTerm, который, по-видимому, перестал бурно развиваться. В общем, iTerm2 подхватил выпавшее из рук iTerm знамя лучшего софта для доступа к терминалам.
 Из фич iTerm2 особо хочется отметить:
@@ -356,10 +356,10 @@ dig +short txt .wp.dg.cx
     
     <item>
       <title>Лайфхак в shell: быстрое перемещение по каталогам</title>
-      <link>https://mprokopov.github.io/2010/12/quick-shell-cd/</link>
+      <link>https://prokopov.me/2010/12/quick-shell-cd/</link>
       <pubDate>Sun, 12 Dec 2010 07:25:48 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2010/12/quick-shell-cd/</guid>
+      <guid>https://prokopov.me/2010/12/quick-shell-cd/</guid>
       <description>UPD: добавлено видео процесса.
 Для тех, кто способен пальцами гвозди гнуть, а именно, яростных программеров и юниксовых сисадминов будет небезынтересным эффективный способ передвижения по каталогам. Не открою большой тайны, если скажу, что наиболее популярным каталогом при работе с FreeBSD у меня является /usr/local/etc/. Это значит я наберу cd /u tab /l tab /e tab [enter], а именно 13 нажатий клавиш .
 А можно быстрее? Оказывается можно!
@@ -368,10 +368,10 @@ dig +short txt .wp.dg.cx
     
     <item>
       <title>Про линуксы. Необычный максвитч … с линуксов :)</title>
-      <link>https://mprokopov.github.io/2010/09/macswitch/</link>
+      <link>https://prokopov.me/2010/09/macswitch/</link>
       <pubDate>Wed, 08 Sep 2010 17:39:58 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2010/09/macswitch/</guid>
+      <guid>https://prokopov.me/2010/09/macswitch/</guid>
       <description>Кроха сын пришел к отцу, и спросила кроха:
 — Папа, линукс — это хорошо?
 — Да, сынок, неплохо.
@@ -380,20 +380,20 @@ dig +short txt .wp.dg.cx
     
     <item>
       <title>Позитивный топик о Mac soft.</title>
-      <link>https://mprokopov.github.io/2010/07/%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9-%D1%82%D0%BE%D0%BF%D0%B8%D0%BA-%D0%BE-mac-soft/</link>
+      <link>https://prokopov.me/2010/07/%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9-%D1%82%D0%BE%D0%BF%D0%B8%D0%BA-%D0%BE-mac-soft/</link>
       <pubDate>Thu, 29 Jul 2010 11:56:29 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2010/07/%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9-%D1%82%D0%BE%D0%BF%D0%B8%D0%BA-%D0%BE-mac-soft/</guid>
+      <guid>https://prokopov.me/2010/07/%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9-%D1%82%D0%BE%D0%BF%D0%B8%D0%BA-%D0%BE-mac-soft/</guid>
       <description>Вот так просто, голосованием большинства определяется лучший софт для Mac из серии must have.
 Спасибо ctrld за ссылку.</description>
     </item>
     
     <item>
       <title>Про юзабилити</title>
-      <link>https://mprokopov.github.io/2010/06/usability/</link>
+      <link>https://prokopov.me/2010/06/usability/</link>
       <pubDate>Wed, 30 Jun 2010 09:39:56 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2010/06/usability/</guid>
+      <guid>https://prokopov.me/2010/06/usability/</guid>
       <description>Как известно, человек не воспринимает число объектов более 6-7 одновременно,
 так настоящей pain-in-the-ass становится работа с раздутыми менюшками (привет microsoft office 97-2003), особенный кариес мозга вызывают различного рода treeview. Так появился интерфейс ribbon в Microsoft Office 2007.
 А вот как к этой проблеме подходят инженеры эпл. Иконки в iPhone расположены в 5 столбцов и 4 ряда.
@@ -403,10 +403,10 @@ dig +short txt .wp.dg.cx
     
     <item>
       <title>О браузерах</title>
-      <link>https://mprokopov.github.io/2010/05/browser-wars/</link>
+      <link>https://prokopov.me/2010/05/browser-wars/</link>
       <pubDate>Thu, 20 May 2010 20:35:54 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2010/05/browser-wars/</guid>
+      <guid>https://prokopov.me/2010/05/browser-wars/</guid>
       <description>IE как-то мной недолюбливался еще со времен Netscape, и всю эту юношескую неприязнь удалось пронести через года и предпочтение отдавать этим нашим фаерфоксам обвешанным внушительным списком плагинов.
 Однако, с приобретением мака стало понятно, что не фаерфоксом единым жив человек. Много с тех пор браузеров появлялось, однако…
 Сафари. На текущий момент one and only браузер. Но ведь странно, пользую практически из коробки, минимум финтифлюшек, и все нравится! Только плагин Glims вот научил сафари сохранять сессии, и вот, что еще нужно для жизни?</description>
@@ -414,10 +414,10 @@ dig +short txt .wp.dg.cx
     
     <item>
       <title>Англо-русские словари в Mac. Lingvo 12 En-Ru/Ru-En и словарь синонимов.</title>
-      <link>https://mprokopov.github.io/2010/04/mac-russian-dictionary/</link>
+      <link>https://prokopov.me/2010/04/mac-russian-dictionary/</link>
       <pubDate>Wed, 07 Apr 2010 09:40:55 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2010/04/mac-russian-dictionary/</guid>
+      <guid>https://prokopov.me/2010/04/mac-russian-dictionary/</guid>
       <description>UPDATE: обновил ссылку на rutracker.
 Вот оно, нерафинированное счастье. Знаете ли вы, что в Mac встроены прекрасные словари вызываемые по хоткею cmd+ctrl+d?
 А знаете ли вы, что английские словари, которые идут в поставке к Mac можно пополнить русскими словарями на базе Lingvo?
@@ -428,10 +428,10 @@ Lingvo 12 En-Ru/Ru-En и словарь синонимов.
     
     <item>
       <title>Visor bundle. Консоль для Mac в стиле quake.</title>
-      <link>https://mprokopov.github.io/2010/02/quake-like-mac-terminal/</link>
+      <link>https://prokopov.me/2010/02/quake-like-mac-terminal/</link>
       <pubDate>Wed, 17 Feb 2010 09:09:49 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2010/02/quake-like-mac-terminal/</guid>
+      <guid>https://prokopov.me/2010/02/quake-like-mac-terminal/</guid>
       <description>Здравствуйте, дорогие мои, присаживайтесь поудобнее, в этой статье мы рассмотрим «плюшку» для удобства работы в консоли Mac, которая выезжает «как в Quake»
 Для инсталляции скачиваем пакет http://visor.binaryage.com/
 и устанавливаем.
@@ -442,10 +442,10 @@ Lingvo 12 En-Ru/Ru-En и словарь синонимов.
     
     <item>
       <title>Пять клевых фич Мака</title>
-      <link>https://mprokopov.github.io/2010/02/five-mac-killer-features/</link>
+      <link>https://prokopov.me/2010/02/five-mac-killer-features/</link>
       <pubDate>Tue, 09 Feb 2010 11:27:45 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2010/02/five-mac-killer-features/</guid>
+      <guid>https://prokopov.me/2010/02/five-mac-killer-features/</guid>
       <description>Оригинал:
 http://www.silvermac.com/2006/cool-things-you-can-do-on-mac/
  Словарь ctrl+cmd+D при выделенном слове Инверсия цвета ctrl+cmd+option + 8 Медленное сворачивание приложения shift + клик на желтой кнопке Быстрое сохранение clipboard (Evernote like), выделяем текст и тащим мышью на рабочий стол 🙂 Скриншоты cmd+shift+3, cmd+shift+4, Space — сохранение в png как рабочего стола, так и вырезки фрагмента отдельного окна  От себя добавлю пару шорткатов:
@@ -454,10 +454,10 @@ http://www.silvermac.com/2006/cool-things-you-can-do-on-mac/
     
     <item>
       <title>обновление лучшей SIP звонилки для Mac — iSoftPhone</title>
-      <link>https://mprokopov.github.io/2010/02/isoftphone-sip-dialer-for-mac/</link>
+      <link>https://prokopov.me/2010/02/isoftphone-sip-dialer-for-mac/</link>
       <pubDate>Mon, 01 Feb 2010 10:50:41 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2010/02/isoftphone-sip-dialer-for-mac/</guid>
+      <guid>https://prokopov.me/2010/02/isoftphone-sip-dialer-for-mac/</guid>
       <description>Продукты для Mac с каждым новым днем становятся все лучше и лучше, так, обновление лучшей звонилки всех времени и народов iSoftPhone принесло неподдельную радость от использования.
 Источником бурной радости явилось добавление кнопки выбора альтернативного вывода звука, теперь я могу вполне пользоваться bluetooth гарнитурой исключительно тогда, когда это нужно!
 Новый дизайн стал еще более привлекательным.
@@ -466,10 +466,10 @@ http://www.silvermac.com/2006/cool-things-you-can-do-on-mac/
     
     <item>
       <title>iChat ICQ without HTML tags now. Chax is in beta now. Finally.</title>
-      <link>https://mprokopov.github.io/2010/01/ichat-icq-without-html-tags-now-chax-is-in-beta-now-finally/</link>
+      <link>https://prokopov.me/2010/01/ichat-icq-without-html-tags-now-chax-is-in-beta-now-finally/</link>
       <pubDate>Mon, 18 Jan 2010 21:10:52 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2010/01/ichat-icq-without-html-tags-now-chax-is-in-beta-now-finally/</guid>
+      <guid>https://prokopov.me/2010/01/ichat-icq-without-html-tags-now-chax-is-in-beta-now-finally/</guid>
       <description>То, о чем так долго мечтали большевики, свершилось! Скажи, «Аминь», на!
 Не прошло и сто лет, как iChat, благодаря особой примочке «Chax» научился слать сообщения без HTML тегов камрадам все еще использующим ICQ.
 Chax возмужал и вырос из alpha и стал betой, с чем всех нас и поздравляю. Adium же пока отложим в дальний пыльный ящик, пока пусть полежит до лучших времен.</description>
@@ -477,54 +477,54 @@ Chax возмужал и вырос из alpha и стал betой, с чем в
     
     <item>
       <title>Mobile Me</title>
-      <link>https://mprokopov.github.io/2009/12/mobile-me/</link>
+      <link>https://prokopov.me/2009/12/mobile-me/</link>
       <pubDate>Wed, 30 Dec 2009 10:28:06 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2009/12/mobile-me/</guid>
+      <guid>https://prokopov.me/2009/12/mobile-me/</guid>
       <description>&lt;p&gt;Читать о &lt;a href=&#34;http://www.prostomac.com/2009/12/mobileme-mobilizirujtes/&#34; title=&#34;MobileMe: мобилизируйтесь! | простоMAC&#34;&gt;тестировании MobileMe&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Задумался я как-то об использовании Mobile Me сервиса, какие дает преимущества за $100 в год?&lt;/p&gt;
 &lt;p&gt;В этой статье мы попытаемся найти более бесплатные аналоги, если таковые существуют.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://mprokopov.github.io/uploads/2009/12/01_mobileme_logo.jpg&#34; alt=&#34;&#34; width=&#34;294&#34; height=&#34;288&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://prokopov.me/uploads/2009/12/01_mobileme_logo.jpg&#34; alt=&#34;&#34; width=&#34;294&#34; height=&#34;288&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>теперь удобно читать блог и с iPhone</title>
-      <link>https://mprokopov.github.io/2009/12/wordpress-iphone-theme/</link>
+      <link>https://prokopov.me/2009/12/wordpress-iphone-theme/</link>
       <pubDate>Sun, 27 Dec 2009 12:08:19 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2009/12/wordpress-iphone-theme/</guid>
+      <guid>https://prokopov.me/2009/12/wordpress-iphone-theme/</guid>
       <description>&lt;p&gt;WordPress замечательная платформа для блоггинга не в последнюю очередь благодаря своей расширяемости плагинами и темами.&lt;/p&gt;
 &lt;p&gt;Так, благодаря &lt;a href=&#34;http://www.bravenewcode.com/wptouch/&#34; title=&#34;WPtouch: Mobile Plugin + Theme for WordPress ↔ BraveNewCode Inc.&#34;&gt;плагину WPTouch&lt;/a&gt; теперь вполне можно читать блог и из iPhone.&lt;/p&gt;
 &lt;p&gt;Вот как это выглядит:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://mprokopov.github.io/uploads/2009/12/iphone_theme.jpg&#34; alt=&#34;iphone theme&#34; height=&#34;480&#34; width=&#34;320&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://prokopov.me/uploads/2009/12/iphone_theme.jpg&#34; alt=&#34;iphone theme&#34; height=&#34;480&#34; width=&#34;320&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>нашлись кнопки PgUp и PgDown на клавиатуре Macbook!</title>
-      <link>https://mprokopov.github.io/2009/12/macbook-pageup-pagedown/</link>
+      <link>https://prokopov.me/2009/12/macbook-pageup-pagedown/</link>
       <pubDate>Thu, 24 Dec 2009 16:52:06 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2009/12/macbook-pageup-pagedown/</guid>
+      <guid>https://prokopov.me/2009/12/macbook-pageup-pagedown/</guid>
       <description>То, о чем так долго говорили большевики для Macbook нашлось:
  Page Up = Fn + Up Page Down = Fn + Down Home = Fn + left End = Fn + right  </description>
     </item>
     
     <item>
       <title>автокомплит в Mail для Mac</title>
-      <link>https://mprokopov.github.io/2009/12/mail-autocomplete/</link>
+      <link>https://prokopov.me/2009/12/mail-autocomplete/</link>
       <pubDate>Thu, 24 Dec 2009 16:42:11 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2009/12/mail-autocomplete/</guid>
+      <guid>https://prokopov.me/2009/12/mail-autocomplete/</guid>
       <description>Знаете ли вы о полезной опции автокомплита для приложения Mail в составе MacOS?
 Магические кнопки Option+Esc покажут вот такое окно автодополнения:</description>
     </item>
     
     <item>
       <title>Залежи софта для Mac</title>
-      <link>https://mprokopov.github.io/2009/12/mac-soft/</link>
+      <link>https://prokopov.me/2009/12/mac-soft/</link>
       <pubDate>Tue, 22 Dec 2009 11:27:19 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2009/12/mac-soft/</guid>
+      <guid>https://prokopov.me/2009/12/mac-soft/</guid>
       <description>Ганьба всем, кто пользуется пиратским софтом для Мак (и мне тоже)! Мы ведь все купим, потом, да?
 Кстати, много всего такого здесь, для украинцев это особенно близко 🙂
 Ну и torrents.ru не забываем.
@@ -533,10 +533,10 @@ Chax возмужал и вырос из alpha и стал betой, с чем в
     
     <item>
       <title>Борьба за охлаждение Macbook</title>
-      <link>https://mprokopov.github.io/2009/12/%D0%B1%D0%BE%D1%80%D1%8C%D0%B1%D0%B0-%D0%B7%D0%B0-%D0%BE%D1%85%D0%BB%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-macbook/</link>
+      <link>https://prokopov.me/2009/12/%D0%B1%D0%BE%D1%80%D1%8C%D0%B1%D0%B0-%D0%B7%D0%B0-%D0%BE%D1%85%D0%BB%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-macbook/</link>
       <pubDate>Tue, 22 Dec 2009 10:52:28 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2009/12/%D0%B1%D0%BE%D1%80%D1%8C%D0%B1%D0%B0-%D0%B7%D0%B0-%D0%BE%D1%85%D0%BB%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-macbook/</guid>
+      <guid>https://prokopov.me/2009/12/%D0%B1%D0%BE%D1%80%D1%8C%D0%B1%D0%B0-%D0%B7%D0%B0-%D0%BE%D1%85%D0%BB%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-macbook/</guid>
       <description>Столкнулся с проблемой запотевания ладошек при работе на Macbook, глядь на температуту, а там 61C.
 Активное гугление не выявило особых отклонений в температурных режимах, но не было совсем уже бесполезным, так как нашлась приятная полезняшка для Mac от Lobotomy
 Итак, дамы и господа, встречаем Fan Control

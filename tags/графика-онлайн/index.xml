@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>графика онлайн on Maksym Prokopov personal blog</title>
-    <link>https://mprokopov.github.io/tags/%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/</link>
+    <link>https://prokopov.me/tags/%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/</link>
     <description>Recent content in графика онлайн on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Sat, 18 Feb 2012 11:28:48 +0000</lastBuildDate>
     
-	<atom:link href="https://mprokopov.github.io/tags/%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://prokopov.me/tags/%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Практически как Visio онлайн</title>
-      <link>https://mprokopov.github.io/2012/02/%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BA-visio-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/</link>
+      <link>https://prokopov.me/2012/02/%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BA-visio-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/</link>
       <pubDate>Sat, 18 Feb 2012 11:28:48 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2012/02/%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BA-visio-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/</guid>
+      <guid>https://prokopov.me/2012/02/%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BA-visio-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/</guid>
       <description>Обнаружился на днях прекрасный и, что немаловажно, бесплатный онлайн-инструмент для рисования разного рода диаграмм, майндмапов и брейнстормов http://www.diagram.ly/
 Хорошая библиотека как для Business Process Modeling, так и для описания компьютерных схем и прочих вещей. Пятая точка мне подсказывает, что сам проект, вероятно, не долго останется бесплатным и будет монетизироваться. Такие вещи показывают чуть более чем явно движение от desktop apps to cloud apps.
 Вот схема, которую я создал за пару минут в diagram.</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GTD on Maksym Prokopov personal blog</title>
-    <link>https://mprokopov.github.io/categories/gtd/</link>
+    <link>https://prokopov.me/categories/gtd/</link>
     <description>Recent content in GTD on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Mon, 03 Jun 2013 07:37:10 +0000</lastBuildDate>
     
-	<atom:link href="https://mprokopov.github.io/categories/gtd/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://prokopov.me/categories/gtd/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Улучшаем работу с TaskPaper при помощи Keyboard Maestro</title>
-      <link>https://mprokopov.github.io/2013/06/taskpaper-keyboard-maestro-enhancement/</link>
+      <link>https://prokopov.me/2013/06/taskpaper-keyboard-maestro-enhancement/</link>
       <pubDate>Mon, 03 Jun 2013 07:37:10 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2013/06/taskpaper-keyboard-maestro-enhancement/</guid>
+      <guid>https://prokopov.me/2013/06/taskpaper-keyboard-maestro-enhancement/</guid>
       <description>Спешу поделиться, мои дорогие обладатели Task Paper и компьютера с системой Mac OS, своим опытом улучшения взаимодействия человека и программы управления задачами TaskPaper.
 Как я уже описывал ранее в своей системе Getting Results Agile Way для TaskPaper, есть определенный список файлов с задачами.
  2013 Backlog Week 2013-04-01 папка Personal Projects папка Work Projects папка Archive Commitments Calendar Покупки  и самый важный и часто используемый файл это Week 2013-XX-YY (XX-месяц, YY — день)</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>О пользе двух и более мониторов</title>
-      <link>https://mprokopov.github.io/2011/05/%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B5-%D0%B4%D0%B2%D1%83%D1%85-%D0%B8-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D0%BC%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%BE%D0%B2/</link>
+      <link>https://prokopov.me/2011/05/%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B5-%D0%B4%D0%B2%D1%83%D1%85-%D0%B8-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D0%BC%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%BE%D0%B2/</link>
       <pubDate>Fri, 27 May 2011 17:40:54 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/05/%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B5-%D0%B4%D0%B2%D1%83%D1%85-%D0%B8-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D0%BC%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%BE%D0%B2/</guid>
+      <guid>https://prokopov.me/2011/05/%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B5-%D0%B4%D0%B2%D1%83%D1%85-%D0%B8-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D0%BC%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%BE%D0%B2/</guid>
       <description>Если вы гик, или дизайнер, программист и проводите много времени за компьютером, то вам просто необходимо использовать два и более монитора на рабочем месте.
 Вот несколько типовых примеров:
 Разработчик.
@@ -37,10 +37,10 @@
     
     <item>
       <title>Основная проблема GTD</title>
-      <link>https://mprokopov.github.io/2011/03/main-gtd-problem/</link>
+      <link>https://prokopov.me/2011/03/main-gtd-problem/</link>
       <pubDate>Fri, 04 Mar 2011 15:57:02 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/03/main-gtd-problem/</guid>
+      <guid>https://prokopov.me/2011/03/main-gtd-problem/</guid>
       <description>Основная проблема всех без исключения систем GTD в том, что человек, будучи в усталом состоянии перестает фиксировать задачи/мысли/выполнение.
 И в этом состоит большая трагедия всех, даже самых лучших, GTD систем.
 Just do it! Вот вам и все GTD.</description>
@@ -48,10 +48,10 @@ Just do it! Вот вам и все GTD.</description>
     
     <item>
       <title>Почему Omnifocus лучше чем Things и Firetask?</title>
-      <link>https://mprokopov.github.io/2011/02/omnifocus-vs-thigs-vs-firetask-gtd/</link>
+      <link>https://prokopov.me/2011/02/omnifocus-vs-thigs-vs-firetask-gtd/</link>
       <pubDate>Fri, 18 Feb 2011 12:07:10 +0000</pubDate>
       
-      <guid>https://mprokopov.github.io/2011/02/omnifocus-vs-thigs-vs-firetask-gtd/</guid>
+      <guid>https://prokopov.me/2011/02/omnifocus-vs-thigs-vs-firetask-gtd/</guid>
       <description>&lt;p&gt;Во всем многообразии GTD систем хочется еще раз отметить лидеров отрасли для Mac:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://itunes.apple.com/us/app/omnifocus-for-mac/id402835630?mt=12&#34;&gt;OmniFocus&lt;/a&gt;&lt;/li&gt;
@@ -61,7 +61,7 @@ Just do it! Вот вам и все GTD.</description>
 &lt;/ul&gt;
 &lt;h2 id=&#34;цели-и-задачи&#34;&gt;Цели и задачи&lt;/h2&gt;
 &lt;p&gt;Под целью будем понимать работу в режиме «автопилота», когда обращаясь к записям мы будем видеть тот список дел, которым действительно подходит заниматься в данное время в данном месте, и не быть перегруженными «неподходящими» задачами и проектами.&lt;/p&gt;
-&lt;p&gt;&lt;img style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; title=&#34;427757_254877334588276_224365987639411_562554_2011888291_n.jpg&#34; src=&#34;https://mprokopov.github.io/uploads/2012/02/427757_254877334588276_224365987639411_562554_2011888291_n.jpg&#34; border=&#34;0&#34; alt=&#34;427757 254877334588276 224365987639411 562554 2011888291 n&#34; width=&#34;430&#34; height=&#34;268&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; title=&#34;427757_254877334588276_224365987639411_562554_2011888291_n.jpg&#34; src=&#34;https://prokopov.me/uploads/2012/02/427757_254877334588276_224365987639411_562554_2011888291_n.jpg&#34; border=&#34;0&#34; alt=&#34;427757 254877334588276 224365987639411 562554 2011888291 n&#34; width=&#34;430&#34; height=&#34;268&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
