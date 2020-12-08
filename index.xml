@@ -55,19 +55,6 @@ Surprisingly, but I use PHP for my job today. A long time ago I started by web d
     </item>
     
     <item>
-      <title>Managing shims and all the stuff to get stable builds</title>
-      <link>https://mprokopov.github.io/posts/2020-10-20/</link>
-      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mprokopov.github.io/posts/2020-10-20/</guid>
-      <description>&lt;h2 id=&#34;asdf&#34;&gt;ASDF&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://asdf-vm.com/#/core-manage-asdf&#34;&gt;https://asdf-vm.com/#/core-manage-asdf&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;nisos&#34;&gt;NisOS&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://ariya.io/2016/05/nix-as-os-x-package-manager&#34;&gt;https://ariya.io/2016/05/nix-as-os-x-package-manager&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://stuartsierra.com/2020/01/09/path-to-confusion#more-1252&#34;&gt;path to confusion blog post by Stuart Sierra&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Magit has nice integration with Github and Gitlab!</title>
       <link>https://mprokopov.github.io/posts/2020-10-09/</link>
       <pubDate>Fri, 09 Oct 2020 00:00:00 +0000</pubDate>
