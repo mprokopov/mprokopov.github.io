@@ -22,23 +22,33 @@
   </url>
   
   <url>
-    <loc>https://prokopov.me/posts/2020-10-09/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <loc>https://prokopov.me/posts/2020-12-07/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://prokopov.me/categories/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://prokopov.me/categories/links/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://prokopov.me/posts/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://prokopov.me/posts/2020-10-09/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://prokopov.me/posts/2020-07-11/</loc>
     <lastmod>2020-07-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://prokopov.me/categories/</loc>
-    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -63,11 +73,6 @@
   
   <url>
     <loc>https://prokopov.me/posts/2020-06-19-date-printing-go/</loc>
-    <lastmod>2020-06-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://prokopov.me/categories/links/</loc>
     <lastmod>2020-06-18T00:00:00+00:00</lastmod>
   </url>
   
