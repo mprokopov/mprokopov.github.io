@@ -318,7 +318,17 @@ xdebug.profiler\_output\_name = &quot;callgrind.out.%p&quot;
 
 - <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2008</span>
   <span style="color:#66d9ef">place</span>: Египет (Шарм-Ель-Шейх, Каир (пирамидки))
-</code></pre></div><p>Остался вопрос с комментариями, и он также решается при помощи известного disqus. Дорогой читатель, подскажи, если знаешь engine получше.</p>
+</code></pre></div><p>а рендерит его вот такой простой кусочек в layouts/shortcodes/travel.html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
+{{ range $.Site.Data.travel }}
+    &lt;<span style="color:#f92672">li</span>&gt;
+        {{.date}} {{.place}} {{.duration}} {{.comment}}
+    &lt;/<span style="color:#f92672">li</span>&gt;
+{{ end }}
+&lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div><p>Все линки для навигации сверху берутся из соответствующих мета-полей в файлах в каталоге content/pages. Достаточно просто создать там новый файл с содержимым и он автоматически появится в меню!</p>
+<p>Для миграции всего контента с блога wordpress я воспользовался соответствуюей утилитой.</p>
+<p>Остался вопрос с комментариями, и он также решается при помощи известного disqus. Дорогой читатель, подскажи, если знаешь engine получше.</p>
 <p>Мне нравится эта элегантная простота, скорость рендера и общее удовольствие от процесса, а редактировать Markdown можно любым из редакторов по вкусу. Мой выбор - emacs.</p>
 <p>P.S Так как мой выбор - emacs, то я могу публиковать заметки прямо в формате org-mode!</p></div>
 </div>
