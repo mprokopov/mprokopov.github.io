@@ -246,10 +246,79 @@ xdebug.profiler\_output\_name = &quot;callgrind.out.%p&quot;
 <li>Disqus</li>
 <li>GitHub</li>
 </ol>
-<p>К слову это не первый подход к выбору движка. Сначала мне понравилась идея с Perun, написанный на clojure модуль для системы сборки boot, которая позволяет функционально расширить его еще и до статического генератора сайтов. Присматривался на Jekyll, который, как известно на Ruby, а Ruby это наше все.</p>
-<p>Сначала я сделал перепроектирование <a href="https://it-premium.com.ua">https://it-premium.com.ua</a> на Hugo вместо RoR, и сразу понял, это - то что нужно! Во-первых статика это то, во что так или иначе переходит каждый сайт когда его рендером занимается браузер. Быстрее чем статический сайт сделать нельзя, хотя многие пытаются, используя Javascript-based фреймворки на подобие Gatsby.</p>
+<p>К слову это не первый подход к выбору движка. Сначала мне понравилась идея с <a href="https://github.com/hashobject/perun">Perun</a>, написанный на clojure модуль для системы сборки boot, которая позволяет функционально расширить его еще и до статического генератора сайтов. Присматривался на Jekyll, который, как известно на Ruby, а Ruby это наше все.</p>
+<p>Сначала я сделал перепроектирование <a href="https://it-premium.com.ua">https://it-premium.com.ua</a> на <a href="https://gohugo.io/">Hugo</a> вместо RoR, и сразу понял, это - то что нужно! Во-первых статика это то, во что так или иначе переходит каждый сайт когда его рендером занимается браузер. Быстрее чем статический сайт сделать нельзя, хотя многие пытаются, используя Javascript-based фреймворки на подобие Gatsby.</p>
 <p>Hugo поддерживает не только markdown, но и различные продвинутые сценарии, так в странице <a href="/pages/trips/">&ldquo;Путешествую&rdquo;</a> список стран и мест находится в YAML файле и включается из Markdown при помощи custom tag. На каждой странице список друзей также стал формироваться из отдельного YAML. Кстати, уже никто не обменивается ссылками как раньше?</p>
-<p>Остался вопрос с комментариями, и он также решается при помощи известного disqus. Дорогой читатель, подскажи, если знаешь engine получше.</p>
+<p>мой trips.yaml файл, рендер которого вы можете увидеть <a href="/pages/trips">здесь</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2020</span>
+  <span style="color:#66d9ef">place</span>: Испания, Барселона
+  <span style="color:#66d9ef">comment</span>: увы и ах, из-за короны<span style="color:#ae81ff">-19</span> отменена :(
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019-2020</span>
+  <span style="color:#66d9ef">place</span>: Норвегия, Аскер
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">2</span> недели
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019</span>
+  <span style="color:#66d9ef">place</span>: Германия, Фрайбург
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">3</span> дня
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019</span>
+  <span style="color:#66d9ef">place</span>: Австрия, Вена, <span style="color:#ae81ff">1</span> месяц
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">1</span> месяц
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019</span>
+  <span style="color:#66d9ef">place</span>: Турция, пригород Анталии <span style="color:#ae81ff">1</span> неделя
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">2</span> недели
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019</span>
+  <span style="color:#66d9ef">place</span>: Германия, Берлин
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">3</span> дня
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019</span>
+  <span style="color:#66d9ef">place</span>: Сицилия, гастротур
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">6</span> дней
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2018-2019</span>
+  <span style="color:#66d9ef">place</span>: Таиланд, о. Самуи
+  <span style="color:#66d9ef">duration</span>: полгода
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2018</span>
+  <span style="color:#66d9ef">place</span>: Италия (Тоскана), гастротур
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">6</span> дней
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2018</span>
+  <span style="color:#66d9ef">place</span>: Финляндия (Юваскюля, Хельсинки)
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">3</span> дня
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2018</span>
+  <span style="color:#66d9ef">place</span>: Германия, Гамбург
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">3</span> дня
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2017</span>
+  <span style="color:#66d9ef">place</span>: Германия, Маннгейм, Штуттгарт
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">1</span> месяц
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2016</span>
+  <span style="color:#66d9ef">place</span>: Египет (Хургада), Турция (Стамбул)
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2013-2014</span>
+  <span style="color:#66d9ef">place</span>: Тайланд (Бангкок, Айютайя, Паттайя) [Камбоджа (Сиам-Реап, Сиануквиль, Баттамбанг, Кампот, Пном-Пень)][<span style="color:#ae81ff">1</span>]
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2012</span>
+  <span style="color:#66d9ef">place</span>: Малайзия (Куала-Лумпур, о. Тиоман) Филиппины (о. Боракай, о. Палаван (Ель-Нидо, Пуерто-Принсесса)) Индонезия (о. Сулавеси, Тогеанские о-ва (о. Маленге, о. Бомба), Тана-Тораджа (Рантепао + окрестности), Макассар, о. Бали)
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2011</span>
+  <span style="color:#66d9ef">place</span>: Сингапур Вьетнам (Хошимин, Ханой, Хью, ) Индонезия (о. Бали, о. Ломбок, о. Ява (плато Диенг, Джогджакарта, вулкан Иджен)
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2010</span>
+  <span style="color:#66d9ef">place</span>: Индонезия (о. Ява (вулкан Бромо) о. Бали)
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2009</span>
+  <span style="color:#66d9ef">place</span>: Тайланд (Бангкок, о. Чанг)
+
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2008</span>
+  <span style="color:#66d9ef">place</span>: Египет (Шарм-Ель-Шейх, Каир (пирамидки))
+</code></pre></div><p>Остался вопрос с комментариями, и он также решается при помощи известного disqus. Дорогой читатель, подскажи, если знаешь engine получше.</p>
 <p>Мне нравится эта элегантная простота, скорость рендера и общее удовольствие от процесса, а редактировать Markdown можно любым из редакторов по вкусу. Мой выбор - emacs.</p>
 <p>P.S Так как мой выбор - emacs, то я могу публиковать заметки прямо в формате org-mode!</p></div>
 </div>
