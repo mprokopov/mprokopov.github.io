@@ -6,10 +6,39 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gitlab limit parallel pipeline execution</title>
+      <link>https://prokopov.me/posts/2020-12-24/</link>
+      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2020-12-24/</guid>
+      <description>&lt;p&gt;In brief  - use the &lt;code&gt;resource_group&lt;/code&gt; directive.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;stages&lt;/span&gt;:
+  - build
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;jobA&lt;/span&gt;:
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;resource_group&lt;/span&gt;: jobA
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;stage&lt;/span&gt;: build
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;script&lt;/span&gt;: 
+    - echo HelloA
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;jobB&lt;/span&gt;: 
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;stage&lt;/span&gt;: build
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;script&lt;/span&gt;:
+    - echo HelloB
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are some useful patterns for Resource Group.&lt;/p&gt;
+&lt;p&gt;resource_group: $CI_ENVIRONMENT_NAME &amp;hellip; Limit per environment&lt;/p&gt;
+&lt;p&gt;resource_group: $CI_JOB_NAME &amp;hellip; Limit per job&lt;/p&gt;
+&lt;p&gt;resource_group: $CI_COMMIT_REF_NAME:$CI_JOB_NAME &amp;hellip; Limit per job per branch&lt;/p&gt;
+&lt;p&gt;resource_group: $CI_COMMIT_REF_NAME:$CI_ENVIRONMENT_NAME &amp;hellip; Limit per environment per branch (e.g. review apps)&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>2020 week 49 links</title>

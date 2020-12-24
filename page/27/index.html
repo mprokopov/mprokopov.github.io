@@ -37,6 +37,28 @@
 
 <div class="article">
     <h1>
+        <a href="/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/">Useful Kubernetes tools and tips</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div>Unlike docker-compose sometimes kubectl provides you better tooling for docker container access.
+Let me share with you my useful findings.
+With port-forward, you can easily connect to pods service and debug it.
+kubectl port-forward podname port For example
+kubectl port-forward sharepass-78d566f866-4dvv5 3000  kubectl port-forward sharepass-78d566f866–4dvv5 3000
+Forwarding from 127.0.0.1:3000 -&gt; 3000
+Forwarding from [::1]:3000 -&gt; 3000
+Handling connection for 3000
+Handling connection for 3000
+ This will forward port 3000 to localhost, so you can open URL http://localhost:3000 and enjoy access to your service. </div>
+    
+    
+        <a href="/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos-9599b598746b/">Why is my dev docker container so slow on macOS?</a>
     </h1>
     <div class="date">01.01.0001</div>

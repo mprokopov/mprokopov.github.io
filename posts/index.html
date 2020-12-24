@@ -36,6 +36,35 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2020-12-24/">Gitlab limit parallel pipeline execution</a>
+    </h1>
+    <div class="date">24.12.2020</div>
+    <div><p>In brief  - use the <code>resource_group</code> directive.</p>
+<p>Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">stages</span>:
+  - build
+
+<span style="color:#66d9ef">jobA</span>:
+  <span style="color:#66d9ef">resource_group</span>: jobA
+  <span style="color:#66d9ef">stage</span>: build
+  <span style="color:#66d9ef">script</span>: 
+    - echo HelloA
+
+<span style="color:#66d9ef">jobB</span>: 
+  <span style="color:#66d9ef">stage</span>: build
+  <span style="color:#66d9ef">script</span>:
+    - echo HelloB
+
+</code></pre></div><p>There are some useful patterns for Resource Group.</p>
+<p>resource_group: $CI_ENVIRONMENT_NAME &hellip; Limit per environment</p>
+<p>resource_group: $CI_JOB_NAME &hellip; Limit per job</p>
+<p>resource_group: $CI_COMMIT_REF_NAME:$CI_JOB_NAME &hellip; Limit per job per branch</p>
+<p>resource_group: $CI_COMMIT_REF_NAME:$CI_ENVIRONMENT_NAME &hellip; Limit per environment per branch (e.g. review apps)</p>
+<p>Source <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/15536">Gitlab issue 15536</a></p></div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/2020-12-07/">2020 week 49 links</a>
     </h1>
     <div class="date">07.12.2020</div>
