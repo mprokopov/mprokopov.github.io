@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Книги о здоровье</title>
+      <link>https://prokopov.me/posts/2021-01-06/</link>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2021-01-06/</guid>
+      <description>Вот небольшой список книг, которые я прочел и настоятельно рекомендую
+ Сахар, соль и жир. Майкл Мосс Очаровательный кишечник. Джулия Эндерс Нейрофитнес Рахул Джандиал  </description>
+    </item>
     
     <item>
       <title>Gitlab limit parallel pipeline execution</title>
