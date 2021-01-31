@@ -6,11 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Travel</title>
       <link>https://prokopov.me/pages/trips/</link>
@@ -56,6 +52,18 @@ These days I mostly involved in DevOps, Lean IT and IT services.
     </item>
     
     <item>
+      <title>useful git wip</title>
+      <link>https://prokopov.me/posts/2021-01-07/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2021-01-07/</guid>
+      <description>Useful Git WIP alias command
+add this to the .gitconfig
+[alias] wip = for-each-ref --sort=&#39;authordate:iso8601&#39; --format=&#39; %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)&#39; refs/heads and enjoy git wip sorting branches by most recent
+Source: https://carolynvanslyck.com/blog/2020/12/git-wip/</description>
+    </item>
+    
+    <item>
       <title>Книги о здоровье</title>
       <link>https://prokopov.me/posts/2021-01-06/</link>
       <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
@@ -78,19 +86,19 @@ These days I mostly involved in DevOps, Lean IT and IT services.
       <guid>https://prokopov.me/posts/2020-12-24/</guid>
       <description>&lt;p&gt;In brief  - use the &lt;code&gt;resource_group&lt;/code&gt; directive.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;stages&lt;/span&gt;:
-  - build
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;stages&lt;/span&gt;:
+  - &lt;span style=&#34;color:#ae81ff&#34;&gt;build&lt;/span&gt;
 
-&lt;span style=&#34;color:#66d9ef&#34;&gt;jobA&lt;/span&gt;:
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;resource_group&lt;/span&gt;: jobA
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;stage&lt;/span&gt;: build
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;script&lt;/span&gt;: 
-    - echo HelloA
+&lt;span style=&#34;color:#f92672&#34;&gt;jobA&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;resource_group&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;jobA&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;stage&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;build&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;: 
+    - &lt;span style=&#34;color:#ae81ff&#34;&gt;echo HelloA&lt;/span&gt;
 
-&lt;span style=&#34;color:#66d9ef&#34;&gt;jobB&lt;/span&gt;: 
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;stage&lt;/span&gt;: build
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;script&lt;/span&gt;:
-    - echo HelloB
+&lt;span style=&#34;color:#f92672&#34;&gt;jobB&lt;/span&gt;: 
+  &lt;span style=&#34;color:#f92672&#34;&gt;stage&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;build&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;:
+    - &lt;span style=&#34;color:#ae81ff&#34;&gt;echo HelloB&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are some useful patterns for Resource Group.&lt;/p&gt;
 &lt;p&gt;resource_group: $CI_ENVIRONMENT_NAME &amp;hellip; Limit per environment&lt;/p&gt;
@@ -405,12 +413,12 @@ tell application &#34;Calendar&#34; tell calendar &#34;maksym.prokopov@trilogy.c
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://prokopov.me/2020-01-01/</guid>
-      <description>&lt;h4 id=&#34;headline-1&#34;&gt;
+      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-1&#34;&gt;
 This is my content
 &lt;/h4&gt;
-&lt;p&gt;
-something inside
-&lt;/p&gt;</description>
+&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-4&#34;&gt;
+&lt;p&gt;something inside&lt;/p&gt;</description>
     </item>
     
     <item>

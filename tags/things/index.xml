@@ -6,11 +6,7 @@
     <description>Recent content in things on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 16 Aug 2010 09:40:54 +0000</lastBuildDate>
-    
-	<atom:link href="https://prokopov.me/tags/things/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 16 Aug 2010 09:40:54 +0000</lastBuildDate><atom:link href="https://prokopov.me/tags/things/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Things, OmniFocus и прочие GTD</title>
       <link>https://prokopov.me/2010/08/thing-vs-omnifocus-gtd/</link>
