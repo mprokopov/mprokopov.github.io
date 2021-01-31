@@ -36,21 +36,6 @@
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2021-01-07/">useful git wip</a>
-    </h1>
-    <div class="date">07.01.2021</div>
-    <div><p>Useful Git WIP alias command</p>
-<p>add this to the .gitconfig</p>
-<pre><code>[alias]
-  wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
-  
-</code></pre><p>and enjoy <code>git wip</code> sorting branches by most recent</p>
-<p>Source: <a href="https://carolynvanslyck.com/blog/2020/12/git-wip/">https://carolynvanslyck.com/blog/2020/12/git-wip/</a></p>
-</div>
-</div>
-
-<div class="article">
-    <h1>111
         <a href="https://prokopov.me/posts/2021-01-06/">Книги о здоровье</a>
     </h1>
     <div class="date">06.01.2021</div>
@@ -70,19 +55,19 @@
     <div class="date">24.12.2020</div>
     <div><p>In brief  - use the <code>resource_group</code> directive.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">stages</span>:
-  - <span style="color:#ae81ff">build</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">stages</span>:
+  - build
 
-<span style="color:#f92672">jobA</span>:
-  <span style="color:#f92672">resource_group</span>: <span style="color:#ae81ff">jobA</span>
-  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
-  <span style="color:#f92672">script</span>: 
-    - <span style="color:#ae81ff">echo HelloA</span>
+<span style="color:#66d9ef">jobA</span>:
+  <span style="color:#66d9ef">resource_group</span>: jobA
+  <span style="color:#66d9ef">stage</span>: build
+  <span style="color:#66d9ef">script</span>: 
+    - echo HelloA
 
-<span style="color:#f92672">jobB</span>: 
-  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
-  <span style="color:#f92672">script</span>:
-    - <span style="color:#ae81ff">echo HelloB</span>
+<span style="color:#66d9ef">jobB</span>: 
+  <span style="color:#66d9ef">stage</span>: build
+  <span style="color:#66d9ef">script</span>:
+    - echo HelloB
 
 </code></pre></div><p>There are some useful patterns for Resource Group.</p>
 <p>resource_group: $CI_ENVIRONMENT_NAME &hellip; Limit per environment</p>
@@ -308,74 +293,74 @@ xdebug.profiler\_output\_name = &quot;callgrind.out.%p&quot;
 <p>Сначала я сделал перепроектирование <a href="https://it-premium.com.ua">https://it-premium.com.ua</a> на <a href="https://gohugo.io/">Hugo</a> вместо RoR, и сразу понял, это - то что нужно! Во-первых статика это то, во что так или иначе переходит каждый сайт когда его рендером занимается браузер. Быстрее чем статический сайт сделать нельзя, хотя многие пытаются, используя Javascript-based фреймворки на подобие Gatsby.</p>
 <p>Hugo поддерживает не только markdown, но и различные продвинутые сценарии, так в странице <a href="/pages/trips/">&ldquo;Путешествую&rdquo;</a> список стран и мест находится в YAML файле и включается из Markdown при помощи custom tag. На каждой странице список друзей также стал формироваться из отдельного YAML. Кстати, уже никто не обменивается ссылками как раньше?</p>
 <p>мой trips.yaml файл, рендер которого вы можете увидеть <a href="/pages/trips">здесь</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2020</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Испания, Барселона</span>
-  <span style="color:#f92672">comment</span>: <span style="color:#ae81ff">увы и ах, из-за короны-19 отменена :(</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2020</span>
+  <span style="color:#66d9ef">place</span>: Испания, Барселона
+  <span style="color:#66d9ef">comment</span>: увы и ах, из-за короны<span style="color:#ae81ff">-19</span> отменена :(
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019-2020</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Норвегия, Аскер</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">недели</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019-2020</span>
+  <span style="color:#66d9ef">place</span>: Норвегия, Аскер
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">2</span> недели
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Фрайбург</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019</span>
+  <span style="color:#66d9ef">place</span>: Германия, Фрайбург
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">3</span> дня
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Австрия, Вена, 1 месяц</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">месяц</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019</span>
+  <span style="color:#66d9ef">place</span>: Австрия, Вена, <span style="color:#ae81ff">1</span> месяц
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">1</span> месяц
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Турция, пригород Анталии 1 неделя</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">недели</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019</span>
+  <span style="color:#66d9ef">place</span>: Турция, пригород Анталии <span style="color:#ae81ff">1</span> неделя
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">2</span> недели
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Берлин</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019</span>
+  <span style="color:#66d9ef">place</span>: Германия, Берлин
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">3</span> дня
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Сицилия, гастротур</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">дней</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2019</span>
+  <span style="color:#66d9ef">place</span>: Сицилия, гастротур
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">6</span> дней
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018-2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Таиланд, о. Самуи</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">полгода</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2018-2019</span>
+  <span style="color:#66d9ef">place</span>: Таиланд, о. Самуи
+  <span style="color:#66d9ef">duration</span>: полгода
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Италия (Тоскана), гастротур</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">дней</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2018</span>
+  <span style="color:#66d9ef">place</span>: Италия (Тоскана), гастротур
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">6</span> дней
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Финляндия (Юваскюля, Хельсинки)</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2018</span>
+  <span style="color:#66d9ef">place</span>: Финляндия (Юваскюля, Хельсинки)
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">3</span> дня
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Гамбург</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2018</span>
+  <span style="color:#66d9ef">place</span>: Германия, Гамбург
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">3</span> дня
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2017</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Маннгейм, Штуттгарт</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">месяц</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2017</span>
+  <span style="color:#66d9ef">place</span>: Германия, Маннгейм, Штуттгарт
+  <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">1</span> месяц
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2016</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Хургада), Турция (Стамбул)</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2016</span>
+  <span style="color:#66d9ef">place</span>: Египет (Хургада), Турция (Стамбул)
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2013-2014</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Тайланд (Бангкок, Айютайя, Паттайя) [Камбоджа (Сиам-Реап, Сиануквиль, Баттамбанг, Кампот, Пном-Пень)][1]</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2013-2014</span>
+  <span style="color:#66d9ef">place</span>: Тайланд (Бангкок, Айютайя, Паттайя) [Камбоджа (Сиам-Реап, Сиануквиль, Баттамбанг, Кампот, Пном-Пень)][<span style="color:#ae81ff">1</span>]
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2012</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Малайзия (Куала-Лумпур, о. Тиоман) Филиппины (о. Боракай, о. Палаван (Ель-Нидо, Пуерто-Принсесса)) Индонезия (о. Сулавеси, Тогеанские о-ва (о. Маленге, о. Бомба), Тана-Тораджа (Рантепао + окрестности), Макассар, о. Бали)</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2012</span>
+  <span style="color:#66d9ef">place</span>: Малайзия (Куала-Лумпур, о. Тиоман) Филиппины (о. Боракай, о. Палаван (Ель-Нидо, Пуерто-Принсесса)) Индонезия (о. Сулавеси, Тогеанские о-ва (о. Маленге, о. Бомба), Тана-Тораджа (Рантепао + окрестности), Макассар, о. Бали)
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2011</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Сингапур Вьетнам (Хошимин, Ханой, Хью, ) Индонезия (о. Бали, о. Ломбок, о. Ява (плато Диенг, Джогджакарта, вулкан Иджен)</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2011</span>
+  <span style="color:#66d9ef">place</span>: Сингапур Вьетнам (Хошимин, Ханой, Хью, ) Индонезия (о. Бали, о. Ломбок, о. Ява (плато Диенг, Джогджакарта, вулкан Иджен)
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2010</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Индонезия (о. Ява (вулкан Бромо) о. Бали)</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2010</span>
+  <span style="color:#66d9ef">place</span>: Индонезия (о. Ява (вулкан Бромо) о. Бали)
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2009</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Тайланд (Бангкок, о. Чанг)</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2009</span>
+  <span style="color:#66d9ef">place</span>: Тайланд (Бангкок, о. Чанг)
 
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2008</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Шарм-Ель-Шейх, Каир (пирамидки))</span>
+- <span style="color:#66d9ef">date</span>: <span style="color:#ae81ff">2008</span>
+  <span style="color:#66d9ef">place</span>: Египет (Шарм-Ель-Шейх, Каир (пирамидки))
 </code></pre></div><p>а рендерит его вот такой простой кусочек в layouts/shortcodes/travel.html</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
 {{ range $.Site.Data.travel }}
@@ -1416,7 +1401,7 @@ restart: always</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://player.vimeo.com/video/183827531" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
+ </div>
 
 <p>Такой же вебвизор как и в Яндекс Метрике. Бесплатный чуть более чем полностью. <a href="https://www.smartlook.com/">https://www.smartlook.com/</a></p>
 <p><img class="size-large wp-image-1383 alignnone" src="/uploads/2016/10/Скриншот-2016-10-27-13.31.42-1024x158.png" alt="%d1%81%d0%ba%d1%80%d0%b8%d0%bd%d1%88%d0%be%d1%82-2016-10-27-13-31-42" width="700" height="108" srcset="/uploads/2016/10/Скриншот-2016-10-27-13.31.42-1024x158.png 1024w, /uploads/2016/10/Скриншот-2016-10-27-13.31.42-300x46.png 300w, /uploads/2016/10/Скриншот-2016-10-27-13.31.42-768x119.png 768w, /uploads/2016/10/Скриншот-2016-10-27-13.31.42.png 1282w" sizes="(max-width: 700px) 100vw, 700px" /></p>
@@ -1930,7 +1915,7 @@ restart: always</p>
     @api = ‘/api/tickets/unassigned’</p>
 <p>вот HAML партиал. Кстати, это в 4м HAML появилась возможность писать аттрибуты в круглых скобках.</p>
 <p>    %td.avatar<br>
-      %img.cycle.userpic(data-bind = «attr:{src:avatar.nano.url}, visible: state !== ‘classified'»)<br>
+      %img.cycle.userpic(data-bind = «attr:{src:avatar.nano.url}, visible: state !== ‘classified&rsquo;»)<br>
     %td.id_column<br>
       %a(data-bind = «attr:{ href: url }, css: {‘fg-red’: is_major}»)<br>
         %i.icon-fire(data-bind = ‘visible: is_major’)<br>
@@ -4711,7 +4696,7 @@ AuthType Digest    AuthName DAV-upload
  
 <p>Пример:
 (*xx|&lt;:8495&gt;[1–79]xxxxxxS0|&lt;8,:8&gt;[34589]xx[1–79]xxxxxxS0|&lt;8,10:810&gt;[1–9]xxxxx.|&lt;0,:&gt;xxxxxxxS0)</p>
-<p>Вызов по SIP ID осуществляется через “0”, 7-значные Московские номера в коде 495 набираются «как есть», междугородние номера набираются через “8”, международные — через «8 10&quot;.</p>
+<p>Вызов по SIP ID осуществляется через “0”, 7-значные Московские номера в коде 495 набираются «как есть», междугородние номера набираются через “8”, международные — через «8 10&rdquo;.</p>
 <p>Комментарии по отдельным составляющим этого примера:</p>
 <ul>
 <li>*xx — позволяет набирать коды быстрого набора, например *01</li>

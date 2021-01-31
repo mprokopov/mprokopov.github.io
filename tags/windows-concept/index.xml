@@ -6,7 +6,11 @@
     <description>Recent content in windows concept on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 27 Feb 2012 09:21:16 +0000</lastBuildDate><atom:link href="https://prokopov.me/tags/windows-concept/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2012 09:21:16 +0000</lastBuildDate>
+    
+	<atom:link href="https://prokopov.me/tags/windows-concept/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Концепт windows desktop</title>
       <link>https://prokopov.me/2012/02/%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D0%BF%D1%82-windows-desktop/</link>

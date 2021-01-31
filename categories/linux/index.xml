@@ -6,7 +6,11 @@
     <description>Recent content in linux on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Wed, 20 Apr 2011 17:06:28 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Apr 2011 17:06:28 +0000</lastBuildDate>
+    
+	<atom:link href="https://prokopov.me/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Linux: миграция с одного hdd на второй ext3 с увеличением объема</title>
       <link>https://prokopov.me/2011/04/linux-%D0%BC%D0%B8%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE-hdd-%D0%BD%D0%B0-%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B9-ext3-%D1%81-%D1%83%D0%B2%D0%B5%D0%BB%D0%B8/</link>
