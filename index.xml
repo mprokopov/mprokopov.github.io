@@ -61,10 +61,13 @@ These days I mostly involved in DevOps, Lean IT and IT services.
       <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://prokopov.me/posts/2021-02-02-org-protocol-chrome-no-confirmation/</guid>
-      <description>I recently added org-capture chrome extension to my toolbelt. Unfortunalely chrome annoys me by asking if I want to open this protocol link every time.
-Here is the simple way to fix this.
-Execute this in the shell
-defaults write com.google.Chrome URLAllowlist -array-add -string &amp;#39;org-protocol://*&amp;#39; check chrome://policy url that it contains proper settings for org-protocol</description>
+      <description>&lt;p&gt;I recently added org-capture chrome extension to my toolbelt. Unfortunalely chrome annoys me by asking if I want to open this protocol link every time.&lt;/p&gt;
+&lt;p&gt;Here is the simple way to fix this.&lt;/p&gt;
+&lt;p&gt;Execute this in the shell&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;defaults write com.google.Chrome URLAllowlist -array-add -string &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;org-protocol://*&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;check
+&lt;a href=&#34;chrome://policy&#34;&gt;chrome://policy&lt;/a&gt; url that it contains proper settings for org-protocol&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://prokopov.me/uploads/chrome-policy.png&#34; alt=&#34;Chrome policy&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,9 +76,46 @@ defaults write com.google.Chrome URLAllowlist -array-add -string &amp;#39;org-pr
       <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://prokopov.me/posts/2021-01-08/</guid>
-      <description>I&amp;rsquo;m really crying of how finally emacs can be used for the literate programming and for some testing.
-For restclient, this creates POST request with json data structure in request body.
-#+begin_src restclient POST http://muster.test/index.php?cl=ping Content-Type: application/json { &amp;quot;essentialtech&amp;quot;: true, &amp;quot;googleadwords&amp;quot;: false, &amp;quot;googleanalytics&amp;quot;: false, &amp;quot;googlemaps&amp;quot;: true, &amp;quot;gtmbasedtech&amp;quot;: false, &amp;quot;terminland&amp;quot;: true, &amp;quot;userlike&amp;quot;: true } #+end_src #+RESULTS: #+BEGIN_SRC js { &amp;quot;message&amp;quot;: &amp;quot;success&amp;quot; } // POST http://muster.test/index.php?cl=ping // HTTP/1.1 200 OK // Date: Tue, 09 Feb 2021 13:45:07 GMT // Server: Apache/2.</description>
+      <description>&lt;p&gt;I&amp;rsquo;m really crying of how finally emacs can be used for the literate programming and for some testing.&lt;/p&gt;
+&lt;p&gt;For restclient, this creates POST request with json data structure in request body.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-org-mode&#34; data-lang=&#34;org-mode&#34;&gt;  #+begin_src restclient
+    POST http://muster.test/index.php?cl=ping
+    Content-Type: application/json
+
+
+    {
+    &amp;quot;essentialtech&amp;quot;: true,
+    &amp;quot;googleadwords&amp;quot;: false,
+    &amp;quot;googleanalytics&amp;quot;: false,
+    &amp;quot;googlemaps&amp;quot;: true,
+    &amp;quot;gtmbasedtech&amp;quot;: false,
+    &amp;quot;terminland&amp;quot;: true,
+    &amp;quot;userlike&amp;quot;: true
+    }
+#+end_src
+
+#+RESULTS:
+#+BEGIN_SRC js
+{
+  &amp;quot;message&amp;quot;: &amp;quot;success&amp;quot;
+}
+// POST http://muster.test/index.php?cl=ping
+// HTTP/1.1 200 OK
+// Date: Tue, 09 Feb 2021 13:45:07 GMT
+// Server: Apache/2.4.46 (Unix) OpenSSL/1.1.1i
+// X-Powered-By: PHP/7.1.33
+// Expires: Thu, 19 Nov 1981 08:52:00 GMT
+// Cache-Control: no-store, no-cache, must-revalidate
+// Pragma: no-cache
+// Set-Cookie: language=0; path=/; HttpOnly
+// Set-Cookie: sid=0fvjai2h5h2pso52p4vq9e5309; path=/; HttpOnly
+// Keep-Alive: timeout=5, max=100
+// Connection: Keep-Alive
+// Transfer-Encoding: chunked
+// Content-Type: application/json;
+// Request duration: 0.269261s
+#+END_SRC
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -84,10 +124,13 @@ For restclient, this creates POST request with json data structure in request bo
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://prokopov.me/posts/2021-01-07/</guid>
-      <description>Useful Git WIP alias command
-add this to the .gitconfig
-[alias] wip = for-each-ref --sort=&#39;authordate:iso8601&#39; --format=&#39; %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)&#39; refs/heads and enjoy git wip sorting branches by most recent
-Source: https://carolynvanslyck.com/blog/2020/12/git-wip/</description>
+      <description>&lt;p&gt;Useful Git WIP alias command&lt;/p&gt;
+&lt;p&gt;add this to the .gitconfig&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[alias]
+  wip = for-each-ref --sort=&#39;authordate:iso8601&#39; --format=&#39; %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)&#39; refs/heads
+  
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and enjoy &lt;code&gt;git wip&lt;/code&gt; sorting branches by most recent&lt;/p&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://carolynvanslyck.com/blog/2020/12/git-wip/&#34;&gt;https://carolynvanslyck.com/blog/2020/12/git-wip/&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
