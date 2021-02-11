@@ -37,6 +37,78 @@
 
 <div class="article">
     <h1>
+        <a href="/posts/mprokopov/how-to-increase-kubernetes-pvc-size-for-aws-ebs-b3d4a99c006a/">How to increase Kubernetes PVC size for AWS EBS</a>
+    </h1>
+    <div class="date">12.05.2020</div>
+    <div>It’s quite simple to increase PVC size since K8s 1.11
+kubectl describe pvc and find your storage class.
+Name: jenkins
+Namespace: jenkins
+StorageClass: jenkins-gp2
+Status: Bound
+Volume: pvc-473e3dbf-b759-11e9-9cbc-02a7fb0b6cca
+Labels: app.kubernetes.io/component=jenkins-master
+app.kubernetes.io/instance=jenkins
+app.kubernetes.io/managed-by=Tiller
+app.kubernetes.io/name=jenkins
+helm.sh/chart=jenkins-1.3.6
+Annotations: pv.kubernetes.io/bind-completed: yes
+pv.kubernetes.io/bound-by-controller: yes
+volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/aws-ebs
+Finalizers: [kubernetes.io/pvc-protection]
+Capacity: 16Gi
+Access Modes: RWO
+VolumeMode: Filesystem
+Mounted By: jenkins-6b5c9bcbbb-gr2l5
+Events: 
+kubectl edit storageclass jenkins-gp2 add the following to your storage class
+allowVolumeExpansion: true
+kubectl edit pvc jenkins </div>
+    
+    
+        <a href="/posts/mprokopov/how-to-increase-kubernetes-pvc-size-for-aws-ebs-b3d4a99c006a/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/mprokopov/my-new-modern-web-site-stack-f9645e78ae16/">My new modern web site stack</a>
+    </h1>
+    <div class="date">12.04.2020</div>
+    <div>In the age of Kubernetes and all this fancy stuff, I decided to make something really simple and as static as possible. The modern, cutting-edge tech stack.
+This is a story about https://it-premium.com.ua reincarnation featured with responsiveness and saving all the functionality it had before. Though it wasn’t a simple, but very interesting journey.
+Here are the specs I wanted to preserve:
+ Multilanguage support, due to Ukrainian language law enforcement we had to introduce one more supported language among English and Russian PDF dynamic generation based on what user was chosen Dynamic tariff calculations with dependencies on the services of user’s choice Easy data management. </div>
+    
+    
+        <a href="/posts/mprokopov/my-new-modern-web-site-stack-f9645e78ae16/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/2020-03-03-my-recent-tasks/">My recent tasks</a>
+    </h1>
+    <div class="date">03.03.2020</div>
+    <div><ul>
+<li>Create a Jenkins job for mobile application internal share to the Google Play Store</li>
+<li>Create a Jenkins job for mobile application automated release to the Google Play Store</li>
+<li>Restore Jenkins jobs for the COBOL build with Oracle 11.2 and Sybase 15.5 on the Solaris Sparc, AIX and HP-UX machines</li>
+<li>Debug a performance issue in the distributed power management software.</li>
+<li>Create helm script for the product deployment to the Central K8S cluster into staging and prod namespaces and talk to DynamoDB and put assets to the S3</li>
+<li>Setup Prometheus + Grafana for the performance monitoring</li>
+<li>Setup gradle builds for Java Spring and NodeJS</li>
+<li>Extend XenServer with two new HDDs for a capacity
+and much more.</li>
+</ul> </div>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/2020/02/applescript-instantly-open-zoom-link-from-the-ical-calendar/">Applescript instantly open Zoom link from the iCal calendar</a>
     </h1>
     <div class="date">26.02.2020</div>
@@ -131,45 +203,6 @@ It turns out we have dup method which creates a copy of an object, this is exact
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/">Brief introduction to the Kubernetes.</a>
-    </h1>
-    <div class="date">26.05.2018</div>
-    <div>Kubernetes is a winner in docker cloud orchestration, so let’s get a brief introduction in what it is and what kind of problems it solves. Kubernetes is a set of tools designed to solve a problem of deployment of your lovely tailor-made application to a cloud. It does not matter which cloud you choose, AWS, Azure or Google, or even IBM, because Kubernetes provides you with a set of tools which are platform independent. </div>
-    
-    
-        <a href="/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2018-03-28_-2285686116fa/">Согласен по всем пунктам!</a>
-    </h1>
-    <div class="date">28.03.2018</div>
-    <div>Согласен по всем пунктам!
-Я для себя выделил ещё один признак, это умение проводить собственные размышления над проблемой, особенно если они противоположны общепринятой точке зрения. И, конечно, умение вести дискуссию пользуясь логическими построениями, вместо «ойнувсе». </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/mprokopov/noteworthy-clojure-projects-634af849e01d/">Noteworthy Clojure projects</a>
-    </h1>
-    <div class="date">18.01.2018</div>
-    <div>Recently I again dived deeply into Clojure development with my Bank Statements — ERP sync tool and started to investigate what’s new in Clojure world. It appears a lot of great things happend in 2017!
-Every of following tools drops my jaw down. Here is my list:
- Lightmod and Nightcode really great editors for Clojure/Clojurescript beginners. Zach Oakes included useful examples to jump into Clojure development train. Dynadoc, documentation exploration tool which makes your work with documentation more effective and interactive. </div>
-    
-    
-        <a href="/posts/mprokopov/noteworthy-clojure-projects-634af849e01d/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
 <div class="pagination">
     
     <div class="pagination__prev">
@@ -216,6 +249,8 @@ Every of following tools drops my jaw down. Here is my list:
         
         <li><a href="/categories/education/">education</a> (2) </li>
         
+        <li><a href="/categories/emacs/">emacs</a> (1) </li>
+        
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         
         <li><a href="/categories/gtd/">GTD</a> (4) </li>
@@ -231,6 +266,8 @@ Every of following tools drops my jaw down. Here is my list:
         <li><a href="/categories/linux/">linux</a> (1) </li>
         
         <li><a href="/categories/macos/">macos</a> (1) </li>
+        
+        <li><a href="/categories/org-mode/">org-mode</a> (1) </li>
         
         <li><a href="/categories/rails/">rails</a> (1) </li>
         

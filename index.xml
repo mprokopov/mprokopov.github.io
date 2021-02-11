@@ -56,6 +56,41 @@ These days I mostly involved in DevOps, Lean IT and IT services.
     </item>
     
     <item>
+      <title>Disable Chrome browser confirmation to open external protocol with org-protocol</title>
+      <link>https://prokopov.me/posts/2021-02-02-org-protocol-chrome-no-confirmation/</link>
+      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2021-02-02-org-protocol-chrome-no-confirmation/</guid>
+      <description>I recently added org-capture chrome extension to my toolbelt. Unfortunalely chrome annoys me by asking if I want to open this protocol link every time.
+Here is the simple way to fix this.
+Execute this in the shell
+defaults write com.google.Chrome URLAllowlist -array-add -string &amp;#39;org-protocol://*&amp;#39; check chrome://policy url that it contains proper settings for org-protocol</description>
+    </item>
+    
+    <item>
+      <title>Emacs literate programming and SQL</title>
+      <link>https://prokopov.me/posts/2021-01-08/</link>
+      <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2021-01-08/</guid>
+      <description>I&amp;rsquo;m really crying of how finally emacs can be used for the literate programming and for some testing.
+For restclient, this creates POST request with json data structure in request body.
+#+begin_src restclient POST http://muster.test/index.php?cl=ping Content-Type: application/json { &amp;quot;essentialtech&amp;quot;: true, &amp;quot;googleadwords&amp;quot;: false, &amp;quot;googleanalytics&amp;quot;: false, &amp;quot;googlemaps&amp;quot;: true, &amp;quot;gtmbasedtech&amp;quot;: false, &amp;quot;terminland&amp;quot;: true, &amp;quot;userlike&amp;quot;: true } #+end_src #+RESULTS: #+BEGIN_SRC js { &amp;quot;message&amp;quot;: &amp;quot;success&amp;quot; } // POST http://muster.test/index.php?cl=ping // HTTP/1.1 200 OK // Date: Tue, 09 Feb 2021 13:45:07 GMT // Server: Apache/2.</description>
+    </item>
+    
+    <item>
+      <title>useful git wip</title>
+      <link>https://prokopov.me/posts/2021-01-07/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2021-01-07/</guid>
+      <description>Useful Git WIP alias command
+add this to the .gitconfig
+[alias] wip = for-each-ref --sort=&#39;authordate:iso8601&#39; --format=&#39; %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)&#39; refs/heads and enjoy git wip sorting branches by most recent
+Source: https://carolynvanslyck.com/blog/2020/12/git-wip/</description>
+    </item>
+    
+    <item>
       <title>Книги о здоровье</title>
       <link>https://prokopov.me/posts/2021-01-06/</link>
       <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
