@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.68.3" /><title>Maksym Prokopov personal blog</title>
+	<meta name="generator" content="Hugo 0.81.0" /><title>Maksym Prokopov personal blog</title>
 <meta charset="utf-8"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
@@ -142,19 +142,19 @@
     <div class="date">24.12.2020</div>
     <div><p>In brief  - use the <code>resource_group</code> directive.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">stages</span>:
-  - build
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">stages</span>:
+  - <span style="color:#ae81ff">build</span>
 
-<span style="color:#66d9ef">jobA</span>:
-  <span style="color:#66d9ef">resource_group</span>: jobA
-  <span style="color:#66d9ef">stage</span>: build
-  <span style="color:#66d9ef">script</span>: 
-    - echo HelloA
+<span style="color:#f92672">jobA</span>:
+  <span style="color:#f92672">resource_group</span>: <span style="color:#ae81ff">jobA</span>
+  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
+  <span style="color:#f92672">script</span>: 
+    - <span style="color:#ae81ff">echo HelloA</span>
 
-<span style="color:#66d9ef">jobB</span>: 
-  <span style="color:#66d9ef">stage</span>: build
-  <span style="color:#66d9ef">script</span>:
-    - echo HelloB
+<span style="color:#f92672">jobB</span>: 
+  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
+  <span style="color:#f92672">script</span>:
+    - <span style="color:#ae81ff">echo HelloB</span>
 
 </code></pre></div><p>There are some useful patterns for Resource Group.</p>
 <p>resource_group: $CI_ENVIRONMENT_NAME &hellip; Limit per environment</p>

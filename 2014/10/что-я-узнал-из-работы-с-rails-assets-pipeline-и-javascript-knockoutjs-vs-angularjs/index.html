@@ -63,7 +63,7 @@
     @api = ‘/api/tickets/unassigned’</p>
 <p>вот HAML партиал. Кстати, это в 4м HAML появилась возможность писать аттрибуты в круглых скобках.</p>
 <p>    %td.avatar<br>
-      %img.cycle.userpic(data-bind = «attr:{src:avatar.nano.url}, visible: state !== ‘classified&rsquo;»)<br>
+      %img.cycle.userpic(data-bind = «attr:{src:avatar.nano.url}, visible: state !== ‘classified'»)<br>
     %td.id_column<br>
       %a(data-bind = «attr:{ href: url }, css: {‘fg-red’: is_major}»)<br>
         %i.icon-fire(data-bind = ‘visible: is_major’)<br>
