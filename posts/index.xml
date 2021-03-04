@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Tue, 02 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>org-roam ideas</title>
+      <link>https://prokopov.me/posts/2021-03-04/</link>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2021-03-04/</guid>
+      <description>I love talking about ideas. org-roam has quite simple idea for organizing your knowledge. I didn&amp;rsquo;t believe it works when I gave it a try.
+The essense of the Zettelkasten method is following:
+ Keep your notes split apart in one single folder. Insert tags and backlinks to group notes together.  That&amp;rsquo;s it!
+What is so special about this? Let&amp;rsquo;s say I started moving all things from my backlog pile into separate small notes and I started to breath again!</description>
+    </item>
+    
     <item>
       <title>Disable Chrome browser confirmation to open external protocol with org-protocol</title>
       <link>https://prokopov.me/posts/2021-02-02-org-protocol-chrome-no-confirmation/</link>
