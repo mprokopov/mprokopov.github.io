@@ -40,6 +40,8 @@
     </h1>
     <div class="date">27.03.2021</div>
     <div><h2 id="smalltalk-outstanding-features">Smalltalk outstanding features</h2>
+<p>The Smalltalk is an extraordinary language. Firstly, this is a mother of all OOP family languages. Secondly, Java was invented as alternative for payed (sic!) programming language Smalltalk, and if IBM won the race by Microsoft a that time, things might end up very differently and Smalltalk could still be a hype.</p>
+<p>Initially I&rsquo;ve been exposed to Ruby, but only with Smalltalk I finally grasp lot&rsquo;s of ideas in Ruby, so as the roots of the syntax.</p>
 <h3 id="public-properties">Public properties</h3>
 <p>Smalltalk doesn&rsquo;t have public properties <em>at all</em>. Though it does have getters and setters with quite the <em>same</em> name as the field itself. So you don&rsquo;t write anything like setName, getName.</p>
 <p>Thus you don&rsquo;t have any of issues with decisions like: should I declare this variable as private, or more fancy, protected? Everything is just private, that&rsquo;s it. Other objects can&rsquo;t have any access to the internals apart from what is available with methods .Smalltalk even doesn&rsquo;t have a syntax to access the property variable.
@@ -68,14 +70,14 @@ That&rsquo;s simple.</p>
 <h3 id="subsequent-call-feature">Subsequent call feature</h3>
 <p>Smalltalk has a very concise syntax, but for returning the object it provides ;
 This easily allows to chain calls to the same object.</p>
-<p>For Java
-new Apple()
-.method1()
-.method2()</p>
-<p>Why is there a separate syntax in Java for constructor? I don&rsquo;t know. Smalltalk just calls method <em>initialize</em>.</p>
-<p>Same for Smalltalk
-Apple new; method1; method2;</p>
-<p>Since main thing in the language is calling methods from objects, you don&rsquo;t need to have much syntax.
+<p>For Java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> Apple<span style="color:#f92672">()</span> 
+<span style="color:#f92672">.</span><span style="color:#a6e22e">method1</span><span style="color:#f92672">()</span>
+<span style="color:#f92672">.</span><span style="color:#a6e22e">method2</span><span style="color:#f92672">()</span>
+</code></pre></div><p>Why is there a separate syntax in Java for constructor? I don&rsquo;t know. Smalltalk just calls method <em>initialize</em>.</p>
+<p>Same for Smalltalk</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Apple</span> new; <span style="color:#a6e22e">method1</span>; <span style="color:#a6e22e">method2</span>;
+</code></pre></div><p>Since main thing in the language is calling methods from objects, you don&rsquo;t need to have much syntax.
 Same concept goes from Forth language.</p>
 <h3 id="anonymous-functions">Anonymous functions</h3>
 <p>[ block ] - this is syntax for a piece of code
