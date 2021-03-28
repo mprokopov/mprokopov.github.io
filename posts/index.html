@@ -36,6 +36,41 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2021-03-27/">Smalltalk and its descedants</a>
+    </h1>
+    <div class="date">27.03.2021</div>
+    <div><h1 id="smalltalk-outstanding-features">Smalltalk outstanding features</h1>
+<h2 id="public-properties">Public properties</h2>
+<p>Smalltalk doesn&rsquo;t have public properties <em>at all</em>. Though it does have getters and setters with quite the <em>same</em> name as the field itself. So you don&rsquo;t write anything like setName, getName.</p>
+<p>Thus you don&rsquo;t have any of issues with decisions like: should I declare this variable as private, or more fancy, protected? Everything is just private, that&rsquo;s it. Other objects can&rsquo;t have any access to the internals apart from what is available with methods. That&rsquo;s simple.</p>
+<p>Assume you have a class Human.
+Get value is</p>
+<pre><code>Human name.
+</code></pre><p>Set value is</p>
+<pre><code>Human name: &quot;The one&quot;.
+</code></pre><p>Smalltalk even doesn&rsquo;t have a syntax to access the property variable, even inside the class you should reference to it via setter and getter, using calls to instance of <em>self</em>.
+get value inside Human class</p>
+<pre><code>self name.
+</code></pre><p>set value inside Human class</p>
+<pre><code>self name: &quot;The one.&quot;
+</code></pre><h2 id="no-positional-arguments-for-functions">No positional arguments for functions.</h2>
+<p>There is no such thing as positional arguments for the methods.</p>
+<p>All you have is a totally different functions using keywords as arguments.</p>
+<p>Human take: &ldquo;The second&rdquo;.
+Human take: &ldquo;The second&rdquo; flag: True.</p>
+<p>This can&rsquo;t be implemented clearly with Java. You will have a single function that takes flag with default value. So then you forced to check it later in the code.</p>
+<p>Lisp has this property by having different bodies for different set of arguments for the same function.</p>
+<h2 id="no-if-statement">No if statement</h2>
+<p>Well, this is true. What you should use instead is the ifTrue: ifFalse: method with arguments one for positive, second for negative predicate.</p>
+<p>predicate ifTrue: [do this] ifFalse: [do that]</p>
+<h2 id="subsequent-call-feature">Subsequent call feature</h2>
+<p>Smalltalk has a very concise syntax, but for returning the object it provides ;
+This easily allows to chain calls to the same object.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/2021-03-04/">org-roam ideas</a>
     </h1>
     <div class="date">04.03.2021</div>

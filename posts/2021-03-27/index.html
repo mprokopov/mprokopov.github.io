@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
-	<meta name="generator" content="Hugo 0.82.0" /><title>Maksym Prokopov personal blog</title>
+    <head><title>Maksym Prokopov personal blog</title>
 <meta charset="utf-8"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
@@ -34,157 +33,57 @@
     
 </div>
 
-
 <div class="article">
     <h1>
-        <a href="/2009/12/esxi/">про VMWare ESXi</a>
+        <a href="https://prokopov.me/posts/2021-03-27/">Smalltalk and its descedants</a>
     </h1>
-    <div class="date">23.12.2009</div>
-    <div>В этом посте я постарался собрать свои и чужие заметки по работе с ESXi, так как сама идея виртуализации довольно интересна.
-Алексей Перестюк — боевой товарищ, с которым отучились в киевском физмате УФМЛКУ, правильное дело делает двигая в массы технологии виртуализации и железо от Onix.
-Здесь его вебинар по VMWare ESXi
- Подборка моих заметок о vmware с nexus.org.ua
-О бекапе vmware esxi
-Как в VMWare расширить диск
-Виртуализация средствами VMWare </div>
+    <div class="date">27.03.2021</div>
     
+    <h4>Reading time: 2 min.</h4>
     
-        <a href="/2009/12/esxi/">Read More…</a>
-    
+    <div><h1 id="smalltalk-outstanding-features">Smalltalk outstanding features</h1>
+<h2 id="public-properties">Public properties</h2>
+<p>Smalltalk doesn&rsquo;t have public properties <em>at all</em>. Though it does have getters and setters with quite the <em>same</em> name as the field itself. So you don&rsquo;t write anything like setName, getName.</p>
+<p>Thus you don&rsquo;t have any of issues with decisions like: should I declare this variable as private, or more fancy, protected? Everything is just private, that&rsquo;s it. Other objects can&rsquo;t have any access to the internals apart from what is available with methods. That&rsquo;s simple.</p>
+<p>Assume you have a class Human.
+Get value is</p>
+<pre><code>Human name.
+</code></pre><p>Set value is</p>
+<pre><code>Human name: &quot;The one&quot;.
+</code></pre><p>Smalltalk even doesn&rsquo;t have a syntax to access the property variable, even inside the class you should reference to it via setter and getter, using calls to instance of <em>self</em>.
+get value inside Human class</p>
+<pre><code>self name.
+</code></pre><p>set value inside Human class</p>
+<pre><code>self name: &quot;The one.&quot;
+</code></pre><h2 id="no-positional-arguments-for-functions">No positional arguments for functions.</h2>
+<p>There is no such thing as positional arguments for the methods.</p>
+<p>All you have is a totally different functions using keywords as arguments.</p>
+<p>Human take: &ldquo;The second&rdquo;.
+Human take: &ldquo;The second&rdquo; flag: True.</p>
+<p>This can&rsquo;t be implemented clearly with Java. You will have a single function that takes flag with default value. So then you forced to check it later in the code.</p>
+<p>Lisp has this property by having different bodies for different set of arguments for the same function.</p>
+<h2 id="no-if-statement">No if statement</h2>
+<p>Well, this is true. What you should use instead is the ifTrue: ifFalse: method with arguments one for positive, second for negative predicate.</p>
+<p>predicate ifTrue: [do this] ifFalse: [do that]</p>
+<h2 id="subsequent-call-feature">Subsequent call feature</h2>
+<p>Smalltalk has a very concise syntax, but for returning the object it provides ;
+This easily allows to chain calls to the same object.</p>
 </div>
-<div class="border-bottom"></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url =  null ;  
+    this.page.identifier =  null ; 
+    };
+ (function() {
+     var d = document, s = d.createElement('script');
+     s.src = 'https://maksym-prokopov-personal-blog.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-<div class="article">
-    <h1>
-        <a href="/2009/12/right-clean-exchange/">Самый правильный скрипт очистки обменника</a>
-    </h1>
-    <div class="date">22.12.2009</div>
-    <div>Не секрет, что практически у каждой организации есть специальная расшаренная папка для обмена, чаще называемая «файлопомойкой».
-Есть ли хороший способ уборки мусора? Что бы кто-то приезжал на мусоровозе и увозил каждый вечер кучи ненужных файлов подальше от хранилища?
-Оказывается есть!
-Раньше я пользовался простым, как канализационный люк, способом «убить все по расписанию в 00:00» и после пары-тройки случаев потерянных каталогов и файлов пользователи приучивались к долгосрочному хранению в обменнике с осторожностью. </div>
-    
-    
-        <a href="/2009/12/right-clean-exchange/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/2009/12/mac-soft/">Залежи софта для Mac</a>
-    </h1>
-    <div class="date">22.12.2009</div>
-    <div>Ганьба всем, кто пользуется пиратским софтом для Мак (и мне тоже)! Мы ведь все купим, потом, да?
-Кстати, много всего такого здесь, для украинцев это особенно близко 🙂
-Ну и torrents.ru не забываем.
-Если у вас есть интересные ссылки на залежи софта для Mac добро пожаловать в каменты. </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/2009/12/%D0%B1%D0%BE%D1%80%D1%8C%D0%B1%D0%B0-%D0%B7%D0%B0-%D0%BE%D1%85%D0%BB%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-macbook/">Борьба за охлаждение Macbook</a>
-    </h1>
-    <div class="date">22.12.2009</div>
-    <div>Столкнулся с проблемой запотевания ладошек при работе на Macbook, глядь на температуту, а там 61C.
-Активное гугление не выявило особых отклонений в температурных режимах, но не было совсем уже бесполезным, так как нашлась приятная полезняшка для Mac от Lobotomy
-Итак, дамы и господа, встречаем Fan Control
-Однако, как видно, при средней загрузке все равно порядка 62C, а это довольно тепло в ладони.
-Так что проблема охлаждения ладоней до сих пор остается открытой 🙂 </div>
-    
-    
-        <a href="/2009/12/%D0%B1%D0%BE%D1%80%D1%8C%D0%B1%D0%B0-%D0%B7%D0%B0-%D0%BE%D1%85%D0%BB%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-macbook/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/2009/12/hello-worldpress/">Решил попробовать эти ваши вордпрессы.</a>
-    </h1>
-    <div class="date">21.12.2009</div>
-    <div>Сначала у меня был очень современный (на 2005год) с развитой многомерной структурой тегов и все такое бла-бла-бла сайт http://nexus.org.ua, и был он написан на Parser 3. Затем я полностью пересел за Ruby on Rails, однако переписывать сайт не торопился. А затем желание чего либо допиливать парсером совсем завяло. Решил по-легкому попробовать себя в ЖЖ.
-Пишу я себе изредка в LiveJournal, чувствую, что картинку вставить очень хочется через MarsEdit, загрузить, значится. А не получается совсем, непорядок. </div>
-    
-    
-        <a href="/2009/12/hello-worldpress/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/draft_post-680791be7605/"></a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div> </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/">Configure Docker Engine logs to AWS CloudWatch</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div> </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/draft_gitlab-continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Gitlab: continuous delivery setup for Clojure/Java with Docker</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div>Recently I was doing a https://github.com/mprokopov/it-service-sse and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.
-Long story short, here my .gitlab-ci.yml which took me a couple of days to figure out what is the “artifact” in Gitlab and how is it suppose to survive between artifact builds and docker builds. </div>
-    
-    
-        <a href="/posts/draft_gitlab-continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/draft_how-to-speed-up-ruby-bundle-gems-fetch-1110de70ccbc/">How to speed up ruby bundle gems fetch</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div>Short answer: use https://github.com/geminabox/geminabox for caching gems on your own host, or in your local network.
-I was using bundler’s vendor/cache in docker container, but with such improvement my container size grown up to 1,2Gb very quickly.
-Supply following settings to your geminabox container
-RUBYGEMS_PROXY=true
-https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800 </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2020-12-09/">Keycloak</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div>docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:11.0.3  </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="pagination">
-    
-    <div class="pagination__prev">
-        <a href="/page/25/" class="pagination__icon">&lt;&lt;</a>
-        <a href="/page/25/">Previous page</a>
-    </div>
-    
-    
-    <div class="pagination__next">
-        <a href="/page/27/">Next page</a>
-        <a href="/page/27/" class="pagination__icon">&gt;&gt;</a>
-    </div>
-    
 </div>
 <div class="sidebar"><div class="sidebar__visitcard">
     <div class="sidebar__heading">Profile links</div><p></p>
