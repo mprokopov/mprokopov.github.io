@@ -58,7 +58,7 @@ These days I mostly involved in DevOps, Lean IT and IT services.
       
       <guid>https://prokopov.me/posts/2021-03-27/</guid>
       <description>Smalltalk outstanding features Public properties Smalltalk doesn&amp;rsquo;t have public properties at all. Though it does have getters and setters with quite the same name as the field itself. So you don&amp;rsquo;t write anything like setName, getName.
-Thus you don&amp;rsquo;t have any of issues with decisions like: should I declare this variable as private, or more fancy, protected? Everything is just private, that&amp;rsquo;s it. Other objects can&amp;rsquo;t have any access to the internals apart from what is available with methods.</description>
+Thus you don&amp;rsquo;t have any of issues with decisions like: should I declare this variable as private, or more fancy, protected? Everything is just private, that&amp;rsquo;s it. Other objects can&amp;rsquo;t have any access to the internals apart from what is available with methods .</description>
     </item>
     
     <item>
