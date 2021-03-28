@@ -39,8 +39,8 @@
         <a href="https://prokopov.me/posts/2021-03-27/">Smalltalk and its descedants</a>
     </h1>
     <div class="date">27.03.2021</div>
-    <div><h1 id="smalltalk-outstanding-features">Smalltalk outstanding features</h1>
-<h2 id="public-properties">Public properties</h2>
+    <div><h2 id="smalltalk-outstanding-features">Smalltalk outstanding features</h2>
+<h3 id="public-properties">Public properties</h3>
 <p>Smalltalk doesn&rsquo;t have public properties <em>at all</em>. Though it does have getters and setters with quite the <em>same</em> name as the field itself. So you don&rsquo;t write anything like setName, getName.</p>
 <p>Thus you don&rsquo;t have any of issues with decisions like: should I declare this variable as private, or more fancy, protected? Everything is just private, that&rsquo;s it. Other objects can&rsquo;t have any access to the internals apart from what is available with methods .Smalltalk even doesn&rsquo;t have a syntax to access the property variable.
 That&rsquo;s simple.</p>
@@ -49,7 +49,7 @@ That&rsquo;s simple.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name</span>.
 </code></pre></div><p>call setter name with value</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name:</span> <span style="color:#75715e">&#34;The one&#34;</span>.
-</code></pre></div><h2 id="no-positional-arguments-for-functions">No positional arguments for functions.</h2>
+</code></pre></div><h3 id="no-positional-arguments-for-functions">No positional arguments for functions.</h3>
 <p>There is no such thing as positional arguments for the methods.</p>
 <p>All you have is a totally different functions using keywords as arguments.</p>
 <p>Function 1</p>
@@ -58,10 +58,14 @@ That&rsquo;s simple.</p>
 </code></pre></div><p>Human take: &ldquo;The second&rdquo; flag: True.</p>
 <p>This can&rsquo;t be implemented clearly with Java. You will have to have a single function that takes flag with default value. So then you forced to check it later in the code.</p>
 <p>Lisp has this property by having different bodies for different sets of arguments for the same function.</p>
-<h2 id="no-if-statement">No if statement</h2>
+<h3 id="getter-initializes-default-property">getter initializes default property</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">history</span>
+	<span style="color:#f92672">^</span> history <span style="color:#a6e22e">ifNil:</span> [ history <span style="color:#f92672">:=</span> <span style="color:#a6e22e">OrderedCollection</span> new ]
+</code></pre></div><p>See this ifNil: method? Every object contains this, so this allows concise initialization.</p>
+<h3 id="no-if-statement">No if statement</h3>
 <p>Well, this is true. What you should use instead is the ifTrue: ifFalse: method with arguments one for positive, second for negative predicate. Everything is an object, right? so boolean operation produces Boolean object that has ifTrue: ifFalse: method that accept code blocks.</p>
 <p>predicate ifTrue: [do this] ifFalse: [do that]</p>
-<h2 id="subsequent-call-feature">Subsequent call feature</h2>
+<h3 id="subsequent-call-feature">Subsequent call feature</h3>
 <p>Smalltalk has a very concise syntax, but for returning the object it provides ;
 This easily allows to chain calls to the same object.</p>
 <p>For Java
@@ -73,9 +77,9 @@ new Apple()
 Apple new; method1; method2;</p>
 <p>Since main thing in the language is calling methods from objects, you don&rsquo;t need to have much syntax.
 Same concept goes from Forth language.</p>
-<h2 id="anonymous-functions">Anonymous functions</h2>
+<h3 id="anonymous-functions">Anonymous functions</h3>
 <p>[ block ] - this is syntax for a piece of code
-[ anArgument | block ] so now you can use :anArgument value right in the block</p>
+[ :anArgument | block ] so now you can use anArgument value right in the block</p>
 </div>
 </div>
 
