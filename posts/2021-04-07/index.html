@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal blog</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="https://prokopov.me/style.min.818029ba814b593b9352b40962decbf57412b36e67efe0ff9e8e5a97b7f27e81.css">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script type='text/javascript' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                                                                                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                                                                                                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,'script','dataLayer','GTM-WB9KBZ5');</script>
+
+</head>
+    <body><div class="header">
+    <a class="title" href="/"><div id="title">Maksym Prokopov personal blog</div><div id="description">Idea is a something worth sharing</div></a>
+</div>
+<div class="nav">
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/trips/">Travel</a></div>
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/reading/">Read</a></div>
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/creating/">Create</a></div>
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/about/">About</a></div>
+    
+</div>
+
+<div class="article">
+    <h1>
+        <a href="https://prokopov.me/posts/2021-04-07/">Datomic</a>
+    </h1>
+    <div class="date">07.04.2021</div>
+    
+    <h4>Reading time: 4 min.</h4>
+    
+    <div><h2 id="my-datomic-dark-sides">My Datomic dark sides</h2>
+<p>Despite all Datomic bright sides, there are some thoughts bothering me since I started extensively using it in my pet project.</p>
+<p>Here they are:</p>
+<h3 id="api-confusion">API confusion.</h3>
+<p>I used datomic-pro api in my project and wanted to catch &ldquo;anomaly exceptions&rdquo; from Pedestal error handlers. That was not an easy task. It simply didn&rsquo;t work.</p>
+<p>If you try to execute</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">d/transact</span> conn {<span style="color:#e6db74">:tx-data</span> [[<span style="color:#e6db74">:this</span> <span style="color:#e6db74">&#34;does not&#34;</span> <span style="color:#e6db74">:make</span> <span style="color:#e6db74">&#34;sense&#34;</span>]]})
+</code></pre></div><p>this will result</p>
+<pre><code>1. Caused by datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+   :db.error/not-a-data-function Unable to resolve data function: :this
+   {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
+    :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+    :db/error :db.error/not-a-data-function}
+                 error.clj:  167  datomic.error/deserialize-exception
+                 error.clj:  160  datomic.error/deserialize-exception
+                  peer.clj:  379  datomic.peer.Connection/notify_error
+             connector.clj:  155  datomic.connector/fn
+             connector.clj:  153  datomic.connector/fn
+              MultiFn.java:  234  clojure.lang.MultiFn/invoke
+             connector.clj:  180  datomic.connector/create-hornet-notifier/fn/fn/fn/fn
+             connector.clj:  175  datomic.connector/create-hornet-notifier/fn/fn/fn
+             connector.clj:  173  datomic.connector/create-hornet-notifier/fn/fn
+                  core.clj: 2030  clojure.core/binding-conveyor-fn/fn
+                  AFn.java:   18  clojure.lang.AFn/call
+           FutureTask.java:  266  java.util.concurrent.FutureTask/run
+   ThreadPoolExecutor.java: 1149  java.util.concurrent.ThreadPoolExecutor/runWorker
+   ThreadPoolExecutor.java:  624  java.util.concurrent.ThreadPoolExecutor$Worker/run
+               Thread.java:  748  java.lang.Thread/run
+</code></pre><p>(ex-data *e)
+#:clojure.error{:phase :print-eval-result}</p>
+<p>And this is what you get from datomic client api library using peer.</p>
+<pre><code>
+1. Unhandled clojure.lang.ExceptionInfo
+   Unable to resolve data function: :this
+   {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
+    :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+    :db/error :db.error/not-a-data-function,
+    :dbs
+    [{:database-id &quot;datomic:dev://localhost:4334/login&quot;,
+      :t 1016,
+      :next-t 1017,
+      :history false}]}
+                 async.clj:   58  datomic.client.api.async/ares
+                 async.clj:   54  datomic.client.api.async/ares
+                  sync.clj:  104  datomic.client.api.sync/eval11528/fn
+             protocols.clj:   72  datomic.client.api.protocols/fn/G
+                   api.clj:  200  datomic.client.api/transact
+                   api.clj:  183  datomic.client.api/transact
+                      REPL:  816  stock-login.service/eval35091
+                      REPL:  816  stock-login.service/eval35091
+             Compiler.java: 7181  clojure.lang.Compiler/eval
+             Compiler.java: 7136  clojure.lang.Compiler/eval
+                  core.clj: 3202  clojure.core/eval
+                  core.clj: 3198  clojure.core/eval
+    interruptible_eval.clj:   87  nrepl.middleware.interruptible-eval/evaluate/fn/fn
+                  AFn.java:  152  clojure.lang.AFn/applyToHelper
+                  AFn.java:  144  clojure.lang.AFn/applyTo
+                  core.clj:  667  clojure.core/apply
+                  core.clj: 1977  clojure.core/with-bindings*
+                  core.clj: 1977  clojure.core/with-bindings*
+               RestFn.java:  425  clojure.lang.RestFn/invoke
+    interruptible_eval.clj:   87  nrepl.middleware.interruptible-eval/evaluate/fn
+                  main.clj:  437  clojure.main/repl/read-eval-print/fn
+                  main.clj:  437  clojure.main/repl/read-eval-print
+                  main.clj:  458  clojure.main/repl/fn
+                  main.clj:  458  clojure.main/repl
+                  main.clj:  368  clojure.main/repl
+               RestFn.java:  137  clojure.lang.RestFn/applyTo
+                  core.clj:  667  clojure.core/apply
+                  core.clj:  662  clojure.core/apply
+                regrow.clj:   20  refactor-nrepl.ns.slam.hound.regrow/wrap-clojure-repl/fn
+               RestFn.java: 1523  clojure.lang.RestFn/invoke
+    interruptible_eval.clj:   84  nrepl.middleware.interruptible-eval/evaluate
+    interruptible_eval.clj:   56  nrepl.middleware.interruptible-eval/evaluate
+    interruptible_eval.clj:  152  nrepl.middleware.interruptible-eval/interruptible-eval/fn/fn
+                  AFn.java:   22  clojure.lang.AFn/run
+               session.clj:  202  nrepl.middleware.session/session-exec/main-loop/fn
+               session.clj:  201  nrepl.middleware.session/session-exec/main-loop
+                  AFn.java:   22  clojure.lang.AFn/run
+               Thread.java:  748  java.lang.Thread/run
+</code></pre><p>here is ex-data of the exception. This is much more analysable!</p>
+<pre><code>(ex-data *e)
+{:cognitect.anomalies/category :cognitect.anomalies/incorrect,
+ :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+ :db/error :db.error/not-a-data-function,
+ :dbs
+ [{:database-id &quot;datomic:dev://localhost:4334/login&quot;,
+   :t 1016,
+   :next-t 1017,
+   :history false}]}
+</code></pre><p>Okay, so I need to use client library. That increases the complexity by needing to have application server in form of running peer.
+I understand that was totally required by datomic cloud, but is it really required now?</p>
+<p>Feature parity with client library.
+I found the following discrepancies:</p>
+<ul>
+<li>d/squiid is not supported, use (java.util.UUID/randomUUID) instead</li>
+<li>d/touch is not supported, use d/pull with &lsquo;[*]</li>
+<li>only find-rel is supported! say I can&rsquo;t execute [?e &hellip;] within :find clause!</li>
+</ul>
+<p>So I&rsquo;m really in doubts if the investments to moving to client libary worth all the hassle.</p>
+<h3 id="more-topics-that-i-experinces-quite-significant-difficulties">More topics that I experinces quite significant difficulties.</h3>
+<h4 id="rollback-transaction">&ldquo;Rollback&rdquo; transaction.</h4>
+<p>There is no easy way to rollback transaction, but there is some opportunity instead.
+The recommended way to do this is following.
+Search datomic history for required txs, select all entities that was affected by tx and &ldquo;reverse&rdquo; them by adding fourth
+:add parameter to complement value.</p>
+<h4 id="pagination-and-limit">Pagination and limit.</h4>
+<p>Despite datomic client support of :offset and :limit there is recommended way to do such a thing using <code>index-pull</code>. That requires more efforts to comprehend simple tasks.</p>
+<p>Here is more on the client library rationale.</p>
+<pre><code>Client API
+
+Datomic’s peer library puts database query in your own application process. This provides several benefits, but at the price of a heavier dependency (both in code and in memory requirements) than a traditional client.
+
+A smaller footprint is useful in environments that have operational limitations, or where processes are small or short-lived. The new Datomic client API addresses this need. Lightweight clients connect to Peer Servers, which are peers that run in a separate address space.
+
+Existing peers are unchanged, and you can mix and match peer and client applications as you see fit within the same Datomic install. Clients and peers are described in detail in the new clients and peers section of the docs.
+
+With today’s release, we are making available the alpha version of the open source Client library for Clojure. The Java library will be released shortly. We also have plans to both create more language libraries for Client and enable our customers to create their own. We are interested in your feedback on the Client API itself and the priority of our language reach efforts. As of today, we have enabled a customer feedback portal, accessible via the &quot;Suggest Features&quot; link in the top navigation of the my.datomic.com dashboard, where you can help us prioritize our efforts in this (and many other) areas.
+</code></pre><p>Source: <a href="https://blog.datomic.com/2016/11/datomic-update-client-api-unlimited.html">https://blog.datomic.com/2016/11/datomic-update-client-api-unlimited.html</a></p>
+</div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url =  null ;  
+    this.page.identifier =  null ; 
+    };
+ (function() {
+     var d = document, s = d.createElement('script');
+     s.src = 'https://maksym-prokopov-personal-blog.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+<div class="sidebar"><div class="sidebar__visitcard">
+    <div class="sidebar__heading">Profile links</div><p></p>
+    <div class="textwidget profile__link">
+        
+        <a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 18px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Max Prokopov" rel="noopener noreferrer">Max Prokopov</a><br><a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" title="Max Prokopov" rel="noopener noreferrer"><img src="https://badge.facebook.com/badge/564099895.8308.711585450.png" style="border: 0px;"></a>
+        
+    </div>
+    <div class="profile__link">
+        <a href="https://twitter.com/mprokopov?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @mprokopov</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div class='LI-profile-badge profile__link' data-version='v1' data-size='medium' data-locale='en_US'
+        data-type='horizontal' data-theme='light' data-vanity='max-prokopov'>
+        <a class='LI-simple-link' href='https://in.linkedin.com/in/max-prokopov?trk=profile-badge' >
+            Maksym Prokopov
+        </a>
+    </div>
+</div>
+<div class="sidebar__categories">
+    <div class="sidebar__heading">Categories</div>
+    <p></p>
+    <ul class="sidebar__links sidebar__category">
+        
+        <li><a href="/categories/ansible/">ansible</a> (1) </li>
+        
+        <li><a href="/categories/apache/">apache</a> (3) </li>
+        
+        <li><a href="/categories/clojure/">clojure</a> (1) </li>
+        
+        <li><a href="/categories/docker/">docker</a> (1) </li>
+        
+        <li><a href="/categories/education/">education</a> (2) </li>
+        
+        <li><a href="/categories/emacs/">emacs</a> (1) </li>
+        
+        <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
+        
+        <li><a href="/categories/gtd/">GTD</a> (4) </li>
+        
+        <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+        
+        <li><a href="/categories/kubernetes/">kubernetes</a> (1) </li>
+        
+        <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
+        
+        <li><a href="/categories/links/">links</a> (5) </li>
+        
+        <li><a href="/categories/linux/">linux</a> (1) </li>
+        
+        <li><a href="/categories/macos/">macos</a> (1) </li>
+        
+        <li><a href="/categories/org-mode/">org-mode</a> (1) </li>
+        
+        <li><a href="/categories/rails/">rails</a> (1) </li>
+        
+        <li><a href="/categories/ruby/">ruby</a> (1) </li>
+        
+        <li><a href="/categories/sip/">sip</a> (1) </li>
+        
+        <li><a href="/categories/tips-and-tricks/">tips and tricks</a> (1) </li>
+        
+        <li><a href="/categories/vmware/">vmware</a> (2) </li>
+        
+        <li><a href="/categories/windows/">windows</a> (4) </li>
+        
+        <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
+        
+        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (1) </li>
+        
+        <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">веб-разработка</a> (10) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">виртуализация</a> (1) </li>
+        
+        <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">гаджеты</a> (2) </li>
+        
+        <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">железо</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">за жизнь</a> (117) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">здоровье</a> (4) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (44) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">маркетинг</a> (2) </li>
+        
+        <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (25) </li>
+        
+        <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">управление</a> (1) </li>
+        
+        <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
+        
+    </ul>
+</div>
+<div class="sidebar__friends">
+    <div class="sidebar__heading">Friends</div><p></p>
+	<ul class="sidebar__links">
+      
+      <li><a href="https://it-premium.com.ua" title="Наш сайт по ИТ-аутсорсингу" >IT-Premium аутсорсинг от профессионалов</a></li>
+
+      
+      <li><a href="http://nexusonrails.blogspot.com/" title="Мой блог на blogger.com о Ruby on Rails" >Nexus on Rails</a></li>
+
+      
+      <li><a href="http://blog.it-premium.com.ua" title="Блог Максима Прокопова про Docker, Xen и CoreOS и всякое такое" rel="friend">Maksym Prokopov about Docker, Xen и CoreOS</a></li>
+
+      
+      <li><a href="http://nexus.org.ua" title="Сайт об IT технологиях" >Мой хардкорный убер сайт 2005 года Nexus Notes</a></li>
+
+      
+      <li><a href="http://condom.org.ua" title="Контрацепция в деталях" >Проект о контрацепции</a></li>
+
+      
+      <li><a href="https://super-truper.com.ua" title="Лучший интернет-магазин ручного инструмента Truper" >Интернет-магазин ручного инструмента Truper</a></li>
+
+      
+      <li><a href="http://asterisk.in.ua" title="Курсы и услуги по внедрению asterisk" >Asterisk.in.ua</a></li>
+
+      
+      <li><a href="http://it-premium.livejournal.com/" title="" rel="friend co-worker neighbor">IT-Premium company blog</a></li>
+
+      
+	</ul>
+</div>
+</div>
+
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB9KBZ5"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+</body>
+</html>

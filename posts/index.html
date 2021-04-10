@@ -36,6 +36,133 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2021-04-07/">Datomic</a>
+    </h1>
+    <div class="date">07.04.2021</div>
+    <div><h2 id="my-datomic-dark-sides">My Datomic dark sides</h2>
+<p>Despite all Datomic bright sides, there are some thoughts bothering me since I started extensively using it in my pet project.</p>
+<p>Here they are:</p>
+<h3 id="api-confusion">API confusion.</h3>
+<p>I used datomic-pro api in my project and wanted to catch &ldquo;anomaly exceptions&rdquo; from Pedestal error handlers. That was not an easy task. It simply didn&rsquo;t work.</p>
+<p>If you try to execute</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">d/transact</span> conn {<span style="color:#e6db74">:tx-data</span> [[<span style="color:#e6db74">:this</span> <span style="color:#e6db74">&#34;does not&#34;</span> <span style="color:#e6db74">:make</span> <span style="color:#e6db74">&#34;sense&#34;</span>]]})
+</code></pre></div><p>this will result</p>
+<pre><code>1. Caused by datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+   :db.error/not-a-data-function Unable to resolve data function: :this
+   {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
+    :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+    :db/error :db.error/not-a-data-function}
+                 error.clj:  167  datomic.error/deserialize-exception
+                 error.clj:  160  datomic.error/deserialize-exception
+                  peer.clj:  379  datomic.peer.Connection/notify_error
+             connector.clj:  155  datomic.connector/fn
+             connector.clj:  153  datomic.connector/fn
+              MultiFn.java:  234  clojure.lang.MultiFn/invoke
+             connector.clj:  180  datomic.connector/create-hornet-notifier/fn/fn/fn/fn
+             connector.clj:  175  datomic.connector/create-hornet-notifier/fn/fn/fn
+             connector.clj:  173  datomic.connector/create-hornet-notifier/fn/fn
+                  core.clj: 2030  clojure.core/binding-conveyor-fn/fn
+                  AFn.java:   18  clojure.lang.AFn/call
+           FutureTask.java:  266  java.util.concurrent.FutureTask/run
+   ThreadPoolExecutor.java: 1149  java.util.concurrent.ThreadPoolExecutor/runWorker
+   ThreadPoolExecutor.java:  624  java.util.concurrent.ThreadPoolExecutor$Worker/run
+               Thread.java:  748  java.lang.Thread/run
+</code></pre><p>(ex-data *e)
+#:clojure.error{:phase :print-eval-result}</p>
+<p>And this is what you get from datomic client api library using peer.</p>
+<pre><code>
+1. Unhandled clojure.lang.ExceptionInfo
+   Unable to resolve data function: :this
+   {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
+    :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+    :db/error :db.error/not-a-data-function,
+    :dbs
+    [{:database-id &quot;datomic:dev://localhost:4334/login&quot;,
+      :t 1016,
+      :next-t 1017,
+      :history false}]}
+                 async.clj:   58  datomic.client.api.async/ares
+                 async.clj:   54  datomic.client.api.async/ares
+                  sync.clj:  104  datomic.client.api.sync/eval11528/fn
+             protocols.clj:   72  datomic.client.api.protocols/fn/G
+                   api.clj:  200  datomic.client.api/transact
+                   api.clj:  183  datomic.client.api/transact
+                      REPL:  816  stock-login.service/eval35091
+                      REPL:  816  stock-login.service/eval35091
+             Compiler.java: 7181  clojure.lang.Compiler/eval
+             Compiler.java: 7136  clojure.lang.Compiler/eval
+                  core.clj: 3202  clojure.core/eval
+                  core.clj: 3198  clojure.core/eval
+    interruptible_eval.clj:   87  nrepl.middleware.interruptible-eval/evaluate/fn/fn
+                  AFn.java:  152  clojure.lang.AFn/applyToHelper
+                  AFn.java:  144  clojure.lang.AFn/applyTo
+                  core.clj:  667  clojure.core/apply
+                  core.clj: 1977  clojure.core/with-bindings*
+                  core.clj: 1977  clojure.core/with-bindings*
+               RestFn.java:  425  clojure.lang.RestFn/invoke
+    interruptible_eval.clj:   87  nrepl.middleware.interruptible-eval/evaluate/fn
+                  main.clj:  437  clojure.main/repl/read-eval-print/fn
+                  main.clj:  437  clojure.main/repl/read-eval-print
+                  main.clj:  458  clojure.main/repl/fn
+                  main.clj:  458  clojure.main/repl
+                  main.clj:  368  clojure.main/repl
+               RestFn.java:  137  clojure.lang.RestFn/applyTo
+                  core.clj:  667  clojure.core/apply
+                  core.clj:  662  clojure.core/apply
+                regrow.clj:   20  refactor-nrepl.ns.slam.hound.regrow/wrap-clojure-repl/fn
+               RestFn.java: 1523  clojure.lang.RestFn/invoke
+    interruptible_eval.clj:   84  nrepl.middleware.interruptible-eval/evaluate
+    interruptible_eval.clj:   56  nrepl.middleware.interruptible-eval/evaluate
+    interruptible_eval.clj:  152  nrepl.middleware.interruptible-eval/interruptible-eval/fn/fn
+                  AFn.java:   22  clojure.lang.AFn/run
+               session.clj:  202  nrepl.middleware.session/session-exec/main-loop/fn
+               session.clj:  201  nrepl.middleware.session/session-exec/main-loop
+                  AFn.java:   22  clojure.lang.AFn/run
+               Thread.java:  748  java.lang.Thread/run
+</code></pre><p>here is ex-data of the exception. This is much more analysable!</p>
+<pre><code>(ex-data *e)
+{:cognitect.anomalies/category :cognitect.anomalies/incorrect,
+ :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+ :db/error :db.error/not-a-data-function,
+ :dbs
+ [{:database-id &quot;datomic:dev://localhost:4334/login&quot;,
+   :t 1016,
+   :next-t 1017,
+   :history false}]}
+</code></pre><p>Okay, so I need to use client library. That increases the complexity by needing to have application server in form of running peer.
+I understand that was totally required by datomic cloud, but is it really required now?</p>
+<p>Feature parity with client library.
+I found the following discrepancies:</p>
+<ul>
+<li>d/squiid is not supported, use (java.util.UUID/randomUUID) instead</li>
+<li>d/touch is not supported, use d/pull with &lsquo;[*]</li>
+<li>only find-rel is supported! say I can&rsquo;t execute [?e &hellip;] within :find clause!</li>
+</ul>
+<p>So I&rsquo;m really in doubts if the investments to moving to client libary worth all the hassle.</p>
+<h3 id="more-topics-that-i-experinces-quite-significant-difficulties">More topics that I experinces quite significant difficulties.</h3>
+<h4 id="rollback-transaction">&ldquo;Rollback&rdquo; transaction.</h4>
+<p>There is no easy way to rollback transaction, but there is some opportunity instead.
+The recommended way to do this is following.
+Search datomic history for required txs, select all entities that was affected by tx and &ldquo;reverse&rdquo; them by adding fourth
+:add parameter to complement value.</p>
+<h4 id="pagination-and-limit">Pagination and limit.</h4>
+<p>Despite datomic client support of :offset and :limit there is recommended way to do such a thing using <code>index-pull</code>. That requires more efforts to comprehend simple tasks.</p>
+<p>Here is more on the client library rationale.</p>
+<pre><code>Client API
+
+Datomic’s peer library puts database query in your own application process. This provides several benefits, but at the price of a heavier dependency (both in code and in memory requirements) than a traditional client.
+
+A smaller footprint is useful in environments that have operational limitations, or where processes are small or short-lived. The new Datomic client API addresses this need. Lightweight clients connect to Peer Servers, which are peers that run in a separate address space.
+
+Existing peers are unchanged, and you can mix and match peer and client applications as you see fit within the same Datomic install. Clients and peers are described in detail in the new clients and peers section of the docs.
+
+With today’s release, we are making available the alpha version of the open source Client library for Clojure. The Java library will be released shortly. We also have plans to both create more language libraries for Client and enable our customers to create their own. We are interested in your feedback on the Client API itself and the priority of our language reach efforts. As of today, we have enabled a customer feedback portal, accessible via the &quot;Suggest Features&quot; link in the top navigation of the my.datomic.com dashboard, where you can help us prioritize our efforts in this (and many other) areas.
+</code></pre><p>Source: <a href="https://blog.datomic.com/2016/11/datomic-update-client-api-unlimited.html">https://blog.datomic.com/2016/11/datomic-update-client-api-unlimited.html</a></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/2021-03-27/">Smalltalk and its descedants</a>
     </h1>
     <div class="date">27.03.2021</div>

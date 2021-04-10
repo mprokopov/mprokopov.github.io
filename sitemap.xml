@@ -1,1082 +1,1815 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://prokopov.me/pages/trips/</loc>
     <lastmod>2013-08-10T13:07:34+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/pages/reading/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/pages/creating/</loc>
     <lastmod>2013-08-20T07:14:34+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/pages/about/</loc>
     <lastmod>2020-12-08T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
+    <loc>https://prokopov.me/posts/2021-04-07/</loc>
+    <lastmod>2021-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/</loc>
-    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
-  </url><url>
+    <lastmod>2021-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/</loc>
-    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
-  </url><url>
+    <lastmod>2021-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2021-03-27/</loc>
     <lastmod>2021-03-27T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2021-03-04/</loc>
     <lastmod>2021-03-04T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/</loc>
     <lastmod>2021-02-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2021-02-02-org-protocol-chrome-no-confirmation/</loc>
     <lastmod>2021-02-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/emacs/</loc>
     <lastmod>2021-02-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/org-mode/</loc>
     <lastmod>2021-02-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2021-01-08/</loc>
     <lastmod>2021-01-09T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2021-01-07/</loc>
     <lastmod>2021-01-07T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2021-01-06/</loc>
     <lastmod>2021-01-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-12-24/</loc>
     <lastmod>2020-12-24T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/pages/</loc>
     <lastmod>2020-12-08T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-12-07/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/links/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-10-09/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-07-11/</loc>
     <lastmod>2020-07-11T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/education/</loc>
     <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-07-09/</loc>
     <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-week-28/</loc>
     <lastmod>2020-07-09T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-week-24-links/</loc>
     <lastmod>2020-06-18T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-06-19-date-printing-go/</loc>
     <lastmod>2020-06-18T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-week-23-links/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/setting-up-a-php-development-environment-with-apache2-and-php-fpm-on-macos-catalina-21d74a90aeac/</loc>
     <lastmod>2020-06-09T09:14:08+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/</loc>
     <lastmod>2020-06-09T09:14:08+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-06-02-pharo-raspberry-pi/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-06-01-move-to-hugo/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-week-22/</loc>
     <lastmod>2020-05-31T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-week-21-links/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-05-24-ruby/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-05-31/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/how-to-increase-kubernetes-pvc-size-for-aws-ebs-b3d4a99c006a/</loc>
     <lastmod>2020-05-12T15:48:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/my-new-modern-web-site-stack-f9645e78ae16/</loc>
     <lastmod>2020-04-12T18:02:44+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-03-03-my-recent-tasks/</loc>
     <lastmod>2020-03-03T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2020/02/applescript-instantly-open-zoom-link-from-the-ical-calendar/</loc>
     <lastmod>2020-02-26T17:10:53+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/</loc>
     <lastmod>2020-02-26T17:10:53+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/applescript-instant-open-zoom-link/</loc>
     <lastmod>2020-02-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/macos/</loc>
     <lastmod>2020-02-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/tips-and-tricks/</loc>
     <lastmod>2020-02-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2020-01-01/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/the-bad-thing-about-rails-is-that-by-default-it-suggests-using-own-messy-design-patterns-like-fat-37d81b3e7def/</loc>
     <lastmod>2019-09-15T16:52:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2019/01/%D0%B4%D0%B2%D0%B0-%D0%B4%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D1%85-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BD%D1%83%D0%B6%D0%BD%D0%BE-%D0%B8%D0%B7%D1%83%D1%87%D0%B8/</loc>
     <lastmod>2019-01-08T04:07:39+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/</loc>
     <lastmod>2018-06-06T15:50:30+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/ruby/</loc>
     <lastmod>2018-06-06T15:50:30+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2018-05-29_-prolog-e0878ac7fe40/</loc>
     <lastmod>2018-05-29T12:38:14+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2018-05-27_-dbe59a2cbade/</loc>
     <lastmod>2018-05-27T17:29:53+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/</loc>
     <lastmod>2018-05-26T12:35:51+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/kubernetes/</loc>
     <lastmod>2018-05-26T12:35:51+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2018-03-28_-2285686116fa/</loc>
     <lastmod>2018-03-28T04:19:42+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/noteworthy-clojure-projects-634af849e01d/</loc>
     <lastmod>2018-01-18T13:40:17+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/clojure/</loc>
     <lastmod>2018-01-16T16:17:37+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2018/01/%D0%B2%D0%B5%D1%89%D0%B8-%D0%B2-%D0%B2%D0%B5%D0%B1-%D0%B4%D0%B5%D0%B2%D0%B5-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BC%D0%B5%D0%BD%D1%8F-%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%82%D0%B5/</loc>
     <lastmod>2018-01-16T16:17:37+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2018/01/%D0%BF%D1%80%D0%BE-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D1%8B-%D0%B8-ide/</loc>
     <lastmod>2018-01-10T12:52:59+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2017/11/%D0%BC%D0%BE%D0%BD%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5%D1%81%D0%BE-ninebot-one-s2-%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0-%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D1%8B-%D1%81/</loc>
     <lastmod>2017-11-01T10:07:29+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/quick-fix-for-rubygems-ssl-error-5126c73cb7f6/</loc>
     <lastmod>2017-10-24T09:59:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c/</loc>
     <lastmod>2017-09-07T08:58:13+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/gitlab-continuous-delivery-setup-for-clojure-java-with-docker-472320d5aa52/</loc>
     <lastmod>2017-09-05T10:59:48+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/fully-automated-docker-mysql-database-backup-from-remote-host-bd02e24b5009/</loc>
     <lastmod>2017-08-17T11:13:38+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/ansible/</loc>
     <lastmod>2017-08-15T08:17:15+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/ansible-containers-d89258cdf5de/</loc>
     <lastmod>2017-08-15T08:17:15+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2017-08-11_-d42877e2368d/</loc>
     <lastmod>2017-08-11T08:04:29+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/deployment-of-clojure-app-to-production-with-docker-9dbffeac6ef5/</loc>
     <lastmod>2017-08-03T13:56:45+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2017/07/%D1%87%D1%82%D0%BE-%D0%BF%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%B8%D1%82%D1%8C-%D0%BD%D0%B0-%D0%B2%D0%B0%D1%88%D0%B5%D0%BC-mac/</loc>
     <lastmod>2017-07-28T12:00:12+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2017/07/%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D1%84%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4%D0%B0-%D0%BD%D0%B0-%D0%B2%D0%B5%D0%B1-%D0%BA%D0%B0%D1%82%D0%B8%D1%82%D1%81%D1%8F-%D0%BD/</loc>
     <lastmod>2017-07-22T15:28:46+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2017-07-11_-docker-ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/</loc>
     <lastmod>2017-07-11T16:23:08+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2017/06/%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%BC%D0%B5%D1%80%D1%81%D0%B5%D0%B4%D0%B5%D1%81-%D0%B1%D0%B5%D0%BD%D1%86-%D0%B2-%D1%88%D1%82%D1%83%D1%82%D1%82%D0%B3%D0%B0%D1%80%D1%82%D0%B5/</loc>
     <lastmod>2017-06-01T15:59:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2017/03/%D0%BA%D0%B0%D0%BA-%D1%8F-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%BB-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D1%87%D0%B0%D1%81%D1%82%D1%8C-4/</loc>
     <lastmod>2017-03-22T14:42:19+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2017/02/%D0%BE%D1%82%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B5-%D0%B8%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D0%B8-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD/</loc>
     <lastmod>2017-02-15T08:59:49+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/12/%D0%B2%D0%BE%D1%82-%D1%8F-%D0%B8-%D1%81%D1%82%D0%B0%D0%BB-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D0%B8%D1%82%D1%8C-%D0%B2-clojure-%D0%BE%D0%BF%D0%B5%D0%BD%D1%81%D0%BE%D1%80%D1%86/</loc>
     <lastmod>2016-12-30T14:29:13+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/why-docker-for-rails-development-sucks-a43f230f62f6/</loc>
     <lastmod>2016-11-04T09:17:47+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/10/%D0%B4%D0%B0%D0%B9%D0%B4%D0%B6%D0%B5%D1%81%D1%82-%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D0%BE%D0%BA-%D0%B2%D0%B5%D0%B1%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B0-2016-10-27/</loc>
     <lastmod>2016-10-27T10:33:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/10/%D0%B1%D0%BB%D0%B5%D1%81%D0%BA-%D0%B8-%D0%BD%D0%B8%D1%89%D0%B5%D1%82%D0%B0-opencart-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B2%D0%B8%D0%B6%D0%BA%D0%B0-%D0%B4%D0%BB%D1%8F-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD/</loc>
     <lastmod>2016-10-13T13:54:11+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2016-10-13_-opencart-6bbee7eabb95/</loc>
     <lastmod>2016-10-13T13:54:11+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/09/%D0%B4%D0%B0%D0%B9%D0%B4%D0%B6%D0%B5%D1%81%D1%82-%D0%BC%D0%BE%D0%B8%D1%85-%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D0%BE%D0%BA/</loc>
     <lastmod>2016-09-20T06:00:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/08/apfs-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B5%D0%BD-%D0%B2-macos-sierra/</loc>
     <lastmod>2016-08-11T09:09:36+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/07/%D0%BA%D0%B0%D0%BA-%D1%8F-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%BB-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D1%87%D0%B0%D1%81%D1%82%D1%8C-2/</loc>
     <lastmod>2016-07-29T12:24:25+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/07/%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-xiaomi-roidme-2s/</loc>
     <lastmod>2016-07-25T15:10:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/07/%D0%BA%D0%B0%D0%BA-%D1%8F-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%BB-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1/</loc>
     <lastmod>2016-07-22T13:52:40+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/07/tern-%D1%83%D0%BC%D0%BD%D1%8B%D0%B9-autocomplete-%D0%B4%D0%BB%D1%8F-javascript-%D0%B2-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0/</loc>
     <lastmod>2016-07-22T09:03:43+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/07/%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE-docker-coreos-ansible-%D0%B8-xen/</loc>
     <lastmod>2016-07-15T14:24:14+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/07/itil-for-business/</loc>
     <lastmod>2016-07-08T10:56:35+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/</loc>
     <lastmod>2016-07-08T10:56:35+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/06/spacemacs/</loc>
     <lastmod>2016-06-06T11:10:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2016-06-06_-emacs-vim-74190dffa34e/</loc>
     <lastmod>2016-06-06T11:10:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D1%81%D0%BE%D1%84%D1%82/</loc>
     <lastmod>2016-06-06T11:10:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/docker/</loc>
     <lastmod>2016-04-29T14:10:13+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/i-discovered-much-faster-way-to-speed-up-docker-image-creation-c7485fbf6aec/</loc>
     <lastmod>2016-04-29T14:10:13+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2016/04/%D0%BF%D1%80%D0%B8%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BE%D1%87%D0%BA%D0%B8-%D1%81-%D0%BF%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%BE%D0%B9/</loc>
     <lastmod>2016-04-22T15:01:24+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/</loc>
     <lastmod>2016-04-22T15:01:24+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/mprokopov/%d0%be%d1%87%d0%b5%d0%bd%d1%8c-%d1%85%d0%be%d1%80%d0%be%d1%88%d0%be-%d0%bf%d0%b8%d1%88%d0%b5%d1%82%d0%b5-%d0%bb%d0%b5%d0%b3%d0%ba%d0%be-%d1%87%d0%b8%d1%82%d0%b0%d0%b5%d1%82%d1%81%d1%8f-575c5e67ecca/</loc>
     <lastmod>2016-02-06T12:33:11+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2015/12/%D0%BF%D1%80%D0%BE-%D0%BC%D0%BE%D0%B9-%D1%82%D0%B0%D0%B9%D0%BC-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%BC%D0%B5%D0%BD%D1%82/</loc>
     <lastmod>2015-12-29T15:22:36+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2015/12/%D0%BF%D1%80%D0%BE-%D1%83%D0%BA%D1%80%D0%B7%D0%B0%D0%BB%D0%B8%D0%B7%D0%BD%D1%8B%D1%86%D1%8E-%D0%B8-%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D1%8B/</loc>
     <lastmod>2015-12-28T15:12:44+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2015/12/%D0%BF%D0%BE%D1%81%D1%82-%D0%B2-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC-%D1%8F-%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D1%8E%D1%81%D1%8C-%D0%B2-%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8-devcards-figwheel/</loc>
     <lastmod>2015-12-27T15:12:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2015-11-02_-slack-15-8ee097578b6b/</loc>
     <lastmod>2015-11-02T15:12:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2015/09/os-x-el-capitan-gm-candidate/</loc>
     <lastmod>2015-09-10T12:17:14+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D0%BC%D0%B0%D0%BA/</loc>
     <lastmod>2015-09-10T12:17:14+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2015/04/to-pay-or-not-to-pay-virus-chipher/</loc>
     <lastmod>2015-04-29T08:25:20+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/10/%D1%87%D1%82%D0%BE-%D1%8F-%D1%83%D0%B7%D0%BD%D0%B0%D0%BB-%D0%B8%D0%B7-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-rails-assets-pipeline-%D0%B8-javascript-knockoutjs-vs-angularjs/</loc>
     <lastmod>2014-10-30T13:29:32+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/06/%D1%83%D0%B4%D0%BE%D0%B2%D0%BE%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%B8%D0%B5-%D0%BE%D1%82-%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B8/</loc>
     <lastmod>2014-06-23T08:27:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/lifehack/</loc>
     <lastmod>2014-05-14T11:11:53+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/05/%D1%83%D1%87%D0%B5%D1%82-%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85-%D1%84%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D0%BE%D0%B2/</loc>
     <lastmod>2014-05-14T11:11:53+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/05/tips-and-tricks-for-mac-os-part-3/</loc>
     <lastmod>2014-05-08T11:03:51+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/04/mac-tips-and-tricks-part-2/</loc>
     <lastmod>2014-04-28T10:34:20+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/04/favorite-mac-tips-and-tricks/</loc>
     <lastmod>2014-04-25T11:35:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/04/chef-recipe-for-nginx-passenger-install-ubuntu-debian-from-repository/</loc>
     <lastmod>2014-04-03T11:57:33+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/03/customer-is-everything/</loc>
     <lastmod>2014-03-21T09:23:47+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/02/%D0%BD%D0%B0%D1%88%D0%B0-%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%BE%D1%82%D0%B0/</loc>
     <lastmod>2014-02-13T12:53:35+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/</loc>
     <lastmod>2014-02-13T09:26:18+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/02/%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE-%D0%B4%D0%BB%D1%8F-%D0%B2%D0%B7%D0%BB%D0%BE%D0%BC%D0%B0-wifi-%D0%B5%D1%81%D1%82%D1%8C-%D1%82/</loc>
     <lastmod>2014-02-13T09:26:18+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/</loc>
     <lastmod>2014-02-13T09:26:18+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/02/dakh-daughters/</loc>
     <lastmod>2014-02-12T12:17:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/02/%D1%8D%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F/</loc>
     <lastmod>2014-02-05T11:01:09+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/02/%D0%BA%D1%80%D1%83%D1%82%D1%8B%D0%B5-%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8-%D0%BE-%D0%B2%D0%BE%D0%B7%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D0%B8-%D0%BD%D0%B0%D1%80/</loc>
     <lastmod>2014-02-04T08:59:37+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/</loc>
     <lastmod>2014-02-04T08:59:37+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2014/01/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%B1%D1%8B%D0%BB%D0%B8-%D0%BF%D1%80%D0%BE%D1%87%D0%B8%D1%82%D0%B0%D0%BD%D1%8B-%D0%B2-%D1%81%D0%B5%D0%BD%D1%82%D1%8F%D0%B1/</loc>
     <lastmod>2014-01-08T11:49:27+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/11/%D0%BA%D0%BE%D0%BC%D1%83-%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9-%D0%B0%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-vpn/</loc>
     <lastmod>2013-11-29T08:01:49+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/10/%D1%87%D1%82%D0%BE-%D0%BD%D0%B0%D0%BC%D0%B8-%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D1%82-%D0%B2-%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8-%D0%B1%D0%B8%D0%BE%D1%85%D0%B8%D0%BC%D0%B8%D1%8F-%D0%BF%D1%80%D0%BE%D1%86%D0%B5/</loc>
     <lastmod>2013-10-08T07:51:02+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/10/%D0%BA%D0%BE%D0%BD%D1%81%D0%BF%D0%B5%D0%BA%D1%82-%D0%BF%D0%BE-%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%D0%BC-%D1%82%D1%80%D0%B8%D0%B7/</loc>
     <lastmod>2013-10-03T15:06:11+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/10/amazon-kindle-paperwhite-%D0%B4%D0%BB%D1%8F-%D1%82%D0%B5%D1%85-%D0%BA%D1%82%D0%BE-%D0%BB%D1%8E%D0%B1%D0%B8%D1%82-%D1%87%D0%B8%D1%82%D0%B0%D1%82%D1%8C/</loc>
     <lastmod>2013-10-02T13:08:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/09/%D0%BB%D0%B5%D0%B3%D0%BA%D0%B8%D0%B9-%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1-%D0%BF%D0%B5%D1%80%D0%B5%D1%81%D1%82%D0%B0%D1%82%D1%8C-%D0%BE%D0%B1%D0%B8%D0%B6%D0%B0%D1%82%D1%8C%D1%81%D1%8F/</loc>
     <lastmod>2013-09-27T06:36:49+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/09/%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%B2-%D0%B8%D1%82-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0-2/</loc>
     <lastmod>2013-09-24T13:13:26+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/09/%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%B2-%D0%B8%D1%82-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0/</loc>
     <lastmod>2013-09-19T06:24:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/</loc>
     <lastmod>2013-09-19T06:24:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/</loc>
     <lastmod>2013-09-19T06:24:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/09/%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%B2-%D0%B4%D0%BB%D1%8F-%D0%B8%D1%82-%D0%BA%D0%BE/</loc>
     <lastmod>2013-09-16T14:30:11+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/09/dont-use-dukan-diet/</loc>
     <lastmod>2013-09-11T12:40:43+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/08/%D0%B5%D1%81%D0%BB%D0%B8-%D0%BE%D1%82%D0%B2%D0%B0%D0%BB%D0%B8%D0%BB%D0%B0%D1%81%D1%8C-java-%D0%BD%D0%B0-mac-os/</loc>
     <lastmod>2013-08-14T07:34:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/08/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-mac-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BA%D0%B0%D0%BA-%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C-%D0%BA%D1%83%D0%B4%D0%B0-%D0%B4%D0%B5/</loc>
     <lastmod>2013-08-08T05:05:06+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/08/%D0%B6%D0%B8%D0%B7%D0%BD%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B0%D0%BD%D0%B5%D0%BA%D0%B4%D0%BE%D1%82/</loc>
     <lastmod>2013-08-07T07:43:46+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D1%8E%D0%BC%D0%BE%D1%80/</loc>
     <lastmod>2013-08-07T07:43:46+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/08/new-blog-theme/</loc>
     <lastmod>2013-08-06T18:59:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/</loc>
     <lastmod>2013-08-06T18:59:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/08/mac-dictionary/</loc>
     <lastmod>2013-08-06T18:49:24+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/08/%D0%BB%D0%B0%D0%B9%D1%84%D1%85%D0%B0%D0%BA-%D0%BA%D0%B0%D0%BA-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D0%BE-%D1%81%D0%BB%D0%BE%D0%B6%D0%B8%D1%82%D1%8C-%D1%80%D1%83%D0%B1%D0%B0%D1%88%D0%BA/</loc>
     <lastmod>2013-08-01T06:45:54+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/07/my-mac-apps/</loc>
     <lastmod>2013-07-25T09:42:03+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/07/%D1%87%D1%82%D0%BE-%D0%BF%D0%BE%D1%87%D0%B8%D1%82%D0%B0%D1%82%D1%8C/</loc>
     <lastmod>2013-07-22T06:56:05+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/07/ikea-%D0%B2-%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B5/</loc>
     <lastmod>2013-07-10T11:10:21+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/06/tatoo-bad/</loc>
     <lastmod>2013-06-17T16:26:19+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/gtd/</loc>
     <lastmod>2013-06-03T07:37:10+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/06/taskpaper-keyboard-maestro-enhancement/</loc>
     <lastmod>2013-06-03T07:37:10+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/05/%D0%B0%D0%BD%D0%B5%D0%BA%D0%B4%D0%BE%D1%82/</loc>
     <lastmod>2013-05-14T15:03:17+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/05/%D0%BF%D1%80%D0%BE-%D1%86%D0%B5%D0%BB%D0%B8/</loc>
     <lastmod>2013-05-07T08:29:38+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/03/errors-workaround/</loc>
     <lastmod>2013-03-28T16:40:49+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/03/about-history/</loc>
     <lastmod>2013-03-25T12:31:13+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/03/%D0%BD%D0%B5%D0%B2%D0%B5%D1%80%D0%BE%D1%8F%D1%82%D0%BD%D0%BE-%D0%BA%D1%80%D1%83%D1%82%D0%BE-%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D0%BD%D0%BE-%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D0%B8%D0%B9/</loc>
     <lastmod>2013-03-19T13:22:11+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/03/water-on-mars/</loc>
     <lastmod>2013-03-18T11:58:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/03/about-stress-human-body/</loc>
     <lastmod>2013-03-16T05:58:57+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/03/puten-i-yanukovich/</loc>
     <lastmod>2013-03-14T17:42:02+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/03/emile-muller/</loc>
     <lastmod>2013-03-13T19:45:08+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/03/%D0%BF%D1%80%D0%BE-%D1%81%D0%B0%D0%B9%D1%82%D1%8B/</loc>
     <lastmod>2013-03-13T05:39:24+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/03/beautiful-women/</loc>
     <lastmod>2013-03-10T06:21:23+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/03/design-principles/</loc>
     <lastmod>2013-03-08T10:11:48+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/03/life-upgrade/</loc>
     <lastmod>2013-03-07T13:18:59+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/01/%D0%BD%D0%B5-%D0%BC%D0%BE%D0%B3%D1%83-%D1%8D%D1%82%D0%BE-%D0%BF%D1%80%D1%8F%D1%82%D0%B0%D1%82%D1%8C-%D0%BF%D1%80%D0%B0%D0%B2%D0%B4%D0%B0-%D0%BE-%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%D0%B5-%D0%B2/</loc>
     <lastmod>2013-01-28T08:58:54+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/01/privatbank-story/</loc>
     <lastmod>2013-01-27T11:34:19+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/01/taskpaper-getting-results-agile-way/</loc>
     <lastmod>2013-01-19T09:53:34+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/01/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BA%D0%B0%D0%BA-%D1%81%D0%BD%D1%8F%D1%82%D1%8C-%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D0%BD%D1%83/</loc>
     <lastmod>2013-01-13T16:38:11+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/01/%D0%BE%D0%BC%D0%BD%D0%B8%D1%84%D0%BE%D0%BA%D1%83%D1%81-1-x-%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE/</loc>
     <lastmod>2013-01-12T12:14:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/01/%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B8%D0%BD%D0%B3-%D0%BD%D0%B0-applescript/</loc>
     <lastmod>2013-01-11T21:13:21+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2013/01/%D1%88%D1%82%D1%83%D0%BA%D0%B8-%D0%BF%D1%80%D0%BE-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%85%D0%BE%D1%82%D0%B5%D0%BB%D0%BE%D1%81%D1%8C-%D0%B1%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82/</loc>
     <lastmod>2013-01-08T10:34:38+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/09/%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0-%D0%B4%D0%BD%D1%8F-%D0%B4%D0%BB%D1%8F-%D1%83%D0%B2%D0%BB%D0%B5%D0%BA%D0%B0%D1%8E%D1%89%D0%B8%D1%85%D1%81%D1%8F-itil-free-itil-training/</loc>
     <lastmod>2012-09-17T07:45:59+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/08/%D0%B2%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BE%D1%82-%D0%BF%D0%BE%D1%81%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D0%B5%D0%BC%D0%B8%D0%BD%D0%B0%D1%80%D0%B0-%D0%BF%D0%BE-iti/</loc>
     <lastmod>2012-08-09T19:34:08+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/07/how-to-fix-icq-html-tags-in-imessage/</loc>
     <lastmod>2012-07-26T11:53:05+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/itunes/</loc>
     <lastmod>2012-04-30T08:11:02+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/last-added/</loc>
     <lastmod>2012-04-30T08:11:02+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/</loc>
     <lastmod>2012-04-30T08:11:02+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/04/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%B2-itunes-%D0%BF%D0%BB%D0%B5/</loc>
     <lastmod>2012-04-30T08:11:02+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/04/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BA%D0%B0%D0%BA-%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D1%8C-%D0%BF%D0%BE%D0%B4/</loc>
     <lastmod>2012-04-10T16:32:10+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/03/%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D0%B2%D0%B0%D1%8F-%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5-%D0%BB%D0%BE%D0%B2%D0%B8%D0%BC-%D0%BF%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%BE/</loc>
     <lastmod>2012-03-11T18:10:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D1%8F/</loc>
     <lastmod>2012-03-11T18:10:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/</loc>
     <lastmod>2012-03-11T18:10:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5/</loc>
     <lastmod>2012-03-11T18:10:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D1%81%D0%BE%D0%B1%D0%B5%D1%81%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F/</loc>
     <lastmod>2012-03-11T18:10:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/colorize/</loc>
     <lastmod>2012-03-07T10:57:23+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/mac/</loc>
     <lastmod>2012-03-07T10:57:23+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/terminal/</loc>
     <lastmod>2012-03-07T10:57:23+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/03/%D1%86%D0%B2%D0%B5%D1%82%D0%B0-%D0%B2-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%B5-mac-os-x-lion/</loc>
     <lastmod>2012-03-07T10:57:23+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/howto/</loc>
     <lastmod>2012-02-27T12:38:06+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/windows/</loc>
     <lastmod>2012-02-27T12:38:06+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/02/%D0%BA%D0%B0%D0%BA-%D1%81%D0%BC%D0%B5%D0%BD%D0%B8%D1%82%D1%8C-%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D1%8C-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F-%D0%B2-%D1%82%D0%B5%D1%80/</loc>
     <lastmod>2012-02-27T12:38:06+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/windows-concept/</loc>
     <lastmod>2012-02-27T09:21:16+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/02/%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D0%BF%D1%82-windows-desktop/</loc>
     <lastmod>2012-02-27T09:21:16+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/02/%D0%BF%D0%BE%D1%82%D1%80%D1%8F%D1%81%D0%B0%D1%8E%D1%89%D0%B8%D0%B5-%D0%B2%D0%B5%D1%89%D0%B8-%D0%BF%D0%BE%D1%8F%D0%B2%D0%BB%D1%8F%D1%8E%D1%82%D1%81%D1%8F-%D0%B2-%D0%BC%D0%B8%D1%80%D0%B5/</loc>
     <lastmod>2012-02-22T11:28:55+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%BA%D0%B5%D0%B9%D1%81-%D1%81%D1%82%D0%B0%D0%B4%D0%B8/</loc>
     <lastmod>2012-02-19T16:45:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/02/%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%BA%D0%B5%D0%B9%D1%81-%D1%81%D1%82%D0%B0%D0%B4%D0%B8-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B5-%D0%BE%D0%B4/</loc>
     <lastmod>2012-02-19T16:45:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/</loc>
     <lastmod>2012-02-19T16:45:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%BE%D0%B4%D0%B8%D0%BD%D0%B5%D1%81%D0%BA%D0%BE/</loc>
     <lastmod>2012-02-19T16:45:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/visio/</loc>
     <lastmod>2012-02-18T11:28:48+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/02/%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BA-visio-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/</loc>
     <lastmod>2012-02-18T11:28:48+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/</loc>
     <lastmod>2012-02-18T11:28:48+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%B4%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/</loc>
     <lastmod>2012-02-18T11:28:48+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D1%81%D1%85%D0%B5%D0%BC%D1%8B/</loc>
     <lastmod>2012-02-18T11:28:48+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/asterisk/</loc>
     <lastmod>2012-02-17T13:25:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/02/%D0%BC%D0%BE%D0%B9-%D0%B4%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4-%D0%BD%D0%B0-%D1%85%D0%B0%D0%B1%D1%80%D0%B0%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B5-%D0%BE-%D1%86%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B9/</loc>
     <lastmod>2012-02-17T13:25:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/habrahabr/</loc>
     <lastmod>2012-02-11T17:41:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%B8%D1%82-%D0%B0%D1%83%D1%82%D1%81%D0%BE%D1%80%D1%81%D0%B8%D0%BD%D0%B3/</loc>
     <lastmod>2012-02-11T17:41:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/02/%D0%BC%D0%BE%D0%B9-%D0%B4%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4-%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B9-%D1%85%D0%B0%D0%B1%D1%80%D0%B0%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B5/</loc>
     <lastmod>2012-02-11T17:41:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%B4%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4/</loc>
     <lastmod>2012-02-11T17:41:22+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/02/lightpack-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BD%D0%BE%D0%B5-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B5%D1%82%D0%B5%D0%BD%D0%B8%D0%B5/</loc>
     <lastmod>2012-02-06T11:58:43+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/openvpn/</loc>
     <lastmod>2012-02-04T15:30:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/vpn/</loc>
     <lastmod>2012-02-04T15:30:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/02/%D1%87%D1%83%D0%B4%D0%B5%D1%81%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-openvpn/</loc>
     <lastmod>2012-02-04T15:30:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/arm/</loc>
     <lastmod>2012-02-03T10:58:36+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/dns-320/</loc>
     <lastmod>2012-02-03T10:58:36+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/fun_plug/</loc>
     <lastmod>2012-02-03T10:58:36+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/linux/</loc>
     <lastmod>2012-02-03T10:58:36+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/02/%D0%B2%D1%8B%D1%88%D0%B5%D0%BB-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9-fun_plug-0-7/</loc>
     <lastmod>2012-02-03T10:58:36+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/design/</loc>
     <lastmod>2012-01-23T14:56:38+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/wordpress/</loc>
     <lastmod>2012-01-23T14:56:38+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/01/%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D0%BC%D0%B0-wordpress-%D0%B4%D0%BB%D1%8F-nexusnotes-ru/</loc>
     <lastmod>2012-01-23T14:56:38+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/apache/</loc>
     <lastmod>2012-01-19T14:42:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/apache/</loc>
     <lastmod>2012-01-19T14:42:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/redirect/</loc>
     <lastmod>2012-01-19T14:42:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/01/%D1%81%D0%B0%D0%BC%D1%8B%D0%B9-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82-301/</loc>
     <lastmod>2012-01-19T14:42:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2012/01/%D1%81%D0%B5%D0%BA%D1%80%D0%B5%D1%82-%D1%83%D1%81%D0%BF%D0%B5%D1%85%D0%B0/</loc>
     <lastmod>2012-01-09T09:34:55+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%B8%D0%BD%D1%84%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0/</loc>
     <lastmod>2012-01-09T09:34:55+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D1%81%D0%B5%D0%BA%D1%80%D0%B5%D1%82-%D1%83%D1%81%D0%BF%D0%B5%D1%85%D0%B0/</loc>
     <lastmod>2012-01-09T09:34:55+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/12/%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B1%D1%80%D0%B8%D1%82%D0%B2%D1%8B/</loc>
     <lastmod>2011-12-20T11:33:31+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B1%D1%80%D0%B8%D1%82%D0%B2%D0%B0/</loc>
     <lastmod>2011-12-20T11:33:31+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/12/it-outsource-tragedy/</loc>
     <lastmod>2011-12-08T08:52:08+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%B4%D1%80%D0%B5%D0%B2%D0%BD%D0%B5%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F-%D1%82%D0%BE%D1%81%D0%BA%D0%B0/</loc>
     <lastmod>2011-12-08T08:52:08+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%BF%D0%B5%D1%87%D0%B0%D0%BB%D1%8C%D0%BA%D0%B0/</loc>
     <lastmod>2011-12-08T08:52:08+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/windows/</loc>
     <lastmod>2011-12-07T12:46:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D1%83%D1%87%D0%B5%D1%82-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8/</loc>
     <lastmod>2011-12-07T12:46:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/12/%D1%83%D1%87%D0%B5%D1%82-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B8/</loc>
     <lastmod>2011-12-07T12:46:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/pbx/</loc>
     <lastmod>2011-11-29T09:43:43+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/11/%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%D1%81%D1%8F-%D0%BA%D1%83%D1%80%D1%81%D1%8B-%D0%BF%D0%BE-%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8E-ip-pbx-asterisk/</loc>
     <lastmod>2011-11-29T09:43:43+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%BD%D0%BE%D0%B5/</loc>
     <lastmod>2011-11-29T09:43:43+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/11/%D0%B5%D1%89%D0%B5-%D1%80%D0%B0%D0%B7-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D0%B8%D0%B9-%D0%BE-tp-link-tp-wr1043nd/</loc>
     <lastmod>2011-11-08T12:40:51+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/10/what-is-life/</loc>
     <lastmod>2011-10-16T18:42:07+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/08/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-mac-os-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D0%BE/</loc>
     <lastmod>2011-08-30T07:16:10+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/08/%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-icq-%D0%B2-ichat-%D0%B2-mac-os-x-lion/</loc>
     <lastmod>2011-08-24T16:24:46+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/08/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-mac-os-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0-dns-%D0%BA%D0%B5%D1%88%D0%B0/</loc>
     <lastmod>2011-08-18T11:05:24+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/07/mac-os-x-ios-lion-hacks/</loc>
     <lastmod>2011-07-07T10:36:40+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/07/%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%BC-%D0%BC%D0%B0%D0%B9%D0%BD%D0%BE/</loc>
     <lastmod>2011-07-01T14:06:37+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/06/coverradio-fm/</loc>
     <lastmod>2011-06-21T20:20:49+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/06/mac-layout-switch-caps-lock/</loc>
     <lastmod>2011-06-21T13:11:20+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/freebsd/</loc>
     <lastmod>2011-06-20T16:23:45+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/06/zabbix-freebsd-program-counter-not-available-for-this-architecture/</loc>
     <lastmod>2011-06-20T16:23:45+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/06/mac-os-x-leopard-%D0%B8-%D0%B1%D0%B0%D0%B3-%D1%81-pppoe-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-tagged-vlan-802-1q/</loc>
     <lastmod>2011-06-20T11:43:05+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/06/%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-pap2t/</loc>
     <lastmod>2011-06-08T11:27:38+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/05/%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B5-%D0%B4%D0%B2%D1%83%D1%85-%D0%B8-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D0%BC%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%BE%D0%B2/</loc>
     <lastmod>2011-05-27T17:40:54+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/05/%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0-%D0%B2%D1%85%D0%BE%D0%B4%D1%8F%D1%89%D0%B8%D1%85-%D0%B7%D0%B2%D0%BE%D0%BD%D0%BA%D0%BE%D0%B2-%D0%BD%D0%B0-%D0%BD%D0%B0%D1%88-%D0%BA%D0%BE%D0%BB/</loc>
     <lastmod>2011-05-20T12:44:01+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/05/%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%B7%D0%B0%D1%80%D1%8F%D0%B4%D0%BA%D0%B8-la-crosse-bc9009/</loc>
     <lastmod>2011-05-16T11:29:35+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%B0%D0%BA%D0%BA%D1%83%D0%BC%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D1%8B/</loc>
     <lastmod>2011-05-16T11:29:35+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/%D0%B7%D0%B0%D1%80%D1%8F%D0%B4%D0%BD%D0%BE%D0%B5-%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE/</loc>
     <lastmod>2011-05-16T11:29:35+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/05/%D0%B5%D1%81%D0%BB%D0%B8-%D0%B1%D1%8B-%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9-%D0%BF%D1%80%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D0%B8-%D0%BD%D0%B0-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%83/</loc>
     <lastmod>2011-05-08T16:45:56+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/05/%D0%BF%D1%80%D0%BE-%D0%B0%D0%BA%D0%BA%D1%83%D0%BC%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D1%8B-aa-godp-3000mah/</loc>
     <lastmod>2011-05-08T12:10:06+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/05/%D1%81%D0%B1%D1%80%D0%BE%D1%81%D0%B8%D1%82%D1%8C-%D0%B7%D0%B0%D0%B1%D1%8B%D1%82%D1%8B%D0%B9-%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D1%8C-%D0%B4%D0%BB%D1%8F-sa-%D0%BD%D0%B0-mssql-2000/</loc>
     <lastmod>2011-05-05T11:14:20+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/05/ip-over-dns/</loc>
     <lastmod>2011-05-04T13:54:51+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/04/%D0%BF%D1%80%D0%BE-%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82%D0%B8%D0%B7%D0%B0%D1%82%D0%BE%D1%80-tp-link-802-11n-tl-wr1043nd/</loc>
     <lastmod>2011-04-29T08:36:32+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/04/%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D1%88%D0%BE%D1%80%D1%82%D0%BA%D0%B0%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-mac/</loc>
     <lastmod>2011-04-28T15:28:03+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/04/%D0%BF%D1%80%D0%BE-%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B3%D0%BE%D0%B2%D0%BD%D0%BE%D1%81%D0%B0%D0%B9%D1%82%D1%8B/</loc>
     <lastmod>2011-04-26T12:02:16+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/04/%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D1%8B-%D0%B2-vmware-fusion-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0/</loc>
     <lastmod>2011-04-21T17:16:37+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/vmware/</loc>
     <lastmod>2011-04-21T17:16:37+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/linux/</loc>
     <lastmod>2011-04-20T17:06:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/04/linux-%D0%BC%D0%B8%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE-hdd-%D0%BD%D0%B0-%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B9-ext3-%D1%81-%D1%83%D0%B2%D0%B5%D0%BB%D0%B8/</loc>
     <lastmod>2011-04-20T17:06:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/rails/</loc>
     <lastmod>2011-04-12T10:56:21+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/04/ruby-on-rails-%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C/</loc>
     <lastmod>2011-04-12T10:56:21+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/04/mac-os-x-transparent-squid-ipfw-bugfix/</loc>
     <lastmod>2011-04-11T11:19:02+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/03/main-gtd-problem/</loc>
     <lastmod>2011-03-04T15:57:02+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/02/freshtel-suxx/</loc>
     <lastmod>2011-02-28T10:45:52+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/02/omnifocus-vs-thigs-vs-firetask-gtd/</loc>
     <lastmod>2011-02-18T12:07:10+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/02/%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE-%D0%B8-%D0%BD%D0%B0%D0%B3%D0%BB%D1%8F%D0%B4%D0%BD%D0%BE-%D0%BA%D0%B0%D0%BA-%D0%B7%D0%B0%D0%B2%D1%8F%D0%B7%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D0%B3%D0%B0%D0%BB/</loc>
     <lastmod>2011-02-16T12:01:26+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/02/%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B9-%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B0%D0%BB%D1%8C%D1%89%D0%B8%D0%BA%D0%B0/</loc>
     <lastmod>2011-02-13T12:23:44+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/01/%D0%BA%D0%B0%D0%BA-%D0%B8%D1%81%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D1%8C-%D0%BF%D0%B0%D0%BF%D0%BA%D0%B8-%D0%BF%D1%80%D0%B8-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B5-%D0%B2-alfred/</loc>
     <lastmod>2011-01-29T13:13:39+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/01/must-have-app-mac/</loc>
     <lastmod>2011-01-22T10:56:06+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/01/commandlinefu-%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%8F%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D1%8E%D0%BD%D0%B8%D0%BA%D1%81%D0%BE%D0%B8%D0%B4%D0%B0/</loc>
     <lastmod>2011-01-16T23:18:27+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/01/omnifocus-webdav-sync/</loc>
     <lastmod>2011-01-10T10:40:40+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/01/gtd-%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%82%D1%8C/</loc>
     <lastmod>2011-01-10T09:26:18+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/01/apple-magic-trackpad-expirience/</loc>
     <lastmod>2011-01-06T09:55:04+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/01/iterm2-for-mac/</loc>
     <lastmod>2011-01-05T09:19:03+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2011/01/freebsd-exim-logrotate/</loc>
     <lastmod>2011-01-03T19:32:33+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/12/%D0%B1%D0%BB%D0%BE%D0%B3%D0%B8-%D0%B0%D1%86%D1%86%D0%BA%D0%B8%D1%85-%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%BE%D0%B2/</loc>
     <lastmod>2010-12-17T20:23:32+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/12/quick-shell-cd/</loc>
     <lastmod>2010-12-12T07:25:48+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/iphone/</loc>
     <lastmod>2010-11-30T15:34:34+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/11/%D0%BF%D0%B0%D0%BB%D1%8C%D0%BC%D0%B0-%D0%BF%D0%B5%D1%80%D0%B2%D0%B5%D0%BD%D1%81%D1%82%D0%B2%D0%B0-%D1%81%D1%80%D0%B5%D0%B4%D0%B8-%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2-%D0%BF%D0%BE-%D0%BF%D1%80%D0%B8/</loc>
     <lastmod>2010-11-30T15:34:34+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/11/ichat-icq-aim/</loc>
     <lastmod>2010-11-19T07:42:43+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/10/%D0%BE-%D0%BD%D0%B5%D0%B8%D1%81%D1%82%D0%BE%D1%89%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8-%D1%84%D0%B0%D0%BD%D1%82%D0%B0%D0%B7%D0%B8%D0%B8-%D0%B2-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8-%D0%BE%D0%B1/</loc>
     <lastmod>2010-10-14T13:00:49+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/09/%D1%87%D1%82%D0%BE-%D1%87%D0%B0%D1%89%D0%B5-%D0%B2%D1%81%D0%B5%D0%B3%D0%BE-%D0%BB%D0%BE%D0%BC%D0%B0%D0%B5%D1%82%D1%81%D1%8F-%D1%83-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB/</loc>
     <lastmod>2010-09-21T12:08:10+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/09/macswitch/</loc>
     <lastmod>2010-09-08T17:39:58+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/dialplan/</loc>
     <lastmod>2010-08-26T10:52:20+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/pap2t/</loc>
     <lastmod>2010-08-26T10:52:20+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/sip/</loc>
     <lastmod>2010-08-26T10:52:20+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/sip/</loc>
     <lastmod>2010-08-26T10:52:20+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/spa3102/</loc>
     <lastmod>2010-08-26T10:52:20+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/08/%D1%82%D0%B0%D0%B9%D0%BC%D0%B0%D1%83%D1%82-%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D0%B0-%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%D0%B0-sip-linksys-pap2t-%D0%B8-spa3102-dialplan/</loc>
     <lastmod>2010-08-26T10:52:20+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/gtd/</loc>
     <lastmod>2010-08-16T09:40:54+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/omnifocus/</loc>
     <lastmod>2010-08-16T09:40:54+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/tags/things/</loc>
     <lastmod>2010-08-16T09:40:54+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/08/thing-vs-omnifocus-gtd/</loc>
     <lastmod>2010-08-16T09:40:54+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/07/%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9-%D1%82%D0%BE%D0%BF%D0%B8%D0%BA-%D0%BE-mac-soft/</loc>
     <lastmod>2010-07-29T11:56:29+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/07/%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B3%D1%80%D0%B0%D0%BD%D0%B8-%D1%81%D0%B0%D0%B9%D1%82%D0%B0/</loc>
     <lastmod>2010-07-23T07:05:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/07/%D0%BF%D1%80%D0%BEebay/</loc>
     <lastmod>2010-07-15T06:52:46+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/07/%D0%BF%D1%80%D0%BE-%D0%B4%D0%B8%D0%B5%D1%82%D1%8B/</loc>
     <lastmod>2010-07-05T11:10:02+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/06/usability/</loc>
     <lastmod>2010-06-30T09:39:56+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/06/lifes-life/</loc>
     <lastmod>2010-06-28T13:35:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/06/java/</loc>
     <lastmod>2010-06-25T14:47:07+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/06/iphone-firmware-4/</loc>
     <lastmod>2010-06-23T13:32:57+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/06/wedding-photo/</loc>
     <lastmod>2010-06-22T11:29:35+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/06/%D1%83%D0%B4%D0%B8%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85-%D0%BB%D1%8E%D0%B4%D0%B5%D0%B9-%D0%BF%D1%81%D1%82%D0%BE/</loc>
     <lastmod>2010-06-04T20:57:52+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/05/google-search-shortcuts/</loc>
     <lastmod>2010-05-31T17:34:45+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/05/%D0%B8%D0%B7-%D0%BF%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B4%D1%80%D0%B0%D0%B6%D0%B5-%D0%B4%D0%BB%D1%8F-%D0%B0%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8/</loc>
     <lastmod>2010-05-26T15:49:26+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/05/browser-wars/</loc>
     <lastmod>2010-05-20T20:35:54+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/05/%D1%86%D1%8B%D1%82%D1%80%D0%B5%D0%B3%D1%81/</loc>
     <lastmod>2010-05-05T14:27:12+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/04/coaching/</loc>
     <lastmod>2010-04-22T10:57:50+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/04/psycho/</loc>
     <lastmod>2010-04-10T20:28:45+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/04/mac-russian-dictionary/</loc>
     <lastmod>2010-04-07T09:40:55+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/03/high-availability-http-load-balancer/</loc>
     <lastmod>2010-03-25T14:28:17+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/03/%D0%BF%D1%80%D0%BE-%D1%84%D0%BE%D1%82%D0%BA%D0%B8/</loc>
     <lastmod>2010-03-20T18:28:42+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/03/active-directory-group-attributes-change/</loc>
     <lastmod>2010-03-11T09:51:26+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/03/service-high-availiability/</loc>
     <lastmod>2010-03-04T07:03:40+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/02/cisco-mac-launchd-bug/</loc>
     <lastmod>2010-02-27T15:56:43+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/02/%D1%82%D0%BE%D1%88%D0%BD%D0%BE%D1%82%D0%B5%D0%B3-%D0%B2-%D0%B0%D1%81%D1%81%D0%BE%D1%80%D1%82%D0%B8%D0%BC%D0%B5%D0%BD%D1%82%D0%B5/</loc>
     <lastmod>2010-02-26T14:35:01+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/02/%D1%82%D1%8E%D0%BD%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%D0%BD%D1%8B%D0%B9-%D1%83%D0%B0%D0%B7-%D0%B7%D0%B2%D0%B5%D0%B7%D0%B4%D0%B0-%D0%B2-%D1%88%D0%BE%D0%BA%D0%B5/</loc>
     <lastmod>2010-02-25T11:32:30+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/02/quake-like-mac-terminal/</loc>
     <lastmod>2010-02-17T09:09:49+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/02/five-mac-killer-features/</loc>
     <lastmod>2010-02-09T11:27:45+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/02/mp3-search-engine/</loc>
     <lastmod>2010-02-04T09:53:19+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/02/open-relay-exchange-2007/</loc>
     <lastmod>2010-02-02T22:02:12+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/02/isoftphone-sip-dialer-for-mac/</loc>
     <lastmod>2010-02-01T10:50:41+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/01/howto-work-effective/</loc>
     <lastmod>2010-01-30T16:33:16+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/01/jabber-server-dns-setup/</loc>
     <lastmod>2010-01-20T07:12:09+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/01/ichat-icq-without-html-tags-now-chax-is-in-beta-now-finally/</loc>
     <lastmod>2010-01-18T21:10:52+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/01/iphone-tethering-modem/</loc>
     <lastmod>2010-01-15T06:30:38+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/01/mac-windows-vnc/</loc>
     <lastmod>2010-01-14T09:03:43+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/01/%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D0%BE%D1%84%D1%82%D0%B0-%D0%BF%D0%BE%D0%B4-mac-%D0%B8-%D0%BF%D0%BE%D0%B4-linux/</loc>
     <lastmod>2010-01-13T17:42:06+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/01/disk-usage-analyzer-overdisk/</loc>
     <lastmod>2010-01-13T10:35:09+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/01/%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BD%D1%8B%D0%B5-%D1%88%D0%BE%D1%80%D1%82%D0%BA%D0%B0%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-win7/</loc>
     <lastmod>2010-01-13T09:07:24+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/01/make-iphone-faster/</loc>
     <lastmod>2010-01-05T21:54:10+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2010/01/mod_security2/</loc>
     <lastmod>2010-01-03T13:04:33+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/mobile-me/</loc>
     <lastmod>2009-12-30T10:28:06+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/apachetop/</loc>
     <lastmod>2009-12-29T10:03:25+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/dir320-printserver/</loc>
     <lastmod>2009-12-28T13:43:07+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/wash-mashine/</loc>
     <lastmod>2009-12-28T10:44:14+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/wordpress-iphone-theme/</loc>
     <lastmod>2009-12-27T12:08:19+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/podvezu/</loc>
     <lastmod>2009-12-25T15:41:14+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/mobile-internet-kiev/</loc>
     <lastmod>2009-12-24T22:25:35+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/macbook-pageup-pagedown/</loc>
     <lastmod>2009-12-24T16:52:06+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/mail-autocomplete/</loc>
     <lastmod>2009-12-24T16:42:11+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/freebsd-zabbix-1-8/</loc>
     <lastmod>2009-12-24T12:52:43+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/</loc>
     <lastmod>2009-12-23T10:47:29+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/esxi/</loc>
     <lastmod>2009-12-23T10:47:29+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/right-clean-exchange/</loc>
     <lastmod>2009-12-22T14:12:29+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/mac-soft/</loc>
     <lastmod>2009-12-22T11:27:19+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/%D0%B1%D0%BE%D1%80%D1%8C%D0%B1%D0%B0-%D0%B7%D0%B0-%D0%BE%D1%85%D0%BB%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-macbook/</loc>
     <lastmod>2009-12-22T10:52:28+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/2009/12/hello-worldpress/</loc>
     <lastmod>2009-12-21T18:45:17+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/draft_post-680791be7605/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/draft_gitlab-continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/draft_how-to-speed-up-ruby-bundle-gems-fetch-1110de70ccbc/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-12-09/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/draft_one-account-all-of-google-24ec9b332a4a/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/draft_one-account-all-of-google-4681a5761d84/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2020-05-31-pharo/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/draft_ruby-tricks-54c9925f2714/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/draft_speeding-up-ruby-on-rails-in-docker-65c35f391389/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/draft_u-d3d57598136a/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos-9599b598746b/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://prokopov.me/posts/2019-08-01-old-langs/</loc>
   </url>
+  
 </urlset>

@@ -6,7 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Travel</title>
       <link>https://prokopov.me/pages/trips/</link>
@@ -49,6 +49,19 @@
 A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages. Surprisingly, but I started using PHP for my job today again after almost 18 years. What a destiny!
 These days I mostly involved in DevOps, Lean IT and IT services.
 В далеком 2007 с моим партнером Александром мы запустили компанию по предоставлению услуг ИТ-аутсорсинга IT-Premium https://it-premium.</description>
+    </item>
+    
+    <item>
+      <title>Datomic</title>
+      <link>https://prokopov.me/posts/2021-04-07/</link>
+      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2021-04-07/</guid>
+      <description>My Datomic dark sides Despite all Datomic bright sides, there are some thoughts bothering me since I started extensively using it in my pet project.
+Here they are:
+API confusion. I used datomic-pro api in my project and wanted to catch &amp;ldquo;anomaly exceptions&amp;rdquo; from Pedestal error handlers. That was not an easy task. It simply didn&amp;rsquo;t work.
+If you try to execute
+(d/transact conn {:tx-data [[:this &amp;#34;does not&amp;#34; :make &amp;#34;sense&amp;#34;]]}) this will result</description>
     </item>
     
     <item>
