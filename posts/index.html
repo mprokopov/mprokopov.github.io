@@ -36,7 +36,20 @@
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2021-04-07/">Datomic</a>
+        <a href="https://prokopov.me/posts/2021-04-08/">Linkedin, what are doing? Stop it!</a>
+    </h1>
+    <div class="date">09.04.2021</div>
+    <div><p>Recently I&rsquo;ve checked this website and styling became really aweful. After my digging it turned out one little busty thing was doing the crap.</p>
+<p>Official Linkedin badge! Overrides default link styling!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;text/javascript&#39;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://platform.linkedin.com/badges/js/profile.js&#39;</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">defer</span> &gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>The easiest way to turn it off is to change type=&lsquo;text/javascript&rsquo; to just &lsquo;text&rsquo;.</p>
+<p>You have also been decreasing my lighthouse score.
+Bye-bye little nasty thing.</p></div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://prokopov.me/posts/2021-04-07-datomic-dark-sides/">Datomic</a>
     </h1>
     <div class="date">07.04.2021</div>
     <div><h2 id="my-datomic-dark-sides">My Datomic dark sides</h2>
@@ -158,6 +171,157 @@ Existing peers are unchanged, and you can mix and match peer and client applicat
 
 With today’s release, we are making available the alpha version of the open source Client library for Clojure. The Java library will be released shortly. We also have plans to both create more language libraries for Client and enable our customers to create their own. We are interested in your feedback on the Client API itself and the priority of our language reach efforts. As of today, we have enabled a customer feedback portal, accessible via the &quot;Suggest Features&quot; link in the top navigation of the my.datomic.com dashboard, where you can help us prioritize our efforts in this (and many other) areas.
 </code></pre><p>Source: <a href="https://blog.datomic.com/2016/11/datomic-update-client-api-unlimited.html">https://blog.datomic.com/2016/11/datomic-update-client-api-unlimited.html</a></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://prokopov.me/posts/2021-04-07/">Datomic</a>
+    </h1>
+    <div class="date">07.04.2021</div>
+    <div><h2 id="my-datomic-dark-sides">My Datomic dark sides</h2>
+<p>I love datomic. Datalog is a definitely something noteworthy and even if you never going to use it in your projects, still it is worth getting your hands dirty.
+Despite all Datomic bright sides, there are some thoughts bothering me since I started using it more extensively in my pet project.</p>
+<p>Here they are:</p>
+<h3 id="api-confusion-peer-vs-client-libraries">API confusion peer vs client libraries.</h3>
+<p>I used datomic-pro api in my project and wanted to catch &ldquo;anomaly exceptions&rdquo; from Pedestal error handlers. That was not an easy task. It simply didn&rsquo;t work.</p>
+<p>If you try to execute</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">d/transact</span> conn {<span style="color:#e6db74">:tx-data</span> [[<span style="color:#e6db74">:this</span> <span style="color:#e6db74">&#34;does not&#34;</span> <span style="color:#e6db74">:make</span> <span style="color:#e6db74">&#34;sense&#34;</span>]]})
+</code></pre></div><p>this will result</p>
+<pre><code>1. Caused by datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+   :db.error/not-a-data-function Unable to resolve data function: :this
+   {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
+    :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+    :db/error :db.error/not-a-data-function}
+                 error.clj:  167  datomic.error/deserialize-exception
+                 error.clj:  160  datomic.error/deserialize-exception
+                  peer.clj:  379  datomic.peer.Connection/notify_error
+             connector.clj:  155  datomic.connector/fn
+             connector.clj:  153  datomic.connector/fn
+              MultiFn.java:  234  clojure.lang.MultiFn/invoke
+             connector.clj:  180  datomic.connector/create-hornet-notifier/fn/fn/fn/fn
+             connector.clj:  175  datomic.connector/create-hornet-notifier/fn/fn/fn
+             connector.clj:  173  datomic.connector/create-hornet-notifier/fn/fn
+                  core.clj: 2030  clojure.core/binding-conveyor-fn/fn
+                  AFn.java:   18  clojure.lang.AFn/call
+           FutureTask.java:  266  java.util.concurrent.FutureTask/run
+   ThreadPoolExecutor.java: 1149  java.util.concurrent.ThreadPoolExecutor/runWorker
+   ThreadPoolExecutor.java:  624  java.util.concurrent.ThreadPoolExecutor$Worker/run
+               Thread.java:  748  java.lang.Thread/run
+</code></pre><p>(ex-data *e)
+#:clojure.error{:phase :print-eval-result}</p>
+<p>And this is what you get from datomic client api library using peer.</p>
+<pre><code>
+1. Unhandled clojure.lang.ExceptionInfo
+   Unable to resolve data function: :this
+   {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
+    :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+    :db/error :db.error/not-a-data-function,
+    :dbs
+    [{:database-id &quot;datomic:dev://localhost:4334/login&quot;,
+      :t 1016,
+      :next-t 1017,
+      :history false}]}
+                 async.clj:   58  datomic.client.api.async/ares
+                 async.clj:   54  datomic.client.api.async/ares
+                  sync.clj:  104  datomic.client.api.sync/eval11528/fn
+             protocols.clj:   72  datomic.client.api.protocols/fn/G
+                   api.clj:  200  datomic.client.api/transact
+                   api.clj:  183  datomic.client.api/transact
+                      REPL:  816  stock-login.service/eval35091
+                      REPL:  816  stock-login.service/eval35091
+             Compiler.java: 7181  clojure.lang.Compiler/eval
+             Compiler.java: 7136  clojure.lang.Compiler/eval
+                  core.clj: 3202  clojure.core/eval
+                  core.clj: 3198  clojure.core/eval
+    interruptible_eval.clj:   87  nrepl.middleware.interruptible-eval/evaluate/fn/fn
+                  AFn.java:  152  clojure.lang.AFn/applyToHelper
+                  AFn.java:  144  clojure.lang.AFn/applyTo
+                  core.clj:  667  clojure.core/apply
+                  core.clj: 1977  clojure.core/with-bindings*
+                  core.clj: 1977  clojure.core/with-bindings*
+               RestFn.java:  425  clojure.lang.RestFn/invoke
+    interruptible_eval.clj:   87  nrepl.middleware.interruptible-eval/evaluate/fn
+                  main.clj:  437  clojure.main/repl/read-eval-print/fn
+                  main.clj:  437  clojure.main/repl/read-eval-print
+                  main.clj:  458  clojure.main/repl/fn
+                  main.clj:  458  clojure.main/repl
+                  main.clj:  368  clojure.main/repl
+               RestFn.java:  137  clojure.lang.RestFn/applyTo
+                  core.clj:  667  clojure.core/apply
+                  core.clj:  662  clojure.core/apply
+                regrow.clj:   20  refactor-nrepl.ns.slam.hound.regrow/wrap-clojure-repl/fn
+               RestFn.java: 1523  clojure.lang.RestFn/invoke
+    interruptible_eval.clj:   84  nrepl.middleware.interruptible-eval/evaluate
+    interruptible_eval.clj:   56  nrepl.middleware.interruptible-eval/evaluate
+    interruptible_eval.clj:  152  nrepl.middleware.interruptible-eval/interruptible-eval/fn/fn
+                  AFn.java:   22  clojure.lang.AFn/run
+               session.clj:  202  nrepl.middleware.session/session-exec/main-loop/fn
+               session.clj:  201  nrepl.middleware.session/session-exec/main-loop
+                  AFn.java:   22  clojure.lang.AFn/run
+               Thread.java:  748  java.lang.Thread/run
+</code></pre><p>here is ex-data of the exception. This is much more analysable!</p>
+<pre><code>(ex-data *e)
+{:cognitect.anomalies/category :cognitect.anomalies/incorrect,
+ :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+ :db/error :db.error/not-a-data-function,
+ :dbs
+ [{:database-id &quot;datomic:dev://localhost:4334/login&quot;,
+   :t 1016,
+   :next-t 1017,
+   :history false}]}
+</code></pre><p>Okay, so I need to use client library. That increases the complexity by needing to have application server in form of running peer.
+I understand that was totally required by datomic cloud, but is it really required now?</p>
+<p>Here is more on the client library rationale.</p>
+<pre><code>Client API
+
+Datomic’s peer library puts database query in your own application process. This provides several benefits, but at the price of a heavier dependency (both in code and in memory requirements) than a traditional client.
+
+A smaller footprint is useful in environments that have operational limitations, or where processes are small or short-lived. The new Datomic client API addresses this need. Lightweight clients connect to Peer Servers, which are peers that run in a separate address space.
+
+Existing peers are unchanged, and you can mix and match peer and client applications as you see fit within the same Datomic install. Clients and peers are described in detail in the new clients and peers section of the docs.
+
+With today’s release, we are making available the alpha version of the open source Client library for Clojure. The Java library will be released shortly. We also have plans to both create more language libraries for Client and enable our customers to create their own. We are interested in your feedback on the Client API itself and the priority of our language reach efforts. As of today, we have enabled a customer feedback portal, accessible via the &quot;Suggest Features&quot; link in the top navigation of the my.datomic.com dashboard, where you can help us prioritize our efforts in this (and many other) areas.
+</code></pre><p>Source: <a href="https://blog.datomic.com/2016/11/datomic-update-client-api-unlimited.html">https://blog.datomic.com/2016/11/datomic-update-client-api-unlimited.html</a></p>
+<h3 id="feature-parity-datomic-peer-api-vs-datomic-client-api-library">Feature parity datomic peer api vs datomic client api library.</h3>
+<p>I found the following discrepancies:</p>
+<ul>
+<li>d/squiid is not supported, use (java.util.UUID/randomUUID) instead</li>
+<li>d/touch is not supported, use d/pull with &lsquo;[*]</li>
+<li>only find-rel is supported within :find clause!
+say I can&rsquo;t execute [?e &hellip;] anymore</li>
+</ul>
+<p>So I&rsquo;m really in doubts if the investments to moving to client libary worth all the hassle.</p>
+<h3 id="more-topics-that-i-experinces-quite-significant-difficulties">More topics that I experinces quite significant difficulties.</h3>
+<h4 id="rollback-transaction">&ldquo;Rollback&rdquo; transaction.</h4>
+<p>There is no easy way to rollback transaction, but there is some opportunity instead.
+The recommended way to do this is following.
+Search datomic history for required txs, select all entities that was affected by tx and &ldquo;reverse&rdquo; them by adding fourth
+:add parameter to complement value.</p>
+<h4 id="hard-to-pick-proper-abstractions">Hard to pick proper abstractions</h4>
+<p>Well, I spent a lot of time reading official sources and other people&rsquo;s code.
+Most prominent of these, namely: <a href="https://github.com/Datomic/mbrainz-importer">mbrainz importer examples</a>, <a href="https://github.com/cognitect-labs/vase">vase</a> sources.
+First, I have to admit that I have no idea how people can produce something like mbrainz async importer. TBH I can hardly understand what&rsquo;s going on there and how could I come up with the same implementation.</p>
+<p>Some of the people doing Datomic.Entity passing as function return values, some just raw values from the d/q.</p>
+<p>What worked well for me is to return raw entity ids from the find functions, then when required I&rsquo;m able to execute pull function against returned values.</p>
+<p>The same goes to <em>db/ident</em> that one tries to use as enums. Aspecially within tests you constantly trying to use :db/ident with example values to easiely reference in test checks, but at the same time your function for the prod data will return just :db/id.
+Example of what I use in tests</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:db/ident</span> <span style="color:#e6db74">:my-test-account</span>
+<span style="color:#e6db74">:account/id</span> (<span style="color:#a6e22e">d/squiid</span>)
+<span style="color:#e6db74">:account/balance</span> <span style="color:#ae81ff">10</span>}
+</code></pre></div><p>so you can use just <code>(d/entity db :my-test-account)</code></p>
+<h4 id="specs-and-generative-testing">Specs and generative testing</h4>
+<p>I feel like it should naturally fall into the spec paradigm and it should be really piece of cake to generate data for testing.
+But in my case I didn&rsquo;t success with this. I couldn&rsquo;t imagine how to generate simple albums-players relation using spec/gen.</p>
+<h4 id="pagination-and-limit">Pagination and limit.</h4>
+<p>Despite datomic client support of :offset and :limit there is recommended way to do such a thing using <code>index-pull</code>. That requires more efforts to comprehend simple tasks.</p>
+<h4 id="internal-functions">Internal functions</h4>
+<p>Well, I faced a good amount of WTF&rsquo;s to try to understand how db functions work. Simple example with xform.</p>
+<pre><code>The fn is either a fully qualified function allowed under the :xforms key in resources/datomic/extensions.edn, or one of the following built-ins:
+</code></pre><p>I was thinking about usecase when you need some translations, say I keep my currency amounts in cents and want to translate to float using currency minor unit. I didn&rsquo;t manage to do this with xforms.</p>
+<h3 id="summary">Summary</h3>
+<p>I know, the reason for my frustration is that technology is relatively new, not so many great examples on how to use it. But most probably my lack of experience. The amount of novelty coming with such a technology is overhelming for me. Almost literally every step required efforts to google around, how other people use it.</p>
+<p>Probably, it will work for you better then for me, so don&rsquo;t give up.</p>
 </div>
 </div>
 

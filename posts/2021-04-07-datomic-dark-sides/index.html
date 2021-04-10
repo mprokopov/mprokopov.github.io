@@ -35,17 +35,16 @@
 
 <div class="article">
     <h1>
-        <a href="https://prokopov.me/posts/2021-04-07/">Datomic</a>
+        <a href="https://prokopov.me/posts/2021-04-07-datomic-dark-sides/">Datomic</a>
     </h1>
     <div class="date">07.04.2021</div>
     
-    <h4>Reading time: 6 min.</h4>
+    <h4>Reading time: 4 min.</h4>
     
     <div><h2 id="my-datomic-dark-sides">My Datomic dark sides</h2>
-<p>I love datomic. Datalog is a definitely something noteworthy and even if you never going to use it in your projects, still it is worth getting your hands dirty.
-Despite all Datomic bright sides, there are some thoughts bothering me since I started using it more extensively in my pet project.</p>
+<p>Despite all Datomic bright sides, there are some thoughts bothering me since I started extensively using it in my pet project.</p>
 <p>Here they are:</p>
-<h3 id="api-confusion-peer-vs-client-libraries">API confusion peer vs client libraries.</h3>
+<h3 id="api-confusion">API confusion.</h3>
 <p>I used datomic-pro api in my project and wanted to catch &ldquo;anomaly exceptions&rdquo; from Pedestal error handlers. That was not an easy task. It simply didn&rsquo;t work.</p>
 <p>If you try to execute</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">d/transact</span> conn {<span style="color:#e6db74">:tx-data</span> [[<span style="color:#e6db74">:this</span> <span style="color:#e6db74">&#34;does not&#34;</span> <span style="color:#e6db74">:make</span> <span style="color:#e6db74">&#34;sense&#34;</span>]]})
@@ -134,6 +133,22 @@ Despite all Datomic bright sides, there are some thoughts bothering me since I s
    :history false}]}
 </code></pre><p>Okay, so I need to use client library. That increases the complexity by needing to have application server in form of running peer.
 I understand that was totally required by datomic cloud, but is it really required now?</p>
+<p>Feature parity with client library.
+I found the following discrepancies:</p>
+<ul>
+<li>d/squiid is not supported, use (java.util.UUID/randomUUID) instead</li>
+<li>d/touch is not supported, use d/pull with &lsquo;[*]</li>
+<li>only find-rel is supported! say I can&rsquo;t execute [?e &hellip;] within :find clause!</li>
+</ul>
+<p>So I&rsquo;m really in doubts if the investments to moving to client libary worth all the hassle.</p>
+<h3 id="more-topics-that-i-experinces-quite-significant-difficulties">More topics that I experinces quite significant difficulties.</h3>
+<h4 id="rollback-transaction">&ldquo;Rollback&rdquo; transaction.</h4>
+<p>There is no easy way to rollback transaction, but there is some opportunity instead.
+The recommended way to do this is following.
+Search datomic history for required txs, select all entities that was affected by tx and &ldquo;reverse&rdquo; them by adding fourth
+:add parameter to complement value.</p>
+<h4 id="pagination-and-limit">Pagination and limit.</h4>
+<p>Despite datomic client support of :offset and :limit there is recommended way to do such a thing using <code>index-pull</code>. That requires more efforts to comprehend simple tasks.</p>
 <p>Here is more on the client library rationale.</p>
 <pre><code>Client API
 
@@ -145,45 +160,6 @@ Existing peers are unchanged, and you can mix and match peer and client applicat
 
 With today’s release, we are making available the alpha version of the open source Client library for Clojure. The Java library will be released shortly. We also have plans to both create more language libraries for Client and enable our customers to create their own. We are interested in your feedback on the Client API itself and the priority of our language reach efforts. As of today, we have enabled a customer feedback portal, accessible via the &quot;Suggest Features&quot; link in the top navigation of the my.datomic.com dashboard, where you can help us prioritize our efforts in this (and many other) areas.
 </code></pre><p>Source: <a href="https://blog.datomic.com/2016/11/datomic-update-client-api-unlimited.html">https://blog.datomic.com/2016/11/datomic-update-client-api-unlimited.html</a></p>
-<h3 id="feature-parity-datomic-peer-api-vs-datomic-client-api-library">Feature parity datomic peer api vs datomic client api library.</h3>
-<p>I found the following discrepancies:</p>
-<ul>
-<li>d/squiid is not supported, use (java.util.UUID/randomUUID) instead</li>
-<li>d/touch is not supported, use d/pull with &lsquo;[*]</li>
-<li>only find-rel is supported within :find clause!
-say I can&rsquo;t execute [?e &hellip;] anymore</li>
-</ul>
-<p>So I&rsquo;m really in doubts if the investments to moving to client libary worth all the hassle.</p>
-<h3 id="more-topics-that-i-experinces-quite-significant-difficulties">More topics that I experinces quite significant difficulties.</h3>
-<h4 id="rollback-transaction">&ldquo;Rollback&rdquo; transaction.</h4>
-<p>There is no easy way to rollback transaction, but there is some opportunity instead.
-The recommended way to do this is following.
-Search datomic history for required txs, select all entities that was affected by tx and &ldquo;reverse&rdquo; them by adding fourth
-:add parameter to complement value.</p>
-<h4 id="hard-to-pick-proper-abstractions">Hard to pick proper abstractions</h4>
-<p>Well, I spent a lot of time reading official sources and other people&rsquo;s code.
-Most prominent of these, namely: <a href="https://github.com/Datomic/mbrainz-importer">mbrainz importer examples</a>, <a href="https://github.com/cognitect-labs/vase">vase</a> sources.
-First, I have to admit that I have no idea how people can produce something like mbrainz async importer. TBH I can hardly understand what&rsquo;s going on there and how could I come up with the same implementation.</p>
-<p>Some of the people doing Datomic.Entity passing as function return values, some just raw values from the d/q.</p>
-<p>What worked well for me is to return raw entity ids from the find functions, then when required I&rsquo;m able to execute pull function against returned values.</p>
-<p>The same goes to <em>db/ident</em> that one tries to use as enums. Aspecially within tests you constantly trying to use :db/ident with example values to easiely reference in test checks, but at the same time your function for the prod data will return just :db/id.
-Example of what I use in tests</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:db/ident</span> <span style="color:#e6db74">:my-test-account</span>
-<span style="color:#e6db74">:account/id</span> (<span style="color:#a6e22e">d/squiid</span>)
-<span style="color:#e6db74">:account/balance</span> <span style="color:#ae81ff">10</span>}
-</code></pre></div><p>so you can use just <code>(d/entity db :my-test-account)</code></p>
-<h4 id="specs-and-generative-testing">Specs and generative testing</h4>
-<p>I feel like it should naturally fall into the spec paradigm and it should be really piece of cake to generate data for testing.
-But in my case I didn&rsquo;t success with this. I couldn&rsquo;t imagine how to generate simple albums-players relation using spec/gen.</p>
-<h4 id="pagination-and-limit">Pagination and limit.</h4>
-<p>Despite datomic client support of :offset and :limit there is recommended way to do such a thing using <code>index-pull</code>. That requires more efforts to comprehend simple tasks.</p>
-<h4 id="internal-functions">Internal functions</h4>
-<p>Well, I faced a good amount of WTF&rsquo;s to try to understand how db functions work. Simple example with xform.</p>
-<pre><code>The fn is either a fully qualified function allowed under the :xforms key in resources/datomic/extensions.edn, or one of the following built-ins:
-</code></pre><p>I was thinking about usecase when you need some translations, say I keep my currency amounts in cents and want to translate to float using currency minor unit. I didn&rsquo;t manage to do this with xforms.</p>
-<h3 id="summary">Summary</h3>
-<p>I know, the reason for my frustration is that technology is relatively new, not so many great examples on how to use it. But most probably my lack of experience. The amount of novelty coming with such a technology is overhelming for me. Almost literally every step required efforts to google around, how other people use it.</p>
-<p>Probably, it will work for you better then for me, so don&rsquo;t give up.</p>
 </div>
     <div id="disqus_thread"></div>
 <script>
