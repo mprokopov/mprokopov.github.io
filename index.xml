@@ -84,9 +84,9 @@ If you try to execute
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://prokopov.me/posts/2021-04-07/</guid>
-      <description>My Datomic dark sides I love datomic. Datalog is a definitely something noteworthy and even if you never going to use it in your projects, still it is worth getting your hands dirty. Despite all Datomic bright sides, there are some thoughts bothering me since I started using it more extensively in my pet project.
-Here they are:
-API confusion peer vs client libraries. I used datomic-pro api in my project and wanted to catch &amp;ldquo;anomaly exceptions&amp;rdquo; from Pedestal error handlers.</description>
+      <description>&lt;h2 id=&#34;my-datomic-dark-sides&#34;&gt;My Datomic dark sides&lt;/h2&gt;
+&lt;p&gt;I love datomic. Datalog is a definitely something noteworthy and even if you never going to use it in your projects, still it is worth getting your hands dirty.
+Despite all Datomic bright sides, there are some thoughts bothering me since I started using it more extensively in my pet project.&lt;/p&gt;</description>
     </item>
     
     <item>
