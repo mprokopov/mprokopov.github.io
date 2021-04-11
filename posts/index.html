@@ -249,6 +249,9 @@ Here is the list of known ones to me</p>
 </ul>
 <p>Both were not working for me using instructions from respective READMEs.</p>
 <p>Here is <a href="https://github.com/mprokopov/cartographer-datomic-on-prem-example">my example repo</a> with some issues fixed for datomic pro.</p>
+<h3 id="not-clear-when-to-use-dbcardinalitymany">Not clear when to use db.cardinality/many</h3>
+<p>So documentation says you don&rsquo;t have to decide when to use many or one relation between entities, as they automatically accessible using underscore notation.</p>
+<p>That is not 100% true. If you decide to generate sample data using generators, most probably using db.cardinality/many will be a better choice for you.</p>
 <h2 id="summary">Summary</h2>
 <p>I know, the reason for my frustration is that technology is relatively new, not so many great examples on how to use it and best practices are a bit fuzzy. But most probably the root cause is my lack of experience. The amount of novelty coming with such a technology is overhelming for me. Almost literally every step required efforts to google around, how other people tend to use it.
 The simplicty you get gives you much power, but at the same time great responsibility on decisions you make. I had to rewrite couple of times significant part of the backend to verify ideas and what decisions turned to be the best.</p>
