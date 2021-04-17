@@ -336,6 +336,18 @@ Same concept goes from Forth language.</p>
 <p><img src="/uploads/2021/pharo-testing.png" alt="Pharo testing" title="Pharo testing"></p>
 <p>Pressing on the green dot you can re-run test.</p>
 <p><img src="/uploads/2021/pharo-testing2.png" alt="Pharo testing" title="Pharo testing"></p>
+<p>What a brilliant idea to have only assert as the test method!</p>
+<p>Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">testClassifyIncident</span>
+	<span style="color:#f92672">|</span>anIncident aState<span style="color:#f92672">|</span>
+	<span style="color:#960050;background-color:#1e0010">aState</span><span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">status</span>.
+	anIncident <span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">classifyAs:</span> <span style="color:#a6e22e">Incident</span> <span style="color:#a6e22e">service:</span> service.
+	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">equals:</span> <span style="color:#a6e22e">Incident</span>.
+	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">status</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">equals:</span> <span style="color:#a6e22e">ClassifiedTicketState</span>. 
+	self <span style="color:#a6e22e">assert:</span> (ticket <span style="color:#a6e22e">history</span> <span style="color:#a6e22e">includes:</span> aState).
+	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">service</span> <span style="color:#a6e22e">equals:</span> service.
+	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">agreement</span> <span style="color:#a6e22e">equals:</span> agreement
+</code></pre></div><p>Look at this example above! This is almost in plain English, almost AppleScript ;)</p>
 <h3 id="less-boilerplate">Less boilerplate</h3>
 <p>I have chosen the Pharo as a tool for thought, because it doesn&rsquo;t require any boilerplate to start thinking on domain and experiment with entities.
 The REPL is awesome and allows to dig and to feel the data.</p></div>
