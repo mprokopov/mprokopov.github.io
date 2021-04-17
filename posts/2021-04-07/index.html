@@ -213,11 +213,11 @@ Example of what I use in tests</p>
 </code></pre></div><p>I found using <code>with-database</code> macro with txs is much more convenient and such as having better data locality then using fixtures.</p>
 <h3 id="specs-and-generative-testing">Specs and generative testing</h3>
 <p>I feel like it should naturally fall into the spec paradigm and it should be really piece of cake to generate data for testing.
-But in my case I didn&rsquo;t success with this. I couldn&rsquo;t imagine how to generate simple albums-players relation using spec/gen.</p>
+But in my case I didn&rsquo;t succeed with this. I couldn&rsquo;t even grasp how to generate simple albums-players relation using spec/gen.</p>
 <p>Examples are still <a href="https://stackoverflow.com/questions/43920066/creating-a-clojure-spec-generator-for-a-nested-data-structure-with-constraints-a">hard to understand</a> and follow.</p>
 <h3 id="pagination-and-limit">Pagination and limit.</h3>
 <p>Despite datomic client support of :offset and :limit there is recommended way to do such a thing using <code>index-pull</code>. That requires more efforts to comprehend simple tasks.</p>
-<h3 id="internal-functions">Internal functions</h3>
+<h3 id="pull-functions">Pull functions</h3>
 <p>Well, I faced a good amount of WTF&rsquo;s to try to understand how db functions work. Simple example with xform.</p>
 <blockquote>
 <p>The fn is either a fully qualified function allowed under the :xforms key in resources/datomic/extensions.edn, or one of the following built-ins:</p>
