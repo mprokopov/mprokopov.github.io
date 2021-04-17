@@ -59,10 +59,9 @@ These days I mostly involved in DevOps, Lean IT and IT services.
       <guid>https://prokopov.me/posts/2021-04-13-on-late-binding/</guid>
       <description>&lt;p&gt;Late binding is a very precious idea.&lt;/p&gt;
 &lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
-&lt;p&gt;Say, you have a kind of docker images someone decided to use for the development.
-One created a huge bundle with all tools, bells and whistles included.&lt;/p&gt;
-&lt;p&gt;As time passes and you try to use it and you miserably fail.&lt;/p&gt;
-&lt;p&gt;Dependencies don&amp;rsquo;t met requirements anymore, most of the tools are outdated and should be bumped, initial SQL data has been changed and etc.&lt;/p&gt;
+&lt;p&gt;Say, you have a docker image someone decided to use for the development.
+One created a huge bundle with all tools, bells, and whistles.&lt;/p&gt;
+&lt;p&gt;As time passes and you try to use it and then you miserably fail. Dependencies don&amp;rsquo;t met requirements anymore, most of the tools are outdated and should be bumped to newer version, initial SQL data has been changed and etc.&lt;/p&gt;
 &lt;p&gt;Configs are hidden and manipulated in docker image, composer.json is outside and you end up starring at this pile of crap.&lt;/p&gt;</description>
     </item>
     
