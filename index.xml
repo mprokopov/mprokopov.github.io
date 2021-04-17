@@ -6,7 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Travel</title>
       <link>https://prokopov.me/pages/trips/</link>
@@ -49,6 +49,21 @@
 A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages. Surprisingly, but I started using PHP for my job today again after almost 18 years. What a destiny!
 These days I mostly involved in DevOps, Lean IT and IT services.
 В далеком 2007 с моим партнером Александром мы запустили компанию по предоставлению услуг ИТ-аутсорсинга IT-Premium https://it-premium.</description>
+    </item>
+    
+    <item>
+      <title>Late binding</title>
+      <link>https://prokopov.me/posts/2021-04-13-on-late-binding/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2021-04-13-on-late-binding/</guid>
+      <description>&lt;p&gt;Late binding is a very precious idea.&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
+&lt;p&gt;Say, you have a kind of docker images someone decided to use for the development.
+One created a huge bundle with all tools, bells and whistles included.&lt;/p&gt;
+&lt;p&gt;As time passes and you try to use it and you miserably fail.&lt;/p&gt;
+&lt;p&gt;Dependencies don&amp;rsquo;t met requirements anymore, initial SQL data has been changed and etc.&lt;/p&gt;
+&lt;p&gt;Configs are hidden and manipulated in docker image, composer.json is outside and you end up starring at this pile of crap.&lt;/p&gt;</description>
     </item>
     
     <item>

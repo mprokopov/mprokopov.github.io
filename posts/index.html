@@ -36,6 +36,29 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2021-04-13-on-late-binding/">Late binding</a>
+    </h1>
+    <div class="date">13.04.2021</div>
+    <div><p>Late binding is a very precious idea.</p>
+<h3 id="example">Example:</h3>
+<p>Say, you have a kind of docker images someone decided to use for the development.
+One created a huge bundle with all tools, bells and whistles included.</p>
+<p>As time passes and you try to use it and you miserably fail.</p>
+<p>Dependencies don&rsquo;t met requirements anymore, initial SQL data has been changed and etc.</p>
+<p>Configs are hidden and manipulated in docker image, composer.json is outside and you end up starring at this pile of crap.</p>
+<h2 id="how-to-avoid-this">How to avoid this?</h2>
+<p>Use unix way by splitting tools apart and combine againg when necessary. Think about makefile, or shell script that assembles required steps together.
+Imagine another way, you have huge fat TOOL. Capable of searching, greping, manipulating files and managing system state.</p>
+<p>Here is the recipe.
+<em>Divide things into composable steps and make binding of everything together as late as possible.</em></p>
+<p>This is quite common principle you actually can and probably should apply everywhere.</p>
+<p>Example:</p>
+<p>Java and modules classpath.</p>
+<p><a href="https://en.wikipedia.org/wiki/Late_binding">https://en.wikipedia.org/wiki/Late_binding</a></p></div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/2021-04-08/">Linkedin, what are you doing? Stop it!</a>
     </h1>
     <div class="date">09.04.2021</div>
