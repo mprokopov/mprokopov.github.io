@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oxid API coding days - settings management solution</title>
+      <link>https://prokopov.me/posts/2021-04-23-oxid-api-coding-days/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2021-04-23-oxid-api-coding-days/</guid>
+      <description>&lt;p&gt;Recently Oxid has presented the GraphQL API support and announced a hackathon-like event.&lt;/p&gt;
+&lt;p&gt;This experience was really refreshing and interesting. Having tight timeframe and some task in hand it was challenging to distribute efforts and get in sync with participants.&lt;/p&gt;
+&lt;p&gt;Our team had to deliver unified settings management solution like Google Chrome or Firefox has for numerous different things.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Late binding</title>
       <link>https://prokopov.me/posts/2021-04-13-on-late-binding/</link>

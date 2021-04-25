@@ -36,6 +36,24 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2021-04-23-oxid-api-coding-days/">Oxid API coding days - settings management solution</a>
+    </h1>
+    <div class="date">23.04.2021</div>
+    <div><p>Recently Oxid has presented the GraphQL API support and announced a hackathon-like event.</p>
+<p>This experience was really refreshing and interesting. Having tight timeframe and some task in hand it was challenging to distribute efforts and get in sync with participants.</p>
+<p>Our team had to deliver unified settings management solution like Google Chrome or Firefox has for numerous different things.</p>
+<p>The implementation was quite straightforward: implement GraphQL endpoints to expose settings as a query and filter everything on frontend side. Also mutation endpoint to be provided by the API.</p>
+<p><a href="https://github.com/OXID-eSales/KonfigQL">Backend Repository</a></p>
+<p><a href="https://github.com/OXID-eSales/KonfigQLClient">Frontend Repository</a></p>
+<p>I was responsible for the frontend part and used React with <a href="https://github.com/nearform/graphql-hooks">GraphQL-hooks library</a>. For the styling I have chosen <a href="https://material-ui.com/">famous material-ui library</a>.</p>
+<p>Most of my frustration was related to not working basic hooks in React! And it turned out to be React 17 problem, so after downgrading to React 16 everything started working smooth.
+The second hard part was to call mutations with parameters that were rendered on server! This concept was not clear from the beginning as this was my first experience with graphql implementation.</p>
+<p><img src="/uploads/2021/settings-oxid.png" alt="settings" title="settings"></p>
+<p>At the end we had delivered what was announced, apart from login to admin.</p></div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/2021-04-13-on-late-binding/">Late binding</a>
     </h1>
     <div class="date">13.04.2021</div>
