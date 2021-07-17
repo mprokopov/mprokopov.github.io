@@ -6,7 +6,16 @@
     <description>Recent content in links on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/links/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/links/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021 week 29</title>
+      <link>https://prokopov.me/posts/2021-week-29/</link>
+      <pubDate>Sat, 17 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2021-week-29/</guid>
+      <description> Open source IAM service Kratos Datomic like database engine  </description>
+    </item>
+    
     <item>
       <title>2020 week 49 links</title>
       <link>https://prokopov.me/posts/2020-12-07/</link>
