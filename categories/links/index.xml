@@ -13,7 +13,10 @@
       <pubDate>Sat, 17 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://prokopov.me/posts/2021-week-29/</guid>
-      <description> Open source IAM service Kratos Datomic like database engine  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ory/kratos.git&#34;&gt;Open source IAM service Kratos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/juji-io/datalevin&#34;&gt;Datomic like database engine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
