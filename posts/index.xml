@@ -28,7 +28,7 @@
 &lt;p&gt;&lt;strong&gt;SLI&lt;/strong&gt; - service level indicator shows how you meet user expectation in some point in time. Normally this is ratio of good events to all valid events in some period of time.&lt;/p&gt;
 &lt;p&gt;How these relate to each other? Let me describe this in this little mantra.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;We measure &lt;strong&gt;SLIs&lt;/strong&gt;, which shouldn&amp;rsquo;t to breach &lt;strong&gt;SLOs&lt;/strong&gt; not to disappoint users by breaking &lt;strong&gt;SLAs&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We measure &lt;strong&gt;SLIs&lt;/strong&gt;, which shouldn&amp;rsquo;t breach &lt;strong&gt;SLOs&lt;/strong&gt; not to disappoint users by breaking &lt;strong&gt;SLAs&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     

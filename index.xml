@@ -14,7 +14,7 @@
       
       <guid>https://prokopov.me/pages/trips/</guid>
       <description>Очень люблю Юго-Восточную Азию за теплый климат и прекрасных людей.
-  2020 Испания, Барселона увы и ах, из-за короны-19 отменена :(   2019-2020 Норвегия, Аскер 2 недели   2019 Германия, Фрайбург 3 дня   2019 Австрия, Вена, 1 месяц 1 месяц   2019 Турция, пригород Анталии 1 неделя 2 недели   2019 Германия, Берлин 3 дня   2019 Сицилия, гастротур 6 дней   2018-2019 Таиланд, о.</description>
+  2021 Spain, Villa Joiosa 1 неделя отличный пляжный семейный отдых, недели более чем достаточно   2020 Spain, Barcelona cancelled due to Corona-19 :(   2019-2020 Norway, Asker 2 weeks   2019 Germany, Freiburg 3 days   2019 Austria, Vienna 1 month   2019 Турция, пригород Анталии 1 неделя 2 weeks   2019 Germany, Berlin 3 days   2019 Sicily, gastrotour 6 days   2018-2019 Thailand, Koh Samui 6 months   2018 Italy (Toskana region), gastrotour 6 days   2018 Finland (Jyväskylä, Helsinki) 3 days   2018 Germany, Hamburg 3 days   2017 Germany, Mannheim, Stuttgart, Heidelberg 1 month   2016 Egypt (Hurgada), Turkey (Istanbul)   2013-2014 Thailand (Bangkok, Ayutaya, Patthaya) [Cambodia (Siam-Riep, Sehanukville, Battamband, Campot, Phnom Penh)]   2012 Malaysia (Kuala Lumpur, isl.</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@ Since 2006 I started using Ruby on Rails a lot. 2015 got addicted to Clojure and
 &lt;p&gt;&lt;strong&gt;SLI&lt;/strong&gt; - service level indicator shows how you meet user expectation in some point in time. Normally this is ratio of good events to all valid events in some period of time.&lt;/p&gt;
 &lt;p&gt;How these relate to each other? Let me describe this in this little mantra.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;We measure &lt;strong&gt;SLIs&lt;/strong&gt;, which shouldn&amp;rsquo;t to breach &lt;strong&gt;SLOs&lt;/strong&gt; not to disappoint users by breaking &lt;strong&gt;SLAs&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We measure &lt;strong&gt;SLIs&lt;/strong&gt;, which shouldn&amp;rsquo;t breach &lt;strong&gt;SLOs&lt;/strong&gt; not to disappoint users by breaking &lt;strong&gt;SLAs&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
