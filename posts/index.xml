@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 08 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SRE concepts</title>
-      <link>https://prokopov.me/posts/2021-11-07/</link>
+      <link>https://prokopov.me/posts/sre-concepts-sla-slo-sli/</link>
       <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/2021-11-07/</guid>
+      <guid>https://prokopov.me/posts/sre-concepts-sla-slo-sli/</guid>
       <description>&lt;p&gt;Site Reliability Engineering makes sense only if you bothered with &lt;strong&gt;Reliability&lt;/strong&gt;. Let me share my thought after completing this &lt;a href=&#34;https://www.coursera.org/learn/site-reliability-engineering-slos&#34;&gt;superuseful SRE Course&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;You need to make several steps to consider SRE path.&lt;/p&gt;
 &lt;ol&gt;
