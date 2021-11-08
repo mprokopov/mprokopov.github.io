@@ -54,17 +54,17 @@
 </ol>
 <p>At this point, you’ll have PHP v7.4 installed in <code>/usr/local/opt/php@7.4/</code></p>
 <p>In case you need to keep several PHP versions, it can be done using ENV vars in .zshrc</p>
-<pre><code>PHP_VERSION=7.4
+<pre tabindex="0"><code>PHP_VERSION=7.4
 export PATH=&quot;/usr/local/opt/php@${PHP_VERSION}/bin:/usr/local/opt/php@${PHP_VERSION}/sbin:$PATH&quot;  
 export LDFLAGS=&quot;-L/usr/local/opt/php@${PHP_VERSION}/lib&quot;  
 export CPPFLAGS=&quot;-I/usr/local/opt/php@${PHP_VERSION}/include&quot;
 </code></pre><h3 id="php-fpm-setup">PHP-FPM setup</h3>
 <p>Locate /usr/local/etc/php/7.4/php-fpm.d/www.conf and edit it to include environment variables. I also rebound default port 9000 to 9009 not to have conflicts with XDEBUG</p>
-<pre><code>clear_env = no 
+<pre tabindex="0"><code>clear_env = no 
 listen = 127.0.0.1:9009
 </code></pre><h3 id="apache-setup">Apache setup</h3>
 <p>Locate <code>/usr/local/etc/httpd/extra/httpd-vhosts.conf</code> and edit it according to your project folder, here is my example</p>
-<pre><code>
+<pre tabindex="0"><code>
 Listen 80  
 &lt;FilesMatch \\.php$&gt; 
   SetHandler &quot;proxy:fcgi://127.0.0.1:9009&quot;  
@@ -84,19 +84,19 @@ Listen 80
 </code></pre><h3 id="project-setup">Project setup</h3>
 <p>For some reason php-fpm doesn’t play well with _ENV variables, so I had to change them to use getenv() function instead, like on the example below</p>
 <p>config.inc.php of the project</p>
-<pre><code>$dbName = getenv('DB_NAME')  
+<pre tabindex="0"><code>$dbName = getenv('DB_NAME')  
 $dbUser = getenv('DB_USER')  
 ...
 </code></pre><h3 id="party-time">Party time</h3>
 <p>When you decide to work on the project, go to the source folder of the project and run the command</p>
-<pre><code>DB_NAME=dbname DB_PASS=pass DB_USER=user php-fpm
+<pre tabindex="0"><code>DB_NAME=dbname DB_PASS=pass DB_USER=user php-fpm
 </code></pre><p>and navigate in the browser to <a href="http://localhost">http://localhost</a> address. It should work.</p>
 <p>You can also save some efforts on typing and get env variables from the .env file by running <code>eval $(cat .env) php-fpm</code> instead.</p>
 <h3 id="bonus-xdebug">Bonus: XDEBUG</h3>
 <p>In case you need XDEBUG, you can install it with command</p>
 <p><code>1 pecl install xdebug</code></p>
 <p>and edit /usr/local/etc/php/7.4/php.ini to include the following settings</p>
-<pre><code>zend\_extension=&quot;xdebug.so&quot;  
+<pre tabindex="0"><code>zend\_extension=&quot;xdebug.so&quot;  
 xdebug.remote\_enable=on  
 xdebug.remote\_host=127.0.0.1  
 xdebug.remote\_handler=dbgp  
@@ -271,10 +271,10 @@ xdebug.profiler\_output\_name = &quot;callgrind.out.%p&quot;
 <p>Вот сайт киевского института автоматизации систем в строительстве, где в 1999 я начинал свою трудовую карьеру:</p>
 <p>Ниже сайт образца 2000 года, выполнен дизайнерами провайдера Elvisti, который в то время находился на территории института.</p>
 <p><a href="http://replay.web.archive.org/20001028014829/http://ndiasb.kiev.ua/">http://replay.web.archive.org/20001028014829/http://ndiasb.kiev.ua/</a></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="ndiasb2000.png" src="/uploads/2011/04/ndiasb2000.png" border="0" alt="ndiasb2000" width="600" height="465" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="ndiasb2000.png" src="/uploads/2011/04/ndiasb2000.png" border="0" alt="ndiasb2000" width="600" height="465" />
 <p>Сайт образца 2011 года, выполнен … дизайнерами института?</p>
 <p><a href="http://ndiasb.kiev.ua">http://ndiasb.kiev.ua</a></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="ndiasb2011.png" src="/uploads/2011/04/ndiasb2011.png" border="0" alt="ndiasb2011.png" width="600" height="292" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="ndiasb2011.png" src="/uploads/2011/04/ndiasb2011.png" border="0" alt="ndiasb2011.png" width="600" height="292" />
 <p>Сайт 2000 года выглядит намного более привлекательным и свежим, не правда ли?</p>
 </div>
 </div>

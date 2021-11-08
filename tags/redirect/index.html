@@ -41,7 +41,7 @@
     <div class="date">19.01.2012</div>
     <div><p>Если вы мигрируете сайт на новый домен, и не хотите потерять SEO позиций, то важно сделать идеологически правильный редирект.</p>
 <p>Делается он так:</p>
-<pre><code>Options +FollowSymLinks   
+<pre tabindex="0"><code>Options +FollowSymLinks   
 RewriteEngine on   
 RewriteCond %{HTTP_HOST} !^newdomain\.com   
 RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]

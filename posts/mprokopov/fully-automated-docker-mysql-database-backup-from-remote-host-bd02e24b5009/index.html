@@ -52,17 +52,17 @@
 <p>So, we will need only</p>
 <p>Here is my working implementation:</p>
 <p>script backup.sh</p>
-<pre><code>#!/bin/bash ## env vars are already in docker container 
-</code></pre><pre><code>/usr/bin/mysqldump -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE
+<pre tabindex="0"><code>#!/bin/bash ## env vars are already in docker container 
+</code></pre><pre tabindex="0"><code>/usr/bin/mysqldump -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE
 </code></pre><p>script backup-coreos-itservice.sh</p>
-<pre><code>/ffp/bin/scp /ffp/home/root/backup.sh core@coreos-03:/home/core/itservice/backup.sh 
-</code></pre><pre><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker cp /home/core/itservice/backup.sh itservice_db_1:/usr/local/bin/backup.sh&quot; 
-</code></pre><pre><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker exec itservice_db_1 /usr/local/bin/backup.sh&quot; &gt; latest.sql 
-</code></pre><pre><code>/opt/bin/tar czf itservice-sql-dump.tar.gz latest.sql --remove-files
+<pre tabindex="0"><code>/ffp/bin/scp /ffp/home/root/backup.sh core@coreos-03:/home/core/itservice/backup.sh 
+</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker cp /home/core/itservice/backup.sh itservice_db_1:/usr/local/bin/backup.sh&quot; 
+</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker exec itservice_db_1 /usr/local/bin/backup.sh&quot; &gt; latest.sql 
+</code></pre><pre tabindex="0"><code>/opt/bin/tar czf itservice-sql-dump.tar.gz latest.sql --remove-files
 </code></pre><p>rsnapshot.conf</p>
-<pre><code>backup_script	/mnt/HD/HD_a2/ffp/home/root/backup-coreos-itservice.sh	coreos-03/itservice_db_1
+<pre tabindex="0"><code>backup_script	/mnt/HD/HD_a2/ffp/home/root/backup-coreos-itservice.sh	coreos-03/itservice_db_1
 </code></pre><p>crontab</p>
-<pre><code>0 */4 * * * rsnapshot hourly 30 3 * * * rsnapshot daily 0 3 * * 1 rsnapshot weekly 30 2 1 * * rsnapshot monthly
+<pre tabindex="0"><code>0 */4 * * * rsnapshot hourly 30 3 * * * rsnapshot daily 0 3 * * 1 rsnapshot weekly 30 2 1 * * rsnapshot monthly
 </code></pre><p>Keep in mind, that you will need to generate ssh keys for your backup box and add it to authorized_keys on coreos-03 host, but this is out of scope this article.</p>
 <p><em>Originally published at</em> <a href="http://blog.it-premium.com.ua/all/fully-automated-mysql-database-dump-backup-from-remote-host/"><em>blog.it-premium.com.ua</em></a><em>.</em></p>
 </div>

@@ -36,6 +36,30 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2021-11-07/">SRE concepts</a>
+    </h1>
+    <div class="date">08.11.2021</div>
+    <div><p>Site Reliability Engineering makes sense only if you bothered with <strong>Reliability</strong>. Let me share my thought after completing this <a href="https://www.coursera.org/learn/site-reliability-engineering-slos">superuseful SRE Course</a>.</p>
+<p>You need to make several steps to consider SRE path.</p>
+<ol>
+<li>Think what makes user unhappy using your services.</li>
+<li>Decide on metrics that reflects user happiness and start gathering it.</li>
+<li>Create plans on how to maintain the service level target and policies describing what you going to do when situation become dangerous to achieving your targets.</li>
+<li>Create plans for improve these metrics.</li>
+<li>Act, measure, reflect, improve.</li>
+</ol>
+<p>Little bit clarity on abbreviations those used by google guys.</p>
+<p><strong>SLA</strong> - service level agreement. This is the service perception boundary you shouldn&rsquo;t cross. When user considers your service as bad, you didn&rsquo;t match his expectations, so either you didn&rsquo;t set proper expectations or you breached your promise on the service quality.</p>
+<p><strong>SLO</strong> - service level objectives. Same as SLA, but this is only internal promise and compass to meet user expectations, and this is a bit more tight because we don&rsquo;t want to dissapoint user by breaching SLA.</p>
+<p><strong>SLI</strong> - service level indicator shows how you meet user expectation in some point in time. Normally this is ratio of good events to all valid events in some period of time.</p>
+<p>How these relate to each other? Let me describe this in this little mantra.</p>
+<blockquote>
+<p>We measure <strong>SLIs</strong>, which shouldn&rsquo;t to breach <strong>SLOs</strong> not to disappoint users by breaking <strong>SLAs</strong>.</p>
+</blockquote></div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/2021-week-29/">2021 week 29</a>
     </h1>
     <div class="date">17.07.2021</div>
@@ -95,7 +119,7 @@ One created a huge bundle with all tools, bells, and whistles.</p>
     <div class="date">09.04.2021</div>
     <div><p>Recently I&rsquo;ve checked this website and styling became really aweful. After my digging it turned out one little busty thing was doing the crap.</p>
 <p>Official Linkedin badge! Overrides default link styling!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;text/javascript&#39;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://platform.linkedin.com/badges/js/profile.js&#39;</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">defer</span> &gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;text/javascript&#39;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://platform.linkedin.com/badges/js/profile.js&#39;</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">defer</span> &gt;&lt;/<span style="color:#f92672">script</span>&gt;
 </code></pre></div><p>The easiest way to turn it off is to change type=&lsquo;text/javascript&rsquo; to just &lsquo;text&rsquo;.</p>
 <p>You have also been decreasing my lighthouse score.
 Bye-bye little nasty thing.</p></div>
@@ -112,9 +136,9 @@ Despite all Datomic bright sides, there are some thoughts bothering me since I s
 <h2 id="confusion-on-datomic-peer-and-client-libraries-differences">Confusion on datomic peer and client libraries differences</h2>
 <p>I used to use datomic-pro api in my project and wanted to catch &ldquo;anomaly exceptions&rdquo; from Pedestal error handlers. That was not an easy task. It simply didn&rsquo;t work in the manner I expected from the datomic code examples.</p>
 <p>If you try to execute</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">d/transact</span> conn {<span style="color:#e6db74">:tx-data</span> [[<span style="color:#e6db74">:this</span> <span style="color:#e6db74">&#34;does not&#34;</span> <span style="color:#e6db74">:make</span> <span style="color:#e6db74">&#34;sense&#34;</span>]]})
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">d/transact</span> conn {<span style="color:#e6db74">:tx-data</span> [[<span style="color:#e6db74">:this</span> <span style="color:#e6db74">&#34;does not&#34;</span> <span style="color:#e6db74">:make</span> <span style="color:#e6db74">&#34;sense&#34;</span>]]})
 </code></pre></div><p>using peer library you&rsquo;ll get</p>
-<pre><code>1. Caused by datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+<pre tabindex="0"><code>1. Caused by datomic.impl.Exceptions$IllegalArgumentExceptionInfo
    :db.error/not-a-data-function Unable to resolve data function: :this
    {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
     :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
@@ -134,11 +158,11 @@ Despite all Datomic bright sides, there are some thoughts bothering me since I s
    ThreadPoolExecutor.java: 1149  java.util.concurrent.ThreadPoolExecutor/runWorker
    ThreadPoolExecutor.java:  624  java.util.concurrent.ThreadPoolExecutor$Worker/run
                Thread.java:  748  java.lang.Thread/run
-</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">ex-data</span> *e)
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">ex-data</span> *e)
 
 <span style="color:#f92672">#</span><span style="color:#e6db74">:clojure.error</span>{<span style="color:#e6db74">:phase</span> <span style="color:#e6db74">:print-eval-result</span>}
 </code></pre></div><p>And this is what you get from datomic client api library using peer. So exceptions here are actually wrapped in ex-data info.</p>
-<pre><code>1. Unhandled clojure.lang.ExceptionInfo
+<pre tabindex="0"><code>1. Unhandled clojure.lang.ExceptionInfo
    Unable to resolve data function: :this
    {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
     :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
@@ -187,7 +211,7 @@ Despite all Datomic bright sides, there are some thoughts bothering me since I s
                   AFn.java:   22  clojure.lang.AFn/run
                Thread.java:  748  java.lang.Thread/run
 </code></pre><p>here is ex-data of the exception. This is much more analysable!</p>
-<pre><code>(ex-data *e)
+<pre tabindex="0"><code>(ex-data *e)
 {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
  :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
  :db/error :db.error/not-a-data-function,
@@ -228,12 +252,12 @@ First, I have to admit that I have no idea how people can produce something like
 <p>What worked well for me is to return raw entity ids from the find functions, then when required I&rsquo;m able to execute pull function against returned values.</p>
 <p>The same goes to <em>db/ident</em> that one tries to use as enums. Aspecially within tests you constantly trying to use :db/ident with example values to easiely reference in test checks, but at the same time your function for the prod data will return just :db/id.
 Example of what I use in tests</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:db/ident</span> <span style="color:#e6db74">:my-test-account</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:db/ident</span> <span style="color:#e6db74">:my-test-account</span>
  <span style="color:#e6db74">:account/id</span> (<span style="color:#a6e22e">d/squiid</span>)
  <span style="color:#e6db74">:account/balance</span> <span style="color:#ae81ff">10</span>}
 </code></pre></div><p>so you can use just <code>(d/entity db :my-test-account)</code>. But this is not the case for the code that will probably return :db/id instead.</p>
 <p>I&rsquo;ve found a useful snippet to address this problem</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defprotocol </span>Eid
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defprotocol </span>Eid
   (<span style="color:#a6e22e">e</span> [_]))
 
 (<span style="color:#a6e22e">extend-protocol</span> Eid
@@ -246,12 +270,12 @@ Example of what I use in tests</p>
   datomic.Entity
   (<span style="color:#a6e22e">e</span> [ent] (<span style="color:#e6db74">:db/id</span> ent)))
 </code></pre></div><p>I also created the following function to flatten returned from the pull expression nested db/ident.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn </span>flatten-ident [coll]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn </span>flatten-ident [coll]
   (<span style="color:#a6e22e">clojure.walk/postwalk</span>
    (<span style="color:#66d9ef">fn </span>[item] (get item <span style="color:#e6db74">:db/ident</span> item)) coll))
 </code></pre></div><h3 id="testing">Testing</h3>
 <p>Some good examples on datomic boilerplate for testing I have found in vase repository and adopted like this</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">def </span><span style="color:#f92672">^</span><span style="color:#e6db74">:dynamic</span> *current-db-connection* nil)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">def </span><span style="color:#f92672">^</span><span style="color:#e6db74">:dynamic</span> *current-db-connection* nil)
 (<span style="color:#66d9ef">def </span><span style="color:#f92672">^</span><span style="color:#e6db74">:dynamic</span> *current-db-uri* nil)
 
 (<span style="color:#66d9ef">defn </span>new-database
@@ -289,9 +313,9 @@ But in my case I didn&rsquo;t succeed with this. I couldn&rsquo;t even grasp how
 </blockquote>
 <p>Documentation was so succint, so I spent quite good amount of time to find at least one example of extensions.edn and where to keep it.
 So it should be located at <em>/resources/datomic/extensions.edn</em> with such a content</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:xforms</span> [mynamespace/xform]}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:xforms</span> [mynamespace/xform]}
 </code></pre></div><p>then you should have <code>xform</code> function in your namespace</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(namespace mynamespace)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(namespace mynamespace)
 (<span style="color:#66d9ef">defn </span>xform [x] (str <span style="color:#e6db74">&#34;xformed: &#34;</span> x))
 </code></pre></div><p>I was thinking about usecase when you need some translations, say I keep my currency amounts in cents and want to translate to float using currency minor unit. I didn&rsquo;t manage to do this with xforms.</p>
 <h3 id="diagram-tooling">Diagram tooling</h3>
@@ -325,19 +349,19 @@ The simplicty you get gives you much power, but at the same time great responsib
 That&rsquo;s simple.</p>
 <p>Assume you have a class <code>Human</code>.</p>
 <p>call getter name value of Human</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name</span>.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name</span>.
 </code></pre></div><p>call setter name with value</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name:</span> <span style="color:#75715e">&#34;The one&#34;</span>.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name:</span> <span style="color:#75715e">&#34;The one&#34;</span>.
 </code></pre></div><h3 id="no-positional-arguments-for-functions">No positional arguments for functions.</h3>
 <p>There is no such thing as positional arguments for the methods. Either one argument or named many. Nothing else. Super easy.</p>
 <p>Function 1</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span>.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span>.
 </code></pre></div><p>Function 2</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span> <span style="color:#a6e22e">flag:</span> True.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span> <span style="color:#a6e22e">flag:</span> True.
 </code></pre></div><p>This can&rsquo;t be implemented clearly with Java. You will have to have a single function that takes flag with default value. So then you forced to check it later in the code.</p>
 <p>Lisp has this property by having different bodies for different sets of arguments for the same function.</p>
 <h3 id="common-approach-to-default-values-initialized-in-getter">common approach to default values: initialized in getter</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">history</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">history</span>
 	<span style="color:#f92672">^</span> history <span style="color:#a6e22e">ifNil:</span> [ history <span style="color:#f92672">:=</span> <span style="color:#a6e22e">OrderedCollection</span> new ]
 </code></pre></div><p>See this ifNil: method? It accepts the block, which is namely anonymous function and executes it when the target object is nil.
 ^ is just a <code>return</code>.</p>
@@ -349,17 +373,17 @@ That&rsquo;s simple.</p>
 <p>Smalltalk has a very concise syntax, but for returning the object it provides <code>;</code> operator.
 This enables to chain calls to the same object in a very straightforward manner.</p>
 <p>Example for Java</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> Apple<span style="color:#f92672">()</span> 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> Apple<span style="color:#f92672">()</span> 
 <span style="color:#f92672">.</span><span style="color:#a6e22e">method1</span><span style="color:#f92672">()</span>
 <span style="color:#f92672">.</span><span style="color:#a6e22e">method2</span><span style="color:#f92672">()</span>
 </code></pre></div><p>Why is there a separate syntax in Java for constructor? I don&rsquo;t know. Smalltalk just calls constructor method with the same syntax as normal function call.</p>
 <p>The same example for Smalltalk</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Apple</span> new <span style="color:#a6e22e">method1</span>; <span style="color:#a6e22e">method2</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Apple</span> new <span style="color:#a6e22e">method1</span>; <span style="color:#a6e22e">method2</span>;
 </code></pre></div><p>Since main thing in the language is calling methods from objects, you don&rsquo;t need to have much syntax.
 Same concept applies to Forth language.</p>
 <h3 id="anonymous-functions">Anonymous functions</h3>
 <p>[ block ] - this is syntax for a piece of code</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk">[ <span style="color:#f92672">:</span>anArgument <span style="color:#f92672">|</span> block ]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk">[ <span style="color:#f92672">:</span>anArgument <span style="color:#f92672">|</span> block ]
 </code></pre></div><p>so now you can use <code>anArgument</code> value right in the block. Do you recognise vertical pipes argument from Ruby? This is it.</p>
 <h3 id="skinny-funcitons">Skinny funcitons</h3>
 <p>Indeed, mostly functions in Smalltalk are really small and concise. The good reason for that is the IDE is a part of language image, this changes programmer experience dramatically. IDE is full of functionality like generate scaffold getters, setters, best in breed refactoring capabilities.</p>
@@ -372,7 +396,7 @@ Same concept applies to Forth language.</p>
 <p><img src="/uploads/2021/pharo-testing2.png" alt="Pharo testing" title="Pharo testing"></p>
 <p>What a brilliant idea to have only <code>assert</code> as the test method!</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">testClassifyIncident</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">testClassifyIncident</span>
 	<span style="color:#f92672">|</span>anIncident aState<span style="color:#f92672">|</span>
 	<span style="color:#960050;background-color:#1e0010">aState</span><span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">status</span>.
 	anIncident <span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">classifyAs:</span> <span style="color:#a6e22e">Incident</span> <span style="color:#a6e22e">service:</span> service.
@@ -429,7 +453,7 @@ The system fives all bunch of tools like &ldquo;grep&rdquo; to find the term you
     <div><p>I recently added org-capture chrome extension to my toolbelt. Unfortunalely chrome annoys me by asking if I want to open this protocol link every time.</p>
 <p>Here is the simple way to fix this.</p>
 <p>Execute this in the shell</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">defaults write com.google.Chrome URLAllowlist -array-add -string <span style="color:#e6db74">&#39;org-protocol://*&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">defaults write com.google.Chrome URLAllowlist -array-add -string <span style="color:#e6db74">&#39;org-protocol://*&#39;</span>
 </code></pre></div><p>check
 <a href="chrome://policy">chrome://policy</a> url that it contains proper settings for org-protocol</p>
 <p><img src="/uploads/chrome-policy.png" alt="Chrome policy"></p></div>
@@ -442,7 +466,7 @@ The system fives all bunch of tools like &ldquo;grep&rdquo; to find the term you
     <div class="date">09.01.2021</div>
     <div><p>I&rsquo;m really crying of how finally emacs can be used for the literate programming and for some testing.</p>
 <p>For restclient, this creates POST request with json data structure in request body.</p>
-<pre><code class="language-org-mode" data-lang="org-mode">  #+begin_src restclient
+<pre tabindex="0"><code class="language-org-mode" data-lang="org-mode">  #+begin_src restclient
     POST http://muster.test/index.php?cl=ping
     Content-Type: application/json
 
@@ -480,7 +504,7 @@ The system fives all bunch of tools like &ldquo;grep&rdquo; to find the term you
 // Request duration: 0.269261s
 #+END_SRC
 </code></pre><p>This executes SQL statement and checks what the previous command has been executed!</p>
-<pre><code class="language-org-mode" data-lang="org-mode">#+begin_src  sql :engine mysql :dbhost 127.0.0.1 :dbuser muster :dbpassword muster :database muster-development
+<pre tabindex="0"><code class="language-org-mode" data-lang="org-mode">#+begin_src  sql :engine mysql :dbhost 127.0.0.1 :dbuser muster :dbpassword muster :database muster-development
 select val, attribute, count(*)
 from oxps_user_consent_pings 
 where attribute='googleanalytics' and time &gt; '2021-01-01'
@@ -502,7 +526,7 @@ group by val
     <div class="date">07.01.2021</div>
     <div><p>Useful Git WIP alias command</p>
 <p>add this to the .gitconfig</p>
-<pre><code>[alias]
+<pre tabindex="0"><code>[alias]
   wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
   
 </code></pre><p>and enjoy <code>git wip</code> sorting branches by most recent</p>
@@ -530,7 +554,7 @@ group by val
     <div class="date">24.12.2020</div>
     <div><p>In brief  - use the <code>resource_group</code> directive.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">stages</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">stages</span>:
   - <span style="color:#ae81ff">build</span>
 
 <span style="color:#f92672">jobA</span>:
@@ -631,10 +655,10 @@ group by val
 </blockquote>
 <p>Namely, you write an example of time date, not just &ldquo;dd-MM-yyyy&rdquo; but real date and time using numbers as values.</p>
 <p>Here is go example:</p>
-<pre><code>01/02 03:04:05PM '06 -0700
+<pre tabindex="0"><code>01/02 03:04:05PM '06 -0700
 Mon Jan 2 15:04:05 MST 2006
 </code></pre><p>if we want to print output similar to dd-MM-yyyy we&rsquo;d specify just</p>
-<pre><code>02 Jan 2006
+<pre tabindex="0"><code>02 Jan 2006
 </code></pre><p>Quite smart and unusual.</p></div>
 </div>
 
@@ -670,17 +694,17 @@ Mon Jan 2 15:04:05 MST 2006
 </ol>
 <p>At this point, you’ll have PHP v7.4 installed in <code>/usr/local/opt/php@7.4/</code></p>
 <p>In case you need to keep several PHP versions, it can be done using ENV vars in .zshrc</p>
-<pre><code>PHP_VERSION=7.4
+<pre tabindex="0"><code>PHP_VERSION=7.4
 export PATH=&quot;/usr/local/opt/php@${PHP_VERSION}/bin:/usr/local/opt/php@${PHP_VERSION}/sbin:$PATH&quot;  
 export LDFLAGS=&quot;-L/usr/local/opt/php@${PHP_VERSION}/lib&quot;  
 export CPPFLAGS=&quot;-I/usr/local/opt/php@${PHP_VERSION}/include&quot;
 </code></pre><h3 id="php-fpm-setup">PHP-FPM setup</h3>
 <p>Locate /usr/local/etc/php/7.4/php-fpm.d/www.conf and edit it to include environment variables. I also rebound default port 9000 to 9009 not to have conflicts with XDEBUG</p>
-<pre><code>clear_env = no 
+<pre tabindex="0"><code>clear_env = no 
 listen = 127.0.0.1:9009
 </code></pre><h3 id="apache-setup">Apache setup</h3>
 <p>Locate <code>/usr/local/etc/httpd/extra/httpd-vhosts.conf</code> and edit it according to your project folder, here is my example</p>
-<pre><code>
+<pre tabindex="0"><code>
 Listen 80  
 &lt;FilesMatch \\.php$&gt; 
   SetHandler &quot;proxy:fcgi://127.0.0.1:9009&quot;  
@@ -700,19 +724,19 @@ Listen 80
 </code></pre><h3 id="project-setup">Project setup</h3>
 <p>For some reason php-fpm doesn’t play well with _ENV variables, so I had to change them to use getenv() function instead, like on the example below</p>
 <p>config.inc.php of the project</p>
-<pre><code>$dbName = getenv('DB_NAME')  
+<pre tabindex="0"><code>$dbName = getenv('DB_NAME')  
 $dbUser = getenv('DB_USER')  
 ...
 </code></pre><h3 id="party-time">Party time</h3>
 <p>When you decide to work on the project, go to the source folder of the project and run the command</p>
-<pre><code>DB_NAME=dbname DB_PASS=pass DB_USER=user php-fpm
+<pre tabindex="0"><code>DB_NAME=dbname DB_PASS=pass DB_USER=user php-fpm
 </code></pre><p>and navigate in the browser to <a href="http://localhost">http://localhost</a> address. It should work.</p>
 <p>You can also save some efforts on typing and get env variables from the .env file by running <code>eval $(cat .env) php-fpm</code> instead.</p>
 <h3 id="bonus-xdebug">Bonus: XDEBUG</h3>
 <p>In case you need XDEBUG, you can install it with command</p>
 <p><code>1 pecl install xdebug</code></p>
 <p>and edit /usr/local/etc/php/7.4/php.ini to include the following settings</p>
-<pre><code>zend\_extension=&quot;xdebug.so&quot;  
+<pre tabindex="0"><code>zend\_extension=&quot;xdebug.so&quot;  
 xdebug.remote\_enable=on  
 xdebug.remote\_host=127.0.0.1  
 xdebug.remote\_handler=dbgp  
@@ -768,7 +792,7 @@ xdebug.profiler\_output\_name = &quot;callgrind.out.%p&quot;
 <p>Сначала я сделал перепроектирование <a href="https://it-premium.com.ua">https://it-premium.com.ua</a> на <a href="https://gohugo.io/">Hugo</a> вместо RoR, и сразу понял, это - то что нужно! Во-первых статика это то, во что так или иначе переходит каждый сайт когда его рендером занимается браузер. Быстрее чем статический сайт сделать нельзя, хотя многие пытаются, используя Javascript-based фреймворки на подобие Gatsby.</p>
 <p>Hugo поддерживает не только markdown, но и различные продвинутые сценарии, так в странице <a href="/pages/trips/">&ldquo;Путешествую&rdquo;</a> список стран и мест находится в YAML файле и включается из Markdown при помощи custom tag. На каждой странице список друзей также стал формироваться из отдельного YAML. Кстати, уже никто не обменивается ссылками как раньше?</p>
 <p>мой trips.yaml файл, рендер которого вы можете увидеть <a href="/pages/trips">здесь</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2020</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2020</span>
   <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Испания, Барселона</span>
   <span style="color:#f92672">comment</span>: <span style="color:#ae81ff">увы и ах, из-за короны-19 отменена :(</span>
 
@@ -837,7 +861,7 @@ xdebug.profiler\_output\_name = &quot;callgrind.out.%p&quot;
 - <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2008</span>
   <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Шарм-Ель-Шейх, Каир (пирамидки))</span>
 </code></pre></div><p>а рендерит его вот такой простой кусочек в layouts/shortcodes/travel.html</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
 {{ range $.Site.Data.travel }}
     &lt;<span style="color:#f92672">li</span>&gt;
         {{.date}} {{.place}} {{.duration}} {{.comment}}
@@ -1057,7 +1081,7 @@ end tell</code></pre><figure class="wp-block-image size-large">
     <div class="date">02.02.2020</div>
     <div><p>This is really my little timesaver because you know, a lot of meetings happen when you work remotely.</p>
 <p>Works best with Alfred 4 using mapped hotkey.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-applescript" data-lang="applescript"><span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Calendar&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-applescript" data-lang="applescript"><span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Calendar&#34;</span>
 	<span style="color:#66d9ef">tell</span> calendar <span style="color:#e6db74">&#34;maksym.prokopov@trilogy.com&#34;</span>
 		<span style="color:#66d9ef">set</span> itemLocation <span style="color:#66d9ef">to</span> <span style="color:#a6e22e">location</span> <span style="color:#66d9ef">of</span> first event where <span style="color:#66d9ef">its</span> start date <span style="color:#f92672">≤</span> (current date) <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> minutes <span style="color:#f92672">and</span> <span style="color:#66d9ef">end</span> date <span style="color:#f92672">≥</span> (current date)
 		<span style="color:#66d9ef">if</span> itemLocation <span style="color:#f92672">contains</span> <span style="color:#e6db74">&#34;zoom.us&#34;</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Finder&#34;</span> <span style="color:#66d9ef">to</span> open location itemLocation
@@ -1118,7 +1142,7 @@ end tell</code></pre><figure class="wp-block-image size-large">
     </h1>
     <div class="date">06.06.2018</div>
     <div><p>Here is a piece of my old code, but it’s definitely could be improved.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
   h <span style="color:#f92672">=</span> ticket_params
     h<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity
     h<span style="color:#f92672">[</span><span style="color:#e6db74">:event</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_event <span style="color:#66d9ef">if</span> extract_event
@@ -1129,7 +1153,7 @@ end tell</code></pre><figure class="wp-block-image size-large">
 </code></pre></div><p>As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?</p>
 <p>Let’s see, <code>h=ticket_params</code>. We call this because we don’t want to modify <code>ticket_params</code>. Is there any method which creates a copy?</p>
 <p>It turns out we have dup method which creates a copy of an object, this is exactly what we wanted. Then, we have tap method, which allows us to dive in object internals and return then itself. Here is whole new piece of code after refactoring.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
   ticket_params<span style="color:#f92672">.</span>dup<span style="color:#f92672">.</span>tap <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>params<span style="color:#f92672">|</span>
     params<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity
     params<span style="color:#f92672">[</span><span style="color:#e6db74">:event</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_event <span style="color:#66d9ef">if</span> extract_event
@@ -1330,12 +1354,12 @@ end tell</code></pre><figure class="wp-block-image size-large">
 <li>аккумулятор</li>
 <li>и полностью крышку с одной стороны.</li>
 </ul>
-<p><img class="aligncenter size-full wp-image-1493" src="/uploads/2017/11/IMG_4073.jpg" alt="" width="640" height="360" srcset="/uploads/2017/11/IMG_4073.jpg 640w, /uploads/2017/11/IMG_4073-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<img class="aligncenter size-full wp-image-1493" src="/uploads/2017/11/IMG_4073.jpg" alt="" width="640" height="360" srcset="/uploads/2017/11/IMG_4073.jpg 640w, /uploads/2017/11/IMG_4073-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" />
 <p> </p>
 <p>Вся работа заняла около 1-1,5 часа, а в следующий раз, думаю уйдет на всю процедуру не более 30-40 минут.</p>
 <p> </p>
 <p>Со снятой полностью крышкой.</p>
-<p><img class="aligncenter size-large wp-image-1494" src="/uploads/2017/11/IMG_4074.jpg" alt="" width="640" height="360" srcset="/uploads/2017/11/IMG_4074.jpg 640w, /uploads/2017/11/IMG_4074-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<img class="aligncenter size-large wp-image-1494" src="/uploads/2017/11/IMG_4074.jpg" alt="" width="640" height="360" srcset="/uploads/2017/11/IMG_4074.jpg 640w, /uploads/2017/11/IMG_4074-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" />
 <p>Впечатления от внутренностей после разборки и сборки:</p>
 <ul>
 <li>Качество деталей на хорошем уровне, нет откровенно плохого пластика с заусенцами. Можно менять местами левые и правые педали, боковухи, накладки и все встанет на место.</li>
@@ -1345,7 +1369,7 @@ end tell</code></pre><figure class="wp-block-image size-large">
 <p> </p>
 <p> </p>
 <p>На этой фотографии видна моя заплатка на камере снизу.</p>
-<p><img class="aligncenter size-large wp-image-1495" src="/uploads/2017/11/IMG_4075.jpg" alt="" width="640" height="360" srcset="/uploads/2017/11/IMG_4075.jpg 640w, /uploads/2017/11/IMG_4075-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<img class="aligncenter size-large wp-image-1495" src="/uploads/2017/11/IMG_4075.jpg" alt="" width="640" height="360" srcset="/uploads/2017/11/IMG_4075.jpg 640w, /uploads/2017/11/IMG_4075-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" />
 <p>Если вы решили сами повторить этот опыт, то посмотрите пока это видео, а в следующий раз я попробую записать свое.</p>
 <iframe width="700" height="394" src="https://www.youtube.com/embed/5OKMf2CZHs8?feature=oembed" frameborder="0" gesture="media" allowfullscreen></iframe>
 </div>
@@ -1493,17 +1517,17 @@ expire\_in: 1 week
 <p>So, we will need only</p>
 <p>Here is my working implementation:</p>
 <p>script backup.sh</p>
-<pre><code>#!/bin/bash ## env vars are already in docker container 
-</code></pre><pre><code>/usr/bin/mysqldump -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE
+<pre tabindex="0"><code>#!/bin/bash ## env vars are already in docker container 
+</code></pre><pre tabindex="0"><code>/usr/bin/mysqldump -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE
 </code></pre><p>script backup-coreos-itservice.sh</p>
-<pre><code>/ffp/bin/scp /ffp/home/root/backup.sh core@coreos-03:/home/core/itservice/backup.sh 
-</code></pre><pre><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker cp /home/core/itservice/backup.sh itservice_db_1:/usr/local/bin/backup.sh&quot; 
-</code></pre><pre><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker exec itservice_db_1 /usr/local/bin/backup.sh&quot; &gt; latest.sql 
-</code></pre><pre><code>/opt/bin/tar czf itservice-sql-dump.tar.gz latest.sql --remove-files
+<pre tabindex="0"><code>/ffp/bin/scp /ffp/home/root/backup.sh core@coreos-03:/home/core/itservice/backup.sh 
+</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker cp /home/core/itservice/backup.sh itservice_db_1:/usr/local/bin/backup.sh&quot; 
+</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker exec itservice_db_1 /usr/local/bin/backup.sh&quot; &gt; latest.sql 
+</code></pre><pre tabindex="0"><code>/opt/bin/tar czf itservice-sql-dump.tar.gz latest.sql --remove-files
 </code></pre><p>rsnapshot.conf</p>
-<pre><code>backup_script	/mnt/HD/HD_a2/ffp/home/root/backup-coreos-itservice.sh	coreos-03/itservice_db_1
+<pre tabindex="0"><code>backup_script	/mnt/HD/HD_a2/ffp/home/root/backup-coreos-itservice.sh	coreos-03/itservice_db_1
 </code></pre><p>crontab</p>
-<pre><code>0 */4 * * * rsnapshot hourly 30 3 * * * rsnapshot daily 0 3 * * 1 rsnapshot weekly 30 2 1 * * rsnapshot monthly
+<pre tabindex="0"><code>0 */4 * * * rsnapshot hourly 30 3 * * * rsnapshot daily 0 3 * * 1 rsnapshot weekly 30 2 1 * * rsnapshot monthly
 </code></pre><p>Keep in mind, that you will need to generate ssh keys for your backup box and add it to authorized_keys on coreos-03 host, but this is out of scope this article.</p>
 <p><em>Originally published at</em> <a href="http://blog.it-premium.com.ua/all/fully-automated-mysql-database-dump-backup-from-remote-host/"><em>blog.it-premium.com.ua</em></a><em>.</em></p>
 </div>
@@ -1521,7 +1545,7 @@ _ansible-container - Ansible Container is a tool to build Docker images and orch
 <p>And this time I decided to give an ansible-container a try. And … ta da … it fails right away from the start.</p>
 <p>Starting Docker build of Ansible Container Conductor image (please be patient)…</p>
 <p>Failed with</p>
-<pre><code>ERROR Unknown exception
+<pre tabindex="0"><code>ERROR Unknown exception
 Traceback (most recent call last):  
 File “/Library/Python/2.7/site-packages/container/cli.py”, line 268, in \_\_call\_\_  
 getattr(core, u’hostcmd\_{}’.format(args.subcommand))(\*\*vars(args))  
@@ -1632,7 +1656,7 @@ restart: always</p>
     </h1>
     <div class="date">28.07.2017</div>
     <div><p>То, что раньше делал прекрасный Daisy Disk, сейчас вполне неплохо выполняет встроенная в Mac OS Sierra утилита.</p>
-<p><img class="aligncenter size-full wp-image-1487" src="/uploads/2017/07/Скриншот-2017-07-28-14.55.06.png" alt="" width="913" height="644" srcset="/uploads/2017/07/Скриншот-2017-07-28-14.55.06.png 913w, /uploads/2017/07/Скриншот-2017-07-28-14.55.06-300x212.png 300w, /uploads/2017/07/Скриншот-2017-07-28-14.55.06-768x542.png 768w" sizes="(max-width: 913px) 100vw, 913px" /></p>
+<img class="aligncenter size-full wp-image-1487" src="/uploads/2017/07/Скриншот-2017-07-28-14.55.06.png" alt="" width="913" height="644" srcset="/uploads/2017/07/Скриншот-2017-07-28-14.55.06.png 913w, /uploads/2017/07/Скриншот-2017-07-28-14.55.06-300x212.png 300w, /uploads/2017/07/Скриншот-2017-07-28-14.55.06-768x542.png 768w" sizes="(max-width: 913px) 100vw, 913px" />
 </div>
 </div>
 
@@ -1704,9 +1728,9 @@ restart: always</p>
     </h1>
     <div class="date">01.06.2017</div>
     <div><p>Музей Мерседес-Бенц в Штутгарте произвел на меня неизгладимое впечатление. Легко можно потратить на его посещение целый день и даже этого будет мало. Пожалуй, начну с развенчания некоторых мифов.  У нас в сознании Мерседес-Бенц представляется одной торговой маркой, но дело в том, что Мерседес был только одной из марок автомобилей компании Даймлер, а компания Карла Бенца была основным конкурентом Даймлер вплоть до объединения в 1926г. Впрочем, все по порядку.</p>
-<p><img class="aligncenter size-large wp-image-1434" src="/uploads/2017/04/IMG_3384-768x1024.jpg" alt="" width="700" height="933" srcset="/uploads/2017/04/IMG_3384-768x1024.jpg 768w, /uploads/2017/04/IMG_3384-225x300.jpg 225w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1434" src="/uploads/2017/04/IMG_3384-768x1024.jpg" alt="" width="700" height="933" srcset="/uploads/2017/04/IMG_3384-768x1024.jpg 768w, /uploads/2017/04/IMG_3384-225x300.jpg 225w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>До 1885, в основном использовались паровые двигатели, их устанавливали на огромные станки и поезда, но они были слишком громоздкими для использования в небольших средствах передвижения. Поэтому изобретение бензинового двигателя из-за его компактных размеров дало развитие персональному транспорту.</p>
-<p><img class="aligncenter size-large wp-image-1435" src="/uploads/2017/04/IMG_3387-768x1024.jpg" alt="" width="700" height="933" srcset="/uploads/2017/04/IMG_3387-768x1024.jpg 768w, /uploads/2017/04/IMG_3387-225x300.jpg 225w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1435" src="/uploads/2017/04/IMG_3387-768x1024.jpg" alt="" width="700" height="933" srcset="/uploads/2017/04/IMG_3387-768x1024.jpg 768w, /uploads/2017/04/IMG_3387-225x300.jpg 225w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Первым автомобилем считается трехколесная повозка с двигателем Карла Бенца, которую он сделал в 1885г. примерно в то же время инженеры Готтлиб Даймлер и Вильгельм Майбах создали бензиновый мотоцикл.</p>
 <div id="attachment_1439" style="width: 710px" class="wp-caption aligncenter">
   <img aria-describedby="caption-attachment-1439" class="wp-image-1439 size-large" src="/uploads/2017/04/IMG_3391-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3391-1024x768.jpg 1024w, /uploads/2017/04/IMG_3391-300x225.jpg 300w, /uploads/2017/04/IMG_3391-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
@@ -1746,16 +1770,16 @@ restart: always</p>
   </p>
 </div>
 <p>На первых вариантах моторизованых повозок компоновка сидений была не такая, как в современных аналогах. Одним из удачных размещений считалось по 2 пассажира спереди лицом к водителю и один пассажир сбоку от водителя на заднем сидении, как на каретах. Затем пассажирское сидение переехало в том же виде назад, спиной к спине водителя и пассажиры перестали преграждать обзор шоферу. И уже дальнейшим развитием положения пассажиров стало современное размещение за спиной у водителя, лицом по ходу движения.</p>
-<p><img class="aligncenter size-large wp-image-1443" src="/uploads/2017/04/IMG_3395-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3395-1024x768.jpg 1024w, /uploads/2017/04/IMG_3395-300x225.jpg 300w, /uploads/2017/04/IMG_3395-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1443" src="/uploads/2017/04/IMG_3395-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3395-1024x768.jpg 1024w, /uploads/2017/04/IMG_3395-300x225.jpg 300w, /uploads/2017/04/IMG_3395-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>В Германии появление автомобилей встретили, как водится у консервативных немцев, довольно прохладно и спрос не был большим. Другое дело Франция, где от автомобилей пришли в восторг, это стало модным и покупали их охотно. Франция стала основным рынком сбыта для немецких автомобилей.</p>
 <p>Исторический факт: в 1909 стали вводиться первые ограничения по скорости движения в Германии. Разрешалось ехать со скоростью не выше 10 миль в час, то есть со средней скоростью движения лошади.</p>
 <p> </p>
 <p>Бытует заблуждение, что «Мерседес» это имя дочери Карла Бенца, но это не так. Мерседес это имя дочери Эмиля Элинека, французского предпринимателя, который попросил создать для него специальный автомобиль с улучшенными скоростными характеристиками для участия в гонках. Впоследствии этот автомобиль завоевал много побед и заслуженно стал самым желаемым автомобилем в линейке Даймлера. Это был замечательный маркетинговый ход, все хотели купить именно Мерседес Даймлера и продажи автомобилей Бенца стали стремительно падать.</p>
-<p><img class="aligncenter size-large wp-image-1448" src="/uploads/2017/04/IMG_3400-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3400-1024x768.jpg 1024w, /uploads/2017/04/IMG_3400-300x225.jpg 300w, /uploads/2017/04/IMG_3400-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1448" src="/uploads/2017/04/IMG_3400-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3400-1024x768.jpg 1024w, /uploads/2017/04/IMG_3400-300x225.jpg 300w, /uploads/2017/04/IMG_3400-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Первыми бензоколонками стали отели, где автопутешественники останавливались на ночь, и заправка автомобиля была одним из сервисов отеля, только спустя определенное время автоколонки стали отдельным бизнесом.</p>
-<p><img class="aligncenter size-large wp-image-1444" src="/uploads/2017/04/IMG_3396-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3396-1024x768.jpg 1024w, /uploads/2017/04/IMG_3396-300x225.jpg 300w, /uploads/2017/04/IMG_3396-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1444" src="/uploads/2017/04/IMG_3396-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3396-1024x768.jpg 1024w, /uploads/2017/04/IMG_3396-300x225.jpg 300w, /uploads/2017/04/IMG_3396-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Исторический факт: в журнале, выпускаемом женской ассоциацией автомобилистов в 1906г. рекомендовалось использовать женское зеркальце для наблюдения за автомобилями, которые приближаются сзади. До этого зеркал на автомобилях не было.</p>
-<p><img class="aligncenter size-large wp-image-1447" src="/uploads/2017/04/IMG_3399-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3399-1024x768.jpg 1024w, /uploads/2017/04/IMG_3399-300x225.jpg 300w, /uploads/2017/04/IMG_3399-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1447" src="/uploads/2017/04/IMG_3399-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3399-1024x768.jpg 1024w, /uploads/2017/04/IMG_3399-300x225.jpg 300w, /uploads/2017/04/IMG_3399-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>После проигрыша Германии в первой мировой войне экономика стала драматически ухудшаться, и кредиторы стали давить на автогигантов, что бы они объединили усилия. Так в 1926г. произошло объединение двух конкурентов в одну компанию с названием «Мерседес Бенц».</p>
 <div id="attachment_1458" style="width: 710px" class="wp-caption aligncenter">
   <img aria-describedby="caption-attachment-1458" class="wp-image-1458 size-large" src="/uploads/2017/04/IMG_3411-768x1024.jpg" alt="" width="700" height="933" srcset="/uploads/2017/04/IMG_3411-768x1024.jpg 768w, /uploads/2017/04/IMG_3411-225x300.jpg 225w" sizes="(max-width: 700px) 100vw, 700px" />
@@ -1770,20 +1794,20 @@ restart: always</p>
   </p>
 </div>
 <p>Исторический факт: в первых самоходных повозках руль был по центру, затем стал смещаться немного левее, чтобы было лучше видно край дороги, а после того, как количество автомобилей стало значительным, переехал вправо, чтобы водителю было удобнее уклоняться от встречного трафика. Первые щетки на лобовое стекло были эдакими щетками с ручкой, которую водитель должен был приводить в действие руками.</p>
-<p><img class="aligncenter size-large wp-image-1461" src="/uploads/2017/04/IMG_3414-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3414-1024x768.jpg 1024w, /uploads/2017/04/IMG_3414-300x225.jpg 300w, /uploads/2017/04/IMG_3414-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1461" src="/uploads/2017/04/IMG_3414-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3414-1024x768.jpg 1024w, /uploads/2017/04/IMG_3414-300x225.jpg 300w, /uploads/2017/04/IMG_3414-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>После прихода Гитлера к власти компания получает хорошие госзаказы на производство двигателей для самолетов и тяжелой техники, выделяются государственные средства на мотоспорт.</p>
-<p><img class="aligncenter size-large wp-image-1460" src="/uploads/2017/04/IMG_3413-768x1024.jpg" alt="" width="700" height="933" srcset="/uploads/2017/04/IMG_3413-768x1024.jpg 768w, /uploads/2017/04/IMG_3413-225x300.jpg 225w" sizes="(max-width: 700px) 100vw, 700px" /></p>
-<p><img class="aligncenter size-large wp-image-1457" src="/uploads/2017/04/IMG_3410-768x1024.jpg" alt="" width="700" height="933" srcset="/uploads/2017/04/IMG_3410-768x1024.jpg 768w, /uploads/2017/04/IMG_3410-225x300.jpg 225w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1460" src="/uploads/2017/04/IMG_3413-768x1024.jpg" alt="" width="700" height="933" srcset="/uploads/2017/04/IMG_3413-768x1024.jpg 768w, /uploads/2017/04/IMG_3413-225x300.jpg 225w" sizes="(max-width: 700px) 100vw, 700px" />
+<img class="aligncenter size-large wp-image-1457" src="/uploads/2017/04/IMG_3410-768x1024.jpg" alt="" width="700" height="933" srcset="/uploads/2017/04/IMG_3410-768x1024.jpg 768w, /uploads/2017/04/IMG_3410-225x300.jpg 225w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>После того, как быстрой победы у немцев не получилось, призыв в армию забирает большую часть мужчин сотрудников компании на фронт и к станкам становятся женщины, а затем и пленные. В годы войны 50% работающих в компании были forced labour employees. Продукция компании стала на 100% армейской, производить и продавать личные автомобили было запрещено. Ближе к концу войны союзники разбомбили завод Мерседес практически полностью.</p>
-<p><img class="aligncenter size-large wp-image-1464" src="/uploads/2017/04/IMG_3417-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3417-1024x768.jpg 1024w, /uploads/2017/04/IMG_3417-300x225.jpg 300w, /uploads/2017/04/IMG_3417-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
-<p><img class="aligncenter size-large wp-image-1463" src="/uploads/2017/04/IMG_3416-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3416-1024x768.jpg 1024w, /uploads/2017/04/IMG_3416-300x225.jpg 300w, /uploads/2017/04/IMG_3416-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1464" src="/uploads/2017/04/IMG_3417-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3417-1024x768.jpg 1024w, /uploads/2017/04/IMG_3417-300x225.jpg 300w, /uploads/2017/04/IMG_3417-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
+<img class="aligncenter size-large wp-image-1463" src="/uploads/2017/04/IMG_3416-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3416-1024x768.jpg 1024w, /uploads/2017/04/IMG_3416-300x225.jpg 300w, /uploads/2017/04/IMG_3416-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Восстановлению завода из руин способствовал тот факт, что автомобили Мерседес, которых было произведено к этому времени очень много охотно использовали союзники, и завод стал предоставлять услуги по ремонту и понемногу выпускать запчасти. Компания сосредоточилась на открытии новых заводов за пределами Германии, так один из первых зарубежных заводов был построен в Аргентине.</p>
-<p><img class="aligncenter size-large wp-image-1453" src="/uploads/2017/04/IMG_3405-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3405-1024x768.jpg 1024w, /uploads/2017/04/IMG_3405-300x225.jpg 300w, /uploads/2017/04/IMG_3405-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
-<p><img class="aligncenter size-large wp-image-1451" src="/uploads/2017/04/IMG_3403-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3403-1024x768.jpg 1024w, /uploads/2017/04/IMG_3403-300x225.jpg 300w, /uploads/2017/04/IMG_3403-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1453" src="/uploads/2017/04/IMG_3405-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3405-1024x768.jpg 1024w, /uploads/2017/04/IMG_3405-300x225.jpg 300w, /uploads/2017/04/IMG_3405-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
+<img class="aligncenter size-large wp-image-1451" src="/uploads/2017/04/IMG_3403-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3403-1024x768.jpg 1024w, /uploads/2017/04/IMG_3403-300x225.jpg 300w, /uploads/2017/04/IMG_3403-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Компания охотно и много участвовала в гонках, а наработки и удачные идеи из спортивных автомобилей переходили в серийный выпуск.</p>
-<p><img class="aligncenter size-large wp-image-1455" src="/uploads/2017/04/IMG_3408-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3408-1024x768.jpg 1024w, /uploads/2017/04/IMG_3408-300x225.jpg 300w, /uploads/2017/04/IMG_3408-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1455" src="/uploads/2017/04/IMG_3408-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3408-1024x768.jpg 1024w, /uploads/2017/04/IMG_3408-300x225.jpg 300w, /uploads/2017/04/IMG_3408-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Так, знаменитая компоновка «крыло чайки» появилась в результате того, что облегченная рама кузова проходила слишком высоко для традиционной двери и пришлось придумать другой способ открывания для дверей.</p>
-<p><img class="aligncenter size-large wp-image-1465" src="/uploads/2017/04/IMG_3418-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3418-1024x768.jpg 1024w, /uploads/2017/04/IMG_3418-300x225.jpg 300w, /uploads/2017/04/IMG_3418-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1465" src="/uploads/2017/04/IMG_3418-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3418-1024x768.jpg 1024w, /uploads/2017/04/IMG_3418-300x225.jpg 300w, /uploads/2017/04/IMG_3418-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
 <div id="attachment_1469" style="width: 710px" class="wp-caption aligncenter">
   <img aria-describedby="caption-attachment-1469" class="wp-image-1469 size-large" src="/uploads/2017/04/IMG_3422-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3422-1024x768.jpg 1024w, /uploads/2017/04/IMG_3422-300x225.jpg 300w, /uploads/2017/04/IMG_3422-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
   <p id="caption-attachment-1469" class="wp-caption-text">
@@ -1792,11 +1816,11 @@ restart: always</p>
 </div>
 <p> </p>
 <p>Первые подушки безопасности и ABS был изобретен в Mersedes Benz, также как и проведены первые в мире креш-тесты.</p>
-<p><img class="aligncenter size-large wp-image-1454" src="/uploads/2017/04/IMG_3407-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3407-1024x768.jpg 1024w, /uploads/2017/04/IMG_3407-300x225.jpg 300w, /uploads/2017/04/IMG_3407-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1454" src="/uploads/2017/04/IMG_3407-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3407-1024x768.jpg 1024w, /uploads/2017/04/IMG_3407-300x225.jpg 300w, /uploads/2017/04/IMG_3407-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>На текущий момент у компании есть все модели с современными техническими достижениями: на топливных ячейках и электромобили. Как только рынок будет для их выпуска достаточный, думаю производство быстро станет масштабным.</p>
 <p> </p>
-<p><img class="aligncenter size-large wp-image-1472" src="/uploads/2017/04/IMG_3429-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3429-1024x768.jpg 1024w, /uploads/2017/04/IMG_3429-300x225.jpg 300w, /uploads/2017/04/IMG_3429-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
-<p><img class="aligncenter size-large wp-image-1456" src="/uploads/2017/04/IMG_3409-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3409-1024x768.jpg 1024w, /uploads/2017/04/IMG_3409-300x225.jpg 300w, /uploads/2017/04/IMG_3409-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1472" src="/uploads/2017/04/IMG_3429-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3429-1024x768.jpg 1024w, /uploads/2017/04/IMG_3429-300x225.jpg 300w, /uploads/2017/04/IMG_3429-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
+<img class="aligncenter size-large wp-image-1456" src="/uploads/2017/04/IMG_3409-1024x768.jpg" alt="" width="700" height="525" srcset="/uploads/2017/04/IMG_3409-1024x768.jpg 1024w, /uploads/2017/04/IMG_3409-300x225.jpg 300w, /uploads/2017/04/IMG_3409-768x576.jpg 768w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Организован музей настолько здорово, что настоятельно рекомендую поехать в Штуттгарт и увидеть все своими глазами.</p></div>
 </div>
 
@@ -1806,15 +1830,15 @@ restart: always</p>
     </h1>
     <div class="date">22.03.2017</div>
     <div><p>В прошлом посте <a href="/2016/10/%D0%B1%D0%BB%D0%B5%D1%81%D0%BA-%D0%B8-%D0%BD%D0%B8%D1%89%D0%B5%D1%82%D0%B0-opencart-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B2%D0%B8%D0%B6%D0%BA%D0%B0-%D0%B4%D0%BB%D1%8F-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD/">я рассказывал о косяках Opencart</a>, сегодня хочу рассказать о том, как мы переехали на новый движок <a href="https://horoshop.com.ua/">интернет-магазина Хорошоп</a>.</p>
-<p><img class="aligncenter size-large wp-image-1413" src="/uploads/2017/03/Скриншот-2017-03-22-16.29.40-1024x737.png" alt="" width="700" height="504" srcset="/uploads/2017/03/Скриншот-2017-03-22-16.29.40-1024x737.png 1024w, /uploads/2017/03/Скриншот-2017-03-22-16.29.40-300x216.png 300w, /uploads/2017/03/Скриншот-2017-03-22-16.29.40-768x553.png 768w, /uploads/2017/03/Скриншот-2017-03-22-16.29.40.png 1583w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1413" src="/uploads/2017/03/Скриншот-2017-03-22-16.29.40-1024x737.png" alt="" width="700" height="504" srcset="/uploads/2017/03/Скриншот-2017-03-22-16.29.40-1024x737.png 1024w, /uploads/2017/03/Скриншот-2017-03-22-16.29.40-300x216.png 300w, /uploads/2017/03/Скриншот-2017-03-22-16.29.40-768x553.png 768w, /uploads/2017/03/Скриншот-2017-03-22-16.29.40.png 1583w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Самое важное в интернет-магазине это, конечно, удобство для посетителя и дизайн. И здесь у Хорошоп все очень хорошо, поскольку вы не занимаетесь выбором «шкурки» и кастомизацией миллиона параметров как это происходит с Опенкартом, а получаете готовую работу с уникальным дизайном, который везде хорош и складен, в том числе и на мобильных платформах. Мы заказали <a href="https://truper.com/">дизайн «как у Truper»</a> и с первой попытки получили результат, который ни разу не хотелось исправить! А это дорогого стоит.</p>
 <p>Второе по важности качество, это удобство заказа и оплаты, возможность выполнить заказ «в один клик»™. И здесь Хорошоп был хорош, интеграция с всевозможными инструментами, такими как Liqpay для оплаты через Приват24, интеграция с API Новой Почты, которая позволяет делать экспресс-накладную (!) и интеграция с смс-сервисом. Все это очень и очень позитивно сказывается на воронке продаж и конверсии.</p>
 <p>Третье, аналитика. Интеграция с Google Analytics и Yandex.Metrika работают просто отлично, с пошаговой конверсией, через dataLayer<img class="aligncenter size-large wp-image-1411" src="/uploads/2017/03/Скриншот-2017-03-22-16.25.08-1024x543.png" alt="" width="700" height="371" srcset="/uploads/2017/03/Скриншот-2017-03-22-16.25.08-1024x543.png 1024w, /uploads/2017/03/Скриншот-2017-03-22-16.25.08-300x159.png 300w, /uploads/2017/03/Скриншот-2017-03-22-16.25.08-768x407.png 768w, /uploads/2017/03/Скриншот-2017-03-22-16.25.08.png 1623w" sizes="(max-width: 700px) 100vw, 700px" /></p>
 <p> </p>
-<p><img class="aligncenter size-large wp-image-1412" src="/uploads/2017/03/Скриншот-2017-03-22-16.28.11-1024x497.png" alt="" width="700" height="340" srcset="/uploads/2017/03/Скриншот-2017-03-22-16.28.11-1024x497.png 1024w, /uploads/2017/03/Скриншот-2017-03-22-16.28.11-300x146.png 300w, /uploads/2017/03/Скриншот-2017-03-22-16.28.11-768x373.png 768w, /uploads/2017/03/Скриншот-2017-03-22-16.28.11.png 1108w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1412" src="/uploads/2017/03/Скриншот-2017-03-22-16.28.11-1024x497.png" alt="" width="700" height="340" srcset="/uploads/2017/03/Скриншот-2017-03-22-16.28.11-1024x497.png 1024w, /uploads/2017/03/Скриншот-2017-03-22-16.28.11-300x146.png 300w, /uploads/2017/03/Скриншот-2017-03-22-16.28.11-768x373.png 768w, /uploads/2017/03/Скриншот-2017-03-22-16.28.11.png 1108w" sizes="(max-width: 700px) 100vw, 700px" />
 <p> </p>
 <p>Четвертое, управление товаром. Отлично продуманная навигация, удобный парсинг прайса из XLS, все это в сильно лучшую сторону отличает Хорошоп от Opencart. Гибкая фильтрация каталога, там где нужно удобное обновление информации без перезагрузки страницы. Например, установка новой цены на товар может выполняться прямо в таблице товара, как в екселе!</p>
-<p><img class="aligncenter size-large wp-image-1415" src="/uploads/2017/03/Скриншот-2017-03-22-16.34.02-1024x250.png" alt="" width="700" height="171" srcset="/uploads/2017/03/Скриншот-2017-03-22-16.34.02-1024x250.png 1024w, /uploads/2017/03/Скриншот-2017-03-22-16.34.02-300x73.png 300w, /uploads/2017/03/Скриншот-2017-03-22-16.34.02-768x188.png 768w, /uploads/2017/03/Скриншот-2017-03-22-16.34.02.png 1146w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1415" src="/uploads/2017/03/Скриншот-2017-03-22-16.34.02-1024x250.png" alt="" width="700" height="171" srcset="/uploads/2017/03/Скриншот-2017-03-22-16.34.02-1024x250.png 1024w, /uploads/2017/03/Скриншот-2017-03-22-16.34.02-300x73.png 300w, /uploads/2017/03/Скриншот-2017-03-22-16.34.02-768x188.png 768w, /uploads/2017/03/Скриншот-2017-03-22-16.34.02.png 1146w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Пакетная загрузка картинок. По-моему про эту фичу следует рассказывать на каждом шагу. Достаточно назвать фотографию товара, переименовать ее название в артикул товара и загрузить через пакетную загрузку. На картинку автоматически наложится watermark, картинка прикрепится к нужному товару и на все про все уйдет минимум времени.</p>
 <p>Подрезюмирую. По-моему желание сэкономить затраты на старте и пройти всю боль, отрицание и принятие настройки и интеграции модулей и тем оформления Opencart следует каждому начинающему интернет-предпринимателю. Иначе как он сможет сразу оценить все то, что изначально сделано правильно и хорошо и все то, на что НЕ ПОТРАТИТСЯ уйма времени и сил и будет работать сразу как надо из коробки в хорошем продукте, в таком как Хорошоп.</p>
 <p>P.S. При переезде старые ссылки, если об этом не позаботиться специально, перестанут работать и поэтому могут просесть и таки просядут позиции сайта по важным поисковым запроса. Хорошоп здесь показывает себя хорошо, так как позволяет устанавливать те же ссылки на товар, что и были на старом сайте.</p>
@@ -1879,7 +1903,7 @@ restart: always</p>
 </div>
 
 <p>Такой же вебвизор как и в Яндекс Метрике. Бесплатный чуть более чем полностью. <a href="https://www.smartlook.com/">https://www.smartlook.com/</a></p>
-<p><img class="size-large wp-image-1383 alignnone" src="/uploads/2016/10/Скриншот-2016-10-27-13.31.42-1024x158.png" alt="%d1%81%d0%ba%d1%80%d0%b8%d0%bd%d1%88%d0%be%d1%82-2016-10-27-13-31-42" width="700" height="108" srcset="/uploads/2016/10/Скриншот-2016-10-27-13.31.42-1024x158.png 1024w, /uploads/2016/10/Скриншот-2016-10-27-13.31.42-300x46.png 300w, /uploads/2016/10/Скриншот-2016-10-27-13.31.42-768x119.png 768w, /uploads/2016/10/Скриншот-2016-10-27-13.31.42.png 1282w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="size-large wp-image-1383 alignnone" src="/uploads/2016/10/Скриншот-2016-10-27-13.31.42-1024x158.png" alt="%d1%81%d0%ba%d1%80%d0%b8%d0%bd%d1%88%d0%be%d1%82-2016-10-27-13-31-42" width="700" height="108" srcset="/uploads/2016/10/Скриншот-2016-10-27-13.31.42-1024x158.png 1024w, /uploads/2016/10/Скриншот-2016-10-27-13.31.42-300x46.png 300w, /uploads/2016/10/Скриншот-2016-10-27-13.31.42-768x119.png 768w, /uploads/2016/10/Скриншот-2016-10-27-13.31.42.png 1282w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Наблюдать за пользователями сайта realtime? Да еще и кликать за них мышью? Да, такое возможно.</p>
 <p><a href="https://peekin.io/">https://peekin.io/</a> Сам сервис хоть и бесплатен, но в стадии alpha.</p>
 <p>Stay tuned.</p>
@@ -1892,7 +1916,7 @@ restart: always</p>
     </h1>
     <div class="date">13.10.2016</div>
     <div><p>Это продолжение серии статей «Как я запускал <a href="https://super-truper.com.ua">интернет-магазин</a>«. <a href="http://nexusnotes.ru/2016/07/%D0%BA%D0%B0%D0%BA-%D1%8F-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%BB-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1/">Часть 1 (Аналитика спроса перед запуском)</a>. <a href="http://nexusnotes.ru/2016/07/%D0%BA%D0%B0%D0%BA-%D1%8F-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%BB-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D1%87%D0%B0%D1%81%D1%82%D1%8C-2/">Часть 2 (Выбор движка для интернет-магазина)</a>.</p>
-<p><img class="aligncenter size-full wp-image-1377" src="/uploads/2016/10/opencart1-500x500.png" alt="opencart1-500x500" width="500" height="500" srcset="/uploads/2016/10/opencart1-500x500.png 500w, /uploads/2016/10/opencart1-500x500-150x150.png 150w, /uploads/2016/10/opencart1-500x500-300x300.png 300w, /uploads/2016/10/opencart1-500x500-144x144.png 144w" sizes="(max-width: 500px) 100vw, 500px" /></p>
+<img class="aligncenter size-full wp-image-1377" src="/uploads/2016/10/opencart1-500x500.png" alt="opencart1-500x500" width="500" height="500" srcset="/uploads/2016/10/opencart1-500x500.png 500w, /uploads/2016/10/opencart1-500x500-150x150.png 150w, /uploads/2016/10/opencart1-500x500-300x300.png 300w, /uploads/2016/10/opencart1-500x500-144x144.png 144w" sizes="(max-width: 500px) 100vw, 500px" />
 <p>А еще я в некотором роде разработчик. Для меня HTML, CSS, JS не пустые аббревиатуры, в 1999 году я сделал первый PHP+MySQL сайт за деньги. Сейчас у меня другое занятие, которое приносит деньги, но хотелось окунуться в чудесный мир e-commerce за небольшие деньги и сжатые сроки. По опросам знакомых веб-студий я сошелся на мнении, что нужно ставить OpenCart. Модулей ведь много, на все случаи жизни практически. Да и в базе движок выглядит достаточно приличным. И мой давний приятель, у которого довольно раскрученный магазин с хорошим трафиком, сказал «только Opencart есть движок с православно правильной архитектурой».</p>
 <p>Ну, думаю, буду экономить свое дорогое время разработчика, буду покупать модули, это же дешевле стоимости часов разработчика. Забегая вперед, в итоге пришлось мне тратить ОЧЕНЬ МНОГО своего времени разработчика после установки модулей чтобы их просто подружить друг с другом да и просто устранить проблемы, не говоря уже о том, что многие модули работают мягко говоря не так, как ожидалось. А некоторые модули вообще оказались несовместимыми друг с другом 🙁 .</p>
 <p>Итак, закатал я рукава и полез по колено в OpenCart, думал, всего-то, установить пару модулей и вперед к вершинам электронной коммерции и маркетинга.</p>
@@ -1979,7 +2003,7 @@ restart: always</p>
     </h1>
     <div class="date">11.08.2016</div>
     <div><p>APFS действительно новая файловая система от Apple вобравшая в себя лучшие черты ZFS.</p>
-<p><img class="alignnone" src="http://blog.fosketts.net/wp-content/uploads/2016/06/APFS-Structure-500x354.png" width="500" height="354" /></p>
+<img class="alignnone" src="http://blog.fosketts.net/wp-content/uploads/2016/06/APFS-Structure-500x354.png" width="500" height="354" />
 <p>Но в дисковой утилите вы его не найдете, только через командную строку diskutil</p>
 <p>diskutil apfs list</p>
 <p>WARNING: You are using a pre-release version of the Apple File System called</p>
@@ -2023,9 +2047,9 @@ restart: always</p>
 <li>активная разработка</li>
 </ul>
 <p>По опросам друзей лидировал Opencart, затем CS Cart и Magento. Opencart богат недорогими расширениями-модулями, в тоже время ценник на модули и на рейт программиста для Magento сильно выше. Ну а CS Cart, по отзывам, уже содержит в базе большинство функционала, который для opencart и magento поставляется в виде плагинов.</p>
-<p><img class="alignnone" src="http://www.opencart.com/opencart/application/view/image/logo.png" width="268" height="50" /></p>
+<img class="alignnone" src="http://www.opencart.com/opencart/application/view/image/logo.png" width="268" height="50" />
 <p>К Opencart <a href="http://octheme.com/octheme-1080.html">куплена шкурка-тема</a>, пришлось ее немного доработать для исправления глюков.</p>
-<p><img class="alignnone" src="http://octheme.com/image/cache/catalog/theme/1080/banner-350x350.png" width="350" height="350" /></p>
+<img class="alignnone" src="http://octheme.com/image/cache/catalog/theme/1080/banner-350x350.png" width="350" height="350" />
 <p>Какие плагины необходимо устанавливать в обязательном порядке? Выделю следующие:</p>
 <ul>
 <li>CompleteSEO — даст возможность гибко управлять мета-информацией для успешной раскрутки. Указывать URL которые содержать ключевые слова, H1, meta title, meta keywords и description, а также добавит schema разметку для поисковиков, чтобы красиво отображать названия и цену прямо в результатах поиска.<img class="aligncenter size-full wp-image-1348" src="/uploads/2016/07/Скриншот-2016-07-29-14.54.56.png" alt="Скриншот 2016-07-29 14.54.56" width="628" height="372" srcset="/uploads/2016/07/Скриншот-2016-07-29-14.54.56.png 628w, /uploads/2016/07/Скриншот-2016-07-29-14.54.56-300x178.png 300w" sizes="(max-width: 628px) 100vw, 628px" /></li>
@@ -2036,9 +2060,9 @@ restart: always</p>
 <li>модуль доставки перевозчиком Delivery<img class="aligncenter size-full wp-image-1352" src="/uploads/2016/07/Скриншот-2016-07-29-15.02.29.png" alt="Скриншот 2016-07-29 15.02.29" width="905" height="628" srcset="/uploads/2016/07/Скриншот-2016-07-29-15.02.29.png 905w, /uploads/2016/07/Скриншот-2016-07-29-15.02.29-300x208.png 300w, /uploads/2016/07/Скриншот-2016-07-29-15.02.29-768x533.png 768w" sizes="(max-width: 905px) 100vw, 905px" /></li>
 </ul>
 <p>Поскольку по-умолчанию страница оформления заказа в Opencart работает в 5 этапов также пришлось применить скрипт оптимизации оформления заказа, сборка всех полей заказа на одну страницу.</p>
-<p><img class="aligncenter size-large wp-image-1353" src="/uploads/2016/07/Скриншот-2016-07-29-15.03.33-1024x713.png" alt="Скриншот 2016-07-29 15.03.33" width="700" height="487" srcset="/uploads/2016/07/Скриншот-2016-07-29-15.03.33-1024x713.png 1024w, /uploads/2016/07/Скриншот-2016-07-29-15.03.33-300x209.png 300w, /uploads/2016/07/Скриншот-2016-07-29-15.03.33-768x535.png 768w, /uploads/2016/07/Скриншот-2016-07-29-15.03.33.png 1203w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1353" src="/uploads/2016/07/Скриншот-2016-07-29-15.03.33-1024x713.png" alt="Скриншот 2016-07-29 15.03.33" width="700" height="487" srcset="/uploads/2016/07/Скриншот-2016-07-29-15.03.33-1024x713.png 1024w, /uploads/2016/07/Скриншот-2016-07-29-15.03.33-300x209.png 300w, /uploads/2016/07/Скриншот-2016-07-29-15.03.33-768x535.png 768w, /uploads/2016/07/Скриншот-2016-07-29-15.03.33.png 1203w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Для повышения безопасности и благотворного влияния на поисковики был подключен SSL сертификат от <a href="http://startssl.com">Startssl</a>. И настроил перенаправление с http на https версию сайта.</p>
-<p><img class="aligncenter size-full wp-image-1354" src="/uploads/2016/07/Скриншот-2016-07-29-15.04.31.png" alt="Скриншот 2016-07-29 15.04.31" width="801" height="265" srcset="/uploads/2016/07/Скриншот-2016-07-29-15.04.31.png 801w, /uploads/2016/07/Скриншот-2016-07-29-15.04.31-300x99.png 300w, /uploads/2016/07/Скриншот-2016-07-29-15.04.31-768x254.png 768w" sizes="(max-width: 801px) 100vw, 801px" /></p>
+<img class="aligncenter size-full wp-image-1354" src="/uploads/2016/07/Скриншот-2016-07-29-15.04.31.png" alt="Скриншот 2016-07-29 15.04.31" width="801" height="265" srcset="/uploads/2016/07/Скриншот-2016-07-29-15.04.31.png 801w, /uploads/2016/07/Скриншот-2016-07-29-15.04.31-300x99.png 300w, /uploads/2016/07/Скриншот-2016-07-29-15.04.31-768x254.png 768w" sizes="(max-width: 801px) 100vw, 801px" />
 <p> </p>
 <p>Итого мои впечатления от выбора: Opencart позволяет быстро «взлететь» и специалистов-разработчиков на рынке очень много, поэтому можно их «перебрать» и найти годного специалиста по критерию цена/качество. В целом для меня как для разработчика покопаться в Opencart и его плагинах оказалось опытом довольно интересным, но малоприятным. Все потому, что разработчики Opencart решили применить такое себе кунг-фу VQMOD для того, что бы код движка был неизменным и его можно было «патчить» без изменения. Идея хорошая, но реализация в виде XML файла, который содержит строки для regexp поиска и замены кода кусками … мягко говоря не очень.</p>
 <p>В следующей части я расскажу про инструменты аналитики и продвижения интернет-магазина: Google Tag Manager, Google Analytics, Yandex.Metrika + Webvisor, Google Search Console и Yandex.Webmaster.</p>
@@ -2056,16 +2080,16 @@ restart: always</p>
 <p>FM-трансмиттерами я пробовал пользоваться и раньше. Для iPhone 4 у меня был Griffin iTrip, который я бы не сказал, что хорошо работал, да еще и адски быстро садил батарею, да и требовал быть подключенным к непосредственно телефону. Roidme же предлагает еще и подпитывать ваш телефон, имея два (!) разъема зарядки по 2A, что, конечно же, не может не оценить ваша вторая половина, когда сможет одновременно заряжать и свой и ваш смартфон.</p>
 <p>Выполнен Roidme в превосходном корпусе из качественного пластика, металлическая часть с хромированным покрытием выглядит тоже очень презентабельно. Вставив в прикуриватель я не без удивления обнаружил, что крышку пепельницы можно закрыть и трансмиттера не будет видно вовсе!</p>
 <p>После запуска двигателя Roidme займет предустановленную FM частоту о чем оповестит вас звуковым сигналом, а также цветом индикатора разъема. В Roidme 2S цвета, которыми будет мигать устройство настраиваются прямо из приложения.</p>
-<p><img class="aligncenter size-large wp-image-1341" src="/uploads/2016/07/IMG_2148-1024x768.jpg" alt="IMG_2148" width="700" height="525" srcset="/uploads/2016/07/IMG_2148-1024x768.jpg 1024w, /uploads/2016/07/IMG_2148-300x225.jpg 300w, /uploads/2016/07/IMG_2148-768x576.jpg 768w, /uploads/2016/07/IMG_2148.jpg 1280w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1341" src="/uploads/2016/07/IMG_2148-1024x768.jpg" alt="IMG_2148" width="700" height="525" srcset="/uploads/2016/07/IMG_2148-1024x768.jpg 1024w, /uploads/2016/07/IMG_2148-300x225.jpg 300w, /uploads/2016/07/IMG_2148-768x576.jpg 768w, /uploads/2016/07/IMG_2148.jpg 1280w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Различие Roidme от Roidme 2s внешне только в наличии дырочки микрофона. Roidme 2s также имеет возможность работы как fands free используя встроенный микрофон, однако, на моем опыте это не очень хорошая идея, поскольку качество звука оставляло желать лучшего. Оно и понятно, расстояние до источника звука (меня) довольно приличное и таких помех как шум от двигателя предостаточно.</p>
-<p><img class="aligncenter size-large wp-image-1342" src="/uploads/2016/07/IMG_2149-1024x768.jpg" alt="IMG_2149" width="700" height="525" srcset="/uploads/2016/07/IMG_2149-1024x768.jpg 1024w, /uploads/2016/07/IMG_2149-300x225.jpg 300w, /uploads/2016/07/IMG_2149-768x576.jpg 768w, /uploads/2016/07/IMG_2149.jpg 1280w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1342" src="/uploads/2016/07/IMG_2149-1024x768.jpg" alt="IMG_2149" width="700" height="525" srcset="/uploads/2016/07/IMG_2149-1024x768.jpg 1024w, /uploads/2016/07/IMG_2149-300x225.jpg 300w, /uploads/2016/07/IMG_2149-768x576.jpg 768w, /uploads/2016/07/IMG_2149.jpg 1280w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Rodime и Roidme 2s абсолютно идентичны сбоку, но отличаются внутренностями.<img class="aligncenter size-large wp-image-1343" src="/uploads/2016/07/IMG_2150-1024x768.jpg" alt="IMG_2150" width="700" height="525" srcset="/uploads/2016/07/IMG_2150-1024x768.jpg 1024w, /uploads/2016/07/IMG_2150-300x225.jpg 300w, /uploads/2016/07/IMG_2150-768x576.jpg 768w, /uploads/2016/07/IMG_2150.jpg 1280w" sizes="(max-width: 700px) 100vw, 700px" /></p>
 <p>С RoidMe я столкнулся с неприятной особенностью, что нельзя его настроить из iPhone. Для изменения частоты с дефолтной 94,6 на более свободную пришлось использовать Android.</p>
-<p><img class="aligncenter size-large wp-image-1344" src="/uploads/2016/07/IMG_2151-576x1024.jpg" alt="IMG_2151" width="576" height="1024" srcset="/uploads/2016/07/IMG_2151-576x1024.jpg 576w, /uploads/2016/07/IMG_2151-169x300.jpg 169w, /uploads/2016/07/IMG_2151.jpg 720w" sizes="(max-width: 576px) 100vw, 576px" /></p>
-<p><img class="aligncenter size-large wp-image-1345" src="/uploads/2016/07/IMG_2152-576x1024.jpg" alt="IMG_2152" width="576" height="1024" srcset="/uploads/2016/07/IMG_2152-576x1024.jpg 576w, /uploads/2016/07/IMG_2152-169x300.jpg 169w, /uploads/2016/07/IMG_2152.jpg 720w" sizes="(max-width: 576px) 100vw, 576px" /></p>
+<img class="aligncenter size-large wp-image-1344" src="/uploads/2016/07/IMG_2151-576x1024.jpg" alt="IMG_2151" width="576" height="1024" srcset="/uploads/2016/07/IMG_2151-576x1024.jpg 576w, /uploads/2016/07/IMG_2151-169x300.jpg 169w, /uploads/2016/07/IMG_2151.jpg 720w" sizes="(max-width: 576px) 100vw, 576px" />
+<img class="aligncenter size-large wp-image-1345" src="/uploads/2016/07/IMG_2152-576x1024.jpg" alt="IMG_2152" width="576" height="1024" srcset="/uploads/2016/07/IMG_2152-576x1024.jpg 576w, /uploads/2016/07/IMG_2152-169x300.jpg 169w, /uploads/2016/07/IMG_2152.jpg 720w" sizes="(max-width: 576px) 100vw, 576px" />
 <p> </p>
 <p>В качестве бонуса ваш Roidme способен мониторить вольтаж аккумулятора в автомобиле в состоянии работы и в выключенном.</p>
-<p><img class="aligncenter size-large wp-image-1346" src="/uploads/2016/07/IMG_2153-576x1024.jpg" alt="IMG_2153" width="576" height="1024" srcset="/uploads/2016/07/IMG_2153-576x1024.jpg 576w, /uploads/2016/07/IMG_2153-169x300.jpg 169w, /uploads/2016/07/IMG_2153.jpg 720w" sizes="(max-width: 576px) 100vw, 576px" /></p>
+<img class="aligncenter size-large wp-image-1346" src="/uploads/2016/07/IMG_2153-576x1024.jpg" alt="IMG_2153" width="576" height="1024" srcset="/uploads/2016/07/IMG_2153-576x1024.jpg 576w, /uploads/2016/07/IMG_2153-169x300.jpg 169w, /uploads/2016/07/IMG_2153.jpg 720w" sizes="(max-width: 576px) 100vw, 576px" />
 <p> </p>
 <p>Краткий вывод: Roidme радует превосходным качеством сигнала, однозначно рекомендую к приобретению. Нет ничего лучше за эти деньги.</p>
 </div>
@@ -2083,20 +2107,20 @@ restart: always</p>
 <p>Как узнать количество продаж товара в той же Розетке? Конечно, они не поделятся статистикой, а есть ли другой способ? Оказывается есть.</p>
 <p>Для этого есть такая гипотеза: 1% от количества всех поисковых запросов заканчиваются покупкой. Как посчитать количество поисковых запросов? Есть ответ — статистика поисковых запросов в популярных сервисах.</p>
 <p>Категорий много, вручную набивать будет долго. Используем <a href="http://parsehub.com">ParseHub</a> для получения списка всех категорий с сайта оптового поставщика.</p>
-<p><img class="aligncenter size-large wp-image-1329" src="/uploads/2016/07/Скриншот-2016-07-22-16.28.04-1024x583.png" alt="Скриншот 2016-07-22 16.28.04" width="700" height="399" srcset="/uploads/2016/07/Скриншот-2016-07-22-16.28.04-1024x583.png 1024w, /uploads/2016/07/Скриншот-2016-07-22-16.28.04-300x171.png 300w, /uploads/2016/07/Скриншот-2016-07-22-16.28.04-768x437.png 768w, /uploads/2016/07/Скриншот-2016-07-22-16.28.04.png 1151w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1329" src="/uploads/2016/07/Скриншот-2016-07-22-16.28.04-1024x583.png" alt="Скриншот 2016-07-22 16.28.04" width="700" height="399" srcset="/uploads/2016/07/Скриншот-2016-07-22-16.28.04-1024x583.png 1024w, /uploads/2016/07/Скриншот-2016-07-22-16.28.04-300x171.png 300w, /uploads/2016/07/Скриншот-2016-07-22-16.28.04-768x437.png 768w, /uploads/2016/07/Скриншот-2016-07-22-16.28.04.png 1151w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Тестируем категории в планировщике ключевых слова в Google Adwords и получаем детальный <a href="https://docs.google.com/spreadsheets/d/1Dy0-cXXE3E8qz9waSJ87VPFHHwmbgFNqXwc3hyjw0Mc/edit?usp=sharing">отчет по ключевым словам категорий ручного инструмента</a> за два года. .</p>
-<p><img class="aligncenter size-large wp-image-1326" src="/uploads/2016/07/Скриншот-2016-07-22-16.19.38-1024x279.png" alt="Скриншот 2016-07-22 16.19.38" width="700" height="191" srcset="/uploads/2016/07/Скриншот-2016-07-22-16.19.38-1024x279.png 1024w, /uploads/2016/07/Скриншот-2016-07-22-16.19.38-300x82.png 300w, /uploads/2016/07/Скриншот-2016-07-22-16.19.38-768x210.png 768w, /uploads/2016/07/Скриншот-2016-07-22-16.19.38.png 1404w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<img class="aligncenter size-large wp-image-1326" src="/uploads/2016/07/Скриншот-2016-07-22-16.19.38-1024x279.png" alt="Скриншот 2016-07-22 16.19.38" width="700" height="191" srcset="/uploads/2016/07/Скриншот-2016-07-22-16.19.38-1024x279.png 1024w, /uploads/2016/07/Скриншот-2016-07-22-16.19.38-300x82.png 300w, /uploads/2016/07/Скриншот-2016-07-22-16.19.38-768x210.png 768w, /uploads/2016/07/Скриншот-2016-07-22-16.19.38.png 1404w" sizes="(max-width: 700px) 100vw, 700px" />
 <p>Также видно, кто откуда приходят покупатели и в каких пропорциях. Киев делает 30,8% всех покупок по отношению к Украине.</p>
-<p><img class="aligncenter size-full wp-image-1332" src="/uploads/2016/07/Скриншот-2016-07-22-16.35.09.png" alt="Скриншот 2016-07-22 16.35.09" width="689" height="249" srcset="/uploads/2016/07/Скриншот-2016-07-22-16.35.09.png 689w, /uploads/2016/07/Скриншот-2016-07-22-16.35.09-300x108.png 300w" sizes="(max-width: 689px) 100vw, 689px" /></p>
+<img class="aligncenter size-full wp-image-1332" src="/uploads/2016/07/Скриншот-2016-07-22-16.35.09.png" alt="Скриншот 2016-07-22 16.35.09" width="689" height="249" srcset="/uploads/2016/07/Скриншот-2016-07-22-16.35.09.png 689w, /uploads/2016/07/Скриншот-2016-07-22-16.35.09-300x108.png 300w" sizes="(max-width: 689px) 100vw, 689px" />
 <h3 id="динамика-спроса-по-товарным-категориям">Динамика спроса по товарным категориям</h3>
 <p>И динамику спроса по каждой товарной категории.</p>
-<p><img class="aligncenter size-full wp-image-1333" src="/uploads/2016/07/Скриншот-2016-07-22-16.37.30.png" alt="Скриншот 2016-07-22 16.37.30" width="823" height="273" srcset="/uploads/2016/07/Скриншот-2016-07-22-16.37.30.png 823w, /uploads/2016/07/Скриншот-2016-07-22-16.37.30-300x100.png 300w, /uploads/2016/07/Скриншот-2016-07-22-16.37.30-768x255.png 768w" sizes="(max-width: 823px) 100vw, 823px" /></p>
+<img class="aligncenter size-full wp-image-1333" src="/uploads/2016/07/Скриншот-2016-07-22-16.37.30.png" alt="Скриншот 2016-07-22 16.37.30" width="823" height="273" srcset="/uploads/2016/07/Скриншот-2016-07-22-16.37.30.png 823w, /uploads/2016/07/Скриншот-2016-07-22-16.37.30-300x100.png 300w, /uploads/2016/07/Скриншот-2016-07-22-16.37.30-768x255.png 768w" sizes="(max-width: 823px) 100vw, 823px" />
 <p>Из таких графиков становится понятно, как действовать с акциями, так, например, видно, что <strong>на лопаты повышается спрос</strong> в ноябре и январе, следовательно нужно разрабатывать <strong>акции</strong> по лопатам в <strong>ноябре</strong> и <strong>январе</strong>, а ближе к июлю переключаться на другие товары, например, на полив.</p>
 <p>В среднем в наших товарных категориях около 60000 поисковых запросов в месяц. Тренд по поисковым запросам через сервисы планировщик ключевых слова в Google Adwords и Yandex Wordstat показывает, что запросы по данным категориям растут примерно на 15% в год. Это значит приблизительно 600 потенциальных покупок ручного инструмента всего в Украине в среднем за месяц, в следующем 2017 году потенциально будет 690 покупок, в 2018 будет 793, а в 2019 будет 912, если динамика в 15% останется неизменной. Если мы претендуем выйти к 2019 году на объем треть рынка продажи ручного инструмента в месяц, то это будет примерно 304 покупки в месяц. А понимание этого факта нам дает возможность посчитать приблизительную прибыль.</p>
 <h3 id="какая-будетприбыль-через-три-года"><strong>Какая будет прибыль через три года?</strong></h3>
 <p>Допустим в 2019 мы захватили треть рынка. Какая будет прибыль?</p>
 <p>При марже на уровне 25% и среднем чеке в 300грн/мес у нас будет объем продаж 114000грн/мес., следовательно, валовая прибыль 28500грн/мес. Поехали от обратного, решим небольшое уравнение и построим линейную зависимость (хотя, конечно, правильнее было бы нелинейную).</p>
-<p><img class="aligncenter size-full wp-image-1324" src="/uploads/2016/07/Скриншот-2016-07-22-15.58.01.png" alt="Скриншот 2016-07-22 15.58.01" width="676" height="420" srcset="/uploads/2016/07/Скриншот-2016-07-22-15.58.01.png 676w, /uploads/2016/07/Скриншот-2016-07-22-15.58.01-300x186.png 300w" sizes="(max-width: 676px) 100vw, 676px" /></p>
+<img class="aligncenter size-full wp-image-1324" src="/uploads/2016/07/Скриншот-2016-07-22-15.58.01.png" alt="Скриншот 2016-07-22 15.58.01" width="676" height="420" srcset="/uploads/2016/07/Скриншот-2016-07-22-15.58.01.png 676w, /uploads/2016/07/Скриншот-2016-07-22-15.58.01-300x186.png 300w" sizes="(max-width: 676px) 100vw, 676px" />
 <p>Ну ок, уже становится понятно, на что рассчитывать в перспективе и что не нужно иметь большую расходную часть на самом старте. Таким образом мы будем самостоятельно принимать заказы по телефону не нанимая сторонние сервисы и не делать доставку по городу используя курьеров, а доставлять исключительно перевозчиками Новая Почта, Деливери с оплатой доставки покупателем. Подключать колл-центр и организовывать службы доставки будем тогда, когда прибыль будет перекрывать эти расходы. Кстати, мы даже можем приблизительно посчитать, когда это произойдет.</p>
 <p>Итак, потенциальные цифры по прибыли понятны, сезонность спроса в целом тоже.</p>
 <p>UPDATE: <a href="/2016/07/%D0%BA%D0%B0%D0%BA-%D1%8F-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%BB-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D1%87%D0%B0%D1%81%D1%82%D1%8C-2/">Часть 2. Выбор движка интернет-магазина.</a></p>
@@ -2516,7 +2540,7 @@ restart: always</p>
 <p><a href="/uploads/2014/04/Screen-Shot-2014-04-25-at-14.25.22.png"><img class="aligncenter size-full wp-image-1198" alt="Screen Shot 2014-04-25 at 14.25.22" src="/uploads/2014/04/Screen-Shot-2014-04-25-at-14.25.22.png" width="430" height="397" srcset="/uploads/2014/04/Screen-Shot-2014-04-25-at-14.25.22.png 430w, /uploads/2014/04/Screen-Shot-2014-04-25-at-14.25.22-300x276.png 300w" sizes="(max-width: 430px) 100vw, 430px" /></a></p>
 <p> </p>
 <p>Для того, чтобы меньше болели глаза вечером очень рекомендую установить <a href="https://justgetflux.com">бесплатную утилиту F.lux</a></p>
-<p><img class="aligncenter size-full wp-image-1199" alt="Screen Shot 2014-04-25 at 14.28.10" src="/uploads/2014/04/Screen-Shot-2014-04-25-at-14.28.10.png" width="547" height="623" srcset="/uploads/2014/04/Screen-Shot-2014-04-25-at-14.28.10.png 547w, /uploads/2014/04/Screen-Shot-2014-04-25-at-14.28.10-263x300.png 263w" sizes="(max-width: 547px) 100vw, 547px" /></p>
+<img class="aligncenter size-full wp-image-1199" alt="Screen Shot 2014-04-25 at 14.28.10" src="/uploads/2014/04/Screen-Shot-2014-04-25-at-14.28.10.png" width="547" height="623" srcset="/uploads/2014/04/Screen-Shot-2014-04-25-at-14.28.10.png 547w, /uploads/2014/04/Screen-Shot-2014-04-25-at-14.28.10-263x300.png 263w" sizes="(max-width: 547px) 100vw, 547px" />
 <p>Вечером она автоматически переведет баланс белого в менее яркий путем понижения температуры цвета, что благоприятнее скажется на усталости глаз при просмотре фильмов/чтении. Проверено на себе — работает!</p>
 <p>В трее клик на флаг клавиатуры -&gt; show character viewer и вы сможете вставлять в текст прикольные штуки типа этой <strong>☃ это был снеговик</strong></p>
 <p><a href="/uploads/2014/04/Screen-Shot-2014-04-25-at-14.32.33.png"><img class="aligncenter size-full wp-image-1200" alt="Screen Shot 2014-04-25 at 14.32.33" src="/uploads/2014/04/Screen-Shot-2014-04-25-at-14.32.33.png" width="580" height="427" srcset="/uploads/2014/04/Screen-Shot-2014-04-25-at-14.32.33.png 580w, /uploads/2014/04/Screen-Shot-2014-04-25-at-14.32.33-300x220.png 300w" sizes="(max-width: 580px) 100vw, 580px" /></a></p>
@@ -2583,7 +2607,7 @@ restart: always</p>
     <div><p>Сегодня я начинаю писать необычный пост. Хочу выложить все кусочки нашего политического паззла, которые мне известны и попробовать их выложить аккуратно плиточкой для получения более целостной картины политического мира.</p>
 <p>Также мы попробуем ответить на вечные вопросы русской интеллигенции: что происходит, кто виноват и что делать.</p>
 <p><strong>Что именно происходит в Украине?</strong></p>
-<p><img class="aligncenter" alt="" src="http://img5.joyreactor.cc/pics/post/политота-песочница-демотиваторы-Путин-105735.jpeg" width="384" height="618" /></p>
+<img class="aligncenter" alt="" src="http://img5.joyreactor.cc/pics/post/политота-песочница-демотиваторы-Путин-105735.jpeg" width="384" height="618" />
 <p><strong>Экономика.</strong></p>
 <p>Экономика Украины в жопе, это видно из <a href="http://zakon4.rada.gov.ua/laws/show/719-18">отрицательного баланса</a> принятого бюджета на 2014 год. 15 млрд заимствований будет достаточно для перекрытия бюджетной дыры ровно на два года. Методы оздоровления экономики связаны с политически непопулярными решениями. Тарифы на газ для населения отличаются в 5 раз от тарифов для предприятий. Тарифы на электроэнергию хотя и дифференцированы, но тоже отличаются раза в 3-4 от производственных. Зарплаты не в госструктурах все также выдаются в конвертах. Население и предприятия очень неохотно платят налоги и при первом удобном случае их «оптимизируют». Олигархия старается выводить средства из страны на счета швейцарских/европейских банков и в оффшоры, ибо так безопаснее. Происходят попытки воплотить некоторые <a href="http://finance.bigmir.net/news/companies/44890-V-Krimy-na-sredstva-kitaiskih-investorov-bydet-postroen-ynikalnii-glybokovodnii-port">грандиозные инфраструктурные проекты</a>.</p>
 <p><strong>Политика и законодательная власть.</strong></p>
@@ -2891,7 +2915,7 @@ restart: always</p>
     <div><p>Все, схема готова.</p>
 <p>Добавлены новые потребности, изменены продукты.</p>
 <p>Об этом и другом вы можете прочесть <a href="http://it-premium.livejournal.com/5779.html">в оригинале записи</a>.</p>
-<p><img class="alignnone" alt="" src="http://ic.pics.livejournal.com/mprokopov/12441316/8217/8217_900.png" width="900" height="589" /></p>
+<img class="alignnone" alt="" src="http://ic.pics.livejournal.com/mprokopov/12441316/8217/8217_900.png" width="900" height="589" />
 </div>
 </div>
 
@@ -2903,7 +2927,7 @@ restart: always</p>
     <div><p>В этот раз мы узнали как же в действительности происходит выявление «кубиков» основных, вспомогательных и управляющих бизнес-процессов.</p>
 <p>В основных процессах появился еще один кубик, которого не было раньше.</p>
 <p>Об этом и многом другом вы можете прочесть в <a href="http://it-premium.livejournal.com/5382.html">блоге Livejournal IT-Premium</a>.</p>
-<p><img class="aligncenter" alt="Основные процессы" src="http://ic.pics.livejournal.com/mprokopov/12441316/7215/7215_900.png" width="432" height="201" /></p>
+<img class="aligncenter" alt="Основные процессы" src="http://ic.pics.livejournal.com/mprokopov/12441316/7215/7215_900.png" width="432" height="201" />
 </div>
 </div>
 
@@ -3403,7 +3427,7 @@ Voila!</pre>
         <a href="https://prokopov.me/2013/01/%D0%BD%D0%B5-%D0%BC%D0%BE%D0%B3%D1%83-%D1%8D%D1%82%D0%BE-%D0%BF%D1%80%D1%8F%D1%82%D0%B0%D1%82%D1%8C-%D0%BF%D1%80%D0%B0%D0%B2%D0%B4%D0%B0-%D0%BE-%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%D0%B5-%D0%B2/">Не могу это прятать :) Правда о дизайне вашего продукта</a>
     </h1>
     <div class="date">28.01.2013</div>
-    <div><p><img style="display: block; margin-left: auto; margin-right: auto;" title="A9-7yQLCYAAwDXY.jpg-large.jpeg" src="/uploads/2013/01/A9-7yQLCYAAwDXY.jpg-large.jpeg" alt="A9 7yQLCYAAwDXY jpg large" width="310" height="600" border="0" /></p>
+    <div><img style="display: block; margin-left: auto; margin-right: auto;" title="A9-7yQLCYAAwDXY.jpg-large.jpeg" src="/uploads/2013/01/A9-7yQLCYAAwDXY.jpg-large.jpeg" alt="A9 7yQLCYAAwDXY jpg large" width="310" height="600" border="0" />
 </div>
 </div>
 
@@ -3512,7 +3536,7 @@ Voila!</pre>
     <div class="date">13.01.2013</div>
     <div><p> </p>
 <p>Для того что бы снять магнитную метку, которую обычно супермаркет вешает на вещи и может забыть снять, нужно обзавестись сильным магнитом.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="removed_tag.jpg" src="/uploads/2013/01/removed_tag.jpg" alt="Removed tag" width="400" height="300" border="0" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="removed_tag.jpg" src="/uploads/2013/01/removed_tag.jpg" alt="Removed tag" width="400" height="300" border="0" />
 <p>Обычно такой магнит можно раздобыть в старом ненужном жестком диске.</p>
 <p><img style="display: block; margin-left: auto; margin-right: auto;" title="002.jpg" src="/uploads/2013/01/002.jpg" alt="002" width="200" height="152" border="0" /><img style="display: block; margin-left: auto; margin-right: auto;" title="004.jpg" src="/uploads/2013/01/004.jpg" alt="004" width="200" height="160" border="0" /></p>
 <p>И применить как на картинке.</p>
@@ -3804,7 +3828,7 @@ Voila!</pre>
     <div><p>С одним из обновлений ушел удобный смарт-плейлист «последние добавленные», но, к счастью, восстановить его задача несложная.</p>
 <p> </p>
 <p>Добавляем смарт-альбом как на скриншоте ниже и вуаля!</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2012-04-30 в 11.08.13.png" src="/uploads/2012/04/Снимок-экрана-2012-04-30-в-11.08.13.png" alt="Снимок экрана 2012 04 30 в 11 08 13" width="600" height="255" border="0" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2012-04-30 в 11.08.13.png" src="/uploads/2012/04/Снимок-экрана-2012-04-30-в-11.08.13.png" alt="Снимок экрана 2012 04 30 в 11 08 13" width="600" height="255" border="0" />
 </div>
 </div>
 
@@ -3846,12 +3870,12 @@ Voila!</pre>
     <div><p>Лично для меня крайне удобным решением для терминала является iTerm2. Однажды, очень захотелось сделать его цветастым. Для получения расцветки необходимо добавить в ~/.bash_profile строку</p>
 <p>export CLICOLOR=1</p>
 <p>По наводке <a href="http://snupt.com/page/2/">@snupt</a> была найдена и установлена тема <a href="http://ethanschoonover.com/solarized">Solarized Dark</a>, из-за которой, однако была практически отключена полупрозрачность из-за которой текст читался значительно хуже.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2012-03-07 в 12.52.31.png" src="/uploads/2012/03/Снимок-экрана-2012-03-07-в-12.52.31.png" border="0" alt="Снимок экрана 2012 03 07 в 12 52 31" width="430" height="257" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2012-03-07 в 12.52.31.png" src="/uploads/2012/03/Снимок-экрана-2012-03-07-в-12.52.31.png" border="0" alt="Снимок экрана 2012 03 07 в 12 52 31" width="430" height="257" />
 <p> </p>
 <p>Также Solarized Dark можно (и нужно) использовать с редакторами Textmate и Sublime Text 2.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2012-03-07 в 12.54.12.png" src="/uploads/2012/03/Снимок-экрана-2012-03-07-в-12.54.12.png" border="0" alt="Снимок экрана 2012 03 07 в 12 54 12" width="430" height="273" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2012-03-07 в 12.54.12.png" src="/uploads/2012/03/Снимок-экрана-2012-03-07-в-12.54.12.png" border="0" alt="Снимок экрана 2012 03 07 в 12 54 12" width="430" height="273" />
 <p>Sublime Text 2 Solarized Dark theme</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2012-03-07 в 12.54.27.png" src="/uploads/2012/03/Снимок-экрана-2012-03-07-в-12.54.27.png" border="0" alt="Снимок экрана 2012 03 07 в 12 54 27" width="430" height="273" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2012-03-07 в 12.54.27.png" src="/uploads/2012/03/Снимок-экрана-2012-03-07-в-12.54.27.png" border="0" alt="Снимок экрана 2012 03 07 в 12 54 27" width="430" height="273" />
 <p>Что бы добавить цветастости к выводу git достаточно сделать следующее:</p>
 <pre escaped="true" lang="shell">git config --global color.branch auto
 git config --global color.diff auto
@@ -3878,8 +3902,8 @@ git config --global color.status auto</pre>
 <p> </p>
 <p>А ведь Windows мог бы быть и таким:</p>
 <p> </p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="desktopoy.jpg" src="/uploads/2012/02/desktopoy1.jpg" border="0" alt="Desktopoy" width="430" height="290" /></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="explorer1o.jpg" src="/uploads/2012/02/explorer1o1.jpg" border="0" alt="Explorer1o" width="430" height="288" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="desktopoy.jpg" src="/uploads/2012/02/desktopoy1.jpg" border="0" alt="Desktopoy" width="430" height="290" />
+<img style="display: block; margin-left: auto; margin-right: auto;" title="explorer1o.jpg" src="/uploads/2012/02/explorer1o1.jpg" border="0" alt="Explorer1o" width="430" height="288" />
 </div>
 </div>
 
@@ -3925,7 +3949,7 @@ git config --global color.status auto</pre>
     <div><p>Обнаружился на днях прекрасный и, что немаловажно, бесплатный онлайн-инструмент для рисования разного рода диаграмм, майндмапов и брейнстормов <a style="cursor: pointer; color: #3b5998; text-decoration: none;" rel="nofollow nofollow" href="http://www.diagram.ly/" target="_blank"><a href="http://www.diagram.ly/">http://www.diagram.ly/</a></a></p>
 <p>Хорошая библиотека как для Business Process Modeling, так и для описания компьютерных схем и прочих вещей. Пятая точка мне подсказывает, что сам проект, вероятно, не долго останется бесплатным и будет монетизироваться. Такие вещи показывают чуть более чем явно движение от desktop apps to cloud apps.</p>
 <p>Вот схема, которую я создал за пару минут в <a href="http://diagram.ly">diagram.ly</a>.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="schema.png" src="/uploads/2012/02/schema.png" border="0" alt="Schema" width="433" height="278" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="schema.png" src="/uploads/2012/02/schema.png" border="0" alt="Schema" width="433" height="278" />
 </div>
 </div>
 
@@ -4046,7 +4070,7 @@ git config --global color.status auto</pre>
     <div class="date">19.01.2012</div>
     <div><p>Если вы мигрируете сайт на новый домен, и не хотите потерять SEO позиций, то важно сделать идеологически правильный редирект.</p>
 <p>Делается он так:</p>
-<pre><code>Options +FollowSymLinks   
+<pre tabindex="0"><code>Options +FollowSymLinks   
 RewriteEngine on   
 RewriteCond %{HTTP_HOST} !^newdomain\.com   
 RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
@@ -4061,7 +4085,7 @@ RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
     </h1>
     <div class="date">09.01.2012</div>
     <div><p>Инфографика, <a href="http://blogs.namba.kg/post.php?id=41361">опубликованная здесь</a>, показывает, какие расхождения в мнениях относительно успеха у бедных людей, среднего достатка и богатых.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="5738961.jpeg" src="/uploads/2012/01/5738961.jpeg" border="0" alt="5738961" width="461" height="600" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="5738961.jpeg" src="/uploads/2012/01/5738961.jpeg" border="0" alt="5738961" width="461" height="600" />
 </div>
 </div>
 
@@ -4072,11 +4096,11 @@ RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
     <div class="date">20.12.2011</div>
     <div><p>Хорошие статьи буду по-немногу вытягивать наверх.</p>
 <p>Обзор электробритвы Philips (можно применить ко всем электробритвам Philips)</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="philips-hq-7290$1.jpg" src="/uploads/2011/12/philips-hq-72901.jpg" border="0" alt="Philips hq 7290$1" width="500" height="500" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="philips-hq-7290$1.jpg" src="/uploads/2011/12/philips-hq-72901.jpg" border="0" alt="Philips hq 7290$1" width="500" height="500" />
 <p><a href="http://nexus.org.ua/weblog/message/613/">http://nexus.org.ua/weblog/message/613/</a></p>
 <p> </p>
 <p>Обзор электробритвы Brown</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="pulsonic2-thumb.jpg" src="/uploads/2011/12/pulsonic2-thumb.jpg" border="0" alt="Pulsonic2 thumb" width="400" height="485" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="pulsonic2-thumb.jpg" src="/uploads/2011/12/pulsonic2-thumb.jpg" border="0" alt="Pulsonic2 thumb" width="400" height="485" />
 <p><a href="http://nexus.org.ua/weblog/message/840/">http://nexus.org.ua/weblog/message/840/</a></p>
 </div>
 </div>
@@ -4103,7 +4127,7 @@ RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
 <p>Очевидные плюсы кандидата: понятность и простота использовавания, бесплатность и русифицированность.</p>
 <p>По большому счету программа делает действия аналогичные Everest Audit (сейчас AiDA), но при этом не просит денег.</p>
 <p><a href="http://checkcfg.narod.ru/">http://checkcfg.narod.ru/</a></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="softsh.gif" src="/uploads/2011/12/softsh.gif" border="0" alt="Softsh" width="550" height="304" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="softsh.gif" src="/uploads/2011/12/softsh.gif" border="0" alt="Softsh" width="550" height="304" />
 <p>К слову, open source аналог данного комплекса, на который стоит посмотреть <a href="http://www.ocsinventory-ng.org/en/about/features/ocsng-glpi.html">http://www.ocsinventory-ng.org/en/about/features/ocsng-glpi.html</a></p>
 <p>Но с веб-интерфейсом там та же беда, что и у большинства open source продуктов, – дизайн выполенный программистом, как говорит г-н Умпутун, нарисованный чужими для хищников.</p>
 <p>UPDATE: а вот простой и функциональный аналог AIDA с открытым кодом <a href="http://www.aspia.ru/">Aspia</a>.</p>
@@ -4131,9 +4155,9 @@ RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
     </h1>
     <div class="date">08.11.2011</div>
     <div><p>В прошлый раз <a href="http://nexusnotes.ru/2011/04/%D0%BF%D1%80%D0%BE-%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82%D0%B8%D0%B7%D0%B0%D1%82%D0%BE%D1%80-tp-link-802-11n-tl-wr1043nd/">я писал о TP-WR1042ND</a>, заставляя его работать как NAS, торрент-клиент и вообще. Так вот, на сегодняшний день имею четкое убеждение и готов сообщить, что не стоит этого делать. В принципе, выпиливая из dd-wrt поддержку AFP, TimeMachine, SMB протоколов, заставить его работать с внешним USB-HDD удалось, однако результаты тестирования весьма удручают.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="images.jpeg" src="/uploads/2011/11/images.jpeg" border="0" alt="Images" width="224" height="183" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="images.jpeg" src="/uploads/2011/11/images.jpeg" border="0" alt="Images" width="224" height="183" />
 <p>Так, при работе торрент-клиента transmission, процессорного времени и производительности дисковой подсистемы уже не хватает для полноценной работы остальных пользовательских приложений, и демоны afpd, smbd просто отваливаются (что неприятно).</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2011-11-08 в 14.34.13.png" src="/uploads/2011/11/Снимок-экрана-2011-11-08-в-14.34.13.png" border="0" alt="Снимок экрана 2011 11 08 в 14 34 13" width="234" height="74" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2011-11-08 в 14.34.13.png" src="/uploads/2011/11/Снимок-экрана-2011-11-08-в-14.34.13.png" border="0" alt="Снимок экрана 2011 11 08 в 14 34 13" width="234" height="74" />
 <p>Скорось работы HDD обескураживает, оставаясь на уровне 3,3Mb/sec в пике нагрузки. Timemachine по wifi, в этом случае будет работать вечно, так и не достигнув экстаза.</p>
 <p>В целом девайс, обладая 802.11n и 1Gbit интерфейсами, пропускную способность в 1Gbit не обеспечивает, попутно периодически отваливая wifi.</p>
 <p>Итого, рекомендовать TP-WR1043ND можно за его главное достоинство — цену. Однако, если вы цените время/деньги/функционал, то имеет смысл подобрать чуть более православный девайс. Вместо китайской ручки-фонарика лучше приобрести отдельно ручку и отдельно фонарик, это же выражение в полной мере относится и к TP-WR1043ND, поэтому сам роутер у меня остался выполнять функции роутера, а NAS был приобретен  D-Link DNS-320.</p>
@@ -4272,7 +4296,7 @@ RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
 <p>Из замеченных особенностей — перемаплены цифровые клавиши на верхний регистр, например для точки и запятой необходимо нажать просто 6 или 7, если необходимо набрать цифры — делайте при помощи shift. Не менее интересно будет ознакомиться в Ководстве у Артемия и с историей проблемы русских <a href="http://www.artlebedev.ru/kovodstvo/sections/105/">знаков препинания при наборе</a>.</p>
 <p>Бандл использует свой механизм переключения, так что command + space можно отключить от переключения раскладок насовсем и использовать с удобством, например, в quicksilver.</p>
 <p>UPDATE: Я привык и втянулся! Знаки препинания в нижнем регистре для русского языка это очень-очень правильно. <a href="http://code.google.com/p/iterm2/issues/detail?id=1067&amp;start=200">Обнаружен огорчающй баг с iTerm2</a>, но это, думаю, претензии к iTerm2.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="language_switch_caps.png" src="/uploads/2011/06/language_switch_caps.png" border="0" alt="Language switch caps" width="600" height="529" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="language_switch_caps.png" src="/uploads/2011/06/language_switch_caps.png" border="0" alt="Language switch caps" width="600" height="529" />
 </div>
 </div>
 
@@ -4315,7 +4339,7 @@ make reinstall</pre>
 <p>tcpdump -n -e  ether host ff:ff:ff:ff:ff:ff</p>
 <p>а теперь есть, но идут они через другой интерфейc.</p>
 <p>Для того что бы выбрать интерфейс, с которого будут исходить PPPoE PADI пакеты необходимо создать PPPoE правым кликом на интерфейсе,</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="pppoe.png" src="/uploads/2011/06/pppoe.png" border="0" alt="pppoe" width="525" height="478" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="pppoe.png" src="/uploads/2011/06/pppoe.png" border="0" alt="pppoe" width="525" height="478" />
 <p>Однако в нашем случае фокус в том, что при выборе интерфейсов vlan и клик на «создать службу PPPoE» ни к чему не приводят. При этом с физическими интерфейсами работает исключительно гладко.</p>
 <p>Даже запуск вручную не приводит к позитивным результатам</p>
 <p>pppd plugin PPPoE.ppp device vlan0 noauth defaultroute user username password pw</p>
@@ -4353,7 +4377,7 @@ make reinstall</pre>
     </h1>
     <div class="date">27.05.2011</div>
     <div><p>Если вы гик, или дизайнер, программист и проводите много времени за компьютером, то вам просто необходимо использовать два и более монитора на рабочем месте.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="workspace.jpg" src="/uploads/2011/06/workspace.jpg" border="0" alt="Workspace" width="600" height="600" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="workspace.jpg" src="/uploads/2011/06/workspace.jpg" border="0" alt="Workspace" width="600" height="600" />
 <p>Вот несколько типовых примеров:</p>
 <p>Разработчик.</p>
 <ul>
@@ -4383,9 +4407,9 @@ make reinstall</pre>
 На графиках видно, что мы работаем с 9 до 18 пять дней в неделю. В остальное время звонки могут редиректиться на мобильные.</p>
 <p>Количество входящих звонков за апрель 865.</p>
 <p>Можно сделать вывод, что основная нагрузка на колл-центр приходится на время с 10 до 11, видимо после первой чашки кофе сотрудники начинают включать компьютеры. Наиболее загруженный день — вторник.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="chart1.png" src="/uploads/2011/05/chart1.png" border="0" alt="chart1" width="600" height="350" /></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="chart2.png" src="/uploads/2011/05/chart2.png" border="0" alt="chart2" width="600" height="350" /></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="chart3.png" src="/uploads/2011/05/chart31.png" border="0" alt="chart3" width="600" height="350" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="chart1.png" src="/uploads/2011/05/chart1.png" border="0" alt="chart1" width="600" height="350" />
+<img style="display: block; margin-left: auto; margin-right: auto;" title="chart2.png" src="/uploads/2011/05/chart2.png" border="0" alt="chart2" width="600" height="350" />
+<img style="display: block; margin-left: auto; margin-right: auto;" title="chart3.png" src="/uploads/2011/05/chart31.png" border="0" alt="chart3" width="600" height="350" />
 </div>
 </div>
 
@@ -4395,7 +4419,7 @@ make reinstall</pre>
     </h1>
     <div class="date">16.05.2011</div>
     <div><p>«Благодаря» <a href="http://nexusnotes.ru/2011/05/%D0%BF%D1%80%D0%BE-%D0%B0%D0%BA%D0%BA%D1%83%D0%BC%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D1%8B-aa-godp-3000mah/">говняным аккумуляторам GODP 3000mAh, которые на деле оказались 800mAh</a> я приобрел весьма неплохое зарядное устройство La Crosse BC9009, которое является прямым аналогом модели La Crosse 900.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="1635523.jpg" src="/uploads/2011/05/1635523.jpg" border="0" alt="1635523" width="400" height="376" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="1635523.jpg" src="/uploads/2011/05/1635523.jpg" border="0" alt="1635523" width="400" height="376" />
 <p>Преимущества использования такой зарядки после недели эксплуатации становятся более чем очевидными:</p>
 <ul>
 <li>возможность выбора режимов зарядки для каждого заряжаемого аккумулятора отдельно</li>
@@ -4432,10 +4456,10 @@ make reinstall</pre>
     </h1>
     <div class="date">08.05.2011</div>
     <div><p>Кетайцы такие кетайцы, пока остальное человечество в форм-фактор батарейки АА пытается засунуть 2500mAh, кетайские собратья давно уже освоили выпуск аккумуляторов на 3000mAh, и это при весе одной батарейки меньшей на половину, чем у брендовых конкурентов.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="imgres.jpeg" src="/uploads/2011/05/imgres1.jpeg" border="0" alt="Imgres" width="224" height="225" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="imgres.jpeg" src="/uploads/2011/05/imgres1.jpeg" border="0" alt="Imgres" width="224" height="225" />
 <p>Решил пошерстить интернеты на предмет отзывов и мнений, и <a href="http://tourist.kharkov.ua/phpbb/viewtopic.php?f=83&amp;t=23334&amp;start=120">не ошибся в предположениях</a>.</p>
 <p>Зато из топика обнаружил <a href="http://hotline.ua/tx/la_crosse_bc-700/">интересную зарядку Lacrosse BC-700</a>, умеющую показывать фактическую емкость аккумулятора, что чрезвычайер полезно.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="1635522.jpg" src="/uploads/2011/05/1635522.jpg" border="0" alt="1635522" width="150" height="141" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="1635522.jpg" src="/uploads/2011/05/1635522.jpg" border="0" alt="1635522" width="150" height="141" />
 <p><a href="http://cgi.ebay.com/Crosse-BC-700-BC700-Alpha-Battery-Charger-Lacrosse-/200580841651?pt=LH_DefaultDomain_0&amp;hash=item2eb38cc0b3#ht_947wt_907">http://cgi.ebay.com/Crosse-BC-700-BC700-Alpha-Battery-Charger-Lacrosse-/200580841651?pt=LH_DefaultDomain_0&amp;hash=item2eb38cc0b3#ht_947wt_907</a></p>
 </div>
 </div>
@@ -4460,7 +4484,7 @@ make reinstall</pre>
     </h1>
     <div class="date">04.05.2011</div>
     <div><p>Вот что обнаружено в прошивке dd-wrt на маршрутизаторе TP-Link TL-WR1043ND (IP over DNS Tunneling)</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="ipoverdns.png" src="/uploads/2011/05/ipoverdns.png" border="0" alt="ip over dns tunneling" width="600" height="268" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="ipoverdns.png" src="/uploads/2011/05/ipoverdns.png" border="0" alt="ip over dns tunneling" width="600" height="268" />
 <p>А это значит, что легким движением мыши вы можете включить аццкий функционал, позволяющий обходить авторизацию многих платных хотспотов в отелях, и использовать wifi бесплатно, как описано здесь <a href="http://xgu.ru/wiki/DNS-tunneling">http://xgu.ru/wiki/DNS-tunneling</a> и здесь <a href="http://theapplegeek.ru/archives/283">http://theapplegeek.ru/archives/283</a></p>
 </div>
 </div>
@@ -4528,7 +4552,7 @@ make reinstall</pre>
 <p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Lucida Grande';">
    
 </p>
-<p><img title="1273451434.png" src="http://www.speedtest.net/result/1273451434.png" border="0" alt="1273451434.png" /></p>
+<img title="1273451434.png" src="http://www.speedtest.net/result/1273451434.png" border="0" alt="1273451434.png" />
 <p>А <a href="http://wiki.openwrt.org/toh/tp-link/tl-wr1043nd">здесь исчерпывающе про девайс</a> для энтузиастов.</p>
 <p>UPDATE:</p>
 <p>мной проверено: реализация TimeMachine на данном девайсе возможна, однако, лучше этого не делать. Бекап если и будет завершен, то суток через двое. И даже если все пройдет гладко, то AFP (в реализации netatalk) сойдет с ума при попытке открыть каталог TimeMachine по причине бесчисленного количества файлов в базе.</p>
@@ -4537,7 +4561,7 @@ make reinstall</pre>
 <p>Итоговые итоги:</p>
 <p>В качестве роутера 802.11n девайс за свою цену более чем адекватен. Быстрый NAS из него сделать не получится, однако USB-HDD Seagate 500Gb 2,5″ у меня он держит без дополнительного питания, в сеть отдавая 3-4Мб/сек, что не фонтан, но скачать торрентом и посмотреть какое-то видео 720p вполне достаточно.</p>
 <p> </p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2011-05-01 в 20.45.30.png" src="/uploads/2011/05/Снимок-экрана-2011-05-01-в-20.45.30.png" border="0" alt="Снимок экрана 2011 05 01 в 20 45 30" width="600" height="410" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="Снимок экрана 2011-05-01 в 20.45.30.png" src="/uploads/2011/05/Снимок-экрана-2011-05-01-в-20.45.30.png" border="0" alt="Снимок экрана 2011 05 01 в 20 45 30" width="600" height="410" />
 </div>
 </div>
 
@@ -4608,10 +4632,10 @@ make reinstall</pre>
 <p>Вот сайт киевского института автоматизации систем в строительстве, где в 1999 я начинал свою трудовую карьеру:</p>
 <p>Ниже сайт образца 2000 года, выполнен дизайнерами провайдера Elvisti, который в то время находился на территории института.</p>
 <p><a href="http://replay.web.archive.org/20001028014829/http://ndiasb.kiev.ua/">http://replay.web.archive.org/20001028014829/http://ndiasb.kiev.ua/</a></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="ndiasb2000.png" src="/uploads/2011/04/ndiasb2000.png" border="0" alt="ndiasb2000" width="600" height="465" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="ndiasb2000.png" src="/uploads/2011/04/ndiasb2000.png" border="0" alt="ndiasb2000" width="600" height="465" />
 <p>Сайт образца 2011 года, выполнен … дизайнерами института?</p>
 <p><a href="http://ndiasb.kiev.ua">http://ndiasb.kiev.ua</a></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="ndiasb2011.png" src="/uploads/2011/04/ndiasb2011.png" border="0" alt="ndiasb2011.png" width="600" height="292" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="ndiasb2011.png" src="/uploads/2011/04/ndiasb2011.png" border="0" alt="ndiasb2011.png" width="600" height="292" />
 <p>Сайт 2000 года выглядит намного более привлекательным и свежим, не правда ли?</p>
 </div>
 </div>
@@ -4679,7 +4703,7 @@ done 
 <p>Фокус в том, что и сам диск 500ка стал виден как 64Гб 🙂 Гугление вокруг да около не возымело должного эффекта и решение простыми средствами (fdisk, parted) и resize2ext мне показалось стремным.</p>
 <p>И вот был обнаружен <a href="http://gparted.sourceforge.net/download.php">gparted</a>, который по факту оказался ничем иным как свободной версией известного PQMagic, по крайней мере по функционалу точно такой же.</p>
 <p>Легким движением мышки и диск из 64 превратился обратно в 500 и нужная партиция была раздвинута на нужный полный размер.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="gparted_1_small.png" src="/uploads/2011/04/gparted_1_small.png" border="0" alt="Gparted 1 small" width="400" height="274" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="gparted_1_small.png" src="/uploads/2011/04/gparted_1_small.png" border="0" alt="Gparted 1 small" width="400" height="274" />
 <p>Кстати, gparted являет собой загрузочный ISO, который вполне хорошо отработал в VMWare Fusion под Mac.</p>
 </div>
 </div>
@@ -4787,7 +4811,7 @@ run ActionController::Dispatcher.new</pre>
 </ul>
 <h2 id="цели-и-задачи">Цели и задачи</h2>
 <p>Под целью будем понимать работу в режиме «автопилота», когда обращаясь к записям мы будем видеть тот список дел, которым действительно подходит заниматься в данное время в данном месте, и не быть перегруженными «неподходящими» задачами и проектами.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="427757_254877334588276_224365987639411_562554_2011888291_n.jpg" src="/uploads/2012/02/427757_254877334588276_224365987639411_562554_2011888291_n.jpg" border="0" alt="427757 254877334588276 224365987639411 562554 2011888291 n" width="430" height="268" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="427757_254877334588276_224365987639411_562554_2011888291_n.jpg" src="/uploads/2012/02/427757_254877334588276_224365987639411_562554_2011888291_n.jpg" border="0" alt="427757 254877334588276 224365987639411 562554 2011888291 n" width="430" height="268" />
 <h3 id="критика-things">Критика Things.</h3>
 <p>Кто не знает Things? Things <a href="http://theapplegeek.ru/archives/1201">знают все</a>.</p>
 <p> </p>
@@ -5509,8 +5533,8 @@ AuthType Digest    AuthName DAV-upload
     <div><p>Для тех, кто любит и умеет готовить AD не секрет, что работа со свойствами пользователей в больших количествах занятие трудоемкое.</p>
 <p>Какие-то свойства профиля можно задать групповой операцией,  а какие-то нет.</p>
 <p>Нелегкий труд ADмина призвана облегчить <a href="http://www.wisesoft.co.uk/software/bulkadusers/default.aspx">сия утилита</a>.</p>
-<p><img class="alignnone" src="http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_Main.png" alt="" width="678" height="446" /></p>
-<p><img class="alignnone" src="http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_BulkModify.png" alt="" width="475" height="593" /></p>
+<img class="alignnone" src="http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_Main.png" alt="" width="678" height="446" />
+<img class="alignnone" src="http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_BulkModify.png" alt="" width="475" height="593" />
 </div>
 </div>
 
@@ -5524,7 +5548,7 @@ AuthType Digest    AuthName DAV-upload
 <p>Как организовать доступность сервиса в случае падения одного из серверов?</p>
 <p>DNS? А вообще бывает такой «пингующий» DNS, который будет исключать IP сервиса из резолва, если тот не «живой»?</p>
 <p>Нагуглил, меж тем, вот <a href="http://www.buy.com/prod/cisco-11503-content-switch-2-x-lan-cisco-11503-content-switch-2-x-lan/q/loc/101/10323898.html">такой девайс</a></p>
-<p><img class="aligncenter" src="http://ak.buy.com/db_assets/prod_lrg_images/898/10323898.jpg" alt="" width="250" height="250" /></p>
+<img class="aligncenter" src="http://ak.buy.com/db_assets/prod_lrg_images/898/10323898.jpg" alt="" width="250" height="250" />
 <p>за $10 000.</p>
 <p>Но с поправкой на нашу суровую реальность смотрим на более бюджетные вещи 🙂</p>
 </div>
@@ -5649,7 +5673,7 @@ AuthType Digest    AuthName DAV-upload
     <div><p>Продукты для Mac с каждым новым днем становятся все лучше и лучше, так, обновление лучшей звонилки всех времени и народов iSoftPhone принесло неподдельную радость от использования.</p>
 <p>Источником бурной радости явилось добавление кнопки выбора альтернативного вывода звука, теперь я могу вполне пользоваться bluetooth гарнитурой исключительно тогда, когда это нужно!</p>
 <p>Новый дизайн стал еще более привлекательным.</p>
-<p><img src="/uploads/2010/02/isoftphone.png" alt="isoftphone" width="283" height="509" /></p>
+<img src="/uploads/2010/02/isoftphone.png" alt="isoftphone" width="283" height="509" />
 <p>Появилась поддержка DND режима одной кнопкой, а интеграция с маковской Address Book заставляет забыть о ручном наборе телефона.</p>
 <p>При звонке отображается фотка из контактов!</p>
 <p>Всячески рекомендуется маководами к повседневному использованию.</p>
@@ -5689,7 +5713,7 @@ AuthType Digest    AuthName DAV-upload
         <a href="https://prokopov.me/2010/01/jabber-server-dns-setup/">Хозяйке на заметку: корректная настройка DNS записей для сервера jabber</a>
     </h1>
     <div class="date">20.01.2010</div>
-    <div><p><img src="/uploads/2010/01/jabber_logo.jpeg" align="left" hspace="25" vspace="25" /></p>
+    <div><img src="/uploads/2010/01/jabber_logo.jpeg" align="left" hspace="25" vspace="25" />
 <p>Сталкивались ли вы с проблемами отправки сообщений [Jabber с Google Hosted services](<a href="http://googletalk.blogspot.com/2006/01/xmpp-federation.html">http://googletalk.blogspot.com/2006/01/xmpp-federation.html</a>) на аккаунт вне вашего домена?</p>
 <p>Если вы хотите, что бы ваш jabber сервер был доступен для общения и с другими доменами интернета (что называется «федерация»), будьте добры настроить DNS записи для вашего домена, как показано на примере ниже:</p>
 <p>_xmpp-client._tcp 900 IN SRV 5 0 5222 jabber.example.com.</p>
@@ -5727,13 +5751,13 @@ AuthType Digest    AuthName DAV-upload
     </h1>
     <div class="date">15.01.2010</div>
     <div><p>Получилось в оживить функционал Internet tethering, режим модема на iPhone. Говорят, что прошивки &gt;3.0 уже не обладают этим функционалом, не знаю, — не проверял. Если у вас есть возможность проверить на свежей прошивке (сейчас 3.1.2), просьба отписать в комментариях.</p>
-<p><img src="http://lh3.ggpht.com/_YlUeUCURrJM/SwvnjZ_SXLI/AAAAAAAADBY/8SuSIZCqLHs/IMG_0494.PNG?imgmax=800" border="0" alt="IMG_0494.PNG" width="320" height="480" /></p>
+<img src="http://lh3.ggpht.com/_YlUeUCURrJM/SwvnjZ_SXLI/AAAAAAAADBY/8SuSIZCqLHs/IMG_0494.PNG?imgmax=800" border="0" alt="IMG_0494.PNG" width="320" height="480" />
 <p>С настройкой все достаточно просто, например, для оператора для Life 🙂 запускаем на телефоне Safari, открываем адрес <a href="http://help.benm.at" title="help.BenM.at – Mobileconfigs and Tethering for your iPhone | BenM.at">http://help.benm.at</a> и заполняем настройки AP, username и password. В нашем случае только в поле AP вписываем internet, username и password оставляем пустыми, жмем submit и, после подтверждения, устанавливаем настройки на телефоне.</p>
 <p>После чего заходим в Settings-&gt;Network (Настройки-&gt;Сеть) появляется tethering (режим модема), его то и включаем.</p>
 <p>Спариваем iphone с маком и наслаждаемся инетом по блютусу.</p>
-<p><img src="http://lh5.ggpht.com/_YlUeUCURrJM/Swvnx7lGGDI/AAAAAAAADBc/FNPhuQDWfrM/IMG_0493.PNG?imgmax=800" border="0" alt="IMG_0493.PNG" width="320" height="480" /></p>
-<p><img src="http://lh5.ggpht.com/_YlUeUCURrJM/Swvo1W5UBzI/AAAAAAAADBg/rBT4JhknzbA/IMG_0496.PNG?imgmax=800" border="0" alt="IMG_0496.PNG" width="320" height="480" /></p>
-<p><img src="http://lh6.ggpht.com/_YlUeUCURrJM/Swvo4qoUeQI/AAAAAAAADBk/wKOMhPBXeoY/IMG_0495.PNG?imgmax=800" border="0" alt="IMG_0495.PNG" width="320" height="480" /></p>
+<img src="http://lh5.ggpht.com/_YlUeUCURrJM/Swvnx7lGGDI/AAAAAAAADBc/FNPhuQDWfrM/IMG_0493.PNG?imgmax=800" border="0" alt="IMG_0493.PNG" width="320" height="480" />
+<img src="http://lh5.ggpht.com/_YlUeUCURrJM/Swvo1W5UBzI/AAAAAAAADBg/rBT4JhknzbA/IMG_0496.PNG?imgmax=800" border="0" alt="IMG_0496.PNG" width="320" height="480" />
+<img src="http://lh6.ggpht.com/_YlUeUCURrJM/Swvo4qoUeQI/AAAAAAAADBk/wKOMhPBXeoY/IMG_0495.PNG?imgmax=800" border="0" alt="IMG_0495.PNG" width="320" height="480" />
 <p>Для тех, кому интересны детали. iPhone:</p>
 <ol>
 <li>Становится dhcp сервером.</li>
@@ -5753,15 +5777,15 @@ AuthType Digest    AuthName DAV-upload
     <div><p>Знаете ли вы, что в Mac уже встроены средства удаленного доступа, как для вызова удаленного хоста, так и предоставления доступа с удаленного хоста?</p>
 <p>Для удаленного подключения нам пригодится бесплатный пакет <a href="http://www.uvnc.com/" title="Ultra VNC : Remote Support Software, Remote Support tool, Remote Desktop Control, Remote Access Software, PC Remote Control">UltraVNC</a>, который мы установим на windows хосте. Думаю, у читателя не возникнет особых проблем с установкой.</p>
 <p>Теперь из Mac вполне спокойно можно подключаться к хосту windows с ultravnc просто набрав в Safari в строке адреса следующую сроку:</p>
-<p><img src="/uploads/2010/01/vnc2win.png" alt="vnc2win" width="735" height="37" /></p>
+<img src="/uploads/2010/01/vnc2win.png" alt="vnc2win" width="735" height="37" />
 <p>понятно, что IP должен быть указан того хоста, к которому вы собираетесь подключиться.</p>
 <p>Запустится приложение «общий доступ»</p>
-<p><img src="/uploads/2010/01/vncsharing.jpg" alt="Vncsharing" width="450" height="315" /></p>
+<img src="/uploads/2010/01/vncsharing.jpg" alt="Vncsharing" width="450" height="315" />
 <p>и вы будете иметь контроль над мышкой и клавиатурой удаленной машины.</p>
 <p>Работает и обратная процедура. Для Mac достаточно зайти в настройки «Общий доступ» и установить флаг «Общий экран»,</p>
-<p><img src="/uploads/2010/01/mac_vnc.png" alt="mac-vnc" width="748" height="627" /></p>
+<img src="/uploads/2010/01/mac_vnc.png" alt="mac-vnc" width="748" height="627" />
 <p>и обязательно указать пароль в кнопке «Настройки компьютера».</p>
-<p><img src="/uploads/2010/01/mac_vnc_settings.png" alt="mac vnc settings" width="628" height="138" /></p>
+<img src="/uploads/2010/01/mac_vnc_settings.png" alt="mac vnc settings" width="628" height="138" />
 <p>Все, на windows хосте вы можете запускать vncviewer и подключаться к вашему Mac используя пароль, указанный выше.</p>
 <p><a href="http://reviews.cnet.com/8301-13727_7-10329122-263.html" title="Mac administration">Детальнее про удаленный доступ к Mac</a></p>
 <p>Update:</p>
@@ -5886,7 +5910,7 @@ AuthType Digest    AuthName DAV-upload
     <div><p>Читать о <a href="http://www.prostomac.com/2009/12/mobileme-mobilizirujtes/" title="MobileMe: мобилизируйтесь! | простоMAC">тестировании MobileMe</a></p>
 <p>Задумался я как-то об использовании Mobile Me сервиса, какие дает преимущества за $100 в год?</p>
 <p>В этой статье мы попытаемся найти более бесплатные аналоги, если таковые существуют.</p>
-<p><img src="/uploads/2009/12/01_mobileme_logo.jpg" alt="" width="294" height="288" /></p>
+<img src="/uploads/2009/12/01_mobileme_logo.jpg" alt="" width="294" height="288" />
 <ol>
 <li>
 <p>Почта и ее синхронизация. Аналог — <a href="http://gmail.com/">Gmail</a> в режиме IMAP.</p>
@@ -5924,7 +5948,7 @@ AuthType Digest    AuthName DAV-upload
 <ol start="3">
 <li>
 <p>Галлерея фотографий из iPhoto. Аналог — Интеграция с <a href="http://www.flickr.com/" title="Welcome to Flickr - Photo Sharing">Flickr</a>. Конечно, постить прямо из iPhone на Flickr не так удобно как в MobileMe, однако существует абсолютно <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=328407587&amp;mt=8" title="iTunes Store">бесплатный Flickr клиент для iPhone</a>. Кроме того, в iPhoto уже существует встроенная поддержка flickr.</p>
-<p><img src="/uploads/2010/01/flickrthumbnail.gif" alt="Flickr.Thumbnail" height="128" width="113" /></p>
+   <img src="/uploads/2010/01/flickrthumbnail.gif" alt="Flickr.Thumbnail" height="128" width="113" /> 
 </li>
 <li>
 <p>Синхронизируемая адресная книга. Аналог — Gmail Address Book. Знаете ли вы, что можно вполне синхронизировать контакты с iPhone, Address Book.app с Gmail нативными для Mac OS средствами через iTunes?<br>
@@ -5932,19 +5956,19 @@ AuthType Digest    AuthName DAV-upload
 </li>
 <li>
 <p>Синхронизируемый iCal. Аналог — <a href="http://www.google.com/calendar/render">Gmail Calendar</a>. Здесь даже работает <a href="http://www.google.com/support/mobile/bin/answer.py?answer=138740&amp;topic=14252" title="Setting Up Your iPhone or iPod Touch : Mail, Calendar, &amp; Contacts Setup - Mobile Help">подобие Exchange коннектора для google calendar</a>. В Calendar.app поддержка Google Calendar нативная.</p>
-<p><img src="/uploads/2010/01/ical.jpeg" alt="ical" height="112" width="108" /></p>
+   <img src="/uploads/2010/01/ical.jpeg" alt="ical" height="112" width="108" /> 
 </li>
 <li>
 <p>iWeb и хостинг для своего сайта. Пожалуй, такого откровенно прямого аналога и не найти. Впрочем, можно делать экспорт сайта в локальный каталог и затем выкладывать на хостинг, но это уже не так удобно как при использовании MobileMe.</p>
-<p><img src="/uploads/2010/01/iweb.jpeg" alt="iweb" height="111" width="111" /></p>
+   <img src="/uploads/2010/01/iweb.jpeg" alt="iweb" height="111" width="111" /> 
 </li>
 <li>
 <p>Find My Phone, RemoteWipe. Аналога нет.</p>
-<p><img src="/uploads/2010/01/find_my_i_phone_tab_thumb.jpg" alt="Find my i Phone tab Thumb" height="273" width="425" /></p>
+   <img src="/uploads/2010/01/find_my_i_phone_tab_thumb.jpg" alt="Find my i Phone tab Thumb" height="273" width="425" /> 
 </li>
 <li>
 <p>Удаленный доступ к своему Mac (Back to my Mac). Аналог — <a href="https://secure.logmein.com/" title="LogMeIn - Remote Access and Desktop Control Software for Your Computer">Logmein</a>, <a href="http://www.teamviewer.com/" title="TeamViewer - Free Remote Access and Remote Desktop Sharing over the Internet">Teamviewer</a>. Суть — инсталлируем на свой компьютер серверную часть (утилиту) для удаленного доступа и пользуемся. В Teamviewer в бесплатной лицензии есть также фича для пересылки файлов на удаленный компьютер.</p>
-<p><img src="/uploads/2010/01/teamviewer.png" alt="Teamviewer" height="65" width="262" /></p>
+   <img src="/uploads/2010/01/teamviewer.png" alt="Teamviewer" height="65" width="262" /> 
 </li>
 <li>
 <p>Синхронизация настроек между Macами. Прямого аналога нет. Возможно rsync в полуавтоматическом режиме? Понятно, что для обычного пользователя настройка rsync из консоли — не самое простое занятие.</p>
@@ -5972,7 +5996,7 @@ AuthType Digest    AuthName DAV-upload
     <div class="date">29.12.2009</div>
     <div><p>Набрел на забавную утилиту apachetop</p>
 <p>Вот такой простенький, порой, бывает нужен <a href="http://www.webta.org/projects/apachetop/">анализатор состояния апача</a>, вдруг атакует кто?</p>
-<p><img src="http://lh3.ggpht.com/_YlUeUCURrJM/SyEmhsX7ClI/AAAAAAAADDI/cFRlCF8j7k4/%3F%3F%3F%3F%3F%3F%20%3F%3F%3F%3F%3F%3F%202009-12-10%20%3F%2018.48.14.png?imgmax=800" border="0" alt="Снимок экрана 2009-12-10 в 18.48.14.png" width="602" height="197" /></p>
+<img src="http://lh3.ggpht.com/_YlUeUCURrJM/SyEmhsX7ClI/AAAAAAAADDI/cFRlCF8j7k4/%3F%3F%3F%3F%3F%3F%20%3F%3F%3F%3F%3F%3F%202009-12-10%20%3F%2018.48.14.png?imgmax=800" border="0" alt="Снимок экрана 2009-12-10 в 18.48.14.png" width="602" height="197" />
 </div>
 </div>
 
@@ -5983,12 +6007,12 @@ AuthType Digest    AuthName DAV-upload
     <div class="date">28.12.2009</div>
     <div><p>Заметку побудило написать мое удивление при настройке печати через D-Link DIR-320, а именно несвойственная такого класса устройствам безгеморройность в настройке.</p>
 <p>Для того что бы наш Xerox 3119 корректно распознался коробочкой пришлось обновить прошивку с 1.00 до 1.10, и после этого, о чудо, принтер был роутером обнаружен и автоматически настроен.</p>
-<p><img src="/uploads/2009/12/xerox_3119_printserver.png" alt="xerox 3119 printserver" height="113" width="567" /></p>
+<img src="/uploads/2009/12/xerox_3119_printserver.png" alt="xerox 3119 printserver" height="113" width="567" />
 <p>Затем, как водится, хотел добавить через network printer port с указанием IP и порта 9100, но дай-ка, думаю, посмотрю что за визард такой в админке d-link. Запускаю, появляется страница printer wizard, княпаю next,next и … загружается PrinterConfig.exe.</p>
 <p>Запускаю, получаю сообщение о том, что принтер корректно установлен в система с нужным драйвером!</p>
-<p><img src="/uploads/2009/12/3119_windows_driver.png" alt="3119 windows driver" height="130" width="451" /></p>
+<img src="/uploads/2009/12/3119_windows_driver.png" alt="3119 windows driver" height="130" width="451" />
 <p>Настройка под Mac также не составила никаких проблем:</p>
-<p><img src="/uploads/2009/12/3119_printer_mac_setup.png" alt="3119 printer mac setup" height="514" width="600" /></p>
+<img src="/uploads/2009/12/3119_printer_mac_setup.png" alt="3119 printer mac setup" height="514" width="600" />
 <p>Вот и сказочке конец, а кто DIR-320 купил, тот молодец 🙂</p></div>
 </div>
 
@@ -6024,10 +6048,10 @@ AuthType Digest    AuthName DAV-upload
     <div><p>WordPress замечательная платформа для блоггинга не в последнюю очередь благодаря своей расширяемости плагинами и темами.</p>
 <p>Так, благодаря <a href="http://www.bravenewcode.com/wptouch/" title="WPtouch: Mobile Plugin + Theme for WordPress ↔ BraveNewCode Inc.">плагину WPTouch</a> теперь вполне можно читать блог и из iPhone.</p>
 <p>Вот как это выглядит:</p>
-<p><img src="/uploads/2009/12/iphone_theme.jpg" alt="iphone theme" height="480" width="320" /></p>
-<p><img src="/uploads/2009/12/img_0523.jpg" alt="Img 0523" height="480" width="320" /></p>
-<p><img src="/uploads/2009/12/img_0522.jpg" alt="iphone wordpress" height="480" width="320" /></p>
-<p><img src="/uploads/2009/12/img_0521.jpg" alt="iphone wordpress theme" height="480" width="320" /></p></div>
+<img src="/uploads/2009/12/iphone_theme.jpg" alt="iphone theme" height="480" width="320" />
+<img src="/uploads/2009/12/img_0523.jpg" alt="Img 0523" height="480" width="320" />
+<img src="/uploads/2009/12/img_0522.jpg" alt="iphone wordpress" height="480" width="320" />
+<img src="/uploads/2009/12/img_0521.jpg" alt="iphone wordpress theme" height="480" width="320" /></div>
 </div>
 
 <div class="article">
@@ -6141,7 +6165,7 @@ AuthType Digest    AuthName DAV-upload
     <div class="date">24.12.2009</div>
     <div><p>Знаете ли вы о полезной опции автокомплита для приложения Mail в составе MacOS?</p>
 <p>Магические кнопки Option+Esc покажут вот такое окно автодополнения:</p>
-<p><img src="/uploads/2009/12/autocomplete.png" alt="Autocomplete" width="273" height="248" /></p>
+<img src="/uploads/2009/12/autocomplete.png" alt="Autocomplete" width="273" height="248" />
 </div>
 </div>
 
@@ -6151,7 +6175,7 @@ AuthType Digest    AuthName DAV-upload
     </h1>
     <div class="date">24.12.2009</div>
     <div><p><img class="alignnone" style="margin: 10px;" title="zabbix" src="http://www.zabbix.com/img/zabbix1.png" alt="zabbix" width="118" height="31" />Если при установке zabbix 1.8 на FreeBSD вы получаете сообщения вида:</p>
-<p><img class="alignnone" style="margin: 10px;" title="freebsd logo" src="http://www.freebsd.org/logo/logo-full-thumb.png" alt="freebsd logo" width="200" height="72" /></p>
+<img class="alignnone" style="margin: 10px;" title="freebsd logo" src="http://www.freebsd.org/logo/logo-full-thumb.png" alt="freebsd logo" width="200" height="72" />
 <p>60622:20091223:144406.024 Can’t allocate shared memory of size 8388608 [Cannot allocate memory]</p>
 <p>60622:20091223:144406.024 Can’t allocate shared memory for configuration cache.</p>
 <p>знайте, все дело в системных настройках sysctl.conf</p>
@@ -6254,7 +6278,7 @@ AuthType Digest    AuthName DAV-upload
     <div><p>Столкнулся с проблемой запотевания ладошек при работе на Macbook, глядь на температуту, а там 61C.</p>
 <p>Активное гугление не выявило особых отклонений в температурных режимах, но не было совсем уже бесполезным, так как нашлась приятная полезняшка для Mac от Lobotomy</p>
 <p>Итак, дамы и господа, встречаем <a href="http://www.lobotomo.com/products/FanControl/">Fan Control</a></p>
-<p><img src="http://lh4.ggpht.com/_YlUeUCURrJM/SyfQ4ezH7OI/AAAAAAAADDU/qnESXXbx5Dk/%3F%3F%3F%3F%3F%3F%20%3F%3F%3F%3F%3F%3F%202009-12-15%20%3F%2020.08.35.png?imgmax=800" alt="Снимок экрана 2009-12-15 в 20.08.35.png" border="0" width="748" height="395" /></p>
+<img src="http://lh4.ggpht.com/_YlUeUCURrJM/SyfQ4ezH7OI/AAAAAAAADDU/qnESXXbx5Dk/%3F%3F%3F%3F%3F%3F%20%3F%3F%3F%3F%3F%3F%202009-12-15%20%3F%2020.08.35.png?imgmax=800" alt="Снимок экрана 2009-12-15 в 20.08.35.png" border="0" width="748" height="395" />
 <p>Однако, как видно, при средней загрузке все равно порядка 62C, а это довольно тепло в ладони.</p>
 <p>Так что проблема охлаждения ладоней до сих пор остается открытой 🙂</p>
 <p>Интересное исследование по температуре macbook aluminium:</p>
@@ -6284,7 +6308,7 @@ AuthType Digest    AuthName DAV-upload
 <p><a href="http://mprokopov.livejournal.com/">Пишу я себе изредка в LiveJournal</a>, чувствую, что картинку вставить очень хочется через MarsEdit, загрузить, значится. А не получается совсем, непорядок. Думаю, а зачем мне эти все ливджорналы? Почему бы не попробовать вордпресс?</p>
 <p>Сказано — сделано. 20 минут на поправить DNS, завести хост и хостинг в апаче, мускуль, поехали.</p>
 <p>25 минут, и вот я уже пишу пост в <a href="http://www.red-sweater.com/marsedit/">MarsEdit</a> и загружаю картинки в прекрасном оформлении Mystique</p>
-<p><img src="http://blog.nexus.org.ua/wp-content/uploads/2009/12/Снимок-экрана-2009-12-21-в-23.08.15.png" alt="Снимок экрана 2009-12-21 в 23.08.15.png" border="0" width="742" height="647" /></p>
+<img src="http://blog.nexus.org.ua/wp-content/uploads/2009/12/Снимок-экрана-2009-12-21-в-23.08.15.png" alt="Снимок экрана 2009-12-21 в 23.08.15.png" border="0" width="742" height="647" />
 </div>
 </div>
 
@@ -6356,7 +6380,7 @@ AuthType Digest    AuthName DAV-upload
         <a href="https://prokopov.me/posts/2020-12-09/">Keycloak</a>
     </h1>
     <div class="date">01.01.0001</div>
-    <div><pre><code>docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:11.0.3
+    <div><pre tabindex="0"><code>docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:11.0.3
 </code></pre></div>
 </div>
 
@@ -6457,9 +6481,9 @@ AuthType Digest    AuthName DAV-upload
     <div><p>Unlike docker-compose sometimes kubectl provides you better tooling for docker container access.</p>
 <p>Let me share with you my useful findings.</p>
 <p>With port-forward, you can easily connect to pods service and debug it.</p>
-<pre><code>kubectl port-forward podname port
+<pre tabindex="0"><code>kubectl port-forward podname port
 </code></pre><p>For example</p>
-<pre><code>kubectl port-forward sharepass-78d566f866-4dvv5 3000
+<pre tabindex="0"><code>kubectl port-forward sharepass-78d566f866-4dvv5 3000
 </code></pre><blockquote>
 <p>kubectl port-forward sharepass-78d566f866–4dvv5 3000<br>
 Forwarding from 127.0.0.1:3000 -&gt; 3000<br>

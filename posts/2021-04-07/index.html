@@ -47,9 +47,9 @@ Despite all Datomic bright sides, there are some thoughts bothering me since I s
 <h2 id="confusion-on-datomic-peer-and-client-libraries-differences">Confusion on datomic peer and client libraries differences</h2>
 <p>I used to use datomic-pro api in my project and wanted to catch &ldquo;anomaly exceptions&rdquo; from Pedestal error handlers. That was not an easy task. It simply didn&rsquo;t work in the manner I expected from the datomic code examples.</p>
 <p>If you try to execute</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">d/transact</span> conn {<span style="color:#e6db74">:tx-data</span> [[<span style="color:#e6db74">:this</span> <span style="color:#e6db74">&#34;does not&#34;</span> <span style="color:#e6db74">:make</span> <span style="color:#e6db74">&#34;sense&#34;</span>]]})
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">d/transact</span> conn {<span style="color:#e6db74">:tx-data</span> [[<span style="color:#e6db74">:this</span> <span style="color:#e6db74">&#34;does not&#34;</span> <span style="color:#e6db74">:make</span> <span style="color:#e6db74">&#34;sense&#34;</span>]]})
 </code></pre></div><p>using peer library you&rsquo;ll get</p>
-<pre><code>1. Caused by datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+<pre tabindex="0"><code>1. Caused by datomic.impl.Exceptions$IllegalArgumentExceptionInfo
    :db.error/not-a-data-function Unable to resolve data function: :this
    {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
     :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
@@ -69,11 +69,11 @@ Despite all Datomic bright sides, there are some thoughts bothering me since I s
    ThreadPoolExecutor.java: 1149  java.util.concurrent.ThreadPoolExecutor/runWorker
    ThreadPoolExecutor.java:  624  java.util.concurrent.ThreadPoolExecutor$Worker/run
                Thread.java:  748  java.lang.Thread/run
-</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">ex-data</span> *e)
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">ex-data</span> *e)
 
 <span style="color:#f92672">#</span><span style="color:#e6db74">:clojure.error</span>{<span style="color:#e6db74">:phase</span> <span style="color:#e6db74">:print-eval-result</span>}
 </code></pre></div><p>And this is what you get from datomic client api library using peer. So exceptions here are actually wrapped in ex-data info.</p>
-<pre><code>1. Unhandled clojure.lang.ExceptionInfo
+<pre tabindex="0"><code>1. Unhandled clojure.lang.ExceptionInfo
    Unable to resolve data function: :this
    {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
     :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
@@ -122,7 +122,7 @@ Despite all Datomic bright sides, there are some thoughts bothering me since I s
                   AFn.java:   22  clojure.lang.AFn/run
                Thread.java:  748  java.lang.Thread/run
 </code></pre><p>here is ex-data of the exception. This is much more analysable!</p>
-<pre><code>(ex-data *e)
+<pre tabindex="0"><code>(ex-data *e)
 {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
  :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
  :db/error :db.error/not-a-data-function,
@@ -163,12 +163,12 @@ First, I have to admit that I have no idea how people can produce something like
 <p>What worked well for me is to return raw entity ids from the find functions, then when required I&rsquo;m able to execute pull function against returned values.</p>
 <p>The same goes to <em>db/ident</em> that one tries to use as enums. Aspecially within tests you constantly trying to use :db/ident with example values to easiely reference in test checks, but at the same time your function for the prod data will return just :db/id.
 Example of what I use in tests</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:db/ident</span> <span style="color:#e6db74">:my-test-account</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:db/ident</span> <span style="color:#e6db74">:my-test-account</span>
  <span style="color:#e6db74">:account/id</span> (<span style="color:#a6e22e">d/squiid</span>)
  <span style="color:#e6db74">:account/balance</span> <span style="color:#ae81ff">10</span>}
 </code></pre></div><p>so you can use just <code>(d/entity db :my-test-account)</code>. But this is not the case for the code that will probably return :db/id instead.</p>
 <p>I&rsquo;ve found a useful snippet to address this problem</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defprotocol </span>Eid
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defprotocol </span>Eid
   (<span style="color:#a6e22e">e</span> [_]))
 
 (<span style="color:#a6e22e">extend-protocol</span> Eid
@@ -181,12 +181,12 @@ Example of what I use in tests</p>
   datomic.Entity
   (<span style="color:#a6e22e">e</span> [ent] (<span style="color:#e6db74">:db/id</span> ent)))
 </code></pre></div><p>I also created the following function to flatten returned from the pull expression nested db/ident.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn </span>flatten-ident [coll]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn </span>flatten-ident [coll]
   (<span style="color:#a6e22e">clojure.walk/postwalk</span>
    (<span style="color:#66d9ef">fn </span>[item] (get item <span style="color:#e6db74">:db/ident</span> item)) coll))
 </code></pre></div><h3 id="testing">Testing</h3>
 <p>Some good examples on datomic boilerplate for testing I have found in vase repository and adopted like this</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">def </span><span style="color:#f92672">^</span><span style="color:#e6db74">:dynamic</span> *current-db-connection* nil)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">def </span><span style="color:#f92672">^</span><span style="color:#e6db74">:dynamic</span> *current-db-connection* nil)
 (<span style="color:#66d9ef">def </span><span style="color:#f92672">^</span><span style="color:#e6db74">:dynamic</span> *current-db-uri* nil)
 
 (<span style="color:#66d9ef">defn </span>new-database
@@ -224,9 +224,9 @@ But in my case I didn&rsquo;t succeed with this. I couldn&rsquo;t even grasp how
 </blockquote>
 <p>Documentation was so succint, so I spent quite good amount of time to find at least one example of extensions.edn and where to keep it.
 So it should be located at <em>/resources/datomic/extensions.edn</em> with such a content</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:xforms</span> [mynamespace/xform]}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:xforms</span> [mynamespace/xform]}
 </code></pre></div><p>then you should have <code>xform</code> function in your namespace</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(namespace mynamespace)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(namespace mynamespace)
 (<span style="color:#66d9ef">defn </span>xform [x] (str <span style="color:#e6db74">&#34;xformed: &#34;</span> x))
 </code></pre></div><p>I was thinking about usecase when you need some translations, say I keep my currency amounts in cents and want to translate to float using currency minor unit. I didn&rsquo;t manage to do this with xforms.</p>
 <h3 id="diagram-tooling">Diagram tooling</h3>

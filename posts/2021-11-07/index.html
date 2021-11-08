@@ -33,62 +33,47 @@
     
 </div>
 
-
 <div class="article">
     <h1>
-        <a href="https://prokopov.me/2016/04/%D0%BF%D1%80%D0%B8%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BE%D1%87%D0%BA%D0%B8-%D1%81-%D0%BF%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%BE%D0%B9/">Прикольные очки с подсветкой</a>
+        <a href="https://prokopov.me/posts/2021-11-07/">SRE concepts</a>
     </h1>
-    <div class="date">22.04.2016</div>
-    <div><p>Идеально <a href="https://super-truper.com.ua/sredstva-zashchity/ochki-zashchitnye-s-podsvetkoj-truper">удобные очки</a> при работе болгаркой в особо темных местах!</p>
-<p><a href="https://super-truper.com.ua/sredstva-zaschity/ochki-zaschitnye-s-podsvetkoj"><img class="aligncenter size-full wp-image-1294" src="/uploads/2016/04/3IuS_hhIi3b-500x500.jpg" alt="3IuS_hhIi3b-500x500" width="500" height="500" srcset="/uploads/2016/04/3IuS_hhIi3b-500x500.jpg 500w, /uploads/2016/04/3IuS_hhIi3b-500x500-150x150.jpg 150w, /uploads/2016/04/3IuS_hhIi3b-500x500-300x300.jpg 300w, /uploads/2016/04/3IuS_hhIi3b-500x500-144x144.jpg 144w" sizes="(max-width: 500px) 100vw, 500px" /></a></p>
-<p>Подсветка встроенная прямо на дужки очков.</p>
-</div>
-</div>
-
-<div class="article">
-    <h1>
-        <a href="https://prokopov.me/2014/03/customer-is-everything/">Дизайн Сайт значение. Customer is the king.</a>
-    </h1>
-    <div class="date">21.03.2014</div>
-    <div><p>Люби друзи. Позвольте вас отвлечь от политических баталий и приковать внимание к идее, которой я нашел дополнительное подтверждение совершенно недавно.</p>
-<p><a href="/uploads/2014/03/Screen-Shot-2014-03-21-at-11.19.23.png"><img class="aligncenter size-large wp-image-1192" alt="Screen Shot 2014-03-21 at 11.19.23" src="/uploads/2014/03/Screen-Shot-2014-03-21-at-11.19.23-1024x816.png" width="700" height="557" srcset="/uploads/2014/03/Screen-Shot-2014-03-21-at-11.19.23-1024x816.png 1024w, /uploads/2014/03/Screen-Shot-2014-03-21-at-11.19.23-300x239.png 300w, /uploads/2014/03/Screen-Shot-2014-03-21-at-11.19.23-900x717.png 900w, /uploads/2014/03/Screen-Shot-2014-03-21-at-11.19.23.png 1394w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
-<p>Если вы думаете, что стоит сделать красивый и суперэргономичный сайт и продажи взлетят, то вы заблуждаетесь. Вот <a href="http://nedorogo.dp.ua">пример интернет-мазагина из Днепропетровска</a> с дизайном в стиле конца 90х, но на котором я сделал уже третий заказ за последний месяц. Что именно привело меня туда и почему я остался довольным покупателем не смотря на отсутствие на сайте авторизации пользователей, и других дизайнерских изысков?</p>
+    <div class="date">08.11.2021</div>
+    
+    <h4>Reading time: 2 min.</h4>
+    
+    <div><p>Site Reliability Engineering makes sense only if you bothered with <strong>Reliability</strong>. Let me share my thought after completing this <a href="https://www.coursera.org/learn/site-reliability-engineering-slos">superuseful SRE Course</a>.</p>
+<p>You need to make several steps to consider SRE path.</p>
 <ol>
-<li>Цены.</li>
-<li>Отзывы.</li>
-<li>Общение и консультации в процессе подтверждения заказа.</li>
+<li>Think what makes user unhappy using your services.</li>
+<li>Decide on metrics that reflects user happiness and start gathering it.</li>
+<li>Create plans on how to maintain the service level target and policies describing what you going to do when situation become dangerous to achieving your targets.</li>
+<li>Create plans for improve these metrics.</li>
+<li>Act, measure, reflect, improve.</li>
 </ol>
-<p>Хороший пункт 3 даже подвиг меня к предоплате, чего я обычно не делаю.</p>
-<p>После совершения первой покупки я вернулся и сделал новый заказ, но теперь критерии для меня шли в другой последовательности.</p>
-<ol>
-<li>Цена.</li>
-<li>Скорость выполнения заказа (предыдущий товар в Киеве я получил на следующий день (!) после заказа и оплаты).</li>
-<li>Общение и консультации. Исчерпывающий e-mail с номерами деклараций и всем таким (но с таким же дизайном как и сайт).</li>
-<li>Отзывы.</li>
-</ol>
-<p>Такой дизайн дарит ощущение теплой ламповости. Это как читать приклеенные объявления, написанные от руки, а не напечатанные на принтере, если вы понимаете о чем я. В такой интернет-магазин хочется прийти и заказать еще раз, посоветовать друзьям потому что заказа был выполнен, как говорят англичане, hassle free (без хлопот).</p>
-<p>Когда мы начинали в конце 2007 наши ИТ услуги в <a href="http://it-premium.com.ua">IT-Premium</a> подход к каждой проблеме пользователя был индивидуальным. Каждый из нас был и жрец и жнец и на дуде игрец, как Артем из интернет-магазина выше. По мере роста нами нанимались сотрудники и им делегировались какие-то дела и обязанности. Все дело в том, что мотивация сотрудников была иной, нежели у нас тогда. И, местами, даже при выполнении обязательств по времени реакции и времени решения, периодически ситуации возникали спорные, требующие подчистки кармы.</p>
-<p>Незримый капитал любой компании – это позитивное отношение клиентов и их хороший опыт взаимодействия с вами. Конкуренция заставляет наращивать  этот незримый капитал. Рекомендую почитать <a href="http://ru.wikipedia.org/wiki/%D0%94%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D1%8F%D1%8F_%D1%81%D1%87%D0%B0%D1%81%D1%82%D1%8C%D0%B5">историю Zappos</a>. Отсутствие конкуренции (монополия) тут же сказывается на обратном, достаточно вспомнить услуги госорганов.</p>
-<p>Основная мысль этого опуса проста: покажите, что вам не все равно, покажите заинтересованность и участие, проникнитесь проблемой клиента и помогите ее решить и клиенты к вам потянутся.</p>
-<p><strong>Customer is the king.</strong></p></div>
-</div>
+<p>Little bit clarity on abbreviations those used by google guys.</p>
+<p><strong>SLA</strong> - service level agreement. This is the service perception boundary you shouldn&rsquo;t cross. When user considers your service as bad, you didn&rsquo;t match his expectations, so either you didn&rsquo;t set proper expectations or you breached your promise on the service quality.</p>
+<p><strong>SLO</strong> - service level objectives. Same as SLA, but this is only internal promise and compass to meet user expectations, and this is a bit more tight because we don&rsquo;t want to dissapoint user by breaching SLA.</p>
+<p><strong>SLI</strong> - service level indicator shows how you meet user expectation in some point in time. Normally this is ratio of good events to all valid events in some period of time.</p>
+<p>How these relate to each other? Let me describe this in this little mantra.</p>
+<blockquote>
+<p>We measure <strong>SLIs</strong>, which shouldn&rsquo;t to breach <strong>SLOs</strong> not to disappoint users by breaking <strong>SLAs</strong>.</p>
+</blockquote></div>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url =  null ;  
+    this.page.identifier =  null ; 
+    };
+ (function() {
+     var d = document, s = d.createElement('script');
+     s.src = 'https://maksym-prokopov-personal-blog.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-<div class="article">
-    <h1>
-        <a href="https://prokopov.me/2011/12/%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B1%D1%80%D0%B8%D1%82%D0%B2%D1%8B/">Выбор электробритвы</a>
-    </h1>
-    <div class="date">20.12.2011</div>
-    <div><p>Хорошие статьи буду по-немногу вытягивать наверх.</p>
-<p>Обзор электробритвы Philips (можно применить ко всем электробритвам Philips)</p>
-<img style="display: block; margin-left: auto; margin-right: auto;" title="philips-hq-7290$1.jpg" src="/uploads/2011/12/philips-hq-72901.jpg" border="0" alt="Philips hq 7290$1" width="500" height="500" />
-<p><a href="http://nexus.org.ua/weblog/message/613/">http://nexus.org.ua/weblog/message/613/</a></p>
-<p> </p>
-<p>Обзор электробритвы Brown</p>
-<img style="display: block; margin-left: auto; margin-right: auto;" title="pulsonic2-thumb.jpg" src="/uploads/2011/12/pulsonic2-thumb.jpg" border="0" alt="Pulsonic2 thumb" width="400" height="485" />
-<p><a href="http://nexus.org.ua/weblog/message/840/">http://nexus.org.ua/weblog/message/840/</a></p>
 </div>
-</div>
-
 <div class="sidebar"><div class="sidebar__visitcard">
     <div class="sidebar__heading">Profile links</div><p></p>
     <div class="textwidget profile__link">

@@ -40,7 +40,7 @@
     </h1>
     <div class="date">06.06.2018</div>
     <div><p>Here is a piece of my old code, but it’s definitely could be improved.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
   h <span style="color:#f92672">=</span> ticket_params
     h<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity
     h<span style="color:#f92672">[</span><span style="color:#e6db74">:event</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_event <span style="color:#66d9ef">if</span> extract_event
@@ -51,7 +51,7 @@
 </code></pre></div><p>As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?</p>
 <p>Let’s see, <code>h=ticket_params</code>. We call this because we don’t want to modify <code>ticket_params</code>. Is there any method which creates a copy?</p>
 <p>It turns out we have dup method which creates a copy of an object, this is exactly what we wanted. Then, we have tap method, which allows us to dive in object internals and return then itself. Here is whole new piece of code after refactoring.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
   ticket_params<span style="color:#f92672">.</span>dup<span style="color:#f92672">.</span>tap <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>params<span style="color:#f92672">|</span>
     params<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity
     params<span style="color:#f92672">[</span><span style="color:#e6db74">:event</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_event <span style="color:#66d9ef">if</span> extract_event

@@ -363,7 +363,7 @@ _jabber._tcp 900 IN SRV 5 0 5269 jabber.</description>
       <guid>https://prokopov.me/2009/12/dir320-printserver/</guid>
       <description>&lt;p&gt;Заметку побудило написать мое удивление при настройке печати через D-Link DIR-320, а именно несвойственная такого класса устройствам безгеморройность в настройке.&lt;/p&gt;
 &lt;p&gt;Для того что бы наш Xerox 3119 корректно распознался коробочкой пришлось обновить прошивку с 1.00 до 1.10, и после этого, о чудо, принтер был роутером обнаружен и автоматически настроен.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://prokopov.me/uploads/2009/12/xerox_3119_printserver.png&#34; alt=&#34;xerox 3119 printserver&#34; height=&#34;113&#34; width=&#34;567&#34; /&gt;&lt;/p&gt;</description>
+&lt;img src=&#34;https://prokopov.me/uploads/2009/12/xerox_3119_printserver.png&#34; alt=&#34;xerox 3119 printserver&#34; height=&#34;113&#34; width=&#34;567&#34; /&gt;</description>
     </item>
     
     <item>

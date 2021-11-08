@@ -43,7 +43,7 @@
     
     <div><p>I&rsquo;m really crying of how finally emacs can be used for the literate programming and for some testing.</p>
 <p>For restclient, this creates POST request with json data structure in request body.</p>
-<pre><code class="language-org-mode" data-lang="org-mode">  #+begin_src restclient
+<pre tabindex="0"><code class="language-org-mode" data-lang="org-mode">  #+begin_src restclient
     POST http://muster.test/index.php?cl=ping
     Content-Type: application/json
 
@@ -81,7 +81,7 @@
 // Request duration: 0.269261s
 #+END_SRC
 </code></pre><p>This executes SQL statement and checks what the previous command has been executed!</p>
-<pre><code class="language-org-mode" data-lang="org-mode">#+begin_src  sql :engine mysql :dbhost 127.0.0.1 :dbuser muster :dbpassword muster :database muster-development
+<pre tabindex="0"><code class="language-org-mode" data-lang="org-mode">#+begin_src  sql :engine mysql :dbhost 127.0.0.1 :dbuser muster :dbpassword muster :database muster-development
 select val, attribute, count(*)
 from oxps_user_consent_pings 
 where attribute='googleanalytics' and time &gt; '2021-01-01'

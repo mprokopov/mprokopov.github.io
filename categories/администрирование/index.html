@@ -190,7 +190,7 @@
     <div class="date">19.01.2012</div>
     <div><p>Если вы мигрируете сайт на новый домен, и не хотите потерять SEO позиций, то важно сделать идеологически правильный редирект.</p>
 <p>Делается он так:</p>
-<pre><code>Options +FollowSymLinks   
+<pre tabindex="0"><code>Options +FollowSymLinks   
 RewriteEngine on   
 RewriteCond %{HTTP_HOST} !^newdomain\.com   
 RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
@@ -209,7 +209,7 @@ RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
 <p>Очевидные плюсы кандидата: понятность и простота использовавания, бесплатность и русифицированность.</p>
 <p>По большому счету программа делает действия аналогичные Everest Audit (сейчас AiDA), но при этом не просит денег.</p>
 <p><a href="http://checkcfg.narod.ru/">http://checkcfg.narod.ru/</a></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="softsh.gif" src="/uploads/2011/12/softsh.gif" border="0" alt="Softsh" width="550" height="304" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="softsh.gif" src="/uploads/2011/12/softsh.gif" border="0" alt="Softsh" width="550" height="304" />
 <p>К слову, open source аналог данного комплекса, на который стоит посмотреть <a href="http://www.ocsinventory-ng.org/en/about/features/ocsng-glpi.html">http://www.ocsinventory-ng.org/en/about/features/ocsng-glpi.html</a></p>
 <p>Но с веб-интерфейсом там та же беда, что и у большинства open source продуктов, – дизайн выполенный программистом, как говорит г-н Умпутун, нарисованный чужими для хищников.</p>
 <p>UPDATE: а вот простой и функциональный аналог AIDA с открытым кодом <a href="http://www.aspia.ru/">Aspia</a>.</p>
@@ -240,7 +240,7 @@ RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]
 <p>Из замеченных особенностей — перемаплены цифровые клавиши на верхний регистр, например для точки и запятой необходимо нажать просто 6 или 7, если необходимо набрать цифры — делайте при помощи shift. Не менее интересно будет ознакомиться в Ководстве у Артемия и с историей проблемы русских <a href="http://www.artlebedev.ru/kovodstvo/sections/105/">знаков препинания при наборе</a>.</p>
 <p>Бандл использует свой механизм переключения, так что command + space можно отключить от переключения раскладок насовсем и использовать с удобством, например, в quicksilver.</p>
 <p>UPDATE: Я привык и втянулся! Знаки препинания в нижнем регистре для русского языка это очень-очень правильно. <a href="http://code.google.com/p/iterm2/issues/detail?id=1067&amp;start=200">Обнаружен огорчающй баг с iTerm2</a>, но это, думаю, претензии к iTerm2.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="language_switch_caps.png" src="/uploads/2011/06/language_switch_caps.png" border="0" alt="Language switch caps" width="600" height="529" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="language_switch_caps.png" src="/uploads/2011/06/language_switch_caps.png" border="0" alt="Language switch caps" width="600" height="529" />
 </div>
 </div>
 
@@ -283,7 +283,7 @@ make reinstall</pre>
 <p>tcpdump -n -e  ether host ff:ff:ff:ff:ff:ff</p>
 <p>а теперь есть, но идут они через другой интерфейc.</p>
 <p>Для того что бы выбрать интерфейс, с которого будут исходить PPPoE PADI пакеты необходимо создать PPPoE правым кликом на интерфейсе,</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="pppoe.png" src="/uploads/2011/06/pppoe.png" border="0" alt="pppoe" width="525" height="478" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="pppoe.png" src="/uploads/2011/06/pppoe.png" border="0" alt="pppoe" width="525" height="478" />
 <p>Однако в нашем случае фокус в том, что при выборе интерфейсов vlan и клик на «создать службу PPPoE» ни к чему не приводят. При этом с физическими интерфейсами работает исключительно гладко.</p>
 <p>Даже запуск вручную не приводит к позитивным результатам</p>
 <p>pppd plugin PPPoE.ppp device vlan0 noauth defaultroute user username password pw</p>
@@ -316,7 +316,7 @@ make reinstall</pre>
     </h1>
     <div class="date">04.05.2011</div>
     <div><p>Вот что обнаружено в прошивке dd-wrt на маршрутизаторе TP-Link TL-WR1043ND (IP over DNS Tunneling)</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="ipoverdns.png" src="/uploads/2011/05/ipoverdns.png" border="0" alt="ip over dns tunneling" width="600" height="268" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="ipoverdns.png" src="/uploads/2011/05/ipoverdns.png" border="0" alt="ip over dns tunneling" width="600" height="268" />
 <p>А это значит, что легким движением мыши вы можете включить аццкий функционал, позволяющий обходить авторизацию многих платных хотспотов в отелях, и использовать wifi бесплатно, как описано здесь <a href="http://xgu.ru/wiki/DNS-tunneling">http://xgu.ru/wiki/DNS-tunneling</a> и здесь <a href="http://theapplegeek.ru/archives/283">http://theapplegeek.ru/archives/283</a></p>
 </div>
 </div>
@@ -333,7 +333,7 @@ make reinstall</pre>
 <p>Фокус в том, что и сам диск 500ка стал виден как 64Гб 🙂 Гугление вокруг да около не возымело должного эффекта и решение простыми средствами (fdisk, parted) и resize2ext мне показалось стремным.</p>
 <p>И вот был обнаружен <a href="http://gparted.sourceforge.net/download.php">gparted</a>, который по факту оказался ничем иным как свободной версией известного PQMagic, по крайней мере по функционалу точно такой же.</p>
 <p>Легким движением мышки и диск из 64 превратился обратно в 500 и нужная партиция была раздвинута на нужный полный размер.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="gparted_1_small.png" src="/uploads/2011/04/gparted_1_small.png" border="0" alt="Gparted 1 small" width="400" height="274" /></p>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="gparted_1_small.png" src="/uploads/2011/04/gparted_1_small.png" border="0" alt="Gparted 1 small" width="400" height="274" />
 <p>Кстати, gparted являет собой загрузочный ISO, который вполне хорошо отработал в VMWare Fusion под Mac.</p>
 </div>
 </div>
@@ -479,8 +479,8 @@ make reinstall</pre>
     <div><p>Для тех, кто любит и умеет готовить AD не секрет, что работа со свойствами пользователей в больших количествах занятие трудоемкое.</p>
 <p>Какие-то свойства профиля можно задать групповой операцией,  а какие-то нет.</p>
 <p>Нелегкий труд ADмина призвана облегчить <a href="http://www.wisesoft.co.uk/software/bulkadusers/default.aspx">сия утилита</a>.</p>
-<p><img class="alignnone" src="http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_Main.png" alt="" width="678" height="446" /></p>
-<p><img class="alignnone" src="http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_BulkModify.png" alt="" width="475" height="593" /></p>
+<img class="alignnone" src="http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_Main.png" alt="" width="678" height="446" />
+<img class="alignnone" src="http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_BulkModify.png" alt="" width="475" height="593" />
 </div>
 </div>
 
@@ -494,7 +494,7 @@ make reinstall</pre>
 <p>Как организовать доступность сервиса в случае падения одного из серверов?</p>
 <p>DNS? А вообще бывает такой «пингующий» DNS, который будет исключать IP сервиса из резолва, если тот не «живой»?</p>
 <p>Нагуглил, меж тем, вот <a href="http://www.buy.com/prod/cisco-11503-content-switch-2-x-lan-cisco-11503-content-switch-2-x-lan/q/loc/101/10323898.html">такой девайс</a></p>
-<p><img class="aligncenter" src="http://ak.buy.com/db_assets/prod_lrg_images/898/10323898.jpg" alt="" width="250" height="250" /></p>
+<img class="aligncenter" src="http://ak.buy.com/db_assets/prod_lrg_images/898/10323898.jpg" alt="" width="250" height="250" />
 <p>за $10 000.</p>
 <p>Но с поправкой на нашу суровую реальность смотрим на более бюджетные вещи 🙂</p>
 </div>
@@ -520,7 +520,7 @@ make reinstall</pre>
         <a href="https://prokopov.me/2010/01/jabber-server-dns-setup/">Хозяйке на заметку: корректная настройка DNS записей для сервера jabber</a>
     </h1>
     <div class="date">20.01.2010</div>
-    <div><p><img src="/uploads/2010/01/jabber_logo.jpeg" align="left" hspace="25" vspace="25" /></p>
+    <div><img src="/uploads/2010/01/jabber_logo.jpeg" align="left" hspace="25" vspace="25" />
 <p>Сталкивались ли вы с проблемами отправки сообщений [Jabber с Google Hosted services](<a href="http://googletalk.blogspot.com/2006/01/xmpp-federation.html">http://googletalk.blogspot.com/2006/01/xmpp-federation.html</a>) на аккаунт вне вашего домена?</p>
 <p>Если вы хотите, что бы ваш jabber сервер был доступен для общения и с другими доменами интернета (что называется «федерация»), будьте добры настроить DNS записи для вашего домена, как показано на примере ниже:</p>
 <p>_xmpp-client._tcp 900 IN SRV 5 0 5222 jabber.example.com.</p>
@@ -582,7 +582,7 @@ make reinstall</pre>
     <div class="date">29.12.2009</div>
     <div><p>Набрел на забавную утилиту apachetop</p>
 <p>Вот такой простенький, порой, бывает нужен <a href="http://www.webta.org/projects/apachetop/">анализатор состояния апача</a>, вдруг атакует кто?</p>
-<p><img src="http://lh3.ggpht.com/_YlUeUCURrJM/SyEmhsX7ClI/AAAAAAAADDI/cFRlCF8j7k4/%3F%3F%3F%3F%3F%3F%20%3F%3F%3F%3F%3F%3F%202009-12-10%20%3F%2018.48.14.png?imgmax=800" border="0" alt="Снимок экрана 2009-12-10 в 18.48.14.png" width="602" height="197" /></p>
+<img src="http://lh3.ggpht.com/_YlUeUCURrJM/SyEmhsX7ClI/AAAAAAAADDI/cFRlCF8j7k4/%3F%3F%3F%3F%3F%3F%20%3F%3F%3F%3F%3F%3F%202009-12-10%20%3F%2018.48.14.png?imgmax=800" border="0" alt="Снимок экрана 2009-12-10 в 18.48.14.png" width="602" height="197" />
 </div>
 </div>
 
@@ -593,12 +593,12 @@ make reinstall</pre>
     <div class="date">28.12.2009</div>
     <div><p>Заметку побудило написать мое удивление при настройке печати через D-Link DIR-320, а именно несвойственная такого класса устройствам безгеморройность в настройке.</p>
 <p>Для того что бы наш Xerox 3119 корректно распознался коробочкой пришлось обновить прошивку с 1.00 до 1.10, и после этого, о чудо, принтер был роутером обнаружен и автоматически настроен.</p>
-<p><img src="/uploads/2009/12/xerox_3119_printserver.png" alt="xerox 3119 printserver" height="113" width="567" /></p>
+<img src="/uploads/2009/12/xerox_3119_printserver.png" alt="xerox 3119 printserver" height="113" width="567" />
 <p>Затем, как водится, хотел добавить через network printer port с указанием IP и порта 9100, но дай-ка, думаю, посмотрю что за визард такой в админке d-link. Запускаю, появляется страница printer wizard, княпаю next,next и … загружается PrinterConfig.exe.</p>
 <p>Запускаю, получаю сообщение о том, что принтер корректно установлен в система с нужным драйвером!</p>
-<p><img src="/uploads/2009/12/3119_windows_driver.png" alt="3119 windows driver" height="130" width="451" /></p>
+<img src="/uploads/2009/12/3119_windows_driver.png" alt="3119 windows driver" height="130" width="451" />
 <p>Настройка под Mac также не составила никаких проблем:</p>
-<p><img src="/uploads/2009/12/3119_printer_mac_setup.png" alt="3119 printer mac setup" height="514" width="600" /></p>
+<img src="/uploads/2009/12/3119_printer_mac_setup.png" alt="3119 printer mac setup" height="514" width="600" />
 <p>Вот и сказочке конец, а кто DIR-320 купил, тот молодец 🙂</p></div>
 </div>
 
@@ -608,7 +608,7 @@ make reinstall</pre>
     </h1>
     <div class="date">24.12.2009</div>
     <div><p><img class="alignnone" style="margin: 10px;" title="zabbix" src="http://www.zabbix.com/img/zabbix1.png" alt="zabbix" width="118" height="31" />Если при установке zabbix 1.8 на FreeBSD вы получаете сообщения вида:</p>
-<p><img class="alignnone" style="margin: 10px;" title="freebsd logo" src="http://www.freebsd.org/logo/logo-full-thumb.png" alt="freebsd logo" width="200" height="72" /></p>
+<img class="alignnone" style="margin: 10px;" title="freebsd logo" src="http://www.freebsd.org/logo/logo-full-thumb.png" alt="freebsd logo" width="200" height="72" />
 <p>60622:20091223:144406.024 Can’t allocate shared memory of size 8388608 [Cannot allocate memory]</p>
 <p>60622:20091223:144406.024 Can’t allocate shared memory for configuration cache.</p>
 <p>знайте, все дело в системных настройках sysctl.conf</p>

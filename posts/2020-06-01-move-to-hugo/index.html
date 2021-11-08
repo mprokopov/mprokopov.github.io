@@ -65,7 +65,7 @@
 <p>Сначала я сделал перепроектирование <a href="https://it-premium.com.ua">https://it-premium.com.ua</a> на <a href="https://gohugo.io/">Hugo</a> вместо RoR, и сразу понял, это - то что нужно! Во-первых статика это то, во что так или иначе переходит каждый сайт когда его рендером занимается браузер. Быстрее чем статический сайт сделать нельзя, хотя многие пытаются, используя Javascript-based фреймворки на подобие Gatsby.</p>
 <p>Hugo поддерживает не только markdown, но и различные продвинутые сценарии, так в странице <a href="/pages/trips/">&ldquo;Путешествую&rdquo;</a> список стран и мест находится в YAML файле и включается из Markdown при помощи custom tag. На каждой странице список друзей также стал формироваться из отдельного YAML. Кстати, уже никто не обменивается ссылками как раньше?</p>
 <p>мой trips.yaml файл, рендер которого вы можете увидеть <a href="/pages/trips">здесь</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2020</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2020</span>
   <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Испания, Барселона</span>
   <span style="color:#f92672">comment</span>: <span style="color:#ae81ff">увы и ах, из-за короны-19 отменена :(</span>
 
@@ -134,7 +134,7 @@
 - <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2008</span>
   <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Шарм-Ель-Шейх, Каир (пирамидки))</span>
 </code></pre></div><p>а рендерит его вот такой простой кусочек в layouts/shortcodes/travel.html</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
 {{ range $.Site.Data.travel }}
     &lt;<span style="color:#f92672">li</span>&gt;
         {{.date}} {{.place}} {{.duration}} {{.comment}}
