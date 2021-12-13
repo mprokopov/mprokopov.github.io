@@ -37,16 +37,21 @@
     <h1>
         <a href="https://prokopov.me/posts/sre-concepts-sla-slo-sli/">SRE concepts</a>
     </h1>
-    <div class="date">08.11.2021</div>
+    <div class="date">13.12.2021</div>
     
     <h4>Reading time: 2 min.</h4>
     
-    <div><p>Site Reliability Engineering makes sense only if you bothered with <strong>Reliability</strong>. Let me share my thought after completing this <a href="https://www.coursera.org/learn/site-reliability-engineering-slos">superuseful SRE Course</a>.</p>
+    <div><p>Update: I added several key things recently after started implementing SRE concepts in <a href="https://billie.io">Billie</a>.</p>
+<p>Site Reliability Engineering makes sense only if you bothered with
+<strong>Reliability</strong>. It doesn&rsquo;t bring you much value if the most significant thing
+at current stage is delivering new features, say in recently founded startup this is probably not a good time to start with SRE.</p>
+<p>SRE is a way to balance between the product <strong>Stability</strong> <strong>(Reliability)</strong> and <strong>Changes</strong> you&rsquo;re going to make to the product, as changes are the most frequent root cause of the <strong>bad events</strong>. The core concept is when your changes breaking your product too much, you probably need to stop delivering these to the production and focus on stability. In order to switch the focus <strong>timely</strong>, you need to establish and track <strong>stability metrics</strong>. Also you need to define steps you going to take when stability promise to users about to be <em>broken</em>.</p>
+<p>Let me share my thought after completing this <a href="https://www.coursera.org/learn/site-reliability-engineering-slos">superuseful SRE Course</a>.</p>
 <p>You need to make several steps to consider SRE path.</p>
 <ol>
 <li>Think what makes user unhappy using your services.</li>
 <li>Decide on metrics that reflects user happiness and start gathering it.</li>
-<li>Create plans on how to maintain the service level target and policies describing what you going to do when situation become dangerous to achieving your targets.</li>
+<li>Create plans on how to maintain the service level target and policies describing what you going to do when situation become dangerous to achieving your availability targets.</li>
 <li>Create plans for improve these metrics.</li>
 <li>Act, measure, reflect, improve.</li>
 </ol>

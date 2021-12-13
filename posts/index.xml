@@ -6,19 +6,24 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 08 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SRE concepts</title>
       <link>https://prokopov.me/posts/sre-concepts-sla-slo-sli/</link>
-      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://prokopov.me/posts/sre-concepts-sla-slo-sli/</guid>
-      <description>&lt;p&gt;Site Reliability Engineering makes sense only if you bothered with &lt;strong&gt;Reliability&lt;/strong&gt;. Let me share my thought after completing this &lt;a href=&#34;https://www.coursera.org/learn/site-reliability-engineering-slos&#34;&gt;superuseful SRE Course&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Update: I added several key things recently after started implementing SRE concepts in &lt;a href=&#34;https://billie.io&#34;&gt;Billie&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Site Reliability Engineering makes sense only if you bothered with
+&lt;strong&gt;Reliability&lt;/strong&gt;. It doesn&amp;rsquo;t bring you much value if the most significant thing
+at current stage is delivering new features, say in recently founded startup this is probably not a good time to start with SRE.&lt;/p&gt;
+&lt;p&gt;SRE is a way to balance between the product &lt;strong&gt;Stability&lt;/strong&gt; &lt;strong&gt;(Reliability)&lt;/strong&gt; and &lt;strong&gt;Changes&lt;/strong&gt; you&amp;rsquo;re going to make to the product, as changes are the most frequent root cause of the &lt;strong&gt;bad events&lt;/strong&gt;. The core concept is when your changes breaking your product too much, you probably need to stop delivering these to the production and focus on stability. In order to switch the focus &lt;strong&gt;timely&lt;/strong&gt;, you need to establish and track &lt;strong&gt;stability metrics&lt;/strong&gt;. Also you need to define steps you going to take when stability promise to users about to be &lt;em&gt;broken&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Let me share my thought after completing this &lt;a href=&#34;https://www.coursera.org/learn/site-reliability-engineering-slos&#34;&gt;superuseful SRE Course&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;You need to make several steps to consider SRE path.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Think what makes user unhappy using your services.&lt;/li&gt;
 &lt;li&gt;Decide on metrics that reflects user happiness and start gathering it.&lt;/li&gt;
-&lt;li&gt;Create plans on how to maintain the service level target and policies describing what you going to do when situation become dangerous to achieving your targets.&lt;/li&gt;
+&lt;li&gt;Create plans on how to maintain the service level target and policies describing what you going to do when situation become dangerous to achieving your availability targets.&lt;/li&gt;
 &lt;li&gt;Create plans for improve these metrics.&lt;/li&gt;
 &lt;li&gt;Act, measure, reflect, improve.&lt;/li&gt;
 &lt;/ol&gt;
