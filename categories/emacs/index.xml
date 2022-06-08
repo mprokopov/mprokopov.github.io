@@ -6,7 +6,17 @@
     <description>Recent content in emacs on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Tue, 02 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs, apple keyboard, and RSI</title>
+      <link>https://prokopov.me/posts/emacs-ergonomics-apple/</link>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/emacs-ergonomics-apple/</guid>
+      <description>Recently I&amp;rsquo;ve started investigation on the most effective shortcuts for Emacs. Already for a long time I&amp;rsquo;ve been using Caps Lock remapped to Esc when pressed alone, and Ctrl-Key when pressed with any other key.
+I didn&amp;rsquo;t use Emacs with native bindings for a long time, because of wrist related issues, which immediately appeared after using pinky for pressing long chords which normally included Ctrl-C combination. This is why I used Spacemacs and later Doom Emacs as the configuration of choice.</description>
+    </item>
+    
     <item>
       <title>Disable Chrome browser confirmation to open external protocol with org-protocol</title>
       <link>https://prokopov.me/posts/2021-02-02-org-protocol-chrome-no-confirmation/</link>
@@ -16,8 +26,8 @@
       <description>&lt;p&gt;I recently added org-capture chrome extension to my toolbelt. Unfortunalely chrome annoys me by asking if I want to open this protocol link every time.&lt;/p&gt;
 &lt;p&gt;Here is the simple way to fix this.&lt;/p&gt;
 &lt;p&gt;Execute this in the shell&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;defaults write com.google.Chrome URLAllowlist -array-add -string &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;org-protocol://*&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;check
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;defaults write com.google.Chrome URLAllowlist -array-add -string &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;org-protocol://*&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;check
 &lt;a href=&#34;chrome://policy&#34;&gt;chrome://policy&lt;/a&gt; url that it contains proper settings for org-protocol&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://prokopov.me/uploads/chrome-policy.png&#34; alt=&#34;Chrome policy&#34;&gt;&lt;/p&gt;</description>
     </item>

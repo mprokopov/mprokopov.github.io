@@ -6,7 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 13 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Travel</title>
       <link>https://prokopov.me/pages/trips/</link>
@@ -50,6 +50,16 @@ if you are a computer science enthusiast, this is must read!
       <description>Hi, my name is Maksym Prokopov. These days I mostly involved in DevOps, Lean IT and IT services.
 A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages. Surprisingly, but I started using PHP for my job today again after almost 18 years. What a destiny!
 Since 2006 I started using Ruby on Rails a lot. 2015 got addicted to Clojure and ClojureScript and did some production-ready things.</description>
+    </item>
+    
+    <item>
+      <title>Emacs, apple keyboard, and RSI</title>
+      <link>https://prokopov.me/posts/emacs-ergonomics-apple/</link>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/emacs-ergonomics-apple/</guid>
+      <description>Recently I&amp;rsquo;ve started investigation on the most effective shortcuts for Emacs. Already for a long time I&amp;rsquo;ve been using Caps Lock remapped to Esc when pressed alone, and Ctrl-Key when pressed with any other key.
+I didn&amp;rsquo;t use Emacs with native bindings for a long time, because of wrist related issues, which immediately appeared after using pinky for pressing long chords which normally included Ctrl-C combination. This is why I used Spacemacs and later Doom Emacs as the configuration of choice.</description>
     </item>
     
     <item>
@@ -137,8 +147,8 @@ One created a huge bundle with all tools, bells, and whistles.&lt;/p&gt;
       <guid>https://prokopov.me/posts/2021-04-08/</guid>
       <description>&lt;p&gt;Recently I&amp;rsquo;ve checked this website and styling became really aweful. After my digging it turned out one little busty thing was doing the crap.&lt;/p&gt;
 &lt;p&gt;Official Linkedin badge! Overrides default link styling!&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text/javascript&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://platform.linkedin.com/badges/js/profile.js&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;defer&lt;/span&gt; &amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The easiest way to turn it off is to change type=&amp;lsquo;text/javascript&amp;rsquo; to just &amp;lsquo;text&amp;rsquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text/javascript&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://platform.linkedin.com/badges/js/profile.js&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;defer&lt;/span&gt; &amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The easiest way to turn it off is to change type=&amp;lsquo;text/javascript&amp;rsquo; to just &amp;rsquo;text&amp;rsquo;.&lt;/p&gt;
 &lt;p&gt;You have also been decreasing my lighthouse score.
 Bye-bye little nasty thing.&lt;/p&gt;</description>
     </item>
@@ -184,8 +194,8 @@ What is so special about this? Let&amp;rsquo;s say I started moving all things f
       <description>&lt;p&gt;I recently added org-capture chrome extension to my toolbelt. Unfortunalely chrome annoys me by asking if I want to open this protocol link every time.&lt;/p&gt;
 &lt;p&gt;Here is the simple way to fix this.&lt;/p&gt;
 &lt;p&gt;Execute this in the shell&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;defaults write com.google.Chrome URLAllowlist -array-add -string &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;org-protocol://*&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;check
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;defaults write com.google.Chrome URLAllowlist -array-add -string &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;org-protocol://*&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;check
 &lt;a href=&#34;chrome://policy&#34;&gt;chrome://policy&lt;/a&gt; url that it contains proper settings for org-protocol&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://prokopov.me/uploads/chrome-policy.png&#34; alt=&#34;Chrome policy&#34;&gt;&lt;/p&gt;</description>
     </item>
@@ -204,20 +214,20 @@ What is so special about this? Let&amp;rsquo;s say I started moving all things f
 
 
     {
-    &amp;quot;essentialtech&amp;quot;: true,
-    &amp;quot;googleadwords&amp;quot;: false,
-    &amp;quot;googleanalytics&amp;quot;: false,
-    &amp;quot;googlemaps&amp;quot;: true,
-    &amp;quot;gtmbasedtech&amp;quot;: false,
-    &amp;quot;terminland&amp;quot;: true,
-    &amp;quot;userlike&amp;quot;: true
+    &amp;#34;essentialtech&amp;#34;: true,
+    &amp;#34;googleadwords&amp;#34;: false,
+    &amp;#34;googleanalytics&amp;#34;: false,
+    &amp;#34;googlemaps&amp;#34;: true,
+    &amp;#34;gtmbasedtech&amp;#34;: false,
+    &amp;#34;terminland&amp;#34;: true,
+    &amp;#34;userlike&amp;#34;: true
     }
 #+end_src
 
 #+RESULTS:
 #+BEGIN_SRC js
 {
-  &amp;quot;message&amp;quot;: &amp;quot;success&amp;quot;
+  &amp;#34;message&amp;#34;: &amp;#34;success&amp;#34;
 }
 // POST http://muster.test/index.php?cl=ping
 // HTTP/1.1 200 OK
@@ -247,7 +257,7 @@ What is so special about this? Let&amp;rsquo;s say I started moving all things f
       <description>&lt;p&gt;Useful Git WIP alias command&lt;/p&gt;
 &lt;p&gt;add this to the .gitconfig&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[alias]
-  wip = for-each-ref --sort=&#39;authordate:iso8601&#39; --format=&#39; %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)&#39; refs/heads
+  wip = for-each-ref --sort=&amp;#39;authordate:iso8601&amp;#39; --format=&amp;#39; %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)&amp;#39; refs/heads
   
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and enjoy &lt;code&gt;git wip&lt;/code&gt; sorting branches by most recent&lt;/p&gt;
 &lt;p&gt;Source: &lt;a href=&#34;https://carolynvanslyck.com/blog/2020/12/git-wip/&#34;&gt;https://carolynvanslyck.com/blog/2020/12/git-wip/&lt;/a&gt;&lt;/p&gt;</description>
@@ -276,21 +286,20 @@ What is so special about this? Let&amp;rsquo;s say I started moving all things f
       <guid>https://prokopov.me/posts/2020-12-24/</guid>
       <description>&lt;p&gt;In brief  - use the &lt;code&gt;resource_group&lt;/code&gt; directive.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;stages&lt;/span&gt;:
-  - &lt;span style=&#34;color:#ae81ff&#34;&gt;build&lt;/span&gt;
-
-&lt;span style=&#34;color:#f92672&#34;&gt;jobA&lt;/span&gt;:
-  &lt;span style=&#34;color:#f92672&#34;&gt;resource_group&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;jobA&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;stage&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;build&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;: 
-    - &lt;span style=&#34;color:#ae81ff&#34;&gt;echo HelloA&lt;/span&gt;
-
-&lt;span style=&#34;color:#f92672&#34;&gt;jobB&lt;/span&gt;: 
-  &lt;span style=&#34;color:#f92672&#34;&gt;stage&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;build&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;:
-    - &lt;span style=&#34;color:#ae81ff&#34;&gt;echo HelloB&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are some useful patterns for Resource Group.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;stages&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#ae81ff&#34;&gt;build&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;jobA&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;resource_group&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;jobA&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;stage&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;build&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;: 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;echo HelloA&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;jobB&lt;/span&gt;: 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;stage&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;build&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;echo HelloB&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are some useful patterns for Resource Group.&lt;/p&gt;
 &lt;p&gt;resource_group: $CI_ENVIRONMENT_NAME &amp;hellip; Limit per environment&lt;/p&gt;
 &lt;p&gt;resource_group: $CI_JOB_NAME &amp;hellip; Limit per job&lt;/p&gt;
 &lt;p&gt;resource_group: $CI_COMMIT_REF_NAME:$CI_JOB_NAME &amp;hellip; Limit per job per branch&lt;/p&gt;
@@ -383,7 +392,7 @@ What is so special about this? Let&amp;rsquo;s say I started moving all things f
 &lt;/blockquote&gt;
 &lt;p&gt;Namely, you write an example of time date, not just &amp;ldquo;dd-MM-yyyy&amp;rdquo; but real date and time using numbers as values.&lt;/p&gt;
 &lt;p&gt;Here is go example:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;01/02 03:04:05PM &#39;06 -0700
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;01/02 03:04:05PM &amp;#39;06 -0700
 Mon Jan 2 15:04:05 MST 2006
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;if we want to print output similar to dd-MM-yyyy we&amp;rsquo;d specify just&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;02 Jan 2006
@@ -640,17 +649,16 @@ Nikita Prokopov сделал отличный talk о стадиях компе�
       
       <guid>https://prokopov.me/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/</guid>
       <description>Here is a piece of my old code, but it’s definitely could be improved.
-def to_params h = ticket_params h[:activity] = extract_activity if extract_activity h[:event] = extract_event if extract_event h.delete(:state_event) h.delete(:activities_attributes) h end As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?
-Let’s see, h=ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy?
-It turns out we have dup method which creates a copy of an object, this is exactly what we wanted.</description>
+def to_params  h = ticket_params  h[:activity] = extract_activity if extract_activity  h[:event] = extract_event if extract_event  h.delete(:state_event)  h.delete(:activities_attributes)  h end As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?
+Let’s see, h=ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy?</description>
     </item>
     
     <item>
       <title>Введение в Prolog</title>
-      <link>https://prokopov.me/posts/2018-05-29_-prolog-e0878ac7fe40/</link>
+      <link>https://prokopov.me/posts/2018-05-29_-----------prolog-e0878ac7fe40/</link>
       <pubDate>Tue, 29 May 2018 12:38:14 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/2018-05-29_-prolog-e0878ac7fe40/</guid>
+      <guid>https://prokopov.me/posts/2018-05-29_-----------prolog-e0878ac7fe40/</guid>
       <description>Хочу такой туториал, с которым все понятно, куда коней запрягать. А его нет. Напишу тогда свой.
 Итак, Пролог это не обычный язык программирования. Самый лучший пример использования это решение логической задачи типа
 5 разных человек в 5 разных домах разного цвета, курят 5 разных марок сигарет, выращивают 5 разных видов животных, пьют 5 разных видов напитков. Вопрос: кто выращивает рыбок? Подсказки:
@@ -659,10 +667,10 @@ It turns out we have dup method which creates a copy of an object, this is exact
     
     <item>
       <title>Пожалуй, самым точным определением будет слово «осознанность».</title>
-      <link>https://prokopov.me/posts/2018-05-27_-dbe59a2cbade/</link>
+      <link>https://prokopov.me/posts/2018-05-27_---------------------------------------------------------------dbe59a2cbade/</link>
       <pubDate>Sun, 27 May 2018 17:29:53 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/2018-05-27_-dbe59a2cbade/</guid>
+      <guid>https://prokopov.me/posts/2018-05-27_---------------------------------------------------------------dbe59a2cbade/</guid>
       <description>Пожалуй, самым точным определением будет слово «осознанность». Нон-конформизм это тоже своего рода крайность, так как бывает сопротивление ради сопротивления, особенно в пубертатном возрасте. Уметь оценивать и признавать противоположную точку зрения, вот что по-настоящему ценно.
 Некоторые мои знакомые приходят к осознанности разными путями, кто-то через стремные духовные практики, кто-то через упражнения с ножом или бритвой.
 Но всегда осознанность означает правильно настроенный жизненный компас.</description>
@@ -679,10 +687,10 @@ It turns out we have dup method which creates a copy of an object, this is exact
     
     <item>
       <title>Согласен по всем пунктам!</title>
-      <link>https://prokopov.me/posts/2018-03-28_-2285686116fa/</link>
+      <link>https://prokopov.me/posts/2018-03-28_--------------------------2285686116fa/</link>
       <pubDate>Wed, 28 Mar 2018 04:19:42 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/2018-03-28_-2285686116fa/</guid>
+      <guid>https://prokopov.me/posts/2018-03-28_--------------------------2285686116fa/</guid>
       <description>Согласен по всем пунктам!
 Я для себя выделил ещё один признак, это умение проводить собственные размышления над проблемой, особенно если они противоположны общепринятой точке зрения. И, конечно, умение вести дискуссию пользуясь логическими построениями, вместо «ойнувсе».</description>
     </item>
@@ -787,10 +795,10 @@ But I was really disappointed with Ansible 2.3, because docker_service module is
     
     <item>
       <title>О красоте кода</title>
-      <link>https://prokopov.me/posts/2017-08-11_-d42877e2368d/</link>
+      <link>https://prokopov.me/posts/2017-08-11_---------------d42877e2368d/</link>
       <pubDate>Fri, 11 Aug 2017 08:04:29 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/2017-08-11_-d42877e2368d/</guid>
+      <guid>https://prokopov.me/posts/2017-08-11_---------------d42877e2368d/</guid>
       <description>Когда программист программирует, он начинает разбивать код на модули только потому, что имеет ограничение в своем неокортексе на количество одновременных элементов в памяти. А я ведь когда-то писал на ассемблере, и легкой прогулкой это никак нельзя было назвать, в основном из-за простыней однообразного кода, в котором было легко потеряться.
 Из этого ограничения появились концепции ООП. Но с ООП тоже беда. Увеличивается количество уровней абстракции. И тогда в большом проекте удержать всю идею в голове становится невозможно.</description>
     </item>
@@ -827,10 +835,10 @@ Caution: your Ring web server should be configured to listen on 0.</description>
     
     <item>
       <title>Про Docker и Ruby on Rails sprockets and precompiled assets</title>
-      <link>https://prokopov.me/posts/2017-07-11_-docker-ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/</link>
+      <link>https://prokopov.me/posts/2017-07-11_----docker---ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/</link>
       <pubDate>Tue, 11 Jul 2017 16:23:08 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/2017-07-11_-docker-ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/</guid>
+      <guid>https://prokopov.me/posts/2017-07-11_----docker---ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/</guid>
       <description>Рельсы идут не тем путем.
 По-хорошему монолит на рельсах нужно дробить, а то получается 1С:Бухгалтерия, со всеми включенными галочками по-умолчанию. В данном случае умолчания в рельсах слишком greedy.
 Взять вот sprockets. Его задача вообще один раз запуститься, минифицировать css и js, и замолчать навеки. При этом он требует кучу разнообразных зависимостей типа execjs, nodejs или v8 от гугла в качестве движка минификации.
@@ -914,10 +922,10 @@ Stay tuned.</description>
     
     <item>
       <title>Блеск и нищета OpenCart как движка для интернет-магазина</title>
-      <link>https://prokopov.me/posts/2016-10-13_-opencart-6bbee7eabb95/</link>
+      <link>https://prokopov.me/posts/2016-10-13_---------------opencart----------------------------------6bbee7eabb95/</link>
       <pubDate>Thu, 13 Oct 2016 13:54:11 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/2016-10-13_-opencart-6bbee7eabb95/</guid>
+      <guid>https://prokopov.me/posts/2016-10-13_---------------opencart----------------------------------6bbee7eabb95/</guid>
       <description>Блеск и нищета OpenCart как движка для интернет-магазина
 13/10/2016
 Это продолжение серии статей «Как я запускал интернет-магазин«. Часть 1 (Аналитика спроса перед запуском). Часть 2 (Выбор движка для интернет-магазина).
@@ -1035,10 +1043,10 @@ http://ternjs.net/doc/demo/#simple</description>
     
     <item>
       <title>Редактор мечты или как, наконец, холивар Emacs или Vim завершился.</title>
-      <link>https://prokopov.me/posts/2016-06-06_-emacs-vim-74190dffa34e/</link>
+      <link>https://prokopov.me/posts/2016-06-06_-----------------------------------------emacs-----vim-------------74190dffa34e/</link>
       <pubDate>Mon, 06 Jun 2016 11:10:04 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/2016-06-06_-emacs-vim-74190dffa34e/</guid>
+      <guid>https://prokopov.me/posts/2016-06-06_-----------------------------------------emacs-----vim-------------74190dffa34e/</guid>
       <description>Если уж быть совсем-совсем кратким, то встречайте Spacemacs. Это такой настроенный Emacs с клавиатурными сочетаниями от Vim.
 Иногда я снимаю шапочку управленца IT-Premium и одеваю другую свою шапочку из фольги и становлюсь программистом. У каждого программиста, мой дорогой читатель, есть второй инструмент по важности после головы — это редактор кода.
 Каким должен быть хороший редактор для кода? Удобным, быстрым, с подсказками и свистелками? Но, конечно же, самый хороший инструмент это тот, которым ты умеешь пользоваться.</description>
@@ -1108,10 +1116,10 @@ Just use bundle package and all current gems will be copied into vendor/cache. W
     
     <item>
       <title>Чат на вашем вебсайте с интеграцией в slack за 15 минут</title>
-      <link>https://prokopov.me/posts/2015-11-02_-slack-15-8ee097578b6b/</link>
+      <link>https://prokopov.me/posts/2015-11-02_--------------------------------------slack----15-------8ee097578b6b/</link>
       <pubDate>Mon, 02 Nov 2015 15:12:00 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/2015-11-02_-slack-15-8ee097578b6b/</guid>
+      <guid>https://prokopov.me/posts/2015-11-02_--------------------------------------slack----15-------8ee097578b6b/</guid>
       <description>Так не хочется устанавливать еще одно ПО на компьютер (типа приватовского SiteHeart), а чат для вебсайта хочется. Мы же используем уже Slack для внутренних коммуникаций, который прекрасно интегрируется со всем и вся. Можно ли его использовать для наших целей? 10 минут на гугл и вуаля, вот он сервис Chatlio, который делает то, что нам нужно. Да еще и на тестовый период в 30 дней бесплатно. Думаю, за 30 дней мы сможем понять, добавляет ли это пользы процессу продаж.</description>
     </item>
     
@@ -3282,10 +3290,10 @@ kern.ipc.shmall=2097152
     
     <item>
       <title>Gitlab: continuous delivery setup for Clojure/Java with Docker</title>
-      <link>https://prokopov.me/posts/draft_gitlab-continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/</link>
+      <link>https://prokopov.me/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/draft_gitlab-continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/</guid>
+      <guid>https://prokopov.me/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/</guid>
       <description>Recently I was doing a https://github.com/mprokopov/it-service-sse and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.
 Long story short, here my .gitlab-ci.yml which took me a couple of days to figure out what is the “artifact” in Gitlab and how is it suppose to survive between artifact builds and docker builds.</description>
     </item>
@@ -3314,20 +3322,20 @@ https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7b
     
     <item>
       <title>One account. All of Google.</title>
-      <link>https://prokopov.me/posts/draft_one-account-all-of-google-24ec9b332a4a/</link>
+      <link>https://prokopov.me/posts/draft_one-account--all-of-google--24ec9b332a4a/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/draft_one-account-all-of-google-24ec9b332a4a/</guid>
+      <guid>https://prokopov.me/posts/draft_one-account--all-of-google--24ec9b332a4a/</guid>
       <description>One account. All of Google.
 Originally published at www.blogger.com.</description>
     </item>
     
     <item>
       <title>One account. All of Google.</title>
-      <link>https://prokopov.me/posts/draft_one-account-all-of-google-4681a5761d84/</link>
+      <link>https://prokopov.me/posts/draft_one-account--all-of-google--4681a5761d84/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/draft_one-account-all-of-google-4681a5761d84/</guid>
+      <guid>https://prokopov.me/posts/draft_one-account--all-of-google--4681a5761d84/</guid>
       <description>One account. All of Google.
 Originally published at www.blogger.com.</description>
     </item>
@@ -3394,10 +3402,10 @@ Handling connection for 3000
     
     <item>
       <title>Why is my dev docker container so slow on macOS?</title>
-      <link>https://prokopov.me/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos-9599b598746b/</link>
+      <link>https://prokopov.me/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos--9599b598746b/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos-9599b598746b/</guid>
+      <guid>https://prokopov.me/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos--9599b598746b/</guid>
       <description>TLDR: because of the networking layer and how docker volumes implemented.</description>
     </item>
     

@@ -14,11 +14,20 @@
     <loc>https://prokopov.me/pages/about/</loc>
     <lastmod>2020-12-08T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://prokopov.me/categories/</loc>
+    <lastmod>2022-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://prokopov.me/categories/emacs/</loc>
+    <lastmod>2022-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://prokopov.me/posts/emacs-ergonomics-apple/</loc>
+    <lastmod>2022-06-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://prokopov.me/</loc>
-    <lastmod>2021-12-13T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/</loc>
-    <lastmod>2021-12-13T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/sre-concepts-sla-slo-sli/</loc>
     <lastmod>2021-12-13T00:00:00+00:00</lastmod>
@@ -30,9 +39,6 @@
     <lastmod>2021-11-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/2021-week-29/</loc>
-    <lastmod>2021-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://prokopov.me/categories/</loc>
     <lastmod>2021-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/categories/links/</loc>
@@ -57,9 +63,6 @@
     <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/2021-02-02-org-protocol-chrome-no-confirmation/</loc>
-    <lastmod>2021-02-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://prokopov.me/categories/emacs/</loc>
     <lastmod>2021-02-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/categories/org-mode/</loc>
@@ -167,10 +170,10 @@
     <loc>https://prokopov.me/categories/ruby/</loc>
     <lastmod>2018-06-06T15:50:30+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/posts/2018-05-29_-prolog-e0878ac7fe40/</loc>
+    <loc>https://prokopov.me/posts/2018-05-29_-----------prolog-e0878ac7fe40/</loc>
     <lastmod>2018-05-29T12:38:14+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/posts/2018-05-27_-dbe59a2cbade/</loc>
+    <loc>https://prokopov.me/posts/2018-05-27_---------------------------------------------------------------dbe59a2cbade/</loc>
     <lastmod>2018-05-27T17:29:53+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/</loc>
@@ -179,7 +182,7 @@
     <loc>https://prokopov.me/categories/kubernetes/</loc>
     <lastmod>2018-05-26T12:35:51+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/posts/2018-03-28_-2285686116fa/</loc>
+    <loc>https://prokopov.me/posts/2018-03-28_--------------------------2285686116fa/</loc>
     <lastmod>2018-03-28T04:19:42+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/mprokopov/noteworthy-clojure-projects-634af849e01d/</loc>
@@ -215,7 +218,7 @@
     <loc>https://prokopov.me/posts/mprokopov/ansible-containers-d89258cdf5de/</loc>
     <lastmod>2017-08-15T08:17:15+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/posts/2017-08-11_-d42877e2368d/</loc>
+    <loc>https://prokopov.me/posts/2017-08-11_---------------d42877e2368d/</loc>
     <lastmod>2017-08-11T08:04:29+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/mprokopov/deployment-of-clojure-app-to-production-with-docker-9dbffeac6ef5/</loc>
@@ -227,7 +230,7 @@
     <loc>https://prokopov.me/2017/07/%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D1%84%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4%D0%B0-%D0%BD%D0%B0-%D0%B2%D0%B5%D0%B1-%D0%BA%D0%B0%D1%82%D0%B8%D1%82%D1%81%D1%8F-%D0%BD/</loc>
     <lastmod>2017-07-22T15:28:46+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/posts/2017-07-11_-docker-ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/</loc>
+    <loc>https://prokopov.me/posts/2017-07-11_----docker---ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/</loc>
     <lastmod>2017-07-11T16:23:08+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/2017/06/%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%BC%D0%B5%D1%80%D1%81%D0%B5%D0%B4%D0%B5%D1%81-%D0%B1%D0%B5%D0%BD%D1%86-%D0%B2-%D1%88%D1%82%D1%83%D1%82%D1%82%D0%B3%D0%B0%D1%80%D1%82%D0%B5/</loc>
@@ -251,7 +254,7 @@
     <loc>https://prokopov.me/2016/10/%D0%B1%D0%BB%D0%B5%D1%81%D0%BA-%D0%B8-%D0%BD%D0%B8%D1%89%D0%B5%D1%82%D0%B0-opencart-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B2%D0%B8%D0%B6%D0%BA%D0%B0-%D0%B4%D0%BB%D1%8F-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD/</loc>
     <lastmod>2016-10-13T13:54:11+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/posts/2016-10-13_-opencart-6bbee7eabb95/</loc>
+    <loc>https://prokopov.me/posts/2016-10-13_---------------opencart----------------------------------6bbee7eabb95/</loc>
     <lastmod>2016-10-13T13:54:11+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/2016/09/%D0%B4%D0%B0%D0%B9%D0%B4%D0%B6%D0%B5%D1%81%D1%82-%D0%BC%D0%BE%D0%B8%D1%85-%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D0%BE%D0%BA/</loc>
@@ -275,16 +278,16 @@
     <loc>https://prokopov.me/2016/07/%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE-docker-coreos-ansible-%D0%B8-xen/</loc>
     <lastmod>2016-07-15T14:24:14+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/2016/07/itil-for-business/</loc>
+    <loc>https://prokopov.me/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/</loc>
     <lastmod>2016-07-08T10:56:35+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/</loc>
+    <loc>https://prokopov.me/2016/07/itil-for-business/</loc>
     <lastmod>2016-07-08T10:56:35+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/2016/06/spacemacs/</loc>
     <lastmod>2016-06-06T11:10:04+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/posts/2016-06-06_-emacs-vim-74190dffa34e/</loc>
+    <loc>https://prokopov.me/posts/2016-06-06_-----------------------------------------emacs-----vim-------------74190dffa34e/</loc>
     <lastmod>2016-06-06T11:10:04+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/categories/%D1%81%D0%BE%D1%84%D1%82/</loc>
@@ -296,10 +299,10 @@
     <loc>https://prokopov.me/posts/mprokopov/i-discovered-much-faster-way-to-speed-up-docker-image-creation-c7485fbf6aec/</loc>
     <lastmod>2016-04-29T14:10:13+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/2016/04/%D0%BF%D1%80%D0%B8%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BE%D1%87%D0%BA%D0%B8-%D1%81-%D0%BF%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%BE%D0%B9/</loc>
+    <loc>https://prokopov.me/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/</loc>
     <lastmod>2016-04-22T15:01:24+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/</loc>
+    <loc>https://prokopov.me/2016/04/%D0%BF%D1%80%D0%B8%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BE%D1%87%D0%BA%D0%B8-%D1%81-%D0%BF%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%BE%D0%B9/</loc>
     <lastmod>2016-04-22T15:01:24+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/mprokopov/%d0%be%d1%87%d0%b5%d0%bd%d1%8c-%d1%85%d0%be%d1%80%d0%be%d1%88%d0%be-%d0%bf%d0%b8%d1%88%d0%b5%d1%82%d0%b5-%d0%bb%d0%b5%d0%b3%d0%ba%d0%be-%d1%87%d0%b8%d1%82%d0%b0%d0%b5%d1%82%d1%81%d1%8f-575c5e67ecca/</loc>
@@ -314,7 +317,7 @@
     <loc>https://prokopov.me/2015/12/%D0%BF%D0%BE%D1%81%D1%82-%D0%B2-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC-%D1%8F-%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D1%8E%D1%81%D1%8C-%D0%B2-%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8-devcards-figwheel/</loc>
     <lastmod>2015-12-27T15:12:00+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/posts/2015-11-02_-slack-15-8ee097578b6b/</loc>
+    <loc>https://prokopov.me/posts/2015-11-02_--------------------------------------slack----15-------8ee097578b6b/</loc>
     <lastmod>2015-11-02T15:12:00+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/2015/09/os-x-el-capitan-gm-candidate/</loc>
@@ -371,10 +374,10 @@
     <loc>https://prokopov.me/2014/02/%D1%8D%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F/</loc>
     <lastmod>2014-02-05T11:01:09+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/2014/02/%D0%BA%D1%80%D1%83%D1%82%D1%8B%D0%B5-%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8-%D0%BE-%D0%B2%D0%BE%D0%B7%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D0%B8-%D0%BD%D0%B0%D1%80/</loc>
+    <loc>https://prokopov.me/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/</loc>
     <lastmod>2014-02-04T08:59:37+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/</loc>
+    <loc>https://prokopov.me/2014/02/%D0%BA%D1%80%D1%83%D1%82%D1%8B%D0%B5-%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8-%D0%BE-%D0%B2%D0%BE%D0%B7%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D0%B8-%D0%BD%D0%B0%D1%80/</loc>
     <lastmod>2014-02-04T08:59:37+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/2014/01/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%B1%D1%8B%D0%BB%D0%B8-%D0%BF%D1%80%D0%BE%D1%87%D0%B8%D1%82%D0%B0%D0%BD%D1%8B-%D0%B2-%D1%81%D0%B5%D0%BD%D1%82%D1%8F%D0%B1/</loc>
@@ -398,10 +401,10 @@
     <loc>https://prokopov.me/2013/09/%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%B2-%D0%B8%D1%82-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0-2/</loc>
     <lastmod>2013-09-24T13:13:26+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/2013/09/%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%B2-%D0%B8%D1%82-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0/</loc>
+    <loc>https://prokopov.me/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/</loc>
     <lastmod>2013-09-19T06:24:04+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/</loc>
+    <loc>https://prokopov.me/2013/09/%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%B2-%D0%B8%D1%82-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0/</loc>
     <lastmod>2013-09-19T06:24:04+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/</loc>
@@ -425,10 +428,10 @@
     <loc>https://prokopov.me/categories/%D1%8E%D0%BC%D0%BE%D1%80/</loc>
     <lastmod>2013-08-07T07:43:46+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/2013/08/new-blog-theme/</loc>
+    <loc>https://prokopov.me/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/</loc>
     <lastmod>2013-08-06T18:59:58+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/</loc>
+    <loc>https://prokopov.me/2013/08/new-blog-theme/</loc>
     <lastmod>2013-08-06T18:59:58+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/2013/08/mac-dictionary/</loc>
@@ -539,10 +542,10 @@
     <loc>https://prokopov.me/2012/04/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BA%D0%B0%D0%BA-%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D1%8C-%D0%BF%D0%BE%D0%B4/</loc>
     <lastmod>2012-04-10T16:32:10+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/2012/03/%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D0%B2%D0%B0%D1%8F-%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5-%D0%BB%D0%BE%D0%B2%D0%B8%D0%BC-%D0%BF%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%BE/</loc>
+    <loc>https://prokopov.me/tags/%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D1%8F/</loc>
     <lastmod>2012-03-11T18:10:22+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/tags/%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D1%8F/</loc>
+    <loc>https://prokopov.me/2012/03/%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D0%B2%D0%B0%D1%8F-%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5-%D0%BB%D0%BE%D0%B2%D0%B8%D0%BC-%D0%BF%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%BE/</loc>
     <lastmod>2012-03-11T18:10:22+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/tags/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/</loc>
@@ -599,13 +602,13 @@
     <loc>https://prokopov.me/tags/visio/</loc>
     <lastmod>2012-02-18T11:28:48+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/2012/02/%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BA-visio-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/</loc>
-    <lastmod>2012-02-18T11:28:48+00:00</lastmod>
-  </url><url>
     <loc>https://prokopov.me/tags/%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/</loc>
     <lastmod>2012-02-18T11:28:48+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/tags/%D0%B4%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/</loc>
+    <lastmod>2012-02-18T11:28:48+00:00</lastmod>
+  </url><url>
+    <loc>https://prokopov.me/2012/02/%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BA-visio-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/</loc>
     <lastmod>2012-02-18T11:28:48+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/tags/%D1%81%D1%85%D0%B5%D0%BC%D1%8B/</loc>
@@ -620,13 +623,13 @@
     <loc>https://prokopov.me/tags/habrahabr/</loc>
     <lastmod>2012-02-11T17:41:22+00:00</lastmod>
   </url><url>
+    <loc>https://prokopov.me/tags/%D0%B4%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4/</loc>
+    <lastmod>2012-02-11T17:41:22+00:00</lastmod>
+  </url><url>
     <loc>https://prokopov.me/tags/%D0%B8%D1%82-%D0%B0%D1%83%D1%82%D1%81%D0%BE%D1%80%D1%81%D0%B8%D0%BD%D0%B3/</loc>
     <lastmod>2012-02-11T17:41:22+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/2012/02/%D0%BC%D0%BE%D0%B9-%D0%B4%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4-%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B9-%D1%85%D0%B0%D0%B1%D1%80%D0%B0%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B5/</loc>
-    <lastmod>2012-02-11T17:41:22+00:00</lastmod>
-  </url><url>
-    <loc>https://prokopov.me/tags/%D0%B4%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4/</loc>
     <lastmod>2012-02-11T17:41:22+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/2012/02/lightpack-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BD%D0%BE%D0%B5-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B5%D1%82%D0%B5%D0%BD%D0%B8%D0%B5/</loc>
@@ -677,13 +680,13 @@
     <loc>https://prokopov.me/2012/01/%D1%81%D0%B0%D0%BC%D1%8B%D0%B9-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82-301/</loc>
     <lastmod>2012-01-19T14:42:04+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/2012/01/%D1%81%D0%B5%D0%BA%D1%80%D0%B5%D1%82-%D1%83%D1%81%D0%BF%D0%B5%D1%85%D0%B0/</loc>
-    <lastmod>2012-01-09T09:34:55+00:00</lastmod>
-  </url><url>
     <loc>https://prokopov.me/tags/%D0%B8%D0%BD%D1%84%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0/</loc>
     <lastmod>2012-01-09T09:34:55+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/tags/%D1%81%D0%B5%D0%BA%D1%80%D0%B5%D1%82-%D1%83%D1%81%D0%BF%D0%B5%D1%85%D0%B0/</loc>
+    <lastmod>2012-01-09T09:34:55+00:00</lastmod>
+  </url><url>
+    <loc>https://prokopov.me/2012/01/%D1%81%D0%B5%D0%BA%D1%80%D0%B5%D1%82-%D1%83%D1%81%D0%BF%D0%B5%D1%85%D0%B0/</loc>
     <lastmod>2012-01-09T09:34:55+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/2011/12/%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B1%D1%80%D0%B8%D1%82%D0%B2%D1%8B/</loc>
@@ -692,13 +695,13 @@
     <loc>https://prokopov.me/tags/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B1%D1%80%D0%B8%D1%82%D0%B2%D0%B0/</loc>
     <lastmod>2011-12-20T11:33:31+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/2011/12/it-outsource-tragedy/</loc>
-    <lastmod>2011-12-08T08:52:08+00:00</lastmod>
-  </url><url>
     <loc>https://prokopov.me/tags/%D0%B4%D1%80%D0%B5%D0%B2%D0%BD%D0%B5%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F-%D1%82%D0%BE%D1%81%D0%BA%D0%B0/</loc>
     <lastmod>2011-12-08T08:52:08+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/tags/%D0%BF%D0%B5%D1%87%D0%B0%D0%BB%D1%8C%D0%BA%D0%B0/</loc>
+    <lastmod>2011-12-08T08:52:08+00:00</lastmod>
+  </url><url>
+    <loc>https://prokopov.me/2011/12/it-outsource-tragedy/</loc>
     <lastmod>2011-12-08T08:52:08+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/categories/windows/</loc>
@@ -764,13 +767,13 @@
     <loc>https://prokopov.me/2011/05/%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0-%D0%B2%D1%85%D0%BE%D0%B4%D1%8F%D1%89%D0%B8%D1%85-%D0%B7%D0%B2%D0%BE%D0%BD%D0%BA%D0%BE%D0%B2-%D0%BD%D0%B0-%D0%BD%D0%B0%D1%88-%D0%BA%D0%BE%D0%BB/</loc>
     <lastmod>2011-05-20T12:44:01+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/2011/05/%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%B7%D0%B0%D1%80%D1%8F%D0%B4%D0%BA%D0%B8-la-crosse-bc9009/</loc>
-    <lastmod>2011-05-16T11:29:35+00:00</lastmod>
-  </url><url>
     <loc>https://prokopov.me/tags/%D0%B0%D0%BA%D0%BA%D1%83%D0%BC%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D1%8B/</loc>
     <lastmod>2011-05-16T11:29:35+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/tags/%D0%B7%D0%B0%D1%80%D1%8F%D0%B4%D0%BD%D0%BE%D0%B5-%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE/</loc>
+    <lastmod>2011-05-16T11:29:35+00:00</lastmod>
+  </url><url>
+    <loc>https://prokopov.me/2011/05/%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%B7%D0%B0%D1%80%D1%8F%D0%B4%D0%BA%D0%B8-la-crosse-bc9009/</loc>
     <lastmod>2011-05-16T11:29:35+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/2011/05/%D0%B5%D1%81%D0%BB%D0%B8-%D0%B1%D1%8B-%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9-%D0%BF%D1%80%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D0%B8-%D0%BD%D0%B0-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%83/</loc>
@@ -1077,15 +1080,15 @@
   </url><url>
     <loc>https://prokopov.me/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/</loc>
   </url><url>
-    <loc>https://prokopov.me/posts/draft_gitlab-continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/</loc>
+    <loc>https://prokopov.me/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/</loc>
   </url><url>
     <loc>https://prokopov.me/posts/draft_how-to-speed-up-ruby-bundle-gems-fetch-1110de70ccbc/</loc>
   </url><url>
     <loc>https://prokopov.me/posts/2020-12-09/</loc>
   </url><url>
-    <loc>https://prokopov.me/posts/draft_one-account-all-of-google-24ec9b332a4a/</loc>
+    <loc>https://prokopov.me/posts/draft_one-account--all-of-google--24ec9b332a4a/</loc>
   </url><url>
-    <loc>https://prokopov.me/posts/draft_one-account-all-of-google-4681a5761d84/</loc>
+    <loc>https://prokopov.me/posts/draft_one-account--all-of-google--4681a5761d84/</loc>
   </url><url>
     <loc>https://prokopov.me/posts/2020-05-31-pharo/</loc>
   </url><url>
@@ -1097,7 +1100,7 @@
   </url><url>
     <loc>https://prokopov.me/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/</loc>
   </url><url>
-    <loc>https://prokopov.me/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos-9599b598746b/</loc>
+    <loc>https://prokopov.me/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos--9599b598746b/</loc>
   </url><url>
     <loc>https://prokopov.me/posts/2019-08-01-old-langs/</loc>
   </url>

@@ -43,21 +43,20 @@
     
     <div><p>In brief  - use the <code>resource_group</code> directive.</p>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">stages</span>:
-  - <span style="color:#ae81ff">build</span>
-
-<span style="color:#f92672">jobA</span>:
-  <span style="color:#f92672">resource_group</span>: <span style="color:#ae81ff">jobA</span>
-  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
-  <span style="color:#f92672">script</span>: 
-    - <span style="color:#ae81ff">echo HelloA</span>
-
-<span style="color:#f92672">jobB</span>: 
-  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
-  <span style="color:#f92672">script</span>:
-    - <span style="color:#ae81ff">echo HelloB</span>
-
-</code></pre></div><p>There are some useful patterns for Resource Group.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">stages</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobA</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">resource_group</span>: <span style="color:#ae81ff">jobA</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">script</span>: 
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">echo HelloA</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobB</span>: 
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">script</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">echo HelloB</span>
+</span></span></code></pre></div><p>There are some useful patterns for Resource Group.</p>
 <p>resource_group: $CI_ENVIRONMENT_NAME &hellip; Limit per environment</p>
 <p>resource_group: $CI_JOB_NAME &hellip; Limit per job</p>
 <p>resource_group: $CI_COMMIT_REF_NAME:$CI_JOB_NAME &hellip; Limit per job per branch</p>
@@ -111,7 +110,7 @@
         
         <li><a href="/categories/education/">education</a> (2) </li>
         
-        <li><a href="/categories/emacs/">emacs</a> (1) </li>
+        <li><a href="/categories/emacs/">emacs</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

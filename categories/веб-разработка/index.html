@@ -55,9 +55,9 @@
 <p>At this point, you’ll have PHP v7.4 installed in <code>/usr/local/opt/php@7.4/</code></p>
 <p>In case you need to keep several PHP versions, it can be done using ENV vars in .zshrc</p>
 <pre tabindex="0"><code>PHP_VERSION=7.4
-export PATH=&quot;/usr/local/opt/php@${PHP_VERSION}/bin:/usr/local/opt/php@${PHP_VERSION}/sbin:$PATH&quot;  
-export LDFLAGS=&quot;-L/usr/local/opt/php@${PHP_VERSION}/lib&quot;  
-export CPPFLAGS=&quot;-I/usr/local/opt/php@${PHP_VERSION}/include&quot;
+export PATH=&#34;/usr/local/opt/php@${PHP_VERSION}/bin:/usr/local/opt/php@${PHP_VERSION}/sbin:$PATH&#34;  
+export LDFLAGS=&#34;-L/usr/local/opt/php@${PHP_VERSION}/lib&#34;  
+export CPPFLAGS=&#34;-I/usr/local/opt/php@${PHP_VERSION}/include&#34;
 </code></pre><h3 id="php-fpm-setup">PHP-FPM setup</h3>
 <p>Locate /usr/local/etc/php/7.4/php-fpm.d/www.conf and edit it to include environment variables. I also rebound default port 9000 to 9009 not to have conflicts with XDEBUG</p>
 <pre tabindex="0"><code>clear_env = no 
@@ -67,7 +67,7 @@ listen = 127.0.0.1:9009
 <pre tabindex="0"><code>
 Listen 80  
 &lt;FilesMatch \\.php$&gt; 
-  SetHandler &quot;proxy:fcgi://127.0.0.1:9009&quot;  
+  SetHandler &#34;proxy:fcgi://127.0.0.1:9009&#34;  
 &lt;/FilesMatch&gt;
 &lt;VirtualHost *:80&gt;  
         ServerAdmin webmaster@localhost  
@@ -76,7 +76,7 @@ Listen 80
         ErrorLog /Users/mprokopov/oxid/project/source/error.log  
         CustomLog /Users/mprokopov/oxid/project/source/access.log combined  
 &lt;/VirtualHost&gt;
-&lt;Directory &quot;/Users/mprokopov/oxid/*/source&quot;&gt;  
+&lt;Directory &#34;/Users/mprokopov/oxid/*/source&#34;&gt;  
     Options Indexes FollowSymLinks  
     AllowOverride All
     Require all granted  
@@ -84,8 +84,8 @@ Listen 80
 </code></pre><h3 id="project-setup">Project setup</h3>
 <p>For some reason php-fpm doesn’t play well with _ENV variables, so I had to change them to use getenv() function instead, like on the example below</p>
 <p>config.inc.php of the project</p>
-<pre tabindex="0"><code>$dbName = getenv('DB_NAME')  
-$dbUser = getenv('DB_USER')  
+<pre tabindex="0"><code>$dbName = getenv(&#39;DB_NAME&#39;)  
+$dbUser = getenv(&#39;DB_USER&#39;)  
 ...
 </code></pre><h3 id="party-time">Party time</h3>
 <p>When you decide to work on the project, go to the source folder of the project and run the command</p>
@@ -96,7 +96,7 @@ $dbUser = getenv('DB_USER')
 <p>In case you need XDEBUG, you can install it with command</p>
 <p><code>1 pecl install xdebug</code></p>
 <p>and edit /usr/local/etc/php/7.4/php.ini to include the following settings</p>
-<pre tabindex="0"><code>zend\_extension=&quot;xdebug.so&quot;  
+<pre tabindex="0"><code>zend\_extension=&#34;xdebug.so&#34;  
 xdebug.remote\_enable=on  
 xdebug.remote\_host=127.0.0.1  
 xdebug.remote\_handler=dbgp  
@@ -105,7 +105,7 @@ xdebug.remote\_autostart=On
 xdebug.profiler\_enable\_trigger = 1  
 xdebug.profiler\_enable=  
 xdebug.profiler\_output\_dir = tmp  
-xdebug.profiler\_output\_name = &quot;callgrind.out.%p&quot;
+xdebug.profiler\_output\_name = &#34;callgrind.out.%p&#34;
 </code></pre></div>
 </div>
 
@@ -354,7 +354,7 @@ run ActionController::Dispatcher.new</pre>
         
         <li><a href="/categories/education/">education</a> (2) </li>
         
-        <li><a href="/categories/emacs/">emacs</a> (1) </li>
+        <li><a href="/categories/emacs/">emacs</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

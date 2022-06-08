@@ -49,20 +49,20 @@
 
 
     {
-    &quot;essentialtech&quot;: true,
-    &quot;googleadwords&quot;: false,
-    &quot;googleanalytics&quot;: false,
-    &quot;googlemaps&quot;: true,
-    &quot;gtmbasedtech&quot;: false,
-    &quot;terminland&quot;: true,
-    &quot;userlike&quot;: true
+    &#34;essentialtech&#34;: true,
+    &#34;googleadwords&#34;: false,
+    &#34;googleanalytics&#34;: false,
+    &#34;googlemaps&#34;: true,
+    &#34;gtmbasedtech&#34;: false,
+    &#34;terminland&#34;: true,
+    &#34;userlike&#34;: true
     }
 #+end_src
 
 #+RESULTS:
 #+BEGIN_SRC js
 {
-  &quot;message&quot;: &quot;success&quot;
+  &#34;message&#34;: &#34;success&#34;
 }
 // POST http://muster.test/index.php?cl=ping
 // HTTP/1.1 200 OK
@@ -84,7 +84,7 @@
 <pre tabindex="0"><code class="language-org-mode" data-lang="org-mode">#+begin_src  sql :engine mysql :dbhost 127.0.0.1 :dbuser muster :dbpassword muster :database muster-development
 select val, attribute, count(*)
 from oxps_user_consent_pings 
-where attribute='googleanalytics' and time &gt; '2021-01-01'
+where attribute=&#39;googleanalytics&#39; and time &gt; &#39;2021-01-01&#39;
 group by val
 #+end_src
 
@@ -142,7 +142,7 @@ group by val
         
         <li><a href="/categories/education/">education</a> (2) </li>
         
-        <li><a href="/categories/emacs/">emacs</a> (1) </li>
+        <li><a href="/categories/emacs/">emacs</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

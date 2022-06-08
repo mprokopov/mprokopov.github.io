@@ -49,21 +49,21 @@
 That&rsquo;s simple.</p>
 <p>Assume you have a class <code>Human</code>.</p>
 <p>call getter name value of Human</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name</span>.
-</code></pre></div><p>call setter name with value</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name:</span> <span style="color:#75715e">&#34;The one&#34;</span>.
-</code></pre></div><h3 id="no-positional-arguments-for-functions">No positional arguments for functions.</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name</span>.
+</span></span></code></pre></div><p>call setter name with value</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name:</span> <span style="color:#75715e">&#34;The one&#34;</span>.
+</span></span></code></pre></div><h3 id="no-positional-arguments-for-functions">No positional arguments for functions.</h3>
 <p>There is no such thing as positional arguments for the methods. Either one argument or named many. Nothing else. Super easy.</p>
 <p>Function 1</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span>.
-</code></pre></div><p>Function 2</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span> <span style="color:#a6e22e">flag:</span> True.
-</code></pre></div><p>This can&rsquo;t be implemented clearly with Java. You will have to have a single function that takes flag with default value. So then you forced to check it later in the code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span>.
+</span></span></code></pre></div><p>Function 2</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span> <span style="color:#a6e22e">flag:</span> True.
+</span></span></code></pre></div><p>This can&rsquo;t be implemented clearly with Java. You will have to have a single function that takes flag with default value. So then you forced to check it later in the code.</p>
 <p>Lisp has this property by having different bodies for different sets of arguments for the same function.</p>
 <h3 id="common-approach-to-default-values-initialized-in-getter">common approach to default values: initialized in getter</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">history</span>
-	<span style="color:#f92672">^</span> history <span style="color:#a6e22e">ifNil:</span> [ history <span style="color:#f92672">:=</span> <span style="color:#a6e22e">OrderedCollection</span> new ]
-</code></pre></div><p>See this ifNil: method? It accepts the block, which is namely anonymous function and executes it when the target object is nil.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">history</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">^</span> history <span style="color:#a6e22e">ifNil:</span> [ history <span style="color:#f92672">:=</span> <span style="color:#a6e22e">OrderedCollection</span> new ]
+</span></span></code></pre></div><p>See this ifNil: method? It accepts the block, which is namely anonymous function and executes it when the target object is nil.
 ^ is just a <code>return</code>.</p>
 <p>Every object contains <code>ifNil</code> method, so this getter pattern allows concise object initialization.</p>
 <h3 id="no-if-statement">No if statement</h3>
@@ -73,18 +73,18 @@ That&rsquo;s simple.</p>
 <p>Smalltalk has a very concise syntax, but for returning the object it provides <code>;</code> operator.
 This enables to chain calls to the same object in a very straightforward manner.</p>
 <p>Example for Java</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> Apple<span style="color:#f92672">()</span> 
-<span style="color:#f92672">.</span><span style="color:#a6e22e">method1</span><span style="color:#f92672">()</span>
-<span style="color:#f92672">.</span><span style="color:#a6e22e">method2</span><span style="color:#f92672">()</span>
-</code></pre></div><p>Why is there a separate syntax in Java for constructor? I don&rsquo;t know. Smalltalk just calls constructor method with the same syntax as normal function call.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">new</span> Apple<span style="color:#f92672">()</span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">.</span><span style="color:#a6e22e">method1</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">.</span><span style="color:#a6e22e">method2</span><span style="color:#f92672">()</span>
+</span></span></code></pre></div><p>Why is there a separate syntax in Java for constructor? I don&rsquo;t know. Smalltalk just calls constructor method with the same syntax as normal function call.</p>
 <p>The same example for Smalltalk</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Apple</span> new <span style="color:#a6e22e">method1</span>; <span style="color:#a6e22e">method2</span>;
-</code></pre></div><p>Since main thing in the language is calling methods from objects, you don&rsquo;t need to have much syntax.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">Apple</span> new <span style="color:#a6e22e">method1</span>; <span style="color:#a6e22e">method2</span>;
+</span></span></code></pre></div><p>Since main thing in the language is calling methods from objects, you don&rsquo;t need to have much syntax.
 Same concept applies to Forth language.</p>
 <h3 id="anonymous-functions">Anonymous functions</h3>
 <p>[ block ] - this is syntax for a piece of code</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk">[ <span style="color:#f92672">:</span>anArgument <span style="color:#f92672">|</span> block ]
-</code></pre></div><p>so now you can use <code>anArgument</code> value right in the block. Do you recognise vertical pipes argument from Ruby? This is it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span>[ <span style="color:#f92672">:</span>anArgument <span style="color:#f92672">|</span> block ]
+</span></span></code></pre></div><p>so now you can use <code>anArgument</code> value right in the block. Do you recognise vertical pipes argument from Ruby? This is it.</p>
 <h3 id="skinny-funcitons">Skinny funcitons</h3>
 <p>Indeed, mostly functions in Smalltalk are really small and concise. The good reason for that is the IDE is a part of language image, this changes programmer experience dramatically. IDE is full of functionality like generate scaffold getters, setters, best in breed refactoring capabilities.</p>
 <p><img src="/uploads/2021/pharo.png" alt="Pharo" title="Pharo"></p>
@@ -96,16 +96,16 @@ Same concept applies to Forth language.</p>
 <p><img src="/uploads/2021/pharo-testing2.png" alt="Pharo testing" title="Pharo testing"></p>
 <p>What a brilliant idea to have only <code>assert</code> as the test method!</p>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">testClassifyIncident</span>
-	<span style="color:#f92672">|</span>anIncident aState<span style="color:#f92672">|</span>
-	<span style="color:#960050;background-color:#1e0010">aState</span><span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">status</span>.
-	anIncident <span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">classifyAs:</span> <span style="color:#a6e22e">Incident</span> <span style="color:#a6e22e">service:</span> service.
-	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">equals:</span> <span style="color:#a6e22e">Incident</span>.
-	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">status</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">equals:</span> <span style="color:#a6e22e">ClassifiedTicketState</span>. 
-	self <span style="color:#a6e22e">assert:</span> (ticket <span style="color:#a6e22e">history</span> <span style="color:#a6e22e">includes:</span> aState).
-	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">service</span> <span style="color:#a6e22e">equals:</span> service.
-	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">agreement</span> <span style="color:#a6e22e">equals:</span> agreement
-</code></pre></div><p>Look at this example above! An expression is almost in plain English, almost AppleScript ;)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">testClassifyIncident</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">|</span>anIncident aState<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#960050;background-color:#1e0010">aState</span><span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">status</span>.
+</span></span><span style="display:flex;"><span>	anIncident <span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">classifyAs:</span> <span style="color:#a6e22e">Incident</span> <span style="color:#a6e22e">service:</span> service.
+</span></span><span style="display:flex;"><span>	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">equals:</span> <span style="color:#a6e22e">Incident</span>.
+</span></span><span style="display:flex;"><span>	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">status</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">equals:</span> <span style="color:#a6e22e">ClassifiedTicketState</span>. 
+</span></span><span style="display:flex;"><span>	self <span style="color:#a6e22e">assert:</span> (ticket <span style="color:#a6e22e">history</span> <span style="color:#a6e22e">includes:</span> aState).
+</span></span><span style="display:flex;"><span>	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">service</span> <span style="color:#a6e22e">equals:</span> service.
+</span></span><span style="display:flex;"><span>	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">agreement</span> <span style="color:#a6e22e">equals:</span> agreement
+</span></span></code></pre></div><p>Look at this example above! An expression is almost in plain English, almost AppleScript ;)</p>
 <h3 id="less-boilerplate">Less boilerplate</h3>
 <p>I have chosen the Pharo as a tool for thought, because it doesn&rsquo;t require any boilerplate to start thinking on domain and experiment with entities.
 The REPL is awesome and allows to dig and to feel the data.</p>
@@ -170,7 +170,7 @@ The REPL is awesome and allows to dig and to feel the data.</p>
         
         <li><a href="/categories/education/">education</a> (2) </li>
         
-        <li><a href="/categories/emacs/">emacs</a> (1) </li>
+        <li><a href="/categories/emacs/">emacs</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

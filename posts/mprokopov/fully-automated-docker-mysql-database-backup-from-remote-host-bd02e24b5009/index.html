@@ -56,8 +56,8 @@
 </code></pre><pre tabindex="0"><code>/usr/bin/mysqldump -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE
 </code></pre><p>script backup-coreos-itservice.sh</p>
 <pre tabindex="0"><code>/ffp/bin/scp /ffp/home/root/backup.sh core@coreos-03:/home/core/itservice/backup.sh 
-</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker cp /home/core/itservice/backup.sh itservice_db_1:/usr/local/bin/backup.sh&quot; 
-</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker exec itservice_db_1 /usr/local/bin/backup.sh&quot; &gt; latest.sql 
+</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &#34;docker cp /home/core/itservice/backup.sh itservice_db_1:/usr/local/bin/backup.sh&#34; 
+</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &#34;docker exec itservice_db_1 /usr/local/bin/backup.sh&#34; &gt; latest.sql 
 </code></pre><pre tabindex="0"><code>/opt/bin/tar czf itservice-sql-dump.tar.gz latest.sql --remove-files
 </code></pre><p>rsnapshot.conf</p>
 <pre tabindex="0"><code>backup_script	/mnt/HD/HD_a2/ffp/home/root/backup-coreos-itservice.sh	coreos-03/itservice_db_1
@@ -114,7 +114,7 @@
         
         <li><a href="/categories/education/">education</a> (2) </li>
         
-        <li><a href="/categories/emacs/">emacs</a> (1) </li>
+        <li><a href="/categories/emacs/">emacs</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

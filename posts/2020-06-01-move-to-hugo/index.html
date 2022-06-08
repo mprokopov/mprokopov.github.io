@@ -65,83 +65,83 @@
 <p>Сначала я сделал перепроектирование <a href="https://it-premium.com.ua">https://it-premium.com.ua</a> на <a href="https://gohugo.io/">Hugo</a> вместо RoR, и сразу понял, это - то что нужно! Во-первых статика это то, во что так или иначе переходит каждый сайт когда его рендером занимается браузер. Быстрее чем статический сайт сделать нельзя, хотя многие пытаются, используя Javascript-based фреймворки на подобие Gatsby.</p>
 <p>Hugo поддерживает не только markdown, но и различные продвинутые сценарии, так в странице <a href="/pages/trips/">&ldquo;Путешествую&rdquo;</a> список стран и мест находится в YAML файле и включается из Markdown при помощи custom tag. На каждой странице список друзей также стал формироваться из отдельного YAML. Кстати, уже никто не обменивается ссылками как раньше?</p>
 <p>мой trips.yaml файл, рендер которого вы можете увидеть <a href="/pages/trips">здесь</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2020</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Испания, Барселона</span>
-  <span style="color:#f92672">comment</span>: <span style="color:#ae81ff">увы и ах, из-за короны-19 отменена :(</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019-2020</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Норвегия, Аскер</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">недели</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Фрайбург</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Австрия, Вена, 1 месяц</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">месяц</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Турция, пригород Анталии 1 неделя</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">недели</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Берлин</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Сицилия, гастротур</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">дней</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018-2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Таиланд, о. Самуи</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">полгода</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Италия (Тоскана), гастротур</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">дней</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Финляндия (Юваскюля, Хельсинки)</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Гамбург</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2017</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Маннгейм, Штуттгарт</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">месяц</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2016</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Хургада), Турция (Стамбул)</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2013-2014</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Тайланд (Бангкок, Айютайя, Паттайя) [Камбоджа (Сиам-Реап, Сиануквиль, Баттамбанг, Кампот, Пном-Пень)][1]</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2012</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Малайзия (Куала-Лумпур, о. Тиоман) Филиппины (о. Боракай, о. Палаван (Ель-Нидо, Пуерто-Принсесса)) Индонезия (о. Сулавеси, Тогеанские о-ва (о. Маленге, о. Бомба), Тана-Тораджа (Рантепао + окрестности), Макассар, о. Бали)</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2011</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Сингапур Вьетнам (Хошимин, Ханой, Хью, ) Индонезия (о. Бали, о. Ломбок, о. Ява (плато Диенг, Джогджакарта, вулкан Иджен)</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2010</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Индонезия (о. Ява (вулкан Бромо) о. Бали)</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2009</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Тайланд (Бангкок, о. Чанг)</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2008</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Шарм-Ель-Шейх, Каир (пирамидки))</span>
-</code></pre></div><p>а рендерит его вот такой простой кусочек в layouts/shortcodes/travel.html</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
-{{ range $.Site.Data.travel }}
-    &lt;<span style="color:#f92672">li</span>&gt;
-        {{.date}} {{.place}} {{.duration}} {{.comment}}
-    &lt;/<span style="color:#f92672">li</span>&gt;
-{{ end }}
-&lt;/<span style="color:#f92672">ul</span>&gt;
-</code></pre></div><p>Все линки для навигации сверху берутся из соответствующих мета-полей в файлах в каталоге content/pages. Достаточно просто создать там новый файл с содержимым и он автоматически появится в меню!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2020</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Испания, Барселона</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">comment</span>: <span style="color:#ae81ff">увы и ах, из-за короны-19 отменена :(</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019-2020</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Норвегия, Аскер</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">недели</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Фрайбург</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Австрия, Вена, 1 месяц</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">месяц</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Турция, пригород Анталии 1 неделя</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">недели</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Берлин</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Сицилия, гастротур</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">дней</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018-2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Таиланд, о. Самуи</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">полгода</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Италия (Тоскана), гастротур</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">дней</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Финляндия (Юваскюля, Хельсинки)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Гамбург</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2017</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Маннгейм, Штуттгарт</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">месяц</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2016</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Хургада), Турция (Стамбул)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2013-2014</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Тайланд (Бангкок, Айютайя, Паттайя) [Камбоджа (Сиам-Реап, Сиануквиль, Баттамбанг, Кампот, Пном-Пень)][1]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2012</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Малайзия (Куала-Лумпур, о. Тиоман) Филиппины (о. Боракай, о. Палаван (Ель-Нидо, Пуерто-Принсесса)) Индонезия (о. Сулавеси, Тогеанские о-ва (о. Маленге, о. Бомба), Тана-Тораджа (Рантепао + окрестности), Макассар, о. Бали)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2011</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Сингапур Вьетнам (Хошимин, Ханой, Хью, ) Индонезия (о. Бали, о. Ломбок, о. Ява (плато Диенг, Джогджакарта, вулкан Иджен)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2010</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Индонезия (о. Ява (вулкан Бромо) о. Бали)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2009</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Тайланд (Бангкок, о. Чанг)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2008</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Шарм-Ель-Шейх, Каир (пирамидки))</span>
+</span></span></code></pre></div><p>а рендерит его вот такой простой кусочек в layouts/shortcodes/travel.html</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>{{ range $.Site.Data.travel }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        {{.date}} {{.place}} {{.duration}} {{.comment}}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span></code></pre></div><p>Все линки для навигации сверху берутся из соответствующих мета-полей в файлах в каталоге content/pages. Достаточно просто создать там новый файл с содержимым и он автоматически появится в меню!</p>
 <p><img src="/img/pages.png" alt="My pages list as files"></p>
 <p>Для миграции всего контента с блога wordpress я воспользовался соответствуюей утилитой.</p>
 <p>Остался вопрос с комментариями, и он также решается при помощи известного disqus. Дорогой читатель, подскажи, если знаешь engine получше.</p>
@@ -195,7 +195,7 @@
         
         <li><a href="/categories/education/">education</a> (2) </li>
         
-        <li><a href="/categories/emacs/">emacs</a> (1) </li>
+        <li><a href="/categories/emacs/">emacs</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

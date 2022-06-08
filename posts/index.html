@@ -36,6 +36,29 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/emacs-ergonomics-apple/">Emacs, apple keyboard, and RSI</a>
+    </h1>
+    <div class="date">07.06.2022</div>
+    <div><p>Recently I&rsquo;ve started investigation on the most effective shortcuts for Emacs.
+Already for a long time I&rsquo;ve been using Caps Lock remapped to Esc when pressed alone, and Ctrl-Key when pressed with any other key.</p>
+<p>I didn&rsquo;t use Emacs with native bindings for a long time, because of wrist related issues, which immediately appeared after using pinky for pressing long chords which normally included Ctrl-C combination. This is why I used Spacemacs and later Doom Emacs as the configuration of choice.</p>
+<p>And this worked relatively good, I used the same bindings for Vim in terminal, and no RSI since pinky wasn&rsquo;t overloaded with long presses. But something were not so good, I needed to keep a context in the head and using special modes like eshell or repl weren&rsquo;t fun because of context switch losses.</p>
+<p>So I&rsquo;ve started reading the book Mastering Emacs, which I definitely recommend, I decided to give a try to alternative solutions for Emacs keybindings.</p>
+<p>First of which were using interesting combinations for the keychords like pressing J+K equals to Control and pressing F+D equals to control. The idea was to reduce pressure on pinky by moving control to the &ldquo;home&rdquo; row. This worked to some extent. Long combinations with Ctrl, like &ldquo;C-c C-o C-r&rdquo; needed to have very uncomfortable key sequences. Apart from this constant typos where annoying, when you switched keys too fast. So I dropped this option and started looking for new ways.</p>
+<p>I realised, that Ctrl should not be pressed by pinky, it should be just convenient enough to reach.
+Then I saw old design of the Space Kadet keyboard, and it had Control right near the Space key.</p>
+<p><img src="https://en.wikipedia.org/wiki/Space-cadet_keyboard#/media/File:Space-cadet.jpg" alt="Space Cadet keyboard"></p>
+<p>Whan I swapped Command and Control keys, man, that was real enlightenment, literally everything started being comfortable. Look, Ctrl-x-s is just a single row. Ctrl-c feels natural, because you literally use mighty thumb and index fingers. Movement with Ctrl-a, Ctrl-e, Ctrl-n and Ctrl-p just started having much more sence and convenience. Most of the Emacs combinations with Ctrl-C and Ctrl-X are sane now.</p>
+<p>It comes as a bonus using readline compatible utilities in terminal.</p>
+<p>I really think swapping Caps Lock and Control is a BAD advice that did enourmous harm for neglecting Emacs than anything else. Either Windows based keyboards having Alt, or Mac based keyboards having Command, should be swapped with Control at least in Emacs and other readline applications. Do this right now using Karabiner Elements free application for MacOS and never experience any RSI.</p>
+<p>Using Karabiner Elements you can make this change only for the several applications, like Emacs and iTerm, and not the system-wide.</p>
+<p>RSI stands for repetitive stain injury
+<a href="https://www.nhs.uk/conditions/repetitive-strain-injury-rsi/">https://www.nhs.uk/conditions/repetitive-strain-injury-rsi/</a></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/sre-concepts-sla-slo-sli/">SRE concepts</a>
     </h1>
     <div class="date">13.12.2021</div>
@@ -160,8 +183,8 @@ One created a huge bundle with all tools, bells, and whistles.</p>
     <div class="date">09.04.2021</div>
     <div><p>Recently I&rsquo;ve checked this website and styling became really aweful. After my digging it turned out one little busty thing was doing the crap.</p>
 <p>Official Linkedin badge! Overrides default link styling!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;text/javascript&#39;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://platform.linkedin.com/badges/js/profile.js&#39;</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">defer</span> &gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><p>The easiest way to turn it off is to change type=&lsquo;text/javascript&rsquo; to just &lsquo;text&rsquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;text/javascript&#39;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://platform.linkedin.com/badges/js/profile.js&#39;</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">defer</span> &gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>The easiest way to turn it off is to change type=&lsquo;text/javascript&rsquo; to just &rsquo;text&rsquo;.</p>
 <p>You have also been decreasing my lighthouse score.
 Bye-bye little nasty thing.</p></div>
 </div>
@@ -177,12 +200,12 @@ Despite all Datomic bright sides, there are some thoughts bothering me since I s
 <h2 id="confusion-on-datomic-peer-and-client-libraries-differences">Confusion on datomic peer and client libraries differences</h2>
 <p>I used to use datomic-pro api in my project and wanted to catch &ldquo;anomaly exceptions&rdquo; from Pedestal error handlers. That was not an easy task. It simply didn&rsquo;t work in the manner I expected from the datomic code examples.</p>
 <p>If you try to execute</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">d/transact</span> conn {<span style="color:#e6db74">:tx-data</span> [[<span style="color:#e6db74">:this</span> <span style="color:#e6db74">&#34;does not&#34;</span> <span style="color:#e6db74">:make</span> <span style="color:#e6db74">&#34;sense&#34;</span>]]})
-</code></pre></div><p>using peer library you&rsquo;ll get</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>(<span style="color:#a6e22e">d/transact</span> conn {<span style="color:#e6db74">:tx-data</span> [[<span style="color:#e6db74">:this</span> <span style="color:#e6db74">&#34;does not&#34;</span> <span style="color:#e6db74">:make</span> <span style="color:#e6db74">&#34;sense&#34;</span>]]})
+</span></span></code></pre></div><p>using peer library you&rsquo;ll get</p>
 <pre tabindex="0"><code>1. Caused by datomic.impl.Exceptions$IllegalArgumentExceptionInfo
    :db.error/not-a-data-function Unable to resolve data function: :this
    {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
-    :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+    :cognitect.anomalies/message &#34;Unable to resolve data function: :this&#34;,
     :db/error :db.error/not-a-data-function}
                  error.clj:  167  datomic.error/deserialize-exception
                  error.clj:  160  datomic.error/deserialize-exception
@@ -199,17 +222,17 @@ Despite all Datomic bright sides, there are some thoughts bothering me since I s
    ThreadPoolExecutor.java: 1149  java.util.concurrent.ThreadPoolExecutor/runWorker
    ThreadPoolExecutor.java:  624  java.util.concurrent.ThreadPoolExecutor$Worker/run
                Thread.java:  748  java.lang.Thread/run
-</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#a6e22e">ex-data</span> *e)
-
-<span style="color:#f92672">#</span><span style="color:#e6db74">:clojure.error</span>{<span style="color:#e6db74">:phase</span> <span style="color:#e6db74">:print-eval-result</span>}
-</code></pre></div><p>And this is what you get from datomic client api library using peer. So exceptions here are actually wrapped in ex-data info.</p>
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>(<span style="color:#a6e22e">ex-data</span> *e)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span><span style="color:#e6db74">:clojure.error</span>{<span style="color:#e6db74">:phase</span> <span style="color:#e6db74">:print-eval-result</span>}
+</span></span></code></pre></div><p>And this is what you get from datomic client api library using peer. So exceptions here are actually wrapped in ex-data info.</p>
 <pre tabindex="0"><code>1. Unhandled clojure.lang.ExceptionInfo
    Unable to resolve data function: :this
    {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
-    :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+    :cognitect.anomalies/message &#34;Unable to resolve data function: :this&#34;,
     :db/error :db.error/not-a-data-function,
     :dbs
-    [{:database-id &quot;datomic:dev://localhost:4334/login&quot;,
+    [{:database-id &#34;datomic:dev://localhost:4334/login&#34;,
       :t 1016,
       :next-t 1017,
       :history false}]}
@@ -254,10 +277,10 @@ Despite all Datomic bright sides, there are some thoughts bothering me since I s
 </code></pre><p>here is ex-data of the exception. This is much more analysable!</p>
 <pre tabindex="0"><code>(ex-data *e)
 {:cognitect.anomalies/category :cognitect.anomalies/incorrect,
- :cognitect.anomalies/message &quot;Unable to resolve data function: :this&quot;,
+ :cognitect.anomalies/message &#34;Unable to resolve data function: :this&#34;,
  :db/error :db.error/not-a-data-function,
  :dbs
- [{:database-id &quot;datomic:dev://localhost:4334/login&quot;,
+ [{:database-id &#34;datomic:dev://localhost:4334/login&#34;,
    :t 1016,
    :next-t 1017,
    :history false}]}
@@ -293,54 +316,54 @@ First, I have to admit that I have no idea how people can produce something like
 <p>What worked well for me is to return raw entity ids from the find functions, then when required I&rsquo;m able to execute pull function against returned values.</p>
 <p>The same goes to <em>db/ident</em> that one tries to use as enums. Aspecially within tests you constantly trying to use :db/ident with example values to easiely reference in test checks, but at the same time your function for the prod data will return just :db/id.
 Example of what I use in tests</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:db/ident</span> <span style="color:#e6db74">:my-test-account</span>
- <span style="color:#e6db74">:account/id</span> (<span style="color:#a6e22e">d/squiid</span>)
- <span style="color:#e6db74">:account/balance</span> <span style="color:#ae81ff">10</span>}
-</code></pre></div><p>so you can use just <code>(d/entity db :my-test-account)</code>. But this is not the case for the code that will probably return :db/id instead.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>{<span style="color:#e6db74">:db/ident</span> <span style="color:#e6db74">:my-test-account</span>
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">:account/id</span> (<span style="color:#a6e22e">d/squiid</span>)
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">:account/balance</span> <span style="color:#ae81ff">10</span>}
+</span></span></code></pre></div><p>so you can use just <code>(d/entity db :my-test-account)</code>. But this is not the case for the code that will probably return :db/id instead.</p>
 <p>I&rsquo;ve found a useful snippet to address this problem</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defprotocol </span>Eid
-  (<span style="color:#a6e22e">e</span> [_]))
-
-(<span style="color:#a6e22e">extend-protocol</span> Eid
-  java.lang.Long
-  (<span style="color:#a6e22e">e</span> [n] n)
-
-  clojure.lang.Keyword
-  (<span style="color:#a6e22e">e</span> [n] n)
-
-  datomic.Entity
-  (<span style="color:#a6e22e">e</span> [ent] (<span style="color:#e6db74">:db/id</span> ent)))
-</code></pre></div><p>I also created the following function to flatten returned from the pull expression nested db/ident.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn </span>flatten-ident [coll]
-  (<span style="color:#a6e22e">clojure.walk/postwalk</span>
-   (<span style="color:#66d9ef">fn </span>[item] (get item <span style="color:#e6db74">:db/ident</span> item)) coll))
-</code></pre></div><h3 id="testing">Testing</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>(<span style="color:#66d9ef">defprotocol </span>Eid
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">e</span> [_]))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#a6e22e">extend-protocol</span> Eid
+</span></span><span style="display:flex;"><span>  java.lang.Long
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">e</span> [n] n)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  clojure.lang.Keyword
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">e</span> [n] n)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  datomic.Entity
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">e</span> [ent] (<span style="color:#e6db74">:db/id</span> ent)))
+</span></span></code></pre></div><p>I also created the following function to flatten returned from the pull expression nested db/ident.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>(<span style="color:#66d9ef">defn </span>flatten-ident [coll]
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">clojure.walk/postwalk</span>
+</span></span><span style="display:flex;"><span>   (<span style="color:#66d9ef">fn </span>[item] (get item <span style="color:#e6db74">:db/ident</span> item)) coll))
+</span></span></code></pre></div><h3 id="testing">Testing</h3>
 <p>Some good examples on datomic boilerplate for testing I have found in vase repository and adopted like this</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">def </span><span style="color:#f92672">^</span><span style="color:#e6db74">:dynamic</span> *current-db-connection* nil)
-(<span style="color:#66d9ef">def </span><span style="color:#f92672">^</span><span style="color:#e6db74">:dynamic</span> *current-db-uri* nil)
-
-(<span style="color:#66d9ef">defn </span>new-database
-  <span style="color:#e6db74">&#34;This generates a new, empty Datomic database for use within unit tests.&#34;</span>
-  [txes]
-  (<span style="color:#66d9ef">let </span>[uri  (str <span style="color:#e6db74">&#34;datomic:mem://test&#34;</span> (<span style="color:#a6e22e">UUID/randomUUID</span>))
-        _    (<span style="color:#a6e22e">d/create-database</span> uri)
-        conn (<span style="color:#a6e22e">d/connect</span> uri)]
-    (<span style="color:#a6e22e">-&gt;&gt;</span> (<span style="color:#a6e22e">read-string</span> (slurp <span style="color:#e6db74">&#34;schema.edn&#34;</span>))
-         (<span style="color:#a6e22e">d/transact</span> conn)
-         deref)
-    (doseq [t txes]
-      <span style="color:#f92672">@</span>(<span style="color:#a6e22e">d/transact</span> conn t))
-    {<span style="color:#e6db74">:uri</span> uri
-     <span style="color:#e6db74">:connection</span> conn}))
-
-(<span style="color:#66d9ef">defmacro </span>with-database
-  <span style="color:#e6db74">&#34;Executes all requests in the body with the same database.&#34;</span>
-  [txes <span style="color:#f92672">&amp;</span> body]
-  <span style="color:#f92672">`</span>(<span style="color:#66d9ef">let </span>[dbm# (<span style="color:#a6e22e">new-database</span> <span style="color:#f92672">~</span>txes)]
-     (binding [*current-db-uri* (<span style="color:#e6db74">:uri</span> dbm#)
-               *current-db-connection* (<span style="color:#e6db74">:connection</span> dbm#)]
-       <span style="color:#f92672">~@</span>body)))
-</code></pre></div><p>I found using <code>with-database</code> macro with txs is much more convenient and such as having better data locality then using fixtures.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>(<span style="color:#66d9ef">def </span><span style="color:#f92672">^</span><span style="color:#e6db74">:dynamic</span> *current-db-connection* nil)
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">def </span><span style="color:#f92672">^</span><span style="color:#e6db74">:dynamic</span> *current-db-uri* nil)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">defn </span>new-database
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;This generates a new, empty Datomic database for use within unit tests.&#34;</span>
+</span></span><span style="display:flex;"><span>  [txes]
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">let </span>[uri  (str <span style="color:#e6db74">&#34;datomic:mem://test&#34;</span> (<span style="color:#a6e22e">UUID/randomUUID</span>))
+</span></span><span style="display:flex;"><span>        _    (<span style="color:#a6e22e">d/create-database</span> uri)
+</span></span><span style="display:flex;"><span>        conn (<span style="color:#a6e22e">d/connect</span> uri)]
+</span></span><span style="display:flex;"><span>    (<span style="color:#a6e22e">-&gt;&gt;</span> (<span style="color:#a6e22e">read-string</span> (slurp <span style="color:#e6db74">&#34;schema.edn&#34;</span>))
+</span></span><span style="display:flex;"><span>         (<span style="color:#a6e22e">d/transact</span> conn)
+</span></span><span style="display:flex;"><span>         deref)
+</span></span><span style="display:flex;"><span>    (doseq [t txes]
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">@</span>(<span style="color:#a6e22e">d/transact</span> conn t))
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">:uri</span> uri
+</span></span><span style="display:flex;"><span>     <span style="color:#e6db74">:connection</span> conn}))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">defmacro </span>with-database
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;Executes all requests in the body with the same database.&#34;</span>
+</span></span><span style="display:flex;"><span>  [txes <span style="color:#f92672">&amp;</span> body]
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">`</span>(<span style="color:#66d9ef">let </span>[dbm# (<span style="color:#a6e22e">new-database</span> <span style="color:#f92672">~</span>txes)]
+</span></span><span style="display:flex;"><span>     (binding [*current-db-uri* (<span style="color:#e6db74">:uri</span> dbm#)
+</span></span><span style="display:flex;"><span>               *current-db-connection* (<span style="color:#e6db74">:connection</span> dbm#)]
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">~@</span>body)))
+</span></span></code></pre></div><p>I found using <code>with-database</code> macro with txs is much more convenient and such as having better data locality then using fixtures.</p>
 <h3 id="specs-and-generative-testing">Specs and generative testing</h3>
 <p>I feel like it should naturally fall into the spec paradigm and it should be really piece of cake to generate data for testing.
 But in my case I didn&rsquo;t succeed with this. I couldn&rsquo;t even grasp how to generate simple albums-players relation using spec/gen.</p>
@@ -354,11 +377,11 @@ But in my case I didn&rsquo;t succeed with this. I couldn&rsquo;t even grasp how
 </blockquote>
 <p>Documentation was so succint, so I spent quite good amount of time to find at least one example of extensions.edn and where to keep it.
 So it should be located at <em>/resources/datomic/extensions.edn</em> with such a content</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:xforms</span> [mynamespace/xform]}
-</code></pre></div><p>then you should have <code>xform</code> function in your namespace</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(namespace mynamespace)
-(<span style="color:#66d9ef">defn </span>xform [x] (str <span style="color:#e6db74">&#34;xformed: &#34;</span> x))
-</code></pre></div><p>I was thinking about usecase when you need some translations, say I keep my currency amounts in cents and want to translate to float using currency minor unit. I didn&rsquo;t manage to do this with xforms.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>{<span style="color:#e6db74">:xforms</span> [mynamespace/xform]}
+</span></span></code></pre></div><p>then you should have <code>xform</code> function in your namespace</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>(namespace mynamespace)
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">defn </span>xform [x] (str <span style="color:#e6db74">&#34;xformed: &#34;</span> x))
+</span></span></code></pre></div><p>I was thinking about usecase when you need some translations, say I keep my currency amounts in cents and want to translate to float using currency minor unit. I didn&rsquo;t manage to do this with xforms.</p>
 <h3 id="diagram-tooling">Diagram tooling</h3>
 <p>There are not so many diagramming tools to use with Datomic at the moment.
 Here is the list of known ones to me</p>
@@ -390,21 +413,21 @@ The simplicty you get gives you much power, but at the same time great responsib
 That&rsquo;s simple.</p>
 <p>Assume you have a class <code>Human</code>.</p>
 <p>call getter name value of Human</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name</span>.
-</code></pre></div><p>call setter name with value</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name:</span> <span style="color:#75715e">&#34;The one&#34;</span>.
-</code></pre></div><h3 id="no-positional-arguments-for-functions">No positional arguments for functions.</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name</span>.
+</span></span></code></pre></div><p>call setter name with value</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">name:</span> <span style="color:#75715e">&#34;The one&#34;</span>.
+</span></span></code></pre></div><h3 id="no-positional-arguments-for-functions">No positional arguments for functions.</h3>
 <p>There is no such thing as positional arguments for the methods. Either one argument or named many. Nothing else. Super easy.</p>
 <p>Function 1</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span>.
-</code></pre></div><p>Function 2</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span> <span style="color:#a6e22e">flag:</span> True.
-</code></pre></div><p>This can&rsquo;t be implemented clearly with Java. You will have to have a single function that takes flag with default value. So then you forced to check it later in the code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span>.
+</span></span></code></pre></div><p>Function 2</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">Human</span> <span style="color:#a6e22e">take:</span> <span style="color:#75715e">&#34;The second&#34;</span> <span style="color:#a6e22e">flag:</span> True.
+</span></span></code></pre></div><p>This can&rsquo;t be implemented clearly with Java. You will have to have a single function that takes flag with default value. So then you forced to check it later in the code.</p>
 <p>Lisp has this property by having different bodies for different sets of arguments for the same function.</p>
 <h3 id="common-approach-to-default-values-initialized-in-getter">common approach to default values: initialized in getter</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">history</span>
-	<span style="color:#f92672">^</span> history <span style="color:#a6e22e">ifNil:</span> [ history <span style="color:#f92672">:=</span> <span style="color:#a6e22e">OrderedCollection</span> new ]
-</code></pre></div><p>See this ifNil: method? It accepts the block, which is namely anonymous function and executes it when the target object is nil.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">history</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">^</span> history <span style="color:#a6e22e">ifNil:</span> [ history <span style="color:#f92672">:=</span> <span style="color:#a6e22e">OrderedCollection</span> new ]
+</span></span></code></pre></div><p>See this ifNil: method? It accepts the block, which is namely anonymous function and executes it when the target object is nil.
 ^ is just a <code>return</code>.</p>
 <p>Every object contains <code>ifNil</code> method, so this getter pattern allows concise object initialization.</p>
 <h3 id="no-if-statement">No if statement</h3>
@@ -414,18 +437,18 @@ That&rsquo;s simple.</p>
 <p>Smalltalk has a very concise syntax, but for returning the object it provides <code>;</code> operator.
 This enables to chain calls to the same object in a very straightforward manner.</p>
 <p>Example for Java</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> Apple<span style="color:#f92672">()</span> 
-<span style="color:#f92672">.</span><span style="color:#a6e22e">method1</span><span style="color:#f92672">()</span>
-<span style="color:#f92672">.</span><span style="color:#a6e22e">method2</span><span style="color:#f92672">()</span>
-</code></pre></div><p>Why is there a separate syntax in Java for constructor? I don&rsquo;t know. Smalltalk just calls constructor method with the same syntax as normal function call.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">new</span> Apple<span style="color:#f92672">()</span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">.</span><span style="color:#a6e22e">method1</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">.</span><span style="color:#a6e22e">method2</span><span style="color:#f92672">()</span>
+</span></span></code></pre></div><p>Why is there a separate syntax in Java for constructor? I don&rsquo;t know. Smalltalk just calls constructor method with the same syntax as normal function call.</p>
 <p>The same example for Smalltalk</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">Apple</span> new <span style="color:#a6e22e">method1</span>; <span style="color:#a6e22e">method2</span>;
-</code></pre></div><p>Since main thing in the language is calling methods from objects, you don&rsquo;t need to have much syntax.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">Apple</span> new <span style="color:#a6e22e">method1</span>; <span style="color:#a6e22e">method2</span>;
+</span></span></code></pre></div><p>Since main thing in the language is calling methods from objects, you don&rsquo;t need to have much syntax.
 Same concept applies to Forth language.</p>
 <h3 id="anonymous-functions">Anonymous functions</h3>
 <p>[ block ] - this is syntax for a piece of code</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk">[ <span style="color:#f92672">:</span>anArgument <span style="color:#f92672">|</span> block ]
-</code></pre></div><p>so now you can use <code>anArgument</code> value right in the block. Do you recognise vertical pipes argument from Ruby? This is it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span>[ <span style="color:#f92672">:</span>anArgument <span style="color:#f92672">|</span> block ]
+</span></span></code></pre></div><p>so now you can use <code>anArgument</code> value right in the block. Do you recognise vertical pipes argument from Ruby? This is it.</p>
 <h3 id="skinny-funcitons">Skinny funcitons</h3>
 <p>Indeed, mostly functions in Smalltalk are really small and concise. The good reason for that is the IDE is a part of language image, this changes programmer experience dramatically. IDE is full of functionality like generate scaffold getters, setters, best in breed refactoring capabilities.</p>
 <p><img src="/uploads/2021/pharo.png" alt="Pharo" title="Pharo"></p>
@@ -437,16 +460,16 @@ Same concept applies to Forth language.</p>
 <p><img src="/uploads/2021/pharo-testing2.png" alt="Pharo testing" title="Pharo testing"></p>
 <p>What a brilliant idea to have only <code>assert</code> as the test method!</p>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-smalltalk" data-lang="smalltalk"><span style="color:#a6e22e">testClassifyIncident</span>
-	<span style="color:#f92672">|</span>anIncident aState<span style="color:#f92672">|</span>
-	<span style="color:#960050;background-color:#1e0010">aState</span><span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">status</span>.
-	anIncident <span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">classifyAs:</span> <span style="color:#a6e22e">Incident</span> <span style="color:#a6e22e">service:</span> service.
-	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">equals:</span> <span style="color:#a6e22e">Incident</span>.
-	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">status</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">equals:</span> <span style="color:#a6e22e">ClassifiedTicketState</span>. 
-	self <span style="color:#a6e22e">assert:</span> (ticket <span style="color:#a6e22e">history</span> <span style="color:#a6e22e">includes:</span> aState).
-	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">service</span> <span style="color:#a6e22e">equals:</span> service.
-	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">agreement</span> <span style="color:#a6e22e">equals:</span> agreement
-</code></pre></div><p>Look at this example above! An expression is almost in plain English, almost AppleScript ;)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-smalltalk" data-lang="smalltalk"><span style="display:flex;"><span><span style="color:#a6e22e">testClassifyIncident</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">|</span>anIncident aState<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#960050;background-color:#1e0010">aState</span><span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">status</span>.
+</span></span><span style="display:flex;"><span>	anIncident <span style="color:#f92672">:=</span> ticket <span style="color:#a6e22e">classifyAs:</span> <span style="color:#a6e22e">Incident</span> <span style="color:#a6e22e">service:</span> service.
+</span></span><span style="display:flex;"><span>	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">equals:</span> <span style="color:#a6e22e">Incident</span>.
+</span></span><span style="display:flex;"><span>	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">status</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">equals:</span> <span style="color:#a6e22e">ClassifiedTicketState</span>. 
+</span></span><span style="display:flex;"><span>	self <span style="color:#a6e22e">assert:</span> (ticket <span style="color:#a6e22e">history</span> <span style="color:#a6e22e">includes:</span> aState).
+</span></span><span style="display:flex;"><span>	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">service</span> <span style="color:#a6e22e">equals:</span> service.
+</span></span><span style="display:flex;"><span>	self <span style="color:#a6e22e">assert:</span> anIncident <span style="color:#a6e22e">agreement</span> <span style="color:#a6e22e">equals:</span> agreement
+</span></span></code></pre></div><p>Look at this example above! An expression is almost in plain English, almost AppleScript ;)</p>
 <h3 id="less-boilerplate">Less boilerplate</h3>
 <p>I have chosen the Pharo as a tool for thought, because it doesn&rsquo;t require any boilerplate to start thinking on domain and experiment with entities.
 The REPL is awesome and allows to dig and to feel the data.</p>
@@ -494,8 +517,8 @@ The system fives all bunch of tools like &ldquo;grep&rdquo; to find the term you
     <div><p>I recently added org-capture chrome extension to my toolbelt. Unfortunalely chrome annoys me by asking if I want to open this protocol link every time.</p>
 <p>Here is the simple way to fix this.</p>
 <p>Execute this in the shell</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">defaults write com.google.Chrome URLAllowlist -array-add -string <span style="color:#e6db74">&#39;org-protocol://*&#39;</span>
-</code></pre></div><p>check
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>defaults write com.google.Chrome URLAllowlist -array-add -string <span style="color:#e6db74">&#39;org-protocol://*&#39;</span>
+</span></span></code></pre></div><p>check
 <a href="chrome://policy">chrome://policy</a> url that it contains proper settings for org-protocol</p>
 <p><img src="/uploads/chrome-policy.png" alt="Chrome policy"></p></div>
 </div>
@@ -513,20 +536,20 @@ The system fives all bunch of tools like &ldquo;grep&rdquo; to find the term you
 
 
     {
-    &quot;essentialtech&quot;: true,
-    &quot;googleadwords&quot;: false,
-    &quot;googleanalytics&quot;: false,
-    &quot;googlemaps&quot;: true,
-    &quot;gtmbasedtech&quot;: false,
-    &quot;terminland&quot;: true,
-    &quot;userlike&quot;: true
+    &#34;essentialtech&#34;: true,
+    &#34;googleadwords&#34;: false,
+    &#34;googleanalytics&#34;: false,
+    &#34;googlemaps&#34;: true,
+    &#34;gtmbasedtech&#34;: false,
+    &#34;terminland&#34;: true,
+    &#34;userlike&#34;: true
     }
 #+end_src
 
 #+RESULTS:
 #+BEGIN_SRC js
 {
-  &quot;message&quot;: &quot;success&quot;
+  &#34;message&#34;: &#34;success&#34;
 }
 // POST http://muster.test/index.php?cl=ping
 // HTTP/1.1 200 OK
@@ -548,7 +571,7 @@ The system fives all bunch of tools like &ldquo;grep&rdquo; to find the term you
 <pre tabindex="0"><code class="language-org-mode" data-lang="org-mode">#+begin_src  sql :engine mysql :dbhost 127.0.0.1 :dbuser muster :dbpassword muster :database muster-development
 select val, attribute, count(*)
 from oxps_user_consent_pings 
-where attribute='googleanalytics' and time &gt; '2021-01-01'
+where attribute=&#39;googleanalytics&#39; and time &gt; &#39;2021-01-01&#39;
 group by val
 #+end_src
 
@@ -568,7 +591,7 @@ group by val
     <div><p>Useful Git WIP alias command</p>
 <p>add this to the .gitconfig</p>
 <pre tabindex="0"><code>[alias]
-  wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+  wip = for-each-ref --sort=&#39;authordate:iso8601&#39; --format=&#39; %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)&#39; refs/heads
   
 </code></pre><p>and enjoy <code>git wip</code> sorting branches by most recent</p>
 <p>Source: <a href="https://carolynvanslyck.com/blog/2020/12/git-wip/">https://carolynvanslyck.com/blog/2020/12/git-wip/</a></p></div>
@@ -595,21 +618,20 @@ group by val
     <div class="date">24.12.2020</div>
     <div><p>In brief  - use the <code>resource_group</code> directive.</p>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">stages</span>:
-  - <span style="color:#ae81ff">build</span>
-
-<span style="color:#f92672">jobA</span>:
-  <span style="color:#f92672">resource_group</span>: <span style="color:#ae81ff">jobA</span>
-  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
-  <span style="color:#f92672">script</span>: 
-    - <span style="color:#ae81ff">echo HelloA</span>
-
-<span style="color:#f92672">jobB</span>: 
-  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
-  <span style="color:#f92672">script</span>:
-    - <span style="color:#ae81ff">echo HelloB</span>
-
-</code></pre></div><p>There are some useful patterns for Resource Group.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">stages</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobA</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">resource_group</span>: <span style="color:#ae81ff">jobA</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">script</span>: 
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">echo HelloA</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobB</span>: 
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">script</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">echo HelloB</span>
+</span></span></code></pre></div><p>There are some useful patterns for Resource Group.</p>
 <p>resource_group: $CI_ENVIRONMENT_NAME &hellip; Limit per environment</p>
 <p>resource_group: $CI_JOB_NAME &hellip; Limit per job</p>
 <p>resource_group: $CI_COMMIT_REF_NAME:$CI_JOB_NAME &hellip; Limit per job per branch</p>
@@ -696,7 +718,7 @@ group by val
 </blockquote>
 <p>Namely, you write an example of time date, not just &ldquo;dd-MM-yyyy&rdquo; but real date and time using numbers as values.</p>
 <p>Here is go example:</p>
-<pre tabindex="0"><code>01/02 03:04:05PM '06 -0700
+<pre tabindex="0"><code>01/02 03:04:05PM &#39;06 -0700
 Mon Jan 2 15:04:05 MST 2006
 </code></pre><p>if we want to print output similar to dd-MM-yyyy we&rsquo;d specify just</p>
 <pre tabindex="0"><code>02 Jan 2006
@@ -736,9 +758,9 @@ Mon Jan 2 15:04:05 MST 2006
 <p>At this point, you’ll have PHP v7.4 installed in <code>/usr/local/opt/php@7.4/</code></p>
 <p>In case you need to keep several PHP versions, it can be done using ENV vars in .zshrc</p>
 <pre tabindex="0"><code>PHP_VERSION=7.4
-export PATH=&quot;/usr/local/opt/php@${PHP_VERSION}/bin:/usr/local/opt/php@${PHP_VERSION}/sbin:$PATH&quot;  
-export LDFLAGS=&quot;-L/usr/local/opt/php@${PHP_VERSION}/lib&quot;  
-export CPPFLAGS=&quot;-I/usr/local/opt/php@${PHP_VERSION}/include&quot;
+export PATH=&#34;/usr/local/opt/php@${PHP_VERSION}/bin:/usr/local/opt/php@${PHP_VERSION}/sbin:$PATH&#34;  
+export LDFLAGS=&#34;-L/usr/local/opt/php@${PHP_VERSION}/lib&#34;  
+export CPPFLAGS=&#34;-I/usr/local/opt/php@${PHP_VERSION}/include&#34;
 </code></pre><h3 id="php-fpm-setup">PHP-FPM setup</h3>
 <p>Locate /usr/local/etc/php/7.4/php-fpm.d/www.conf and edit it to include environment variables. I also rebound default port 9000 to 9009 not to have conflicts with XDEBUG</p>
 <pre tabindex="0"><code>clear_env = no 
@@ -748,7 +770,7 @@ listen = 127.0.0.1:9009
 <pre tabindex="0"><code>
 Listen 80  
 &lt;FilesMatch \\.php$&gt; 
-  SetHandler &quot;proxy:fcgi://127.0.0.1:9009&quot;  
+  SetHandler &#34;proxy:fcgi://127.0.0.1:9009&#34;  
 &lt;/FilesMatch&gt;
 &lt;VirtualHost *:80&gt;  
         ServerAdmin webmaster@localhost  
@@ -757,7 +779,7 @@ Listen 80
         ErrorLog /Users/mprokopov/oxid/project/source/error.log  
         CustomLog /Users/mprokopov/oxid/project/source/access.log combined  
 &lt;/VirtualHost&gt;
-&lt;Directory &quot;/Users/mprokopov/oxid/*/source&quot;&gt;  
+&lt;Directory &#34;/Users/mprokopov/oxid/*/source&#34;&gt;  
     Options Indexes FollowSymLinks  
     AllowOverride All
     Require all granted  
@@ -765,8 +787,8 @@ Listen 80
 </code></pre><h3 id="project-setup">Project setup</h3>
 <p>For some reason php-fpm doesn’t play well with _ENV variables, so I had to change them to use getenv() function instead, like on the example below</p>
 <p>config.inc.php of the project</p>
-<pre tabindex="0"><code>$dbName = getenv('DB_NAME')  
-$dbUser = getenv('DB_USER')  
+<pre tabindex="0"><code>$dbName = getenv(&#39;DB_NAME&#39;)  
+$dbUser = getenv(&#39;DB_USER&#39;)  
 ...
 </code></pre><h3 id="party-time">Party time</h3>
 <p>When you decide to work on the project, go to the source folder of the project and run the command</p>
@@ -777,7 +799,7 @@ $dbUser = getenv('DB_USER')
 <p>In case you need XDEBUG, you can install it with command</p>
 <p><code>1 pecl install xdebug</code></p>
 <p>and edit /usr/local/etc/php/7.4/php.ini to include the following settings</p>
-<pre tabindex="0"><code>zend\_extension=&quot;xdebug.so&quot;  
+<pre tabindex="0"><code>zend\_extension=&#34;xdebug.so&#34;  
 xdebug.remote\_enable=on  
 xdebug.remote\_host=127.0.0.1  
 xdebug.remote\_handler=dbgp  
@@ -786,7 +808,7 @@ xdebug.remote\_autostart=On
 xdebug.profiler\_enable\_trigger = 1  
 xdebug.profiler\_enable=  
 xdebug.profiler\_output\_dir = tmp  
-xdebug.profiler\_output\_name = &quot;callgrind.out.%p&quot;
+xdebug.profiler\_output\_name = &#34;callgrind.out.%p&#34;
 </code></pre></div>
 </div>
 
@@ -833,83 +855,83 @@ xdebug.profiler\_output\_name = &quot;callgrind.out.%p&quot;
 <p>Сначала я сделал перепроектирование <a href="https://it-premium.com.ua">https://it-premium.com.ua</a> на <a href="https://gohugo.io/">Hugo</a> вместо RoR, и сразу понял, это - то что нужно! Во-первых статика это то, во что так или иначе переходит каждый сайт когда его рендером занимается браузер. Быстрее чем статический сайт сделать нельзя, хотя многие пытаются, используя Javascript-based фреймворки на подобие Gatsby.</p>
 <p>Hugo поддерживает не только markdown, но и различные продвинутые сценарии, так в странице <a href="/pages/trips/">&ldquo;Путешествую&rdquo;</a> список стран и мест находится в YAML файле и включается из Markdown при помощи custom tag. На каждой странице список друзей также стал формироваться из отдельного YAML. Кстати, уже никто не обменивается ссылками как раньше?</p>
 <p>мой trips.yaml файл, рендер которого вы можете увидеть <a href="/pages/trips">здесь</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2020</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Испания, Барселона</span>
-  <span style="color:#f92672">comment</span>: <span style="color:#ae81ff">увы и ах, из-за короны-19 отменена :(</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019-2020</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Норвегия, Аскер</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">недели</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Фрайбург</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Австрия, Вена, 1 месяц</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">месяц</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Турция, пригород Анталии 1 неделя</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">недели</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Берлин</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Сицилия, гастротур</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">дней</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018-2019</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Таиланд, о. Самуи</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">полгода</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Италия (Тоскана), гастротур</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">дней</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Финляндия (Юваскюля, Хельсинки)</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Гамбург</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2017</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Маннгейм, Штуттгарт</span>
-  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">месяц</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2016</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Хургада), Турция (Стамбул)</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2013-2014</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Тайланд (Бангкок, Айютайя, Паттайя) [Камбоджа (Сиам-Реап, Сиануквиль, Баттамбанг, Кампот, Пном-Пень)][1]</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2012</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Малайзия (Куала-Лумпур, о. Тиоман) Филиппины (о. Боракай, о. Палаван (Ель-Нидо, Пуерто-Принсесса)) Индонезия (о. Сулавеси, Тогеанские о-ва (о. Маленге, о. Бомба), Тана-Тораджа (Рантепао + окрестности), Макассар, о. Бали)</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2011</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Сингапур Вьетнам (Хошимин, Ханой, Хью, ) Индонезия (о. Бали, о. Ломбок, о. Ява (плато Диенг, Джогджакарта, вулкан Иджен)</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2010</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Индонезия (о. Ява (вулкан Бромо) о. Бали)</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2009</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Тайланд (Бангкок, о. Чанг)</span>
-
-- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2008</span>
-  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Шарм-Ель-Шейх, Каир (пирамидки))</span>
-</code></pre></div><p>а рендерит его вот такой простой кусочек в layouts/shortcodes/travel.html</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
-{{ range $.Site.Data.travel }}
-    &lt;<span style="color:#f92672">li</span>&gt;
-        {{.date}} {{.place}} {{.duration}} {{.comment}}
-    &lt;/<span style="color:#f92672">li</span>&gt;
-{{ end }}
-&lt;/<span style="color:#f92672">ul</span>&gt;
-</code></pre></div><p>Все линки для навигации сверху берутся из соответствующих мета-полей в файлах в каталоге content/pages. Достаточно просто создать там новый файл с содержимым и он автоматически появится в меню!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2020</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Испания, Барселона</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">comment</span>: <span style="color:#ae81ff">увы и ах, из-за короны-19 отменена :(</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019-2020</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Норвегия, Аскер</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">недели</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Фрайбург</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Австрия, Вена, 1 месяц</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">месяц</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Турция, пригород Анталии 1 неделя</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">недели</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Берлин</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Сицилия, гастротур</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">дней</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018-2019</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Таиланд, о. Самуи</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">полгода</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Италия (Тоскана), гастротур</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">дней</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Финляндия (Юваскюля, Хельсинки)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Гамбург</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">дня</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2017</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Германия, Маннгейм, Штуттгарт</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">месяц</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2016</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Хургада), Турция (Стамбул)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2013-2014</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Тайланд (Бангкок, Айютайя, Паттайя) [Камбоджа (Сиам-Реап, Сиануквиль, Баттамбанг, Кампот, Пном-Пень)][1]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2012</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Малайзия (Куала-Лумпур, о. Тиоман) Филиппины (о. Боракай, о. Палаван (Ель-Нидо, Пуерто-Принсесса)) Индонезия (о. Сулавеси, Тогеанские о-ва (о. Маленге, о. Бомба), Тана-Тораджа (Рантепао + окрестности), Макассар, о. Бали)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2011</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Сингапур Вьетнам (Хошимин, Ханой, Хью, ) Индонезия (о. Бали, о. Ломбок, о. Ява (плато Диенг, Джогджакарта, вулкан Иджен)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2010</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Индонезия (о. Ява (вулкан Бромо) о. Бали)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2009</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Тайланд (Бангкок, о. Чанг)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">date</span>: <span style="color:#ae81ff">2008</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">place</span>: <span style="color:#ae81ff">Египет (Шарм-Ель-Шейх, Каир (пирамидки))</span>
+</span></span></code></pre></div><p>а рендерит его вот такой простой кусочек в layouts/shortcodes/travel.html</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>{{ range $.Site.Data.travel }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        {{.date}} {{.place}} {{.duration}} {{.comment}}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span></code></pre></div><p>Все линки для навигации сверху берутся из соответствующих мета-полей в файлах в каталоге content/pages. Достаточно просто создать там новый файл с содержимым и он автоматически появится в меню!</p>
 <p><img src="/img/pages.png" alt="My pages list as files"></p>
 <p>Для миграции всего контента с блога wordpress я воспользовался соответствуюей утилитой.</p>
 <p>Остался вопрос с комментариями, и он также решается при помощи известного disqus. Дорогой читатель, подскажи, если знаешь engine получше.</p>
@@ -1122,13 +1144,13 @@ end tell</code></pre><figure class="wp-block-image size-large">
     <div class="date">02.02.2020</div>
     <div><p>This is really my little timesaver because you know, a lot of meetings happen when you work remotely.</p>
 <p>Works best with Alfred 4 using mapped hotkey.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-applescript" data-lang="applescript"><span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Calendar&#34;</span>
-	<span style="color:#66d9ef">tell</span> calendar <span style="color:#e6db74">&#34;maksym.prokopov@trilogy.com&#34;</span>
-		<span style="color:#66d9ef">set</span> itemLocation <span style="color:#66d9ef">to</span> <span style="color:#a6e22e">location</span> <span style="color:#66d9ef">of</span> first event where <span style="color:#66d9ef">its</span> start date <span style="color:#f92672">≤</span> (current date) <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> minutes <span style="color:#f92672">and</span> <span style="color:#66d9ef">end</span> date <span style="color:#f92672">≥</span> (current date)
-		<span style="color:#66d9ef">if</span> itemLocation <span style="color:#f92672">contains</span> <span style="color:#e6db74">&#34;zoom.us&#34;</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Finder&#34;</span> <span style="color:#66d9ef">to</span> open location itemLocation
-	<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">tell</span>
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">tell</span>
-</code></pre></div><p><img src="/uploads/2020/02/Screenshot-2020-02-26-at-19.10.05.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-applescript" data-lang="applescript"><span style="display:flex;"><span><span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Calendar&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">tell</span> calendar <span style="color:#e6db74">&#34;maksym.prokopov@trilogy.com&#34;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">set</span> itemLocation <span style="color:#66d9ef">to</span> <span style="color:#a6e22e">location</span> <span style="color:#66d9ef">of</span> first event where <span style="color:#66d9ef">its</span> start date <span style="color:#f92672">≤</span> (current date) <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> minutes <span style="color:#f92672">and</span> <span style="color:#66d9ef">end</span> date <span style="color:#f92672">≥</span> (current date)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> itemLocation <span style="color:#f92672">contains</span> <span style="color:#e6db74">&#34;zoom.us&#34;</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Finder&#34;</span> <span style="color:#66d9ef">to</span> open location itemLocation
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">tell</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">tell</span>
+</span></span></code></pre></div><p><img src="/uploads/2020/02/Screenshot-2020-02-26-at-19.10.05.png" alt=""></p>
 <p><img src="/uploads/2020/02/Screenshot-2020-02-26-at-19.10.41.png" alt=""></p></div>
 </div>
 
@@ -1183,32 +1205,32 @@ end tell</code></pre><figure class="wp-block-image size-large">
     </h1>
     <div class="date">06.06.2018</div>
     <div><p>Here is a piece of my old code, but it’s definitely could be improved.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
-  h <span style="color:#f92672">=</span> ticket_params
-    h<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity
-    h<span style="color:#f92672">[</span><span style="color:#e6db74">:event</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_event <span style="color:#66d9ef">if</span> extract_event
-    h<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:state_event</span>)
-    h<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:activities_attributes</span>)
-  h
-<span style="color:#66d9ef">end</span>
-</code></pre></div><p>As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
+</span></span><span style="display:flex;"><span>  h <span style="color:#f92672">=</span> ticket_params
+</span></span><span style="display:flex;"><span>    h<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity
+</span></span><span style="display:flex;"><span>    h<span style="color:#f92672">[</span><span style="color:#e6db74">:event</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_event <span style="color:#66d9ef">if</span> extract_event
+</span></span><span style="display:flex;"><span>    h<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:state_event</span>)
+</span></span><span style="display:flex;"><span>    h<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:activities_attributes</span>)
+</span></span><span style="display:flex;"><span>  h
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?</p>
 <p>Let’s see, <code>h=ticket_params</code>. We call this because we don’t want to modify <code>ticket_params</code>. Is there any method which creates a copy?</p>
 <p>It turns out we have dup method which creates a copy of an object, this is exactly what we wanted. Then, we have tap method, which allows us to dive in object internals and return then itself. Here is whole new piece of code after refactoring.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
-  ticket_params<span style="color:#f92672">.</span>dup<span style="color:#f92672">.</span>tap <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>params<span style="color:#f92672">|</span>
-    params<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity
-    params<span style="color:#f92672">[</span><span style="color:#e6db74">:event</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_event <span style="color:#66d9ef">if</span> extract_event
-    params<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:state_event</span>)
-    params<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:activities_attributes</span>)
-  <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span>
-</code></pre></div><p>Much better now and we do not have any redundant variable!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
+</span></span><span style="display:flex;"><span>  ticket_params<span style="color:#f92672">.</span>dup<span style="color:#f92672">.</span>tap <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>params<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>    params<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity
+</span></span><span style="display:flex;"><span>    params<span style="color:#f92672">[</span><span style="color:#e6db74">:event</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_event <span style="color:#66d9ef">if</span> extract_event
+</span></span><span style="display:flex;"><span>    params<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:state_event</span>)
+</span></span><span style="display:flex;"><span>    params<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:activities_attributes</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Much better now and we do not have any redundant variable!</p>
 </div>
 </div>
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2018-05-29_-prolog-e0878ac7fe40/">Введение в Prolog</a>
+        <a href="https://prokopov.me/posts/2018-05-29_-----------prolog-e0878ac7fe40/">Введение в Prolog</a>
     </h1>
     <div class="date">29.05.2018</div>
     <div><p>Хочу такой туториал, с которым все понятно, куда коней запрягать. А его нет. Напишу тогда свой.</p>
@@ -1252,7 +1274,7 @@ end tell</code></pre><figure class="wp-block-image size-large">
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2018-05-27_-dbe59a2cbade/">Пожалуй, самым точным определением будет слово «осознанность».</a>
+        <a href="https://prokopov.me/posts/2018-05-27_---------------------------------------------------------------dbe59a2cbade/">Пожалуй, самым точным определением будет слово «осознанность».</a>
     </h1>
     <div class="date">27.05.2018</div>
     <div><p>Пожалуй, самым точным определением будет слово «осознанность». Нон-конформизм это тоже своего рода крайность, так как бывает сопротивление ради сопротивления, особенно в пубертатном возрасте. Уметь оценивать и признавать противоположную точку зрения, вот что по-настоящему ценно.</p>
@@ -1293,7 +1315,7 @@ end tell</code></pre><figure class="wp-block-image size-large">
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2018-03-28_-2285686116fa/">Согласен по всем пунктам!</a>
+        <a href="https://prokopov.me/posts/2018-03-28_--------------------------2285686116fa/">Согласен по всем пунктам!</a>
     </h1>
     <div class="date">28.03.2018</div>
     <div><p>Согласен по всем пунктам!</p>
@@ -1562,8 +1584,8 @@ expire\_in: 1 week
 </code></pre><pre tabindex="0"><code>/usr/bin/mysqldump -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE
 </code></pre><p>script backup-coreos-itservice.sh</p>
 <pre tabindex="0"><code>/ffp/bin/scp /ffp/home/root/backup.sh core@coreos-03:/home/core/itservice/backup.sh 
-</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker cp /home/core/itservice/backup.sh itservice_db_1:/usr/local/bin/backup.sh&quot; 
-</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &quot;docker exec itservice_db_1 /usr/local/bin/backup.sh&quot; &gt; latest.sql 
+</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &#34;docker cp /home/core/itservice/backup.sh itservice_db_1:/usr/local/bin/backup.sh&#34; 
+</code></pre><pre tabindex="0"><code>/usr/sbin/ssh -C core@coreos-03 &#34;docker exec itservice_db_1 /usr/local/bin/backup.sh&#34; &gt; latest.sql 
 </code></pre><pre tabindex="0"><code>/opt/bin/tar czf itservice-sql-dump.tar.gz latest.sql --remove-files
 </code></pre><p>rsnapshot.conf</p>
 <pre tabindex="0"><code>backup_script	/mnt/HD/HD_a2/ffp/home/root/backup-coreos-itservice.sh	coreos-03/itservice_db_1
@@ -1610,7 +1632,7 @@ BuildError: The command ‘/bin/sh -c python /get-pip.py &amp;&amp; mkdir -p /et
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2017-08-11_-d42877e2368d/">О красоте кода</a>
+        <a href="https://prokopov.me/posts/2017-08-11_---------------d42877e2368d/">О красоте кода</a>
     </h1>
     <div class="date">11.08.2017</div>
     <div><p>Когда программист программирует, он начинает разбивать код на модули только потому, что имеет ограничение в своем неокортексе на количество одновременных элементов в памяти. А я ведь когда-то писал на ассемблере, и легкой прогулкой это никак нельзя было назвать, в основном из-за простыней однообразного кода, в котором было легко потеряться.</p>
@@ -1749,7 +1771,7 @@ restart: always</p>
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2017-07-11_-docker-ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/">Про Docker и Ruby on Rails sprockets and precompiled assets</a>
+        <a href="https://prokopov.me/posts/2017-07-11_----docker---ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/">Про Docker и Ruby on Rails sprockets and precompiled assets</a>
     </h1>
     <div class="date">11.07.2017</div>
     <div><p>Рельсы идут не тем путем.</p>
@@ -1982,7 +2004,7 @@ restart: always</p>
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2016-10-13_-opencart-6bbee7eabb95/">Блеск и нищета OpenCart как движка для интернет-магазина</a>
+        <a href="https://prokopov.me/posts/2016-10-13_---------------opencart----------------------------------6bbee7eabb95/">Блеск и нищета OpenCart как движка для интернет-магазина</a>
     </h1>
     <div class="date">13.10.2016</div>
     <div><p>Блеск и нищета OpenCart как движка для <a href="https://super-truper.com.ua">интернет-магазина</a></p>
@@ -2241,7 +2263,7 @@ restart: always</p>
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2016-06-06_-emacs-vim-74190dffa34e/">Редактор мечты или как, наконец, холивар Emacs или Vim завершился.</a>
+        <a href="https://prokopov.me/posts/2016-06-06_-----------------------------------------emacs-----vim-------------74190dffa34e/">Редактор мечты или как, наконец, холивар Emacs или Vim завершился.</a>
     </h1>
     <div class="date">06.06.2016</div>
     <div><p>Если уж быть совсем-совсем кратким, то встречайте <a href="http://spacemacs.org/">Spacemacs</a>. Это такой настроенный Emacs с клавиатурными сочетаниями от Vim.</p>
@@ -2379,7 +2401,7 @@ restart: always</p>
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2015-11-02_-slack-15-8ee097578b6b/">Чат на вашем вебсайте с интеграцией в slack за 15 минут</a>
+        <a href="https://prokopov.me/posts/2015-11-02_--------------------------------------slack----15-------8ee097578b6b/">Чат на вашем вебсайте с интеграцией в slack за 15 минут</a>
     </h1>
     <div class="date">02.11.2015</div>
     <div><p>Так не хочется устанавливать еще одно ПО на компьютер (типа <a href="https://www.siteheart.com">приватовского SiteHeart</a>), а чат для <a href="https://it-premium.com.ua/">вебсайта</a> хочется. Мы же используем уже Slack для внутренних коммуникаций, который прекрасно интегрируется со всем и вся. Можно ли его использовать для наших целей? 10 минут на гугл и вуаля, вот он <a href="https://chatlio.com/">сервис Chatlio</a>, который делает то, что нам нужно. Да еще и на тестовый период в 30 дней бесплатно. Думаю, за 30 дней мы сможем понять, добавляет ли это пользы процессу продаж.</p>
@@ -2455,7 +2477,7 @@ restart: always</p>
     @api = ‘/api/tickets/unassigned’</p>
 <p>вот HAML партиал. Кстати, это в 4м HAML появилась возможность писать аттрибуты в круглых скобках.</p>
 <p>    %td.avatar<br>
-      %img.cycle.userpic(data-bind = «attr:{src:avatar.nano.url}, visible: state !== ‘classified'»)<br>
+      %img.cycle.userpic(data-bind = «attr:{src:avatar.nano.url}, visible: state !== ‘classified&rsquo;»)<br>
     %td.id_column<br>
       %a(data-bind = «attr:{ href: url }, css: {‘fg-red’: is_major}»)<br>
         %i.icon-fire(data-bind = ‘visible: is_major’)<br>
@@ -6371,7 +6393,7 @@ AuthType Digest    AuthName DAV-upload
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/draft_gitlab-continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Gitlab: continuous delivery setup for Clojure/Java with Docker</a>
+        <a href="https://prokopov.me/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Gitlab: continuous delivery setup for Clojure/Java with Docker</a>
     </h1>
     <div class="date">01.01.0001</div>
     <div><p>Recently I was doing a <a href="https://github.com/mprokopov/it-service-sse">https://github.com/mprokopov/it-service-sse</a> and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.</p>
@@ -6427,7 +6449,7 @@ AuthType Digest    AuthName DAV-upload
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/draft_one-account-all-of-google-24ec9b332a4a/">One account. All of Google.</a>
+        <a href="https://prokopov.me/posts/draft_one-account--all-of-google--24ec9b332a4a/">One account. All of Google.</a>
     </h1>
     <div class="date">01.01.0001</div>
     <div><p>One account. All of Google.</p>
@@ -6438,7 +6460,7 @@ AuthType Digest    AuthName DAV-upload
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/draft_one-account-all-of-google-4681a5761d84/">One account. All of Google.</a>
+        <a href="https://prokopov.me/posts/draft_one-account--all-of-google--4681a5761d84/">One account. All of Google.</a>
     </h1>
     <div class="date">01.01.0001</div>
     <div><p>One account. All of Google.</p>
@@ -6548,7 +6570,7 @@ Handling connection for 3000</p>
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos-9599b598746b/">Why is my dev docker container so slow on macOS?</a>
+        <a href="https://prokopov.me/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos--9599b598746b/">Why is my dev docker container so slow on macOS?</a>
     </h1>
     <div class="date">01.01.0001</div>
     <div><p>TLDR: because of the networking layer and how docker volumes implemented.</p>
@@ -6618,7 +6640,7 @@ Transcript – REPL, то есть интерактивную консоль, п
         
         <li><a href="/categories/education/">education</a> (2) </li>
         
-        <li><a href="/categories/emacs/">emacs</a> (1) </li>
+        <li><a href="/categories/emacs/">emacs</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

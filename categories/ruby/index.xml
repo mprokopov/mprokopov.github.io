@@ -14,9 +14,8 @@
       
       <guid>https://prokopov.me/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/</guid>
       <description>Here is a piece of my old code, but it’s definitely could be improved.
-def to_params h = ticket_params h[:activity] = extract_activity if extract_activity h[:event] = extract_event if extract_event h.delete(:state_event) h.delete(:activities_attributes) h end As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?
-Let’s see, h=ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy?
-It turns out we have dup method which creates a copy of an object, this is exactly what we wanted.</description>
+def to_params  h = ticket_params  h[:activity] = extract_activity if extract_activity  h[:event] = extract_event if extract_event  h.delete(:state_event)  h.delete(:activities_attributes)  h end As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?
+Let’s see, h=ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy?</description>
     </item>
     
   </channel>

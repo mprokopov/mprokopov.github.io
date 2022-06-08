@@ -36,14 +36,37 @@
 
 <div class="article">
     <h1>
+        <a href="https://prokopov.me/posts/emacs-ergonomics-apple/">Emacs, apple keyboard, and RSI</a>
+    </h1>
+    <div class="date">07.06.2022</div>
+    <div><p>Recently I&rsquo;ve started investigation on the most effective shortcuts for Emacs.
+Already for a long time I&rsquo;ve been using Caps Lock remapped to Esc when pressed alone, and Ctrl-Key when pressed with any other key.</p>
+<p>I didn&rsquo;t use Emacs with native bindings for a long time, because of wrist related issues, which immediately appeared after using pinky for pressing long chords which normally included Ctrl-C combination. This is why I used Spacemacs and later Doom Emacs as the configuration of choice.</p>
+<p>And this worked relatively good, I used the same bindings for Vim in terminal, and no RSI since pinky wasn&rsquo;t overloaded with long presses. But something were not so good, I needed to keep a context in the head and using special modes like eshell or repl weren&rsquo;t fun because of context switch losses.</p>
+<p>So I&rsquo;ve started reading the book Mastering Emacs, which I definitely recommend, I decided to give a try to alternative solutions for Emacs keybindings.</p>
+<p>First of which were using interesting combinations for the keychords like pressing J+K equals to Control and pressing F+D equals to control. The idea was to reduce pressure on pinky by moving control to the &ldquo;home&rdquo; row. This worked to some extent. Long combinations with Ctrl, like &ldquo;C-c C-o C-r&rdquo; needed to have very uncomfortable key sequences. Apart from this constant typos where annoying, when you switched keys too fast. So I dropped this option and started looking for new ways.</p>
+<p>I realised, that Ctrl should not be pressed by pinky, it should be just convenient enough to reach.
+Then I saw old design of the Space Kadet keyboard, and it had Control right near the Space key.</p>
+<p><img src="https://en.wikipedia.org/wiki/Space-cadet_keyboard#/media/File:Space-cadet.jpg" alt="Space Cadet keyboard"></p>
+<p>Whan I swapped Command and Control keys, man, that was real enlightenment, literally everything started being comfortable. Look, Ctrl-x-s is just a single row. Ctrl-c feels natural, because you literally use mighty thumb and index fingers. Movement with Ctrl-a, Ctrl-e, Ctrl-n and Ctrl-p just started having much more sence and convenience. Most of the Emacs combinations with Ctrl-C and Ctrl-X are sane now.</p>
+<p>It comes as a bonus using readline compatible utilities in terminal.</p>
+<p>I really think swapping Caps Lock and Control is a BAD advice that did enourmous harm for neglecting Emacs than anything else. Either Windows based keyboards having Alt, or Mac based keyboards having Command, should be swapped with Control at least in Emacs and other readline applications. Do this right now using Karabiner Elements free application for MacOS and never experience any RSI.</p>
+<p>Using Karabiner Elements you can make this change only for the several applications, like Emacs and iTerm, and not the system-wide.</p>
+<p>RSI stands for repetitive stain injury
+<a href="https://www.nhs.uk/conditions/repetitive-strain-injury-rsi/">https://www.nhs.uk/conditions/repetitive-strain-injury-rsi/</a></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>
         <a href="https://prokopov.me/posts/2021-02-02-org-protocol-chrome-no-confirmation/">Disable Chrome browser confirmation to open external protocol with org-protocol</a>
     </h1>
     <div class="date">02.02.2021</div>
     <div><p>I recently added org-capture chrome extension to my toolbelt. Unfortunalely chrome annoys me by asking if I want to open this protocol link every time.</p>
 <p>Here is the simple way to fix this.</p>
 <p>Execute this in the shell</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">defaults write com.google.Chrome URLAllowlist -array-add -string <span style="color:#e6db74">&#39;org-protocol://*&#39;</span>
-</code></pre></div><p>check
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>defaults write com.google.Chrome URLAllowlist -array-add -string <span style="color:#e6db74">&#39;org-protocol://*&#39;</span>
+</span></span></code></pre></div><p>check
 <a href="chrome://policy">chrome://policy</a> url that it contains proper settings for org-protocol</p>
 <p><img src="/uploads/chrome-policy.png" alt="Chrome policy"></p></div>
 </div>
@@ -80,7 +103,7 @@
         
         <li><a href="/categories/education/">education</a> (2) </li>
         
-        <li><a href="/categories/emacs/">emacs</a> (1) </li>
+        <li><a href="/categories/emacs/">emacs</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         
