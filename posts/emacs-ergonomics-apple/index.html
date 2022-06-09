@@ -54,6 +54,11 @@ Then I saw old design of the Space Kadet keyboard, and it had Control right near
 <p>It comes as a bonus using readline compatible utilities in terminal.</p>
 <p>I really think swapping Caps Lock and Control is a BAD advice that did enourmous harm for neglecting Emacs than anything else. Either Windows based keyboards having Alt, or Mac based keyboards having Command, should be swapped with Control at least in Emacs and other readline applications. Do this right now using Karabiner Elements free application for MacOS and never experience any RSI.</p>
 <p>Using Karabiner Elements you can make this change only for the several applications, like Emacs and iTerm, and not the system-wide.</p>
+<p>Update:</p>
+<p>In order to remap command to control you don&rsquo;t event need Karabiner Element, just map command to control using the following snippet</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(setq ns-modifier-command <span style="color:#e6db74">&#39;control</span>)
+</span></span></code></pre></div><p>In iTerm it&rsquo;s also easy to do
+Preferences -&gt; Keys -&gt; Remap modifiers</p>
 <p>RSI stands for repetitive stain injury
 <a href="https://www.nhs.uk/conditions/repetitive-strain-injury-rsi/">https://www.nhs.uk/conditions/repetitive-strain-injury-rsi/</a></p>
 </div>
