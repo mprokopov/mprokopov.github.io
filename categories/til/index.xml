@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 15 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/til/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Things I Learned</title>
-      <link>https://prokopov.me/2022/08/til/</link>
+      <link>https://prokopov.me/posts/til-2022-08-15/</link>
       <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://prokopov.me/2022/08/til/</guid>
+      <guid>https://prokopov.me/posts/til-2022-08-15/</guid>
       <description>Things I Learned
 Git push with force from the command line git push --force origin master git push -f origin master git push origin +master  Make your git life easier git config --global push.autoSetupRemote true  Check DNS from the inside of docker container This is super useful when you don&amp;rsquo;t have neither dig nor nslookup utilities inside your docker container.
 getent hosts google.com  </description>
