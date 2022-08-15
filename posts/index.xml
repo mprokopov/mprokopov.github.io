@@ -1406,6 +1406,15 @@ sudo ln -sf /System/Library/Frameworks/JavaVM.framework/Commands/javaws /usr/bin
     </item>
     
     <item>
+      <title>Новое оформление блога</title>
+      <link>https://prokopov.me/2013/08/new-blog-theme/</link>
+      <pubDate>Tue, 06 Aug 2013 18:59:58 +0000</pubDate>
+      
+      <guid>https://prokopov.me/2013/08/new-blog-theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Хозяйке Mac на заметку: перевод и толкование слова</title>
       <link>https://prokopov.me/2013/08/mac-dictionary/</link>
       <pubDate>Tue, 06 Aug 2013 18:49:24 +0000</pubDate>
