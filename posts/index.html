@@ -36,6 +36,78 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/why-is-it-support-so-hard/">Why is IT support so hard</a>
+    </h1>
+    <div class="date">18.09.2022</div>
+    <div><p>As the IT support business we want to keep our users happy, they need to use the software with no
+interruptions. Though the share of the incidents in the tickets is still 30% no matter what.</p>
+<p>So why is IT support is so hard these days? Why do we still have the incidents despite all the progress IT industry did so far?</p>
+<p>Long story short this is because of the software complexity, that causes incidents and security issues.</p>
+<p>Let&rsquo;s discuss here why do we still have incidents, and what to do to decrease their likelihood and improve our users happiness.</p>
+<!-- more -->
+<h1 id="planning-is-hard">Planning is hard</h1>
+<p>Normally IT department has two types of work - planned and unplanned.
+Planned are mostly projects and requests for changes.</p>
+<p>Unplanned work consists of incidents. An incident with big impact sucks out resources.
+Unplanned work disrupts work rythm, increases anxiety and leads to burnouts.</p>
+<p>So unplanned work should be avoided as much as possible.</p>
+<h1 id="incident-impacts-planned-work">Incident impacts planned work</h1>
+<p>Definition of the incident is when something doesn&rsquo;t work as expected, i.e.
+either it doesn&rsquo;t work what was inteded to work, or it works with degraded
+quiality.</p>
+<p>Normally incoming incident has more high priority than planned work,
+therefore it affects the schedule of the planned work.</p>
+<h1 id="so-why-do-we-have-incidents">So why do we have incidents?</h1>
+<h2 id="increased-application-state-complexity">Increased application state complexity</h2>
+<p>Combinatoric burst of the system state complexity. &ldquo;Reboot your system&rdquo; - this
+means to recreate the application state from scratch. This is because right now
+your system is in the state that wasn&rsquo;t foreseen by the application developers.</p>
+<p>If you have lots of applications set on the system for support, there is no way
+to ensure all applications will collaborate nicely since they share the same
+system components and no one conducted testing for such cases.</p>
+<p>You are a tester.</p>
+<h2 id="increased-software-complexity">Increased software complexity</h2>
+<p>Increased software complexity leads to incidents.</p>
+<p>In order to be competitive on the market vendors forced to add new features.
+Large codebases lead to the little understanding of the all parts of the
+application and their interconnections. Increased complexity, in turn, leads to bugs.</p>
+<h2 id="applications-use-shared-system-resources">Applications use shared system resources</h2>
+<p>Docker tries to address this issue and isolate all parts of the system from applications,
+but there is no such thing as docker for UI rich applications so far.</p>
+<p>This is why we have raise of the Chromium based web applications pretending to
+be native (Slack, etc.). Which is greate waste of resources and fallback from progress
+industry made so far.</p>
+<p>Viruses exploit this concept in a hard way.</p>
+<h2 id="security-issues">Security issues</h2>
+<p>Software industry demand for workforce is huge. So we have a big wave of
+newcomers with no or little experience.</p>
+<p>Normally PRs are reviewed by senior developers, but sometimes I personally
+witnessed cases when PR from junior developer for whatever reasons was approved
+by another junior developer. And here we go, bad code landed the base with
+possibly new security hole.</p>
+<p>Cost cutting and outsourcing also normally do not increase the quality of the
+software they produce. Moreover this effect present even in critical things,
+remeber Boeng issues with 777?</p>
+<p>Windows 7 or Windows XP still exist, and they don&rsquo;t receive security updates.</p>
+<h2 id="unstable-environment">Unstable environment</h2>
+<p>Networks are unreliable, think about WiFi in a crowded space.
+Disks have limited lifespan. Batteries loose capacity.</p>
+<h1 id="what-to-do">What to do?</h1>
+<p>Split planned work and unplanned work to the separate teams. If not possible,
+then develop on-call schedule with rotation. This aspecially effective for small
+teams.</p>
+<p>Reduce amount of supported applications on the user workstation.</p>
+<p>Prefer running web applications over native applications. Use Gmail, not Microsoft Outlook.</p>
+<p>Prefer running applications using terminal access, Citrix, etc.</p>
+<p>Harden security measures. Use the rule of thumb to provide as less access to the
+sytems as needed. Perform security audits from time to time.</p>
+<p>Provide users with standardized hardware and software.</p>
+<p>Perform automates security updates.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/til-2022-08-15/">Things I Learned</a>
     </h1>
     <div class="date">15.08.2022</div>
@@ -6665,6 +6737,8 @@ Transcript – REPL, то есть интерактивную консоль, п
         
         <li><a href="/categories/apache/">apache</a> (3) </li>
         
+        <li><a href="/categories/business/">business</a> (1) </li>
+        
         <li><a href="/categories/clojure/">clojure</a> (1) </li>
         
         <li><a href="/categories/docker/">docker</a> (1) </li>
@@ -6680,6 +6754,8 @@ Transcript – REPL, то есть интерактивную консоль, п
         <li><a href="/categories/gtd/">GTD</a> (4) </li>
         
         <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+        
+        <li><a href="/categories/it-support/">IT support</a> (1) </li>
         
         <li><a href="/categories/kubernetes/">kubernetes</a> (1) </li>
         

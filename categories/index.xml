@@ -6,7 +6,25 @@
     <description>Recent content in Categories on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 15 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>business</title>
+      <link>https://prokopov.me/categories/business/</link>
+      <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/categories/business/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IT support</title>
+      <link>https://prokopov.me/categories/it-support/</link>
+      <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/categories/it-support/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>git</title>
       <link>https://prokopov.me/categories/git/</link>

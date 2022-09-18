@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 15 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why is IT support so hard</title>
+      <link>https://prokopov.me/posts/why-is-it-support-so-hard/</link>
+      <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/why-is-it-support-so-hard/</guid>
+      <description>As the IT support business we want to keep our users happy, they need to use the software with no interruptions. Though the share of the incidents in the tickets is still 30% no matter what.
+So why is IT support is so hard these days? Why do we still have the incidents despite all the progress IT industry did so far?
+Long story short this is because of the software complexity, that causes incidents and security issues.</description>
+    </item>
+    
     <item>
       <title>Things I Learned</title>
       <link>https://prokopov.me/posts/til-2022-08-15/</link>
