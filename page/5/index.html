@@ -37,6 +37,21 @@
 
 <div class="article">
     <h1>
+        <a href="/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">How to improve ruby code with dup and tap methods</a>
+    </h1>
+    <div class="date">06.06.2018</div>
+    <div>Here is a piece of my old code, but it’s definitely could be improved.
+def to_params  h = ticket_params  h[:activity] = extract_activity if extract_activity  h[:event] = extract_event if extract_event  h.delete(:state_event)  h.delete(:activities_attributes)  h end As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?
+Let’s see, h=ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy? </div>
+    
+    
+        <a href="/posts/mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/posts/2018-05-29_-----------prolog-e0878ac7fe40/">Введение в Prolog</a>
     </h1>
     <div class="date">29.05.2018</div>
@@ -160,22 +175,6 @@ ClojureScript REPL right in your Google Chrome Dirac. Лучше всего з�
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c/">Compare Postgres speed within Docker and without</a>
-    </h1>
-    <div class="date">07.09.2017</div>
-    <div>I decided to compare if there will be significant differences between dockerized and non-dockerized Postgres.
-Here is my test environment:
- rails 5 application with rich test suite, about 628 examples, macOS Sierra 10.12.6, Docker 17.06.0-ce-mac19.  I use Postgres docker version alpine 9.6 which is 37,7Mb and raw Postgres 9.6 with GUI for Mac which is 379Mb.
-Rails run locally, database.yml connects to the localhost postgres with pool 5 using gem pg (0. </div>
-    
-    
-        <a href="/posts/mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
 <div class="pagination">
     
     <div class="pagination__prev">
@@ -245,6 +244,8 @@ Rails run locally, database.yml connects to the localhost postgres with pool 5 u
         <li><a href="/categories/linux/">linux</a> (1) </li>
         
         <li><a href="/categories/macos/">macos</a> (1) </li>
+        
+        <li><a href="/categories/news/">news</a> (1) </li>
         
         <li><a href="/categories/org-mode/">org-mode</a> (1) </li>
         
