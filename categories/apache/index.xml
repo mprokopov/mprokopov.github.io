@@ -27,8 +27,7 @@ Options +FollowSymLinks RewriteEngine on RewriteCond %{HTTP_HOST} !^newdomain\
       <guid>https://prokopov.me/2010/03/high-availability-http-load-balancer/</guid>
       <description>На просторах интернетов был найден software http load balancer для распределения нагрузки на web-front.
 По многообещающим страницам сайта можно предположить, что модуль способен выдержать распределение http запросов с нагрузкой в десятки тысяч запросов в секунду.
-
- Linux 2.4 on x86, x86_64, Alpha, SPARC, MIPS, PARISC Linux 2.6 on x86, x86_64, ARM (ixp425), PPC64 Solaris 8/9 on UltraSPARC 2 and 3 Solaris 10 on Opteron and UltraSPARC FreeBSD 4.10 — 6.</description>
+Linux 2.4 on x86, x86_64, Alpha, SPARC, MIPS, PARISC Linux 2.6 on x86, x86_64, ARM (ixp425), PPC64 Solaris 8/9 on UltraSPARC 2 and 3 Solaris 10 on Opteron and UltraSPARC FreeBSD 4.10 — 6.2 on x86 OpenBSD 3.</description>
     </item>
     
     <item>

@@ -16,8 +16,9 @@
       <description>Лично для меня крайне удобным решением для терминала является iTerm2. Однажды, очень захотелось сделать его цветастым. Для получения расцветки необходимо добавить в ~/.bash_profile строку
 export CLICOLOR=1
 По наводке @snupt была найдена и установлена тема Solarized Dark, из-за которой, однако была практически отключена полупрозрачность из-за которой текст читался значительно хуже.
- Также Solarized Dark можно (и нужно) использовать с редакторами Textmate и Sublime Text 2.
-Sublime Text 2 Solarized Dark theme</description>
+Также Solarized Dark можно (и нужно) использовать с редакторами Textmate и Sublime Text 2.
+Sublime Text 2 Solarized Dark theme
+Что бы добавить цветастости к выводу git достаточно сделать следующее:</description>
     </item>
     
   </channel>

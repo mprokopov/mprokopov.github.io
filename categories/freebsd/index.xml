@@ -16,9 +16,8 @@
       <description>После обновления Zabbix на FreeBSD до 1.8.5 стал получать сообщения вроде этого:
 Zabbix freebsd program counter not available for this architecture
 и заббикс перестал стартовать.
- Все дело оказалось в старой библиотеке net-snmp, которую необходимо обновить до 5.5, и уже затем пересобрать zabbix.
-  portupgrade net-snmpcd /usr/ports/net-mgmt/zabbix-servermake deinstallmake reinstall   Как говорят наши пиндосские товарищи, works like a charm
- </description>
+Все дело оказалось в старой библиотеке net-snmp, которую необходимо обновить до 5.5, и уже затем пересобрать zabbix.
+portupgrade net-snmpcd /usr/ports/net-mgmt/zabbix-servermake deinstallmake reinstall Как говорят наши пиндосские товарищи, works like a charm</description>
     </item>
     
     <item>
@@ -31,8 +30,8 @@ Zabbix freebsd program counter not available for this architecture
 http_port 3128 transparent
 и в ipfw добавляем следующее правило заворачивающее с 80го порта на внутренний:
 ipfw add 1050 fwd 127.0.0.1:3128 tcp from 192.168.1.0/24 to not 192.168.1.0/24 80
- Однако, оказалось, на 10.6 не работает ipfw fwd правило для прозрачного прокси.
- Непродолжительное гугление помогло выявить вот такой багфикс:
+Однако, оказалось, на 10.6 не работает ipfw fwd правило для прозрачного прокси.
+Непродолжительное гугление помогло выявить вот такой багфикс:
 sudo sysctl -w net.inet.ip.scopedroute = 0
 или еще лучше прописать в /etc/sysctl.conf
 net.inet.ip.scopedroute = 0 и перезагрузить сервер.</description>
@@ -50,7 +49,7 @@ http://www.commandlinefu.com/commands/browse
 и вместо !! подставится предыдущая строка.
 Или вот, например, закрыли вам весь доступ фаерволами, из сервисов один DNS остался, так вот, можете вполне воспользоваться википедией
 dig +short txt .wp.dg.cx
-где  — ключевое слово, на которое вы ищете статью.</description>
+где — ключевое слово, на которое вы ищете статью.</description>
     </item>
     
     <item>
@@ -61,7 +60,7 @@ dig +short txt .wp.dg.cx
       <guid>https://prokopov.me/2011/01/freebsd-exim-logrotate/</guid>
       <description>Данный совсем простой метод подходит не только для логов exim, но и любых других логов, которые необходимо переворачивать либо по размеру, либо по расписанию.
 данные две строки
-/var/log/exim/mainlog mailnull:mailnull 640 7 * @T00 JN /var/log/exim/rejectlog mailnull:mailnull 640 7 * @T00 JN    добавленные в файл /etc/newsyslog.conf решают проблему ежедневного переворачивания логов от почтовой системы exim  </description>
+/var/log/exim/mainlog mailnull:mailnull 640 7 * @T00 JN /var/log/exim/rejectlog mailnull:mailnull 640 7 * @T00 JN добавленные в файл /etc/newsyslog.conf решают проблему ежедневного переворачивания логов от почтовой системы exim </description>
     </item>
     
     <item>
@@ -84,8 +83,7 @@ dig +short txt .wp.dg.cx
       <guid>https://prokopov.me/2010/03/high-availability-http-load-balancer/</guid>
       <description>На просторах интернетов был найден software http load balancer для распределения нагрузки на web-front.
 По многообещающим страницам сайта можно предположить, что модуль способен выдержать распределение http запросов с нагрузкой в десятки тысяч запросов в секунду.
-
- Linux 2.4 on x86, x86_64, Alpha, SPARC, MIPS, PARISC Linux 2.6 on x86, x86_64, ARM (ixp425), PPC64 Solaris 8/9 on UltraSPARC 2 and 3 Solaris 10 on Opteron and UltraSPARC FreeBSD 4.10 — 6.</description>
+Linux 2.4 on x86, x86_64, Alpha, SPARC, MIPS, PARISC Linux 2.6 on x86, x86_64, ARM (ixp425), PPC64 Solaris 8/9 on UltraSPARC 2 and 3 Solaris 10 on Opteron and UltraSPARC FreeBSD 4.10 — 6.2 on x86 OpenBSD 3.</description>
     </item>
     
     <item>

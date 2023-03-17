@@ -14,8 +14,8 @@
       
       <guid>https://prokopov.me/posts/til-2022-08-15/</guid>
       <description>Things I Learned
-Git push with force from the command line git push --force origin master git push -f origin master git push origin +master  Make your git life a bit easier git config --global push.autoSetupRemote true  Check DNS from the inside of docker container This is super useful when you don&amp;rsquo;t have neither dig nor nslookup utilities inside your docker container.
-getent hosts google.com  </description>
+Git push with force from the command line git push --force origin master git push -f origin master git push origin +master Make your git life a bit easier git config --global push.autoSetupRemote true Check DNS from the inside of docker container This is super useful when you don&amp;rsquo;t have neither dig nor nslookup utilities inside your docker container.
+getent hosts google.com </description>
     </item>
     
   </channel>

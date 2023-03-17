@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 29 Apr 2016 14:10:13 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I discovered much faster way to speed up docker image creation.</title>
-      <link>https://prokopov.me/posts/mprokopov/i-discovered-much-faster-way-to-speed-up-docker-image-creation-c7485fbf6aec/</link>
+      <link>https://prokopov.me/posts/@mprokopov/i-discovered-much-faster-way-to-speed-up-docker-image-creation-c7485fbf6aec/</link>
       <pubDate>Fri, 29 Apr 2016 14:10:13 +0000</pubDate>
       
-      <guid>https://prokopov.me/posts/mprokopov/i-discovered-much-faster-way-to-speed-up-docker-image-creation-c7485fbf6aec/</guid>
+      <guid>https://prokopov.me/posts/@mprokopov/i-discovered-much-faster-way-to-speed-up-docker-image-creation-c7485fbf6aec/</guid>
       <description>I discovered much faster way to speed up docker image creation.
 Just use bundle package and all current gems will be copied into vendor/cache. When bundle install runs it discovers cached gems and runs much-much faster.</description>
     </item>

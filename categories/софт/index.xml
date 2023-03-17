@@ -36,7 +36,7 @@
       <guid>https://prokopov.me/2013/06/taskpaper-keyboard-maestro-enhancement/</guid>
       <description>Спешу поделиться, мои дорогие обладатели Task Paper и компьютера с системой Mac OS, своим опытом улучшения взаимодействия человека и программы управления задачами TaskPaper.
 Как я уже описывал ранее в своей системе Getting Results Agile Way для TaskPaper, есть определенный список файлов с задачами.
- 2013 Backlog Week 2013-04-01 папка Personal Projects папка Work Projects папка Archive Commitments Calendar Покупки  и самый важный и часто используемый файл это Week 2013-XX-YY (XX-месяц, YY — день)</description>
+2013 Backlog Week 2013-04-01 папка Personal Projects папка Work Projects папка Archive Commitments Calendar Покупки и самый важный и часто используемый файл это Week 2013-XX-YY (XX-месяц, YY — день)</description>
     </item>
     
     <item>
@@ -56,7 +56,7 @@
       
       <guid>https://prokopov.me/2013/01/%D0%BE%D0%BC%D0%BD%D0%B8%D1%84%D0%BE%D0%BA%D1%83%D1%81-1-x-%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE/</guid>
       <description>Омнифокус объявил беспрецендентную акцию. Для подогрева интереса к OmniFocus 2 открыл лицензию на версию 1.
-License Owner: Waiting for OmniFocus 2  License Key: KXKN-ZJDB-EJCX-LZHW-CFBF-QFC  http://www.omnigroup.com/blog/entry/anticipating-omnifocus-2</description>
+License Owner: Waiting for OmniFocus 2 License Key: KXKN-ZJDB-EJCX-LZHW-CFBF-QFC http://www.omnigroup.com/blog/entry/anticipating-omnifocus-2</description>
     </item>
     
     <item>
@@ -67,9 +67,9 @@ License Owner: Waiting for OmniFocus 2  License Key: KXKN-ZJDB-EJCX-LZHW-CFBF-QF
       <guid>https://prokopov.me/2013/01/%D1%88%D1%82%D1%83%D0%BA%D0%B8-%D0%BF%D1%80%D0%BE-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%85%D0%BE%D1%82%D0%B5%D0%BB%D0%BE%D1%81%D1%8C-%D0%B1%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82/</guid>
       <description>Особо хочется написать обзоры следующих штук, владельцем которых я стал недавно:
 Из софта:
- Hazel Kayboard Maestro Task Paper (OS X, iOS) -&amp;gt; мой основной GTD инструмент MacVim + Janus TheBrain Apple FinalCut X iBank  Из гаджетов:
- USB2DVI конвертер DisplayLink для подключения дополнительного дисплея ($36) о пользе двух и более мониторов на рабочем месте X-Mini KAI bluetooth speaker ($51)  Из книг:
- Getting Results Agile Way -&amp;gt; my-life-changing-thing The Flinch Алексей Каптерев «Мастерство презентации»  Я бы написал пару слов о каждом из инструментов, и, возможно, однажды это сделаю.</description>
+Hazel Kayboard Maestro Task Paper (OS X, iOS) -&amp;gt; мой основной GTD инструмент MacVim + Janus TheBrain Apple FinalCut X iBank Из гаджетов:
+USB2DVI конвертер DisplayLink для подключения дополнительного дисплея ($36) о пользе двух и более мониторов на рабочем месте X-Mini KAI bluetooth speaker ($51) Из книг:
+Getting Results Agile Way -&amp;gt; my-life-changing-thing The Flinch Алексей Каптерев «Мастерство презентации» Я бы написал пару слов о каждом из инструментов, и, возможно, однажды это сделаю.</description>
     </item>
     
     <item>
@@ -79,7 +79,7 @@ License Owner: Waiting for OmniFocus 2  License Key: KXKN-ZJDB-EJCX-LZHW-CFBF-QF
       
       <guid>https://prokopov.me/2012/07/how-to-fix-icq-html-tags-in-imessage/</guid>
       <description>This post is not actual any more, so here is another solution:
-  Go to ~/Library/Preferences/
+Go to ~/Library/Preferences/
 Open com.apple.iChat.AIM.plist
 Change ForceICQPlainText to true
 Save, put read-only attribute on file
@@ -93,7 +93,7 @@ Logoff/logon. Enjoy.</description>
       
       <guid>https://prokopov.me/2012/04/%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%B2-itunes-%D0%BF%D0%BB%D0%B5/</guid>
       <description>С одним из обновлений ушел удобный смарт-плейлист «последние добавленные», но, к счастью, восстановить его задача несложная.
- Добавляем смарт-альбом как на скриншоте ниже и вуаля!</description>
+Добавляем смарт-альбом как на скриншоте ниже и вуаля!</description>
     </item>
     
     <item>
@@ -105,8 +105,9 @@ Logoff/logon. Enjoy.</description>
       <description>Лично для меня крайне удобным решением для терминала является iTerm2. Однажды, очень захотелось сделать его цветастым. Для получения расцветки необходимо добавить в ~/.bash_profile строку
 export CLICOLOR=1
 По наводке @snupt была найдена и установлена тема Solarized Dark, из-за которой, однако была практически отключена полупрозрачность из-за которой текст читался значительно хуже.
- Также Solarized Dark можно (и нужно) использовать с редакторами Textmate и Sublime Text 2.
-Sublime Text 2 Solarized Dark theme</description>
+Также Solarized Dark можно (и нужно) использовать с редакторами Textmate и Sublime Text 2.
+Sublime Text 2 Solarized Dark theme
+Что бы добавить цветастости к выводу git достаточно сделать следующее:</description>
     </item>
     
     <item>
@@ -148,7 +149,7 @@ Sublime Text 2 Solarized Dark theme</description>
       <guid>https://prokopov.me/2011/08/%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-icq-%D0%B2-ichat-%D0%B2-mac-os-x-lion/</guid>
       <description>Весь процесс описан здесь:
 http://macdaily.me/howto/how-to-set-icq-in-ichat/
- от себя добавлю, теперь в iChat появилось то, о чем так долго мечтали большевики — поиск по контактам Cmd+F</description>
+от себя добавлю, теперь в iChat появилось то, о чем так долго мечтали большевики — поиск по контактам Cmd+F</description>
     </item>
     
     <item>
@@ -178,8 +179,8 @@ http://macdaily.me/howto/how-to-set-icq-in-ichat/
       <guid>https://prokopov.me/2011/05/%D1%81%D0%B1%D1%80%D0%BE%D1%81%D0%B8%D1%82%D1%8C-%D0%B7%D0%B0%D0%B1%D1%8B%D1%82%D1%8B%D0%B9-%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D1%8C-%D0%B4%D0%BB%D1%8F-sa-%D0%BD%D0%B0-mssql-2000/</guid>
       <description>Бывают в жизни ситуации, когда пароль от sa для MS SQL забыт, либо установлен неизвестным одмином, а доступ все же есть, но через доменный аккаунт.
 Не отчаивайтесь, сбросить пароль можно довольно простым действием, зайти в Query Analyzer и запустить
- sp_password @new = ‘will_never_forget_again’, @loginame = ‘sa’
- и будет вам великое счастье.</description>
+sp_password @new = ‘will_never_forget_again’, @loginame = ‘sa’
+и будет вам великое счастье.</description>
     </item>
     
     <item>
@@ -206,8 +207,8 @@ dd if=/dev/sdb of=/dev/sdc
 http_port 3128 transparent
 и в ipfw добавляем следующее правило заворачивающее с 80го порта на внутренний:
 ipfw add 1050 fwd 127.0.0.1:3128 tcp from 192.168.1.0/24 to not 192.168.1.0/24 80
- Однако, оказалось, на 10.6 не работает ipfw fwd правило для прозрачного прокси.
- Непродолжительное гугление помогло выявить вот такой багфикс:
+Однако, оказалось, на 10.6 не работает ipfw fwd правило для прозрачного прокси.
+Непродолжительное гугление помогло выявить вот такой багфикс:
 sudo sysctl -w net.inet.ip.scopedroute = 0
 или еще лучше прописать в /etc/sysctl.conf
 net.inet.ip.scopedroute = 0 и перезагрузить сервер.</description>
