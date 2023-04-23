@@ -8,6 +8,15 @@
 
 
 
+<script>
+  var remark_config = {
+    host: 'https://remark.prokopov.me',
+    site_id: 'remark',
+  }
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+
+
 <link rel="stylesheet" href="https://prokopov.me/style.min.818029ba814b593b9352b40962decbf57412b36e67efe0ff9e8e5a97b7f27e81.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
@@ -6585,6 +6594,71 @@ AuthType Digest    AuthName DAV-upload
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2023-04-03/">Mikrotik Terraform</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div><p>It is in general very good idea to manage infra configuration as a code. Unfortunately, Mirkotik terrafrom support is basic, as OSS driven.</p>
+<p>Nevertheless, I appreciate author for effors.</p>
+<p>Here is an example how to use it with Hashicorp Vault.</p>
+<h2 id="commands">Commands</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>export VAULT_ADDR<span style="color:#f92672">=</span>http://vault_address:8200
+</span></span><span style="display:flex;"><span>export VAULT_TOKEN<span style="color:#f92672">=</span>&lt;token&gt;
+</span></span><span style="display:flex;"><span>terraform init
+</span></span><span style="display:flex;"><span>terraform plan
+</span></span></code></pre></div><h2 id="example">Example</h2>
+<p>main.tf</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;vault&#34;</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">data</span> <span style="color:#e6db74">&#34;vault_generic_secret&#34; &#34;main&#34;</span> {
+</span></span><span style="display:flex;"><span>  path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;common/mikrotik/nexus-home&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;mikrotik&#34;</span> {
+</span></span><span style="display:flex;"><span>  host           <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;address&#34;</span>]<span style="color:#75715e">  # Or set MIKROTIK_HOST environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  username       <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;username&#34;</span>]<span style="color:#75715e"> # Or set MIKROTIK_USER environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  password       <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;password&#34;</span>]<span style="color:#75715e"> # Or set MIKROTIK_PASSWORD environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  tls            <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#75715e">                                           # Or set MIKROTIK_TLS environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ca_certificate <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/path/to/ca/certificate.pem&#34;</span><span style="color:#75715e">                   # Or set MIKROTIK_CA_CERTIFICATE environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  insecure       <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#75715e">                                            # Or set MIKROTIK_INSECURE environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">ip</span> <span style="color:#66d9ef">address</span>
+</span></span><span style="display:flex;"><span>// :put [find where address<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;192.168.88.1/24&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#66d9ef">terraform</span> <span style="color:#66d9ef">import</span> <span style="color:#66d9ef">mikrotik_ip_address</span>.<span style="color:#66d9ef">lan</span> <span style="color:#960050;background-color:#1e0010">&#39;*</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;mikrotik_ip_address&#34; &#34;lan&#34;</span> {
+</span></span><span style="display:flex;"><span>  address   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;192.168.88.1/24&#34;</span>
+</span></span><span style="display:flex;"><span>  comment   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LAN Network&#34;</span>
+</span></span><span style="display:flex;"><span>  interface <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ether2&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#66d9ef">uncomment</span> <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">release</span> <span style="color:#66d9ef">https</span><span style="color:#960050;background-color:#1e0010">://</span><span style="color:#66d9ef">github</span>.<span style="color:#66d9ef">com</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">ddelnano</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">terraform</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#66d9ef">provider</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#66d9ef">mikrotik</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># resource &#34;mikrotik_firewall_filter_rule&#34; &#34;https&#34; {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   action             = &#34;accept&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   chain              = &#34;forward&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   comment            = &#34;Web access to local HTTP server&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   connection_state   = [&#34;new&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   dst_port           = &#34;443&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   in_interface       = &#34;ether1&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   in_interface_list  = &#34;local_lan&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   out_interface_list = &#34;ether3&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   protocol           = &#34;tcp&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># }
+</span></span></span></code></pre></div><p>terraform.tf</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">terraform</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">required_providers</span> {
+</span></span><span style="display:flex;"><span>    mikrotik <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>      source  <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ddelnano/mikrotik&#34;</span>
+</span></span><span style="display:flex;"><span>      version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0.10.0&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/draft_one-account--all-of-google--24ec9b332a4a/">One account. All of Google.</a>
     </h1>
     <div class="date">01.01.0001</div>
@@ -6820,7 +6894,7 @@ Transcript – REPL, то есть интерактивную консоль, п
         
         <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
         
-        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (2) </li>
+        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (3) </li>
         
         <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
         

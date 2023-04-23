@@ -3300,6 +3300,19 @@ https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7b
     </item>
     
     <item>
+      <title>Mikrotik Terraform</title>
+      <link>https://prokopov.me/posts/2023-04-03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2023-04-03/</guid>
+      <description>It is in general very good idea to manage infra configuration as a code. Unfortunately, Mirkotik terrafrom support is basic, as OSS driven.
+Nevertheless, I appreciate author for effors.
+Here is an example how to use it with Hashicorp Vault.
+Commands export VAULT_ADDR=http://vault_address:8200 export VAULT_TOKEN=&amp;lt;token&amp;gt; terraform init terraform plan Example main.tf
+provider &amp;#34;vault&amp;#34; {} data &amp;#34;vault_generic_secret&amp;#34; &amp;#34;main&amp;#34; { path = &amp;#34;common/mikrotik/nexus-home&amp;#34; } provider &amp;#34;mikrotik&amp;#34; { host = data.vault_generic_secret.main.data[&amp;#34;address&amp;#34;] # Or set MIKROTIK_HOST environment variable username = data.</description>
+    </item>
+    
+    <item>
       <title>One account. All of Google.</title>
       <link>https://prokopov.me/posts/draft_one-account--all-of-google--24ec9b332a4a/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

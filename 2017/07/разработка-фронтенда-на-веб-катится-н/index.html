@@ -8,6 +8,15 @@
 
 
 
+<script>
+  var remark_config = {
+    host: 'https://remark.prokopov.me',
+    site_id: 'remark',
+  }
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+
+
 <link rel="stylesheet" href="https://prokopov.me/style.min.818029ba814b593b9352b40962decbf57412b36e67efe0ff9e8e5a97b7f27e81.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
@@ -80,20 +89,7 @@
 <p>Все, о чем могли мечтать большевики, в Clojure/ClojureScript есть – структуры данных иммутабельные по-умолчанию, синтаксис языка НЕ ИЗМЕНЯЕТСЯ, просто потому что незачем это делать, есть прекрасный интероп с Java/Javascript, что открывает обширные возможности использования достояния человечества в виде maven, npm инфраструктуры, при чем активно поощряется использование библиотеки Google Closure, а это, я вам скажу, наверное более правильный путь сохранять совместимость со старыми браузерами, чем Babel. Плюс из коробки отличная минификация через вычисление и отрезание неиспользуемых участков кода при сборке большого js. Все вот эти <a href="https://github.com/webpack-contrib/css-loader">modular-css</a> пытаются решить проблему code as data и data as code, всунуть в JS возможность использовать CSS как код, при том, что для любого lisp, которым является также и Clojure это нативное свойство языка. Модульность и разделение кода на куски в Clojure вообще сделана гениально: namespace + имя сущности однозначно адресует нужную сущность. Про clojure.spec я вообще промолчу, недооцененная многими библиотека, которая решает фундаментальную проблему несовместимости зависимостей. Что такое правильный подход: основу языка оставлять по-максимуму без изменений, а новые фишки добавлять через библиотеки, так как это сделали, например, с core.async для добавления coroutines как в go. И правильно, если это будут использовать 2% пользователей, то зачем это догружать остальным 98%?</p>
 <p>В общем, жаль, что коммьюнити не так активно делает маркетинг Clojure/ClojureScript и в целом порог для входа остается очень и очень высоким для среднего разработчика с одной стороны из-за недостаточного количества примеров, которые бы давали быстрый результат, а с другой стороны понимание функционального подхода требует определенных умственных усилий. Нужна новая кровь в такие проекты. Чтобы начать послушайте <a href="http://clojurecourse.by/">бесплатные онлайн курсы по Clojure</a>. Может и понравится, %username%.</p>
 </div>
-    <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    this.page.url =  null ;  
-    this.page.identifier =  null ; 
-    };
- (function() {
-     var d = document, s = d.createElement('script');
-     s.src = 'https://maksym-prokopov-personal-blog.disqus.com/embed.js';
-     s.setAttribute('data-timestamp', +new Date());
-     (d.head || d.body).appendChild(s);
- })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <div id="remark42"></div>
 
 </div>
 <div class="sidebar"><div class="sidebar__visitcard">
@@ -172,7 +168,7 @@
         
         <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
         
-        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (2) </li>
+        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (3) </li>
         
         <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
         
