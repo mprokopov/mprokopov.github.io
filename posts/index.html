@@ -6457,19 +6457,6 @@ AuthType Digest    AuthName DAV-upload
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/2009/12/mac-soft/">Залежи софта для Mac</a>
-    </h1>
-    <div class="date">22.12.2009</div>
-    <div><p>Ганьба всем, кто пользуется пиратским софтом для Мак (и мне тоже)! Мы ведь все купим, потом, да?</p>
-<p>Кстати, много <a href="http://www.ex.ua/view/50896?r=23781">всего такого здесь</a>, для украинцев это особенно близко 🙂</p>
-<p><img src="http://fs11.www.ex.ua/show/768481/768481.jpg?200" alt=""></p>
-<p>Ну и torrents.ru не забываем.</p>
-<p>Если у вас есть интересные ссылки на залежи софта для Mac добро пожаловать в каменты.</p>
-</div>
-</div>
-
-<div class="article">
-    <h1>111
         <a href="https://prokopov.me/2009/12/%D0%B1%D0%BE%D1%80%D1%8C%D0%B1%D0%B0-%D0%B7%D0%B0-%D0%BE%D1%85%D0%BB%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-macbook/">Борьба за охлаждение Macbook</a>
     </h1>
     <div class="date">22.12.2009</div>
@@ -6516,6 +6503,71 @@ AuthType Digest    AuthName DAV-upload
     </h1>
     <div class="date">01.01.0001</div>
     <div></div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://prokopov.me/posts/2023-07-15-cloudflare-tunnel-terraform/">CloudFlare Tunne Terraform</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div><h1 id="how-to-provision-cloudflare-tunnel-using-terraform">How to provision CloudFlare tunnel using Terraform</h1>
+<p>CloudFlare Tunnel can be useful to use reliable alternative to <em>ngrok</em> when you need to expose your application running locally to the outside world.</p>
+<p>The following example exposes my application locally running on port 3000 to the Internet on the hostname <a href="https://app.prokopov.me">https://app.prokopov.me</a></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Terraform CloudFlare module v4</li>
+<li>CloudFlare API key with Account:Tunnel permissions.</li>
+<li>Locally installed CloudFlare CLI utility <em>cloudflared</em> <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/</a></li>
+<li>Application running locally on port 3000</li>
+</ul>
+<h2 id="how-does-it-work">How does it work?</h2>
+<ol>
+<li><em>cloudflared</em> CLI is an agent running locally and connected to CloudFlare cloud.</li>
+<li>DNS record of type CNAME is created, pointing to the CloudFlare cloud.</li>
+<li>CloudFlare does the routing magic!</li>
+</ol>
+<h2 id="terraform-part">Terraform part</h2>
+<pre tabindex="0"><code>resource &#34;cloudflare_tunnel&#34; &#34;main&#34; {
+  account_id = &#34;777414c2d4e87234087ebac4685e7df6&#34;
+  name       = &#34;tunnel-to-app&#34;
+  secret     = random_id.main.b64_std
+}
+
+resource &#34;cloudflare_tunnel_config&#34; &#34;main&#34; {
+  account_id = &#34;777414c2d4e87234087ebac4685e7df6&#34;
+  tunnel_id  = cloudflare_tunnel.main.id
+
+  config {
+    warp_routing {
+      enabled = true
+    }
+    ingress_rule {
+      hostname = &#34;app.prokopov.me&#34;
+      service  = &#34;http://localhost:3000&#34;
+    }
+    ingress_rule {
+      service = &#34;http_status:404&#34;
+    }
+  }
+}
+
+resource &#34;cloudflare_record&#34; &#34;main&#34; {
+  value   = &#34;${cloudflare_tunnel.main.id}.cfargotunnel.com&#34;
+  proxied = true
+  name    = &#34;app&#34;
+  type    = &#34;CNAME&#34;
+  zone_id = cloudflare_zone.main.id
+}
+</code></pre><h2 id="local-tunnel-part">Local tunnel part</h2>
+<ol>
+<li>Find generated token for resource cloudflare_tunnel.main</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>TOKEN<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>terraform show -json | jq -r <span style="color:#e6db74">&#39;.values.root_module.resources[] | select(.address==&#34;cloudflare_tunnel.main&#34;).values.tunnel_token&#39;</span><span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><ol start="2">
+<li>Use token</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cloudflared tunnel run --token<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>TOKEN<span style="color:#e6db74">}</span> tunnel-to-app
+</span></span></code></pre></div></div>
 </div>
 
 <div class="article">
@@ -6895,7 +6947,7 @@ Transcript – REPL, то есть интерактивную консоль, п
         
         <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
         
-        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (3) </li>
+        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (4) </li>
         
         <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
         
@@ -6911,11 +6963,11 @@ Transcript – REPL, то есть интерактивную консоль, п
         
         <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">здоровье</a> (4) </li>
         
-        <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (44) </li>
+        <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (43) </li>
         
         <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">маркетинг</a> (2) </li>
         
-        <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (25) </li>
+        <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (24) </li>
         
         <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">управление</a> (1) </li>
         

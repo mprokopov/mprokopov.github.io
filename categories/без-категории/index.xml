@@ -21,6 +21,17 @@
     </item>
     
     <item>
+      <title>CloudFlare Tunne Terraform</title>
+      <link>https://prokopov.me/posts/2023-07-15-cloudflare-tunnel-terraform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/2023-07-15-cloudflare-tunnel-terraform/</guid>
+      <description>How to provision CloudFlare tunnel using Terraform CloudFlare Tunnel can be useful to use reliable alternative to ngrok when you need to expose your application running locally to the outside world.
+The following example exposes my application locally running on port 3000 to the Internet on the hostname https://app.prokopov.me
+Prerequisites Terraform CloudFlare module v4 CloudFlare API key with Account:Tunnel permissions. Locally installed CloudFlare CLI utility cloudflared https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/ Application running locally on port 3000 How does it work?</description>
+    </item>
+    
+    <item>
       <title>Group Greeting</title>
       <link>https://prokopov.me/posts/2023-03-17/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
