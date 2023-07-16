@@ -46,6 +46,147 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2023-07-15-cloudflare-tunnel-terraform/">CloudFlare Tunne Terraform</a>
+    </h1>
+    <div class="date">15.07.2023</div>
+    <div><h1 id="how-to-provision-cloudflare-tunnel-using-terraform">How to provision CloudFlare tunnel using Terraform</h1>
+<p>CloudFlare Tunnel can be useful to use reliable alternative to <em>ngrok</em> when you need to expose your application running locally to the outside world.</p>
+<p>The following example exposes my application locally running on port 3000 to the Internet on the hostname <a href="https://app.prokopov.me">https://app.prokopov.me</a></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Terraform CloudFlare module v4</li>
+<li>CloudFlare API key with Account:Tunnel permissions.</li>
+<li>Locally installed CloudFlare CLI utility <em>cloudflared</em> <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/</a></li>
+<li>Application running locally on port 3000</li>
+</ul>
+<h2 id="how-does-it-work">How does it work?</h2>
+<ol>
+<li><em>cloudflared</em> CLI is an agent running locally and connected to CloudFlare cloud.</li>
+<li>DNS record of type CNAME is created, pointing to the CloudFlare cloud.</li>
+<li>CloudFlare does the routing magic!</li>
+</ol>
+<h2 id="terraform-part">Terraform part</h2>
+<pre tabindex="0"><code>resource &#34;cloudflare_tunnel&#34; &#34;main&#34; {
+  account_id = &#34;777414c2d4e87234087ebac4685e7df6&#34;
+  name       = &#34;tunnel-to-app&#34;
+  secret     = random_id.main.b64_std
+}
+
+resource &#34;cloudflare_tunnel_config&#34; &#34;main&#34; {
+  account_id = &#34;777414c2d4e87234087ebac4685e7df6&#34;
+  tunnel_id  = cloudflare_tunnel.main.id
+
+  config {
+    warp_routing {
+      enabled = true
+    }
+    ingress_rule {
+      hostname = &#34;app.prokopov.me&#34;
+      service  = &#34;http://localhost:3000&#34;
+    }
+    ingress_rule {
+      service = &#34;http_status:404&#34;
+    }
+  }
+}
+
+resource &#34;cloudflare_record&#34; &#34;main&#34; {
+  value   = &#34;${cloudflare_tunnel.main.id}.cfargotunnel.com&#34;
+  proxied = true
+  name    = &#34;app&#34;
+  type    = &#34;CNAME&#34;
+  zone_id = cloudflare_zone.main.id
+}
+</code></pre><h2 id="local-tunnel-part">Local tunnel part</h2>
+<ol>
+<li>Find generated token for resource cloudflare_tunnel.main</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>TOKEN<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>terraform show -json | jq -r <span style="color:#e6db74">&#39;.values.root_module.resources[] | select(.address==&#34;cloudflare_tunnel.main&#34;).values.tunnel_token&#39;</span><span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><ol start="2">
+<li>Use token</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cloudflared tunnel run --token<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>TOKEN<span style="color:#e6db74">}</span> tunnel-to-app
+</span></span></code></pre></div></div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://prokopov.me/posts/2023-04-03/">Mikrotik Terraform</a>
+    </h1>
+    <div class="date">03.04.2023</div>
+    <div><p>It is in general very good idea to manage infra configuration as a code. Unfortunately, Mirkotik terrafrom support is basic, as OSS driven.</p>
+<p>Nevertheless, I appreciate author for effors.</p>
+<p>Here is an example how to use it with Hashicorp Vault.</p>
+<h2 id="commands">Commands</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>export VAULT_ADDR<span style="color:#f92672">=</span>http://vault_address:8200
+</span></span><span style="display:flex;"><span>export VAULT_TOKEN<span style="color:#f92672">=</span>&lt;token&gt;
+</span></span><span style="display:flex;"><span>terraform init
+</span></span><span style="display:flex;"><span>terraform plan
+</span></span></code></pre></div><h2 id="example">Example</h2>
+<p>main.tf</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;vault&#34;</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">data</span> <span style="color:#e6db74">&#34;vault_generic_secret&#34; &#34;main&#34;</span> {
+</span></span><span style="display:flex;"><span>  path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;common/mikrotik/nexus-home&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;mikrotik&#34;</span> {
+</span></span><span style="display:flex;"><span>  host           <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;address&#34;</span>]<span style="color:#75715e">  # Or set MIKROTIK_HOST environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  username       <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;username&#34;</span>]<span style="color:#75715e"> # Or set MIKROTIK_USER environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  password       <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;password&#34;</span>]<span style="color:#75715e"> # Or set MIKROTIK_PASSWORD environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  tls            <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#75715e">                                           # Or set MIKROTIK_TLS environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ca_certificate <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/path/to/ca/certificate.pem&#34;</span><span style="color:#75715e">                   # Or set MIKROTIK_CA_CERTIFICATE environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  insecure       <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#75715e">                                            # Or set MIKROTIK_INSECURE environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">ip</span> <span style="color:#66d9ef">address</span>
+</span></span><span style="display:flex;"><span>// :put [find where address<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;192.168.88.1/24&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#66d9ef">terraform</span> <span style="color:#66d9ef">import</span> <span style="color:#66d9ef">mikrotik_ip_address</span>.<span style="color:#66d9ef">lan</span> <span style="color:#960050;background-color:#1e0010">&#39;*</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;mikrotik_ip_address&#34; &#34;lan&#34;</span> {
+</span></span><span style="display:flex;"><span>  address   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;192.168.88.1/24&#34;</span>
+</span></span><span style="display:flex;"><span>  comment   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LAN Network&#34;</span>
+</span></span><span style="display:flex;"><span>  interface <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ether2&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#66d9ef">uncomment</span> <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">release</span> <span style="color:#66d9ef">https</span><span style="color:#960050;background-color:#1e0010">://</span><span style="color:#66d9ef">github</span>.<span style="color:#66d9ef">com</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">ddelnano</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">terraform</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#66d9ef">provider</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#66d9ef">mikrotik</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># resource &#34;mikrotik_firewall_filter_rule&#34; &#34;https&#34; {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   action             = &#34;accept&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   chain              = &#34;forward&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   comment            = &#34;Web access to local HTTP server&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   connection_state   = [&#34;new&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   dst_port           = &#34;443&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   in_interface       = &#34;ether1&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   in_interface_list  = &#34;local_lan&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   out_interface_list = &#34;ether3&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   protocol           = &#34;tcp&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># }
+</span></span></span></code></pre></div><p>terraform.tf</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">terraform</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">required_providers</span> {
+</span></span><span style="display:flex;"><span>    mikrotik <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>      source  <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ddelnano/mikrotik&#34;</span>
+</span></span><span style="display:flex;"><span>      version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0.10.0&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://prokopov.me/posts/2023-03-17/">Group Greeting</a>
+    </h1>
+    <div class="date">17.03.2023</div>
+    <div><p>There are lots of options to greet collegue or close ones with cards.</p>
+<p>This one was recommended by one of the coworkers.</p>
+<p><a href="https://www.groupgreeting.com/">Group Greeting Cards</a></p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/2023-02-24/">The things impressed me recently</a>
     </h1>
     <div class="date">24.02.2023</div>
@@ -6507,71 +6648,6 @@ AuthType Digest    AuthName DAV-upload
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2023-07-15-cloudflare-tunnel-terraform/">CloudFlare Tunne Terraform</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><h1 id="how-to-provision-cloudflare-tunnel-using-terraform">How to provision CloudFlare tunnel using Terraform</h1>
-<p>CloudFlare Tunnel can be useful to use reliable alternative to <em>ngrok</em> when you need to expose your application running locally to the outside world.</p>
-<p>The following example exposes my application locally running on port 3000 to the Internet on the hostname <a href="https://app.prokopov.me">https://app.prokopov.me</a></p>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li>Terraform CloudFlare module v4</li>
-<li>CloudFlare API key with Account:Tunnel permissions.</li>
-<li>Locally installed CloudFlare CLI utility <em>cloudflared</em> <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/</a></li>
-<li>Application running locally on port 3000</li>
-</ul>
-<h2 id="how-does-it-work">How does it work?</h2>
-<ol>
-<li><em>cloudflared</em> CLI is an agent running locally and connected to CloudFlare cloud.</li>
-<li>DNS record of type CNAME is created, pointing to the CloudFlare cloud.</li>
-<li>CloudFlare does the routing magic!</li>
-</ol>
-<h2 id="terraform-part">Terraform part</h2>
-<pre tabindex="0"><code>resource &#34;cloudflare_tunnel&#34; &#34;main&#34; {
-  account_id = &#34;777414c2d4e87234087ebac4685e7df6&#34;
-  name       = &#34;tunnel-to-app&#34;
-  secret     = random_id.main.b64_std
-}
-
-resource &#34;cloudflare_tunnel_config&#34; &#34;main&#34; {
-  account_id = &#34;777414c2d4e87234087ebac4685e7df6&#34;
-  tunnel_id  = cloudflare_tunnel.main.id
-
-  config {
-    warp_routing {
-      enabled = true
-    }
-    ingress_rule {
-      hostname = &#34;app.prokopov.me&#34;
-      service  = &#34;http://localhost:3000&#34;
-    }
-    ingress_rule {
-      service = &#34;http_status:404&#34;
-    }
-  }
-}
-
-resource &#34;cloudflare_record&#34; &#34;main&#34; {
-  value   = &#34;${cloudflare_tunnel.main.id}.cfargotunnel.com&#34;
-  proxied = true
-  name    = &#34;app&#34;
-  type    = &#34;CNAME&#34;
-  zone_id = cloudflare_zone.main.id
-}
-</code></pre><h2 id="local-tunnel-part">Local tunnel part</h2>
-<ol>
-<li>Find generated token for resource cloudflare_tunnel.main</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>TOKEN<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>terraform show -json | jq -r <span style="color:#e6db74">&#39;.values.root_module.resources[] | select(.address==&#34;cloudflare_tunnel.main&#34;).values.tunnel_token&#39;</span><span style="color:#66d9ef">)</span>
-</span></span></code></pre></div><ol start="2">
-<li>Use token</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cloudflared tunnel run --token<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>TOKEN<span style="color:#e6db74">}</span> tunnel-to-app
-</span></span></code></pre></div></div>
-</div>
-
-<div class="article">
-    <h1>111
         <a href="https://prokopov.me/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/">Configure Docker Engine logs to AWS CloudWatch</a>
     </h1>
     <div class="date">01.01.0001</div>
@@ -6614,17 +6690,6 @@ resource &#34;cloudflare_record&#34; &#34;main&#34; {
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2023-03-17/">Group Greeting</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><p>There are lots of options to greet collegue or close ones with cards.</p>
-<p>This one was recommended by one of the coworkers.</p>
-<p><a href="https://www.groupgreeting.com/">Group Greeting Cards</a></p>
-</div>
-</div>
-
-<div class="article">
-    <h1>111
         <a href="https://prokopov.me/posts/draft_how-to-speed-up-ruby-bundle-gems-fetch-1110de70ccbc/">How to speed up ruby bundle gems fetch</a>
     </h1>
     <div class="date">01.01.0001</div>
@@ -6643,71 +6708,6 @@ resource &#34;cloudflare_record&#34; &#34;main&#34; {
     <div class="date">01.01.0001</div>
     <div><pre tabindex="0"><code>docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:11.0.3
 </code></pre></div>
-</div>
-
-<div class="article">
-    <h1>111
-        <a href="https://prokopov.me/posts/2023-04-03/">Mikrotik Terraform</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><p>It is in general very good idea to manage infra configuration as a code. Unfortunately, Mirkotik terrafrom support is basic, as OSS driven.</p>
-<p>Nevertheless, I appreciate author for effors.</p>
-<p>Here is an example how to use it with Hashicorp Vault.</p>
-<h2 id="commands">Commands</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>export VAULT_ADDR<span style="color:#f92672">=</span>http://vault_address:8200
-</span></span><span style="display:flex;"><span>export VAULT_TOKEN<span style="color:#f92672">=</span>&lt;token&gt;
-</span></span><span style="display:flex;"><span>terraform init
-</span></span><span style="display:flex;"><span>terraform plan
-</span></span></code></pre></div><h2 id="example">Example</h2>
-<p>main.tf</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;vault&#34;</span> {}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">data</span> <span style="color:#e6db74">&#34;vault_generic_secret&#34; &#34;main&#34;</span> {
-</span></span><span style="display:flex;"><span>  path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;common/mikrotik/nexus-home&#34;</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;mikrotik&#34;</span> {
-</span></span><span style="display:flex;"><span>  host           <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;address&#34;</span>]<span style="color:#75715e">  # Or set MIKROTIK_HOST environment variable
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  username       <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;username&#34;</span>]<span style="color:#75715e"> # Or set MIKROTIK_USER environment variable
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  password       <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;password&#34;</span>]<span style="color:#75715e"> # Or set MIKROTIK_PASSWORD environment variable
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  tls            <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#75715e">                                           # Or set MIKROTIK_TLS environment variable
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ca_certificate <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/path/to/ca/certificate.pem&#34;</span><span style="color:#75715e">                   # Or set MIKROTIK_CA_CERTIFICATE environment variable
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  insecure       <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#75715e">                                            # Or set MIKROTIK_INSECURE environment variable
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">ip</span> <span style="color:#66d9ef">address</span>
-</span></span><span style="display:flex;"><span>// :put [find where address<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;192.168.88.1/24&#34;</span>]
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#66d9ef">terraform</span> <span style="color:#66d9ef">import</span> <span style="color:#66d9ef">mikrotik_ip_address</span>.<span style="color:#66d9ef">lan</span> <span style="color:#960050;background-color:#1e0010">&#39;*</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;mikrotik_ip_address&#34; &#34;lan&#34;</span> {
-</span></span><span style="display:flex;"><span>  address   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;192.168.88.1/24&#34;</span>
-</span></span><span style="display:flex;"><span>  comment   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LAN Network&#34;</span>
-</span></span><span style="display:flex;"><span>  interface <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ether2&#34;</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#66d9ef">uncomment</span> <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">release</span> <span style="color:#66d9ef">https</span><span style="color:#960050;background-color:#1e0010">://</span><span style="color:#66d9ef">github</span>.<span style="color:#66d9ef">com</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">ddelnano</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">terraform</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#66d9ef">provider</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#66d9ef">mikrotik</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># resource &#34;mikrotik_firewall_filter_rule&#34; &#34;https&#34; {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   action             = &#34;accept&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   chain              = &#34;forward&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   comment            = &#34;Web access to local HTTP server&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   connection_state   = [&#34;new&#34;]
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   dst_port           = &#34;443&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   in_interface       = &#34;ether1&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   in_interface_list  = &#34;local_lan&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   out_interface_list = &#34;ether3&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   protocol           = &#34;tcp&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># }
-</span></span></span></code></pre></div><p>terraform.tf</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">terraform</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">required_providers</span> {
-</span></span><span style="display:flex;"><span>    mikrotik <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>      source  <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ddelnano/mikrotik&#34;</span>
-</span></span><span style="display:flex;"><span>      version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0.10.0&#34;</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div></div>
 </div>
 
 <div class="article">

@@ -47,6 +47,50 @@
 
 <div class="article">
     <h1>
+        <a href="/posts/2023-07-15-cloudflare-tunnel-terraform/">CloudFlare Tunne Terraform</a>
+    </h1>
+    <div class="date">15.07.2023</div>
+    <div>How to provision CloudFlare tunnel using Terraform CloudFlare Tunnel can be useful to use reliable alternative to ngrok when you need to expose your application running locally to the outside world.
+The following example exposes my application locally running on port 3000 to the Internet on the hostname https://app.prokopov.me
+Prerequisites Terraform CloudFlare module v4 CloudFlare API key with Account:Tunnel permissions. Locally installed CloudFlare CLI utility cloudflared https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/ Application running locally on port 3000 How does it work? </div>
+    
+    
+        <a href="/posts/2023-07-15-cloudflare-tunnel-terraform/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/2023-04-03/">Mikrotik Terraform</a>
+    </h1>
+    <div class="date">03.04.2023</div>
+    <div>It is in general very good idea to manage infra configuration as a code. Unfortunately, Mirkotik terrafrom support is basic, as OSS driven.
+Nevertheless, I appreciate author for effors.
+Here is an example how to use it with Hashicorp Vault.
+Commands export VAULT_ADDR=http://vault_address:8200 export VAULT_TOKEN=&lt;token&gt; terraform init terraform plan Example main.tf
+provider &#34;vault&#34; {} data &#34;vault_generic_secret&#34; &#34;main&#34; { path = &#34;common/mikrotik/nexus-home&#34; } provider &#34;mikrotik&#34; { host = data.vault_generic_secret.main.data[&#34;address&#34;] # Or set MIKROTIK_HOST environment variable username = data. </div>
+    
+    
+        <a href="/posts/2023-04-03/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/2023-03-17/">Group Greeting</a>
+    </h1>
+    <div class="date">17.03.2023</div>
+    <div>There are lots of options to greet collegue or close ones with cards.
+This one was recommended by one of the coworkers.
+Group Greeting Cards </div>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/posts/2023-02-24/">The things impressed me recently</a>
     </h1>
     <div class="date">24.02.2023</div>
@@ -162,54 +206,6 @@ Anyway, it took me more than a year (probably w/o Corona it would be a bit faste
 <li><a href="https://github.com/ory/kratos.git">Open source IAM service Kratos</a></li>
 <li><a href="https://github.com/juji-io/datalevin">Datomic like database engine</a></li>
 </ul> </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2021-04-23-oxid-api-coding-days/">Oxid API coding days - settings management solution</a>
-    </h1>
-    <div class="date">23.04.2021</div>
-    <div><p>Recently Oxid has presented the GraphQL API support and announced a hackathon-like event.</p>
-<p>This experience was really refreshing and interesting. Having tight timeframe and some task in hand it was challenging to distribute efforts and get in sync with participants.</p>
-<p>Our team had to deliver unified settings management solution like Google Chrome or Firefox has for numerous different things.</p> </div>
-    
-    
-        <a href="/posts/2021-04-23-oxid-api-coding-days/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2021-04-13-on-late-binding/">Late binding</a>
-    </h1>
-    <div class="date">13.04.2021</div>
-    <div><p>Late binding is a very precious idea.</p>
-<h3 id="example">Example:</h3>
-<p>Say, you have a docker image someone decided to use for the development.
-One created a huge bundle with all tools, bells, and whistles.</p>
-<p>As time passes and you try to use it and then you miserably fail. Dependencies don&rsquo;t met requirements anymore, most of the tools are outdated and should be bumped to newer version, initial SQL data has been changed and etc.</p>
-<p>Configs are hidden and manipulated in docker image, composer.json is outside and you end up starring at this pile of crap.</p> </div>
-    
-    
-        <a href="/posts/2021-04-13-on-late-binding/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2021-04-08/">Linkedin, what are you doing? Stop it!</a>
-    </h1>
-    <div class="date">09.04.2021</div>
-    <div><p>Recently I&rsquo;ve checked this website and styling became really aweful. After my digging it turned out one little busty thing was doing the crap.</p>
-<p>Official Linkedin badge! Overrides default link styling!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;text/javascript&#39;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://platform.linkedin.com/badges/js/profile.js&#39;</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">defer</span> &gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span></code></pre></div><p>The easiest way to turn it off is to change type=&lsquo;text/javascript&rsquo; to just &rsquo;text&rsquo;.</p>
-<p>You have also been decreasing my lighthouse score.
-Bye-bye little nasty thing.</p> </div>
     
 </div>
 <div class="border-bottom"></div>
