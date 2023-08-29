@@ -6,7 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Travel</title>
       <link>https://prokopov.me/pages/trips/</link>
@@ -50,6 +50,16 @@ My first book about software engineering was C++ by Bjarne Stroustrup.</descript
       <description>Hi, my name is Maksym Prokopov. These days I mostly involved in DevOps, Lean IT and IT services.
 A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages. Surprisingly, but I started using PHP for my job today again after almost 18 years. What a destiny!
 Since 2006 I started using Ruby on Rails a lot. 2015 got addicted to Clojure and ClojureScript and did some production-ready things.</description>
+    </item>
+    
+    <item>
+      <title>Install Ruby 3.1.4 on macOS</title>
+      <link>https://prokopov.me/posts/ruby-macos-install/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/ruby-macos-install/</guid>
+      <description>In case ruby can&amp;rsquo;t find OpenSSL 3 headers, use this way.
+brew install ruby-install ruby-install ruby 3.1.4 -- --with-openssl-dir=$(brew --prefix openssl) </description>
     </item>
     
     <item>

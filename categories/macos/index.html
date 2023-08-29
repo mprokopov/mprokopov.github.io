@@ -46,6 +46,17 @@
 
 <div class="article">
     <h1>
+        <a href="https://prokopov.me/posts/ruby-macos-install/">Install Ruby 3.1.4 on macOS</a>
+    </h1>
+    <div class="date">29.08.2023</div>
+    <div><p>In case ruby can&rsquo;t find OpenSSL 3 headers, use this way.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>brew install ruby-install
+</span></span><span style="display:flex;"><span>ruby-install ruby 3.1.4 -- --with-openssl-dir<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>brew --prefix openssl<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div></div>
+</div>
+
+<div class="article">
+    <h1>
         <a href="https://prokopov.me/posts/applescript-instant-open-zoom-link/">Applescript instantly open Zoom link from the iCal calendar</a>
     </h1>
     <div class="date">02.02.2020</div>
@@ -115,7 +126,7 @@
         
         <li><a href="/categories/linux/">linux</a> (1) </li>
         
-        <li><a href="/categories/macos/">macos</a> (1) </li>
+        <li><a href="/categories/macos/">macos</a> (2) </li>
         
         <li><a href="/categories/news/">news</a> (1) </li>
         
@@ -123,7 +134,7 @@
         
         <li><a href="/categories/rails/">rails</a> (1) </li>
         
-        <li><a href="/categories/ruby/">ruby</a> (1) </li>
+        <li><a href="/categories/ruby/">ruby</a> (2) </li>
         
         <li><a href="/categories/sip/">sip</a> (1) </li>
         

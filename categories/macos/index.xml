@@ -6,7 +6,17 @@
     <description>Recent content in macos on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/macos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Ruby 3.1.4 on macOS</title>
+      <link>https://prokopov.me/posts/ruby-macos-install/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://prokopov.me/posts/ruby-macos-install/</guid>
+      <description>In case ruby can&amp;rsquo;t find OpenSSL 3 headers, use this way.
+brew install ruby-install ruby-install ruby 3.1.4 -- --with-openssl-dir=$(brew --prefix openssl) </description>
+    </item>
+    
     <item>
       <title>Applescript instantly open Zoom link from the iCal calendar</title>
       <link>https://prokopov.me/posts/applescript-instant-open-zoom-link/</link>

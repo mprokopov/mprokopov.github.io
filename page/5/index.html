@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.110.0"><title>Maksym Prokopov personal blog</title>
+	<meta name="generator" content="Hugo 0.115.3"><title>Maksym Prokopov personal blog</title>
 <meta charset="utf-8"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
@@ -44,6 +44,18 @@
     
 </div>
 
+
+<div class="article">
+    <h1>
+        <a href="/2020/02/applescript-instantly-open-zoom-link-from-the-ical-calendar/">Applescript instantly open Zoom link from the iCal calendar</a>
+    </h1>
+    <div class="date">26.02.2020</div>
+    <div>This is really my little timesaver because you know, a lot of meetings happen when you work remotely.
+Works best with Alfred 4 using mapped hotkey.
+tell application "Calendar" tell calendar "maksym.prokopov@trilogy.com" set itemLocation to location of first event where its start date ≤ (current date) + 10 * minutes and end date ≥ (current date) if itemLocation contains "zoom.us" then tell application "Finder" to open location itemLocation end tell end tell  </div>
+    
+</div>
+<div class="border-bottom"></div>
 
 <div class="article">
     <h1>
@@ -168,22 +180,6 @@ Lightmod and Nightcode really great editors for Clojure/Clojurescript beginners.
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/2018/01/%D0%B2%D0%B5%D1%89%D0%B8-%D0%B2-%D0%B2%D0%B5%D0%B1-%D0%B4%D0%B5%D0%B2%D0%B5-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BC%D0%B5%D0%BD%D1%8F-%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%82%D0%B5/">Вещи в веб-деве, которые меня действительно впечатлили</a>
-    </h1>
-    <div class="date">16.01.2018</div>
-    <div>Lightmod и Nightcode редактор с подсветкой синтаксиса, где Clojure и ClojureScript работают из коробки и есть несколько хороших примеров кода прямо в той же коробке.
-Удивительно, какие вещи может сделать один человек. Проекты также содержат интерактивный REPL прямо на странице ClojureScriptа. Впрочем, это лучше показать.
-ClojureScript REPL right in your Google Chrome Dirac. Лучше всего за себя скажет сам скриншот Dirac. Отличная поддержка ClojureScript прямо в вашем браузере!
-В этом же контексте имеет смысл посмотреть на paren-soup онлайн редактор для Clojurescript. </div>
-    
-    
-        <a href="/2018/01/%D0%B2%D0%B5%D1%89%D0%B8-%D0%B2-%D0%B2%D0%B5%D0%B1-%D0%B4%D0%B5%D0%B2%D0%B5-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BC%D0%B5%D0%BD%D1%8F-%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%82%D0%B5/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
 <div class="pagination">
     
     <div class="pagination__prev">
@@ -252,7 +248,7 @@ ClojureScript REPL right in your Google Chrome Dirac. Лучше всего з�
         
         <li><a href="/categories/linux/">linux</a> (1) </li>
         
-        <li><a href="/categories/macos/">macos</a> (1) </li>
+        <li><a href="/categories/macos/">macos</a> (2) </li>
         
         <li><a href="/categories/news/">news</a> (1) </li>
         
@@ -260,7 +256,7 @@ ClojureScript REPL right in your Google Chrome Dirac. Лучше всего з�
         
         <li><a href="/categories/rails/">rails</a> (1) </li>
         
-        <li><a href="/categories/ruby/">ruby</a> (1) </li>
+        <li><a href="/categories/ruby/">ruby</a> (2) </li>
         
         <li><a href="/categories/sip/">sip</a> (1) </li>
         
