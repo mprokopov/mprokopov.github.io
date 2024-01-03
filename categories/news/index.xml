@@ -6,24 +6,14 @@
     <description>Recent content in news on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/news/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://prokopov.me/categories/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The things impressed me recently</title>
       <link>https://prokopov.me/posts/2023-02-24/</link>
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://prokopov.me/posts/2023-02-24/</guid>
-      <description>&lt;p&gt;Impressive things and points of interest&lt;/p&gt;
-&lt;h3 id=&#34;self-improvement&#34;&gt;Self-Improvement&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://theholisticpsychologist.com/&#34;&gt;https://theholisticpsychologist.com/&lt;/a&gt; - mental self-healing of issues from the Past&lt;/p&gt;
-&lt;h3 id=&#34;technologies-assessment&#34;&gt;Technologies assessment&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.nomadproject.io/&#34;&gt;https://www.nomadproject.io/&lt;/a&gt; - K8s is not only one option for container orchestration. Looks good!&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.boundaryproject.io/&#34;&gt;https://www.boundaryproject.io/&lt;/a&gt; - Remote access management from Hashicorp&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ambient.run/&#34;&gt;https://www.ambient.run/&lt;/a&gt; - WebAssembly Game engine targeting browsers&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.playstation.com/de-de/ps-vr2/&#34;&gt;https://www.playstation.com/de-de/ps-vr2/&lt;/a&gt; - New Sony VR2 headset.&lt;/p&gt;
-&lt;h3 id=&#34;technology-adoption&#34;&gt;Technology adoption&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.docker.com/build/buildkit/&#34;&gt;https://docs.docker.com/build/buildkit/&lt;/a&gt; Docker buildkit and it&amp;rsquo;s advanced caching techniques.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Impressive things and points of interest&lt;/p&gt;&#xA;&lt;h3 id=&#34;self-improvement&#34;&gt;Self-Improvement&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://theholisticpsychologist.com/&#34;&gt;https://theholisticpsychologist.com/&lt;/a&gt; - mental self-healing of issues from the Past&lt;/p&gt;&#xA;&lt;h3 id=&#34;technologies-assessment&#34;&gt;Technologies assessment&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.nomadproject.io/&#34;&gt;https://www.nomadproject.io/&lt;/a&gt; - K8s is not only one option for container orchestration. Looks good!&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.boundaryproject.io/&#34;&gt;https://www.boundaryproject.io/&lt;/a&gt; - Remote access management from Hashicorp&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.ambient.run/&#34;&gt;https://www.ambient.run/&lt;/a&gt; - WebAssembly Game engine targeting browsers&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.playstation.com/de-de/ps-vr2/&#34;&gt;https://www.playstation.com/de-de/ps-vr2/&lt;/a&gt; - New Sony VR2 headset.&lt;/p&gt;&#xA;&lt;h3 id=&#34;technology-adoption&#34;&gt;Technology adoption&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.docker.com/build/buildkit/&#34;&gt;https://docs.docker.com/build/buildkit/&lt;/a&gt; Docker buildkit and it&amp;rsquo;s advanced caching techniques.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

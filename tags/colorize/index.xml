@@ -6,20 +6,14 @@
     <description>Recent content in colorize on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Wed, 07 Mar 2012 10:57:23 +0000</lastBuildDate><atom:link href="https://prokopov.me/tags/colorize/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Mar 2012 10:57:23 +0000</lastBuildDate>
+    <atom:link href="https://prokopov.me/tags/colorize/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Цвета в терминале Mac OS X Lion</title>
       <link>https://prokopov.me/2012/03/%D1%86%D0%B2%D0%B5%D1%82%D0%B0-%D0%B2-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%B5-mac-os-x-lion/</link>
       <pubDate>Wed, 07 Mar 2012 10:57:23 +0000</pubDate>
-      
       <guid>https://prokopov.me/2012/03/%D1%86%D0%B2%D0%B5%D1%82%D0%B0-%D0%B2-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%B5-mac-os-x-lion/</guid>
-      <description>Лично для меня крайне удобным решением для терминала является iTerm2. Однажды, очень захотелось сделать его цветастым. Для получения расцветки необходимо добавить в ~/.bash_profile строку
-export CLICOLOR=1
-По наводке @snupt была найдена и установлена тема Solarized Dark, из-за которой, однако была практически отключена полупрозрачность из-за которой текст читался значительно хуже.
-Также Solarized Dark можно (и нужно) использовать с редакторами Textmate и Sublime Text 2.
-Sublime Text 2 Solarized Dark theme
-Что бы добавить цветастости к выводу git достаточно сделать следующее:</description>
+      <description>Лично для меня крайне удобным решением для терминала является iTerm2. Однажды, очень захотелось сделать его цветастым. Для получения расцветки необходимо добавить в ~/.bash_profile строку&#xA;export CLICOLOR=1&#xA;По наводке @snupt была найдена и установлена тема Solarized Dark, из-за которой, однако была практически отключена полупрозрачность из-за которой текст читался значительно хуже.&#xA;Также Solarized Dark можно (и нужно) использовать с редакторами Textmate и Sublime Text 2.&#xA;Sublime Text 2 Solarized Dark theme&#xA;Что бы добавить цветастости к выводу git достаточно сделать следующее:</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,54 +6,35 @@
     <description>Recent content in без категории on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://prokopov.me/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://prokopov.me/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CloudFlare Tunnel Terraform</title>
       <link>https://prokopov.me/posts/2023-07-15-cloudflare-tunnel-terraform/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://prokopov.me/posts/2023-07-15-cloudflare-tunnel-terraform/</guid>
-      <description>How to provision CloudFlare tunnel using Terraform CloudFlare Tunnel can be useful to use reliable alternative to ngrok when you need to expose your application running locally to the outside world.
-The following example exposes my application locally running on port 3000 to the Internet on the hostname https://app.prokopov.me
-Prerequisites Terraform CloudFlare module v4 CloudFlare API key with Account:Tunnel permissions. Locally installed CloudFlare CLI utility cloudflared https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/ Application running locally on port 3000 How does it work?</description>
+      <description>How to provision CloudFlare tunnel using Terraform CloudFlare Tunnel can be useful to use reliable alternative to ngrok when you need to expose your application running locally to the outside world.&#xA;The following example exposes my application locally running on port 3000 to the Internet on the hostname https://app.prokopov.me&#xA;Prerequisites Terraform CloudFlare module v4 CloudFlare API key with Account:Tunnel permissions. Locally installed CloudFlare CLI utility cloudflared https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/ Application running locally on port 3000 How does it work?</description>
     </item>
-    
     <item>
       <title>Mikrotik Terraform</title>
       <link>https://prokopov.me/posts/2023-04-03/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://prokopov.me/posts/2023-04-03/</guid>
-      <description>It is in general very good idea to manage infra configuration as a code. Unfortunately, Mirkotik terrafrom support is basic, as OSS driven.
-Nevertheless, I appreciate author for effors.
-Here is an example how to use it with Hashicorp Vault.
-Commands export VAULT_ADDR=http://vault_address:8200 export VAULT_TOKEN=&amp;lt;token&amp;gt; terraform init terraform plan Example main.tf
-provider &amp;#34;vault&amp;#34; {} data &amp;#34;vault_generic_secret&amp;#34; &amp;#34;main&amp;#34; { path = &amp;#34;common/mikrotik/nexus-home&amp;#34; } provider &amp;#34;mikrotik&amp;#34; { host = data.vault_generic_secret.main.data[&amp;#34;address&amp;#34;] # Or set MIKROTIK_HOST environment variable username = data.</description>
+      <description>It is in general very good idea to manage infra configuration as a code. Unfortunately, Mirkotik terrafrom support is basic, as OSS driven.&#xA;Nevertheless, I appreciate author for effors.&#xA;Here is an example how to use it with Hashicorp Vault.&#xA;Commands export VAULT_ADDR=http://vault_address:8200 export VAULT_TOKEN=&amp;lt;token&amp;gt; terraform init terraform plan Example main.tf&#xA;provider &amp;#34;vault&amp;#34; {} data &amp;#34;vault_generic_secret&amp;#34; &amp;#34;main&amp;#34; { path = &amp;#34;common/mikrotik/nexus-home&amp;#34; } provider &amp;#34;mikrotik&amp;#34; { host = data.vault_generic_secret.main.data[&amp;#34;address&amp;#34;] # Or set MIKROTIK_HOST environment variable username = data.</description>
     </item>
-    
     <item>
       <title>Group Greeting</title>
       <link>https://prokopov.me/posts/2023-03-17/</link>
       <pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://prokopov.me/posts/2023-03-17/</guid>
-      <description>There are lots of options to greet collegue or close ones with cards.
-This one was recommended by one of the coworkers.
-Group Greeting Cards</description>
+      <description>There are lots of options to greet collegue or close ones with cards.&#xA;This one was recommended by one of the coworkers.&#xA;Group Greeting Cards</description>
     </item>
-    
     <item>
       <title>Новое оформление блога</title>
       <link>https://prokopov.me/2013/08/new-blog-theme/</link>
       <pubDate>Tue, 06 Aug 2013 18:59:58 +0000</pubDate>
-      
       <guid>https://prokopov.me/2013/08/new-blog-theme/</guid>
-      <description>Все течет, все меняется.
-Когда-то тебе нравились одни штуки, проходит некоторое время, и тебе уже нравятся другие. Мы меняемся, а вместе с нами и мировосприятие.
-Так и с этим блогом. Для чего «рюшечки» и красивое «журнальное» и скеуоморфное оформление блога, если люди сюда приходят почитать?
-Поэтому встречайте другую крайность — Content is the King. Иными словами суровый минимализм.
-Как вам?</description>
+      <description>Все течет, все меняется.&#xA;Когда-то тебе нравились одни штуки, проходит некоторое время, и тебе уже нравятся другие. Мы меняемся, а вместе с нами и мировосприятие.&#xA;Так и с этим блогом. Для чего «рюшечки» и красивое «журнальное» и скеуоморфное оформление блога, если люди сюда приходят почитать?&#xA;Поэтому встречайте другую крайность — Content is the King. Иными словами суровый минимализм.&#xA;Как вам?</description>
     </item>
-    
   </channel>
 </rss>
