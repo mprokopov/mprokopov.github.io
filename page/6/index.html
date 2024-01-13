@@ -10,10 +10,11 @@
 
 
 <script>
-  var remark_config = {
-    host: 'https://remark.prokopov.me',
-    site_id: 'remark',
-  }
+ var remark_config = {
+   host: 'https://remark.prokopov.me',
+   site_id: 'remark',
+   no_footer: true
+ }
 </script>
 <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
 
@@ -44,6 +45,21 @@
     
 </div>
 
+
+<div class="article">
+    <h1>
+        <a href="/posts/@mprokopov/noteworthy-clojure-projects-634af849e01d/">Noteworthy Clojure projects</a>
+    </h1>
+    <div class="date">18.01.2018</div>
+    <div>Recently I again dived deeply into Clojure development with my Bank Statements — ERP sync tool and started to investigate what’s new in Clojure world. It appears a lot of great things happend in 2017!
+Every of following tools drops my jaw down. Here is my list:
+Lightmod and Nightcode really great editors for Clojure/Clojurescript beginners. Zach Oakes included useful examples to jump into Clojure development train. Dynadoc, documentation exploration tool which makes your work with documentation more effective and interactive. </div>
+    
+    
+        <a href="/posts/@mprokopov/noteworthy-clojure-projects-634af849e01d/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
 
 <div class="article">
     <h1>
@@ -175,20 +191,6 @@ But I was really disappointed with Ansible 2.3, because docker_service module is
     
     
         <a href="/posts/2017-08-11_---------------d42877e2368d/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/@mprokopov/deployment-of-clojure-app-to-production-with-docker-9dbffeac6ef5/">Deployment of Clojure app to a production with Docker</a>
-    </h1>
-    <div class="date">03.08.2017</div>
-    <div>Clojure deployment to a production itself not a very complicated task, but with the Docker it becomes more flexible solution. You can deploy your app to the Amazon EC2 or even to Amazon EC2 Container Service just in minutes! In this example we have Ring web server listening on 3000 port an some public resources, like bootstrap css and js in resources/public folder, and application-specific settings in resources/settings folder.
-Caution: your Ring web server should be configured to listen on 0. </div>
-    
-    
-        <a href="/posts/@mprokopov/deployment-of-clojure-app-to-production-with-docker-9dbffeac6ef5/">Read More…</a>
     
 </div>
 <div class="border-bottom"></div>

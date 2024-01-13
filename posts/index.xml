@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-01-05</title>
+      <link>https://prokopov.me/posts/2024-01-05/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-01-05/</guid>
+      <description>07:50: https://github.com/hyperfiddle/electric The problem - links come but never revised. I need to decide if the link is useful for me. But I can’t without reading. After reading I forget about it. Therefore, the knowledge is shallow.&#xA;Use electric clojure for the next gen sharepass or next gen p2m P2M - investigate batch digest CSV. I can load CSV automatically and send to mail. My Productivity List of current projects i&amp;rsquo;m working on.</description>
+    </item>
     <item>
       <title>Install Ruby 3.1.4 on macOS</title>
       <link>https://prokopov.me/posts/ruby-macos-install/</link>
