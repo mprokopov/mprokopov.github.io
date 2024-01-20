@@ -18,7 +18,7 @@
 <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
 
 
-<link rel="stylesheet" href="https://prokopov.me/style.min.b77abd443498a7cff74b0fa676cd31bcf95882bf01b431ef1b388494e71fa1a4.css">
+<link rel="stylesheet" href="https://prokopov.me/style.min.529a1e8f5e9374873172bc21e641ade28cf5a3b087f857a278f82e67c2888e22.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -105,12 +105,73 @@ But this intruduces another problem of keeping everything in sync AKA having &#3
 </div>
 <div id="outline-container-headline-3" class="outline-2">
 <h2 id="headline-3">
-References
+What are the benefits of using org files?
 </h2>
 <div id="outline-text-headline-3" class="outline-text-2">
+<p>These are not many, but significant for me. One of the examples is so called <strong>Literate programming</strong>. The idea is the same as in jupyter notebook, but right inside your editor.</p>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+Literate programming
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p>I can execute code right in the middle of the text.</p>
+<figure>
+<img src="literate.png" alt="literate.png" title="literate.png" /><figcaption>
+Screenshot
+</figcaption>
+</figure>
+<figure>
+<div class="src src-ruby">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span></span></span></code></pre></div>
+</div>
+<figcaption>
+This is the ruby code
+</figcaption>
+</figure>
+<figure>
+<pre class="example">
+4
+</pre>
+<figcaption>
+Result of execution
+</figcaption>
+</figure>
+<figure>
+<div class="src src-clojure">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>(+ <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">2</span>)</span></span></code></pre></div>
+</div>
+<figcaption>
+Clojure code
+</figcaption>
+</figure>
+<figure>
+<pre class="example">
+4
+</pre>
+<figcaption>
+Evaluation of the Clojure code
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+References
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
 <p><a href="https://willschenk.com/howto/2019/using_org_mode_in_hugo/">Using Org Mode in Hugo</a> describes how &#34;native&#34; rendering by Hugo works.</p>
 <p>
 <a href="https://andreyor.st/posts/2022-10-16-my-blogging-setup-with-emacs-and-org-mode/">My blogging setup with Emacs and Org Mode · Andrey Listopadov</a> example of blog management using export to markdown technique.</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+Outro
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>At the end feel free to mix and match. You can use both formats, just write one post in Org and another in Markdown.</p>
 </div>
 </div>
 </div>
