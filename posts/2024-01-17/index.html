@@ -60,19 +60,20 @@ Blogging from Emacs boils down to two options.</p>
 <p>
 TLDR; Hugo can render org file natively, but support of features is quite limited, or use org as source that rendered to markdown. The latter brings issues of content syncing from origin to end result.</p>
 <p>
-<img src="../screenshot-org-hugo.png" alt="../screenshot-org-hugo.png" title="../screenshot-org-hugo.png" /></p>
+<img src="screenshot-org-hugo.png" alt="screenshot-org-hugo.png" title="screenshot-org-hugo.png" /></p>
 <div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 Write posts as org files
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
-<p>
-    I faced the issue of not being able to render index.org as a section from folder. Apart from this all works. Front matter example is</p>
+<p><del>I faced the issue of not being able to render index.org as a section from folder.</del>
+    Apart from this all works. Front matter example is</p>
 <pre class="example">
 #+title: My Title
 #+date: 2023-01-19
 #+slug: my-slug
 #+tags[]: howto, emacs, hugo
+#+draft: true
 </pre>
 <p>
     Adding properties section in front of org file breaks front matter.</p>
@@ -99,7 +100,7 @@ Export org files to markdown
 <div id="outline-text-headline-2" class="outline-text-2">
 <p><strong>ox-hugo</strong> transforms org file to markdown, which, in turn got natively rendered by Hugo.</p>
 <p>
-   But this intruduces another problem of keeping everything in sync AKA having &#34;single source of truth&#34;.</p>
+But this intruduces another problem of keeping everything in sync AKA having &#34;single source of truth&#34;.</p>
 </div>
 </div>
 <div id="outline-container-headline-3" class="outline-2">
