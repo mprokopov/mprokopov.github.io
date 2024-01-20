@@ -15,12 +15,5 @@
       <guid>https://prokopov.me/posts/2024-01-17/</guid>
       <description>I use org-mode extensively with org-roam for keeping my knowledge and journals together and working as my brain dump destination. This blog serves kinda the same purpose, so why not to combine these things under Emacs umbrella?&#xA;Blogging from Emacs boils down to two options.&#xA;TLDR; Hugo can render org file natively, but support of features is quite limited, or use org as source that rendered to markdown. The latter brings issues of content syncing from origin to end result.</description>
     </item>
-    <item>
-      <title>Test Bla2</title>
-      <link>https://prokopov.me/posts/bla2/</link>
-      <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/bla2/</guid>
-      <description>My title next!</description>
-    </item>
   </channel>
 </rss>
