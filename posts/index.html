@@ -47,27 +47,68 @@
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/2024-01-05/">2024-01-05</a>
+        <a href="https://prokopov.me/posts/2024-01-17/">Blogging using Emacs with org-mode and Hugo</a>
     </h1>
-    <div class="date">05.01.2024</div>
-    <div><h2 id="07-50-https-github-dot-com-hyperfiddle-electric"><strong><strong>07:50</strong></strong>:  <a href="https://github.com/hyperfiddle/electric">https://github.com/hyperfiddle/electric</a></h2>
-<h2 id="the-problem---links-come-but-never-revised">The problem - links come but never revised.</h2>
-<p>I need to decide if the link is useful for me. But I can’t without reading. After reading I forget about it. Therefore, the knowledge is shallow.</p>
-<h2 id="use-electric-clojure-for-the-next-gen-sharepass-or-next-gen-p2m">Use electric clojure for the next gen sharepass or next gen p2m</h2>
-<h2 id="p2m---investigate-batch-digest-csv-i-can-load-csv-automatically-and-send-to-mail">P2M - investigate batch digest CSV. I can load CSV automatically and send to mail.</h2>
-<h2 id="my-productivity">My Productivity</h2>
-<ul>
-<li>List of current projects i&rsquo;m working on. Ledger, p2m, it-premium-static, etc.</li>
-<li>Every project belongs to area or tag.</li>
-<li>Every project has context notes. notes.org?</li>
-<li>Ability to add quicky information to the certain project. org-capture?</li>
-<li>Context information useful for the project. For example, i&rsquo;m working on Hugo static website. I need to process documentation to layout properly info.</li>
-</ul>
-<h2 id="til">TIL</h2>
-<h3 id="emacs-emmet">Emacs emmet</h3>
-<p><a href="https://github.com/smihica/emmet-mode">https://github.com/smihica/emmet-mode</a></p>
-<h3 id="vscode">VSCode</h3>
-<p>is quite good on common tasks like hugo support</p>
+    <div class="date">17.01.2024</div>
+    <div>
+<p>I use org-mode extensively with org-roam for keeping my knowledge and journals together and working as my brain dump destination. This blog serves kinda the same purpose, so why not to combine these things under Emacs umbrella?</p>
+<p>
+Blogging from Emacs boils down to two options.</p>
+<p>
+TLDR; Hugo can render org file natively, but support of features is quite limited, or use org as source that rendered to markdown. The latter brings issues of content syncing from origin to end result.</p>
+<p>
+<img src="../screenshot-org-hugo.png" alt="../screenshot-org-hugo.png" title="../screenshot-org-hugo.png" /></p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Write posts as org files
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+    I faced the issue of not being able to render index.org as a section from folder. Apart from this all works. Front matter example is</p>
+<pre class="example">
+#+title: My Title
+#+date: 2023-01-19
+#+slug: my-slug
+#+tags[]: howto, emacs, hugo
+</pre>
+<p>
+    Adding properties section in front of org file breaks front matter.</p>
+<figure>
+<pre class="example">
+:PROPERTIES:
+:ID:       00c94cae-b64a-4cdf-81d1-248b2a42b7b7
+:END:
+#+title: My Title
+#+date: 2023-01-19
+#+slug: my-slug
+#+tags[]: howto, emacs, hugo
+</pre>
+<figcaption>
+This example not going to work and break date parsing
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Export org files to markdown
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p><strong>ox-hugo</strong> transforms org file to markdown, which, in turn got natively rendered by Hugo.</p>
+<p>
+   But this intruduces another problem of keeping everything in sync AKA having &#34;single source of truth&#34;.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+References
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p><a href="https://willschenk.com/howto/2019/using_org_mode_in_hugo/">Using Org Mode in Hugo</a> describes how &#34;native&#34; rendering by Hugo works.</p>
+<p>
+<a href="https://andreyor.st/posts/2022-10-16-my-blogging-setup-with-emacs-and-org-mode/">My blogging setup with Emacs and Org Mode · Andrey Listopadov</a> example of blog management using export to markdown technique.</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -242,6 +283,23 @@ resource &#34;cloudflare_record&#34; &#34;main&#34; {
 <p>How to Fix DeLonghi Grinder issues <a href="https://www.youtube.com/watch?v=f5m071Lk0JY&amp;t=16s">https://www.youtube.com/watch?v=f5m071Lk0JY&amp;t=16s</a></p>
 <h3 id="other">Other</h3>
 <p><a href="https://www.tolls.eu/">https://www.tolls.eu/</a> - Single app for all tolls payment across Europe.</p></div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://prokopov.me/posts/bla2/">Test Bla2</a>
+    </h1>
+    <div class="date">19.01.2023</div>
+    <div>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+My title
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>next!</p>
+</div>
+</div>
+</div>
 </div>
 
 <div class="article">

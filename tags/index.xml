@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 30 Apr 2012 08:11:02 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>emacs,</title>
+      <link>https://prokopov.me/tags/emacs/</link>
+      <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/tags/emacs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>howto</title>
+      <link>https://prokopov.me/tags/howto/</link>
+      <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/tags/howto/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>hugo</title>
+      <link>https://prokopov.me/tags/hugo/</link>
+      <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/tags/hugo/</guid>
+      <description></description>
+    </item>
     <item>
       <title>itunes</title>
       <link>https://prokopov.me/tags/itunes/</link>
@@ -69,13 +90,6 @@
       <link>https://prokopov.me/tags/terminal/</link>
       <pubDate>Wed, 07 Mar 2012 10:57:23 +0000</pubDate>
       <guid>https://prokopov.me/tags/terminal/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>howto</title>
-      <link>https://prokopov.me/tags/howto/</link>
-      <pubDate>Mon, 27 Feb 2012 12:38:06 +0000</pubDate>
-      <guid>https://prokopov.me/tags/howto/</guid>
       <description></description>
     </item>
     <item>
