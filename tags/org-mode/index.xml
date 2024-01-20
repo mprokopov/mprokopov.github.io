@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo, on Maksym Prokopov personal blog</title>
-    <link>https://prokopov.me/tags/hugo/</link>
-    <description>Recent content in hugo, on Maksym Prokopov personal blog</description>
+    <title>org-mode on Maksym Prokopov personal blog</title>
+    <link>https://prokopov.me/tags/org-mode/</link>
+    <description>Recent content in org-mode on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://prokopov.me/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://prokopov.me/tags/org-mode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blogging using Emacs with org-mode and Hugo</title>
       <link>https://prokopov.me/posts/2024-01-17/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/2024-01-17/</guid>
       <description>I use org-mode extensively with org-roam for keeping my knowledge and journals together and working as my brain dump destination. This blog serves kinda the same purpose, so why not to combine these things under Emacs umbrella?&#xA;Blogging from Emacs boils down to two options.&#xA;TLDR; Hugo can render org file natively, but support of features is quite limited, or use org as source that rendered to markdown. The latter brings issues of content syncing from origin to end result.</description>
-    </item>
-    <item>
-      <title>Test Bla2</title>
-      <link>https://prokopov.me/posts/bla2/</link>
-      <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/bla2/</guid>
-      <description>My title next!</description>
     </item>
   </channel>
 </rss>

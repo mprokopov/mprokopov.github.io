@@ -47,49 +47,70 @@
 
 <div class="article">
     <h1>
-        <a href="https://prokopov.me/posts/emacs-ergonomics-apple/">Emacs, apple keyboard, and RSI</a>
+        <a href="https://prokopov.me/posts/2024-01-17/">Blogging using Emacs with org-mode and Hugo</a>
     </h1>
-    <div class="date">07.06.2022</div>
-    <div><p>Recently I&rsquo;ve started investigation on the most effective shortcuts for Emacs.
-Already for a long time I&rsquo;ve been using Caps Lock remapped to Esc when pressed alone, and Ctrl-Key when pressed with any other key.</p>
-<p>I didn&rsquo;t use Emacs with native bindings for a long time, because of wrist related issues, which immediately appeared after using pinky for pressing long chords which normally included Ctrl-C combination. This is why I used Spacemacs and later Doom Emacs as the configuration of choice.</p>
-<p>And this worked relatively good, I used the same bindings for Vim in terminal, and no RSI since pinky wasn&rsquo;t overloaded with long presses. But something were not so good, I needed to keep a context in the head and using special modes like eshell or repl weren&rsquo;t fun because of context switch losses.</p>
-<p>So I&rsquo;ve started reading the book Mastering Emacs, which I definitely recommend, I decided to give a try to alternative solutions for Emacs keybindings.</p>
-<p>First of which were using interesting combinations for the keychords like pressing J+K equals to Control and pressing F+D equals to control. The idea was to reduce pressure on pinky by moving control to the &ldquo;home&rdquo; row. This worked to some extent. Long combinations with Ctrl, like &ldquo;C-c C-o C-r&rdquo; needed to have very uncomfortable key sequences. Apart from this constant typos where annoying, when you switched keys too fast. So I dropped this option and started looking for new ways.</p>
-<p>I realised, that Ctrl should not be pressed by pinky, it should be just convenient enough to reach.
-Then I saw old design of the Space Kadet keyboard, and it had Control right near the Space key.</p>
-<p><img src="space-cadet.jpg" alt="Space Cadet keyboard"></p>
-<p>Whan I swapped Command and Control keys, man, that was real enlightenment, literally everything started being comfortable. Look, Ctrl-x-s is just a single row. Ctrl-c feels natural, because you literally use mighty thumb and index fingers. Movement with Ctrl-a, Ctrl-e, Ctrl-n and Ctrl-p just started having much more sence and convenience. Most of the Emacs combinations with Ctrl-C and Ctrl-X are sane now.</p>
-<p>It comes as a bonus using readline compatible utilities in terminal.</p>
-<p>I really think swapping Caps Lock and Control is a BAD advice that did enourmous harm for neglecting Emacs than anything else. Either Windows based keyboards having Alt, or Mac based keyboards having Command, should be swapped with Control at least in Emacs and other readline applications. Do this right now using Karabiner Elements free application for MacOS and never experience any RSI.</p>
-<p>Using Karabiner Elements you can make this change only for the several applications, like Emacs and iTerm, and not the system-wide.</p>
-<p>Update:</p>
-<p>In order to remap command to control you don&rsquo;t event need Karabiner Element, just map command to control using the following snippet</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(setq ns-modifier-command <span style="color:#e6db74">&#39;control</span>)
-</span></span></code></pre></div><p>In iTerm it&rsquo;s also easy to do, open</p>
-<p>Preferences -&gt; Keys -&gt; Remap modifiers</p>
-<p>and change the settings. One more trick is how to switch between apps from iTerm using Cmd+Tab when it&rsquo;s remapped?</p>
-<p>Here is how to do this <a href="https://gitlab.com/gnachman/iterm2/-/issues/6394">https://gitlab.com/gnachman/iterm2/-/issues/6394</a></p>
-<blockquote>
-<p>You can add exceptions to keyboard remapping, but it&rsquo;s not very intuitive. Add a key mapping to Prefs &gt; Keys. First, select the action Do Not Remap Modifiers. Then set the shortcut to Cmd-Tab (by pressing the physical cmd key plus tab).</p>
-</blockquote>
-<p>RSI stands for repetitive stain injury
-<a href="https://www.nhs.uk/conditions/repetitive-strain-injury-rsi/">https://www.nhs.uk/conditions/repetitive-strain-injury-rsi/</a></p>
+    <div class="date">17.01.2024</div>
+    <div>
+<p>
+I use org-mode extensively with org-roam for keeping my knowledge and journals together and working as my brain dump destination. This blog serves kinda the same purpose, so why not to combine these things under Emacs umbrella?</p>
+<p>
+Blogging from Emacs boils down to two options.</p>
+<p>
+TLDR; Hugo can render org file natively, but support of features is quite limited, or use org as source that rendered to markdown. The latter brings issues of content syncing from origin to end result.</p>
+<p>
+<img src="../screenshot-org-hugo.png" alt="../screenshot-org-hugo.png" title="../screenshot-org-hugo.png" /></p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Write posts as org files
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+    I faced the issue of not being able to render index.org as a section from folder. Apart from this all works. Front matter example is</p>
+<pre class="example">
+#+title: My Title
+#+date: 2023-01-19
+#+slug: my-slug
+#+tags[]: howto, emacs, hugo
+</pre>
+<p>
+    Adding properties section in front of org file breaks front matter.</p>
+<figure>
+<pre class="example">
+:PROPERTIES:
+:ID:       00c94cae-b64a-4cdf-81d1-248b2a42b7b7
+:END:
+#+title: My Title
+#+date: 2023-01-19
+#+slug: my-slug
+#+tags[]: howto, emacs, hugo
+</pre>
+<figcaption>
+This example not going to work and break date parsing
+</figcaption>
+</figure>
 </div>
 </div>
-
-<div class="article">
-    <h1>
-        <a href="https://prokopov.me/posts/2021-02-02-org-protocol-chrome-no-confirmation/">Disable Chrome browser confirmation to open external protocol with org-protocol</a>
-    </h1>
-    <div class="date">02.02.2021</div>
-    <div><p>I recently added org-capture chrome extension to my toolbelt. Unfortunalely chrome annoys me by asking if I want to open this protocol link every time.</p>
-<p>Here is the simple way to fix this.</p>
-<p>Execute this in the shell</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>defaults write com.google.Chrome URLAllowlist -array-add -string <span style="color:#e6db74">&#39;org-protocol://*&#39;</span>
-</span></span></code></pre></div><p>check
-<a href="chrome://policy">chrome://policy</a> url that it contains proper settings for org-protocol</p>
-<p><img src="/uploads/chrome-policy.png" alt="Chrome policy"></p></div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Export org files to markdown
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p><strong>ox-hugo</strong> transforms org file to markdown, which, in turn got natively rendered by Hugo.</p>
+<p>
+   But this intruduces another problem of keeping everything in sync AKA having &#34;single source of truth&#34;.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+References
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p><a href="https://willschenk.com/howto/2019/using_org_mode_in_hugo/">Using Org Mode in Hugo</a> describes how &#34;native&#34; rendering by Hugo works.</p>
+<p>
+<a href="https://andreyor.st/posts/2022-10-16-my-blogging-setup-with-emacs-and-org-mode/">My blogging setup with Emacs and Org Mode · Andrey Listopadov</a> example of blog management using export to markdown technique.</p>
+</div>
+</div>
+</div>
 </div>
 
 <div class="sidebar"><div class="sidebar__visitcard">
