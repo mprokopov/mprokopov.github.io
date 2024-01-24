@@ -47,6 +47,76 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2024-01-24/">How to suppress alerts in Prometheus for non-working hours</a>
+    </h1>
+    <div class="date">24.01.2024</div>
+    <div><p>When it comes to the topic how Prometheus and Alertmanager work together and how to restrict alert notification to fire only on working hours, typicall solution is to apply workaround to avaluated alert rule expession like this</p>
+<pre class="example">
+and ON() (hour() &lt; 19 and hour() &gt; 8) and ON() (day_of_week() &gt; 0 and day_of_week() &lt; 6)
+</pre>
+<p>
+The full example of such rule is the following</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  - <span style="color:#f92672">alert</span>: <span style="color:#ae81ff">DummyWorkhoursAlert</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expr</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">and ON() (hour() &lt; 19 and hour() &gt; 8) and ON() (day_of_week() &gt; 0 and day_of_week() &lt; 6)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">for</span>: <span style="color:#ae81ff">5m</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">annotations</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">identifier</span>: <span style="color:#e6db74">&#34;{{ $labels.exporter }}/{{ $labels.queue }}&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Buyerportal: Dummy alert for working hours {{ $labels.queue }}&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;* don&#39;t do anything, dummy alert *&#34;</span></span></span></code></pre></div>
+</div>
+<p>
+But the proper solution is to apply <strong>mute_time_intervals</strong>, as per example below</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">time_intervals</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">offhours</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">time_intervals</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Monday to Friday 18:00-8:00</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">weekdays</span>: [<span style="color:#e6db74">&#39;monday:friday&#39;</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">times</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">start_time</span>: <span style="color:#e6db74">&#39;16:00&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">end_time</span>: <span style="color:#e6db74">&#39;23:59&#39;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">start_time</span>: <span style="color:#e6db74">&#39;00:00&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">end_time</span>: <span style="color:#e6db74">&#39;08:00&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">location</span>: <span style="color:#e6db74">&#34;Europe/Berlin&#34;</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">weekdays</span>: [<span style="color:#e6db74">&#39;saturday&#39;</span>, <span style="color:#e6db74">&#39;sunday&#39;</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">location</span>: <span style="color:#e6db74">&#34;Europe/Berlin&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">route</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">receiver</span>: <span style="color:#ae81ff">slack-monitoring</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">group_interval</span>: <span style="color:#ae81ff">5m</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">repeat_interval</span>: <span style="color:#ae81ff">24h</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">routes</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">matchers</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">team = buyers</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">severity = 24x7</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">receiver</span>: <span style="color:#ae81ff">slack-team-buyers</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">matchers</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">team = buyers</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">severity = workhours</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">mute_time_intervals</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">offhours</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">receiver</span>: <span style="color:#ae81ff">slack-team-buyers</span></span></span></code></pre></div>
+</div>
+<p>
+And the rule starts having extra label &#34;severity&#34;: workhours</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  - <span style="color:#f92672">alert</span>: <span style="color:#ae81ff">DummyWorkhoursAlert</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expr</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">for</span>: <span style="color:#ae81ff">5m</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">annotations</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">identifier</span>: <span style="color:#e6db74">&#34;{{ $labels.exporter }}/{{ $labels.queue }}&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Buyerportal: Dummy alert for working hours {{ $labels.queue }}&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;* don&#39;t do anything, dummy alert *&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">severity</span>: <span style="color:#ae81ff">workhours</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">team</span>: <span style="color:#ae81ff">buyers</span></span></span></code></pre></div>
+</div>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/2024-01-17/">Blogging using Emacs with org-mode and Hugo</a>
     </h1>
     <div class="date">17.01.2024</div>

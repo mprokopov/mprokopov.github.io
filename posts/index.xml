@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to suppress alerts in Prometheus for non-working hours</title>
+      <link>https://prokopov.me/posts/2024-01-24/</link>
+      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-01-24/</guid>
+      <description>When it comes to the topic how Prometheus and Alertmanager work together and how to restrict alert notification to fire only on working hours, typicall solution is to apply workaround to avaluated alert rule expession like this&#xA;and ON() (hour() &amp;lt; 19 and hour() &amp;gt; 8) and ON() (day_of_week() &amp;gt; 0 and day_of_week() &amp;lt; 6) The full example of such rule is the following&#xA;- alert: DummyWorkhoursAlert expr: 1 and ON() (hour() &amp;lt; 19 and hour() &amp;gt; 8) and ON() (day_of_week() &amp;gt; 0 and day_of_week() &amp;lt; 6) for: 5m annotations: identifier: &amp;#34;{{ $labels.</description>
+    </item>
     <item>
       <title>Blogging using Emacs with org-mode and Hugo</title>
       <link>https://prokopov.me/posts/2024-01-17/</link>

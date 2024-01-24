@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
-	<meta name="generator" content="Hugo 0.121.2"><title>Maksym Prokopov personal blog</title>
+    <head><title>Maksym Prokopov personal blog</title>
 <meta charset="utf-8"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
@@ -45,138 +44,79 @@
     
 </div>
 
-
 <div class="article">
     <h1>
-        <a href="/2009/12/hello-worldpress/">Решил попробовать эти ваши вордпрессы.</a>
+        <a href="https://prokopov.me/posts/2024-01-24/">How to suppress alerts in Prometheus for non-working hours</a>
     </h1>
-    <div class="date">21.12.2009</div>
-    <div>Сначала у меня был очень современный (на 2005год) с развитой многомерной структурой тегов и все такое бла-бла-бла сайт http://nexus.org.ua, и был он написан на Parser 3. Затем я полностью пересел за Ruby on Rails, однако переписывать сайт не торопился. А затем желание чего либо допиливать парсером совсем завяло. Решил по-легкому попробовать себя в ЖЖ.
-Пишу я себе изредка в LiveJournal, чувствую, что картинку вставить очень хочется через MarsEdit, загрузить, значится. А не получается совсем, непорядок. </div>
+    <div class="date">24.01.2024</div>
     
+    <h4>Reading time: 2 min.</h4>
     
-        <a href="/2009/12/hello-worldpress/">Read More…</a>
-    
+    <div><p>When it comes to the topic how Prometheus and Alertmanager work together and how to restrict alert notification to fire only on working hours, typicall solution is to apply workaround to avaluated alert rule expession like this</p>
+<pre class="example">
+and ON() (hour() &lt; 19 and hour() &gt; 8) and ON() (day_of_week() &gt; 0 and day_of_week() &lt; 6)
+</pre>
+<p>
+The full example of such rule is the following</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  - <span style="color:#f92672">alert</span>: <span style="color:#ae81ff">DummyWorkhoursAlert</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expr</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">and ON() (hour() &lt; 19 and hour() &gt; 8) and ON() (day_of_week() &gt; 0 and day_of_week() &lt; 6)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">for</span>: <span style="color:#ae81ff">5m</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">annotations</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">identifier</span>: <span style="color:#e6db74">&#34;{{ $labels.exporter }}/{{ $labels.queue }}&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Buyerportal: Dummy alert for working hours {{ $labels.queue }}&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;* don&#39;t do anything, dummy alert *&#34;</span></span></span></code></pre></div>
 </div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/draft_post-680791be7605/"></a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div> </div>
-    
+<p>
+But the proper solution is to apply <strong>mute_time_intervals</strong>, as per example below</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">time_intervals</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">offhours</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">time_intervals</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Monday to Friday 18:00-8:00</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">weekdays</span>: [<span style="color:#e6db74">&#39;monday:friday&#39;</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">times</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">start_time</span>: <span style="color:#e6db74">&#39;16:00&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">end_time</span>: <span style="color:#e6db74">&#39;23:59&#39;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">start_time</span>: <span style="color:#e6db74">&#39;00:00&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">end_time</span>: <span style="color:#e6db74">&#39;08:00&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">location</span>: <span style="color:#e6db74">&#34;Europe/Berlin&#34;</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">weekdays</span>: [<span style="color:#e6db74">&#39;saturday&#39;</span>, <span style="color:#e6db74">&#39;sunday&#39;</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">location</span>: <span style="color:#e6db74">&#34;Europe/Berlin&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">route</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">receiver</span>: <span style="color:#ae81ff">slack-monitoring</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">group_interval</span>: <span style="color:#ae81ff">5m</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">repeat_interval</span>: <span style="color:#ae81ff">24h</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">routes</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">matchers</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">team = buyers</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">severity = 24x7</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">receiver</span>: <span style="color:#ae81ff">slack-team-buyers</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">matchers</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">team = buyers</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">severity = workhours</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">mute_time_intervals</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">offhours</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">receiver</span>: <span style="color:#ae81ff">slack-team-buyers</span></span></span></code></pre></div>
 </div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/">Configure Docker Engine logs to AWS CloudWatch</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div> </div>
-    
+<p>
+And the rule starts having extra label &#34;severity&#34;: workhours</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  - <span style="color:#f92672">alert</span>: <span style="color:#ae81ff">DummyWorkhoursAlert</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expr</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">for</span>: <span style="color:#ae81ff">5m</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">annotations</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">identifier</span>: <span style="color:#e6db74">&#34;{{ $labels.exporter }}/{{ $labels.queue }}&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Buyerportal: Dummy alert for working hours {{ $labels.queue }}&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;* don&#39;t do anything, dummy alert *&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">severity</span>: <span style="color:#ae81ff">workhours</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">team</span>: <span style="color:#ae81ff">buyers</span></span></span></code></pre></div>
 </div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Gitlab: continuous delivery setup for Clojure/Java with Docker</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div>Recently I was doing a https://github.com/mprokopov/it-service-sse and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.
-Long story short, here my .gitlab-ci.yml which took me a couple of days to figure out what is the “artifact” in Gitlab and how is it suppose to survive between artifact builds and docker builds. </div>
-    
-    
-        <a href="/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Read More…</a>
-    
 </div>
-<div class="border-bottom"></div>
+    <div id="remark42"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/draft_how-to-speed-up-ruby-bundle-gems-fetch-1110de70ccbc/">How to speed up ruby bundle gems fetch</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div>Short answer: use https://github.com/geminabox/geminabox for caching gems on your own host, or in your local network.
-I was using bundler’s vendor/cache in docker container, but with such improvement my container size grown up to 1,2Gb very quickly.
-Supply following settings to your geminabox container
-RUBYGEMS_PROXY=true
-https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800 </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2020-12-09/">Keycloak</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div>docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:11.0.3  </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/draft_one-account--all-of-google--24ec9b332a4a/">One account. All of Google.</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div>One account. All of Google.
-Originally published at www.blogger.com. </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/draft_one-account--all-of-google--4681a5761d84/">One account. All of Google.</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div>One account. All of Google.
-Originally published at www.blogger.com. </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2020-05-31-pharo/">Pharo testing</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div>Suprisingly, Pharo turns out to be interesting solution for managing web pages fully by the pure OO classes and objects. </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/draft_ruby-tricks-54c9925f2714/">Ruby tricks</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div>Use binding object to run code within other object context.
-https://ruby-doc.org/core-2.2.0/Binding.html
-stderr output
-highlight your code and insert in presentation
-https://gist.github.com/jimbojsb/1630790 </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="pagination">
-    
-    <div class="pagination__prev">
-        <a href="/page/27/" class="pagination__icon">&lt;&lt;</a>
-        <a href="/page/27/">Previous page</a>
-    </div>
-    
-    
-    <div class="pagination__next">
-        <a href="/page/29/">Next page</a>
-        <a href="/page/29/" class="pagination__icon">&gt;&gt;</a>
-    </div>
-    
 </div>
 <div class="sidebar"><div class="sidebar__visitcard">
     <div class="sidebar__heading">Profile links</div><p></p>
