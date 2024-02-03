@@ -14,16 +14,19 @@
     <loc>https://prokopov.me/pages/about/</loc>
     <lastmod>2020-12-08T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://prokopov.me/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://prokopov.me/posts/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://prokopov.me/posts/2024-02-02/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://prokopov.me/posts/2024-01-24/</loc>
     <lastmod>2024-01-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/</loc>
-    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://prokopov.me/tags/monitoring/</loc>
-    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://prokopov.me/posts/</loc>
     <lastmod>2024-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/tags/prometheus/</loc>

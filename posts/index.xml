@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wireguard VPN Overview</title>
+      <link>https://prokopov.me/posts/2024-02-02/</link>
+      <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-02-02/</guid>
+      <description>WireGuard is very new protocol. Greatly simplified and faster comparing to alternatives, it uses UDP as primary transport and encapsulates encrypted traffic from IP layer.&#xA;Some of the differences help it to stand out of other VPN solutions:&#xA;Routing as a part of Peer configuration QR code for simplified configuration using camera on mobile devices. iPhone, iPad and other things, you&amp;#39;ll love it! Site-to-site or client-to-server connections are not very different from the configuration perspective Supports DNS as part of configuration for Peer Easy to implement routing for all traffic or for only for selected networks I was able to connect Mikrotik, FrtizBox 6690, macos, iPad and iPhone using WireGuard with little efforts.</description>
+    </item>
     <item>
       <title>How to suppress alerts in Prometheus for non-working hours</title>
       <link>https://prokopov.me/posts/2024-01-24/</link>

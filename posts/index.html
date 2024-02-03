@@ -47,6 +47,139 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2024-02-02/">Wireguard VPN Overview</a>
+    </h1>
+    <div class="date">02.02.2024</div>
+    <div>
+<p>
+WireGuard is very new protocol.
+Greatly simplified and faster comparing to alternatives, it uses UDP as primary transport and encapsulates encrypted traffic from IP layer.</p>
+<p>
+Some of the differences help it to stand out of other VPN solutions:</p>
+<ul>
+<li>Routing as a part of Peer configuration</li>
+<li>QR code for simplified configuration using camera on mobile devices. iPhone, iPad and other things, you&#39;ll love it!</li>
+<li>Site-to-site or client-to-server connections are not very different from the configuration perspective</li>
+<li>Supports DNS as part of configuration for Peer</li>
+<li>Easy to implement routing for all traffic or for only for selected networks</li>
+</ul>
+<p>I was able to connect Mikrotik, FrtizBox 6690, macos, iPad and iPhone using WireGuard with little efforts.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Concepts
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Virtual Network Interface.
+Peers configuration.
+Private key.</p>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+Peers configuration
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p>WireGuard uses the table of peers of the folliwing structure</p>
+<div id="outline-container-headline-3" class="outline-4">
+<h4 id="headline-3">
+Routed network per peer
+</h4>
+<div id="outline-text-headline-3" class="outline-text-4">
+<p>It can be even just a single host, or the whole subnet</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-4">
+<h4 id="headline-4">
+Public key of the peer
+</h4>
+<div id="outline-text-headline-4" class="outline-text-4">
+<p>The peer is either single client or router for the subnet</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+Private key
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<p>You don&#39;t distribute this part. Private key is used to decrypt traffic that was encrypted using public key. Therefore we put public key as a part of configuration to every distributable peer config.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+Configuration
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>In order to understand how to create config, let&#39;s try to understand what happends on the interface.</p>
+<div id="outline-container-headline-7" class="outline-3">
+<h3 id="headline-7">
+What happends on server
+</h3>
+<div id="outline-text-headline-7" class="outline-text-3">
+<ol>
+<li>Virtual network interface of the server (wireguard) accepts a packet for routing.</li>
+<li>It checks if the destination for packet is among Peers section of config.</li>
+<li>If the peer is defined, the packet is encrypted using peer public key and sent to remote address of the client.</li>
+<li>To accept the packet the client should be connected to server. For this client uses &#34;Endpoint&#34; section of the config. It contains IP and Port of the server.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-3">
+<h3 id="headline-8">
+What happends on client
+</h3>
+<div id="outline-text-headline-8" class="outline-text-3">
+<ol>
+<li>Client received the packet on its virtual interface.</li>
+<li>The packet is encrypted using public key of this client, so it tries to decrypt it using own private key.</li>
+<li>If succeeds, continues with routing, i.e. sends to other destinations packet designated to connected subnet.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-3">
+<h3 id="headline-9">
+What is required for config
+</h3>
+<div id="outline-text-headline-9" class="outline-text-3">
+<p>So it becomes apparent what to do.</p>
+<ul>
+<li>We need to exchange public keys for server and client.</li>
+</ul>
+<p>Configuration for client should contain server public key.
+Configuration for server should contain client public key.</p>
+<ul>
+<li>Address of client subnet should be specified on server in the peer section.</li>
+<li>Client should contain Endpoint - IP:Port of the server</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-2">
+<h2 id="headline-10">
+Mikrotik
+</h2>
+<div id="outline-text-headline-10" class="outline-text-2">
+<p>Mikrotik is supported from version 7 of RouterOS.</p>
+<p>
+<img src="./mikrotik.png" alt="./mikrotik.png" title="./mikrotik.png" /></p>
+</div>
+</div>
+<div id="outline-container-headline-11" class="outline-2">
+<h2 id="headline-11">
+Fritzbox 6699
+</h2>
+<div id="outline-text-headline-11" class="outline-text-2">
+<p>
+<img src="./fritzbox.png" alt="./fritzbox.png" title="./fritzbox.png" /></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/2024-01-24/">How to suppress alerts in Prometheus for non-working hours</a>
     </h1>
     <div class="date">24.01.2024</div>
