@@ -6,14 +6,21 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Fri, 02 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SRE Simplified - Introduction</title>
+      <link>https://prokopov.me/posts/2024-03-10/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-03-10/</guid>
+      <description>What are the SRE concepts, like Service Level Agreement and Reliability?&#xA;The challenge is to explain it in simplified manner, without deep discussions on different monitoring strategies.&#xA;In this first video I tried to just to scratch the surface.</description>
+    </item>
     <item>
       <title>Wireguard VPN Overview</title>
       <link>https://prokopov.me/posts/2024-02-02/</link>
       <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/2024-02-02/</guid>
-      <description>WireGuard is very new protocol. Greatly simplified and faster comparing to alternatives, it uses UDP as primary transport and encapsulates encrypted traffic from IP layer.&#xA;Some of the differences help it to stand out of other VPN solutions:&#xA;Routing as a part of Peer configuration QR code for simplified configuration using camera on mobile devices. iPhone, iPad and other things, you&amp;#39;ll love it! Site-to-site or client-to-server connections are not very different from the configuration perspective Supports DNS as part of configuration for Peer Easy to implement routing for all traffic or for only for selected networks I was able to connect Mikrotik, FrtizBox 6690, macos, iPad and iPhone using WireGuard with little efforts.</description>
+      <description>WireGuard is a relatively new protocol. It claims to be greatly simplified and faster comparing to alternatives, it uses UDP as primary transport and encapsulates encrypted traffic from IP layer. Let&amp;#39;s investigate if it&amp;#39;s true!&#xA;Some differences help to stand out of other VPN solutions:&#xA;Routing as a part of Peer configuration QR code for simplified configuration using camera on mobile devices. iPhone, iPad and other things, you&amp;#39;ll love it!</description>
     </item>
     <item>
       <title>How to suppress alerts in Prometheus for non-working hours</title>
