@@ -6,7 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Read</title>
@@ -28,6 +28,13 @@
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/pages/about/</guid>
       <description>Hi, my name is Maksym Prokopov. These days I mostly involved in DevOps, Lean IT and IT services.&#xA;A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages. Surprisingly, but I started using PHP for my job today again after almost 18 years. What a destiny!&#xA;Since 2006 I started using Ruby on Rails a lot. 2015 got addicted to Clojure and ClojureScript and did some production-ready things.</description>
+    </item>
+    <item>
+      <title>SRE Simplified - Service Level Agreement</title>
+      <link>https://prokopov.me/posts/2024-03-17/</link>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-03-17/</guid>
+      <description>The next issue of SRE Simplified is about Service Level Agreement.&#xA;Service Level Agreement is an agreement between service supplier and a customer about what the target quality of the service is and what are the consequences if the promise is broken.&#xA;But the challenge here is to eastablish monitoring and alerting.&#xA;This video provides very simplified example of an SLA for the company that produces apples.&#xA;Document Title </description>
     </item>
     <item>
       <title>SRE Simplified - Introduction</title>
