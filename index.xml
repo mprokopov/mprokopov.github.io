@@ -51,6 +51,13 @@
       <description>What are the SRE concepts, like Service Level Agreement and Reliability?&#xA;The challenge is to explain it in simplified manner, without deep discussions on different monitoring strategies.&#xA;In this first video I tried to just to scratch the surface.</description>
     </item>
     <item>
+      <title>Palettro - VSCode like command palette in any macOS application</title>
+      <link>https://prokopov.me/posts/2024-03-26/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-03-26/</guid>
+      <description>Short video with overview of Palettro, small utility that brings VSCode like navigation to any macOS application to boost your productivity.</description>
+    </item>
+    <item>
       <title>Wireguard VPN Overview</title>
       <link>https://prokopov.me/posts/2024-02-02/</link>
       <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
