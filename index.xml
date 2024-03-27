@@ -6,7 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 25 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Read</title>
@@ -30,6 +30,13 @@
       <description>Hi, my name is Maksym Prokopov. These days I mostly involved in DevOps, Lean IT and IT services.&#xA;A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages. Surprisingly, but I started using PHP for my job today again after almost 18 years. What a destiny!&#xA;Since 2006 I started using Ruby on Rails a lot. 2015 got addicted to Clojure and ClojureScript and did some production-ready things.</description>
     </item>
     <item>
+      <title>Palettro - VSCode like command palette in any macOS application</title>
+      <link>https://prokopov.me/posts/2024-03-26/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-03-26/</guid>
+      <description>Short video with overview of Palettro, small utility that brings VSCode like navigation to any macOS application to boost your productivity.</description>
+    </item>
+    <item>
       <title>SRE Simplified - Error Budget</title>
       <link>https://prokopov.me/posts/2024-03-25/</link>
       <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
@@ -49,13 +56,6 @@
       <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/2024-03-10/</guid>
       <description>What are the SRE concepts, like Service Level Agreement and Reliability?&#xA;The challenge is to explain it in simplified manner, without deep discussions on different monitoring strategies.&#xA;In this first video I tried to just to scratch the surface.</description>
-    </item>
-    <item>
-      <title>Palettro - VSCode like command palette in any macOS application</title>
-      <link>https://prokopov.me/posts/2024-03-26/</link>
-      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/2024-03-26/</guid>
-      <description>Short video with overview of Palettro, small utility that brings VSCode like navigation to any macOS application to boost your productivity.</description>
     </item>
     <item>
       <title>Wireguard VPN Overview</title>
