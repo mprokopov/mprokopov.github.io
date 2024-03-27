@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compliance as a Code</title>
+      <link>https://prokopov.me/posts/2024-03-27/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-03-27/</guid>
+      <description>Recently, I stumbled upon a concept that sounded new to me: Compliance as a Code.&#xA;The core idea is to &amp;ldquo;embed compliance policies into the code that can be repeated and tested automatically.&amp;rdquo; But what does it mean in practice?&#xA;For example, consider PCI DSS, which requires measures to secure credit card information to ensure compliance. Tools like Terraform, Ansible, and others should contain the code for encryption, access control, and data obfuscation.</description>
+    </item>
     <item>
       <title>Palettro - VSCode like command palette in any macOS application</title>
       <link>https://prokopov.me/posts/2024-03-26/</link>
