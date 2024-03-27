@@ -46,6 +46,38 @@
 
 <div class="article">
     <h1>
+        <a href="/posts/2020-12-24/">Gitlab limit parallel pipeline execution</a>
+    </h1>
+    <div class="date">24.12.2020</div>
+    <div><p>In brief  - use the <code>resource_group</code> directive.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">stages</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobA</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">resource_group</span>: <span style="color:#ae81ff">jobA</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">script</span>: 
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">echo HelloA</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobB</span>: 
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">script</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">echo HelloB</span>
+</span></span></code></pre></div><p>There are some useful patterns for Resource Group.</p>
+<p>resource_group: $CI_ENVIRONMENT_NAME &hellip; Limit per environment</p>
+<p>resource_group: $CI_JOB_NAME &hellip; Limit per job</p>
+<p>resource_group: $CI_COMMIT_REF_NAME:$CI_JOB_NAME &hellip; Limit per job per branch</p>
+<p>resource_group: $CI_COMMIT_REF_NAME:$CI_ENVIRONMENT_NAME &hellip; Limit per environment per branch (e.g. review apps)</p> </div>
+    
+    
+        <a href="/posts/2020-12-24/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/posts/2020-12-07/">2020 week 49 links</a>
     </h1>
     <div class="date">07.12.2020</div>
@@ -169,22 +201,6 @@ Prerequisites brew https://brew.sh/ Installation Install PHP brew install php@7.
     
     
         <a href="/posts/@mprokopov/setting-up-a-php-development-environment-with-apache2-and-php-fpm-on-macos-catalina-21d74a90aeac/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2020-06-02-pharo-raspberry-pi/">Awesome video using REPL with Pharo on Raspberry Pi</a>
-    </h1>
-    <div class="date">02.06.2020</div>
-    <div><p>Totally awesome video of remote REPL with interaction on the Raspberry Pi device.</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/0H9of7PQet0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-<p>If you want to know more about Pharo and Smalltalk, I encourage you to complete <a href="https://www.fun-mooc.fr/courses/course-v1:inria+41010+self_paced/about">this the free Pharo course</a>.</p> </div>
     
 </div>
 <div class="border-bottom"></div>

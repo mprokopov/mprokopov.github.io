@@ -9,6 +9,13 @@
     <lastBuildDate>Wed, 27 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Ansible Use Cases</title>
+      <link>https://prokopov.me/posts/2024-03-27-ansible/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-03-27-ansible/</guid>
+      <description>While Ansible is a great tool for certain use cases, such as building new AMIs when used with Packer, it has some downsides. These become apparent when using it for container orchestration (which I have witnessed at scale) or keeping the configuration of a set of nodes in sync.&#xA;Another significant, though not dramatic, downside is related to Python version and dependency management. This adds extra complexity that I would prefer to avoid in a system management tool.</description>
+    </item>
+    <item>
       <title>Compliance as a Code</title>
       <link>https://prokopov.me/posts/2024-03-27/</link>
       <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
