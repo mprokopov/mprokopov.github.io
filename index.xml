@@ -34,7 +34,7 @@
       <link>https://prokopov.me/posts/2024-03-28/</link>
       <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/2024-03-28/</guid>
-      <description>Run Large Language Model on your PC in 5 minutes For the summary&#xA;I used model whisper to extract text from audio of this video and asked mistral to summarize it.&#xA;So, here you go:&#xA;The speaker explains how to download, install, and set up LLMA, and then demonstrates how to use it to run a specific model called &amp;ldquo;mistrial&amp;rdquo; with a pirate-themed prompt. They also discuss the benefits of using LLMA locally, such as faster processing times compared to cloud services like OpenAI&amp;rsquo;s API.</description>
+      <description>Run Large Language Model on your PC in 5 minutes For the summary&#xA;I used model whisper to extract text from audio of this video and asked mistral to summarize it.&#xA;So, here you go, output from mistral 7b:&#xA;The speaker explains how to download, install, and set up LLMA, and then demonstrates how to use it to run a specific model called &amp;ldquo;mistrial&amp;rdquo; with a pirate-themed prompt. They also discuss the benefits of using LLMA locally, such as faster processing times compared to cloud services like OpenAI&amp;rsquo;s API.</description>
     </item>
     <item>
       <title>Ansible Use Cases</title>
