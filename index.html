@@ -51,8 +51,8 @@
     <div class="date">28.03.2024</div>
     <div>Run Large Language Model on your PC in 5 minutes For the summary
 I used model whisper to extract text from audio of this video and asked mistral to summarize it.
-So, here you go, output from mistral 7b:
-The speaker explains how to download, install, and set up LLMA, and then demonstrates how to use it to run a specific model called &ldquo;mistrial&rdquo; with a pirate-themed prompt. They also discuss the benefits of using LLMA locally, such as faster processing times compared to cloud services like OpenAI&rsquo;s API. </div>
+echo &#34;this is a transcript of the video. Summarize this\n $(cat subtitles.txt)&#34; | ollama run gemma:7b So, here you go, output from mistral 7b:
+The speaker explains how to download, install, and set up LLMA, and then demonstrates how to use it to run a specific model called &ldquo;mistrial&rdquo; with a pirate-themed prompt. </div>
     
     
         <a href="/posts/2024-03-28/">Read More…</a>
