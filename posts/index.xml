@@ -37,6 +37,13 @@
       <description>Short video with overview of Palettro, small utility that brings VSCode like navigation to any macOS application to boost your productivity.</description>
     </item>
     <item>
+      <title>Palettro - VSCode like command palette in any macOS application</title>
+      <link>https://prokopov.me/posts/2024-03-31-sql-llm-mistral/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-03-31-sql-llm-mistral/</guid>
+      <description>Very simplified about the AI revolution happening now. We are only at its very beginning. Next, automation and integration among different AIs will increase, leading to more and more complex tasks.&#xA;There are still many problems, such as - training a truly large model, and making it accessible for general use is still very expensive and very energy-consuming. It is still not very clear what to do with regulations, because it works both ways, making it significantly easier to assemble some kind of bomb at home.</description>
+    </item>
+    <item>
       <title>SRE Simplified - Error Budget</title>
       <link>https://prokopov.me/posts/2024-03-25/</link>
       <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
