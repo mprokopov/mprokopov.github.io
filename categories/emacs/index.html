@@ -18,7 +18,7 @@
 <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
 
 
-<link rel="stylesheet" href="https://prokopov.me/style.min.529a1e8f5e9374873172bc21e641ade28cf5a3b087f857a278f82e67c2888e22.css">
+<link rel="stylesheet" href="https://prokopov.me/style.min.24166a1e761f51442033103dc963330d3526a4339a58ab46d3fee0c94a62f4a3.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -42,6 +42,39 @@
     
 </div>
 
+
+<div class="article">
+    <h1>
+        <a href="https://prokopov.me/posts/emacs-for-beginners/">Emacs For Beginners</a>
+    </h1>
+    <div class="date">10.05.2024</div>
+    <div><blockquote>
+<p>The article provides overview of facts why Emacs is so different but also so
+powerful comparing to other editors. It gives a good starting point for the
+reader to understand the fundamentals and start own journey to effective work.</p>
+</blockquote>
+<p>First of all, Emacs is a runtime environment with <em>a set of named functions</em> you can call any time. Use <kbd>Meta-x</kbd> key combination to spawn a list of “interactive” functions. There are more functions, but only those who marked as <em>interactive</em> supposed to be in this list.</p>
+<p>Functions are written in a dialect of Lisp, so called emacs-lisp. If you want one sentence definition of lisp, here it is. First argument in a brackets is a <strong>function name</strong>, the <em>rest is its arguments</em>. Example</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(<span style="color:#a6e22e">+</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><p>In this example + is a function name, 1 and 2 are the arguments. The output is 3. Yeah, this is it. Emacs can execute a freshly written function on the fly.</p>
+<p>Every time you hit a keystroke in Emacs you call a function. Even for a cursor movement. There is an easy way to find what function is bound to a keystroke by using <kbd>C-h k</kbd> followed by the keystroke. Remarkable feature is a documentation for any function is only <kbd>C-h f</kbd> away. This makes Emacs exploration a breeze.</p>
+<p>An opened file is called a <em>buffer</em>. Depending on the file type, Emacs loads automatically a set of functions and key bindings to those functions. This is called a <em>mode</em>. Also how the content of the buffer is highlighted is defined in the “mode”. A set of functions, syntax highlighting and keybindings is called a <em>major</em> mode.</p>
+<p>Whenever you switch between buffers, Emacs also switches the major mode depending on the selected buffer.</p>
+<p>There are different <em>modes</em> for different purposes. Sometimes you want to share the same functionality across different types of buffers, so what you typically have in opened buffer is a mixture of different “modes”.
+A set of shared functions with keybindings is called a <em>minor</em> mode.</p>
+<p>A <em>package</em> is a way to distribute such modes. Other editors call this a “plug-in”. There are repositories for the packages, such as MELPA. In case you want to install a new package, hit <kbd>Meta-X</kbd> and call the function <code>list-packages-list</code>.</p>
+<p>Despite you can install packages and change settings manually, among the best practices is to keep Emacs <em>configuration as a code</em>. This is why you might find many “dotemacs“ repositories with configuration of other users in internet. It’s always a great source of insights of how other people use Emacs.</p>
+<p>Typically users start their journey with <em>popular packages</em> and a standard or community-driven configuration, but with the time they recognize own repetitive tasks and create their own functions and assign them own keybindings. In this way they end up having an editor naturally fitting their workflows, saving significant amount of time every day.</p>
+<p>Though, the learning curve is quite steep and there are good reasons for this. Emacs lisp is not so popular as Javascript or Python. The naming is always hard and is a something that is not easy to change over time. Other editors don’t use the same terminology as <em>packages, buffers, modes, frames and windows</em>. The syntax highlighting using <em>regexps</em> is a quite outdated technology nowadays. Even regexp library has a very special syntax from what users got used to. Another big issue is a combination of packages can be fragile, it’s a very common case when a package after update can <em>break functionality</em> of other packages.</p>
+<p>Even key modifiers are named differently from other editors: <em>Meta, Hyper, Super</em>.
+My personal take on default keybindings - they’re aweful and RSI  prone. Once you realize the <em>Control</em> key supposed to be a key closest to the spacebar, as it was designed for Space Cadet keyboards (it had also Meta, Hyper and Super keys), it became obvious how to make Emacs usage <em>much more wrist friendly</em>. Just do the same on your keyboard, map the control key to whatever key you have closest to the spacebar, in my case it’s <em>cmd</em> on mac keyboard.</p>
+<h2 id="summary">Summary</h2>
+<p>In essence Emacs is an editing environment with set of functions, variables, syntax highlighting and keybindings.</p>
+<p>Bare Emacs is not so feature reach, but packages ecosystem provides a good foundation for any type of everyday tasks and some of those are unmatched in another editors.</p>
+<p>The real power comes after user learns enough fundamentals to start customizing Emacs to perform repetitive tasks faster.</p>
+<p>Though, the learning curve can be steep for different reasons and it’s strongly advised to change default keybindings to improve ergonomic.</p>
+</div>
+</div>
 
 <div class="article">
     <h1>
@@ -124,7 +157,7 @@ Then I saw old design of the Space Kadet keyboard, and it had Control right near
         
         <li><a href="/categories/education/">education</a> (2) </li>
         
-        <li><a href="/categories/emacs/">emacs</a> (2) </li>
+        <li><a href="/categories/emacs/">emacs</a> (3) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         

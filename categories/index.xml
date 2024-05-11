@@ -6,8 +6,15 @@
     <description>Recent content in Categories on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>emacs</title>
+      <link>https://prokopov.me/categories/emacs/</link>
+      <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/categories/emacs/</guid>
+      <description></description>
+    </item>
     <item>
       <title>macos</title>
       <link>https://prokopov.me/categories/macos/</link>
@@ -62,13 +69,6 @@
       <link>https://prokopov.me/categories/til/</link>
       <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/categories/til/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>emacs</title>
-      <link>https://prokopov.me/categories/emacs/</link>
-      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/categories/emacs/</guid>
       <description></description>
     </item>
     <item>

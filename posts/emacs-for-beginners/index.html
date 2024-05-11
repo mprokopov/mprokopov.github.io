@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal blog</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<script>
+ var remark_config = {
+   host: 'https://remark.prokopov.me',
+   site_id: 'remark',
+   no_footer: true
+ }
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+
+
+<link rel="stylesheet" href="https://prokopov.me/style.min.24166a1e761f51442033103dc963330d3526a4339a58ab46d3fee0c94a62f4a3.css">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                                                                                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                                                                                                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,'script','dataLayer','GTM-WB9KBZ5');</script>
+
+<script defer data-domain="prokopov.me" src="https://analytics.prokopov.me/js/script.js"></script>
+</head>
+    <body><div class="header">
+    <a class="title" href="/"><div id="title">Maksym Prokopov personal blog</div><div id="description">Idea is a something worth sharing</div></a>
+</div>
+<div class="nav">
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/reading/">Read</a></div>
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/creating/">Create</a></div>
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/about/">About</a></div>
+    
+</div>
+
+<div class="article">
+    <h1>
+        <a href="https://prokopov.me/posts/emacs-for-beginners/">Emacs For Beginners</a>
+    </h1>
+    <div class="date">10.05.2024</div>
+    
+    <h4>Reading time: 4 min.</h4>
+    
+    <div><blockquote>
+<p>The article provides overview of facts why Emacs is so different but also so
+powerful comparing to other editors. It gives a good starting point for the
+reader to understand the fundamentals and start own journey to effective work.</p>
+</blockquote>
+<p>First of all, Emacs is a runtime environment with <em>a set of named functions</em> you can call any time. Use <kbd>Meta-x</kbd> key combination to spawn a list of “interactive” functions. There are more functions, but only those who marked as <em>interactive</em> supposed to be in this list.</p>
+<p>Functions are written in a dialect of Lisp, so called emacs-lisp. If you want one sentence definition of lisp, here it is. First argument in a brackets is a <strong>function name</strong>, the <em>rest is its arguments</em>. Example</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(<span style="color:#a6e22e">+</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><p>In this example + is a function name, 1 and 2 are the arguments. The output is 3. Yeah, this is it. Emacs can execute a freshly written function on the fly.</p>
+<p>Every time you hit a keystroke in Emacs you call a function. Even for a cursor movement. There is an easy way to find what function is bound to a keystroke by using <kbd>C-h k</kbd> followed by the keystroke. Remarkable feature is a documentation for any function is only <kbd>C-h f</kbd> away. This makes Emacs exploration a breeze.</p>
+<p>An opened file is called a <em>buffer</em>. Depending on the file type, Emacs loads automatically a set of functions and key bindings to those functions. This is called a <em>mode</em>. Also how the content of the buffer is highlighted is defined in the “mode”. A set of functions, syntax highlighting and keybindings is called a <em>major</em> mode.</p>
+<p>Whenever you switch between buffers, Emacs also switches the major mode depending on the selected buffer.</p>
+<p>There are different <em>modes</em> for different purposes. Sometimes you want to share the same functionality across different types of buffers, so what you typically have in opened buffer is a mixture of different “modes”.
+A set of shared functions with keybindings is called a <em>minor</em> mode.</p>
+<p>A <em>package</em> is a way to distribute such modes. Other editors call this a “plug-in”. There are repositories for the packages, such as MELPA. In case you want to install a new package, hit <kbd>Meta-X</kbd> and call the function <code>list-packages-list</code>.</p>
+<p>Despite you can install packages and change settings manually, among the best practices is to keep Emacs <em>configuration as a code</em>. This is why you might find many “dotemacs“ repositories with configuration of other users in internet. It’s always a great source of insights of how other people use Emacs.</p>
+<p>Typically users start their journey with <em>popular packages</em> and a standard or community-driven configuration, but with the time they recognize own repetitive tasks and create their own functions and assign them own keybindings. In this way they end up having an editor naturally fitting their workflows, saving significant amount of time every day.</p>
+<p>Though, the learning curve is quite steep and there are good reasons for this. Emacs lisp is not so popular as Javascript or Python. The naming is always hard and is a something that is not easy to change over time. Other editors don’t use the same terminology as <em>packages, buffers, modes, frames and windows</em>. The syntax highlighting using <em>regexps</em> is a quite outdated technology nowadays. Even regexp library has a very special syntax from what users got used to. Another big issue is a combination of packages can be fragile, it’s a very common case when a package after update can <em>break functionality</em> of other packages.</p>
+<p>Even key modifiers are named differently from other editors: <em>Meta, Hyper, Super</em>.
+My personal take on default keybindings - they’re aweful and RSI  prone. Once you realize the <em>Control</em> key supposed to be a key closest to the spacebar, as it was designed for Space Cadet keyboards (it had also Meta, Hyper and Super keys), it became obvious how to make Emacs usage <em>much more wrist friendly</em>. Just do the same on your keyboard, map the control key to whatever key you have closest to the spacebar, in my case it’s <em>cmd</em> on mac keyboard.</p>
+<h2 id="summary">Summary</h2>
+<p>In essence Emacs is an editing environment with set of functions, variables, syntax highlighting and keybindings.</p>
+<p>Bare Emacs is not so feature reach, but packages ecosystem provides a good foundation for any type of everyday tasks and some of those are unmatched in another editors.</p>
+<p>The real power comes after user learns enough fundamentals to start customizing Emacs to perform repetitive tasks faster.</p>
+<p>Though, the learning curve can be steep for different reasons and it’s strongly advised to change default keybindings to improve ergonomic.</p>
+</div>
+    <div id="remark42"></div>
+
+</div>
+<div class="sidebar"><div class="sidebar__visitcard">
+    <div class="sidebar__heading">Profile links</div><p></p>
+    <div class="textwidget profile__link">
+        
+        <a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 18px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Max Prokopov" rel="noopener noreferrer">Max Prokopov</a><br><a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" title="Max Prokopov" rel="noopener noreferrer"><img src="https://badge.facebook.com/badge/564099895.8308.711585450.png" style="border: 0px;"></a>
+        
+    </div>
+    <div class="profile__link">
+        <a href="https://twitter.com/mprokopov?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @mprokopov</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div class='LI-profile-badge profile__link' data-version='v1' data-size='medium' data-locale='en_US'
+        data-type='horizontal' data-theme='light' data-vanity='max-prokopov'>
+        <a class='LI-simple-link' href='https://in.linkedin.com/in/max-prokopov?trk=profile-badge' >
+            Maksym Prokopov
+        </a>
+    </div>
+</div>
+<div class="sidebar__categories">
+    <div class="sidebar__heading">Categories</div>
+    <p></p>
+    <ul class="sidebar__links sidebar__category">
+        
+        <li><a href="/categories/ansible/">ansible</a> (1) </li>
+        
+        <li><a href="/categories/apache/">apache</a> (3) </li>
+        
+        <li><a href="/categories/business/">business</a> (1) </li>
+        
+        <li><a href="/categories/clojure/">clojure</a> (1) </li>
+        
+        <li><a href="/categories/docker/">docker</a> (1) </li>
+        
+        <li><a href="/categories/education/">education</a> (2) </li>
+        
+        <li><a href="/categories/emacs/">emacs</a> (3) </li>
+        
+        <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
+        
+        <li><a href="/categories/git/">git</a> (1) </li>
+        
+        <li><a href="/categories/gtd/">GTD</a> (4) </li>
+        
+        <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+        
+        <li><a href="/categories/it-support/">IT support</a> (1) </li>
+        
+        <li><a href="/categories/kubernetes/">kubernetes</a> (1) </li>
+        
+        <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
+        
+        <li><a href="/categories/links/">links</a> (6) </li>
+        
+        <li><a href="/categories/linux/">linux</a> (1) </li>
+        
+        <li><a href="/categories/macos/">macos</a> (2) </li>
+        
+        <li><a href="/categories/news/">news</a> (1) </li>
+        
+        <li><a href="/categories/org-mode/">org-mode</a> (1) </li>
+        
+        <li><a href="/categories/rails/">rails</a> (1) </li>
+        
+        <li><a href="/categories/ruby/">ruby</a> (2) </li>
+        
+        <li><a href="/categories/sip/">sip</a> (1) </li>
+        
+        <li><a href="/categories/til/">til</a> (1) </li>
+        
+        <li><a href="/categories/tips-and-tricks/">tips and tricks</a> (1) </li>
+        
+        <li><a href="/categories/vmware/">vmware</a> (2) </li>
+        
+        <li><a href="/categories/windows/">windows</a> (4) </li>
+        
+        <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
+        
+        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (4) </li>
+        
+        <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">веб-разработка</a> (10) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">виртуализация</a> (1) </li>
+        
+        <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">гаджеты</a> (2) </li>
+        
+        <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">железо</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">за жизнь</a> (117) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">здоровье</a> (4) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (43) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">маркетинг</a> (2) </li>
+        
+        <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (24) </li>
+        
+        <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">управление</a> (1) </li>
+        
+        <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
+        
+    </ul>
+</div>
+<div class="sidebar__friends">
+    <div class="sidebar__heading">Friends</div><p></p>
+	<ul class="sidebar__links">
+      
+      <li><a href="https://it-premium.com.ua" title="IT-Premium лучший аутсорсинг в Украине" >IT-Premium аутсорсинг от профессионалов</a></li>
+
+      
+      <li><a href="http://nexusonrails.blogspot.com/" title="Мой блог на blogger.com о Ruby on Rails" >Nexus on Rails</a></li>
+
+      
+      <li><a href="https://blog.it-premium.com.ua" title="Блог Максима Прокопова про Docker, Xen и CoreOS и всякое такое" rel="friend">Maksym Prokopov about Docker, Xen и CoreOS</a></li>
+
+      
+      <li><a href="https://nexus.org.ua" title="Сайт об IT технологиях" >Мой хардкорный убер сайт 2005 года Nexus Notes</a></li>
+
+      
+      <li><a href="https://condom.org.ua" title="Контрацепция в деталях" >Проект о контрацепции</a></li>
+
+      
+      <li><a href="https://it-premium.livejournal.com/" title="" rel="friend co-worker neighbor">IT-Premium company blog</a></li>
+
+      
+	</ul>
+</div>
+</div>
+
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB9KBZ5"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+</body>
+</html>

@@ -6,8 +6,22 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs For Beginners</title>
+      <link>https://prokopov.me/posts/emacs-for-beginners/</link>
+      <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/emacs-for-beginners/</guid>
+      <description>The article provides overview of facts why Emacs is so different but also so powerful comparing to other editors. It gives a good starting point for the reader to understand the fundamentals and start own journey to effective work.&#xA;First of all, Emacs is a runtime environment with a set of named functions you can call any time. Use Meta-x key combination to spawn a list of “interactive” functions. There are more functions, but only those who marked as interactive supposed to be in this list.</description>
+    </item>
+    <item>
+      <title>Use LLM to automate Amazon purchase categorization</title>
+      <link>https://prokopov.me/posts/2024-04-01/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-04-01/</guid>
+      <description>Used Mistral-7b LLM to map my Amazon purchases to my home ledger accounts.&#xA;It worked surprisingly well!&#xA;Definitely worth integrating into accounting automation routines.</description>
+    </item>
     <item>
       <title>Run Large Language Model on your PC in 5 minutes</title>
       <link>https://prokopov.me/posts/2024-03-28/</link>

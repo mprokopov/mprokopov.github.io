@@ -19,7 +19,7 @@
 <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
 
 
-<link rel="stylesheet" href="https://prokopov.me/style.min.529a1e8f5e9374873172bc21e641ade28cf5a3b087f857a278f82e67c2888e22.css">
+<link rel="stylesheet" href="https://prokopov.me/style.min.24166a1e761f51442033103dc963330d3526a4339a58ab46d3fee0c94a62f4a3.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -43,6 +43,74 @@
     
 </div>
 
+
+<div class="article">
+    <h1>
+        <a href="/posts/2021-02-02-org-protocol-chrome-no-confirmation/">Disable Chrome browser confirmation to open external protocol with org-protocol</a>
+    </h1>
+    <div class="date">02.02.2021</div>
+    <div><p>I recently added org-capture chrome extension to my toolbelt. Unfortunalely chrome annoys me by asking if I want to open this protocol link every time.</p>
+<p>Here is the simple way to fix this.</p>
+<p>Execute this in the shell</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>defaults write com.google.Chrome URLAllowlist -array-add -string <span style="color:#e6db74">&#39;org-protocol://*&#39;</span>
+</span></span></code></pre></div><p>check
+<a href="chrome://policy">chrome://policy</a> url that it contains proper settings for org-protocol</p>
+<p><img src="/uploads/chrome-policy.png" alt="Chrome policy"></p> </div>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/2021-01-08/">Emacs literate programming and SQL</a>
+    </h1>
+    <div class="date">09.01.2021</div>
+    <div><p>I&rsquo;m really crying of how finally emacs can be used for the literate programming and for some testing.</p>
+<p>For restclient, this creates POST request with json data structure in request body.</p>
+<pre tabindex="0"><code class="language-org-mode" data-lang="org-mode">  #+begin_src restclient
+    POST http://muster.test/index.php?cl=ping
+    Content-Type: application/json
+
+
+    {
+    &#34;essentialtech&#34;: true,
+    &#34;googleadwords&#34;: false,
+    &#34;googleanalytics&#34;: false,
+    &#34;googlemaps&#34;: true,
+    &#34;gtmbasedtech&#34;: false,
+    &#34;terminland&#34;: true,
+    &#34;userlike&#34;: true
+    }
+#+end_src
+
+#+RESULTS:
+#+BEGIN_SRC js
+{
+  &#34;message&#34;: &#34;success&#34;
+}
+// POST http://muster.test/index.php?cl=ping
+// HTTP/1.1 200 OK
+// Date: Tue, 09 Feb 2021 13:45:07 GMT
+// Server: Apache/2.4.46 (Unix) OpenSSL/1.1.1i
+// X-Powered-By: PHP/7.1.33
+// Expires: Thu, 19 Nov 1981 08:52:00 GMT
+// Cache-Control: no-store, no-cache, must-revalidate
+// Pragma: no-cache
+// Set-Cookie: language=0; path=/; HttpOnly
+// Set-Cookie: sid=0fvjai2h5h2pso52p4vq9e5309; path=/; HttpOnly
+// Keep-Alive: timeout=5, max=100
+// Connection: Keep-Alive
+// Transfer-Encoding: chunked
+// Content-Type: application/json;
+// Request duration: 0.269261s
+#+END_SRC
+</code></pre> </div>
+    
+    
+        <a href="/posts/2021-01-08/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
 
 <div class="article">
     <h1>
@@ -173,41 +241,6 @@
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/2020-week-24-links/">2020 week 24</a>
-    </h1>
-    <div class="date">18.06.2020</div>
-    <div><ul>
-<li><a href="https://pyinfra.com/">Infrastructure as a python code</a></li>
-<li><a href="https://cestlaz.github.io/stories/emacs/">Emacs blog posts with videos</a></li>
-<li><a href="https://esug.github.io/2019-Conference/conf2019.html">Small talk conference 2019 talks</a></li>
-</ul> </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2020-06-19-date-printing-go/">Interesting take on time from the Go perspective</a>
-    </h1>
-    <div class="date">18.06.2020</div>
-    <div><p>I found really interesting how the time is specified in Go language stdlib.</p>
-<p>From <a href="https://golang.org/pkg/time/">https://golang.org/pkg/time/</a></p>
-<blockquote>
-<p>To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value.</p>
-</blockquote>
-<p>Namely, you write an example of time date, not just &ldquo;dd-MM-yyyy&rdquo; but real date and time using numbers as values.</p>
-<p>Here is go example:</p>
-<pre tabindex="0"><code>01/02 03:04:05PM &#39;06 -0700
-Mon Jan 2 15:04:05 MST 2006
-</code></pre><p>if we want to print output similar to dd-MM-yyyy we&rsquo;d specify just</p>
-<pre tabindex="0"><code>02 Jan 2006
-</code></pre><p>Quite smart and unusual.</p> </div>
-    
-</div>
-<div class="border-bottom"></div>
-
 <div class="pagination">
     
     <div class="pagination__prev">
@@ -256,7 +289,7 @@ Mon Jan 2 15:04:05 MST 2006
         
         <li><a href="/categories/education/">education</a> (2) </li>
         
-        <li><a href="/categories/emacs/">emacs</a> (2) </li>
+        <li><a href="/categories/emacs/">emacs</a> (3) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         
