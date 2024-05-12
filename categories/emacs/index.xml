@@ -13,7 +13,7 @@
       <link>https://prokopov.me/posts/emacs-for-beginners/</link>
       <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/emacs-for-beginners/</guid>
-      <description>The article provides overview of facts why Emacs is so different but also so powerful comparing to other editors. It gives a good starting point for the reader to understand the fundamentals and start own journey to effective work.&#xA;First of all, Emacs is a runtime environment with a set of named functions you can call any time. Use Meta-x key combination to spawn a list of “interactive” functions. There are more functions, but only those who marked as interactive supposed to be in this list.</description>
+      <description>&lt;p&gt;The article provides overview of facts why Emacs is so different but also so&#xA;powerful comparing to other editors. It gives a good starting point for the&#xA;reader to understand the fundamentals and start own journey to effective work.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Emacs, apple keyboard, and RSI</title>
