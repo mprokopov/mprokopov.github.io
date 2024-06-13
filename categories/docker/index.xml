@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>docker on Maksym Prokopov personal blog</title>
+    <title>Docker on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/categories/docker/</link>
-    <description>Recent content in docker on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Docker on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Fri, 29 Apr 2016 14:10:13 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/docker/index.xml" rel="self" type="application/rss+xml" />

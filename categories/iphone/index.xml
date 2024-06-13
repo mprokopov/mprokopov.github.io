@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>iPhone on Maksym Prokopov personal blog</title>
+    <title>IPhone on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/categories/iphone/</link>
-    <description>Recent content in iPhone on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in IPhone on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Tue, 30 Nov 2010 15:34:34 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/iphone/index.xml" rel="self" type="application/rss+xml" />

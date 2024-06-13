@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pbx on Maksym Prokopov personal blog</title>
+    <title>Pbx on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/tags/pbx/</link>
-    <description>Recent content in pbx on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Pbx on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Tue, 29 Nov 2011 09:43:43 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/tags/pbx/index.xml" rel="self" type="application/rss+xml" />

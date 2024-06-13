@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>terminal on Maksym Prokopov personal blog</title>
+    <title>Terminal on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/tags/terminal/</link>
-    <description>Recent content in terminal on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Terminal on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Wed, 07 Mar 2012 10:57:23 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/tags/terminal/index.xml" rel="self" type="application/rss+xml" />

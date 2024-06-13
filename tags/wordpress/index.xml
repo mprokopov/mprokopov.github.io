@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>wordpress on Maksym Prokopov personal blog</title>
+    <title>Wordpress on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/tags/wordpress/</link>
-    <description>Recent content in wordpress on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Wordpress on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Mon, 23 Jan 2012 14:56:38 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />

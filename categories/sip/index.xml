@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sip on Maksym Prokopov personal blog</title>
+    <title>Sip on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/categories/sip/</link>
-    <description>Recent content in sip on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Sip on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Thu, 26 Aug 2010 10:52:20 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/sip/index.xml" rel="self" type="application/rss+xml" />

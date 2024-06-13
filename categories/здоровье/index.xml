@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>здоровье on Maksym Prokopov personal blog</title>
+    <title>Здоровье on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/</link>
-    <description>Recent content in здоровье on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Здоровье on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Tue, 04 Feb 2014 08:59:37 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/index.xml" rel="self" type="application/rss+xml" />

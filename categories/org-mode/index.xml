@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>org-mode on Maksym Prokopov personal blog</title>
+    <title>Org-Mode on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/categories/org-mode/</link>
-    <description>Recent content in org-mode on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Org-Mode on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Tue, 02 Feb 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/org-mode/index.xml" rel="self" type="application/rss+xml" />

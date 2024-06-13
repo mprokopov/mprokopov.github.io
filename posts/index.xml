@@ -4,23 +4,16 @@
     <title>Posts on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/posts/</link>
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Fri, 10 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Emacs For Beginners</title>
-      <link>https://prokopov.me/posts/emacs-for-beginners/</link>
-      <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/emacs-for-beginners/</guid>
-      <description>&lt;p&gt;The article provides overview of facts why Emacs is so different but also so&#xA;powerful comparing to other editors. It gives a good starting point for the&#xA;reader to understand the fundamentals and start own journey to effective work.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Use LLM to automate Amazon purchase categorization</title>
       <link>https://prokopov.me/posts/2024-04-01/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/2024-04-01/</guid>
-      <description>&lt;p&gt;Used Mistral-7b LLM to map my Amazon purchases to my home ledger accounts.&lt;/p&gt;&#xA;&lt;p&gt;It worked surprisingly well!&lt;/p&gt;&#xA;&lt;p&gt;Definitely worth integrating into accounting automation routines.&#xA;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;  &lt;iframe src=&#34;https://www.youtube.com/embed/1a0O2pLDF0Q&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;&#xA;&lt;/div&gt;&#xA;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Used Mistral-7b LLM to map my Amazon purchases to my home ledger accounts.&lt;/p&gt;&#xA;&lt;p&gt;It worked surprisingly well!&lt;/p&gt;&#xA;&lt;p&gt;Definitely worth integrating into accounting automation routines.&#xA;&#xA;&#xA;    &#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/1a0O2pLDF0Q?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&#xA;      &gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Run Large Language Model on your PC in 5 minutes</title>
@@ -321,7 +314,7 @@
       <link>https://prokopov.me/posts/2020-06-02-pharo-raspberry-pi/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/2020-06-02-pharo-raspberry-pi/</guid>
-      <description>&lt;p&gt;Totally awesome video of remote REPL with interaction on the Raspberry Pi device.&lt;/p&gt;&#xA;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;  &lt;iframe src=&#34;https://www.youtube.com/embed/0H9of7PQet0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;If you want to know more about Pharo and Smalltalk, I encourage you to complete &lt;a href=&#34;https://www.fun-mooc.fr/courses/course-v1:inria+41010+self_paced/about&#34;&gt;this the free Pharo course&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Totally awesome video of remote REPL with interaction on the Raspberry Pi device.&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/0H9of7PQet0?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&#xA;      &gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;p&gt;If you want to know more about Pharo and Smalltalk, I encourage you to complete &lt;a href=&#34;https://www.fun-mooc.fr/courses/course-v1:inria+41010+self_paced/about&#34;&gt;this the free Pharo course&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Переезжая на Hugo</title>
@@ -1987,6 +1980,13 @@
       <link>https://prokopov.me/posts/draft_post-680791be7605/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/draft_post-680791be7605/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2024 05 10 Emacs For Beginner</title>
+      <link>https://prokopov.me/posts/2024-05-10-emacs-for-beginner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-05-10-emacs-for-beginner/</guid>
       <description></description>
     </item>
     <item>

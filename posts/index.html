@@ -45,36 +45,6 @@
 
 <div class="article">
     <h1>111
-        <a href="https://prokopov.me/posts/emacs-for-beginners/">Emacs For Beginners</a>
-    </h1>
-    <div class="date">10.05.2024</div>
-    <div><p>The article provides overview of facts why Emacs is so different but also so
-powerful comparing to other editors. It gives a good starting point for the
-reader to understand the fundamentals and start own journey to effective work.</p>
-<p>First of all, Emacs is a runtime environment with <em>a set of named functions</em> you can call any time. Use <kbd>Meta-x</kbd> key combination to spawn a list of “interactive” functions. There are more functions, but only those who marked as <em>interactive</em> supposed to be in this list.</p>
-<p>Functions are written in a dialect of Lisp, so called emacs-lisp. If you want one sentence definition of lisp, here it is. First argument in a brackets is a <strong>function name</strong>, the <em>rest is its arguments</em>. Example</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(<span style="color:#a6e22e">+</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>)
-</span></span></code></pre></div><p>In this example + is a function name, 1 and 2 are the arguments. The output is 3. Yeah, this is it. Emacs can execute a freshly written function on the fly.</p>
-<p>Every time you hit a keystroke in Emacs you call a function. Even for a cursor movement. There is an easy way to find what function is bound to a keystroke by using <kbd>C-h k</kbd> followed by the keystroke. Remarkable feature is a documentation for any function is only <kbd>C-h f</kbd> away. This makes Emacs exploration a breeze.</p>
-<p>An opened file is called a <em>buffer</em>. Depending on the file type, Emacs loads automatically a set of functions and key bindings to those functions. This is called a <em>mode</em>. Also how the content of the buffer is highlighted is defined in the “mode”. A set of functions, syntax highlighting and keybindings is called a <em>major</em> mode.</p>
-<p>Whenever you switch between buffers, Emacs also switches the major mode depending on the selected buffer.</p>
-<p>There are different <em>modes</em> for different purposes. Sometimes you want to share the same functionality across different types of buffers, so what you typically have in opened buffer is a mixture of different “modes”.
-A set of shared functions with keybindings is called a <em>minor</em> mode.</p>
-<p>A <em>package</em> is a way to distribute such modes. Other editors call this a “plug-in”. There are repositories for the packages, such as MELPA. In case you want to install a new package, hit <kbd>Meta-X</kbd> and call the function <code>list-packages-list</code>.</p>
-<p>Despite you can install packages and change settings manually, among the best practices is to keep Emacs <em>configuration as a code</em>. This is why you might find many “dotemacs“ repositories with configuration of other users in internet. It’s always a great source of insights of how other people use Emacs.</p>
-<p>Typically users start their journey with <em>popular packages</em> and a standard or community-driven configuration, but with the time they recognize own repetitive tasks and create their own functions and assign them own keybindings. In this way they end up having an editor naturally fitting their workflows, saving significant amount of time every day.</p>
-<p>Though, the learning curve is quite steep and there are good reasons for this. Emacs lisp is not so popular as Javascript or Python. The naming is always hard and is a something that is not easy to change over time. Other editors don’t use the same terminology as <em>packages, buffers, modes, frames and windows</em>. The syntax highlighting using <em>regexps</em> is a quite outdated technology nowadays. Even regexp library has a very special syntax from what users got used to. Another big issue is a combination of packages can be fragile, it’s a very common case when a package after update can <em>break functionality</em> of other packages.</p>
-<p>Even key modifiers are named differently from other editors: <em>Meta, Hyper, Super</em>.
-My personal take on default keybindings - they’re aweful and RSI  prone. Once you realize the <em>Control</em> key supposed to be a key closest to the spacebar, as it was designed for Space Cadet keyboards (it had also Meta, Hyper and Super keys), it became obvious how to make Emacs usage <em>much more wrist friendly</em>. Just do the same on your keyboard, map the control key to whatever key you have closest to the spacebar, in my case it’s <em>cmd</em> on mac keyboard.</p>
-<h2 id="summary">Summary</h2>
-<p>In essence Emacs is an editing environment with set of functions, variables, syntax highlighting and keybindings.</p>
-<p>Bare Emacs is not so feature reach, but packages ecosystem provides a good foundation for any type of everyday tasks and some of those are unmatched in another editors.</p>
-<p>The real power comes after user learns enough fundamentals to start customizing Emacs to perform repetitive tasks faster.</p>
-<p>Though, the learning curve can be steep for different reasons and it’s strongly advised to change default keybindings to improve ergonomic.</p></div>
-</div>
-
-<div class="article">
-    <h1>111
         <a href="https://prokopov.me/posts/2024-04-01/">Use LLM to automate Amazon purchase categorization</a>
     </h1>
     <div class="date">01.04.2024</div>
@@ -82,9 +52,12 @@ My personal take on default keybindings - they’re aweful and RSI  prone. Once 
 <p>It worked surprisingly well!</p>
 <p>Definitely worth integrating into accounting automation routines.
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/1a0O2pLDF0Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/1a0O2pLDF0Q?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 </p>
 <p>A couple of screenshots showing how to map a home bookkeeping category to the recent Amazon purchase.</p>
 <p><img src="amazon-purchase-llm.png" alt=""></p>
@@ -116,9 +89,12 @@ they find it useful.</p>
 </blockquote>
 <p>Kind of &ldquo;wat&rdquo;? Maybe I&rsquo;m doing something wrong?</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/9IJreZFO31U" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/9IJreZFO31U?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 </div>
 </div>
@@ -151,9 +127,12 @@ they find it useful.</p>
     <div class="date">26.03.2024</div>
     <div><p>Short video with overview of Palettro, small utility that brings VSCode like navigation to any macOS application to boost your productivity.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/KKCZHCR1pwg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KKCZHCR1pwg?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 </div>
 </div>
@@ -169,9 +148,12 @@ We are only at its very beginning. Next, automation and integration among differ
 <p>But the directions of development are already marked, which are improving speed, reducing costs, and improving tools for users and developers. For example, here is a video where an LLM goes into the database, and just by the structure of the tables(!) it makes the necessary query and displays the data it has retrieved with this query, with explanations for the user.</p>
 <p>Yes, what I did now on the video in 7 minutes could not have been imagined a few years ago. So, everything becomes more interesting and more frightening.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/G7sZ5NO7q-k" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/G7sZ5NO7q-k?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 </div>
 </div>
@@ -184,9 +166,12 @@ We are only at its very beginning. Next, automation and integration among differ
     <div><p>SRE Simplified : Error Budget concept.</p>
 <p>The concept of Error Budget is useful for setting up alerts of different severity. This video explains in extremely simplified manner how it works.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/oac0DejRTkA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/oac0DejRTkA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 </div>
 </div>
@@ -201,9 +186,12 @@ We are only at its very beginning. Next, automation and integration among differ
 <p>But the challenge here is to eastablish monitoring and alerting.</p>
 <p>This video provides very simplified example of an SLA for the company that produces apples.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/tg70WgWyBts" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/tg70WgWyBts?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h1 id="document-title">Document Title</h1>
 </div>
@@ -218,9 +206,12 @@ We are only at its very beginning. Next, automation and integration among differ
 <p>The challenge is to explain it in simplified manner, without deep discussions on different monitoring strategies.</p>
 <p>In this first video I tried to just to scratch the surface.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/yh47gi7vZvQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/yh47gi7vZvQ?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 </div>
 </div>
@@ -1619,9 +1610,12 @@ xdebug.profiler\_output\_name = &#34;callgrind.out.%p&#34;
     <div class="date">02.06.2020</div>
     <div><p>Totally awesome video of remote REPL with interaction on the Raspberry Pi device.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/0H9of7PQet0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/0H9of7PQet0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>If you want to know more about Pharo and Smalltalk, I encourage you to complete <a href="https://www.fun-mooc.fr/courses/course-v1:inria+41010+self_paced/about">this the free Pharo course</a>.</p></div>
 </div>
@@ -2159,9 +2153,12 @@ end tell</code></pre><figure class="wp-block-image size-large">
 <p>На текущий момент tooling для Clojure/ClojureScript становится настолько простым и мощным, что даже не знаю, с чем это можно сравнить. Я очень рад жить в такое интересное время.</p>
 <p>И, наконец, <a href="https://github.com/cognitect-labs/vase">Vase</a>. Быстрый способ разработать на удобном и расширяемом DSL различные микросервисы с JSON. Драматически ускоряет разработку.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_Cf-STRvFy8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_Cf-STRvFy8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 </div>
 </div>
@@ -2849,9 +2846,12 @@ restart: always</p>
 <p> </p>
 <p>Playlist from ClojureTRE 2016 conference. Отметитил для себя отличные выступления Никиты Прокопова про Rum и Девида Нолана про ClojureScript.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/PLetHPRQvX4a_jQjvn54Q-d1WYZ52nDfnT" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/PLetHPRQvX4a_jQjvn54Q-d1WYZ52nDfnT?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p> </p>
 <p>Книгу, которую рекомендует как обязательную к прочтению Рич Хики <a href="https://en.wikipedia.org/wiki/How_to_Solve_It">How To Solve it</a> и его <a href="https://notendur.hi.is/hei2/teaching/Polya_HowToSolveIt.pdf">PDF copy</a>. И, конечно, не могу не порекомендовать его знаменитый <a href="https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/HammockDrivenDev.md">доклад Hammok Driven Development</a>. Если кратко изложить суть, то она будет следующей: прежде чем что-то кодить отойдите в сторону, подумайте, решите проблему сначала в голове. Решение проблем это навык, и как любой навык его можно и нужно качать так же как мы качаем мышцу.</p>
@@ -3028,9 +3028,12 @@ restart: always</p>
 <p>[slideshare id=63841245&amp;doc=2016-03-22-160708104224]</p>
 <p>Видео</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/g0zdXOud0QQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/g0zdXOud0QQ?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 </div>
 </div>
@@ -3189,9 +3192,12 @@ restart: always</p>
 <p>Ощущения от функциональщины и Lispа мне сложно сравнить с каким-либо опытом пережитым ранее. Эмоции, пожалуй, как у Колумба, который открывает Америку. Язык, который создавался автором с мыслями о проблемах проектирования и архитектуры современных приложений, и разнообразные сложности, с которыми сталкивается разработчик, такими как многопоточность, CSI и всем таким. Рекомендую на досуге <a href="http://www.infoq.com/presentat%E2%80%A6/Are-We-There-Yet-Rich-Hickey">послушать автора Rich Hickey</a>. Концепция базы данных Datomic вообще разорвала мозг новыми возможностями. Очень рекомендую для изучения Datomic и языка запросов Datalog <a href="http://learndatalogtoday.org/">этот ресурс</a>.</p>
 <p>Для понимания программистами, какие проблемы скорости и удобства разработки теперь можно решать для фронтенда на ClojureScript, нужно посмотреть вот это видео. В нем про live reload и о концепции data cards в веб-разработке. Да и вообще чувак веселый 🙂</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/G7Z_g2fnEDg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/G7Z_g2fnEDg?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>Теги, которые повлияли на меня как на разработчика в 2015 особенно сильно: Clojure/<a href="http://swannodette.github.io/2015/12/23/year-in-review/">ClojureScript</a>, Datomic/Datalog/Datascript, figwheel, datacards, Rum/ReactJS, Om/Next, Meteor, MongoDB, Docker.</p>
 <p>О том, каким будет web в ближайшем будущем стоит <a href="http://tonsky.me/blog/the-web-after-tomorrow/">почитать у моего однофамильца Никиты Прокопова</a>. Очень правильно пишет.</p>
@@ -3513,9 +3519,12 @@ restart: always</p>
     <div class="date">12.02.2014</div>
     <div><p>Дамы и господа, позвольте представить вам коллектив Dakh Daughters. По-моему это прекрасно.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/6wCgZh-nczY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/6wCgZh-nczY?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>Получил большое удовольствие от просмотра.</p>
 </div>
@@ -3651,9 +3660,12 @@ restart: always</p>
     <div><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
 <p>Пока болею и лежу дома нашлось время на изучение <a href="http://www.altshuller.ru">теории изобретательских задач</a>. Оказалось, что можно и нужно подходить к решению «нерешаемых» творческих задач системно. О чем и рассказал Артем Горбунов на лекции в студии Лебедева.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/LLMH99lRpsI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/LLMH99lRpsI?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>ТРИЗ предлагает методику решения всяческих нерешаемых штук, которые обычному человеку в качестве решения не приходят или приходят очень редко. То есть простой способ стать гениальным изобретателем 🙂</p>
 <p>Сегодня я не поленился и потратил 5 часов на изучение <a href="http://www.intuit.ru/studies/courses/3671/913/lecture/8704">4 видео-лекций по ТРИЗ</a>. Небольшой конспект усвоенного привожу ниже.</p>
@@ -3907,9 +3919,12 @@ Voila!</pre>
     </h1>
     <div class="date">01.08.2013</div>
     <div>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/xCzYZlF7ETk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xCzYZlF7ETk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 </div>
 </div>
@@ -4658,9 +4673,12 @@ Voila!</pre>
 <div>
 </div>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/HUumH9UlsWk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/HUumH9UlsWk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 </div>
 </div>
@@ -4781,9 +4799,12 @@ git config --global color.status auto</pre>
 <p>И второе открытие за сегодня произошло через твиттер. <a href="http://fluent.io/">Очень крутая веб-морда для gmail</a> на HTML5. Открывая в safari на iPad от родного приложения не отличить.</p>
 <p>Так и чувствуется, что будущее где-то совсем рядом.</p>
 <p>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/Z07MnBf9QNY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Z07MnBf9QNY?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
  </p>
 </div>
 </div>
@@ -4823,9 +4844,12 @@ git config --global color.status auto</pre>
     <div class="date">17.02.2012</div>
     <div><p>Мой доклад о цифровой телефонии на базе asterisk на хабравстрече в Киеве</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/BbAGneQHin0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BbAGneQHin0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 </div>
 </div>
@@ -4837,9 +4861,12 @@ git config --global color.status auto</pre>
     <div class="date">11.02.2012</div>
     <div><p>На <a href="http://habrahabr.ru/blogs/personal/137848/">прошлой хабраконференции</a> записали также и мой доклад об «ИТ аутсорсинге с поправкой на отечественного потребителя», однако видео, в виду слишком темного помещения и отсутствия дополнительного света вырезали, осталось только аудио.<br>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/TpF49HWllI8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/TpF49HWllI8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 </p>
 <p>Следующий мой доклад будет <a href="http://asterisk.in.ua">о цифровой телефонии на базе asterisk</a>, на этот раз с видео.</p>
 </div>
@@ -7172,6 +7199,14 @@ AuthType Digest    AuthName DAV-upload
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2024-05-10-emacs-for-beginner/">2024 05 10 Emacs For Beginner</a>
+    </h1>
+    <div class="date">01.01.0001</div>
+    <div></div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/">Configure Docker Engine logs to AWS CloudWatch</a>
     </h1>
     <div class="date">01.01.0001</div>
@@ -7417,83 +7452,83 @@ Transcript – REPL, то есть интерактивную консоль, п
     <p></p>
     <ul class="sidebar__links sidebar__category">
         
-        <li><a href="/categories/ansible/">ansible</a> (1) </li>
+        <li><a href="/categories/ansible/">Ansible</a> (1) </li>
         
-        <li><a href="/categories/apache/">apache</a> (3) </li>
+        <li><a href="/categories/apache/">Apache</a> (3) </li>
         
-        <li><a href="/categories/business/">business</a> (1) </li>
+        <li><a href="/categories/business/">Business</a> (1) </li>
         
-        <li><a href="/categories/clojure/">clojure</a> (1) </li>
+        <li><a href="/categories/clojure/">Clojure</a> (1) </li>
         
-        <li><a href="/categories/docker/">docker</a> (1) </li>
+        <li><a href="/categories/docker/">Docker</a> (1) </li>
         
-        <li><a href="/categories/education/">education</a> (2) </li>
+        <li><a href="/categories/education/">Education</a> (2) </li>
         
-        <li><a href="/categories/emacs/">emacs</a> (3) </li>
+        <li><a href="/categories/emacs/">Emacs</a> (2) </li>
         
         <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
         
-        <li><a href="/categories/git/">git</a> (1) </li>
+        <li><a href="/categories/git/">Git</a> (1) </li>
         
         <li><a href="/categories/gtd/">GTD</a> (4) </li>
         
-        <li><a href="/categories/iphone/">iPhone</a> (4) </li>
+        <li><a href="/categories/iphone/">IPhone</a> (4) </li>
         
-        <li><a href="/categories/it-support/">IT support</a> (1) </li>
+        <li><a href="/categories/it-support/">IT Support</a> (1) </li>
         
-        <li><a href="/categories/kubernetes/">kubernetes</a> (1) </li>
+        <li><a href="/categories/kubernetes/">Kubernetes</a> (1) </li>
         
-        <li><a href="/categories/lifehack/">lifehack</a> (24) </li>
+        <li><a href="/categories/lifehack/">Lifehack</a> (24) </li>
         
-        <li><a href="/categories/links/">links</a> (6) </li>
+        <li><a href="/categories/links/">Links</a> (6) </li>
         
-        <li><a href="/categories/linux/">linux</a> (1) </li>
+        <li><a href="/categories/linux/">Linux</a> (1) </li>
         
-        <li><a href="/categories/macos/">macos</a> (2) </li>
+        <li><a href="/categories/macos/">Macos</a> (2) </li>
         
-        <li><a href="/categories/news/">news</a> (1) </li>
+        <li><a href="/categories/news/">News</a> (1) </li>
         
-        <li><a href="/categories/org-mode/">org-mode</a> (1) </li>
+        <li><a href="/categories/org-mode/">Org-Mode</a> (1) </li>
         
-        <li><a href="/categories/rails/">rails</a> (1) </li>
+        <li><a href="/categories/rails/">Rails</a> (1) </li>
         
-        <li><a href="/categories/ruby/">ruby</a> (2) </li>
+        <li><a href="/categories/ruby/">Ruby</a> (2) </li>
         
-        <li><a href="/categories/sip/">sip</a> (1) </li>
+        <li><a href="/categories/sip/">Sip</a> (1) </li>
         
-        <li><a href="/categories/til/">til</a> (1) </li>
+        <li><a href="/categories/til/">Til</a> (1) </li>
         
-        <li><a href="/categories/tips-and-tricks/">tips and tricks</a> (1) </li>
+        <li><a href="/categories/tips-and-tricks/">Tips and Tricks</a> (1) </li>
         
-        <li><a href="/categories/vmware/">vmware</a> (2) </li>
+        <li><a href="/categories/vmware/">Vmware</a> (2) </li>
         
-        <li><a href="/categories/windows/">windows</a> (4) </li>
+        <li><a href="/categories/windows/">Windows</a> (4) </li>
         
-        <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">администрирование</a> (32) </li>
+        <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">Администрирование</a> (32) </li>
         
-        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">без категории</a> (4) </li>
+        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">Без Категории</a> (4) </li>
         
-        <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">бытовая техника</a> (3) </li>
+        <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">Бытовая Техника</a> (3) </li>
         
-        <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">веб-разработка</a> (10) </li>
+        <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">Веб-Разработка</a> (10) </li>
         
-        <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">виртуализация</a> (1) </li>
+        <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">Виртуализация</a> (1) </li>
         
-        <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">гаджеты</a> (2) </li>
+        <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">Гаджеты</a> (2) </li>
         
-        <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">железо</a> (3) </li>
+        <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">Железо</a> (3) </li>
         
-        <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">за жизнь</a> (117) </li>
+        <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">За Жизнь</a> (117) </li>
         
-        <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">здоровье</a> (4) </li>
+        <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">Здоровье</a> (4) </li>
         
         <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (43) </li>
         
-        <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">маркетинг</a> (2) </li>
+        <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">Маркетинг</a> (2) </li>
         
         <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (24) </li>
         
-        <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">управление</a> (1) </li>
+        <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">Управление</a> (1) </li>
         
         <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
         

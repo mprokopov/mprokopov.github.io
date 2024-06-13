@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>windows on Maksym Prokopov personal blog</title>
+    <title>Windows on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/tags/windows/</link>
-    <description>Recent content in windows on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Windows on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Mon, 27 Feb 2012 12:38:06 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/tags/windows/index.xml" rel="self" type="application/rss+xml" />

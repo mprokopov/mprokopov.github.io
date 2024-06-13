@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vmware on Maksym Prokopov personal blog</title>
+    <title>Vmware on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/categories/vmware/</link>
-    <description>Recent content in vmware on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Vmware on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Thu, 21 Apr 2011 17:16:37 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/vmware/index.xml" rel="self" type="application/rss+xml" />

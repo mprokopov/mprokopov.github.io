@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>links on Maksym Prokopov personal blog</title>
+    <title>Links on Maksym Prokopov personal blog</title>
     <link>https://prokopov.me/categories/links/</link>
-    <description>Recent content in links on Maksym Prokopov personal blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Links on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
     <language>ru-Ru</language>
     <lastBuildDate>Sat, 17 Jul 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/links/index.xml" rel="self" type="application/rss+xml" />
