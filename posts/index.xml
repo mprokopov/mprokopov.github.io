@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs For Beginners</title>
+      <link>https://prokopov.me/posts/emacs-for-beginners/</link>
+      <pubDate>Mon, 10 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/emacs-for-beginners/</guid>
+      <description>&lt;p&gt;The article provides overview of facts why Emacs is so different but also so&#xA;powerful comparing to other editors. It gives a good starting point for the&#xA;reader to understand the fundamentals and start own journey to effective work.&lt;/p&gt;&#xA;&lt;p&gt;The way of learning is painful, but rewarding. The essense of Emacs is to codify your specific repetitive tasks so that eventually you realize, the editor contains a lot of customizations speeding up your daily routines, as no other editor does.&lt;/p&gt;&#xA;&lt;p&gt;I do the following things in Emacs:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Coding in following languages: Ruby (Ruby on Rails), Python, Clojure, Javascript, TypeScript&lt;/li&gt;&#xA;&lt;li&gt;Writing Terraform and Nomad configuration with HCL&lt;/li&gt;&#xA;&lt;li&gt;Blogging in Hugo and deploying to production&lt;/li&gt;&#xA;&lt;li&gt;Using Kubernetes via TUI&lt;/li&gt;&#xA;&lt;li&gt;Writing diary&lt;/li&gt;&#xA;&lt;li&gt;Book keeping&lt;/li&gt;&#xA;&lt;li&gt;Planning my life/projects/tasks&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Use LLM to automate Amazon purchase categorization</title>
       <link>https://prokopov.me/posts/2024-04-01/</link>
@@ -1980,13 +1987,6 @@
       <link>https://prokopov.me/posts/draft_post-680791be7605/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/draft_post-680791be7605/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>2024 05 10 Emacs For Beginner</title>
-      <link>https://prokopov.me/posts/2024-05-10-emacs-for-beginner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/2024-05-10-emacs-for-beginner/</guid>
       <description></description>
     </item>
     <item>

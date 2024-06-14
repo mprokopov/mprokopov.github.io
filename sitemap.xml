@@ -11,11 +11,20 @@
     <loc>https://prokopov.me/pages/about/</loc>
     <lastmod>2020-12-08T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://prokopov.me/categories/</loc>
+    <lastmod>2024-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://prokopov.me/categories/emacs/</loc>
+    <lastmod>2024-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://prokopov.me/posts/emacs-for-beginners/</loc>
+    <lastmod>2024-06-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://prokopov.me/</loc>
-    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/</loc>
-    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/2024-04-01/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
@@ -71,9 +80,6 @@
     <loc>https://prokopov.me/tags/org-mode/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/categories/</loc>
-    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://prokopov.me/posts/ruby-macos-install/</loc>
     <lastmod>2023-08-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -118,9 +124,6 @@
   </url><url>
     <loc>https://prokopov.me/categories/til/</loc>
     <lastmod>2022-08-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://prokopov.me/categories/emacs/</loc>
-    <lastmod>2022-06-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/emacs-ergonomics-apple/</loc>
     <lastmod>2022-06-07T00:00:00+00:00</lastmod>
@@ -1158,8 +1161,6 @@
     <lastmod>2009-12-21T18:45:17+00:00</lastmod>
   </url><url>
     <loc>https://prokopov.me/posts/draft_post-680791be7605/</loc>
-  </url><url>
-    <loc>https://prokopov.me/posts/2024-05-10-emacs-for-beginner/</loc>
   </url><url>
     <loc>https://prokopov.me/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/</loc>
   </url><url>
