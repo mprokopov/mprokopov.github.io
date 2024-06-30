@@ -44,20 +44,24 @@
 
 <div class="article">
     <h1>
-        <a href="https://prokopov.me/posts/2024-06-30/">Sustainable Ruby on Rails</a>
+        <a href="https://prokopov.me/posts/2024-06-30/">Sustainable Ruby on Rails in 2024</a>
     </h1>
     <div class="date">30.06.2024</div>
     
-    <h4>Reading time: 2 min.</h4>
+    <h4>Reading time: 3 min.</h4>
     
     <div>
+<p>Rubu on Rails development changes a lot every year and sometimes it&#39;s not easy to keep up with the changes.</p>
 <p>
 I&#39;ve recently bought <a href="https://sustainable-rails.com/">Sustainable Rails Book</a> and it&#39;s hard to overestimate how valuable is it for me.</p>
 <p>
 Here are couple of thoughts after reading first chapters.</p>
 <ul>
-<li>Invest in developer friendly application bootstrap process. bin/setup and bin/dev should be enough to run on the new blank developer machine.</li>
-<li>Move business logic out of fat controllers and fat models. Extract and keep it in Service Objects.</li>
+<li>Invest in developer friendly application bootstrap process. Running <strong>bin/setup</strong> and <strong>bin/dev</strong> should be enough to run on the new blank developer machine.</li>
+<li>Move business logic out of fat controllers and fat models. Extract it and move
+to Service Objects. Fan-in and fan-out is a fancy metrics to estimate how
+object relate to each other. Simply speaking the most referred dependencies
+should be simple enough and thoroughly tested.</li>
 <li>Keep routing.rb as canonical as possible. Avoid nesting routes whenever the resources don&#39;t represent tight coupling. Rely on resources instead of custom crafter routes. Tip: use :only [:create] to reduce the scope.</li>
 </ul>
 <div id="outline-container-headline-1" class="outline-2">
@@ -132,7 +136,16 @@ Unfortunately for Emacs I found several downsides, namely</p>
 </ul>
 <p>
 I also admit, VSCode brings some extra nifties not available or hard to implement in Emacs, like GitHub Actions integration.</p>
-<img src="githubactions-vscode.png" alt="githubactions-vscode.png" title="githubactions-vscode.png" width="50%"/>
+<figure>
+<img src="devcontainers-vscode.png" alt="devcontainers-vscode.png" title="devcontainers-vscode.png" /><figcaption>
+VSCode with devcontainers
+</figcaption>
+</figure>
+<figure>
+<img src="devcontainers-orbstack.png" alt="devcontainers-orbstack.png" title="devcontainers-orbstack.png" /><figcaption>
+Orbstack with devcontainers
+</figcaption>
+</figure>
 <p>
 It&#39;s hard to switch fully from Emacs to VSCode and I keep using both for different use cases.</p>
 </div>
@@ -143,10 +156,29 @@ IDEs
 </h2>
 <div id="outline-text-headline-5" class="outline-text-2">
 <p>I&#39;m mostly using Emacs, but VSCode recently is on the table as well. Both have their strong sides.</p>
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+Emacs
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<p>Git in Emacs - Magit still bringe unbeatable git experience. org-mode is a thing, almost jupyther labs for the supported languages.</p>
 <p>
-Git in Emacs - Magit still bringe unbeatable git experience. org-mode is a thing, almost jupyther labs for the supported languages.</p>
-<p>
-Though, VSCode integration with GitHub Actions and LSP with Rubocop and Ruby makes development more joyful. Devcontainer support is a small miracle. Command pallete mimics Meta-X functionality from Emacs.</p>
+<img src="emacs-magit.png" alt="emacs-magit.png" title="emacs-magit.png" /></p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-3">
+<h3 id="headline-7">
+VSCode
+</h3>
+<div id="outline-text-headline-7" class="outline-text-3">
+<p>Though, VSCode integration with GitHub Actions and LSP with Rubocop and Ruby makes development more joyful.</p>
+<ul>
+<li>Devcontainer support is a small miracle.</li>
+<li>Command pallete mimics Meta-X functionality from Emacs.</li>
+</ul>
+<img src="githubactions-vscode.png" alt="githubactions-vscode.png" title="githubactions-vscode.png" width="50%"/>
+</div>
+</div>
 </div>
 </div>
 </div>
