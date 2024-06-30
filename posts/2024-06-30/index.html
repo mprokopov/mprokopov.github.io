@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
-	<meta name="generator" content="Hugo 0.127.0"><title>Maksym Prokopov personal blog</title>
+    <head><title>Maksym Prokopov personal blog</title>
 <meta charset="utf-8"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
@@ -43,173 +42,116 @@
     
 </div>
 
-
 <div class="article">
     <h1>
-        <a href="/posts/2024-06-30/">Sustainable Ruby on Rails</a>
+        <a href="https://prokopov.me/posts/2024-06-30/">Sustainable Ruby on Rails</a>
     </h1>
     <div class="date">30.06.2024</div>
-    <div>I&#39;ve recently bought Sustainable Rails Book and it&#39;s hard to overestimate how valuable is it for me.
-Here are couple of thoughts after reading first chapters.
-Invest in developer friendly application bootstrap process. bin/setup and bin/dev should be enough to run on the new blank developer machine. Move business logic out of fat controllers and fat models. Extract and keep it in Service Objects. Keep routing.rb as canonical as possible. </div>
     
+    <h4>Reading time: 2 min.</h4>
     
-        <a href="/posts/2024-06-30/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/emacs-for-beginners/">Emacs For Beginners</a>
-    </h1>
-    <div class="date">10.06.2024</div>
-    <div><p>The article provides overview of facts why Emacs is so different but also so
-powerful comparing to other editors. It gives a good starting point for the
-reader to understand the fundamentals and start own journey to effective work.</p>
-<p>The way of learning is painful, but rewarding. The essense of Emacs is to codify your specific repetitive tasks so that eventually you realize, the editor contains a lot of customizations speeding up your daily routines, as no other editor does.</p>
-<p>I do the following things in Emacs:</p>
+    <div>
+<p>
+I&#39;ve recently bought <a href="https://sustainable-rails.com/">Sustainable Rails Book</a> and it&#39;s hard to overestimate how valuable is it for me.</p>
+<p>
+Here are couple of thoughts after reading first chapters.</p>
 <ul>
-<li>Coding in following languages: Ruby (Ruby on Rails), Python, Clojure, Javascript, TypeScript</li>
-<li>Writing Terraform and Nomad configuration with HCL</li>
-<li>Blogging in Hugo and deploying to production</li>
-<li>Using Kubernetes via TUI</li>
-<li>Writing diary</li>
-<li>Book keeping</li>
-<li>Planning my life/projects/tasks</li>
-</ul> </div>
-    
-    
-        <a href="/posts/emacs-for-beginners/">Read More…</a>
-    
+<li>Invest in developer friendly application bootstrap process. bin/setup and bin/dev should be enough to run on the new blank developer machine.</li>
+<li>Move business logic out of fat controllers and fat models. Extract and keep it in Service Objects.</li>
+<li>Keep routing.rb as canonical as possible. Avoid nesting routes whenever the resources don&#39;t represent tight coupling. Rely on resources instead of custom crafter routes. Tip: use :only [:create] to reduce the scope.</li>
+</ul>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+CI/CD process
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Dare to add, invest heavily in CI/CD process, with modern GitHub offering it&#39;s just way easier then maintaining own on-prem solution.</p>
+<p>
+At the moment I&#39;ve shifted from own Drone.io and Jenkins to GitHub Actions and
+self-hosted runner for Continuous Integration and to Hashicorp Nomad for
+Continuous Deployment.</p>
+<p>
+I&#39;ll try to carve up time to describe a bit more the process of deployment.</p>
 </div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-04-01/">Use LLM to automate Amazon purchase categorization</a>
-    </h1>
-    <div class="date">01.04.2024</div>
-    <div><p>Used Mistral-7b LLM to map my Amazon purchases to my home ledger accounts.</p>
-<p>It worked surprisingly well!</p>
-<p>Definitely worth integrating into accounting automation routines.
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/1a0O2pLDF0Q?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-</p> </div>
-    
-    
-        <a href="/posts/2024-04-01/">Read More…</a>
-    
 </div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-03-28/">Run Large Language Model on your PC in 5 minutes</a>
-    </h1>
-    <div class="date">28.03.2024</div>
-    <div>Run Large Language Model on your PC in 5 minutes For the summary
-I used model whisper to extract text from audio of this video and asked mistral to summarize it.
-echo &#34;this is a transcript of the video. Summarize this\n $(cat subtitles.txt)&#34; | ollama run gemma:7b So, here you go, output from mistral 7b:
-The speaker explains how to download, install, and set up LLMA, and then demonstrates how to use it to run a specific model called &ldquo;mistrial&rdquo; with a pirate-themed prompt. </div>
-    
-    
-        <a href="/posts/2024-03-28/">Read More…</a>
-    
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Security
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>I&#39;ve added the following gems:</p>
+<ul>
+<li>brakeman</li>
+<li>bundle-audit</li>
+</ul>
+<p>And enjoy output of the audit.</p>
+<figure>
+<img src="brakeman.png" alt="brakeman.png" title="brakeman.png" width="100%"/>
+<figcaption>
+Brakeman
+</figcaption>
+</figure>
+<figure>
+<img src="bundler-audit.png" alt="bundler-audit.png" title="bundler-audit.png" width="100%"/>
+<figcaption>
+Bundler Audit
+</figcaption>
+</figure>
 </div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-03-27-ansible/">Ansible Use Cases</a>
-    </h1>
-    <div class="date">27.03.2024</div>
-    <div>While Ansible is a great tool for certain use cases, such as building new AMIs when used with Packer, it has some downsides. These become apparent when using it for container orchestration (which I have witnessed at scale) or keeping the configuration of a set of nodes in sync.
-Another significant, though not dramatic, downside is related to Python version and dependency management. This adds extra complexity that I would prefer to avoid in a system management tool. </div>
-    
-    
-        <a href="/posts/2024-03-27-ansible/">Read More…</a>
-    
 </div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-03-27/">Compliance as a Code</a>
-    </h1>
-    <div class="date">27.03.2024</div>
-    <div>Recently, I stumbled upon a concept that sounded new to me: Compliance as a Code.
-The core idea is to &ldquo;embed compliance policies into the code that can be repeated and tested automatically.&rdquo; But what does it mean in practice?
-For example, consider PCI DSS, which requires measures to secure credit card information to ensure compliance. Tools like Terraform, Ansible, and others should contain the code for encryption, access control, and data obfuscation. </div>
-    
-    
-        <a href="/posts/2024-03-27/">Read More…</a>
-    
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+Local setup
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>My setup is quite complicated, Rails application requires:</p>
+<ul>
+<li>MySQL server</li>
+<li>Redis</li>
+<li>Resque + Resque Web UI</li>
+<li>Sphinx with Thinking Sphinx gem for full-text search</li>
+<li>Custom built server for server sent events (something similar to Action Cable)</li>
+</ul>
+<p>bin/dev uses Procfile to bring up web server workers, search daemon and Resque UI.</p>
+<p>
+bin/setup creates blank database and populates with seeds, so the app is ready to run after this step.</p>
 </div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-03-26/">Palettro - VSCode like command palette in any macOS application</a>
-    </h1>
-    <div class="date">26.03.2024</div>
-    <div>Short video with overview of Palettro, small utility that brings VSCode like navigation to any macOS application to boost your productivity. </div>
-    
 </div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-03-31-sql-llm-mistral/">Use LLM to retrieve data from MySQL database</a>
-    </h1>
-    <div class="date">26.03.2024</div>
-    <div>Very simplified about the AI revolution happening now. We are only at its very beginning. Next, automation and integration among different AIs will increase, leading to more and more complex tasks.
-There are still many problems, such as - training a truly large model, and making it accessible for general use is still very expensive and very energy-consuming. It is still not very clear what to do with regulations, because it works both ways, making it significantly easier to assemble some kind of bomb at home. </div>
-    
-    
-        <a href="/posts/2024-03-31-sql-llm-mistral/">Read More…</a>
-    
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+Devcontainers
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>I&#39;ve also tested devcontainers and they work quite good with VSCode.</p>
+<p>
+Unfortunately for Emacs I found several downsides, namely</p>
+<ul>
+<li>It&#39;s hard to integrate with rubocop</li>
+<li>Hard to jump into container, as it requires PATH setup, and eshell doesn&#39;t shine here</li>
+<li>chruby that I use instead of rbenv doesn&#39;t work</li>
+</ul>
+<p>
+I also admit, VSCode brings some extra nifties not available or hard to implement in Emacs, like GitHub Actions integration.</p>
+<img src="githubactions-vscode.png" alt="githubactions-vscode.png" title="githubactions-vscode.png" width="50%"/>
+<p>
+It&#39;s hard to switch fully from Emacs to VSCode and I keep using both for different use cases.</p>
 </div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-03-25/">SRE Simplified - Error Budget</a>
-    </h1>
-    <div class="date">25.03.2024</div>
-    <div>SRE Simplified : Error Budget concept.
-The concept of Error Budget is useful for setting up alerts of different severity. This video explains in extremely simplified manner how it works. </div>
-    
 </div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-03-17/">SRE Simplified - Service Level Agreement</a>
-    </h1>
-    <div class="date">17.03.2024</div>
-    <div>The next issue of SRE Simplified is about Service Level Agreement.
-Service Level Agreement is an agreement between service supplier and a customer about what the target quality of the service is and what are the consequences if the promise is broken.
-But the challenge here is to eastablish monitoring and alerting.
-This video provides very simplified example of an SLA for the company that produces apples.
-Document Title  </div>
-    
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+IDEs
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>I&#39;m mostly using Emacs, but VSCode recently is on the table as well. Both have their strong sides.</p>
+<p>
+Git in Emacs - Magit still bringe unbeatable git experience. org-mode is a thing, almost jupyther labs for the supported languages.</p>
+<p>
+Though, VSCode integration with GitHub Actions and LSP with Rubocop and Ruby makes development more joyful. Devcontainer support is a small miracle. Command pallete mimics Meta-X functionality from Emacs.</p>
 </div>
-<div class="border-bottom"></div>
+</div>
+</div>
+    <div id="remark42"></div>
 
-<div class="pagination">
-    
-    
-    <div class="pagination__next">
-        <a href="/page/2/">Next page</a>
-        <a href="/page/2/" class="pagination__icon">&gt;&gt;</a>
-    </div>
-    
 </div>
 <div class="sidebar"><div class="sidebar__visitcard">
     <div class="sidebar__heading">Profile links</div><p></p>

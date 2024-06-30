@@ -6,7 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 10 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Read</title>
@@ -28,6 +28,13 @@
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/pages/about/</guid>
       <description>Hi, my name is Maksym Prokopov. These days I mostly involved in DevOps, Lean IT and IT services.&#xA;A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages. Surprisingly, but I started using PHP for my job today again after almost 18 years. What a destiny!&#xA;Since 2006 I started using Ruby on Rails a lot. 2015 got addicted to Clojure and ClojureScript and did some production-ready things.</description>
+    </item>
+    <item>
+      <title>Sustainable Ruby on Rails</title>
+      <link>https://prokopov.me/posts/2024-06-30/</link>
+      <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-06-30/</guid>
+      <description>I&amp;#39;ve recently bought Sustainable Rails Book and it&amp;#39;s hard to overestimate how valuable is it for me.&#xA;Here are couple of thoughts after reading first chapters.&#xA;Invest in developer friendly application bootstrap process. bin/setup and bin/dev should be enough to run on the new blank developer machine. Move business logic out of fat controllers and fat models. Extract and keep it in Service Objects. Keep routing.rb as canonical as possible.</description>
     </item>
     <item>
       <title>Emacs For Beginners</title>

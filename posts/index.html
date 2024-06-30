@@ -45,6 +45,113 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2024-06-30/">Sustainable Ruby on Rails</a>
+    </h1>
+    <div class="date">30.06.2024</div>
+    <div>
+<p>
+I&#39;ve recently bought <a href="https://sustainable-rails.com/">Sustainable Rails Book</a> and it&#39;s hard to overestimate how valuable is it for me.</p>
+<p>
+Here are couple of thoughts after reading first chapters.</p>
+<ul>
+<li>Invest in developer friendly application bootstrap process. bin/setup and bin/dev should be enough to run on the new blank developer machine.</li>
+<li>Move business logic out of fat controllers and fat models. Extract and keep it in Service Objects.</li>
+<li>Keep routing.rb as canonical as possible. Avoid nesting routes whenever the resources don&#39;t represent tight coupling. Rely on resources instead of custom crafter routes. Tip: use :only [:create] to reduce the scope.</li>
+</ul>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+CI/CD process
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Dare to add, invest heavily in CI/CD process, with modern GitHub offering it&#39;s just way easier then maintaining own on-prem solution.</p>
+<p>
+At the moment I&#39;ve shifted from own Drone.io and Jenkins to GitHub Actions and
+self-hosted runner for Continuous Integration and to Hashicorp Nomad for
+Continuous Deployment.</p>
+<p>
+I&#39;ll try to carve up time to describe a bit more the process of deployment.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Security
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>I&#39;ve added the following gems:</p>
+<ul>
+<li>brakeman</li>
+<li>bundle-audit</li>
+</ul>
+<p>And enjoy output of the audit.</p>
+<figure>
+<img src="brakeman.png" alt="brakeman.png" title="brakeman.png" width="100%"/>
+<figcaption>
+Brakeman
+</figcaption>
+</figure>
+<figure>
+<img src="bundler-audit.png" alt="bundler-audit.png" title="bundler-audit.png" width="100%"/>
+<figcaption>
+Bundler Audit
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+Local setup
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>My setup is quite complicated, Rails application requires:</p>
+<ul>
+<li>MySQL server</li>
+<li>Redis</li>
+<li>Resque + Resque Web UI</li>
+<li>Sphinx with Thinking Sphinx gem for full-text search</li>
+<li>Custom built server for server sent events (something similar to Action Cable)</li>
+</ul>
+<p>bin/dev uses Procfile to bring up web server workers, search daemon and Resque UI.</p>
+<p>
+bin/setup creates blank database and populates with seeds, so the app is ready to run after this step.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+Devcontainers
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>I&#39;ve also tested devcontainers and they work quite good with VSCode.</p>
+<p>
+Unfortunately for Emacs I found several downsides, namely</p>
+<ul>
+<li>It&#39;s hard to integrate with rubocop</li>
+<li>Hard to jump into container, as it requires PATH setup, and eshell doesn&#39;t shine here</li>
+<li>chruby that I use instead of rbenv doesn&#39;t work</li>
+</ul>
+<p>
+I also admit, VSCode brings some extra nifties not available or hard to implement in Emacs, like GitHub Actions integration.</p>
+<img src="githubactions-vscode.png" alt="githubactions-vscode.png" title="githubactions-vscode.png" width="50%"/>
+<p>
+It&#39;s hard to switch fully from Emacs to VSCode and I keep using both for different use cases.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+IDEs
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>I&#39;m mostly using Emacs, but VSCode recently is on the table as well. Both have their strong sides.</p>
+<p>
+Git in Emacs - Magit still bringe unbeatable git experience. org-mode is a thing, almost jupyther labs for the supported languages.</p>
+<p>
+Though, VSCode integration with GitHub Actions and LSP with Rubocop and Ruby makes development more joyful. Devcontainer support is a small miracle. Command pallete mimics Meta-X functionality from Emacs.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/emacs-for-beginners/">Emacs For Beginners</a>
     </h1>
     <div class="date">10.06.2024</div>
