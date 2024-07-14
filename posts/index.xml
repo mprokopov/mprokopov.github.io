@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sun, 30 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deployment process with Hashicorp Nomad</title>
+      <link>https://prokopov.me/posts/2024-07-14/</link>
+      <pubDate>Sun, 14 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-07-14/</guid>
+      <description>As, probably, many of you, I did a long journey from manual FTP sync, to semi-automated tools like Capistrano, then manually managed docker deployments, then anisble managed docker containers and finally, met the orchestration system of choice - Hashicorp Nomad.&#xA;TLDR: Kubernetes is too heavy for my moderate needs. Hashicorp Nomad strikes the right balance between features and maintenance complexity.&#xA;At some point in time I felt a need for better container orchestration system that I could run by myself in Hetzner.</description>
+    </item>
     <item>
       <title>Sustainable Ruby on Rails in 2024</title>
       <link>https://prokopov.me/posts/2024-06-30/</link>

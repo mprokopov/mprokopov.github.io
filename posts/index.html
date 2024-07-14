@@ -45,6 +45,124 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2024-07-14/">Deployment process with Hashicorp Nomad</a>
+    </h1>
+    <div class="date">14.07.2024</div>
+    <div><p>As, probably, many of you, I did a long journey from manual FTP sync, to semi-automated tools like Capistrano, then manually managed docker deployments, then anisble managed docker containers and finally, met the orchestration system of choice - <strong>Hashicorp Nomad</strong>.</p>
+<p>
+TLDR: Kubernetes is too heavy for my moderate needs. Hashicorp Nomad strikes the right balance between features and maintenance complexity.</p>
+<p>
+At some point in time I felt a need for better container orchestration system that I could run by myself in Hetzner. Funny enough, DHH and Co. came to the same conclusion, but implemented in a different way. They developed completely own version of <a href="https://kamal-deploy.org/">ansible on steroids named Kamal</a>. This has right for existence, but imho has own flaws, like manual nodes management for fault tolerance and challenge to keep versions of deployed artifacts in sync.
+The push based deployment always suffers from this. People were trying to solve this issues already for quite a long time by using systems like <strong>Chef</strong> of <strong>Puppet</strong>.</p>
+<p>
+The modern world is all about containers. But what options do we have for orchestration?
+Kubernetes. Apache Mesos. Docker Swarm. Every option requires quite extensive knowledge just to maintain it.</p>
+<p>
+This is what happens when I merge to the main branch.</p>
+<figure>
+<img src="github-deployment-flow.png" alt="github-deployment-flow.png" title="github-deployment-flow.png" /><figcaption>
+GitHub Deployment Flow
+</figcaption>
+</figure>
+<p>
+And my workflow looks like this</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  <span style="color:#f92672">docker</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">version</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">./.github/workflows/build.yml</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tag</span>: <span style="color:#ae81ff">${{ needs.version.outputs.version }}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy-staging</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: [<span style="color:#ae81ff">version, docker]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">./.github/workflows/deploy.yml</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tag</span>: <span style="color:#ae81ff">${{ needs.version.outputs.version }}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">environment</span>: <span style="color:#ae81ff">staging</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy-production</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: [<span style="color:#ae81ff">version, docker, deploy-staging]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">./.github/workflows/deploy.yml</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tag</span>: <span style="color:#ae81ff">${{ needs.version.outputs.version }}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">environment</span>: <span style="color:#ae81ff">production</span></span></span></code></pre></div>
+</div>
+<p>
+Deploy to Hashicorp Nomad snippet</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_call</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">inputs</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tag</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">default</span>: <span style="color:#ae81ff">${{ github.sha }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">default</span>: <span style="color:#ae81ff">staging</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">self-hosted</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>: <span style="color:#ae81ff">${{inputs.environment}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">concurrency</span>: <span style="color:#ae81ff">${{inputs.environment}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy with Nomad</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">REGISTRY</span>: <span style="color:#ae81ff">&lt;registry&gt;.dkr.ecr.eu-central-1.amazonaws.com</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">REPOSITORY</span>: <span style="color:#ae81ff">&lt;myapp&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">IMAGE_TAG</span>: <span style="color:#ae81ff">${{ inputs.tag }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          nomad run -var=&#39;version=${{ inputs.tag }}&#39; deployment/${{ inputs.environment }}.nomad.hcl</span>          </span></span></code></pre></div>
+</div>
+<p>
+This is it! I fond of simplicity and power of the HCL language for the configuration. It also integrated with Hashicorp Vault out of the box, so my secrets provisioning looks like this.</p>
+<div class="src src-hcl">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span>{{<span style="color:#960050;background-color:#1e0010">-</span> <span style="color:#66d9ef">with</span> <span style="color:#66d9ef">secret</span> <span style="color:#e6db74">&#34;instances/data/adminka/database&#34;</span> }}
+</span></span><span style="display:flex;"><span>DATABASE_URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mysql2://{{ .Data.data.username }}:{{ .Data.data.password }}@{{ .Data.data.host }}/{{ .Data.data.name }}&#34;</span>
+</span></span><span style="display:flex;"><span>{{<span style="color:#960050;background-color:#1e0010">-</span> <span style="color:#66d9ef">end</span> }}</span></span></code></pre></div>
+</div>
+<p>
+Service discovery with Hashicorp Consul is just built-in! It lives in the same HCL config file.</p>
+<div class="src src-hcl">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span>{{ <span style="color:#66d9ef">range</span> <span style="color:#66d9ef">service</span> <span style="color:#e6db74">&#34;production.prometheus-adminka-exporter&#34;</span> }}
+</span></span><span style="display:flex;"><span>PROMETHEUS_EXPORTER_ENABLE<span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PROMETHEUS_EXPORTER_HOST<span style="color:#f92672">=</span>{{ .<span style="color:#66d9ef">Address</span> }}
+</span></span><span style="display:flex;"><span>PROMETHEUS_EXPORTER_PORT<span style="color:#f92672">=</span>{{ .<span style="color:#66d9ef">Port</span> }}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#66d9ef">end</span> }}</span></span></code></pre></div>
+</div>
+<p>
+For my ephemeral environments I have the HCL configuration that also brings me mysql and redis containers. When the application starts, init container is responsible for creation of DB schema and populating the ephemeral database with sample data using seeds screept.</p>
+<p>
+<img src="nomad2.png" alt="nomad2.png" title="nomad2.png" /></p>
+<p>
+The whole deployment to ephemeral environment I&#39;ve just described takes 44s.
+Less than a minute to setup: MySQL 8, Redis, Sphinx Search and populate with the sample data (every run with new data!). After the PR is closed, the ephemeral environment is gone as well.</p>
+<p>
+<img src="nomad1.png" alt="nomad1.png" title="nomad1.png" /></p>
+<figure>
+<img src="nomad3.png" alt="nomad3.png" title="nomad3.png" /><figcaption>
+Nomad topology management
+</figcaption>
+</figure>
+<p>
+What makes Hashicorp Nomad so powerful?</p>
+<ul>
+<li>Easy to start. It&#39;s really just a single binary!</li>
+<li>Integration with Hashicorp Consul for service discovery</li>
+<li>Integration with Hashicorp Vault for secrets management</li>
+<li>Traefik is excellent option for load balancing integrated through Consul</li>
+<li>HCL configuration language is what powers Terraform. Way better than YAML!</li>
+<li>It&#39;s not only for Docker containers, same concepts to deploy and run bare Java jars.</li>
+</ul>
+<p>P.S. One of the thing I discovered to be particulary challenging is to spin up containers with restiq for backups, the nodes with necessary volumes can be full, therefore the container just can&#39;t be spined up. For now monitoring somehow saves , but a good solution yet to be found.</p>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/2024-06-30/">Sustainable Ruby on Rails in 2024</a>
     </h1>
     <div class="date">30.06.2024</div>

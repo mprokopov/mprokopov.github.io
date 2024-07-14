@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal blog</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<script>
+ var remark_config = {
+   host: 'https://remark.prokopov.me',
+   site_id: 'remark',
+   no_footer: true
+ }
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+
+
+<link rel="stylesheet" href="https://prokopov.me/style.min.24166a1e761f51442033103dc963330d3526a4339a58ab46d3fee0c94a62f4a3.css">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                                                                                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                                                                                                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,'script','dataLayer','GTM-WB9KBZ5');</script>
+
+<script defer data-domain="prokopov.me" src="https://analytics.prokopov.me/js/script.js"></script>
+</head>
+    <body><div class="header">
+    <a class="title" href="/"><div id="title">Maksym Prokopov personal blog</div><div id="description">Idea is a something worth sharing</div></a>
+</div>
+<div class="nav">
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/reading/">Read</a></div>
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/creating/">Create</a></div>
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/about/">About</a></div>
+    
+</div>
+
+<div class="article">
+    <h1>
+        <a href="https://prokopov.me/posts/2024-07-14/">Deployment process with Hashicorp Nomad</a>
+    </h1>
+    <div class="date">14.07.2024</div>
+    
+    <h4>Reading time: 3 min.</h4>
+    
+    <div><p>As, probably, many of you, I did a long journey from manual FTP sync, to semi-automated tools like Capistrano, then manually managed docker deployments, then anisble managed docker containers and finally, met the orchestration system of choice - <strong>Hashicorp Nomad</strong>.</p>
+<p>
+TLDR: Kubernetes is too heavy for my moderate needs. Hashicorp Nomad strikes the right balance between features and maintenance complexity.</p>
+<p>
+At some point in time I felt a need for better container orchestration system that I could run by myself in Hetzner. Funny enough, DHH and Co. came to the same conclusion, but implemented in a different way. They developed completely own version of <a href="https://kamal-deploy.org/">ansible on steroids named Kamal</a>. This has right for existence, but imho has own flaws, like manual nodes management for fault tolerance and challenge to keep versions of deployed artifacts in sync.
+The push based deployment always suffers from this. People were trying to solve this issues already for quite a long time by using systems like <strong>Chef</strong> of <strong>Puppet</strong>.</p>
+<p>
+The modern world is all about containers. But what options do we have for orchestration?
+Kubernetes. Apache Mesos. Docker Swarm. Every option requires quite extensive knowledge just to maintain it.</p>
+<p>
+This is what happens when I merge to the main branch.</p>
+<figure>
+<img src="github-deployment-flow.png" alt="github-deployment-flow.png" title="github-deployment-flow.png" /><figcaption>
+GitHub Deployment Flow
+</figcaption>
+</figure>
+<p>
+And my workflow looks like this</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  <span style="color:#f92672">docker</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">version</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">./.github/workflows/build.yml</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tag</span>: <span style="color:#ae81ff">${{ needs.version.outputs.version }}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy-staging</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: [<span style="color:#ae81ff">version, docker]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">./.github/workflows/deploy.yml</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tag</span>: <span style="color:#ae81ff">${{ needs.version.outputs.version }}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">environment</span>: <span style="color:#ae81ff">staging</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy-production</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: [<span style="color:#ae81ff">version, docker, deploy-staging]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">./.github/workflows/deploy.yml</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tag</span>: <span style="color:#ae81ff">${{ needs.version.outputs.version }}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">environment</span>: <span style="color:#ae81ff">production</span></span></span></code></pre></div>
+</div>
+<p>
+Deploy to Hashicorp Nomad snippet</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_call</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">inputs</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tag</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">default</span>: <span style="color:#ae81ff">${{ github.sha }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">default</span>: <span style="color:#ae81ff">staging</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">self-hosted</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>: <span style="color:#ae81ff">${{inputs.environment}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">concurrency</span>: <span style="color:#ae81ff">${{inputs.environment}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy with Nomad</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">REGISTRY</span>: <span style="color:#ae81ff">&lt;registry&gt;.dkr.ecr.eu-central-1.amazonaws.com</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">REPOSITORY</span>: <span style="color:#ae81ff">&lt;myapp&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">IMAGE_TAG</span>: <span style="color:#ae81ff">${{ inputs.tag }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          nomad run -var=&#39;version=${{ inputs.tag }}&#39; deployment/${{ inputs.environment }}.nomad.hcl</span>          </span></span></code></pre></div>
+</div>
+<p>
+This is it! I fond of simplicity and power of the HCL language for the configuration. It also integrated with Hashicorp Vault out of the box, so my secrets provisioning looks like this.</p>
+<div class="src src-hcl">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span>{{<span style="color:#960050;background-color:#1e0010">-</span> <span style="color:#66d9ef">with</span> <span style="color:#66d9ef">secret</span> <span style="color:#e6db74">&#34;instances/data/adminka/database&#34;</span> }}
+</span></span><span style="display:flex;"><span>DATABASE_URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mysql2://{{ .Data.data.username }}:{{ .Data.data.password }}@{{ .Data.data.host }}/{{ .Data.data.name }}&#34;</span>
+</span></span><span style="display:flex;"><span>{{<span style="color:#960050;background-color:#1e0010">-</span> <span style="color:#66d9ef">end</span> }}</span></span></code></pre></div>
+</div>
+<p>
+Service discovery with Hashicorp Consul is just built-in! It lives in the same HCL config file.</p>
+<div class="src src-hcl">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span>{{ <span style="color:#66d9ef">range</span> <span style="color:#66d9ef">service</span> <span style="color:#e6db74">&#34;production.prometheus-adminka-exporter&#34;</span> }}
+</span></span><span style="display:flex;"><span>PROMETHEUS_EXPORTER_ENABLE<span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PROMETHEUS_EXPORTER_HOST<span style="color:#f92672">=</span>{{ .<span style="color:#66d9ef">Address</span> }}
+</span></span><span style="display:flex;"><span>PROMETHEUS_EXPORTER_PORT<span style="color:#f92672">=</span>{{ .<span style="color:#66d9ef">Port</span> }}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#66d9ef">end</span> }}</span></span></code></pre></div>
+</div>
+<p>
+For my ephemeral environments I have the HCL configuration that also brings me mysql and redis containers. When the application starts, init container is responsible for creation of DB schema and populating the ephemeral database with sample data using seeds screept.</p>
+<p>
+<img src="nomad2.png" alt="nomad2.png" title="nomad2.png" /></p>
+<p>
+The whole deployment to ephemeral environment I&#39;ve just described takes 44s.
+Less than a minute to setup: MySQL 8, Redis, Sphinx Search and populate with the sample data (every run with new data!). After the PR is closed, the ephemeral environment is gone as well.</p>
+<p>
+<img src="nomad1.png" alt="nomad1.png" title="nomad1.png" /></p>
+<figure>
+<img src="nomad3.png" alt="nomad3.png" title="nomad3.png" /><figcaption>
+Nomad topology management
+</figcaption>
+</figure>
+<p>
+What makes Hashicorp Nomad so powerful?</p>
+<ul>
+<li>Easy to start. It&#39;s really just a single binary!</li>
+<li>Integration with Hashicorp Consul for service discovery</li>
+<li>Integration with Hashicorp Vault for secrets management</li>
+<li>Traefik is excellent option for load balancing integrated through Consul</li>
+<li>HCL configuration language is what powers Terraform. Way better than YAML!</li>
+<li>It&#39;s not only for Docker containers, same concepts to deploy and run bare Java jars.</li>
+</ul>
+<p>P.S. One of the thing I discovered to be particulary challenging is to spin up containers with restiq for backups, the nodes with necessary volumes can be full, therefore the container just can&#39;t be spined up. For now monitoring somehow saves , but a good solution yet to be found.</p>
+</div>
+    <div id="remark42"></div>
+
+</div>
+<div class="sidebar"><div class="sidebar__visitcard">
+    <div class="sidebar__heading">Profile links</div><p></p>
+    <div class="textwidget profile__link">
+        
+        <a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 18px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Max Prokopov" rel="noopener noreferrer">Max Prokopov</a><br><a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" title="Max Prokopov" rel="noopener noreferrer"><img src="https://badge.facebook.com/badge/564099895.8308.711585450.png" style="border: 0px;"></a>
+        
+    </div>
+    <div class="profile__link">
+        <a href="https://twitter.com/mprokopov?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @mprokopov</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div class='LI-profile-badge profile__link' data-version='v1' data-size='medium' data-locale='en_US'
+        data-type='horizontal' data-theme='light' data-vanity='max-prokopov'>
+        <a class='LI-simple-link' href='https://in.linkedin.com/in/max-prokopov?trk=profile-badge' >
+            Maksym Prokopov
+        </a>
+    </div>
+</div>
+<div class="sidebar__categories">
+    <div class="sidebar__heading">Categories</div>
+    <p></p>
+    <ul class="sidebar__links sidebar__category">
+        
+        <li><a href="/categories/ansible/">Ansible</a> (1) </li>
+        
+        <li><a href="/categories/apache/">Apache</a> (3) </li>
+        
+        <li><a href="/categories/business/">Business</a> (1) </li>
+        
+        <li><a href="/categories/clojure/">Clojure</a> (1) </li>
+        
+        <li><a href="/categories/docker/">Docker</a> (1) </li>
+        
+        <li><a href="/categories/education/">Education</a> (2) </li>
+        
+        <li><a href="/categories/emacs/">Emacs</a> (3) </li>
+        
+        <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
+        
+        <li><a href="/categories/git/">Git</a> (1) </li>
+        
+        <li><a href="/categories/gtd/">GTD</a> (4) </li>
+        
+        <li><a href="/categories/iphone/">IPhone</a> (4) </li>
+        
+        <li><a href="/categories/it-support/">IT Support</a> (1) </li>
+        
+        <li><a href="/categories/kubernetes/">Kubernetes</a> (1) </li>
+        
+        <li><a href="/categories/lifehack/">Lifehack</a> (24) </li>
+        
+        <li><a href="/categories/links/">Links</a> (6) </li>
+        
+        <li><a href="/categories/linux/">Linux</a> (1) </li>
+        
+        <li><a href="/categories/macos/">Macos</a> (2) </li>
+        
+        <li><a href="/categories/news/">News</a> (1) </li>
+        
+        <li><a href="/categories/org-mode/">Org-Mode</a> (1) </li>
+        
+        <li><a href="/categories/rails/">Rails</a> (1) </li>
+        
+        <li><a href="/categories/ruby/">Ruby</a> (2) </li>
+        
+        <li><a href="/categories/sip/">Sip</a> (1) </li>
+        
+        <li><a href="/categories/til/">Til</a> (1) </li>
+        
+        <li><a href="/categories/tips-and-tricks/">Tips and Tricks</a> (1) </li>
+        
+        <li><a href="/categories/vmware/">Vmware</a> (2) </li>
+        
+        <li><a href="/categories/windows/">Windows</a> (4) </li>
+        
+        <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">Администрирование</a> (32) </li>
+        
+        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">Без Категории</a> (4) </li>
+        
+        <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">Бытовая Техника</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">Веб-Разработка</a> (10) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">Виртуализация</a> (1) </li>
+        
+        <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">Гаджеты</a> (2) </li>
+        
+        <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">Железо</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">За Жизнь</a> (117) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">Здоровье</a> (4) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (43) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">Маркетинг</a> (2) </li>
+        
+        <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (24) </li>
+        
+        <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">Управление</a> (1) </li>
+        
+        <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
+        
+    </ul>
+</div>
+<div class="sidebar__friends">
+    <div class="sidebar__heading">Friends</div><p></p>
+	<ul class="sidebar__links">
+      
+      <li><a href="https://it-premium.com.ua" title="IT-Premium лучший аутсорсинг в Украине" >IT-Premium аутсорсинг от профессионалов</a></li>
+
+      
+      <li><a href="http://nexusonrails.blogspot.com/" title="Мой блог на blogger.com о Ruby on Rails" >Nexus on Rails</a></li>
+
+      
+      <li><a href="https://blog.it-premium.com.ua" title="Блог Максима Прокопова про Docker, Xen и CoreOS и всякое такое" rel="friend">Maksym Prokopov about Docker, Xen и CoreOS</a></li>
+
+      
+      <li><a href="https://nexus.org.ua" title="Сайт об IT технологиях" >Мой хардкорный убер сайт 2005 года Nexus Notes</a></li>
+
+      
+      <li><a href="https://condom.org.ua" title="Контрацепция в деталях" >Проект о контрацепции</a></li>
+
+      
+      <li><a href="https://it-premium.livejournal.com/" title="" rel="friend co-worker neighbor">IT-Premium company blog</a></li>
+
+      
+	</ul>
+</div>
+</div>
+
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB9KBZ5"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+</body>
+</html>
