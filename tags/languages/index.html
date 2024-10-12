@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Maksym Prokopov personal blog</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<script>
+ var remark_config = {
+   host: 'https://remark.prokopov.me',
+   site_id: 'remark',
+   no_footer: true
+ }
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+
+
+<link rel="stylesheet" href="https://prokopov.me/style.min.24166a1e761f51442033103dc963330d3526a4339a58ab46d3fee0c94a62f4a3.css">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                                                                                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                                                                                                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,'script','dataLayer','GTM-WB9KBZ5');</script>
+
+<script defer data-domain="prokopov.me" src="https://analytics.prokopov.me/js/script.js"></script>
+</head>
+    <body><div class="header">
+    <a class="title" href="/"><div id="title">Maksym Prokopov personal blog</div><div id="description">Idea is a something worth sharing</div></a>
+</div>
+<div class="nav">
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/reading/">Read</a></div>
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/creating/">Create</a></div>
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/about/">About</a></div>
+    
+</div>
+
+
+<div class="article">
+    <h1>
+        <a href="https://prokopov.me/posts/2024-09-01/">Languages for purpose</a>
+    </h1>
+    <div class="date">01.09.2024</div>
+    <div><p>Recently I&rsquo;ve invested some time to learn Elm and it&rsquo;s architecture. Funny, it was made to do Redux with React based programming fun, specifically with types and syntax.
+Immutability from the beginning. Signals. REPL. Packages. OMG. The tooling is just amaizing! Why the heck we don&rsquo;t do more of this?</p>
+<p>This is quite aligned with where nowadays mainstream goes with EcmaScript 2024 and React 18.</p>
+<p>Look at the state of Javascript. NPM for package management. Then PNPM, Yarn. Still no repl. Hot reload is there. JSX compilation with Babel. JSX is already a different language.
+Added Typescript for types. Why don&rsquo;t we use just the same goodies packaged in one nice language?</p>
+<p>And the error messages! Beautifully helpful because of types.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span><span style="color:#a6e22e">&gt;</span> greet name <span style="color:#a6e22e">=</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> <span style="color:#e6db74">&#34;Hello &#34;</span> <span style="color:#a6e22e">++</span> name <span style="color:#e6db74">&#34;!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- UNFINISHED DEFINITION -------------------------------------------------- REPL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">I</span> got stuck while parsing the <span style="color:#a6e22e">`</span>greet<span style="color:#a6e22e">`</span> definition<span style="color:#a6e22e">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span><span style="color:#a6e22e">|</span> greet name <span style="color:#a6e22e">=</span> 
+</span></span><span style="display:flex;"><span>               <span style="color:#a6e22e">^</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">I</span> was expecting to see an expression next<span style="color:#a6e22e">.</span> <span style="color:#66d9ef">What</span> is it equal to<span style="color:#960050;background-color:#1e0010">?</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Here</span> is a valid definition (with a <span style="color:#66d9ef">type</span> annotation) for reference<span style="color:#a6e22e">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    greet <span style="color:#a6e22e">:</span> <span style="color:#66d9ef">String</span> <span style="color:#a6e22e">-&gt;</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    greet name <span style="color:#a6e22e">=</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;Hello &#34;</span> <span style="color:#a6e22e">++</span> name <span style="color:#a6e22e">++</span> <span style="color:#e6db74">&#34;!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">The</span> top line (called a <span style="color:#e6db74">&#34;type annotation&#34;</span>) is optional<span style="color:#a6e22e">.</span> <span style="color:#66d9ef">You</span> can leave it off <span style="color:#66d9ef">if</span>
+</span></span><span style="display:flex;"><span>you want<span style="color:#a6e22e">.</span> <span style="color:#66d9ef">As</span> you get more comfortable with <span style="color:#66d9ef">Elm</span> and <span style="color:#66d9ef">as</span> your project grows, it
+</span></span><span style="display:flex;"><span>becomes more and more valuable to add them though<span style="color:#960050;background-color:#1e0010">!</span> <span style="color:#66d9ef">They</span> work great <span style="color:#66d9ef">as</span>
+</span></span><span style="display:flex;"><span>compiler<span style="color:#a6e22e">-</span>verified documentation, and they often improve error messages<span style="color:#960050;background-color:#1e0010">!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">&gt;</span> greet name <span style="color:#a6e22e">=</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> <span style="color:#e6db74">&#34;Hello &#34;</span> <span style="color:#a6e22e">++</span> name <span style="color:#a6e22e">++</span> <span style="color:#e6db74">&#34;!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- UNFINISHED DEFINITION -------------------------------------------------- REPL</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span><span style="color:#a6e22e">&gt;</span> greet <span style="color:#a6e22e">:</span> <span style="color:#66d9ef">String</span> <span style="color:#a6e22e">-&gt;</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> green name <span style="color:#a6e22e">=</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> <span style="color:#e6db74">&#34;hello &#34;</span> <span style="color:#a6e22e">++</span> name <span style="color:#a6e22e">++</span> <span style="color:#e6db74">&#34;!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- NAME MISMATCH ---------------------------------------------------------- REPL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">I</span> just saw a <span style="color:#66d9ef">type</span> annotation for <span style="color:#a6e22e">`</span>greet<span style="color:#a6e22e">`</span>, but it is followed by a definition for
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">`</span>green<span style="color:#a6e22e">`:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span><span style="color:#a6e22e">|</span> greet <span style="color:#a6e22e">:</span> <span style="color:#66d9ef">String</span> <span style="color:#a6e22e">-&gt;</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span><span style="color:#a6e22e">|</span> green name <span style="color:#a6e22e">=</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">^</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">These</span> names do not match<span style="color:#960050;background-color:#1e0010">!</span> <span style="color:#66d9ef">Is</span> there a typo<span style="color:#960050;background-color:#1e0010">?</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    green <span style="color:#a6e22e">-&gt;</span> greet
+</span></span></code></pre></div><p>But it was there since 2013!</p>
+<p>Very handy syntax to do common tasks, like update field in the record. Literally this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span>john <span style="color:#a6e22e">=</span> { first <span style="color:#a6e22e">=</span> <span style="color:#e6db74">&#34;John&#34;</span>, last <span style="color:#a6e22e">=</span> <span style="color:#e6db74">&#34;Hobson&#34;</span>, age <span style="color:#a6e22e">=</span> <span style="color:#ae81ff">81</span> }
+</span></span><span style="display:flex;"><span>{ john <span style="color:#a6e22e">|</span> last <span style="color:#a6e22e">=</span> <span style="color:#e6db74">&#34;Houdini&#34;</span> }
+</span></span><span style="display:flex;"><span>{ age <span style="color:#a6e22e">=</span> <span style="color:#ae81ff">81</span>, first <span style="color:#a6e22e">=</span> <span style="color:#e6db74">&#34;John&#34;</span>, last <span style="color:#a6e22e">=</span> <span style="color:#e6db74">&#34;Houdini&#34;</span> }
+</span></span></code></pre></div><p>To the downsides of Elm, sadly, there is no such vast ecosystem as NPM.</p>
+<ul>
+<li>Functional languages
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Typed</th>
+<th>Non-typed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frontend</td>
+<td>Elm</td>
+<td>ClojureScript</td>
+</tr>
+<tr>
+<td>Backend</td>
+<td>Scala, Haskell</td>
+<td>Ruby, Clojure</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="sidebar"><div class="sidebar__visitcard">
+    <div class="sidebar__heading">Profile links</div><p></p>
+    <div class="textwidget profile__link">
+        
+        <a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 18px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Max Prokopov" rel="noopener noreferrer">Max Prokopov</a><br><a href="https://ru-ru.facebook.com/mprokopov" target="_TOP" title="Max Prokopov" rel="noopener noreferrer"><img src="https://badge.facebook.com/badge/564099895.8308.711585450.png" style="border: 0px;"></a>
+        
+    </div>
+    <div class="profile__link">
+        <a href="https://twitter.com/mprokopov?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @mprokopov</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div class='LI-profile-badge profile__link' data-version='v1' data-size='medium' data-locale='en_US'
+        data-type='horizontal' data-theme='light' data-vanity='max-prokopov'>
+        <a class='LI-simple-link' href='https://in.linkedin.com/in/max-prokopov?trk=profile-badge' >
+            Maksym Prokopov
+        </a>
+    </div>
+</div>
+<div class="sidebar__categories">
+    <div class="sidebar__heading">Categories</div>
+    <p></p>
+    <ul class="sidebar__links sidebar__category">
+        
+        <li><a href="/categories/ansible/">Ansible</a> (1) </li>
+        
+        <li><a href="/categories/apache/">Apache</a> (3) </li>
+        
+        <li><a href="/categories/business/">Business</a> (1) </li>
+        
+        <li><a href="/categories/clojure/">Clojure</a> (1) </li>
+        
+        <li><a href="/categories/docker/">Docker</a> (1) </li>
+        
+        <li><a href="/categories/education/">Education</a> (2) </li>
+        
+        <li><a href="/categories/emacs/">Emacs</a> (3) </li>
+        
+        <li><a href="/categories/freebsd/">FreeBSD</a> (8) </li>
+        
+        <li><a href="/categories/git/">Git</a> (1) </li>
+        
+        <li><a href="/categories/gtd/">GTD</a> (4) </li>
+        
+        <li><a href="/categories/iphone/">IPhone</a> (4) </li>
+        
+        <li><a href="/categories/it-support/">IT Support</a> (1) </li>
+        
+        <li><a href="/categories/kubernetes/">Kubernetes</a> (1) </li>
+        
+        <li><a href="/categories/lifehack/">Lifehack</a> (24) </li>
+        
+        <li><a href="/categories/links/">Links</a> (6) </li>
+        
+        <li><a href="/categories/linux/">Linux</a> (1) </li>
+        
+        <li><a href="/categories/macos/">Macos</a> (2) </li>
+        
+        <li><a href="/categories/news/">News</a> (1) </li>
+        
+        <li><a href="/categories/org-mode/">Org-Mode</a> (1) </li>
+        
+        <li><a href="/categories/rails/">Rails</a> (1) </li>
+        
+        <li><a href="/categories/ruby/">Ruby</a> (2) </li>
+        
+        <li><a href="/categories/sip/">Sip</a> (1) </li>
+        
+        <li><a href="/categories/til/">Til</a> (1) </li>
+        
+        <li><a href="/categories/tips-and-tricks/">Tips and Tricks</a> (1) </li>
+        
+        <li><a href="/categories/vmware/">Vmware</a> (2) </li>
+        
+        <li><a href="/categories/windows/">Windows</a> (4) </li>
+        
+        <li><a href="/categories/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">Администрирование</a> (32) </li>
+        
+        <li><a href="/categories/%D0%B1%D0%B5%D0%B7-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8/">Без Категории</a> (4) </li>
+        
+        <li><a href="/categories/%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/">Бытовая Техника</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/">Веб-Разработка</a> (10) </li>
+        
+        <li><a href="/categories/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">Виртуализация</a> (1) </li>
+        
+        <li><a href="/categories/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B/">Гаджеты</a> (2) </li>
+        
+        <li><a href="/categories/%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE/">Железо</a> (3) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B0-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C/">За Жизнь</a> (117) </li>
+        
+        <li><a href="/categories/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5/">Здоровье</a> (4) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D0%BA/">Мак</a> (43) </li>
+        
+        <li><a href="/categories/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/">Маркетинг</a> (2) </li>
+        
+        <li><a href="/categories/%D1%81%D0%BE%D1%84%D1%82/">Софт</a> (24) </li>
+        
+        <li><a href="/categories/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/">Управление</a> (1) </li>
+        
+        <li><a href="/categories/%D1%8E%D0%BC%D0%BE%D1%80/">Юмор</a> (6) </li>
+        
+    </ul>
+</div>
+<div class="sidebar__friends">
+    <div class="sidebar__heading">Friends</div><p></p>
+	<ul class="sidebar__links">
+      
+      <li><a href="https://it-premium.com.ua" title="IT-Premium лучший аутсорсинг в Украине" >IT-Premium аутсорсинг от профессионалов</a></li>
+
+      
+      <li><a href="http://nexusonrails.blogspot.com/" title="Мой блог на blogger.com о Ruby on Rails" >Nexus on Rails</a></li>
+
+      
+      <li><a href="https://blog.it-premium.com.ua" title="Блог Максима Прокопова про Docker, Xen и CoreOS и всякое такое" rel="friend">Maksym Prokopov about Docker, Xen и CoreOS</a></li>
+
+      
+      <li><a href="https://nexus.org.ua" title="Сайт об IT технологиях" >Мой хардкорный убер сайт 2005 года Nexus Notes</a></li>
+
+      
+      <li><a href="https://condom.org.ua" title="Контрацепция в деталях" >Проект о контрацепции</a></li>
+
+      
+      <li><a href="https://it-premium.livejournal.com/" title="" rel="friend co-worker neighbor">IT-Premium company blog</a></li>
+
+      
+	</ul>
+</div>
+</div>
+
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB9KBZ5"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+</body>
+</html>

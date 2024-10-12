@@ -45,6 +45,204 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/2024-10-11-hashicorp-waypoint/">Hashicorp Waypoint</a>
+    </h1>
+    <div class="date">11.10.2024</div>
+    <div>
+<p>Waypoint is a tool by Hashicorp to manage builds, artifacts and deployments.</p>
+<p>
+It has a CLI interface and also a nice UI and uses HCL instead of YAML for configuration and templating.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Introduction
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>It might not be needed if you have something like GitHub Actions and may felt redundant, but actually it&#39;s a kind of missing piece for having a good UI for CI/CD pipelines, as it gives a nice overview on the whole process and a list of jobs.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Prerequisites
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>You certainly will need a waypoint.hcl.</p>
+<div class="src src-shell">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>waypoint init</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+Builds and Articats
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>I.e. you can see a list of artifacts and trigger a build process of the new artifact right on your machine. The artifact is pushed to the artifact storage after the build is complete. It&#39;s typically some sort of docker registry, AWS ECR is also a supported option.</p>
+<p>
+Starting a build is as easy as executing</p>
+<div class="src src-shell">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>waypoint build</span></span></code></pre></div>
+</div>
+<p>
+<a href="Hashicorp Waypoint Build process"><img src="waypoint-build.png" alt="waypoint-build.png" /></a></p>
+<p>
+After the build is complete, you can see one in the list of the builds</p>
+<p>
+<img src="waypoint-build-ui.png" alt="waypoint-build-ui.png" title="waypoint-build-ui.png" /></p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+Deployment
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>The deployment is an act of bringing your artifact to the target environment.
+It&#39;s run by the same simple command.</p>
+<div class="src src-shell">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>waypoint deploy</span></span></code></pre></div>
+</div>
+<p>
+<img src="waypoint-deploy.png" alt="waypoint-deploy.png" title="waypoint-deploy.png" /></p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+Release
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>The release for a website means switching from the old version to the new version of the deployed artifact and it can be done in a different ways. Typically switching to the new artifact is done with the help of the change in the load balancer configuration, that simply starts routing the traffic to the newly deployed artifact.</p>
+<p>
+Sometimes it&#39;s a part of the deployment process, sometimes it&#39;s a part of the promotion step.</p>
+<div class="src src-shell">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>waypoint release</span></span></code></pre></div>
+</div>
+<p>
+<img src="waypoint-release.png" alt="waypoint-release.png" title="waypoint-release.png" /></p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+Observe
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>The UI give a nice ability to observe resources (running artifacts on the target environment), inspect logs and connect to the container shell to interact with the application.</p>
+<p>
+<img src="waypoint-project.png" alt="waypoint-project.png" title="waypoint-project.png" /></p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+Summary
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<p>This would look like a missing piece of any software release lifecycle with the good CLI interface as well as the UI. Though, I found the deployment of the server part to the Nomad cluster quite challenging.</p>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+P.S.
+</h2>
+<div id="outline-text-headline-8" class="outline-text-2">
+<p>Unfortunately, after the aquisition of Hashicorp by IBM the community version of this wonderful product has been killed and only cloud one in HCP is available, but now it&#39;s a very different product.</p>
+<p>
+RIP Waypoint on Jan 8, 2024
+<a href="https://github.com/hashicorp/waypoint/">https://github.com/hashicorp/waypoint/</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
+        <a href="https://prokopov.me/posts/2024-09-01/">Languages for purpose</a>
+    </h1>
+    <div class="date">01.09.2024</div>
+    <div><p>Recently I&rsquo;ve invested some time to learn Elm and it&rsquo;s architecture. Funny, it was made to do Redux with React based programming fun, specifically with types and syntax.
+Immutability from the beginning. Signals. REPL. Packages. OMG. The tooling is just amaizing! Why the heck we don&rsquo;t do more of this?</p>
+<p>This is quite aligned with where nowadays mainstream goes with EcmaScript 2024 and React 18.</p>
+<p>Look at the state of Javascript. NPM for package management. Then PNPM, Yarn. Still no repl. Hot reload is there. JSX compilation with Babel. JSX is already a different language.
+Added Typescript for types. Why don&rsquo;t we use just the same goodies packaged in one nice language?</p>
+<p>And the error messages! Beautifully helpful because of types.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span><span style="color:#a6e22e">&gt;</span> greet name <span style="color:#a6e22e">=</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> <span style="color:#e6db74">&#34;Hello &#34;</span> <span style="color:#a6e22e">++</span> name <span style="color:#e6db74">&#34;!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- UNFINISHED DEFINITION -------------------------------------------------- REPL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">I</span> got stuck while parsing the <span style="color:#a6e22e">`</span>greet<span style="color:#a6e22e">`</span> definition<span style="color:#a6e22e">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span><span style="color:#a6e22e">|</span> greet name <span style="color:#a6e22e">=</span> 
+</span></span><span style="display:flex;"><span>               <span style="color:#a6e22e">^</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">I</span> was expecting to see an expression next<span style="color:#a6e22e">.</span> <span style="color:#66d9ef">What</span> is it equal to<span style="color:#960050;background-color:#1e0010">?</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Here</span> is a valid definition (with a <span style="color:#66d9ef">type</span> annotation) for reference<span style="color:#a6e22e">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    greet <span style="color:#a6e22e">:</span> <span style="color:#66d9ef">String</span> <span style="color:#a6e22e">-&gt;</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    greet name <span style="color:#a6e22e">=</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;Hello &#34;</span> <span style="color:#a6e22e">++</span> name <span style="color:#a6e22e">++</span> <span style="color:#e6db74">&#34;!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">The</span> top line (called a <span style="color:#e6db74">&#34;type annotation&#34;</span>) is optional<span style="color:#a6e22e">.</span> <span style="color:#66d9ef">You</span> can leave it off <span style="color:#66d9ef">if</span>
+</span></span><span style="display:flex;"><span>you want<span style="color:#a6e22e">.</span> <span style="color:#66d9ef">As</span> you get more comfortable with <span style="color:#66d9ef">Elm</span> and <span style="color:#66d9ef">as</span> your project grows, it
+</span></span><span style="display:flex;"><span>becomes more and more valuable to add them though<span style="color:#960050;background-color:#1e0010">!</span> <span style="color:#66d9ef">They</span> work great <span style="color:#66d9ef">as</span>
+</span></span><span style="display:flex;"><span>compiler<span style="color:#a6e22e">-</span>verified documentation, and they often improve error messages<span style="color:#960050;background-color:#1e0010">!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">&gt;</span> greet name <span style="color:#a6e22e">=</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> <span style="color:#e6db74">&#34;Hello &#34;</span> <span style="color:#a6e22e">++</span> name <span style="color:#a6e22e">++</span> <span style="color:#e6db74">&#34;!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- UNFINISHED DEFINITION -------------------------------------------------- REPL</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span><span style="color:#a6e22e">&gt;</span> greet <span style="color:#a6e22e">:</span> <span style="color:#66d9ef">String</span> <span style="color:#a6e22e">-&gt;</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> green name <span style="color:#a6e22e">=</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> <span style="color:#e6db74">&#34;hello &#34;</span> <span style="color:#a6e22e">++</span> name <span style="color:#a6e22e">++</span> <span style="color:#e6db74">&#34;!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- NAME MISMATCH ---------------------------------------------------------- REPL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">I</span> just saw a <span style="color:#66d9ef">type</span> annotation for <span style="color:#a6e22e">`</span>greet<span style="color:#a6e22e">`</span>, but it is followed by a definition for
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">`</span>green<span style="color:#a6e22e">`:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span><span style="color:#a6e22e">|</span> greet <span style="color:#a6e22e">:</span> <span style="color:#66d9ef">String</span> <span style="color:#a6e22e">-&gt;</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span><span style="color:#a6e22e">|</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span><span style="color:#a6e22e">|</span> green name <span style="color:#a6e22e">=</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">^</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">These</span> names do not match<span style="color:#960050;background-color:#1e0010">!</span> <span style="color:#66d9ef">Is</span> there a typo<span style="color:#960050;background-color:#1e0010">?</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    green <span style="color:#a6e22e">-&gt;</span> greet
+</span></span></code></pre></div><p>But it was there since 2013!</p>
+<p>Very handy syntax to do common tasks, like update field in the record. Literally this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span>john <span style="color:#a6e22e">=</span> { first <span style="color:#a6e22e">=</span> <span style="color:#e6db74">&#34;John&#34;</span>, last <span style="color:#a6e22e">=</span> <span style="color:#e6db74">&#34;Hobson&#34;</span>, age <span style="color:#a6e22e">=</span> <span style="color:#ae81ff">81</span> }
+</span></span><span style="display:flex;"><span>{ john <span style="color:#a6e22e">|</span> last <span style="color:#a6e22e">=</span> <span style="color:#e6db74">&#34;Houdini&#34;</span> }
+</span></span><span style="display:flex;"><span>{ age <span style="color:#a6e22e">=</span> <span style="color:#ae81ff">81</span>, first <span style="color:#a6e22e">=</span> <span style="color:#e6db74">&#34;John&#34;</span>, last <span style="color:#a6e22e">=</span> <span style="color:#e6db74">&#34;Houdini&#34;</span> }
+</span></span></code></pre></div><p>To the downsides of Elm, sadly, there is no such vast ecosystem as NPM.</p>
+<ul>
+<li>Functional languages
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Typed</th>
+<th>Non-typed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frontend</td>
+<td>Elm</td>
+<td>ClojureScript</td>
+</tr>
+<tr>
+<td>Backend</td>
+<td>Scala, Haskell</td>
+<td>Ruby, Clojure</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/2024-07-14/">Deployment process with Hashicorp Nomad</a>
     </h1>
     <div class="date">14.07.2024</div>

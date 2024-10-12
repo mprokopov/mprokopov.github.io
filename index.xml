@@ -6,7 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sun, 14 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Read</title>
@@ -28,6 +28,20 @@
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/pages/about/</guid>
       <description>Hi, my name is Maksym Prokopov. These days I mostly involved in DevOps, Lean IT and IT services.&#xA;A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages. Surprisingly, but I started using PHP for my job today again after almost 18 years. What a destiny!&#xA;Since 2006 I started using Ruby on Rails a lot. 2015 got addicted to Clojure and ClojureScript and did some production-ready things.</description>
+    </item>
+    <item>
+      <title>Hashicorp Waypoint</title>
+      <link>https://prokopov.me/posts/2024-10-11-hashicorp-waypoint/</link>
+      <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-10-11-hashicorp-waypoint/</guid>
+      <description>Waypoint is a tool by Hashicorp to manage builds, artifacts and deployments.&#xA;It has a CLI interface and also a nice UI and uses HCL instead of YAML for configuration and templating.&#xA;Introduction It might not be needed if you have something like GitHub Actions and may felt redundant, but actually it&amp;#39;s a kind of missing piece for having a good UI for CI/CD pipelines, as it gives a nice overview on the whole process and a list of jobs.</description>
+    </item>
+    <item>
+      <title>Languages for purpose</title>
+      <link>https://prokopov.me/posts/2024-09-01/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-09-01/</guid>
+      <description>Recently I&amp;rsquo;ve invested some time to learn Elm and it&amp;rsquo;s architecture. Funny, it was made to do Redux with React based programming fun, specifically with types and syntax. Immutability from the beginning. Signals. REPL. Packages. OMG. The tooling is just amaizing! Why the heck we don&amp;rsquo;t do more of this?&#xA;This is quite aligned with where nowadays mainstream goes with EcmaScript 2024 and React 18.&#xA;Look at the state of Javascript.</description>
     </item>
     <item>
       <title>Deployment process with Hashicorp Nomad</title>

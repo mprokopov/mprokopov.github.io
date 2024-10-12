@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Maksym Prokopov personal blog</title>
+    <link>https://prokopov.me/tags/programming/</link>
+    <description>Recent content in Programming on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://prokopov.me/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Languages for purpose</title>
+      <link>https://prokopov.me/posts/2024-09-01/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-09-01/</guid>
+      <description>Recently I&amp;rsquo;ve invested some time to learn Elm and it&amp;rsquo;s architecture. Funny, it was made to do Redux with React based programming fun, specifically with types and syntax. Immutability from the beginning. Signals. REPL. Packages. OMG. The tooling is just amaizing! Why the heck we don&amp;rsquo;t do more of this?&#xA;This is quite aligned with where nowadays mainstream goes with EcmaScript 2024 and React 18.&#xA;Look at the state of Javascript.</description>
+    </item>
+  </channel>
+</rss>
