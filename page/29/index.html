@@ -48,6 +48,34 @@
 
 <div class="article">
     <h1>
+        <a href="/2009/12/freebsd-zabbix-1-8/">Ошибка при установке на FreeBSD zabbix 1.8</a>
+    </h1>
+    <div class="date">24.12.2009</div>
+    <div><p><img class="alignnone" style="margin: 10px;" title="zabbix" src="http://www.zabbix.com/img/zabbix1.png" alt="zabbix" width="118" height="31" />Если при установке zabbix 1.8 на FreeBSD вы получаете сообщения вида:</p>
+<img class="alignnone" style="margin: 10px;" title="freebsd logo" src="http://www.freebsd.org/logo/logo-full-thumb.png" alt="freebsd logo" width="200" height="72" />
+<p>60622:20091223:144406.024 Can’t allocate shared memory of size 8388608 [Cannot allocate memory]</p>
+<p>60622:20091223:144406.024 Can’t allocate shared memory for configuration cache.</p>
+<p>знайте, все дело в системных настройках sysctl.conf</p>
+<p>в порядке тестирования пропишите</p>
+<p>sysctl kern.ipc.semmni=128</p>
+<p>sysctl kern.ipc.semmns=32000</p>
+<p>sysctl kern.ipc.semmax=32000</p>
+<p>sysctl kern.ipc.semmsl=250</p>
+<p>sysctl kern.ipc.shmmni=4096</p>
+<p>sysctl kern.ipc.shmmax=2147483648</p>
+<p>sysctl kern.ipc.shmall=2097152</p>
+<p>или сразу в /etc/sysctl.conf, тогда потребуется перезагрузка</p>
+<p>kern.ipc.semmni=128</p>
+<p>kern.ipc.semmns=32000</p> </div>
+    
+    
+        <a href="/2009/12/freebsd-zabbix-1-8/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/2009/12/esxi/">про VMWare ESXi</a>
     </h1>
     <div class="date">23.12.2009</div>
@@ -176,18 +204,6 @@
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/draft_one-account--all-of-google--24ec9b332a4a/">One account. All of Google.</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><p>One account. All of Google.</p>
-<p><img src="img/0__xPa6uZ04ZDjvTOOQ.png" alt=""></p>
-<p><em>Originally published at</em> <a href="https://www.blogger.com/blogger.g?blogID=8155698338999334610"><em>www.blogger.com</em></a><em>.</em></p> </div>
-    
-</div>
-<div class="border-bottom"></div>
-
 <div class="pagination">
     
     <div class="pagination__prev">
@@ -261,6 +277,8 @@
         <li><a href="/categories/news/">News</a> (1) </li>
         
         <li><a href="/categories/org-mode/">Org-Mode</a> (1) </li>
+        
+        <li><a href="/categories/philosophy/">Philosophy</a> (1) </li>
         
         <li><a href="/categories/rails/">Rails</a> (2) </li>
         
