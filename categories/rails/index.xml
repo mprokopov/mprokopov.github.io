@@ -6,14 +6,21 @@
     <description>Recent content in Rails on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Tue, 12 Apr 2011 10:56:21 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Apr 2011 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/rails/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ruby on Rails хозяйке на заметку: менеджер локальных сайтов Pow</title>
       <link>https://prokopov.me/2011/04/ruby-on-rails-%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C/</link>
-      <pubDate>Tue, 12 Apr 2011 10:56:21 +0000</pubDate>
+      <pubDate>Tue, 12 Apr 2011 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/2011/04/ruby-on-rails-%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D0%BA%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C/</guid>
-      <description>Чрезвычайно удобной оказалась возможность работы с несколькими сайтами на базе RoR (по факту на Rack), которую предоставляет утилита Pow.&#xA;Вкратце, если у вас достаточно много сайтов разработке, утилита предоставляет хук в DNS зону dev и позволяет обращаться к вашим сайтам по url вида http://myapp.dev , http://myapp2.dev, а также добавляет правило в фаерволе, которое заворачивает обращения к self с порта 80 на внутренний порт утилиты.&#xA;Сам Pow состоит из двух частей — DNS responder и проксирующего web server.</description>
+      <description>&lt;p&gt;Чрезвычайно удобной оказалась возможность работы с несколькими сайтами на базе RoR (по факту на Rack), которую предоставляет утилита &lt;a href=&#34;http://pow.cx/&#34;&gt;Pow&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Вкратце, если у вас достаточно много сайтов разработке, утилита предоставляет хук в DNS зону dev и позволяет обращаться к вашим сайтам по url вида &lt;a href=&#34;http://myapp.dev&#34;&gt;http://myapp.dev&lt;/a&gt; , &lt;a href=&#34;http://myapp2.dev&#34;&gt;http://myapp2.dev&lt;/a&gt;, а также добавляет правило в фаерволе, которое заворачивает обращения к self с порта 80 на внутренний порт утилиты.&lt;/p&gt;&#xA;&lt;p&gt;Сам Pow состоит из двух частей — DNS responder и проксирующего web server. Реализовано все счастье на Node.js.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cucumber говорит по-русски</title>
+      <link>https://prokopov.me/posts/2009-12-26-cucumber/</link>
+      <pubDate>Sat, 26 Dec 2009 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2009-12-26-cucumber/</guid>
+      <description>&lt;p&gt;Для тех ребят, которые увлекаются канбанами, TDD и прочими agile системами разработки следующим шагом является приобщение к &lt;a href=&#34;http://en.wikipedia.org/wiki/Behavior_Driven_Development&#34; title=&#34;Behavior Driven Development - Wikipedia, the free encyclopedia&#34;&gt;BDD&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;По-сути &lt;a href=&#34;http://cukes.info/&#34; title=&#34;Cucumber - Making BDD fun&#34;&gt;Cucumber&lt;/a&gt; представляет собой интеграционные тесты при помощи &lt;a href=&#34;http://github.com/brynary/webrat&#34; title=&#34;brynary&#39;s webrat at master - GitHub&#34;&gt;webrat&lt;/a&gt; или других высокоуровневых библиотек для эмуляции работы браузера, открывания странц, нажимания на кнопки и кликания по ссылкам.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

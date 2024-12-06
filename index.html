@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.127.0"><title>Maksym Prokopov personal blog</title>
+	<meta name="generator" content="Hugo 0.136.2"><title>Maksym Prokopov personal blog</title>
 <meta charset="utf-8"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
@@ -39,6 +39,8 @@
     
     <div class="page-item"><a href="https://prokopov.me/pages/creating/">Create</a></div>
     
+    <div class="page-item"><a href="https://prokopov.me/pages/projects/">Projects</a></div>
+    
     <div class="page-item"><a href="https://prokopov.me/pages/about/">About</a></div>
     
 </div>
@@ -49,9 +51,15 @@
         <a href="/posts/2024-10-11-hashicorp-waypoint/">Hashicorp Waypoint</a>
     </h1>
     <div class="date">11.10.2024</div>
-    <div>Waypoint is a tool by Hashicorp to manage builds, artifacts and deployments.
-It has a CLI interface and also a nice UI and uses HCL instead of YAML for configuration and templating.
-Introduction It might not be needed if you have something like GitHub Actions and may felt redundant, but actually it&#39;s a kind of missing piece for having a good UI for CI/CD pipelines, as it gives a handy tool for a developer to streamline build/deploy/release process. </div>
+    <div><p>Waypoint is a tool by Hashicorp to manage builds, artifacts and deployments.</p>
+<p>
+It has a CLI interface and also a nice UI and uses HCL instead of YAML for configuration and templating.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Introduction
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>It might not be needed if you have something like GitHub Actions and may felt redundant, but actually it&#39;s a kind of missing piece for having a good UI for CI/CD pipelines, as it gives a handy tool for a developer to streamline build/deploy/release process.</p> </div>
     
     
         <a href="/posts/2024-10-11-hashicorp-waypoint/">Read More…</a>
@@ -61,27 +69,15 @@ Introduction It might not be needed if you have something like GitHub Actions an
 
 <div class="article">
     <h1>
-        <a href="/posts/2024-09-01/">Languages for purpose</a>
-    </h1>
-    <div class="date">01.09.2024</div>
-    <div>Recently I&rsquo;ve invested some time to learn Elm and it&rsquo;s architecture. Funny, it was made to do Redux with React based programming fun, specifically with types and syntax. Immutability from the beginning. Signals. REPL. Packages. OMG. The tooling is just amaizing! Why the heck we don&rsquo;t do more of this?
-This is quite aligned with where nowadays mainstream goes with EcmaScript 2024 and React 18.
-Look at the state of Javascript. </div>
-    
-    
-        <a href="/posts/2024-09-01/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
         <a href="/posts/2024-07-14/">Deployment process with Hashicorp Nomad</a>
     </h1>
     <div class="date">14.07.2024</div>
-    <div>As, probably, many of you, I did a long journey from manual FTP sync, to semi-automated tools like Capistrano, then manually managed docker deployments, then anisble managed docker containers and finally, met the orchestration system of choice - Hashicorp Nomad.
-TLDR: Kubernetes is too heavy for my moderate needs. Hashicorp Nomad strikes the right balance between features and maintenance complexity.
-At some point in time I felt a need for better container orchestration system that I could run by myself in Hetzner. </div>
+    <div><p>As, probably, many of you, I did a long journey from manual FTP sync, to semi-automated tools like Capistrano, then manually managed docker deployments, then anisble managed docker containers and finally, met the orchestration system of choice - <strong>Hashicorp Nomad</strong>.</p>
+<p>
+TLDR: Kubernetes is too heavy for my moderate needs. Hashicorp Nomad strikes the right balance between features and maintenance complexity.</p>
+<p>
+At some point in time I felt a need for better container orchestration system that I could run by myself in Hetzner. Funny enough, DHH and Co. came to the same conclusion, but implemented in a different way. They developed completely own version of <a href="https://kamal-deploy.org/">ansible on steroids named Kamal</a>. This has right for existence, but imho has own flaws, like manual nodes management for fault tolerance and challenge to keep versions of deployed artifacts in sync.
+The push based deployment always suffers from this. People were trying to solve this issues already for quite a long time by using systems like <strong>Chef</strong> of <strong>Puppet</strong>.</p> </div>
     
     
         <a href="/posts/2024-07-14/">Read More…</a>
@@ -94,10 +90,25 @@ At some point in time I felt a need for better container orchestration system th
         <a href="/posts/2024-06-30/">Sustainable Ruby on Rails in 2024</a>
     </h1>
     <div class="date">30.06.2024</div>
-    <div>Rubu on Rails development changes a lot every year and sometimes it&#39;s not easy to keep up with the changes.
-I&#39;ve recently bought Sustainable Rails Book and it&#39;s hard to overestimate how valuable is it for me.
-Here are couple of thoughts after reading first chapters.
-Invest in developer friendly application bootstrap process. Running bin/setup and bin/dev should be enough to run on the new blank developer machine. Move business logic out of fat controllers and fat models. </div>
+    <div><p>Rubu on Rails development changes a lot every year and sometimes it&#39;s not easy to keep up with the changes.</p>
+<p>
+I&#39;ve recently bought <a href="https://sustainable-rails.com/">Sustainable Rails Book</a> and it&#39;s hard to overestimate how valuable is it for me.</p>
+<p>
+Here are couple of thoughts after reading first chapters.</p>
+<ul>
+<li>Invest in developer friendly application bootstrap process. Running <strong>bin/setup</strong> and <strong>bin/dev</strong> should be enough to run on the new blank developer machine.</li>
+<li>Move business logic out of fat controllers and fat models. Extract it and move
+to Service Objects. Fan-in and fan-out is a fancy metrics to estimate how
+object relate to each other. Simply speaking the most referred dependencies
+should be simple enough and thoroughly tested.</li>
+<li>Keep routing.rb as canonical as possible. Avoid nesting routes whenever the resources don&#39;t represent tight coupling. Rely on resources instead of custom crafter routes. Tip: use :only [:create] to reduce the scope.</li>
+</ul>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+CI/CD process
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Dare to add, invest heavily in CI/CD process, with modern GitHub offering it&#39;s just way easier then maintaining own on-prem solution.</p> </div>
     
     
         <a href="/posts/2024-06-30/">Read More…</a>
@@ -109,7 +120,7 @@ Invest in developer friendly application bootstrap process. Running bin/setup an
     <h1>
         <a href="/posts/emacs-for-beginners/">Emacs For Beginners</a>
     </h1>
-    <div class="date">10.06.2024</div>
+    <div class="date">10.05.2024</div>
     <div><p>The article provides overview of facts why Emacs is so different but also so
 powerful comparing to other editors. It gives a good starting point for the
 reader to understand the fundamentals and start own journey to effective work.</p>
@@ -133,50 +144,11 @@ reader to understand the fundamentals and start own journey to effective work.</
 
 <div class="article">
     <h1>
-        <a href="/posts/2024-04-01/">Use LLM to automate Amazon purchase categorization</a>
-    </h1>
-    <div class="date">01.04.2024</div>
-    <div><p>Used Mistral-7b LLM to map my Amazon purchases to my home ledger accounts.</p>
-<p>It worked surprisingly well!</p>
-<p>Definitely worth integrating into accounting automation routines.
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/1a0O2pLDF0Q?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-</p> </div>
-    
-    
-        <a href="/posts/2024-04-01/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-03-28/">Run Large Language Model on your PC in 5 minutes</a>
-    </h1>
-    <div class="date">28.03.2024</div>
-    <div>Run Large Language Model on your PC in 5 minutes For the summary
-I used model whisper to extract text from audio of this video and asked mistral to summarize it.
-echo &#34;this is a transcript of the video. Summarize this\n $(cat subtitles.txt)&#34; | ollama run gemma:7b So, here you go, output from mistral 7b:
-The speaker explains how to download, install, and set up LLMA, and then demonstrates how to use it to run a specific model called &ldquo;mistrial&rdquo; with a pirate-themed prompt. </div>
-    
-    
-        <a href="/posts/2024-03-28/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
         <a href="/posts/2024-03-27-ansible/">Ansible Use Cases</a>
     </h1>
     <div class="date">27.03.2024</div>
-    <div>While Ansible is a great tool for certain use cases, such as building new AMIs when used with Packer, it has some downsides. These become apparent when using it for container orchestration (which I have witnessed at scale) or keeping the configuration of a set of nodes in sync.
-Another significant, though not dramatic, downside is related to Python version and dependency management. This adds extra complexity that I would prefer to avoid in a system management tool. </div>
+    <div><p>While Ansible is a great tool for certain use cases, such as building new AMIs when used with Packer, it has some downsides. These become apparent when using it for container orchestration (which I have witnessed at scale) or keeping the configuration of a set of nodes in sync.</p>
+<p>Another significant, though not dramatic, downside is related to Python version and dependency management. This adds extra complexity that I would prefer to avoid in a system management tool.</p> </div>
     
     
         <a href="/posts/2024-03-27-ansible/">Read More…</a>
@@ -189,9 +161,9 @@ Another significant, though not dramatic, downside is related to Python version 
         <a href="/posts/2024-03-27/">Compliance as a Code</a>
     </h1>
     <div class="date">27.03.2024</div>
-    <div>Recently, I stumbled upon a concept that sounded new to me: Compliance as a Code.
-The core idea is to &ldquo;embed compliance policies into the code that can be repeated and tested automatically.&rdquo; But what does it mean in practice?
-For example, consider PCI DSS, which requires measures to secure credit card information to ensure compliance. Tools like Terraform, Ansible, and others should contain the code for encryption, access control, and data obfuscation. </div>
+    <div><p>Recently, I stumbled upon a concept that sounded new to me: Compliance as a Code.</p>
+<p>The core idea is to &ldquo;embed compliance policies into the code that can be repeated and tested automatically.&rdquo; But what does it mean in practice?</p>
+<p>For example, consider PCI DSS, which requires measures to secure credit card information to ensure compliance. Tools like Terraform, Ansible, and others should contain the code for encryption, access control, and data obfuscation. Additionally, before deployment, automated tests in the CI/CD pipeline should validate that the application meets PCI DSS requirements.</p> </div>
     
     
         <a href="/posts/2024-03-27/">Read More…</a>
@@ -204,7 +176,73 @@ For example, consider PCI DSS, which requires measures to secure credit card inf
         <a href="/posts/2024-03-26/">Palettro - VSCode like command palette in any macOS application</a>
     </h1>
     <div class="date">26.03.2024</div>
-    <div>Short video with overview of Palettro, small utility that brings VSCode like navigation to any macOS application to boost your productivity. </div>
+    <div><p>Short video with overview of Palettro, small utility that brings VSCode like navigation to any macOS application to boost your productivity.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KKCZHCR1pwg?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div> </div>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/2024-03-25/">SRE Simplified - Error Budget</a>
+    </h1>
+    <div class="date">25.03.2024</div>
+    <div><p>SRE Simplified : Error Budget concept.</p>
+<p>The concept of Error Budget is useful for setting up alerts of different severity. This video explains in extremely simplified manner how it works.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/oac0DejRTkA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div> </div>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/2024-03-17/">SRE Simplified - Service Level Agreement</a>
+    </h1>
+    <div class="date">17.03.2024</div>
+    <div><p>The next issue of SRE Simplified is about Service Level Agreement.</p>
+<p>Service Level Agreement is an agreement between service supplier and a customer about what the target quality of the service is and what are the consequences if the promise is broken.</p>
+<p>But the challenge here is to eastablish monitoring and alerting.</p>
+<p>This video provides very simplified example of an SLA for the company that produces apples.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/tg70WgWyBts?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h1 id="document-title">Document Title</h1> </div>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/2024-03-10/">SRE Simplified - Introduction</a>
+    </h1>
+    <div class="date">10.03.2024</div>
+    <div><p>What are the SRE concepts, like Service Level Agreement and Reliability?</p>
+<p>The challenge is to explain it in simplified manner, without deep discussions on different monitoring strategies.</p>
+<p>In this first video I tried to just to scratch the surface.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/yh47gi7vZvQ?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div> </div>
     
 </div>
 <div class="border-bottom"></div>
@@ -278,7 +316,7 @@ For example, consider PCI DSS, which requires measures to secure credit card inf
         
         <li><a href="/categories/org-mode/">Org-Mode</a> (1) </li>
         
-        <li><a href="/categories/rails/">Rails</a> (1) </li>
+        <li><a href="/categories/rails/">Rails</a> (2) </li>
         
         <li><a href="/categories/ruby/">Ruby</a> (2) </li>
         

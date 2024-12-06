@@ -38,6 +38,8 @@
     
     <div class="page-item"><a href="https://prokopov.me/pages/creating/">Create</a></div>
     
+    <div class="page-item"><a href="https://prokopov.me/pages/projects/">Projects</a></div>
+    
     <div class="page-item"><a href="https://prokopov.me/pages/about/">About</a></div>
     
 </div>
@@ -66,6 +68,38 @@ run ActionController::Dispatcher.new</pre>
 <p>Утилита что-то наподобие <a href="http://www.denwer.ru/">denwer</a> для php.</p>
 <p> </p>
 </div>
+</div>
+
+<div class="article">
+    <h1>
+        <a href="https://prokopov.me/posts/2009-12-26-cucumber/">Cucumber говорит по-русски</a>
+    </h1>
+    <div class="date">26.12.2009</div>
+    <div><p>Для тех ребят, которые увлекаются канбанами, TDD и прочими agile системами разработки следующим шагом является приобщение к <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development" title="Behavior Driven Development - Wikipedia, the free encyclopedia">BDD</a>.</p>
+<p>По-сути <a href="http://cukes.info/" title="Cucumber - Making BDD fun">Cucumber</a> представляет собой интеграционные тесты при помощи <a href="http://github.com/brynary/webrat" title="brynary's webrat at master - GitHub">webrat</a> или других высокоуровневых библиотек для эмуляции работы браузера, открывания странц, нажимания на кнопки и кликания по ссылкам.</p>
+<p>Теперь с cucumber жить еще проще, рассказывать по-русски можно при помощи тега</p>
+<p>@language ru</p>
+<p>Типичный сценарий:</p>
+<pre class="brush:ruby"># language: ru
+Функционал: отчеты по времени
+  Чтобы получить понятие о стоимости часа для конкретной компании
+  Я как руководитель
+  Хочу иметь возможность просматривать отчеты по временным затратам на каждую компанию
+
+Предыстория:
+  Допустим существует клиент, админ и сотрудник клиента
+
+Сценарий: просмотр суммарно затраченного времени за текущий месяц
+  Допустим админ авторизован
+  И открывет страницу отчетов
+  То видит список клиентов с затраченным временем за последний месяц
+</pre>
+<div id="attachment_109" style="width: 310px" class="wp-caption aligncenter">
+  <a href="http://blog.nexus.org.ua/wp-content/uploads/2009/12/Снимок-экрана-2009-12-23-в-17.26.43.png"><img aria-describedby="caption-attachment-109" class="size-medium wp-image-109" title="cucumber" src="http://blog.nexus.org.ua/wp-content/uploads/2009/12/Снимок-экрана-2009-12-23-в-17.26.43-300x243.png" alt="cucumber тесты по-русски" width="300" height="243" srcset="/uploads/2009/12/Снимок-экрана-2009-12-23-в-17.26.43-300x243.png 300w, /uploads/2009/12/Снимок-экрана-2009-12-23-в-17.26.43.png 946w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <p id="caption-attachment-109" class="wp-caption-text">
+    cucumber тесты по-русски
+  </p>
+</div></div>
 </div>
 
 <div class="sidebar"><div class="sidebar__visitcard">
@@ -128,7 +162,7 @@ run ActionController::Dispatcher.new</pre>
         
         <li><a href="/categories/org-mode/">Org-Mode</a> (1) </li>
         
-        <li><a href="/categories/rails/">Rails</a> (1) </li>
+        <li><a href="/categories/rails/">Rails</a> (2) </li>
         
         <li><a href="/categories/ruby/">Ruby</a> (2) </li>
         

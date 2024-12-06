@@ -6,14 +6,14 @@
     <description>Recent content in Mac on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Wed, 07 Mar 2012 10:57:23 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Mar 2012 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Цвета в терминале Mac OS X Lion</title>
       <link>https://prokopov.me/2012/03/%D1%86%D0%B2%D0%B5%D1%82%D0%B0-%D0%B2-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%B5-mac-os-x-lion/</link>
-      <pubDate>Wed, 07 Mar 2012 10:57:23 +0000</pubDate>
+      <pubDate>Wed, 07 Mar 2012 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/2012/03/%D1%86%D0%B2%D0%B5%D1%82%D0%B0-%D0%B2-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%B5-mac-os-x-lion/</guid>
-      <description>Лично для меня крайне удобным решением для терминала является iTerm2. Однажды, очень захотелось сделать его цветастым. Для получения расцветки необходимо добавить в ~/.bash_profile строку&#xA;export CLICOLOR=1&#xA;По наводке @snupt была найдена и установлена тема Solarized Dark, из-за которой, однако была практически отключена полупрозрачность из-за которой текст читался значительно хуже.&#xA;Также Solarized Dark можно (и нужно) использовать с редакторами Textmate и Sublime Text 2.&#xA;Sublime Text 2 Solarized Dark theme&#xA;Что бы добавить цветастости к выводу git достаточно сделать следующее:</description>
+      <description>&lt;p&gt;Лично для меня крайне удобным решением для терминала является iTerm2. Однажды, очень захотелось сделать его цветастым. Для получения расцветки необходимо добавить в ~/.bash_profile строку&lt;/p&gt;&#xA;&lt;p&gt;export CLICOLOR=1&lt;/p&gt;&#xA;&lt;p&gt;По наводке &lt;a href=&#34;http://snupt.com/page/2/&#34;&gt;@snupt&lt;/a&gt; была найдена и установлена тема &lt;a href=&#34;http://ethanschoonover.com/solarized&#34;&gt;Solarized Dark&lt;/a&gt;, из-за которой, однако была практически отключена полупрозрачность из-за которой текст читался значительно хуже.&lt;/p&gt;&#xA;&lt;img style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; title=&#34;Снимок экрана 2012-03-07 в 12.52.31.png&#34; src=&#34;https://prokopov.me/uploads/2012/03/Снимок-экрана-2012-03-07-в-12.52.31.png&#34; border=&#34;0&#34; alt=&#34;Снимок экрана 2012 03 07 в 12 52 31&#34; width=&#34;430&#34; height=&#34;257&#34; /&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;Также Solarized Dark можно (и нужно) использовать с редакторами Textmate и Sublime Text 2.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

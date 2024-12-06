@@ -6,14 +6,14 @@
     <description>Recent content in Clojure on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Tue, 16 Jan 2018 16:17:37 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jan 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/clojure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Вещи в веб-деве, которые меня действительно впечатлили</title>
       <link>https://prokopov.me/2018/01/%D0%B2%D0%B5%D1%89%D0%B8-%D0%B2-%D0%B2%D0%B5%D0%B1-%D0%B4%D0%B5%D0%B2%D0%B5-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BC%D0%B5%D0%BD%D1%8F-%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%82%D0%B5/</link>
-      <pubDate>Tue, 16 Jan 2018 16:17:37 +0000</pubDate>
+      <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/2018/01/%D0%B2%D0%B5%D1%89%D0%B8-%D0%B2-%D0%B2%D0%B5%D0%B1-%D0%B4%D0%B5%D0%B2%D0%B5-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BC%D0%B5%D0%BD%D1%8F-%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%82%D0%B5/</guid>
-      <description>Lightmod и Nightcode редактор с подсветкой синтаксиса, где Clojure и ClojureScript работают из коробки и есть несколько хороших примеров кода прямо в той же коробке.&#xA;Удивительно, какие вещи может сделать один человек. Проекты также содержат интерактивный REPL прямо на странице ClojureScriptа. Впрочем, это лучше показать.&#xA;ClojureScript REPL right in your Google Chrome Dirac. Лучше всего за себя скажет сам скриншот Dirac. Отличная поддержка ClojureScript прямо в вашем браузере!&#xA;В этом же контексте имеет смысл посмотреть на paren-soup онлайн редактор для Clojurescript.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://sekao.net/lightmod/&#34;&gt;Lightmod&lt;/a&gt; и &lt;a href=&#34;https://sekao.net/nightcode/&#34;&gt;Nightcode&lt;/a&gt; редактор с подсветкой синтаксиса, где Clojure и ClojureScript работают из коробки и есть несколько хороших примеров кода прямо в той же коробке.&lt;/p&gt;&#xA;&lt;p&gt;Удивительно, какие вещи может сделать один человек. Проекты также содержат интерактивный REPL прямо на странице ClojureScriptа. Впрочем, это лучше показать.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/binaryage/dirac&#34;&gt;ClojureScript REPL right in your Google Chrome&lt;/a&gt; Dirac. Лучше всего за себя скажет сам скриншот Dirac. Отличная поддержка ClojureScript прямо в вашем браузере!&lt;img class=&#34;alignnone size-large&#34; src=&#34;https://camo.githubusercontent.com/3e868a5633611c52c3cd8072f93fbf5c962b219a/68747470733a2f2f626f782e62696e6172796167652e636f6d2f64697261632d6d61696e2d30312e706e67&#34; width=&#34;1842&#34; height=&#34;2042&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;В этом же контексте имеет смысл посмотреть на &lt;a href=&#34;https://github.com/oakes/paren-soup&#34;&gt;paren-soup&lt;/a&gt; онлайн редактор для Clojurescript.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -6,14 +6,14 @@
     <description>Recent content in Openvpn on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sat, 04 Feb 2012 15:30:58 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Feb 2012 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/tags/openvpn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Чудесная настройка OpenVPN</title>
       <link>https://prokopov.me/2012/02/%D1%87%D1%83%D0%B4%D0%B5%D1%81%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-openvpn/</link>
-      <pubDate>Sat, 04 Feb 2012 15:30:58 +0000</pubDate>
+      <pubDate>Sat, 04 Feb 2012 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/2012/02/%D1%87%D1%83%D0%B4%D0%B5%D1%81%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-openvpn/</guid>
-      <description>Два дня я вынашивал мысли о failover vpn, и даже пользовался экзотической схемой с получением внешнего IP через PPTP от одного хорошего провайдера но тот ограничивал скорость на уровне 1Mbit по туннелю, и пришлось думать иную схему.&#xA;И вот чудо, чудо! Получилось организовать настоящий failover bridged VPN!&#xA;Итак, дано:&#xA;Мой офис, у которого два канала, один оптика, другой бекапный ADSL. Я с ноутбуком, который может быть где угодно, когда угодно и в любом состоянии.</description>
+      <description>&lt;p&gt;Два дня я вынашивал мысли о failover vpn, и даже пользовался экзотической схемой с получением внешнего IP через PPTP от одного хорошего провайдера но тот ограничивал скорость на уровне 1Mbit по туннелю, и пришлось думать иную схему.&lt;/p&gt;&#xA;&lt;p&gt;И вот чудо, чудо!  Получилось организовать настоящий failover bridged VPN!&lt;/p&gt;&#xA;&lt;p&gt;Итак, дано:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Мой офис,  у которого два канала, один оптика, другой бекапный ADSL.&lt;/li&gt;&#xA;&lt;li&gt;Я с ноутбуком, который может быть где угодно, когда угодно и в любом состоянии.&lt;/li&gt;&#xA;&lt;li&gt;Свой сервер на colocation в гермозоне с подключением в интернет на 1Gbit, UA-IX и все такое, как положено.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Требуется:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

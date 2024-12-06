@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.127.0"><title>Maksym Prokopov personal blog</title>
+	<meta name="generator" content="Hugo 0.136.2"><title>Maksym Prokopov personal blog</title>
 <meta charset="utf-8"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
@@ -39,6 +39,8 @@
     
     <div class="page-item"><a href="https://prokopov.me/pages/creating/">Create</a></div>
     
+    <div class="page-item"><a href="https://prokopov.me/pages/projects/">Projects</a></div>
+    
     <div class="page-item"><a href="https://prokopov.me/pages/about/">About</a></div>
     
 </div>
@@ -46,60 +48,12 @@
 
 <div class="article">
     <h1>
-        <a href="/2019/01/%D0%B4%D0%B2%D0%B0-%D0%B4%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D1%85-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BD%D1%83%D0%B6%D0%BD%D0%BE-%D0%B8%D0%B7%D1%83%D1%87%D0%B8/">Два древних языка, которые нужно изучить программисту</a>
-    </h1>
-    <div class="date">08.01.2019</div>
-    <div>Почему нужно проинвестировать время в изучение двух древних языков Lisp и SmallTalk?
-Я уверен, что это сделает вас на шаг ближе к стадиям развития специалист и эксперт.
-Nikita Prokopov сделал отличный talk о стадиях компетентности программиста. Идея в том, что каждый программист на своем пути развития проходит пять стадий развития:
-Новичек Продвинутый Компетентный Специалист Эксперт Никита ближе к концу доклада на примере собственного опыта сравнивает два языка: Java и Clojure и выдвигает предположение о том, что Java хорош для новичков, а Clojure это глоток свежего воздуха для уставших опытных программистов. </div>
-    
-    
-        <a href="/2019/01/%D0%B4%D0%B2%D0%B0-%D0%B4%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D1%85-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BD%D1%83%D0%B6%D0%BD%D0%BE-%D0%B8%D0%B7%D1%83%D1%87%D0%B8/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/@mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">How to improve ruby code with dup and tap methods</a>
-    </h1>
-    <div class="date">06.06.2018</div>
-    <div>Here is a piece of my old code, but it’s definitely could be improved.
-def to_params h = ticket_params h[:activity] = extract_activity if extract_activity h[:event] = extract_event if extract_event h.delete(:state_event) h.delete(:activities_attributes) h end As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?
-Let’s see, h=ticket_params. We call this because we don’t want to modify ticket_params. Is there any method which creates a copy?
-It turns out we have dup method which creates a copy of an object, this is exactly what we wanted. </div>
-    
-    
-        <a href="/posts/@mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2018-05-29_-----------prolog-e0878ac7fe40/">Введение в Prolog</a>
-    </h1>
-    <div class="date">29.05.2018</div>
-    <div>Хочу такой туториал, с которым все понятно, куда коней запрягать. А его нет. Напишу тогда свой.
-Итак, Пролог это не обычный язык программирования. Самый лучший пример использования это решение логической задачи типа
-5 разных человек в 5 разных домах разного цвета, курят 5 разных марок сигарет, выращивают 5 разных видов животных, пьют 5 разных видов напитков. Вопрос: кто выращивает рыбок? Подсказки:
-Норвежец живет в первом доме. Англичанин живет в красном доме. </div>
-    
-    
-        <a href="/posts/2018-05-29_-----------prolog-e0878ac7fe40/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
         <a href="/posts/2018-05-27_---------------------------------------------------------------dbe59a2cbade/">Пожалуй, самым точным определением будет слово «осознанность».</a>
     </h1>
     <div class="date">27.05.2018</div>
-    <div>Пожалуй, самым точным определением будет слово «осознанность». Нон-конформизм это тоже своего рода крайность, так как бывает сопротивление ради сопротивления, особенно в пубертатном возрасте. Уметь оценивать и признавать противоположную точку зрения, вот что по-настоящему ценно.
-Некоторые мои знакомые приходят к осознанности разными путями, кто-то через стремные духовные практики, кто-то через упражнения с ножом или бритвой.
-Но всегда осознанность означает правильно настроенный жизненный компас. </div>
+    <div><p>Пожалуй, самым точным определением будет слово «осознанность». Нон-конформизм это тоже своего рода крайность, так как бывает сопротивление ради сопротивления, особенно в пубертатном возрасте. Уметь оценивать и признавать противоположную точку зрения, вот что по-настоящему ценно.</p>
+<p>Некоторые мои знакомые приходят к осознанности разными путями, кто-то через стремные духовные практики, кто-то через упражнения с ножом или бритвой.</p>
+<p>Но всегда осознанность означает правильно настроенный жизненный компас.</p> </div>
     
 </div>
 <div class="border-bottom"></div>
@@ -109,7 +63,8 @@ It turns out we have dup method which creates a copy of an object, this is exact
         <a href="/posts/@mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/">Brief introduction to the Kubernetes.</a>
     </h1>
     <div class="date">26.05.2018</div>
-    <div>Kubernetes is a winner in docker cloud orchestration, so let’s get a brief introduction in what it is and what kind of problems it solves. Kubernetes is a set of tools designed to solve a problem of deployment of your lovely tailor-made application to a cloud. It does not matter which cloud you choose, AWS, Azure or Google, or even IBM, because Kubernetes provides you with a set of tools which are platform independent. </div>
+    <div><h3 id="kubernetes-is-a-winner-in-docker-cloud-orchestration-so-lets-get-a-brief-introduction-in-what-it-is-and-what-kind-of-problems-itsolves">Kubernetes is a winner in docker cloud orchestration, so let’s get a brief introduction in what it is and what kind of problems it solves.</h3>
+<p>Kubernetes is a set of tools designed to solve a problem of deployment of your lovely tailor-made application to a cloud. It does not matter which cloud you choose, AWS, Azure or Google, or even IBM, because Kubernetes provides you with a set of tools which are platform independent.</p> </div>
     
     
         <a href="/posts/@mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/">Read More…</a>
@@ -122,8 +77,8 @@ It turns out we have dup method which creates a copy of an object, this is exact
         <a href="/posts/2018-03-28_--------------------------2285686116fa/">Согласен по всем пунктам!</a>
     </h1>
     <div class="date">28.03.2018</div>
-    <div>Согласен по всем пунктам!
-Я для себя выделил ещё один признак, это умение проводить собственные размышления над проблемой, особенно если они противоположны общепринятой точке зрения. И, конечно, умение вести дискуссию пользуясь логическими построениями, вместо «ойнувсе». </div>
+    <div><p>Согласен по всем пунктам!</p>
+<p>Я для себя выделил ещё один признак, это умение проводить собственные размышления над проблемой, особенно если они противоположны общепринятой точке зрения. И, конечно, умение вести дискуссию пользуясь логическими построениями, вместо «ойнувсе».</p> </div>
     
 </div>
 <div class="border-bottom"></div>
@@ -133,9 +88,16 @@ It turns out we have dup method which creates a copy of an object, this is exact
         <a href="/posts/@mprokopov/noteworthy-clojure-projects-634af849e01d/">Noteworthy Clojure projects</a>
     </h1>
     <div class="date">18.01.2018</div>
-    <div>Recently I again dived deeply into Clojure development with my Bank Statements — ERP sync tool and started to investigate what’s new in Clojure world. It appears a lot of great things happend in 2017!
-Every of following tools drops my jaw down. Here is my list:
-Lightmod and Nightcode really great editors for Clojure/Clojurescript beginners. Zach Oakes included useful examples to jump into Clojure development train. Dynadoc, documentation exploration tool which makes your work with documentation more effective and interactive. </div>
+    <div><p>Recently I again dived deeply into Clojure development with my <a href="https://github.com/mprokopov/privat24-manager">Bank Statements — ERP sync tool</a> and started to investigate what’s new in Clojure world. It appears a lot of great things happend in 2017!</p>
+<p>Every of following tools drops my jaw down. Here is my list:</p>
+<ul>
+<li><a href="https://sekao.net/lightmod/">Lightmod</a> and <a href="https://sekao.net/nightcode/">Nightcode</a> really great editors for Clojure/Clojurescript beginners. Zach Oakes included useful examples to jump into Clojure development train.</li>
+<li><a href="https://github.com/oakes/Dynadoc">Dynadoc</a>, documentation exploration tool which makes your work with documentation more effective and interactive.</li>
+<li><a href="https://github.com/binaryage/dirac">Dirac</a> is a Clojurescript REPL right in your Chrome browser!</li>
+<li><a href="https://github.com/cognitect-labs/vase">Vase</a> a rapid declarative Pedestal and Datomic based microservice development tool by guys from Cognician.</li>
+<li><a href="https://github.com/boot-clj/boot">Boot</a> build tool became very popular because of custom and modular build workflow. When you feel yourself limited by Leiningen, give Boot a try. It suites even for <a href="https://github.com/hashobject/perun">blog publishing</a>!</li>
+</ul>
+<p><img src="/img/1__D0qPe2__BxxNJKMwIS7GMXA.png" alt=""></p> </div>
     
     
         <a href="/posts/@mprokopov/noteworthy-clojure-projects-634af849e01d/">Read More…</a>
@@ -148,10 +110,10 @@ Lightmod and Nightcode really great editors for Clojure/Clojurescript beginners.
         <a href="/2018/01/%D0%B2%D0%B5%D1%89%D0%B8-%D0%B2-%D0%B2%D0%B5%D0%B1-%D0%B4%D0%B5%D0%B2%D0%B5-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BC%D0%B5%D0%BD%D1%8F-%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%82%D0%B5/">Вещи в веб-деве, которые меня действительно впечатлили</a>
     </h1>
     <div class="date">16.01.2018</div>
-    <div>Lightmod и Nightcode редактор с подсветкой синтаксиса, где Clojure и ClojureScript работают из коробки и есть несколько хороших примеров кода прямо в той же коробке.
-Удивительно, какие вещи может сделать один человек. Проекты также содержат интерактивный REPL прямо на странице ClojureScriptа. Впрочем, это лучше показать.
-ClojureScript REPL right in your Google Chrome Dirac. Лучше всего за себя скажет сам скриншот Dirac. Отличная поддержка ClojureScript прямо в вашем браузере!
-В этом же контексте имеет смысл посмотреть на paren-soup онлайн редактор для Clojurescript. </div>
+    <div><p><a href="https://sekao.net/lightmod/">Lightmod</a> и <a href="https://sekao.net/nightcode/">Nightcode</a> редактор с подсветкой синтаксиса, где Clojure и ClojureScript работают из коробки и есть несколько хороших примеров кода прямо в той же коробке.</p>
+<p>Удивительно, какие вещи может сделать один человек. Проекты также содержат интерактивный REPL прямо на странице ClojureScriptа. Впрочем, это лучше показать.</p>
+<p><a href="https://github.com/binaryage/dirac">ClojureScript REPL right in your Google Chrome</a> Dirac. Лучше всего за себя скажет сам скриншот Dirac. Отличная поддержка ClojureScript прямо в вашем браузере!<img class="alignnone size-large" src="https://camo.githubusercontent.com/3e868a5633611c52c3cd8072f93fbf5c962b219a/68747470733a2f2f626f782e62696e6172796167652e636f6d2f64697261632d6d61696e2d30312e706e67" width="1842" height="2042" /></p>
+<p>В этом же контексте имеет смысл посмотреть на <a href="https://github.com/oakes/paren-soup">paren-soup</a> онлайн редактор для Clojurescript.</p> </div>
     
     
         <a href="/2018/01/%D0%B2%D0%B5%D1%89%D0%B8-%D0%B2-%D0%B2%D0%B5%D0%B1-%D0%B4%D0%B5%D0%B2%D0%B5-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BC%D0%B5%D0%BD%D1%8F-%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%82%D0%B5/">Read More…</a>
@@ -164,9 +126,15 @@ ClojureScript REPL right in your Google Chrome Dirac. Лучше всего з�
         <a href="/2018/01/%D0%BF%D1%80%D0%BE-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D1%8B-%D0%B8-ide/">Про редакторы и IDE</a>
     </h1>
     <div class="date">10.01.2018</div>
-    <div>Я люблю время от времени тыкать палочкой в различные редакторы и пробовать их в своей работе.
-Сейчас появилось очень много интересных и быстрых штук типа Sublime, Atom, LightTable. Ребята из Jetbrains создают отличные (но медленные и прожорливые) IDE типа WebStorm, RubyMine, PyCharm.
-Также небезынтересно было посмотреть, что и как используют сейчас в качестве редактора другие программисты https://github.com/A/code-screenshots. И, конечно, незабвенные Vim и Emacs. Уверен, что постигнуть нужно оба редактора. Первый, обязательно, за дружелюбность к пальцам, которая перерастает при помощи двигательной памяти в такую производительность управления текстом, которую очень непросто достигнуть конкурентам. </div>
+    <div><p>Я люблю время от времени тыкать палочкой в различные редакторы и пробовать их в своей работе.</p>
+<p>Сейчас появилось очень много интересных и быстрых штук типа Sublime, Atom, LightTable. Ребята из Jetbrains создают отличные (но медленные и прожорливые) IDE типа WebStorm, RubyMine, PyCharm.</p>
+<div class="text_exposed_show">
+  <p>
+    Также небезынтересно было посмотреть, что и как используют сейчас в качестве редактора другие программисты <a href="https://github.com/A/code-screenshots" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FA%2Fcode-screenshots&h=ATPwRt2f_fpYm2m0DFZLlDDxJ2HSOh9ijZeBufPCIc41NOngm2mwAN_zoyMCopZTN3yOW-TyYCUgBAjE6qvDnHMzj3gH2jNMb4SwDRck5_aa0vwIooCXcJlbV6KyZsRtLfUM7AoRXDkDBY9HfGfc8WobgvlDtfibi9Etop0uDXswab5TFtBoQmO6GBFxZ7rP_oNWfWShBw6rl49F9zFsnfHYVdF-fwRYe5zVgKTTqSS8b79yY2oypJxFO5d97Vs5qvalsSDmYRsS23-FLymhIhMULOb9wMZ1K5nSOyHV2degtb7plT8-xMy6gDlp9C0c8woD4ns">https://github.com/A/code-screenshots</a>.
+  </p>
+  <p>
+    И, конечно, незабвенные Vim и Emacs. Уверен, что постигнуть нужно оба редактора. Первый, обязательно, за дружелюбность к пальцам, которая перерастает при помощи двигательной памяти в такую производительность управления текстом, которую очень непросто достигнуть конкурентам. И, кстати, именно поэтому практически все вышеперечисленные редакторы предлагают режим эмуляции Vim. Включая Emacs. И, кстати, о Emacs.
+  </p> </div>
     
     
         <a href="/2018/01/%D0%BF%D1%80%D0%BE-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D1%8B-%D0%B8-ide/">Read More…</a>
@@ -179,11 +147,70 @@ ClojureScript REPL right in your Google Chrome Dirac. Лучше всего з�
         <a href="/2017/11/%D0%BC%D0%BE%D0%BD%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5%D1%81%D0%BE-ninebot-one-s2-%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0-%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D1%8B-%D1%81/">Моноколесо Ninebot One S2: Ремонт прокола камеры своими руками</a>
     </h1>
     <div class="date">01.11.2017</div>
-    <div>Однажды ехал вечером домой и не заметил достаточно глубокую яму. После обследовал колесо: включается-выключается, крутится, но шина спущена. Взял в руки потерпевшего и понес 🙂 Насмотрелся видео с разбором колеса до хорошего доступа к шине, также посмотрел видео, где кто-то умудрился заклеить колесо не разбирая. Но у меня не настолько хороши навыки гинеколога, чтобы повторить подобную процедуру.
-Что понадобилось мне для ремонта: шестигранники, маленький чтобы открутить небольшой винт снизу педали, побольше для раскрутки основных винтов, которые держат крышку и еще чуть больше, чтобы открутить педали. </div>
+    <div><p>Однажды ехал вечером домой и не заметил достаточно глубокую яму. После обследовал колесо: включается-выключается, крутится, но шина спущена. Взял в руки потерпевшего и понес 🙂 Насмотрелся видео с разбором колеса до хорошего доступа к шине, также посмотрел видео, где кто-то умудрился заклеить колесо не разбирая. Но у меня не настолько хороши навыки гинеколога, чтобы повторить подобную процедуру.</p>
+<p>Что понадобилось мне для ремонта: шестигранники, маленький чтобы открутить небольшой винт снизу педали, побольше для раскрутки основных винтов, которые держат крышку и еще чуть больше, чтобы открутить педали. Хорошая крестовая отвертка. Плоская железка или кусок крепкого пластика, чтобы поддеть шину для разбортировки. Также потребуется велосипедный набор для ремонта камер, в него входит наждак для зачистки поверхности резины, резиновый клей и заплатки.</p> </div>
     
     
         <a href="/2017/11/%D0%BC%D0%BE%D0%BD%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5%D1%81%D0%BE-ninebot-one-s2-%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0-%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D1%8B-%D1%81/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/@mprokopov/quick-fix-for-rubygems-ssl-error-5126c73cb7f6/">Quick fix for rubygems SSL error</a>
+    </h1>
+    <div class="date">24.10.2017</div>
+    <div><p>In case you get</p>
+<blockquote>
+<p>ERROR: SSL verification error at depth 2: certificate has expired (10) <br>
+ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA expired at 2014–01–28T12:00:00Z <br>
+ERROR: SSL verification error at depth 2: certificate has expired (10) <br>
+ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA expired at 2014–01–28T12:00:00Z <br>
+ERROR: SSL verification error at depth 2: certificate has expired (10) <br>
+ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA expired at 2014–01–28T12:00:00Z <br>
+ERROR: Could not find a valid gem ‘cocoapods’ (&gt;= 0), here is why: <br>
+ Unable to download data from <a href="http://help.rubygems.org/discussions/problems/25308/r?go=aHR0cHM6Ly9ydWJ5Z2Vtcy5vcmcv" title="Link outside Support: https://rubygems.org/">https://rubygems.org/</a> — SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (<a href="http://help.rubygems.org/discussions/problems/25308/r?go=aHR0cHM6Ly9hcGkucnVieWdlbXMub3JnL3NwZWNzLjQuOC5neg==" title="Link outside Support: https://api.rubygems.org/specs.4.8.gz">https://api.rubygems.org/specs.4.8.gz</a>) <br>
+ERROR: SSL verification error at depth 2: certificate has expired (10) <br>
+ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA expired at 2014–01–28T12:00:00Z</p> </div>
+    
+    
+        <a href="/posts/@mprokopov/quick-fix-for-rubygems-ssl-error-5126c73cb7f6/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/@mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c/">Compare Postgres speed within Docker and without</a>
+    </h1>
+    <div class="date">07.09.2017</div>
+    <div><p>I decided to compare if there will be significant differences between dockerized and non-dockerized Postgres.</p>
+<p>Here is my test environment:</p>
+<ul>
+<li>rails 5 application with rich test suite, about 628 examples,</li>
+<li>macOS Sierra 10.12.6,</li>
+<li>Docker 17.06.0-ce-mac19.</li>
+</ul>
+<p>I use Postgres docker version alpine 9.6 which is 37,7Mb and raw Postgres 9.6 with GUI for Mac which is 379Mb.</p>
+<p>Rails run locally, database.yml connects to the localhost postgres with pool 5 using gem pg (0.21.0).</p> </div>
+    
+    
+        <a href="/posts/@mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/@mprokopov/gitlab-continuous-delivery-setup-for-clojure-java-with-docker-472320d5aa52/">Gitlab: continuous delivery setup for Clojure/Java with Docker</a>
+    </h1>
+    <div class="date">05.09.2017</div>
+    <div><p>Recently I was doing a <a href="https://github.com/mprokopov/it-service-sse">microservice with Server Sent Events and Pedestal</a> in Clojure and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.</p>
+<p>Long story short, here my .gitlab-ci.yml which took me a couple of days to figure out what is the “artifact” in Gitlab and how is it suppose to survive between artifact builds and docker builds.</p> </div>
+    
+    
+        <a href="/posts/@mprokopov/gitlab-continuous-delivery-setup-for-clojure-java-with-docker-472320d5aa52/">Read More…</a>
     
 </div>
 <div class="border-bottom"></div>
@@ -262,7 +289,7 @@ ClojureScript REPL right in your Google Chrome Dirac. Лучше всего з�
         
         <li><a href="/categories/org-mode/">Org-Mode</a> (1) </li>
         
-        <li><a href="/categories/rails/">Rails</a> (1) </li>
+        <li><a href="/categories/rails/">Rails</a> (2) </li>
         
         <li><a href="/categories/ruby/">Ruby</a> (2) </li>
         

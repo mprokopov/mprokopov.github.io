@@ -6,28 +6,28 @@
     <description>Recent content in Apache on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Thu, 19 Jan 2012 14:42:04 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Jan 2012 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/apache/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Самый правильный редирект 301</title>
       <link>https://prokopov.me/2012/01/%D1%81%D0%B0%D0%BC%D1%8B%D0%B9-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82-301/</link>
-      <pubDate>Thu, 19 Jan 2012 14:42:04 +0000</pubDate>
+      <pubDate>Thu, 19 Jan 2012 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/2012/01/%D1%81%D0%B0%D0%BC%D1%8B%D0%B9-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82-301/</guid>
-      <description>Если вы мигрируете сайт на новый домен, и не хотите потерять SEO позиций, то важно сделать идеологически правильный редирект.&#xA;Делается он так:&#xA;Options +FollowSymLinks RewriteEngine on RewriteCond %{HTTP_HOST} !^newdomain\.com RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L] Это можно прописать прямо в vhost секции для сайта, и даже не создавать домашние каталоги.&#xA;Что оставит работающими и старые ссылки на материалы, и переучит поисковики на новые URL.</description>
+      <description>&lt;p&gt;Если вы мигрируете сайт на новый домен, и не хотите потерять SEO позиций, то важно сделать идеологически правильный редирект.&lt;/p&gt;&#xA;&lt;p&gt;Делается он так:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Options +FollowSymLinks   &#xA;RewriteEngine on   &#xA;RewriteCond %{HTTP_HOST} !^newdomain\.com   &#xA;RewriteRule ^(.*)$ http://www.newdomain.com/$1 [R=301,L]&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Это можно прописать прямо в vhost секции для сайта, и даже не создавать домашние каталоги.&lt;/p&gt;&#xA;&lt;p&gt;Что оставит работающими и старые ссылки на материалы, и переучит поисковики на новые URL.&lt;/p&gt;</description>
     </item>
     <item>
       <title>high availability http load balancer</title>
       <link>https://prokopov.me/2010/03/high-availability-http-load-balancer/</link>
-      <pubDate>Thu, 25 Mar 2010 14:28:17 +0000</pubDate>
+      <pubDate>Thu, 25 Mar 2010 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/2010/03/high-availability-http-load-balancer/</guid>
-      <description>На просторах интернетов был найден software http load balancer для распределения нагрузки на web-front.&#xA;По многообещающим страницам сайта можно предположить, что модуль способен выдержать распределение http запросов с нагрузкой в десятки тысяч запросов в секунду.&#xA;Linux 2.4 on x86, x86_64, Alpha, SPARC, MIPS, PARISC Linux 2.6 on x86, x86_64, ARM (ixp425), PPC64 Solaris 8/9 on UltraSPARC 2 and 3 Solaris 10 on Opteron and UltraSPARC FreeBSD 4.10 — 6.2 on x86 OpenBSD 3.</description>
+      <description>&lt;p&gt;На просторах интернетов был найден software http &lt;a href=&#34;http://haproxy.1wt.eu/&#34;&gt;load balancer&lt;/a&gt; для распределения нагрузки на web-front.&lt;/p&gt;&#xA;&lt;p&gt;По многообещающим страницам сайта можно предположить, что модуль способен выдержать распределение http запросов с нагрузкой в десятки тысяч запросов в секунду.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://prokopov.me/uploads/2010/03/haproxy-pmode.png&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-338&#34; title=&#34;haproxy-pmode&#34; src=&#34;https://prokopov.me/uploads/2010/03/haproxy-pmode.png&#34; alt=&#34;&#34; width=&#34;363&#34; height=&#34;290&#34; srcset=&#34;https://prokopov.me/uploads/2010/03/haproxy-pmode.png 363w, https://prokopov.me/uploads/2010/03/haproxy-pmode-300x239.png 300w&#34; sizes=&#34;(max-width: 363px) 100vw, 363px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a name=&#34;plat&#34;&gt;&lt;/a&gt;&lt;a href=&#34;http://www.kernel.org/&#34;&gt;Linux 2.4&lt;/a&gt; on x86, x86_64, Alpha, SPARC, MIPS, PARISC&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.kernel.org/&#34;&gt;Linux 2.6&lt;/a&gt; on x86, x86_64, ARM (ixp425), PPC64&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.sun.com/software/solaris/&#34;&gt;Solaris 8/9&lt;/a&gt; on UltraSPARC 2 and 3&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.sun.com/software/solaris/&#34;&gt;Solaris 10&lt;/a&gt; on Opteron and UltraSPARC&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.freebsd.org/&#34;&gt;FreeBSD 4.10 — 6.2&lt;/a&gt; on x86&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD 3.1 to -current&lt;/a&gt; on i386, amd64, macppc, alpha, sparc64 and VAX (check the ports)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Впечатляющих результатов достиг Chris Knight:&lt;/p&gt;</description>
     </item>
     <item>
       <title>apachetop</title>
       <link>https://prokopov.me/2009/12/apachetop/</link>
-      <pubDate>Tue, 29 Dec 2009 10:03:25 +0000</pubDate>
+      <pubDate>Tue, 29 Dec 2009 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/2009/12/apachetop/</guid>
-      <description>Набрел на забавную утилиту apachetop&#xA;Вот такой простенький, порой, бывает нужен анализатор состояния апача, вдруг атакует кто?</description>
+      <description>&lt;p&gt;Набрел на забавную утилиту apachetop&lt;/p&gt;&#xA;&lt;p&gt;Вот такой простенький, порой, бывает нужен &lt;a href=&#34;http://www.webta.org/projects/apachetop/&#34;&gt;анализатор состояния апача&lt;/a&gt;, вдруг атакует кто?&lt;/p&gt;&#xA;&lt;img src=&#34;http://lh3.ggpht.com/_YlUeUCURrJM/SyEmhsX7ClI/AAAAAAAADDI/cFRlCF8j7k4/%3F%3F%3F%3F%3F%3F%20%3F%3F%3F%3F%3F%3F%202009-12-10%20%3F%2018.48.14.png?imgmax=800&#34; border=&#34;0&#34; alt=&#34;Снимок экрана 2009-12-10 в 18.48.14.png&#34; width=&#34;602&#34; height=&#34;197&#34; /&gt;</description>
     </item>
   </channel>
 </rss>

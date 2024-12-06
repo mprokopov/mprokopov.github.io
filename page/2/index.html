@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.127.0"><title>Maksym Prokopov personal blog</title>
+	<meta name="generator" content="Hugo 0.136.2"><title>Maksym Prokopov personal blog</title>
 <meta charset="utf-8"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
@@ -39,6 +39,8 @@
     
     <div class="page-item"><a href="https://prokopov.me/pages/creating/">Create</a></div>
     
+    <div class="page-item"><a href="https://prokopov.me/pages/projects/">Projects</a></div>
+    
     <div class="page-item"><a href="https://prokopov.me/pages/about/">About</a></div>
     
 </div>
@@ -46,63 +48,21 @@
 
 <div class="article">
     <h1>
-        <a href="/posts/2024-03-31-sql-llm-mistral/">Use LLM to retrieve data from MySQL database</a>
-    </h1>
-    <div class="date">26.03.2024</div>
-    <div>Very simplified about the AI revolution happening now. We are only at its very beginning. Next, automation and integration among different AIs will increase, leading to more and more complex tasks.
-There are still many problems, such as - training a truly large model, and making it accessible for general use is still very expensive and very energy-consuming. It is still not very clear what to do with regulations, because it works both ways, making it significantly easier to assemble some kind of bomb at home. </div>
-    
-    
-        <a href="/posts/2024-03-31-sql-llm-mistral/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-03-25/">SRE Simplified - Error Budget</a>
-    </h1>
-    <div class="date">25.03.2024</div>
-    <div>SRE Simplified : Error Budget concept.
-The concept of Error Budget is useful for setting up alerts of different severity. This video explains in extremely simplified manner how it works. </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-03-17/">SRE Simplified - Service Level Agreement</a>
-    </h1>
-    <div class="date">17.03.2024</div>
-    <div>The next issue of SRE Simplified is about Service Level Agreement.
-Service Level Agreement is an agreement between service supplier and a customer about what the target quality of the service is and what are the consequences if the promise is broken.
-But the challenge here is to eastablish monitoring and alerting.
-This video provides very simplified example of an SLA for the company that produces apples.
-Document Title  </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2024-03-10/">SRE Simplified - Introduction</a>
-    </h1>
-    <div class="date">10.03.2024</div>
-    <div>What are the SRE concepts, like Service Level Agreement and Reliability?
-The challenge is to explain it in simplified manner, without deep discussions on different monitoring strategies.
-In this first video I tried to just to scratch the surface. </div>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
         <a href="/posts/2024-02-02/">Wireguard VPN Overview</a>
     </h1>
     <div class="date">02.02.2024</div>
-    <div>WireGuard is a relatively new protocol. It claims to be greatly simplified and faster comparing to alternatives, it uses UDP as primary transport and encapsulates encrypted traffic from IP layer. Let&#39;s investigate if it&#39;s true!
-Some differences help to stand out of other VPN solutions:
-Routing as a part of Peer configuration QR code for simplified configuration using camera on mobile devices. iPhone, iPad and other things, you&#39;ll love it! </div>
+    <div><p>
+WireGuard is a relatively new protocol. It claims to be greatly simplified and faster comparing to alternatives, it uses UDP as primary transport and encapsulates encrypted traffic from IP layer. Let&#39;s investigate if it&#39;s true!</p>
+<p>
+Some differences help to stand out of other VPN solutions:</p>
+<ul>
+<li>Routing as a part of Peer configuration</li>
+<li>QR code for simplified configuration using camera on mobile devices. iPhone, iPad and other things, you&#39;ll love it!</li>
+<li>Site-to-site or client-to-server connections are not very different from the configuration perspective</li>
+<li>Supports DNS as part of configuration for Peer</li>
+<li>Easy to implement routing for all traffic or for only for selected networks</li>
+</ul>
+<p>I was able to connect Mikrotik, FrtizBox 6690, macos, iPad and iPhone using WireGuard with little efforts.</p> </div>
     
     
         <a href="/posts/2024-02-02/">Read More…</a>
@@ -115,9 +75,23 @@ Routing as a part of Peer configuration QR code for simplified configuration usi
         <a href="/posts/2024-01-24/">How to suppress alerts in Prometheus for non-working hours</a>
     </h1>
     <div class="date">24.01.2024</div>
-    <div>When it comes to the topic how Prometheus and Alertmanager work together and how to restrict alert notification to fire only on working hours, typicall solution is to apply workaround to avaluated alert rule expession like this
-and ON() (hour() &lt; 19 and hour() &gt; 8) and ON() (day_of_week() &gt; 0 and day_of_week() &lt; 6) The full example of such rule is the following
-- alert: DummyWorkhoursAlert expr: 1 and ON() (hour() &lt; 19 and hour() &gt; 8) and ON() (day_of_week() &gt; 0 and day_of_week() &lt; 6) for: 5m annotations: identifier: &#34;{{ $labels. </div>
+    <div><p>When it comes to the topic how Prometheus and Alertmanager work together and how to restrict alert notification to fire only on working hours, typicall solution is to apply workaround to avaluated alert rule expession like this</p>
+<pre class="example">
+and ON() (hour() &lt; 19 and hour() &gt; 8) and ON() (day_of_week() &gt; 0 and day_of_week() &lt; 6)
+</pre>
+<p>
+The full example of such rule is the following</p>
+<div class="src src-yaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  - <span style="color:#f92672">alert</span>: <span style="color:#ae81ff">DummyWorkhoursAlert</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expr</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">and ON() (hour() &lt; 19 and hour() &gt; 8) and ON() (day_of_week() &gt; 0 and day_of_week() &lt; 6)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">for</span>: <span style="color:#ae81ff">5m</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">annotations</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">identifier</span>: <span style="color:#e6db74">&#34;{{ $labels.exporter }}/{{ $labels.queue }}&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Buyerportal: Dummy alert for working hours {{ $labels.queue }}&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;* don&#39;t do anything, dummy alert *&#34;</span></span></span></code></pre></div>
+</div>
+<p>
+But the proper solution is to apply <strong>mute_time_intervals</strong>, as per example below</p> </div>
     
     
         <a href="/posts/2024-01-24/">Read More…</a>
@@ -130,9 +104,12 @@ and ON() (hour() &lt; 19 and hour() &gt; 8) and ON() (day_of_week() &gt; 0 and d
         <a href="/posts/2024-01-17/">Blogging using Emacs with org-mode and Hugo</a>
     </h1>
     <div class="date">17.01.2024</div>
-    <div>I use org-mode extensively with org-roam for keeping my knowledge and journals together and working as my brain dump destination. This blog serves kinda the same purpose, so why not to combine these things under Emacs umbrella?
-Blogging from Emacs boils down to two options.
-TLDR; Hugo can render org file natively, but support of features is quite limited, or use org as source that rendered to markdown. The latter brings issues of content syncing from origin to end result. </div>
+    <div><p>
+I use org-mode extensively with org-roam for keeping my knowledge and journals together and working as my brain dump destination. This blog serves kinda the same purpose, so why not to combine these things under Emacs umbrella?</p>
+<p>
+Blogging from Emacs boils down to two options.</p>
+<p>
+TLDR; Hugo can render org file natively, but support of features is quite limited, or use org as source that rendered to markdown. The latter brings issues of content syncing from origin to end result.</p> </div>
     
     
         <a href="/posts/2024-01-17/">Read More…</a>
@@ -145,8 +122,10 @@ TLDR; Hugo can render org file natively, but support of features is quite limite
         <a href="/posts/ruby-macos-install/">Install Ruby 3.1.4 on macOS</a>
     </h1>
     <div class="date">29.08.2023</div>
-    <div>In case ruby can&rsquo;t find OpenSSL 3 headers, use this way.
-brew install ruby-install ruby-install ruby 3.1.4 -- --with-openssl-dir=$(brew --prefix openssl)  </div>
+    <div><p>In case ruby can&rsquo;t find OpenSSL 3 headers, use this way.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>brew install ruby-install
+</span></span><span style="display:flex;"><span>ruby-install ruby 3.1.4 -- --with-openssl-dir<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>brew --prefix openssl<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div> </div>
     
 </div>
 <div class="border-bottom"></div>
@@ -156,12 +135,64 @@ brew install ruby-install ruby-install ruby 3.1.4 -- --with-openssl-dir=$(brew -
         <a href="/posts/2023-07-15-cloudflare-tunnel-terraform/">CloudFlare Tunnel Terraform</a>
     </h1>
     <div class="date">15.07.2023</div>
-    <div>How to provision CloudFlare tunnel using Terraform CloudFlare Tunnel can be useful to use reliable alternative to ngrok when you need to expose your application running locally to the outside world.
-The following example exposes my application locally running on port 3000 to the Internet on the hostname https://app.prokopov.me
-Prerequisites Terraform CloudFlare module v4 CloudFlare API key with Account:Tunnel permissions. Locally installed CloudFlare CLI utility cloudflared https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/ Application running locally on port 3000 How does it work? </div>
-    
-    
-        <a href="/posts/2023-07-15-cloudflare-tunnel-terraform/">Read More…</a>
+    <div><h1 id="how-to-provision-cloudflare-tunnel-using-terraform">How to provision CloudFlare tunnel using Terraform</h1>
+<p>CloudFlare Tunnel can be useful to use reliable alternative to <em>ngrok</em> when you need to expose your application running locally to the outside world.</p>
+<p>The following example exposes my application locally running on port 3000 to the Internet on the hostname <a href="https://app.prokopov.me">https://app.prokopov.me</a></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Terraform CloudFlare module v4</li>
+<li>CloudFlare API key with Account:Tunnel permissions.</li>
+<li>Locally installed CloudFlare CLI utility <em>cloudflared</em> <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/</a></li>
+<li>Application running locally on port 3000</li>
+</ul>
+<h2 id="how-does-it-work">How does it work?</h2>
+<ol>
+<li><em>cloudflared</em> CLI is an agent running locally and connected to CloudFlare cloud.</li>
+<li>DNS record of type CNAME is created, pointing to the CloudFlare cloud.</li>
+<li>CloudFlare does the routing magic!</li>
+</ol>
+<h2 id="terraform-part">Terraform part</h2>
+<pre tabindex="0"><code>resource &#34;cloudflare_tunnel&#34; &#34;main&#34; {
+  account_id = &#34;777414c2d4e87234087ebac4685e7df6&#34;
+  name       = &#34;tunnel-to-app&#34;
+  secret     = random_id.main.b64_std
+}
+
+resource &#34;cloudflare_tunnel_config&#34; &#34;main&#34; {
+  account_id = &#34;777414c2d4e87234087ebac4685e7df6&#34;
+  tunnel_id  = cloudflare_tunnel.main.id
+
+  config {
+    warp_routing {
+      enabled = true
+    }
+    ingress_rule {
+      hostname = &#34;app.prokopov.me&#34;
+      service  = &#34;http://localhost:3000&#34;
+    }
+    ingress_rule {
+      service = &#34;http_status:404&#34;
+    }
+  }
+}
+
+resource &#34;cloudflare_record&#34; &#34;main&#34; {
+  value   = &#34;${cloudflare_tunnel.main.id}.cfargotunnel.com&#34;
+  proxied = true
+  name    = &#34;app&#34;
+  type    = &#34;CNAME&#34;
+  zone_id = cloudflare_zone.main.id
+}
+</code></pre><h2 id="local-tunnel-part">Local tunnel part</h2>
+<ol>
+<li>Find generated token for resource cloudflare_tunnel.main</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>TOKEN<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>terraform show -json | jq -r <span style="color:#e6db74">&#39;.values.root_module.resources[] | select(.address==&#34;cloudflare_tunnel.main&#34;).values.tunnel_token&#39;</span><span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><ol start="2">
+<li>Use token</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cloudflared tunnel run --token<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>TOKEN<span style="color:#e6db74">}</span> tunnel-to-app
+</span></span></code></pre></div> </div>
     
 </div>
 <div class="border-bottom"></div>
@@ -171,14 +202,130 @@ Prerequisites Terraform CloudFlare module v4 CloudFlare API key with Account:Tun
         <a href="/posts/2023-04-03/">Mikrotik Terraform</a>
     </h1>
     <div class="date">03.04.2023</div>
-    <div>It is in general very good idea to manage infra configuration as a code. Unfortunately, Mirkotik terrafrom support is basic, as OSS driven.
-Nevertheless, I appreciate author for effors.
-Here is an example how to use it with Hashicorp Vault.
-Commands export VAULT_ADDR=http://vault_address:8200 export VAULT_TOKEN=&lt;token&gt; terraform init terraform plan Example main.tf
-provider &#34;vault&#34; {} data &#34;vault_generic_secret&#34; &#34;main&#34; { path = &#34;common/mikrotik/nexus-home&#34; } provider &#34;mikrotik&#34; { host = data.vault_generic_secret.main.data[&#34;address&#34;] # Or set MIKROTIK_HOST environment variable username = data. </div>
+    <div><p>It is in general very good idea to manage infra configuration as a code. Unfortunately, Mirkotik terrafrom support is basic, as OSS driven.</p>
+<p>Nevertheless, I appreciate author for effors.</p>
+<p>Here is an example how to use it with Hashicorp Vault.</p>
+<h2 id="commands">Commands</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>export VAULT_ADDR<span style="color:#f92672">=</span>http://vault_address:8200
+</span></span><span style="display:flex;"><span>export VAULT_TOKEN<span style="color:#f92672">=</span>&lt;token&gt;
+</span></span><span style="display:flex;"><span>terraform init
+</span></span><span style="display:flex;"><span>terraform plan
+</span></span></code></pre></div><h2 id="example">Example</h2>
+<p>main.tf</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;vault&#34;</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">data</span> <span style="color:#e6db74">&#34;vault_generic_secret&#34; &#34;main&#34;</span> {
+</span></span><span style="display:flex;"><span>  path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;common/mikrotik/nexus-home&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;mikrotik&#34;</span> {
+</span></span><span style="display:flex;"><span>  host           <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;address&#34;</span>]<span style="color:#75715e">  # Or set MIKROTIK_HOST environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  username       <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;username&#34;</span>]<span style="color:#75715e"> # Or set MIKROTIK_USER environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  password       <span style="color:#f92672">=</span> <span style="color:#66d9ef">data</span>.<span style="color:#66d9ef">vault_generic_secret</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">data</span>[<span style="color:#e6db74">&#34;password&#34;</span>]<span style="color:#75715e"> # Or set MIKROTIK_PASSWORD environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  tls            <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#75715e">                                           # Or set MIKROTIK_TLS environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ca_certificate <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/path/to/ca/certificate.pem&#34;</span><span style="color:#75715e">                   # Or set MIKROTIK_CA_CERTIFICATE environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  insecure       <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#75715e">                                            # Or set MIKROTIK_INSECURE environment variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">ip</span> <span style="color:#66d9ef">address</span>
+</span></span><span style="display:flex;"><span>// :put [find where address<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;192.168.88.1/24&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#66d9ef">terraform</span> <span style="color:#66d9ef">import</span> <span style="color:#66d9ef">mikrotik_ip_address</span>.<span style="color:#66d9ef">lan</span> <span style="color:#960050;background-color:#1e0010">&#39;*</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;mikrotik_ip_address&#34; &#34;lan&#34;</span> {
+</span></span><span style="display:flex;"><span>  address   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;192.168.88.1/24&#34;</span>
+</span></span><span style="display:flex;"><span>  comment   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LAN Network&#34;</span>
+</span></span><span style="display:flex;"><span>  interface <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ether2&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#66d9ef">uncomment</span> <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">release</span> <span style="color:#66d9ef">https</span><span style="color:#960050;background-color:#1e0010">://</span><span style="color:#66d9ef">github</span>.<span style="color:#66d9ef">com</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">ddelnano</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">terraform</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#66d9ef">provider</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#66d9ef">mikrotik</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># resource &#34;mikrotik_firewall_filter_rule&#34; &#34;https&#34; {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   action             = &#34;accept&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   chain              = &#34;forward&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   comment            = &#34;Web access to local HTTP server&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   connection_state   = [&#34;new&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   dst_port           = &#34;443&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   in_interface       = &#34;ether1&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   in_interface_list  = &#34;local_lan&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   out_interface_list = &#34;ether3&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   protocol           = &#34;tcp&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># }
+</span></span></span></code></pre></div><p>terraform.tf</p> </div>
     
     
         <a href="/posts/2023-04-03/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/2023-03-17/">Group Greeting</a>
+    </h1>
+    <div class="date">17.03.2023</div>
+    <div><p>There are lots of options to greet collegue or close ones with cards.</p>
+<p>This one was recommended by one of the coworkers.</p>
+<p><a href="https://www.groupgreeting.com/">Group Greeting Cards</a></p> </div>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/2023-02-24/">The things impressed me recently</a>
+    </h1>
+    <div class="date">24.02.2023</div>
+    <div><p>Impressive things and points of interest</p>
+<h3 id="self-improvement">Self-Improvement</h3>
+<p><a href="https://theholisticpsychologist.com/">https://theholisticpsychologist.com/</a> - mental self-healing of issues from the Past</p>
+<h3 id="technologies-assessment">Technologies assessment</h3>
+<p><a href="https://www.nomadproject.io/">https://www.nomadproject.io/</a> - K8s is not only one option for container orchestration. Looks good!</p>
+<p><a href="https://www.boundaryproject.io/">https://www.boundaryproject.io/</a> - Remote access management from Hashicorp</p>
+<p><a href="https://www.ambient.run/">https://www.ambient.run/</a> - WebAssembly Game engine targeting browsers</p>
+<p><a href="https://www.playstation.com/de-de/ps-vr2/">https://www.playstation.com/de-de/ps-vr2/</a> - New Sony VR2 headset.</p>
+<h3 id="technology-adoption">Technology adoption</h3>
+<p><a href="https://docs.docker.com/build/buildkit/">https://docs.docker.com/build/buildkit/</a> Docker buildkit and it&rsquo;s advanced caching techniques.</p> </div>
+    
+    
+        <a href="/posts/2023-02-24/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/why-is-it-support-so-hard/">Why is IT support so hard</a>
+    </h1>
+    <div class="date">18.09.2022</div>
+    <div><p>As the IT support business we want to keep our users happy, they need to use the software with no
+interruptions. Though the share of the incidents in the tickets is still 30% no matter what.</p>
+<p>So why is IT support is so hard these days? Why do we still have the incidents despite all the progress IT industry did so far?</p>
+<p>Long story short this is because of the software complexity, that causes incidents and security issues.</p> </div>
+    
+    
+        <a href="/posts/why-is-it-support-so-hard/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
+        <a href="/posts/til-2022-08-15/">Things I Learned</a>
+    </h1>
+    <div class="date">15.08.2022</div>
+    <div><p>Things I Learned</p>
+<h3 id="git-push-with-force-from-the-command-line">Git push with force from the command line</h3>
+<pre><code>git push --force origin master
+git push -f origin master
+git push origin +master
+</code></pre>
+<h3 id="make-your-git-life-a-bit-easier">Make your git life a bit easier</h3>
+<pre><code>git config --global push.autoSetupRemote true
+</code></pre>
+<h3 id="check-dns-from-the-inside-of-docker-container">Check DNS from the inside of docker container</h3>
+<p>This is super useful when you don&rsquo;t have neither dig nor nslookup utilities inside your docker container.</p>
+<pre><code>getent hosts google.com
+</code></pre> </div>
     
 </div>
 <div class="border-bottom"></div>
@@ -257,7 +404,7 @@ provider &#34;vault&#34; {} data &#34;vault_generic_secret&#34; &#34;main&#34; {
         
         <li><a href="/categories/org-mode/">Org-Mode</a> (1) </li>
         
-        <li><a href="/categories/rails/">Rails</a> (1) </li>
+        <li><a href="/categories/rails/">Rails</a> (2) </li>
         
         <li><a href="/categories/ruby/">Ruby</a> (2) </li>
         

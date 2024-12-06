@@ -13,7 +13,7 @@
       <link>https://prokopov.me/posts/til-2022-08-15/</link>
       <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/til-2022-08-15/</guid>
-      <description>Things I Learned&#xA;Git push with force from the command line git push --force origin master git push -f origin master git push origin +master Make your git life a bit easier git config --global push.autoSetupRemote true Check DNS from the inside of docker container This is super useful when you don&amp;rsquo;t have neither dig nor nslookup utilities inside your docker container.&#xA;getent hosts google.com </description>
+      <description>&lt;p&gt;Things I Learned&lt;/p&gt;&#xA;&lt;h3 id=&#34;git-push-with-force-from-the-command-line&#34;&gt;Git push with force from the command line&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;git push --force origin master&#xA;git push -f origin master&#xA;git push origin +master&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;make-your-git-life-a-bit-easier&#34;&gt;Make your git life a bit easier&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;git config --global push.autoSetupRemote true&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;check-dns-from-the-inside-of-docker-container&#34;&gt;Check DNS from the inside of docker container&lt;/h3&gt;&#xA;&lt;p&gt;This is super useful when you don&amp;rsquo;t have neither dig nor nslookup utilities inside your docker container.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;getent hosts google.com&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
   </channel>
 </rss>

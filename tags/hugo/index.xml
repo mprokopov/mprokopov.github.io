@@ -13,7 +13,7 @@
       <link>https://prokopov.me/posts/2024-01-17/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/2024-01-17/</guid>
-      <description>I use org-mode extensively with org-roam for keeping my knowledge and journals together and working as my brain dump destination. This blog serves kinda the same purpose, so why not to combine these things under Emacs umbrella?&#xA;Blogging from Emacs boils down to two options.&#xA;TLDR; Hugo can render org file natively, but support of features is quite limited, or use org as source that rendered to markdown. The latter brings issues of content syncing from origin to end result.</description>
+      <description>&lt;p&gt;&#xA;I use org-mode extensively with org-roam for keeping my knowledge and journals together and working as my brain dump destination. This blog serves kinda the same purpose, so why not to combine these things under Emacs umbrella?&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Blogging from Emacs boils down to two options.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;TLDR; Hugo can render org file natively, but support of features is quite limited, or use org as source that rendered to markdown. The latter brings issues of content syncing from origin to end result.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

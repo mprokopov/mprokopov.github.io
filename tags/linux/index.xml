@@ -6,14 +6,14 @@
     <description>Recent content in Linux on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Fri, 03 Feb 2012 10:58:36 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Feb 2012 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Вышел новый fun_plug 0.7</title>
       <link>https://prokopov.me/2012/02/%D0%B2%D1%8B%D1%88%D0%B5%D0%BB-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9-fun_plug-0-7/</link>
-      <pubDate>Fri, 03 Feb 2012 10:58:36 +0000</pubDate>
+      <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/2012/02/%D0%B2%D1%8B%D1%88%D0%B5%D0%BB-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9-fun_plug-0-7/</guid>
-      <description>Для счасливых обладателей девайсов типа D-Link DNS-320, D-Link DNS-323 есть хорошая новость, вышел новый fun_plug 0.7 пропустив версию 0.6&#xA;http://www.inreto.de/dns323/fun-plug/&#xA;Также для ARM и OARM энтузиасты собрали следующие пакеты&#xA;— midnight commander 4.8.1&#xA;— glib-2 (needed for mc)&#xA;— htop 1.0&#xA;— screen 4.0.3&#xA;— iftop 1.0 pre 2&#xA;— nmap 5.51&#xA;— transmission 2.42&#xA;— libevent 2.0.16 (needed for transmission)&#xA;— mldonkey 3.1.0&#xA;— nano 2.2.6&#xA;— proftpd 1.3.4a</description>
+      <description>&lt;p&gt;Для счасливых обладателей девайсов типа D-Link DNS-320, D-Link DNS-323 есть хорошая новость, вышел новый fun_plug 0.7 пропустив версию 0.6&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.inreto.de/dns323/fun-plug/&#34;&gt;http://www.inreto.de/dns323/fun-plug/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Также для ARM и OARM энтузиасты собрали следующие пакеты&lt;/p&gt;&#xA;&lt;p&gt;— midnight commander 4.8.1&lt;br&gt;&#xA;— glib-2 (needed for mc)&lt;br&gt;&#xA;— htop 1.0&lt;br&gt;&#xA;— screen 4.0.3&lt;br&gt;&#xA;— iftop 1.0 pre 2&lt;br&gt;&#xA;— nmap 5.51&lt;br&gt;&#xA;— transmission 2.42&lt;br&gt;&#xA;— libevent 2.0.16 (needed for transmission)&lt;br&gt;&#xA;— mldonkey 3.1.0&lt;br&gt;&#xA;— nano 2.2.6&lt;br&gt;&#xA;— proftpd 1.3.4a&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

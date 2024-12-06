@@ -6,28 +6,35 @@
     <description>Recent content in Pages on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Mon, 08 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Read</title>
       <link>https://prokopov.me/pages/reading/</link>
       <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/pages/reading/</guid>
-      <description>My interests currently lie in the following categories:&#xA;Psyhology, self-improvement and mental health Domain Driven Design Lean production, lean services SRE and DevOps Here is my confession to the one of the greatest books about computer science:&#xA;Code: The Hidden Language of Computer Hardware and Software&#xA;if you are a computer science enthusiast, this is must read!&#xA;Стейнбек говорил, что «плохой роман должен развлекать читателей, средний – воздействовать на их чувства, а лучший – озарять им путь»</description>
+      <description>&lt;p&gt;My interests currently lie in the following categories:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Psyhology, self-improvement and mental health&lt;/li&gt;&#xA;&lt;li&gt;Domain Driven Design&lt;/li&gt;&#xA;&lt;li&gt;Lean production, lean services&lt;/li&gt;&#xA;&lt;li&gt;SRE and DevOps&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Here is my confession to the one of the greatest books about computer science:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.amazon.de/Code-Hidden-Language-Dv-Undefined/dp/0735611319&#34;&gt;Code: The Hidden Language of Computer Hardware and Software&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;if you are a computer science enthusiast, this is must read!&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Стейнбек говорил, что «&lt;em&gt;плохой роман должен развлекать читателей, средний – воздействовать на их чувства, а лучший – озарять им путь&lt;/em&gt;»&lt;/p&gt;</description>
     </item>
     <item>
       <title>Create</title>
       <link>https://prokopov.me/pages/creating/</link>
       <pubDate>Tue, 20 Aug 2013 07:14:34 +0000</pubDate>
       <guid>https://prokopov.me/pages/creating/</guid>
-      <description>I beleive being creative is an essential part of being a human.&#xA;Before I got my first computer Intel 386 DX 40 in 1994, I used to write small programs using MK61 programmable calculator, then a bit of soviet Corvette computer programming at school. Since that time I didn&amp;rsquo;t stop my journey with software engineering, but nowadays with more focus towards DevOps and SRE practices.&#xA;My first book about software engineering was C++ by Bjarne Stroustrup.</description>
+      <description>&lt;p&gt;I beleive being creative is an essential part of being a human.&lt;/p&gt;&#xA;&lt;p&gt;Before I got my first computer Intel 386 DX 40 in 1994, I used to write small programs using MK61 programmable calculator, then a bit of soviet Corvette computer programming at school. Since that time I didn&amp;rsquo;t stop my journey with software engineering, but nowadays with more focus towards DevOps and SRE practices.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;mk-61-1.png#center&#34; alt=&#34;Mk 61&#34; title=&#34;MK61 Soviet programmable calculator&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>https://prokopov.me/pages/projects/</link>
+      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/pages/projects/</guid>
+      <description>&lt;h2 id=&#34;dora-exporter&#34;&gt;dora-exporter&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/mprokopov/dora-exporter&#34;&gt;https://github.com/mprokopov/dora-exporter&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;DORA metrics Exporter for Grafana. Assess performance of software development for your entire company.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ticket-master-for-it-premium&#34;&gt;Ticket Master for IT-Premium&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://beta.it-premium.com.ua&#34;&gt;https://beta.it-premium.com.ua&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;it-premium-landing-page&#34;&gt;IT-Premium landing page&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://it-premium.com.ua&#34;&gt;https://it-premium.com.ua&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;amazon-purchase-history-ai-classifier&#34;&gt;Amazon Purchase History AI Classifier&lt;/h2&gt;&#xA;&lt;p&gt;Local first project using Ollama + Mistral/LLama/OpenAI models&lt;/p&gt;&#xA;&lt;h1 id=&#34;archive&#34;&gt;Archive&lt;/h1&gt;&#xA;&lt;h2 id=&#34;getrenty&#34;&gt;GetRenty&lt;/h2&gt;&#xA;&lt;p&gt;Car Renting SaaS &lt;a href=&#34;https://getrenty.com&#34;&gt;https://getrenty.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-personal-website-since-2005&#34;&gt;The personal website since 2005&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://nexus.org.ua&#34;&gt;https://nexus.org.ua&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;contraception-for-everyone&#34;&gt;Contraception for Everyone&lt;/h2&gt;&#xA;&lt;p&gt;One of the remarkable side-projects was a website about unwanted pregnancy prevention methods&#xA;&lt;a href=&#34;https://condom.org.ua&#34;&gt;https://condom.org.ua&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
       <link>https://prokopov.me/pages/about/</link>
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/pages/about/</guid>
-      <description>Hi, my name is Maksym Prokopov. These days I mostly involved in DevOps, Lean IT and IT services.&#xA;A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages. Surprisingly, but I started using PHP for my job today again after almost 18 years. What a destiny!&#xA;Since 2006 I started using Ruby on Rails a lot. 2015 got addicted to Clojure and ClojureScript and did some production-ready things.</description>
+      <description>&lt;p&gt;Hi, my name is Maksym Prokopov.&#xA;These days I mostly involved in DevOps, Lean IT and IT services.&lt;/p&gt;&#xA;&lt;p&gt;A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages. Surprisingly, but I started using PHP for my job today again after almost 18 years. What a destiny!&lt;/p&gt;&#xA;&lt;p&gt;Since 2006 I started using Ruby on Rails a lot. 2015 got addicted to Clojure and ClojureScript and did some &lt;a href=&#34;https://github.com/mprokopov/privat24-manager&#34;&gt;production-ready things&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
