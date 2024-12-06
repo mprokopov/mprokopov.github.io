@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Philosophy, Smalltalk on Maksym Prokopov personal blog</title>
+    <link>https://prokopov.me/categories/philosophy-smalltalk/</link>
+    <description>Recent content in Philosophy, Smalltalk on Maksym Prokopov personal blog</description>
+    <generator>Hugo</generator>
+    <language>ru-Ru</language>
+    <lastBuildDate>Thu, 05 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://prokopov.me/categories/philosophy-smalltalk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Should a code be readable by human?</title>
+      <link>https://prokopov.me/posts/2024-12-05/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-12-05/</guid>
+      <description>&lt;p&gt;Little known fact about SmallTalk programming language.&lt;/p&gt;&#xA;&lt;p&gt;The code written in SmallTalk should be able to be read aloud and it should make sense to a human.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

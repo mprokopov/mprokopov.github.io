@@ -47,14 +47,17 @@
 
 <div class="article">
     <h1>
-        <a href="https://prokopov.me/posts/2024-12-05/">Should a code be readable by human?</a>
+        <a href="https://prokopov.me/posts/2024-12-06/">Digitalisation in action</a>
     </h1>
-    <div class="date">05.12.2024</div>
-    <div><p>Little known fact about SmallTalk programming language.</p>
-<p>The code written in SmallTalk should be able to be read aloud and it should make sense to a human.</p>
-<p>This principle was championed by Alan Kay, along with the Smalltalk development team at Xerox PARC, during the 1970s.</p>
-<p>The emphasis on human readability aligns with the vision of “programming as communication between humans and machines” rather than just issuing commands to computers. Alan Kay believed that programming languages should be clear, expressive, and close to natural human thought processes.</p>
-<p>What do you think, was it a good idea?</p></div>
+    <div class="date">06.12.2024</div>
+    <div><p><img src="1733471608560.jpeg" alt=""></p>
+<h3 id="jokes-aside-how-to-properly-deprecate-a-technology">Jokes aside, how to properly deprecate a technology?</h3>
+<p>One of the greatest talks from Rich Hickey was about making changes to software systems. Search for it with &ldquo;Spec-ulation&rdquo; keyword in Youtube.</p>
+<p>Long story short, you may break or not break the system by removing something like class or function or by changing a function signature (read: parameters), changing in this context means you remove the old function with the same name and add a new one with different parameters.</p>
+<p>The problem here, you don&rsquo;t know what may call your functions. If you find the way to do this analysis, it reveals a way to safely drop unneeded parts of the code without risk of breaking the system. Which is typically very hard to achieve.</p>
+<p>Another way to completely avoid this problem, is to accrete the code instead of removing, i.e. only by adding a new stuff without removing old. For example, you have function with the name callApi, just add a new function callApi2.</p>
+<p>The world is little bit more complicated, and we face exactly this problem in different contexts all the time. What you see in the pic is just yet another example, in reality it&rsquo;s still a problem with no simple solution.</p>
+</div>
 </div>
 
 <div class="sidebar"><div class="sidebar__visitcard">
@@ -118,6 +121,8 @@
         <li><a href="/categories/org-mode/">Org-Mode</a> (1) </li>
         
         <li><a href="/categories/philosophy/">Philosophy</a> (1) </li>
+        
+        <li><a href="/categories/philosophy-smalltalk/">Philosophy, Smalltalk</a> (1) </li>
         
         <li><a href="/categories/rails/">Rails</a> (2) </li>
         

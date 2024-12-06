@@ -6,7 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Thu, 05 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Read</title>
@@ -35,6 +35,13 @@
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/pages/about/</guid>
       <description>&lt;p&gt;Hi, my name is Maksym Prokopov.&#xA;These days I mostly involved in DevOps, Lean IT and IT services.&lt;/p&gt;&#xA;&lt;p&gt;A long time ago I started by web developer career from PHP 3.0.3 and have used lots of technlologies and programming languages. Surprisingly, but I started using PHP for my job today again after almost 18 years. What a destiny!&lt;/p&gt;&#xA;&lt;p&gt;Since 2006 I started using Ruby on Rails a lot. 2015 got addicted to Clojure and ClojureScript and did some &lt;a href=&#34;https://github.com/mprokopov/privat24-manager&#34;&gt;production-ready things&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Digitalisation in action</title>
+      <link>https://prokopov.me/posts/2024-12-06/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-12-06/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;1733471608560.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;jokes-aside-how-to-properly-deprecate-a-technology&#34;&gt;Jokes aside, how to properly deprecate a technology?&lt;/h3&gt;&#xA;&lt;p&gt;One of the greatest talks from Rich Hickey was about making changes to software systems. Search for it with &amp;ldquo;Spec-ulation&amp;rdquo; keyword in Youtube.&lt;/p&gt;&#xA;&lt;p&gt;Long story short, you may break or not break the system by removing something like class or function or by changing a function signature (read: parameters), changing in this context means you remove the old function with the same name and add a new one with different parameters.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Should a code be readable by human?</title>

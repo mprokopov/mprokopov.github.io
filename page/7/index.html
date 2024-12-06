@@ -48,6 +48,30 @@
 
 <div class="article">
     <h1>
+        <a href="/posts/@mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">How to improve ruby code with dup and tap methods</a>
+    </h1>
+    <div class="date">06.06.2018</div>
+    <div><p>Here is a piece of my old code, but it’s definitely could be improved.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
+</span></span><span style="display:flex;"><span>  h <span style="color:#f92672">=</span> ticket_params
+</span></span><span style="display:flex;"><span>    h<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity
+</span></span><span style="display:flex;"><span>    h<span style="color:#f92672">[</span><span style="color:#e6db74">:event</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_event <span style="color:#66d9ef">if</span> extract_event
+</span></span><span style="display:flex;"><span>    h<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:state_event</span>)
+</span></span><span style="display:flex;"><span>    h<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:activities_attributes</span>)
+</span></span><span style="display:flex;"><span>  h
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>As you can see here, ‘h’ variable name is quite uncommunicative. Could it be refactored?</p>
+<p>Let’s see, <code>h=ticket_params</code>. We call this because we don’t want to modify <code>ticket_params</code>. Is there any method which creates a copy?</p>
+<p>It turns out we have dup method which creates a copy of an object, this is exactly what we wanted. Then, we have tap method, which allows us to dive in object internals and return then itself. Here is whole new piece of code after refactoring.</p> </div>
+    
+    
+        <a href="/posts/@mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/posts/2018-05-29_-----------prolog-e0878ac7fe40/">Введение в Prolog</a>
     </h1>
     <div class="date">29.05.2018</div>
@@ -216,27 +240,6 @@ ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA exp
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/@mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c/">Compare Postgres speed within Docker and without</a>
-    </h1>
-    <div class="date">07.09.2017</div>
-    <div><p>I decided to compare if there will be significant differences between dockerized and non-dockerized Postgres.</p>
-<p>Here is my test environment:</p>
-<ul>
-<li>rails 5 application with rich test suite, about 628 examples,</li>
-<li>macOS Sierra 10.12.6,</li>
-<li>Docker 17.06.0-ce-mac19.</li>
-</ul>
-<p>I use Postgres docker version alpine 9.6 which is 37,7Mb and raw Postgres 9.6 with GUI for Mac which is 379Mb.</p>
-<p>Rails run locally, database.yml connects to the localhost postgres with pool 5 using gem pg (0.21.0).</p> </div>
-    
-    
-        <a href="/posts/@mprokopov/compare-postgres-speed-within-docker-and-without-be8d87b5b10c/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
 <div class="pagination">
     
     <div class="pagination__prev">
@@ -312,6 +315,8 @@ ERROR: Certificate /C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign Root CA exp
         <li><a href="/categories/org-mode/">Org-Mode</a> (1) </li>
         
         <li><a href="/categories/philosophy/">Philosophy</a> (1) </li>
+        
+        <li><a href="/categories/philosophy-smalltalk/">Philosophy, Smalltalk</a> (1) </li>
         
         <li><a href="/categories/rails/">Rails</a> (2) </li>
         
