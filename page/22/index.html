@@ -35,8 +35,6 @@
 </div>
 <div class="nav">
     
-    <div class="page-item"><a href="https://prokopov.me/pages/reading/">Read</a></div>
-    
     <div class="page-item"><a href="https://prokopov.me/pages/projects/">Projects</a></div>
     
     <div class="page-item"><a href="https://prokopov.me/pages/talks/">Talks</a></div>
@@ -45,6 +43,29 @@
     
 </div>
 
+
+<div class="article">
+    <h1>
+        <a href="/2011/04/mac-os-x-transparent-squid-ipfw-bugfix/">Mac OS X transparent squid ipfw bugfix</a>
+    </h1>
+    <div class="date">11.04.2011</div>
+    <div><p>Сам прозрачный прокси включается проще простого, в squid.conf добавляем:</p>
+<p>http_port 3128 transparent</p>
+<p>и в ipfw добавляем следующее правило заворачивающее с 80го порта на внутренний:</p>
+<p>ipfw add 1050 fwd 127.0.0.1:3128 tcp from 192.168.1.0/24 to not 192.168.1.0/24 80</p>
+<p> </p>
+<p>Однако, оказалось, на 10.6 не работает ipfw fwd правило для прозрачного прокси.</p>
+<p> </p>
+<p>Непродолжительное гугление помогло выявить вот такой багфикс:</p>
+<p>sudo sysctl -w net.inet.ip.scopedroute = 0</p>
+<p>или еще лучше прописать в /etc/sysctl.conf</p>
+<p>net.inet.ip.scopedroute = 0 и перезагрузить сервер.</p> </div>
+    
+    
+        <a href="/2011/04/mac-os-x-transparent-squid-ipfw-bugfix/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
 
 <div class="article">
     <h1>
@@ -188,19 +209,6 @@
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/2011/01/omnifocus-webdav-sync/">Синхронизация Omnifocus с собственным хранилищем</a>
-    </h1>
-    <div class="date">10.01.2011</div>
-    <div><p>Не то что бы совсем cloud-sync, но OmniFocus помимо стандартной Bonjour синхронизации по WiFi умеет еще и синхронизироваться через MobileMe, а, ежели вы имеете собственное хранилище, например, VPS или VDS, или попросту не доверяете сторонним лицам свою сексуальную информацию из OmniFocus, то есть еще и опция синхронизации по WebDAV.</p> </div>
-    
-    
-        <a href="/2011/01/omnifocus-webdav-sync/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
 <div class="pagination">
     
     <div class="pagination__prev">
@@ -278,6 +286,8 @@
         <li><a href="/categories/philosophy/">Philosophy</a> (1) </li>
         
         <li><a href="/categories/philosophy-smalltalk/">Philosophy, Smalltalk</a> (1) </li>
+        
+        <li><a href="/categories/productivity/">Productivity</a> (1) </li>
         
         <li><a href="/categories/rails/">Rails</a> (2) </li>
         

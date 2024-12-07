@@ -9,13 +9,6 @@
     <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Read</title>
-      <link>https://prokopov.me/pages/reading/</link>
-      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/pages/reading/</guid>
-      <description>&lt;p&gt;My interests currently lie in the following categories:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Psyhology, self-improvement and mental health&lt;/li&gt;&#xA;&lt;li&gt;Domain Driven Design&lt;/li&gt;&#xA;&lt;li&gt;Lean production, lean services&lt;/li&gt;&#xA;&lt;li&gt;SRE and DevOps&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Here is my confession to the one of the greatest books about computer science:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.amazon.de/Code-Hidden-Language-Dv-Undefined/dp/0735611319&#34;&gt;Code: The Hidden Language of Computer Hardware and Software&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;if you are a computer science enthusiast, this is must read!&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Стейнбек говорил, что «&lt;em&gt;плохой роман должен развлекать читателей, средний – воздействовать на их чувства, а лучший – озарять им путь&lt;/em&gt;»&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Projects</title>
       <link>https://prokopov.me/pages/projects/</link>
       <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
@@ -27,14 +20,14 @@
       <link>https://prokopov.me/pages/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/pages/talks/</guid>
-      <description>&lt;h2 id=&#34;knowledge-sharing&#34;&gt;Knowledge Sharing&lt;/h2&gt;&#xA;&lt;p&gt;I love sharing a knowledge. This helps to build better and secure  present and future for everyone.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Devs MeetUp: Trunk Based Development, Freiburg 2024&lt;/li&gt;&#xA;&lt;li&gt;Steel Drum: Modern Digital Telephony Asterisk, Lviv 2017&lt;/li&gt;&#xA;&lt;li&gt;Ruby Meetup: Using Pry For Debugging Rails Appliction, Kyiv 2016&lt;/li&gt;&#xA;&lt;li&gt;ITSM Days: SLA and Service Management Best Practices, Kyiv 2015&lt;/li&gt;&#xA;&lt;li&gt;V Habr Meetup: Service Constant Improvement,  Kyiv 2015&lt;/li&gt;&#xA;&lt;li&gt;Business Club Meetup: Why Business Owners should care of IT, Kyiv 2014&lt;/li&gt;&#xA;&lt;li&gt;Clojure Workshop: Build Clojure Application from scratch: parsing a web site to the structure, Kyiv 2014&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;h2 id=&#34;knowledge-sharing&#34;&gt;Knowledge Sharing&lt;/h2&gt;&#xA;&lt;p&gt;I love sharing a knowledge. This helps to build better and secure present and future for everyone.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Devs MeetUp: Trunk Based Development, Freiburg 2024&lt;/li&gt;&#xA;&lt;li&gt;Steel Drum: Modern Digital Telephony Asterisk, Lviv 2017 &lt;a href=&#34;http://www.steeldrum.org.ua&#34;&gt;1&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Ruby Meetup: Using Pry For Debugging Rails Appliction, Kyiv 2016 &lt;a href=&#34;http://www.meetup.com/ruby-kiev/&#34;&gt;2&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;ITSM Days: SLA and Service Management Best Practices, Kyiv 2015 &lt;a href=&#34;http://itsm-days.in.ua/&#34;&gt;3&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;V Habr Meetup: Service Constant Improvement,  Kyiv 2015&lt;/li&gt;&#xA;&lt;li&gt;Business Club Meetup: Why Business Owners should care of IT, Kyiv 2014 &lt;a href=&#34;http://www.bc-club.org.ua/events-register/event/1595.html&#34;&gt;4&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Clojure Workshop: Build Clojure Application from scratch: parsing a web site to the structure, Kyiv 2014 &lt;a href=&#34;https://paper.dropbox.com/doc/Kyiv-Clojure-Workshop-3-2.09.17-HLAuCpI8GjWHUtI9ScRy1&#34;&gt;5&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>About</title>
       <link>https://prokopov.me/pages/about/</link>
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/pages/about/</guid>
-      <description>&lt;p&gt;Hi, my name is Maksym Prokopov. I love technology. That&amp;rsquo;s my passion and what I do on my daily job and beyond.&lt;/p&gt;&#xA;&lt;p&gt;Before I got my first computer Intel 386 DX 40 in 1994, I used to write small programs using MK61 programmable calculator, then a bit of soviet Corvette computer programming when I attended 6-7 class. Since then my journey didn&amp;rsquo;t end and I was in love with the software engineering.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hi, my name is Maksym Prokopov. I&amp;rsquo;m in love with technology. That&amp;rsquo;s my passion and what I do on my daily job and beyond.&lt;/p&gt;&#xA;&lt;p&gt;Before I got my first computer Intel 386 DX 40 in 1994, I used to write tiny programs on my MK61 programmable calculator. This was unforgettable experience and my first exposure to the von Neumann architecture. Soviet computer Corvette helped me to dive into programming when I was something like 13. Since then my journey didn&amp;rsquo;t end and I falled completely in love with the software engineering.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
