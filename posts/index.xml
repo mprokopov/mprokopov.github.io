@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sat, 07 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024 Tech in Review</title>
+      <link>https://prokopov.me/posts/2024-year-tech-in-review/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2024-year-tech-in-review/</guid>
+      <description>&lt;h2 id=&#34;2024-was-definitely-a-year-of-ai&#34;&gt;2024 was definitely a year of AI&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ChatGPT&lt;/li&gt;&#xA;&lt;li&gt;Claude&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;models are top-notch and I found myself using them a lot.&lt;/p&gt;&#xA;&lt;h2 id=&#34;editors&#34;&gt;Editors&lt;/h2&gt;&#xA;&lt;p&gt;IMHO, the editors w/o tight AI integration will fade away at some point.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.cursor.com&#34;&gt;Cursor&lt;/a&gt; is an editor with most notable integration with AI API, allows to have nice interactions with code suggestions from LLM.&lt;/p&gt;&#xA;&lt;p&gt;Another notable example is NeoVIM. This year I&amp;rsquo;ve invested a lot into making baby steps with nvim. Probably, the easiest way to start is by using NVChad, a curated set of plugins. I used to use vim a lot back in the days with Ruby on Rails development and I liked the experience back then. NeoVIM makes integration of a lot of tools a breeze with LUA. It was interesting to discover Clojure dialect of &lt;a href=&#34;https://fennel-lang.org/from-clojure&#34;&gt;LUA - Fennel&lt;/a&gt;. Fennel can be used to write extensions for NeoVIM as well. DHH is moved away from macOS to Linux and his new tech stack includes NeoVIM with curated configs gathered in a tool &amp;ldquo;Omakub&amp;rdquo;. I clearly see this trend to build platform-like utilities. For example, once - is a command line tool used to deliver updates to the standalone applications, like WriteBook.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Cable Management</title>
       <link>https://prokopov.me/posts/2024-12-07/</link>

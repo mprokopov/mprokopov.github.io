@@ -46,6 +46,22 @@
 
 <div class="article">
     <h1>
+        <a href="/posts/2017-07-11_----docker---ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/">Про Docker и Ruby on Rails sprockets and precompiled assets</a>
+    </h1>
+    <div class="date">11.07.2017</div>
+    <div><p>Рельсы идут не тем путем.</p>
+<p>По-хорошему монолит на рельсах нужно дробить, а то получается 1С:Бухгалтерия, со всеми включенными галочками по-умолчанию. В данном случае умолчания в рельсах слишком greedy.</p>
+<p>Взять вот sprockets. Его задача вообще один раз запуститься, минифицировать css и js, и замолчать навеки. При этом он требует кучу разнообразных зависимостей типа execjs, nodejs или v8 от гугла в качестве движка минификации.</p>
+<p>Но что делает фреймворк? Sprockets включают в Gemfile, он грузится вместе с полезным кодом, занимает кучу места, мешается под ногами и заставляет программиста танцевать с бубном вокруг задач связанных с деплоем!</p> </div>
+    
+    
+        <a href="/posts/2017-07-11_----docker---ruby-on-rails-sprockets-and-precompiled-assets-9686ab933bb7/">Read More…</a>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/2017/06/%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%BC%D0%B5%D1%80%D1%81%D0%B5%D0%B4%D0%B5%D1%81-%D0%B1%D0%B5%D0%BD%D1%86-%D0%B2-%D1%88%D1%82%D1%83%D1%82%D1%82%D0%B3%D0%B0%D1%80%D1%82%D0%B5/">Музей Мерседес-Бенц в Штуттгарте</a>
     </h1>
     <div class="date">01.06.2017</div>
@@ -184,26 +200,6 @@
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/2016/08/apfs-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B5%D0%BD-%D0%B2-macos-sierra/">APFS доступен в macOS Sierra</a>
-    </h1>
-    <div class="date">11.08.2016</div>
-    <div><p>APFS действительно новая файловая система от Apple вобравшая в себя лучшие черты ZFS.</p>
-<img class="alignnone" src="http://blog.fosketts.net/wp-content/uploads/2016/06/APFS-Structure-500x354.png" width="500" height="354" />
-<p>Но в дисковой утилите вы его не найдете, только через командную строку diskutil</p>
-<p>diskutil apfs list</p>
-<p>WARNING: You are using a pre-release version of the Apple File System called</p>
-<p>APFS which is meant for evaluation and development purposes only.</p>
-<p>Files stored on APFS volumes may not be accessible in future releases</p>
-<p>of macOS.  You should back up all of your data before using APFS and</p> </div>
-    
-    
-        <a href="/2016/08/apfs-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B5%D0%BD-%D0%B2-macos-sierra/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
 <div class="pagination">
     
     <div class="pagination__prev">
@@ -239,6 +235,8 @@
     <div class="sidebar__heading">Categories</div>
     <p></p>
     <ul class="sidebar__links sidebar__category">
+        
+        <li><a href="/categories/2024/">2024</a> (1) </li>
         
         <li><a href="/categories/ansible/">Ansible</a> (1) </li>
         
@@ -285,6 +283,8 @@
         <li><a href="/categories/productivity/">Productivity</a> (1) </li>
         
         <li><a href="/categories/rails/">Rails</a> (2) </li>
+        
+        <li><a href="/categories/review/">Review</a> (1) </li>
         
         <li><a href="/categories/ruby/">Ruby</a> (2) </li>
         
