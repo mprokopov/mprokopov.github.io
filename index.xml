@@ -6,7 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sun, 22 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Projects</title>
@@ -28,6 +28,13 @@
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/pages/about/</guid>
       <description>&lt;p&gt;Hi, my name is Maksym Prokopov. I&amp;rsquo;m in love with technology. That&amp;rsquo;s my passion and what I do on my daily job and beyond.&lt;/p&gt;&#xA;&lt;p&gt;Before I got my first computer Intel 386 DX 40 in 1994, I used to write tiny programs on my MK61 programmable calculator. This was unforgettable experience and my first exposure to the von Neumann architecture. Soviet computer Corvette helped me to dive into programming when I was something like 13. Since then my journey didn&amp;rsquo;t end and I falled completely in love with the software engineering.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What makes Starlink so remarkable?</title>
+      <link>https://prokopov.me/posts/starlink/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/starlink/</guid>
+      <description>&lt;p&gt;Using sattelites for internet communications is not a genuinely new idea. Number of companies provided such services before Starlink.&lt;/p&gt;&#xA;&lt;p&gt;But the key difference between previous generation solutions is the latency.&lt;/p&gt;&#xA;&lt;p&gt;The problem is, 600ms for a signal to travel almost 35700km to a sattelite and back is a lot. No gaming or realtime communication is feasible with such a delay.&lt;/p&gt;&#xA;&lt;p&gt;The only way to decrease the lattency is to position sattelites at lower altitude. This is why Starlink sattelites fly between 340km and 1200km above the surface. Giving us incredible 30ms latency even in remotest regions of Earth.&lt;/p&gt;</description>
     </item>
     <item>
       <title>2024 Tech in Review</title>

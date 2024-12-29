@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sun, 22 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What makes Starlink so remarkable?</title>
+      <link>https://prokopov.me/posts/starlink/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/starlink/</guid>
+      <description>&lt;p&gt;Using sattelites for internet communications is not a genuinely new idea. Number of companies provided such services before Starlink.&lt;/p&gt;&#xA;&lt;p&gt;But the key difference between previous generation solutions is the latency.&lt;/p&gt;&#xA;&lt;p&gt;The problem is, 600ms for a signal to travel almost 35700km to a sattelite and back is a lot. No gaming or realtime communication is feasible with such a delay.&lt;/p&gt;&#xA;&lt;p&gt;The only way to decrease the lattency is to position sattelites at lower altitude. This is why Starlink sattelites fly between 340km and 1200km above the surface. Giving us incredible 30ms latency even in remotest regions of Earth.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>2024 Tech in Review</title>
       <link>https://prokopov.me/posts/2024-year-tech-in-review/</link>
