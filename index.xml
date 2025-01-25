@@ -6,12 +6,12 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sat, 28 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Projects</title>
       <link>https://prokopov.me/pages/projects/</link>
-      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/pages/projects/</guid>
       <description>&lt;h2 id=&#34;dora-exporter&#34;&gt;dora-exporter&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/mprokopov/dora-exporter&#34;&gt;https://github.com/mprokopov/dora-exporter&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;DORA metrics Exporter for Grafana. Assess performance of software development for your entire company.&lt;/p&gt;&#xA;&lt;p&gt;Go lang&lt;/p&gt;&#xA;&lt;h2 id=&#34;ticket-master-for-it-premium&#34;&gt;Ticket Master for IT-Premium&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://beta.it-premium.com.ua&#34;&gt;https://beta.it-premium.com.ua&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ruby On Rails 7, KnockoutJs, MySQL&lt;/p&gt;&#xA;&lt;h2 id=&#34;it-premium-landing-page&#34;&gt;IT-Premium landing page&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://it-premium.com.ua&#34;&gt;https://it-premium.com.ua&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;ClojureScript + Hugo + AWS Lambda NodeJs (pdf-generator + sendgrid)&lt;/p&gt;&#xA;&lt;h2 id=&#34;amazon-purchase-history-ai-classifier&#34;&gt;Amazon Purchase History AI Classifier&lt;/h2&gt;&#xA;&lt;p&gt;Local first project using Ollama + Mistral/LLama/OpenAI models&lt;/p&gt;&#xA;&lt;p&gt;Python 3, Langchain, Ollama LLM, Groq API, OpenAI API&lt;/p&gt;&#xA;&lt;h2 id=&#34;raycast-pritunl-extension&#34;&gt;Raycast Pritunl extension&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.raycast.com/maksym_prokopov/pritunl&#34;&gt;https://www.raycast.com/maksym_prokopov/pritunl&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Javascript (Typescript)&lt;/p&gt;</description>
     </item>
