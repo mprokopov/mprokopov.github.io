@@ -82,6 +82,9 @@
 <p><a href="https://github.com/runatlantis/atlantis/pull/3253">Workspace not detected with Terraform Cloud</a></p>
 <h2 id="pritunl-bastion">Pritunl-Bastion</h2>
 <p><a href="https://github.com/pritunl/pritunl-bastion/pull/2#event-14408980337">Pritunl bastion fails to connect to 7th environment</a></p>
+<h2 id="prometheus-sql-exporter-fork-for-internal-use">Prometheus SQL exporter fork for internal use</h2>
+<p><code>chop-dbhi/prometheus-sql</code> exporter fork to fix the high load spike on the first run.</p>
+<p>Executes all queries on startup and this caused a huge load on the instance, plus monitoring alerts and replica lag.</p>
 </div>
     <div id="remark42"></div>
 
