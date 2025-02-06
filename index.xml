@@ -6,7 +6,7 @@
     <description>Recent content on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sat, 25 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Projects</title>
@@ -28,6 +28,13 @@
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/pages/about/</guid>
       <description>&lt;p&gt;Hi, my name is Maksym Prokopov. I&amp;rsquo;m in love with technology. That&amp;rsquo;s my passion and what I do on my daily job and beyond.&lt;/p&gt;&#xA;&lt;p&gt;Before I got my first computer Intel 386 DX 40 in 1994, I used to write tiny programs on my MK61 programmable calculator. This was unforgettable experience and my first exposure to the von Neumann architecture. Soviet computer Corvette helped me to dive into programming when I was something like 13. Since then my journey didn&amp;rsquo;t end and I falled completely in love with the software engineering.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cloud Cost Management aka FinOps</title>
+      <link>https://prokopov.me/posts/2025-02-06/</link>
+      <pubDate>Thu, 06 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/2025-02-06/</guid>
+      <description>&lt;p&gt;Cloud Cost Management, or FinOps is tricky. Imagine Team A started consuming much more resources and the management just starts seeing hair-pulling consequences at the end of the month in AWS bill.&lt;/p&gt;&#xA;&lt;p&gt;How to react fast and prevent unnecessary cost? Or become very restrictive by blocking spinning up a new resources w/o explicit management approval, this can slow down and progress and also can be catastrophic for the company.&lt;/p&gt;&#xA;&lt;p&gt;What to do?&lt;/p&gt;</description>
     </item>
     <item>
       <title>What makes Starlink so remarkable?</title>

@@ -46,6 +46,73 @@
 
 <div class="article">
     <h1>
+        <a href="/posts/2023-07-15-cloudflare-tunnel-terraform/">CloudFlare Tunnel Terraform</a>
+    </h1>
+    <div class="date">15.07.2023</div>
+    <div><h1 id="how-to-provision-cloudflare-tunnel-using-terraform">How to provision CloudFlare tunnel using Terraform</h1>
+<p>CloudFlare Tunnel can be useful to use reliable alternative to <em>ngrok</em> when you need to expose your application running locally to the outside world.</p>
+<p>The following example exposes my application locally running on port 3000 to the Internet on the hostname <a href="https://app.prokopov.me">https://app.prokopov.me</a></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Terraform CloudFlare module v4</li>
+<li>CloudFlare API key with Account:Tunnel permissions.</li>
+<li>Locally installed CloudFlare CLI utility <em>cloudflared</em> <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/</a></li>
+<li>Application running locally on port 3000</li>
+</ul>
+<h2 id="how-does-it-work">How does it work?</h2>
+<ol>
+<li><em>cloudflared</em> CLI is an agent running locally and connected to CloudFlare cloud.</li>
+<li>DNS record of type CNAME is created, pointing to the CloudFlare cloud.</li>
+<li>CloudFlare does the routing magic!</li>
+</ol>
+<h2 id="terraform-part">Terraform part</h2>
+<pre tabindex="0"><code>resource &#34;cloudflare_tunnel&#34; &#34;main&#34; {
+  account_id = &#34;777414c2d4e87234087ebac4685e7df6&#34;
+  name       = &#34;tunnel-to-app&#34;
+  secret     = random_id.main.b64_std
+}
+
+resource &#34;cloudflare_tunnel_config&#34; &#34;main&#34; {
+  account_id = &#34;777414c2d4e87234087ebac4685e7df6&#34;
+  tunnel_id  = cloudflare_tunnel.main.id
+
+  config {
+    warp_routing {
+      enabled = true
+    }
+    ingress_rule {
+      hostname = &#34;app.prokopov.me&#34;
+      service  = &#34;http://localhost:3000&#34;
+    }
+    ingress_rule {
+      service = &#34;http_status:404&#34;
+    }
+  }
+}
+
+resource &#34;cloudflare_record&#34; &#34;main&#34; {
+  value   = &#34;${cloudflare_tunnel.main.id}.cfargotunnel.com&#34;
+  proxied = true
+  name    = &#34;app&#34;
+  type    = &#34;CNAME&#34;
+  zone_id = cloudflare_zone.main.id
+}
+</code></pre><h2 id="local-tunnel-part">Local tunnel part</h2>
+<ol>
+<li>Find generated token for resource cloudflare_tunnel.main</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>TOKEN<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>terraform show -json | jq -r <span style="color:#e6db74">&#39;.values.root_module.resources[] | select(.address==&#34;cloudflare_tunnel.main&#34;).values.tunnel_token&#39;</span><span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><ol start="2">
+<li>Use token</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cloudflared tunnel run --token<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>TOKEN<span style="color:#e6db74">}</span> tunnel-to-app
+</span></span></code></pre></div> </div>
+    
+</div>
+<div class="border-bottom"></div>
+
+<div class="article">
+    <h1>
         <a href="/posts/2023-04-03/">Mikrotik Terraform</a>
     </h1>
     <div class="date">03.04.2023</div>
@@ -255,21 +322,6 @@ less tricky to get an appointment there.</p>
     
     
         <a href="/posts/2021-week-29/">Read More…</a>
-    
-</div>
-<div class="border-bottom"></div>
-
-<div class="article">
-    <h1>
-        <a href="/posts/2021-04-23-oxid-api-coding-days/">Oxid API coding days - settings management solution</a>
-    </h1>
-    <div class="date">23.04.2021</div>
-    <div><p>Recently Oxid has presented the GraphQL API support and announced a hackathon-like event.</p>
-<p>This experience was really refreshing and interesting. Having tight timeframe and some task in hand it was challenging to distribute efforts and get in sync with participants.</p>
-<p>Our team had to deliver unified settings management solution like Google Chrome or Firefox has for numerous different things.</p> </div>
-    
-    
-        <a href="/posts/2021-04-23-oxid-api-coding-days/">Read More…</a>
     
 </div>
 <div class="border-bottom"></div>
