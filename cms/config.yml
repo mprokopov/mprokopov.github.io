@@ -27,3 +27,19 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Draft", name: "draft", widget: "boolean"}
       - {label: "Keywords", name: "keywords", widget: "list", allow_add: true}
       - {label: "Description", name: "description", widget: "text"}
+  - name: "pages" # Used in routes, ie.: /admin/collections/:slug/edit
+    i18n: false
+    media_folder: "/static/img"
+    public_folder: "/img"
+    label: "Page" # Used in the UI, ie.: "New Post"
+    folder: "content/pages" # The path to the folder where the documents are stored
+    # path: "{{slug}}"
+    create: false 
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string", required: false}
+      - {label: "Date", name: "date", widget: "datetime", format: "L", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean", required: false}
+      - {label: "Keywords", name: "keywords", widget: "list", allow_add: true}
+      - {label: "Description", name: "description", widget: "text", required: false}
