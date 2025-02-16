@@ -1,0 +1,29 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+#  name: github
+  branch: decap-cms
+  repo: mprokopov/mprokopov-blog-static
+
+media_folder: "/static/img" # Folder where user uploaded files should go
+public_folder: "/img"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    i18n: false
+    media_folder: "/static/img"
+    public_folder: "/img"
+    label: "Post" # Used in the UI, ie.: "New Post"
+    folder: "content/posts" # The path to the folder where the documents are stored
+    path: "{{slug}}"
+    create: true 
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime", format: "L"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean"}
+      - {label: "Keywords", name: "keywords", widget: "list", allow_add: true}
+      - {label: "Description", name: "description", widget: "text"}

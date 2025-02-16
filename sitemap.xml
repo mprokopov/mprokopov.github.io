@@ -1198,9 +1198,7 @@
     <loc>https://prokopov.me/2009/12/hello-worldpress/</loc>
     <lastmod>2009-12-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prokopov.me/posts/draft_post-680791be7605/</loc>
-  </url><url>
-    <loc>https://prokopov.me/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/</loc>
+    <loc>https://prokopov.me/cms/</loc>
   </url><url>
     <loc>https://prokopov.me/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/</loc>
   </url><url>
@@ -1208,17 +1206,11 @@
   </url><url>
     <loc>https://prokopov.me/posts/2020-12-09/</loc>
   </url><url>
-    <loc>https://prokopov.me/posts/draft_one-account--all-of-google--24ec9b332a4a/</loc>
-  </url><url>
-    <loc>https://prokopov.me/posts/draft_one-account--all-of-google--4681a5761d84/</loc>
-  </url><url>
     <loc>https://prokopov.me/posts/2020-05-31-pharo/</loc>
   </url><url>
     <loc>https://prokopov.me/posts/draft_ruby-tricks-54c9925f2714/</loc>
   </url><url>
     <loc>https://prokopov.me/posts/draft_speeding-up-ruby-on-rails-in-docker-65c35f391389/</loc>
-  </url><url>
-    <loc>https://prokopov.me/posts/draft_u-d3d57598136a/</loc>
   </url><url>
     <loc>https://prokopov.me/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/</loc>
   </url><url>

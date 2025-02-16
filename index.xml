@@ -2067,17 +2067,10 @@
       <description>&lt;p&gt;Сначала у меня был очень современный (на 2005год) с развитой многомерной структурой тегов и все такое бла-бла-бла сайт &lt;a href=&#34;http://nexus.org.ua&#34;&gt;http://nexus.org.ua&lt;/a&gt;, и был он написан на &lt;a href=&#34;http://www.parser.ru/en/&#34;&gt;Parser 3&lt;/a&gt;. Затем я полностью пересел за Ruby on Rails, однако переписывать сайт не торопился. А затем желание чего либо допиливать парсером совсем завяло. Решил по-легкому попробовать себя в ЖЖ.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://mprokopov.livejournal.com/&#34;&gt;Пишу я себе изредка в LiveJournal&lt;/a&gt;, чувствую, что картинку вставить очень хочется через MarsEdit, загрузить, значится. А не получается совсем, непорядок. Думаю, а зачем мне эти все ливджорналы? Почему бы не попробовать вордпресс?&lt;/p&gt;</description>
     </item>
     <item>
-      <title></title>
-      <link>https://prokopov.me/posts/draft_post-680791be7605/</link>
+      <title>Admin section</title>
+      <link>https://prokopov.me/cms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/draft_post-680791be7605/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Configure Docker Engine logs to AWS CloudWatch</title>
-      <link>https://prokopov.me/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/draft_configure-docker-engine-logs-to-aws-cloudwatch-a08f51f1d746/</guid>
+      <guid>https://prokopov.me/cms/</guid>
       <description></description>
     </item>
     <item>
@@ -2102,20 +2095,6 @@
       <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:11.0.3&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
-      <title>One account. All of Google.</title>
-      <link>https://prokopov.me/posts/draft_one-account--all-of-google--24ec9b332a4a/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/draft_one-account--all-of-google--24ec9b332a4a/</guid>
-      <description>&lt;p&gt;One account. All of Google.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;img/0__xPa6uZ04ZDjvTOOQ.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Originally published at&lt;/em&gt; &lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=8155698338999334610&#34;&gt;&lt;em&gt;www.blogger.com&lt;/em&gt;&lt;/a&gt;&lt;em&gt;.&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>One account. All of Google.</title>
-      <link>https://prokopov.me/posts/draft_one-account--all-of-google--4681a5761d84/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/draft_one-account--all-of-google--4681a5761d84/</guid>
-      <description>&lt;p&gt;One account. All of Google.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;img/0__D67TAFgwiWCFHExs.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Originally published at&lt;/em&gt; &lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=8155698338999334610&#34;&gt;&lt;em&gt;www.blogger.com&lt;/em&gt;&lt;/a&gt;&lt;em&gt;.&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Pharo testing</title>
       <link>https://prokopov.me/posts/2020-05-31-pharo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2135,13 +2114,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/draft_speeding-up-ruby-on-rails-in-docker-65c35f391389/</guid>
       <description>&lt;p&gt;Speeding up Ruby on Rails in docker&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;img/0__LIxdmYq3kKxytoVG.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;img/0__itLAs7Fa2raZNMPx.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Bundle package will create a cached copy, so bundler in docker will not fetch all dependencies all the time.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;bundle package&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Create separate bundler data volume to perisist bundle between builds. Set BUNDLE_PATH to data volume. You can include this option just for development docker-compose.yml file and not to include in production.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;version: “2” services: memcached: image: memcached networks: — back-tier redis: image: redis ports: [“6379”] networks: — back-tier db: image: mysql:5 volumes: — ./sql:/docker-entrypoint-initdb.d — mysql:/var/lib/mysql networks: — back-tier sse: image: mprokopov/sse build: context: sse/. command: “bundle exec rackup — host 0.0.0.0 — port 9292” environment: — RACK_ENV=production ## docker database settings in config.yml ports: — “9292:9292” links: — redis — db depends_on: — db — redis networks: — back-tier — front-tier worker: image: mprokopov/itservice_web_dev command: “bundle exec rake environment resque:work” environment: — QUEUE=* links: — db — redis depends_on: — db — redis networks: — back-tier worker-schedule: image: mprokopov/itservice_web_dev command: “bundle exec rake environment resque:scheduler” links: — db — redis depends_on: — redis networks: — back-tier search: image: mprokopov/itservice_search build: ./search volumes: — search-data:/search depends_on: — db links: — db networks: — back-tier expose: — “9306” web: ports: — “3000:3000” environment: — LETTER_OPENER=letter_opener_web — RAILS_SERVE_STATIC_FILES=true — SLACK_NOTIFICATION=false — EMAIL_NOTIFICATION=false — SLACK_WEBHOOK_CHANNEL=#events_test — STREAM_API=http:&lt;em&gt;//localhost:9292&lt;/em&gt; depends_on: — db — redis links: — db — redis — search networks: — back-tier — front-tier volumes: — search-data:/search volumes: search-data: mysql: networks: back-tier: front-tier:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>U</title>
-      <link>https://prokopov.me/posts/draft_u-d3d57598136a/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/draft_u-d3d57598136a/</guid>
-      <description>&lt;p&gt;U&lt;/p&gt;</description>
     </item>
     <item>
       <title>Useful Kubernetes tools and tips</title>
