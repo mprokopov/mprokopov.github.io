@@ -16,6 +16,13 @@
       <description>&lt;p&gt;Cloud Cost Management, or FinOps is tricky. Imagine Team A started consuming much more resources and the management just starts seeing hair-pulling consequences at the end of the month in AWS bill.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://prokopov.me/img/finops.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;How to react fast and prevent unnecessary cost? Or become very restrictive by blocking spinning up a new resources w/o explicit management approval, this can slow down and progress and also can be catastrophic for the company.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Ordinary day in a Life of DevOps</title>
+      <link>https://prokopov.me/posts/one-day-devops-life/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/one-day-devops-life/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Bumped Backstage dependencies with migration to the new backend system.&lt;/li&gt;&#xA;&lt;li&gt;Okta authentication (with wildcard sign-in)&lt;/li&gt;&#xA;&lt;li&gt;Building a roadmap for an engineering team&lt;/li&gt;&#xA;&lt;li&gt;Troubleshooting Unifi WiFi connectivity issues for the network with 12 access points and 200+ roaming clients.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Bought Meta Quest 3&#xA;Games: Underdogs, Assassin Creed Nexus, Batman Arkham.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;playground&#34;&gt;Playground&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Model Control Protocol Server for the own ledger system&lt;/li&gt;&#xA;&lt;li&gt;Developed several Python modules with UV package manager.&lt;/li&gt;&#xA;&lt;li&gt;Tested V0 generation.&lt;/li&gt;&#xA;&lt;li&gt;Tested NextJS docker container.&lt;/li&gt;&#xA;&lt;li&gt;Tested blog with NextJS and Strapi.&lt;/li&gt;&#xA;&lt;li&gt;Played with Svelte and SvelteKit.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
       <title>What makes Starlink so remarkable?</title>
       <link>https://prokopov.me/posts/starlink/</link>
       <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
