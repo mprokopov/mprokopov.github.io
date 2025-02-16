@@ -10,17 +10,17 @@
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cloud Cost Management aka FinOps</title>
-      <link>https://prokopov.me/posts/2025-02-06/</link>
+      <link>https://prokopov.me/posts/finops/</link>
       <pubDate>Thu, 06 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/2025-02-06/</guid>
-      <description>&lt;p&gt;Cloud Cost Management, or FinOps is tricky. Imagine Team A started consuming much more resources and the management just starts seeing hair-pulling consequences at the end of the month in AWS bill.&lt;/p&gt;&#xA;&lt;p&gt;How to react fast and prevent unnecessary cost? Or become very restrictive by blocking spinning up a new resources w/o explicit management approval, this can slow down and progress and also can be catastrophic for the company.&lt;/p&gt;&#xA;&lt;p&gt;What to do?&lt;/p&gt;</description>
+      <guid>https://prokopov.me/posts/finops/</guid>
+      <description>&lt;p&gt;Cloud Cost Management, or FinOps is tricky. Imagine Team A started consuming much more resources and the management just starts seeing hair-pulling consequences at the end of the month in AWS bill.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://prokopov.me/img/finops.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;How to react fast and prevent unnecessary cost? Or become very restrictive by blocking spinning up a new resources w/o explicit management approval, this can slow down and progress and also can be catastrophic for the company.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What makes Starlink so remarkable?</title>
       <link>https://prokopov.me/posts/starlink/</link>
       <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/starlink/</guid>
-      <description>&lt;p&gt;Using sattelites for internet communications is not a genuinely new idea. Number of companies provided such services before Starlink.&lt;/p&gt;&#xA;&lt;p&gt;But the key difference between previous generation solutions is the latency.&lt;/p&gt;&#xA;&lt;p&gt;The problem is, 600ms for a signal to travel almost 35700km to a sattelite and back is a lot. No gaming or realtime communication is feasible with such a delay.&lt;/p&gt;&#xA;&lt;p&gt;The only way to decrease the lattency is to position sattelites at lower altitude. This is why Starlink sattelites fly between 340km and 1200km above the surface. Giving us incredible 30ms latency even in remotest regions of Earth.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Using sattelites for internet communications is not a genuinely new idea. Number of companies provided such services before Starlink.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://prokopov.me/img/satellite.jpeg&#34; alt=&#34;starlink sattelite&#34; title=&#34;starlink sattelite&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;But the key difference between previous generation solutions is the latency.&lt;/p&gt;&#xA;&lt;p&gt;The problem is, 600ms for a signal to travel almost 35700km to a sattelite and back is a lot. No gaming or realtime communication is feasible with such a delay.&lt;/p&gt;&#xA;&lt;p&gt;The only way to decrease the lattency is to position sattelites at lower altitude. This is why Starlink sattelites fly between 340km and 1200km above the surface. Giving us incredible 30ms latency even in remotest regions of Earth.&lt;/p&gt;</description>
     </item>
     <item>
       <title>2024 Tech in Review</title>
@@ -31,10 +31,10 @@
     </item>
     <item>
       <title>Cable Management</title>
-      <link>https://prokopov.me/posts/2024-12-07/</link>
+      <link>https://prokopov.me/posts/home-cable-management/</link>
       <pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://prokopov.me/posts/2024-12-07/</guid>
-      <description>&lt;p&gt;Cable Management is an interesting topic for me, as my passion towards tech gadgets encourages spending some money during black friday on something fascinating. Typically, it&amp;rsquo;s one of the &amp;ldquo;next one more thing&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Creating a distraction free space is crucial for creativity. Cluttered space creates tention, hindering the productivity. It&amp;rsquo;s so important to keep the place nicely organized!&lt;/p&gt;&#xA;&lt;p&gt;Here is a couple of cable management solutions I tried at my home.&lt;/p&gt;</description>
+      <guid>https://prokopov.me/posts/home-cable-management/</guid>
+      <description>&lt;p&gt;Cable Management is an interesting topic for me, as my passion towards tech gadgets encourages spending some money during black friday on something fascinating. Typically, it&amp;rsquo;s one of the &amp;ldquo;next one more thing&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://prokopov.me/img/cablemanagement.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Creating a distraction free space is crucial for creativity. Cluttered space creates tention, hindering the productivity. It&amp;rsquo;s so important to keep the place nicely organized!&lt;/p&gt;&#xA;&lt;p&gt;Here is a couple of cable management solutions I tried at my home.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Digitalisation in action</title>

@@ -24,9 +24,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Date", name: "date", widget: "datetime", format: "L"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Draft", name: "draft", widget: "boolean"}
+      - {label: "Draft", name: "draft", widget: "boolean", required: false}
       - {label: "Keywords", name: "keywords", widget: "list", allow_add: true}
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Description", name: "description", widget: "text", required: false}
   - name: "pages" # Used in routes, ie.: /admin/collections/:slug/edit
     i18n: false
     media_folder: "/static/img"

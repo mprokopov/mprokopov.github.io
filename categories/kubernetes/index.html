@@ -18,7 +18,7 @@
 <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
 
 
-<link rel="stylesheet" href="https://prokopov.me/style.min.24166a1e761f51442033103dc963330d3526a4339a58ab46d3fee0c94a62f4a3.css">
+<link rel="stylesheet" href="https://prokopov.me/style.min.2c73c2cce25cfc0bb98b66e51cb2e60843f676f1f0fdc2952591b9e703466039.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -44,11 +44,9 @@
 
 
 <div class="article">
-    <h1>
-        <a href="https://prokopov.me/posts/@mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/">Brief introduction to the Kubernetes.</a>
-    </h1>
-    <div class="date">26.05.2018</div>
-    <div><h3 id="kubernetes-is-a-winner-in-docker-cloud-orchestration-so-lets-get-a-brief-introduction-in-what-it-is-and-what-kind-of-problems-itsolves">Kubernetes is a winner in docker cloud orchestration, so let’s get a brief introduction in what it is and what kind of problems it solves.</h3>
+  <h2><a href="https://prokopov.me/posts/@mprokopov/brief-introduction-to-the-kubernetes-f1050c4daa51/">Brief introduction to the Kubernetes.</a></h2>
+  <div class="date">26.05.2018</div>
+  <div><h3 id="kubernetes-is-a-winner-in-docker-cloud-orchestration-so-lets-get-a-brief-introduction-in-what-it-is-and-what-kind-of-problems-itsolves">Kubernetes is a winner in docker cloud orchestration, so let’s get a brief introduction in what it is and what kind of problems it solves.</h3>
 <p>Kubernetes is a set of tools designed to solve a problem of deployment of your lovely tailor-made application to a cloud. It does not matter which cloud you choose, AWS, Azure or Google, or even IBM, because Kubernetes provides you with a set of tools which are platform independent.</p>
 <p><img src="/img/1__fw8YJnfF32dWsX__beQpWOw.png" alt=""></p>
 <p>For almost every application you need to talk to a database, to store some assets, to get requests and make responses to users with a useful content. So, basically you need to have a ‘storage’ for storing files, a ‘network’ to get requests and make responses to users and a ‘computing power with memory’ to run your application. All of this is quite simple if you run your application on a single computer (node), you have local storage on an HDD, i.e. a filesystem, you have a CPU and memory to run your application and a single network interface to talk to users and other services like external database or api. Suddenly you decide to deploy your application to some cloud provider and users start using your application on a huge scale and then you decide to scale your application across cloud nodes.</p>

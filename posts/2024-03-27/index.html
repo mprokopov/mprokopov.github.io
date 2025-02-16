@@ -18,7 +18,7 @@
 <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
 
 
-<link rel="stylesheet" href="https://prokopov.me/style.min.24166a1e761f51442033103dc963330d3526a4339a58ab46d3fee0c94a62f4a3.css">
+<link rel="stylesheet" href="https://prokopov.me/style.min.2c73c2cce25cfc0bb98b66e51cb2e60843f676f1f0fdc2952591b9e703466039.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -43,13 +43,9 @@
 </div>
 
 <div class="article">
-    <h1>
-        <a href="https://prokopov.me/posts/2024-03-27/">Compliance as a Code</a>
-    </h1>
+    <h1><a href="https://prokopov.me/posts/2024-03-27/">Compliance as a Code</a></h1>
     <div class="date">27.03.2024</div>
-    
-    <h4>Reading time: 1 min.</h4>
-    
+    <div class="reading-time">Reading time: 1 min.</div>
     <div><p>Recently, I stumbled upon a concept that sounded new to me: Compliance as a Code.</p>
 <p>The core idea is to &ldquo;embed compliance policies into the code that can be repeated and tested automatically.&rdquo; But what does it mean in practice?</p>
 <p>For example, consider PCI DSS, which requires measures to secure credit card information to ensure compliance. Tools like Terraform, Ansible, and others should contain the code for encryption, access control, and data obfuscation. Additionally, before deployment, automated tests in the CI/CD pipeline should validate that the application meets PCI DSS requirements.</p>

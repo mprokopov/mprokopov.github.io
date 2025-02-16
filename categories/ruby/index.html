@@ -18,7 +18,7 @@
 <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
 
 
-<link rel="stylesheet" href="https://prokopov.me/style.min.24166a1e761f51442033103dc963330d3526a4339a58ab46d3fee0c94a62f4a3.css">
+<link rel="stylesheet" href="https://prokopov.me/style.min.2c73c2cce25cfc0bb98b66e51cb2e60843f676f1f0fdc2952591b9e703466039.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -44,22 +44,18 @@
 
 
 <div class="article">
-    <h1>
-        <a href="https://prokopov.me/posts/ruby-macos-install/">Install Ruby 3.1.4 on macOS</a>
-    </h1>
-    <div class="date">29.08.2023</div>
-    <div><p>In case ruby can&rsquo;t find OpenSSL 3 headers, use this way.</p>
+  <h2><a href="https://prokopov.me/posts/ruby-macos-install/">Install Ruby 3.1.4 on macOS</a></h2>
+  <div class="date">29.08.2023</div>
+  <div><p>In case ruby can&rsquo;t find OpenSSL 3 headers, use this way.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>brew install ruby-install
 </span></span><span style="display:flex;"><span>ruby-install ruby 3.1.4 -- --with-openssl-dir<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>brew --prefix openssl<span style="color:#66d9ef">)</span>
 </span></span></code></pre></div></div>
 </div>
 
 <div class="article">
-    <h1>
-        <a href="https://prokopov.me/posts/@mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">How to improve ruby code with dup and tap methods</a>
-    </h1>
-    <div class="date">06.06.2018</div>
-    <div><p>Here is a piece of my old code, but it’s definitely could be improved.</p>
+  <h2><a href="https://prokopov.me/posts/@mprokopov/how-to-improve-ruby-code-with-dup-and-tap-methods-95fa1d1bb9fe/">How to improve ruby code with dup and tap methods</a></h2>
+  <div class="date">06.06.2018</div>
+  <div><p>Here is a piece of my old code, but it’s definitely could be improved.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_params</span>
 </span></span><span style="display:flex;"><span>  h <span style="color:#f92672">=</span> ticket_params
 </span></span><span style="display:flex;"><span>    h<span style="color:#f92672">[</span><span style="color:#e6db74">:activity</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> extract_activity <span style="color:#66d9ef">if</span> extract_activity

@@ -19,7 +19,7 @@
 <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
 
 
-<link rel="stylesheet" href="https://prokopov.me/style.min.24166a1e761f51442033103dc963330d3526a4339a58ab46d3fee0c94a62f4a3.css">
+<link rel="stylesheet" href="https://prokopov.me/style.min.2c73c2cce25cfc0bb98b66e51cb2e60843f676f1f0fdc2952591b9e703466039.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -44,76 +44,76 @@
 </div>
 
 
-<div class="article">
-    <h1>
-        <a href="/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Gitlab: continuous delivery setup for Clojure/Java with Docker</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><p>Recently I was doing a <a href="https://github.com/mprokopov/it-service-sse">https://github.com/mprokopov/it-service-sse</a> and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.</p>
+<div class="article-section">
+  <h2>
+    <a href="/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Gitlab: continuous delivery setup for Clojure/Java with Docker</a>
+  </h2>
+  <div class="date">01.01.0001</div>
+  <div><p>Recently I was doing a <a href="https://github.com/mprokopov/it-service-sse">https://github.com/mprokopov/it-service-sse</a> and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.</p>
 <p>Long story short, here my .gitlab-ci.yml which took me a couple of days to figure out what is the “artifact” in Gitlab and how is it suppose to survive between artifact builds and docker builds.</p>
 <p>My current setup has two stages, java build and then docker build. At the first stage we use clojure:lein-2.7.1-alpine, which is quite small, to build jar file from the sources. Then we try to assemble docker container and reuse artifact from the previous build. I was lucky enough to discover that artifact could be saved with help of “cache” option in YML file which preserves folder in “path” for the next build.</p> </div>
-    
-    
-        <a href="/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Read More…</a>
-    
+  
+  
+  <a href="/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Read More…</a>
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/draft_how-to-speed-up-ruby-bundle-gems-fetch-1110de70ccbc/">How to speed up ruby bundle gems fetch</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><p>Short answer: use <a href="https://github.com/geminabox/geminabox">https://github.com/geminabox/geminabox</a> for caching gems on your own host, or in your local network.</p>
+<div class="article-section">
+  <h2>
+    <a href="/posts/draft_how-to-speed-up-ruby-bundle-gems-fetch-1110de70ccbc/">How to speed up ruby bundle gems fetch</a>
+  </h2>
+  <div class="date">01.01.0001</div>
+  <div><p>Short answer: use <a href="https://github.com/geminabox/geminabox">https://github.com/geminabox/geminabox</a> for caching gems on your own host, or in your local network.</p>
 <p>I was using bundler’s vendor/cache in docker container, but with such improvement my container size grown up to 1,2Gb very quickly.</p>
 <p>Supply following settings to your <strong>geminabox</strong> container<br>
 <code>RUBYGEMS_PROXY=true</code></p>
 <p><a href="https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800">https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800</a></p> </div>
-    
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/2020-12-09/">Keycloak</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><pre tabindex="0"><code>docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:11.0.3
+<div class="article-section">
+  <h2>
+    <a href="/posts/2020-12-09/">Keycloak</a>
+  </h2>
+  <div class="date">01.01.0001</div>
+  <div><pre tabindex="0"><code>docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:11.0.3
 </code></pre> </div>
-    
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/2020-05-31-pharo/">Pharo testing</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><p>Suprisingly, Pharo turns out to be interesting solution for managing web pages fully by the pure OO classes and objects.</p> </div>
-    
+<div class="article-section">
+  <h2>
+    <a href="/posts/2020-05-31-pharo/">Pharo testing</a>
+  </h2>
+  <div class="date">01.01.0001</div>
+  <div><p>Suprisingly, Pharo turns out to be interesting solution for managing web pages fully by the pure OO classes and objects.</p> </div>
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/draft_ruby-tricks-54c9925f2714/">Ruby tricks</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><p>Use binding object to run code within other object context.<br>
+<div class="article-section">
+  <h2>
+    <a href="/posts/draft_ruby-tricks-54c9925f2714/">Ruby tricks</a>
+  </h2>
+  <div class="date">01.01.0001</div>
+  <div><p>Use binding object to run code within other object context.<br>
 <a href="https://ruby-doc.org/core-2.2.0/Binding.html">https://ruby-doc.org/core-2.2.0/Binding.html</a></p>
 <p>stderr output</p>
 <p>highlight your code and insert in presentation</p>
 <p><a href="https://gist.github.com/jimbojsb/1630790">https://gist.github.com/jimbojsb/1630790</a></p> </div>
-    
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/draft_speeding-up-ruby-on-rails-in-docker-65c35f391389/">Speeding up Ruby on Rails in docker</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><p>Speeding up Ruby on Rails in docker</p>
+<div class="article-section">
+  <h2>
+    <a href="/posts/draft_speeding-up-ruby-on-rails-in-docker-65c35f391389/">Speeding up Ruby on Rails in docker</a>
+  </h2>
+  <div class="date">01.01.0001</div>
+  <div><p>Speeding up Ruby on Rails in docker</p>
 <p><img src="img/0__LIxdmYq3kKxytoVG.png" alt="">
 <img src="img/0__itLAs7Fa2raZNMPx.png" alt=""></p>
 <ol>
@@ -125,19 +125,19 @@
 </ol>
 <blockquote>
 <p>version: “2” services: memcached: image: memcached networks: — back-tier redis: image: redis ports: [“6379”] networks: — back-tier db: image: mysql:5 volumes: — ./sql:/docker-entrypoint-initdb.d — mysql:/var/lib/mysql networks: — back-tier sse: image: mprokopov/sse build: context: sse/. command: “bundle exec rackup — host 0.0.0.0 — port 9292” environment: — RACK_ENV=production ## docker database settings in config.yml ports: — “9292:9292” links: — redis — db depends_on: — db — redis networks: — back-tier — front-tier worker: image: mprokopov/itservice_web_dev command: “bundle exec rake environment resque:work” environment: — QUEUE=* links: — db — redis depends_on: — db — redis networks: — back-tier worker-schedule: image: mprokopov/itservice_web_dev command: “bundle exec rake environment resque:scheduler” links: — db — redis depends_on: — redis networks: — back-tier search: image: mprokopov/itservice_search build: ./search volumes: — search-data:/search depends_on: — db links: — db networks: — back-tier expose: — “9306” web: ports: — “3000:3000” environment: — LETTER_OPENER=letter_opener_web — RAILS_SERVE_STATIC_FILES=true — SLACK_NOTIFICATION=false — EMAIL_NOTIFICATION=false — SLACK_WEBHOOK_CHANNEL=#events_test — STREAM_API=http:<em>//localhost:9292</em> depends_on: — db — redis links: — db — redis — search networks: — back-tier — front-tier volumes: — search-data:/search volumes: search-data: mysql: networks: back-tier: front-tier:</p> </div>
-    
-    
-        <a href="/posts/draft_speeding-up-ruby-on-rails-in-docker-65c35f391389/">Read More…</a>
-    
+  
+  
+  <a href="/posts/draft_speeding-up-ruby-on-rails-in-docker-65c35f391389/">Read More…</a>
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/">Useful Kubernetes tools and tips</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><p>Unlike docker-compose sometimes kubectl provides you better tooling for docker container access.</p>
+<div class="article-section">
+  <h2>
+    <a href="/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/">Useful Kubernetes tools and tips</a>
+  </h2>
+  <div class="date">01.01.0001</div>
+  <div><p>Unlike docker-compose sometimes kubectl provides you better tooling for docker container access.</p>
 <p>Let me share with you my useful findings.</p>
 <p>With port-forward, you can easily connect to pods service and debug it.</p>
 <pre tabindex="0"><code>kubectl port-forward podname port
@@ -151,31 +151,31 @@ Handling connection for 3000<br>
 Handling connection for 3000</p>
 </blockquote>
 <p>This will forward port 3000 to localhost, so you can open URL <a href="http://localhost:3000/">http://localhost:3000</a> and enjoy access to your service.</p> </div>
-    
-    
-        <a href="/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/">Read More…</a>
-    
+  
+  
+  <a href="/posts/draft_useful-kubernetes-tools-and-tips-7d3990b1cdfa/">Read More…</a>
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos--9599b598746b/">Why is my dev docker container so slow on macOS?</a>
-    </h1>
-    <div class="date">01.01.0001</div>
-    <div><p>TLDR: because of the networking layer and how docker volumes implemented.</p> </div>
-    
+<div class="article-section">
+  <h2>
+    <a href="/posts/draft_why-is-my-dev-docker-container-so-slow-on-macos--9599b598746b/">Why is my dev docker container so slow on macOS?</a>
+  </h2>
+  <div class="date">01.01.0001</div>
+  <div><p>TLDR: because of the networking layer and how docker volumes implemented.</p> </div>
+  
 </div>
 <div class="border-bottom"></div>
 
 <div class="pagination">
-    
-    <div class="pagination__prev">
-        <a href="/page/29/" class="pagination__icon">&lt;&lt;</a>
-        <a href="/page/29/">Previous page</a>
-    </div>
-    
-    
+  
+  <div class="pagination__prev">
+    <a href="/page/29/" class="pagination__icon">&lt;&lt;</a>
+    <a href="/page/29/">Previous page</a>
+  </div>
+  
+  
 </div><div class="sidebar"><div class="sidebar__visitcard">
     <div class="sidebar__heading">Profile links</div><p></p>
     <div class="textwidget profile__link">

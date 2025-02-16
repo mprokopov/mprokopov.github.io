@@ -18,7 +18,7 @@
 <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
 
 
-<link rel="stylesheet" href="https://prokopov.me/style.min.24166a1e761f51442033103dc963330d3526a4339a58ab46d3fee0c94a62f4a3.css">
+<link rel="stylesheet" href="https://prokopov.me/style.min.2c73c2cce25cfc0bb98b66e51cb2e60843f676f1f0fdc2952591b9e703466039.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -43,13 +43,9 @@
 </div>
 
 <div class="article">
-    <h1>
-        <a href="https://prokopov.me/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Gitlab: continuous delivery setup for Clojure/Java with Docker</a>
-    </h1>
+    <h1><a href="https://prokopov.me/posts/draft_gitlab--continuous-delivery-setup-for-clojure-java-with-docker-383563dd93d3/">Gitlab: continuous delivery setup for Clojure/Java with Docker</a></h1>
     <div class="date">01.01.0001</div>
-    
-    <h4>Reading time: 2 min.</h4>
-    
+    <div class="reading-time">Reading time: 2 min.</div>
     <div><p>Recently I was doing a <a href="https://github.com/mprokopov/it-service-sse">https://github.com/mprokopov/it-service-sse</a> and I though it should be a good idea to implement automatic build and deployment to docker registry container. I already have Gitlab installed and started to play around.</p>
 <p>Long story short, here my .gitlab-ci.yml which took me a couple of days to figure out what is the “artifact” in Gitlab and how is it suppose to survive between artifact builds and docker builds.</p>
 <p>My current setup has two stages, java build and then docker build. At the first stage we use clojure:lein-2.7.1-alpine, which is quite small, to build jar file from the sources. Then we try to assemble docker container and reuse artifact from the previous build. I was lucky enough to discover that artifact could be saved with help of “cache” option in YML file which preserves folder in “path” for the next build.</p>

@@ -19,7 +19,7 @@
 <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
 
 
-<link rel="stylesheet" href="https://prokopov.me/style.min.24166a1e761f51442033103dc963330d3526a4339a58ab46d3fee0c94a62f4a3.css">
+<link rel="stylesheet" href="https://prokopov.me/style.min.2c73c2cce25cfc0bb98b66e51cb2e60843f676f1f0fdc2952591b9e703466039.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -44,12 +44,12 @@
 </div>
 
 
-<div class="article">
-    <h1>
-        <a href="/posts/2023-07-15-cloudflare-tunnel-terraform/">CloudFlare Tunnel Terraform</a>
-    </h1>
-    <div class="date">15.07.2023</div>
-    <div><h1 id="how-to-provision-cloudflare-tunnel-using-terraform">How to provision CloudFlare tunnel using Terraform</h1>
+<div class="article-section">
+  <h2>
+    <a href="/posts/2023-07-15-cloudflare-tunnel-terraform/">CloudFlare Tunnel Terraform</a>
+  </h2>
+  <div class="date">15.07.2023</div>
+  <div><h1 id="how-to-provision-cloudflare-tunnel-using-terraform">How to provision CloudFlare tunnel using Terraform</h1>
 <p>CloudFlare Tunnel can be useful to use reliable alternative to <em>ngrok</em> when you need to expose your application running locally to the outside world.</p>
 <p>The following example exposes my application locally running on port 3000 to the Internet on the hostname <a href="https://app.prokopov.me">https://app.prokopov.me</a></p>
 <h2 id="prerequisites">Prerequisites</h2>
@@ -107,16 +107,16 @@ resource &#34;cloudflare_record&#34; &#34;main&#34; {
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cloudflared tunnel run --token<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>TOKEN<span style="color:#e6db74">}</span> tunnel-to-app
 </span></span></code></pre></div> </div>
-    
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/2023-04-03/">Mikrotik Terraform</a>
-    </h1>
-    <div class="date">03.04.2023</div>
-    <div><p>It is in general very good idea to manage infra configuration as a code. Unfortunately, Mirkotik terrafrom support is basic, as OSS driven.</p>
+<div class="article-section">
+  <h2>
+    <a href="/posts/2023-04-03/">Mikrotik Terraform</a>
+  </h2>
+  <div class="date">03.04.2023</div>
+  <div><p>It is in general very good idea to manage infra configuration as a code. Unfortunately, Mirkotik terrafrom support is basic, as OSS driven.</p>
 <p>Nevertheless, I appreciate author for effors.</p>
 <p>Here is an example how to use it with Hashicorp Vault.</p>
 <h2 id="commands">Commands</h2>
@@ -165,31 +165,31 @@ resource &#34;cloudflare_record&#34; &#34;main&#34; {
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   protocol           = &#34;tcp&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"># }
 </span></span></span></code></pre></div><p>terraform.tf</p> </div>
-    
-    
-        <a href="/posts/2023-04-03/">Read More…</a>
-    
+  
+  
+  <a href="/posts/2023-04-03/">Read More…</a>
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/2023-03-17/">Group Greeting</a>
-    </h1>
-    <div class="date">17.03.2023</div>
-    <div><p>There are lots of options to greet collegue or close ones with cards.</p>
+<div class="article-section">
+  <h2>
+    <a href="/posts/2023-03-17/">Group Greeting</a>
+  </h2>
+  <div class="date">17.03.2023</div>
+  <div><p>There are lots of options to greet collegue or close ones with cards.</p>
 <p>This one was recommended by one of the coworkers.</p>
 <p><a href="https://www.groupgreeting.com/">Group Greeting Cards</a></p> </div>
-    
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/2023-02-24/">The things impressed me recently</a>
-    </h1>
-    <div class="date">24.02.2023</div>
-    <div><p>Impressive things and points of interest</p>
+<div class="article-section">
+  <h2>
+    <a href="/posts/2023-02-24/">The things impressed me recently</a>
+  </h2>
+  <div class="date">24.02.2023</div>
+  <div><p>Impressive things and points of interest</p>
 <h3 id="self-improvement">Self-Improvement</h3>
 <p><a href="https://theholisticpsychologist.com/">https://theholisticpsychologist.com/</a> - mental self-healing of issues from the Past</p>
 <h3 id="technologies-assessment">Technologies assessment</h3>
@@ -199,35 +199,35 @@ resource &#34;cloudflare_record&#34; &#34;main&#34; {
 <p><a href="https://www.playstation.com/de-de/ps-vr2/">https://www.playstation.com/de-de/ps-vr2/</a> - New Sony VR2 headset.</p>
 <h3 id="technology-adoption">Technology adoption</h3>
 <p><a href="https://docs.docker.com/build/buildkit/">https://docs.docker.com/build/buildkit/</a> Docker buildkit and it&rsquo;s advanced caching techniques.</p> </div>
-    
-    
-        <a href="/posts/2023-02-24/">Read More…</a>
-    
+  
+  
+  <a href="/posts/2023-02-24/">Read More…</a>
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/why-is-it-support-so-hard/">Why is IT support so hard</a>
-    </h1>
-    <div class="date">18.09.2022</div>
-    <div><p>As the IT support business we want to keep our users happy, they need to use the software with no
+<div class="article-section">
+  <h2>
+    <a href="/posts/why-is-it-support-so-hard/">Why is IT support so hard</a>
+  </h2>
+  <div class="date">18.09.2022</div>
+  <div><p>As the IT support business we want to keep our users happy, they need to use the software with no
 interruptions. Though the share of the incidents in the tickets is still 30% no matter what.</p>
 <p>So why is IT support is so hard these days? Why do we still have the incidents despite all the progress IT industry did so far?</p>
 <p>Long story short this is because of the software complexity, that causes incidents and security issues.</p> </div>
-    
-    
-        <a href="/posts/why-is-it-support-so-hard/">Read More…</a>
-    
+  
+  
+  <a href="/posts/why-is-it-support-so-hard/">Read More…</a>
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/til-2022-08-15/">Things I Learned</a>
-    </h1>
-    <div class="date">15.08.2022</div>
-    <div><p>Things I Learned</p>
+<div class="article-section">
+  <h2>
+    <a href="/posts/til-2022-08-15/">Things I Learned</a>
+  </h2>
+  <div class="date">15.08.2022</div>
+  <div><p>Things I Learned</p>
 <h3 id="git-push-with-force-from-the-command-line">Git push with force from the command line</h3>
 <pre><code>git push --force origin master
 git push -f origin master
@@ -240,31 +240,31 @@ git push origin +master
 <p>This is super useful when you don&rsquo;t have neither dig nor nslookup utilities inside your docker container.</p>
 <pre><code>getent hosts google.com
 </code></pre> </div>
-    
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/emacs-ergonomics-apple/">Emacs, apple keyboard, and RSI</a>
-    </h1>
-    <div class="date">07.06.2022</div>
-    <div><p>Recently I&rsquo;ve started investigation on the most effective shortcuts for Emacs.
+<div class="article-section">
+  <h2>
+    <a href="/posts/emacs-ergonomics-apple/">Emacs, apple keyboard, and RSI</a>
+  </h2>
+  <div class="date">07.06.2022</div>
+  <div><p>Recently I&rsquo;ve started investigation on the most effective shortcuts for Emacs.
 Already for a long time I&rsquo;ve been using Caps Lock remapped to Esc when pressed alone, and Ctrl-Key when pressed with any other key.</p>
 <p>I didn&rsquo;t use Emacs with native bindings for a long time, because of wrist related issues, which immediately appeared after using pinky for pressing long chords which normally included Ctrl-C combination. This is why I used Spacemacs and later Doom Emacs as the configuration of choice.</p> </div>
-    
-    
-        <a href="/posts/emacs-ergonomics-apple/">Read More…</a>
-    
+  
+  
+  <a href="/posts/emacs-ergonomics-apple/">Read More…</a>
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/sre-concepts-sla-slo-sli/">SRE concepts</a>
-    </h1>
-    <div class="date">07.11.2021</div>
-    <div><p>Update: I added several key things recently after started implementing SRE concepts in <a href="https://billie.io">Billie</a>.</p>
+<div class="article-section">
+  <h2>
+    <a href="/posts/sre-concepts-sla-slo-sli/">SRE concepts</a>
+  </h2>
+  <div class="date">07.11.2021</div>
+  <div><p>Update: I added several key things recently after started implementing SRE concepts in <a href="https://billie.io">Billie</a>.</p>
 <p>Site Reliability Engineering makes sense only if you bothered with
 <strong>Reliability</strong>. It doesn&rsquo;t bring you much value if the most significant thing
 at current stage is delivering new features, say in recently founded startup this is probably not a good time to start with SRE.</p>
@@ -286,59 +286,59 @@ at current stage is delivering new features, say in recently founded startup thi
 <blockquote>
 <p>We measure <strong>SLIs</strong>, which shouldn&rsquo;t breach <strong>SLOs</strong> not to disappoint users by breaking <strong>SLAs</strong>.</p>
 </blockquote> </div>
-    
-    
-        <a href="/posts/sre-concepts-sla-slo-sli/">Read More…</a>
-    
+  
+  
+  <a href="/posts/sre-concepts-sla-slo-sli/">Read More…</a>
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/2021-11-02-how-much-driver-license-cost/">How much does it cost to change driving license in Germany?</a>
-    </h1>
-    <div class="date">02.11.2021</div>
-    <div><p>I moved to Germany from Ukraine in March 2020, so I was able to use my driving
+<div class="article-section">
+  <h2>
+    <a href="/posts/2021-11-02-how-much-driver-license-cost/">How much does it cost to change driving license in Germany?</a>
+  </h2>
+  <div class="date">02.11.2021</div>
+  <div><p>I moved to Germany from Ukraine in March 2020, so I was able to use my driving
 license only for half a year. So I applied to driving courses in Emmendingen
 instead of ones in Freiburg as they have russian speaking teachers and it was a bit
 less tricky to get an appointment there.</p>
 <p>Anyway, it took me more than a year (probably w/o Corona it would be a bit faster) to get my new shiny German driver license.</p> </div>
-    
-    
-        <a href="/posts/2021-11-02-how-much-driver-license-cost/">Read More…</a>
-    
+  
+  
+  <a href="/posts/2021-11-02-how-much-driver-license-cost/">Read More…</a>
+  
 </div>
 <div class="border-bottom"></div>
 
-<div class="article">
-    <h1>
-        <a href="/posts/2021-week-29/">2021 week 29</a>
-    </h1>
-    <div class="date">17.07.2021</div>
-    <div><ul>
+<div class="article-section">
+  <h2>
+    <a href="/posts/2021-week-29/">2021 week 29</a>
+  </h2>
+  <div class="date">17.07.2021</div>
+  <div><ul>
 <li><a href="https://github.com/ory/kratos.git">Open source IAM service Kratos</a></li>
 <li><a href="https://github.com/juji-io/datalevin">Datomic like database engine</a></li>
 </ul> </div>
-    
-    
-        <a href="/posts/2021-week-29/">Read More…</a>
-    
+  
+  
+  <a href="/posts/2021-week-29/">Read More…</a>
+  
 </div>
 <div class="border-bottom"></div>
 
 <div class="pagination">
-    
-    <div class="pagination__prev">
-        <a href="/page/2/" class="pagination__icon">&lt;&lt;</a>
-        <a href="/page/2/">Previous page</a>
-    </div>
-    
-    
-    <div class="pagination__next">
-        <a href="/page/4/">Next page</a>
-        <a href="/page/4/" class="pagination__icon">&gt;&gt;</a>
-    </div>
-    
+  
+  <div class="pagination__prev">
+    <a href="/page/2/" class="pagination__icon">&lt;&lt;</a>
+    <a href="/page/2/">Previous page</a>
+  </div>
+  
+  
+  <div class="pagination__next">
+    <a href="/page/4/">Next page</a>
+    <a href="/page/4/" class="pagination__icon">&gt;&gt;</a>
+  </div>
+  
 </div><div class="sidebar"><div class="sidebar__visitcard">
     <div class="sidebar__heading">Profile links</div><p></p>
     <div class="textwidget profile__link">
