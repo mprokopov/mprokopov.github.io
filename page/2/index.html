@@ -45,6 +45,35 @@
 
 
 <div class="article-section">
+  <h2 class="section"><a href="/posts/2024-06-30/">Sustainable Ruby on Rails in 2024</a></h2>
+  <div class="date">30.06.2024</div>
+  <div><p>Rubu on Rails development changes a lot every year and sometimes it&#39;s not easy to keep up with the changes.</p>
+<p>
+I&#39;ve recently bought <a href="https://sustainable-rails.com/">Sustainable Rails Book</a> and it&#39;s hard to overestimate how valuable is it for me.</p>
+<p>
+Here are couple of thoughts after reading first chapters.</p>
+<ul>
+<li>Invest in developer friendly application bootstrap process. Running <strong>bin/setup</strong> and <strong>bin/dev</strong> should be enough to run on the new blank developer machine.</li>
+<li>Move business logic out of fat controllers and fat models. Extract it and move
+to Service Objects. Fan-in and fan-out is a fancy metrics to estimate how
+object relate to each other. Simply speaking the most referred dependencies
+should be simple enough and thoroughly tested.</li>
+<li>Keep routing.rb as canonical as possible. Avoid nesting routes whenever the resources don&#39;t represent tight coupling. Rely on resources instead of custom crafter routes. Tip: use :only [:create] to reduce the scope.</li>
+</ul>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+CI/CD process
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Dare to add, invest heavily in CI/CD process, with modern GitHub offering it&#39;s just way easier then maintaining own on-prem solution.</p> </div>
+  
+  
+  <a href="/posts/2024-06-30/">Read More…</a>
+  
+</div>
+<div class="border-bottom"></div>
+
+<div class="article-section">
   <h2 class="section"><a href="/posts/emacs-for-beginners/">Emacs For Beginners</a></h2>
   <div class="date">10.05.2024</div>
   <div><p>The article provides overview of facts why Emacs is so different but also so
@@ -206,22 +235,6 @@ But the proper solution is to apply <strong>mute_time_intervals</strong>, as per
   
   
   <a href="/posts/2024-01-24/">Read More…</a>
-  
-</div>
-<div class="border-bottom"></div>
-
-<div class="article-section">
-  <h2 class="section"><a href="/posts/2024-01-17/">Blogging using Emacs with org-mode and Hugo</a></h2>
-  <div class="date">17.01.2024</div>
-  <div><p>
-I use org-mode extensively with org-roam for keeping my knowledge and journals together and working as my brain dump destination. This blog serves kinda the same purpose, so why not to combine these things under Emacs umbrella?</p>
-<p>
-Blogging from Emacs boils down to two options.</p>
-<p>
-TLDR; Hugo can render org file natively, but support of features is quite limited, or use org as source that rendered to markdown. The latter brings issues of content syncing from origin to end result.</p> </div>
-  
-  
-  <a href="/posts/2024-01-17/">Read More…</a>
   
 </div>
 <div class="border-bottom"></div>
