@@ -45,6 +45,22 @@
 
 
 <div class="article-section">
+  <h2 class="section"><a href="/posts/2024-07-14/">Deployment process with Hashicorp Nomad</a></h2>
+  <div class="date">14.07.2024</div>
+  <div><p>As, probably, many of you, I did a long journey from manual FTP sync, to semi-automated tools like Capistrano, then manually managed docker deployments, then anisble managed docker containers and finally, met the orchestration system of choice - <strong>Hashicorp Nomad</strong>.</p>
+<p>
+TLDR: Kubernetes is too heavy for my moderate needs. Hashicorp Nomad strikes the right balance between features and maintenance complexity.</p>
+<p>
+At some point in time I felt a need for better container orchestration system that I could run by myself in Hetzner. Funny enough, DHH and Co. came to the same conclusion, but implemented in a different way. They developed completely own version of <a href="https://kamal-deploy.org/">ansible on steroids named Kamal</a>. This has right for existence, but imho has own flaws, like manual nodes management for fault tolerance and challenge to keep versions of deployed artifacts in sync.
+The push based deployment always suffers from this. People were trying to solve this issues already for quite a long time by using systems like <strong>Chef</strong> of <strong>Puppet</strong>.</p> </div>
+  
+  
+  <a href="/posts/2024-07-14/">Read More…</a>
+  
+</div>
+<div class="border-bottom"></div>
+
+<div class="article-section">
   <h2 class="section"><a href="/posts/2024-06-30/">Sustainable Ruby on Rails in 2024</a></h2>
   <div class="date">30.06.2024</div>
   <div><p>Rubu on Rails development changes a lot every year and sometimes it&#39;s not easy to keep up with the changes.</p>
@@ -208,33 +224,6 @@ Some differences help to stand out of other VPN solutions:</p>
   
   
   <a href="/posts/2024-02-02/">Read More…</a>
-  
-</div>
-<div class="border-bottom"></div>
-
-<div class="article-section">
-  <h2 class="section"><a href="/posts/2024-01-24/">How to suppress alerts in Prometheus for non-working hours</a></h2>
-  <div class="date">24.01.2024</div>
-  <div><p>When it comes to the topic how Prometheus and Alertmanager work together and how to restrict alert notification to fire only on working hours, typicall solution is to apply workaround to avaluated alert rule expession like this</p>
-<pre class="example">
-and ON() (hour() &lt; 19 and hour() &gt; 8) and ON() (day_of_week() &gt; 0 and day_of_week() &lt; 6)
-</pre>
-<p>
-The full example of such rule is the following</p>
-<div class="src src-yaml">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  - <span style="color:#f92672">alert</span>: <span style="color:#ae81ff">DummyWorkhoursAlert</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expr</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">and ON() (hour() &lt; 19 and hour() &gt; 8) and ON() (day_of_week() &gt; 0 and day_of_week() &lt; 6)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">for</span>: <span style="color:#ae81ff">5m</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">annotations</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">identifier</span>: <span style="color:#e6db74">&#34;{{ $labels.exporter }}/{{ $labels.queue }}&#34;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Buyerportal: Dummy alert for working hours {{ $labels.queue }}&#34;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;* don&#39;t do anything, dummy alert *&#34;</span></span></span></code></pre></div>
-</div>
-<p>
-But the proper solution is to apply <strong>mute_time_intervals</strong>, as per example below</p> </div>
-  
-  
-  <a href="/posts/2024-01-24/">Read More…</a>
   
 </div>
 <div class="border-bottom"></div>

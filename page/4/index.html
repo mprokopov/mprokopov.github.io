@@ -45,6 +45,38 @@
 
 
 <div class="article-section">
+  <h2 class="section"><a href="/posts/sre-concepts-sla-slo-sli/">SRE concepts</a></h2>
+  <div class="date">07.11.2021</div>
+  <div><p>Update: I added several key things recently after started implementing SRE concepts in <a href="https://billie.io">Billie</a>.</p>
+<p>Site Reliability Engineering makes sense only if you bothered with
+<strong>Reliability</strong>. It doesn&rsquo;t bring you much value if the most significant thing
+at current stage is delivering new features, say in recently founded startup this is probably not a good time to start with SRE.</p>
+<p>SRE is a way to balance between the product <strong>Stability</strong> <strong>(Reliability)</strong> and <strong>Changes</strong> you&rsquo;re going to make to the product, as changes are the most frequent root cause of the <strong>bad events</strong>. The core concept is when your changes breaking your product too much, you probably need to stop delivering these to the production and focus on stability. In order to switch the focus <strong>timely</strong>, you need to establish and track <strong>stability metrics</strong>. Also you need to define steps you going to take when stability promise to users about to be <em>broken</em>.</p>
+<p>Let me share my thought after completing this <a href="https://www.coursera.org/learn/site-reliability-engineering-slos">superuseful SRE Course</a>.</p>
+<p>You need to make several steps to consider SRE path.</p>
+<ol>
+<li>Think what makes user unhappy using your services.</li>
+<li>Decide on metrics that reflects user happiness and start gathering it.</li>
+<li>Create plans on how to maintain the service level target and policies describing what you going to do when situation become dangerous to achieving your availability targets.</li>
+<li>Create plans for improve these metrics.</li>
+<li>Act, measure, reflect, improve.</li>
+</ol>
+<p>Little bit clarity on abbreviations those used by google guys.</p>
+<p><strong>SLA</strong> - service level agreement. This is the service perception boundary you shouldn&rsquo;t cross. When user considers your service as bad, you didn&rsquo;t match his expectations, so either you didn&rsquo;t set proper expectations or you breached your promise on the service quality.</p>
+<p><strong>SLO</strong> - service level objectives. Same as SLA, but this is only internal promise and compass to meet user expectations, and this is a bit more tight because we don&rsquo;t want to dissapoint user by breaching SLA.</p>
+<p><strong>SLI</strong> - service level indicator shows how you meet user expectation in some point in time. Normally this is ratio of good events to all valid events in some period of time.</p>
+<p>How these relate to each other? Let me describe this in this little mantra.</p>
+<blockquote>
+<p>We measure <strong>SLIs</strong>, which shouldn&rsquo;t breach <strong>SLOs</strong> not to disappoint users by breaking <strong>SLAs</strong>.</p>
+</blockquote> </div>
+  
+  
+  <a href="/posts/sre-concepts-sla-slo-sli/">Read More…</a>
+  
+</div>
+<div class="border-bottom"></div>
+
+<div class="article-section">
   <h2 class="section"><a href="/posts/2021-11-02-how-much-driver-license-cost/">How much does it cost to change driving license in Germany?</a></h2>
   <div class="date">02.11.2021</div>
   <div><p>I moved to Germany from Ukraine in March 2020, so I was able to use my driving
@@ -174,56 +206,6 @@ You know you probably have this cemetry of links you will never open and article
   
   
   <a href="/posts/2021-02-02-org-protocol-chrome-no-confirmation/">Read More…</a>
-  
-</div>
-<div class="border-bottom"></div>
-
-<div class="article-section">
-  <h2 class="section"><a href="/posts/2021-01-08/">Emacs literate programming and SQL</a></h2>
-  <div class="date">08.01.2021</div>
-  <div><p>I&rsquo;m really crying of how finally emacs can be used for the literate programming and for some testing.</p>
-<p>For restclient, this creates POST request with json data structure in request body.</p>
-<pre tabindex="0"><code class="language-org-mode" data-lang="org-mode">  #+begin_src restclient
-    POST http://muster.test/index.php?cl=ping
-    Content-Type: application/json
-
-
-    {
-    &#34;essentialtech&#34;: true,
-    &#34;googleadwords&#34;: false,
-    &#34;googleanalytics&#34;: false,
-    &#34;googlemaps&#34;: true,
-    &#34;gtmbasedtech&#34;: false,
-    &#34;terminland&#34;: true,
-    &#34;userlike&#34;: true
-    }
-#+end_src
-
-#+RESULTS:
-#+BEGIN_SRC js
-{
-  &#34;message&#34;: &#34;success&#34;
-}
-// POST http://muster.test/index.php?cl=ping
-// HTTP/1.1 200 OK
-// Date: Tue, 09 Feb 2021 13:45:07 GMT
-// Server: Apache/2.4.46 (Unix) OpenSSL/1.1.1i
-// X-Powered-By: PHP/7.1.33
-// Expires: Thu, 19 Nov 1981 08:52:00 GMT
-// Cache-Control: no-store, no-cache, must-revalidate
-// Pragma: no-cache
-// Set-Cookie: language=0; path=/; HttpOnly
-// Set-Cookie: sid=0fvjai2h5h2pso52p4vq9e5309; path=/; HttpOnly
-// Keep-Alive: timeout=5, max=100
-// Connection: Keep-Alive
-// Transfer-Encoding: chunked
-// Content-Type: application/json;
-// Request duration: 0.269261s
-#+END_SRC
-</code></pre> </div>
-  
-  
-  <a href="/posts/2021-01-08/">Read More…</a>
   
 </div>
 <div class="border-bottom"></div>

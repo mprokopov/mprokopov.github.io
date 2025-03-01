@@ -45,6 +45,18 @@
 
 
 <div class="article-section">
+  <h2 class="section"><a href="/posts/github-markdown-preview/">GitHub Markdown preview with Grip and UV</a></h2>
+  <div class="date">01.03.2025</div>
+  <div><p>It&rsquo;s common task to prepare README.me, but how to check the preview?</p>
+<p>If you use <code>uv</code>, the fastest way is to use <code>grip</code> like this</p>
+<p>Use this oneliner in the folder with markdown and open browser with <code>http://localhost:6419</code> address</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>uv run --with grip -m grip
+</span></span></code></pre></div> </div>
+  
+</div>
+<div class="border-bottom"></div>
+
+<div class="article-section">
   <h2 class="section"><a href="/posts/mcp-server-private-data-ledger-example/">How to Use Model Control Protocol with Claude AI to work with your private data</a></h2>
   <div class="date">23.02.2025</div>
   <div><p>Learn how to access and work with your private data using Large Language Models with Model Control Protocol.</p>
@@ -189,22 +201,6 @@ Introduction
   
   
   <a href="/posts/2024-10-11-hashicorp-waypoint/">Read More…</a>
-  
-</div>
-<div class="border-bottom"></div>
-
-<div class="article-section">
-  <h2 class="section"><a href="/posts/2024-07-14/">Deployment process with Hashicorp Nomad</a></h2>
-  <div class="date">14.07.2024</div>
-  <div><p>As, probably, many of you, I did a long journey from manual FTP sync, to semi-automated tools like Capistrano, then manually managed docker deployments, then anisble managed docker containers and finally, met the orchestration system of choice - <strong>Hashicorp Nomad</strong>.</p>
-<p>
-TLDR: Kubernetes is too heavy for my moderate needs. Hashicorp Nomad strikes the right balance between features and maintenance complexity.</p>
-<p>
-At some point in time I felt a need for better container orchestration system that I could run by myself in Hetzner. Funny enough, DHH and Co. came to the same conclusion, but implemented in a different way. They developed completely own version of <a href="https://kamal-deploy.org/">ansible on steroids named Kamal</a>. This has right for existence, but imho has own flaws, like manual nodes management for fault tolerance and challenge to keep versions of deployed artifacts in sync.
-The push based deployment always suffers from this. People were trying to solve this issues already for quite a long time by using systems like <strong>Chef</strong> of <strong>Puppet</strong>.</p> </div>
-  
-  
-  <a href="/posts/2024-07-14/">Read More…</a>
   
 </div>
 <div class="border-bottom"></div>
