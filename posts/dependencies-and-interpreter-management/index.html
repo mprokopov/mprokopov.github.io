@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head><title>On interpreter and dependenencies management problem - Maksym Prokopov personal blog</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<script>
+ var remark_config = {
+   host: 'https://remark.prokopov.me',
+   site_id: 'remark',
+   no_footer: true
+ }
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+
+
+<link rel="stylesheet" href="https://prokopov.me/style.min.95bd89b938cba31794b86c165968b11455383984d807fb7db92f0a8a1be9fc38.css">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script type='text' src='https://platform.linkedin.com/badges/js/profile.js' async defer ></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                                                                                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                                                                                                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,'script','dataLayer','GTM-WB9KBZ5');</script>
+
+<script defer data-domain="prokopov.me" src="https://analytics.prokopov.me/js/script.js"></script>
+</head>
+    <body><div class="header">
+    <a class="title" href="/"><div id="title">Maksym Prokopov personal blog</div><div id="description">Idea is a something worth sharing</div></a>
+</div>
+<div class="nav">
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/projects/">Projects</a></div>
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/talks/">Talks</a></div>
+    
+    <div class="page-item"><a href="https://prokopov.me/pages/about/">About</a></div>
+    
+</div>
+
+<div class="article">
+    <h1><a href="https://prokopov.me/posts/dependencies-and-interpreter-management/">On interpreter and dependenencies management problem</a></h1>
+    <div class="date">02.03.2025</div>
+    <div class="reading-time">Reading time: 3 min.</div>
+    <div><h2 id="the-problem">The problem</h2>
+<p>The problem of interpreter and dependency management is quite common, but also challenging.</p>
+<ol>
+<li>Appliations sometimes are written using interpreted languages. Examples: <code>brew</code> in Ruby, <code>ansible</code> in Python.</li>
+<li>Software development. For instance, mainstream AI development requires Python.</li>
+</ol>
+<p>In order to run they need always need two things:</p>
+<ul>
+<li>Interpreter</li>
+<li>Dependencies</li>
+</ul>
+<p>This boils down to the following problems.
+How to download and keep interpreters of different versions?
+How to download, keep and manage dependencies?
+How to include or not to include the interpreter and dependencies into a distribution?</p>
+<p>Combined problems represent a &ldquo;reproducible build&rdquo; problem, which is, simply speaking, &ldquo;works on my machine&rdquo; statement when something went wrong.</p>
+<h2 id="interpreter-management">Interpreter management</h2>
+<p>Here is the idea of using a PATH variable. When you enter a command to the
+shell, it checks every directory in PATH variable, this means you can manipulate
+it, and add the directory containing the interpreter to the PATH dynamically.
+Want ruby version 3.3.3? No problem, download, build, add to the PATH and use
+it. It&rsquo;s common practice to automate PATH management, for example rbenv checks
+for the file .ruby-version in the folder, and automatically adjusts PATH to
+include the proper directory with the corresponding interpreter.</p>
+<p>It makes a bit more complicated if you use IDEs, they typically offer some built-in support for PATH management that may differ.
+Just keep in mind, PATH in shell and PATH in your editor depends on how you run the application.</p>
+<h2 id="dependency-management">Dependency management</h2>
+<p>Historically, dependency management was a separate problem from interpreter management. Though, some tools often try to target both cases.</p>
+<p>For the interpreted language it means also solving a sub-problem of transient dependencies.</p>
+<p>Why is the dependency management a problem at all? Just download the source of a library, copy it to somewhere so your app should find it when runs. Done.</p>
+<p>The trade-off is typically is either to reuse the same dependencies, or to keep a copy.
+And the second big issue is how to update those. Keeping in mind, different libraries can depend on the same sources but different (maybe incompatible) versions.</p>
+<p>Example of duplication, you may have heard about size of <code>node_modules</code> folder? <code>pnpm</code> tries to address this problem. Flip, Maven with Java ecosystem puts dependencies to <code>.m2</code> folder and reuses them as much as possible.</p>
+<h2 id="distribution-management">Distribution management</h2>
+<p>Size is used to be the major trade-off here. But with the time and hardware evolution the direction has changed.</p>
+<p>The hardware grows in capacity, storage and also networks became fast and capable. It&rsquo;s often that the distribution includes entire Chrome browser and all dependencies packed together. For all platforms.</p>
+<h2 id="vagrant-influence">Vagrant influence</h2>
+<p>Before docker gained it&rsquo;s popularity, using virtual machines for isolation also during the development was a common thing. Among the downsides can be named heavy resource requirements, slowness and difficulties with managing changes.</p>
+<h2 id="docker-influence">Docker influence</h2>
+<p>Interesting enough, but docker itself solves a problem of isolation. This means, you don&rsquo;t need to support different versions of interpreters and libraries in
+the same system.</p>
+<p>Docker image should contain only <strong>one</strong> version of interpreter and only one set of <strong>dependencies</strong>.</p>
+<p>Though, with the raise of the idea of using docker container for developement, I often see tools for interpreter management also being a part of the docker
+image. Such as in devcontainers.</p>
+<h2 id="nix-influence">Nix influence</h2>
+<p>Another attempt to solve the problem of a &ldquo;reproducible build&rdquo; for all languages and dependencies in one shot is Nix or NixOS.</p>
+<p>Nix  represents a tools with own configuration language and packages for majority of languages and packages. Often associated with certain complexity, but highly worthy for investing efforts.</p>
+<hr>
+<h2 id="python">Python</h2>
+<ul>
+<li>pip</li>
+<li>venv</li>
+<li>pipenv</li>
+<li>uv</li>
+<li>conda</li>
+</ul>
+<h2 id="ruby">Ruby</h2>
+<ul>
+<li>rvm</li>
+<li>rbenv</li>
+<li>chruby</li>
+<li>bundler</li>
+</ul>
+<h2 id="java">Java</h2>
+<ul>
+<li>maven</li>
+<li>gradle</li>
+</ul>
+<h2 id="clojure">Clojure</h2>
+<ul>
+<li>leininghen</li>
+<li>deps.edn</li>
+</ul>
+<h2 id="node">Node</h2>
+<ul>
+<li>nvm</li>
+<li>npm</li>
+<li>yarn</li>
+<li>pnpm</li>
+<li>bun</li>
+</ul>
+<h2 id="php">PHP</h2>
+<ul>
+<li>composer</li>
+</ul>
+<h2 id="go">Go</h2>
+<ul>
+<li>go mod</li>
+</ul>
+<h2 id="generalised-solutions">Generalised solutions</h2>
+<ul>
+<li>asdf</li>
+<li>Nix</li>
+</ul>
+</div>
+    <div id="remark42"></div>
+
+</div>
+
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB9KBZ5"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+</body>
+</html>
