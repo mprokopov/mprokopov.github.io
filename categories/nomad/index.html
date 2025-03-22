@@ -46,7 +46,7 @@
 <div class="article">
   <h2><a href="https://prokopov.me/posts/hashicorp-nomad-reschedule-job/">HashiCorp Nomad reschedule a Job</a></h2>
   <div class="date">22.03.2025</div>
-  <div><h1 id="hashicorp-nomad-job">HashiCorp Nomad Job</h1>
+  <div><h2 id="hashicorp-nomad-job">HashiCorp Nomad Job</h2>
 <p>It&rsquo;s often the job increases retry counter, but there is no time to waste after the root cause of failing job being removed.</p>
 <p>Here is the way to enforce re-run of the job. Unfortunately, I couldn&rsquo;t find any means to achieve the same from the UI</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nomad job eval -force-reschedule rundeck
