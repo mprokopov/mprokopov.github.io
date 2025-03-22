@@ -6,14 +6,21 @@
     <description>Recent content in Posts on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sun, 02 Mar 2025 12:24:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HashiCorp Nomad reschedule a Job</title>
+      <link>https://prokopov.me/posts/hashicorp-nomad-reschedule-job/</link>
+      <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/posts/hashicorp-nomad-reschedule-job/</guid>
+      <description>&lt;h1 id=&#34;hashicorp-nomad-job&#34;&gt;HashiCorp Nomad Job&lt;/h1&gt;&#xA;&lt;p&gt;It&amp;rsquo;s often the job increases retry counter, but there is no time to waste after the root cause of failing job being removed.&lt;/p&gt;&#xA;&lt;p&gt;Here is the way to enforce re-run of the job. Unfortunately, I couldn&amp;rsquo;t find any means to achieve the same from the UI&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nomad job eval -force-reschedule rundeck&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>On interpreter and dependenencies management problem</title>
       <link>https://prokopov.me/posts/dependencies-and-interpreter-management/</link>
       <pubDate>Sun, 02 Mar 2025 12:24:00 +0000</pubDate>
       <guid>https://prokopov.me/posts/dependencies-and-interpreter-management/</guid>
-      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;&#xA;&lt;p&gt;The problem of interpreter and dependency management is quite common, but also challenging.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Appliations sometimes are written using interpreted languages. Examples: &lt;code&gt;brew&lt;/code&gt; in Ruby, &lt;code&gt;ansible&lt;/code&gt; in Python.&lt;/li&gt;&#xA;&lt;li&gt;Software development. For instance, mainstream AI development requires Python.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;In order to run they need always need two things:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Interpreter&lt;/li&gt;&#xA;&lt;li&gt;Dependencies&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This boils down to the following problems.&#xA;How to download and keep interpreters of different versions?&#xA;How to download, keep and manage dependencies?&#xA;How to include or not to include the interpreter and dependencies into a distribution?&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;&#xA;&lt;p&gt;The problem of interpreter and dependency management is quite common, but also challenging.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Appliations sometimes are written using interpreted languages. Examples: &lt;code&gt;brew&lt;/code&gt; in Ruby, &lt;code&gt;ansible&lt;/code&gt; in Python.&lt;/li&gt;&#xA;&lt;li&gt;Software development. For instance, mainstream AI development requires Python.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;In order to run they always need two things:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Interpreter&lt;/li&gt;&#xA;&lt;li&gt;Dependencies&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This boils down to the following problems.&#xA;How to download and keep interpreters of different versions?&#xA;How to download, keep and manage dependencies?&#xA;How to include or not to include the interpreter and dependencies into a distribution?&lt;/p&gt;</description>
     </item>
     <item>
       <title>GitHub Markdown preview with Grip and UV</title>

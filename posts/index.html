@@ -45,6 +45,18 @@
 
 <div class="article">
     <h1>111
+        <a href="https://prokopov.me/posts/hashicorp-nomad-reschedule-job/">HashiCorp Nomad reschedule a Job</a>
+    </h1>
+    <div class="date">22.03.2025</div>
+    <div><h1 id="hashicorp-nomad-job">HashiCorp Nomad Job</h1>
+<p>It&rsquo;s often the job increases retry counter, but there is no time to waste after the root cause of failing job being removed.</p>
+<p>Here is the way to enforce re-run of the job. Unfortunately, I couldn&rsquo;t find any means to achieve the same from the UI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nomad job eval -force-reschedule rundeck
+</span></span></code></pre></div></div>
+</div>
+
+<div class="article">
+    <h1>111
         <a href="https://prokopov.me/posts/dependencies-and-interpreter-management/">On interpreter and dependenencies management problem</a>
     </h1>
     <div class="date">02.03.2025</div>
@@ -54,7 +66,7 @@
 <li>Appliations sometimes are written using interpreted languages. Examples: <code>brew</code> in Ruby, <code>ansible</code> in Python.</li>
 <li>Software development. For instance, mainstream AI development requires Python.</li>
 </ol>
-<p>In order to run they need always need two things:</p>
+<p>In order to run they always need two things:</p>
 <ul>
 <li>Interpreter</li>
 <li>Dependencies</li>

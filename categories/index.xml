@@ -6,8 +6,15 @@
     <description>Recent content in Categories on Maksym Prokopov personal blog</description>
     <generator>Hugo</generator>
     <language>ru-Ru</language>
-    <lastBuildDate>Sun, 22 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://prokopov.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nomad</title>
+      <link>https://prokopov.me/categories/nomad/</link>
+      <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://prokopov.me/categories/nomad/</guid>
+      <description></description>
+    </item>
     <item>
       <title>2024</title>
       <link>https://prokopov.me/categories/2024/</link>
